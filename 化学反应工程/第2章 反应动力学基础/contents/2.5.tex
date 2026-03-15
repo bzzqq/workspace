@@ -1,0 +1,376 @@
+\section{反应速率方程的变换与积分}
+
+\begin{frame}{反应速率方程的变换}
+    $$r=kc_\mathrm{A}^\alpha c_\mathrm{B}^\beta\cdots $$
+    \\对于一定的反应系统，反应速率为温度及各反应组分浓度的函数。但是，在实际使用时会带来不便，因为纵使在等温情况下，各个反应组分浓度均是变量。
+    \\当原料配比一定时，各个反应组分浓度可以进行变换，用一个反应变量来表示。在化学反应进行中，各反应组分浓度的变化应符合化学计量关系，因此可用关键组分的转化率或目的产物的收率来表示反应的进程。
+\end{frame}
+
+
+\begin{frame}{单一反应}
+    $$\ce {\nu_A A + \nu_B B -> \nu_P P}$$
+    $$r_\mathrm{A}=kc_\mathrm{A}^\alpha c_\mathrm{B}^\beta$$
+    \\反应开始时反应混合物中不含P，组分A和B的浓度分别为$c_\mathrm{A0}$和$c_\mathrm{B0}$，若反应在等温下进行，则$k$为一常数。现要将反应速率方程变换为组分A的转化率$X_\mathrm{A}$的函数，可分两种情况进行讨论。
+    \begin{itemize}
+        \item[\bullet]  恒容情况
+        \item[\bullet]  变容情况
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{单一反应，恒容情况}
+    \vspace*{-10pt}
+    \[
+        \nu_\mathrm{A}\mathrm{A} \quad + \quad \nu_\mathrm{B}\mathrm{B} \qquad \to \qquad \nu_\mathrm{P}\mathrm{P}
+    \]
+    \[
+        c_\mathrm{A0} \qquad \quad c_\mathrm{B0} \qquad \qquad \qquad 0
+    \]
+    \[
+        \qquad c_\mathrm{A} \quad \quad c_\mathrm{B0} - \frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A} \qquad \frac{\nu_\mathrm{P}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A}
+    \]
+    恒容情况，$c_\mathrm{A}=c_\mathrm{A0}(1-X_\mathrm{A})$，$c_\mathrm{B}=c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A}$，代入速率方程，得
+    $$r_\mathrm{A}=kc_\mathrm{A0}^\alpha(1-X_\mathrm{A})^\alpha (c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A})^\beta$$
+    \\等式右边是单一变量$X_\mathrm{A}$的函数，左边也可用$X_\mathrm{A}$的变化来表示：
+    $$r_\mathrm{A}=-\frac{\mathrm{d}c_\mathrm{A}}{\mathrm{d}t}=c_\mathrm{A0}\frac{\mathrm{d}X_\mathrm{A}}{\mathrm{d}t}$$
+    $$c_\mathrm{A0}\frac{\mathrm{d}X_\mathrm{A}}{\mathrm{d}t}=kc_\mathrm{A0}^\alpha(1-X_\mathrm{A})^\alpha (c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A})^\beta$$
+\end{frame}
+
+
+\begin{frame}{单一反应，变容情况}
+    若反应非恒容，则应考虑体积变化对摩尔浓度的影响，这时$c_\mathrm{A} \neq c_\mathrm{A0}(1-X_\mathrm{A})$。
+    
+    将反应前后各组分的量列出如下：
+    \begin{table}
+        \centering
+        \begin{tabular}{ccc}
+            组分 & 反应前 & 转化率为$X_\mathrm{A}$时  \\ 
+            A & $n_\mathrm{A0}$ & $n_\mathrm{A0}-n_\mathrm{A0}X_\mathrm{A}$  \\ 
+            B & $n_\mathrm{B0}$ & $n_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}n_\mathrm{A0}X_\mathrm{A}$  \\ 
+            P & 0 & $\frac{-\nu_\mathrm{P}}{\nu_\mathrm{A}}n_\mathrm{A0}X_\mathrm{A}$ \\ \toprule
+            总计 & $n_\mathrm{t0}=n_\mathrm{A0}+n_\mathrm{B0}$ & $n_\mathrm{t}=n_\mathrm{t0}+n_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}$ \\ 
+        \end{tabular}
+    \end{table}
+    
+    上表中，$\delta_\mathrm{A}=\sum \nu_i/|\nu_\mathrm{A}|$
+    
+    $\delta_\mathrm{A}$叫做\highlight{膨胀因子}，其物理意义是转化1molA时，反应混合物总摩尔数的变化。
+    
+    $\sum \nu_i$为反应产物与反应物的化学计量系数之和。
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        对于气相反应 A+2B→3C，计算$\delta_\mathrm{A}$的值？
+        \tcblower
+        A. -1
+
+        \only<1>{
+            B. 0
+        }
+        \only<2>{
+            \red{B. 0}
+        }
+
+        C. 1
+
+        D. 2
+    \end{question}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        对于气相反应 \ce{C6H6 + 3H2 -> C6H12}，计算$\delta_{C_6H_6}$的值？
+        \tcblower
+        A. -1
+
+        B. 1
+
+        \only<1>{
+            C. -3
+        }
+        \only<2>{
+            \red{C. -3}
+        }
+
+        D. 3
+    \end{question}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        对于气相反应 \ce{C6H6 + 3H2 -> C6H12}，计算$\delta_{H_2}$的值？
+        \tcblower
+        \only<1>{
+            A. -1
+        }
+        \only<2>{
+            \red{A. -1}
+        }
+
+        B. 1
+
+        C. -3
+
+        D. 3
+    \end{question}
+\end{frame}
+
+
+\begin{frame}{变容情况反应速率与转化率的关系}
+    如果该反应系统中气体混合物为理想气体，在恒温恒压下，有
+    \[
+        \begin{aligned}
+             V_0/V&=n_\mathrm{t0}/n_\mathrm{t}\\
+             &=n_\mathrm{t0}/(n_\mathrm{t0}+n_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})\\
+             \Longrightarrow V&=V_0(1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})
+        \end{aligned}
+    \]
+    \begin{itemize}
+      \item $\delta_\mathrm{A}>0$时，$V>V_0$
+      \item $\delta_\mathrm{A}=0$时，$V=V_0$
+      \item $\delta_\mathrm{A}<0$时，$V<V_0$
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{变容情况反应速率与转化率的关系}
+    将$V=V_0(1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})$代入，得
+    \[
+        c_\mathrm{A}=\frac{n_\mathrm{A0}(1-X_\mathrm{A})}{V}=\frac{c_\mathrm{A0}(1-X_\mathrm{A})}{1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}}
+    \]
+    \[
+        c_\mathrm{B}=\frac{n_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}n_\mathrm{A0}X_\mathrm{A}}{V}=\frac{c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A}}{1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}}
+    \]
+    将上述$c_\mathrm{A},c_\mathrm{B}$代入反应速率方程可得变容情况下反应速率与转化率的关系式：
+    \[
+        r_\mathrm{A}=k\frac{c_\mathrm{A0}^\alpha(1-X_\mathrm{A})^\alpha (c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A})^\beta}{(1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})^{\alpha+\beta}}
+    \]
+    与恒容情况相比多了一个\highlight{体积校正因子}$(1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})^\mathrm{m}$，指数m由反应级数决定。
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        将反应速率方程变换为转化率函数的主要目的是什么？
+        \tcblower
+        A. 简化温度对反应速率的影响
+
+        \only<1>{
+            B. 消除浓度变量，便于工程计算
+        }
+        \only<2>{
+            \red{B. 消除浓度变量，便于工程计算}
+        }
+
+        C. 增加反应级数的复杂性
+
+        D. 忽略化学计量关系
+    \end{question}
+\end{frame}
+
+
+\begin{frame}{变容情况反应速率与转化率的关系}
+    \[
+        r_\mathrm{A}=k\frac{c_\mathrm{A0}^\alpha(1-X_\mathrm{A})^\alpha (c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A})^\beta}{(1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})^{\alpha+\beta}}
+    \]
+    若将变容情况下的$r_\mathrm{A} = -\frac{1}{V}\frac{\dif n_\mathrm{A}}{\dif t}$变为转化率的函数，
+    \[
+        r_\mathrm{A} = \frac{-1}{V_0(1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})}\frac{\mathrm{d}(n_\mathrm{A0}-n_\mathrm{A0}X_\mathrm{A})}{\mathrm{d}t}=\frac{c_\mathrm{A0}}{1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}}\frac{\mathrm{d}X_\mathrm{A}}{\mathrm{d}t}
+    \]
+    与恒容情况相比，也是多了一个体积校正因子。
+
+    两式联立可得变容情况转化率与反应时间的关系：
+    \[
+        \frac{c_\mathrm{A0}}{1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}}\frac{\mathrm{d}X_\mathrm{A}}{\mathrm{d}t} = k\frac{c_\mathrm{A0}^\alpha(1-X_\mathrm{A})^\alpha (c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A})^\beta}{(1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})^{\alpha+\beta}}
+    \]
+    当$\delta_\mathrm{A}=0$时，上式便化为恒容情况下的公式$c_\mathrm{A0}\frac{\mathrm{d}X_\mathrm{A}}{\mathrm{d}t}=kc_\mathrm{A0}^\alpha(1-X_\mathrm{A})^\alpha (c_\mathrm{B0}-\frac{\nu_\mathrm{B}}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A})^\beta$。
+\end{frame}
+
+
+\begin{frame}{反应物系组成的变换方法}
+    以浓度表示反应物系组成时的变换方法：
+    \[
+        c_i=\frac{c_{i0}-\frac{\nu_i}{\nu_\mathrm{A}}c_\mathrm{A0}X_\mathrm{A}}{1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}}
+    \]
+    此式对恒容和变容、反应物和反应产物都适用。
+
+    以分压表示反应气体组成时：
+    \[
+        p_i=\frac{p_{i0}-\frac{\nu_i}{\nu_\mathrm{A}}p_\mathrm{A0}X_\mathrm{A}}{1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}}
+    \]
+    以摩尔分数表示反应气体组成时：
+    \[
+        y_i=\frac{y_{i0}-\frac{\nu_i}{\nu_\mathrm{A}}y_\mathrm{A0}X_\mathrm{A}}{1+y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A}}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{恒容、变容情况的判定}
+    \begin{enumerate}
+      \item 液相反应一般都可按恒容过程处理；
+      \item 对于间歇操作，无论液相还是气相反应，总是恒容过程；
+      \item 对于等温流动操作，总摩尔数不发生变化的气相反应也属于恒容过程。
+    \end{enumerate}
+\end{frame}
+
+
+% \begin{frame}{变容情况转化率与反应时间的关系}
+%     以$\ce {A + B -> P}$为例，且该反应对A及B均为一级，则
+%     $$\frac{c_\mathrm{A0}}{1-y_\mathrm{A0}X_\mathrm{A}}\frac{\mathrm{d}X_\mathrm{A}}{\mathrm{d}t}=k\frac{c_\mathrm{A0}(1-X_\mathrm{A})(c_\mathrm{B0}-c_\mathrm{A0}X_\mathrm{A})}{(1-y_\mathrm{A0}X_\mathrm{A}\delta_\mathrm{A})^2}$$
+%     \\化简后积分得，
+%     $$t=\frac{1}{k}[\frac{1+c_\mathrm{B0}y_\mathrm{A0}/c_\mathrm{A0}}{c_\mathrm{B0}-c_\mathrm{A0}}\ln(1-\frac{c_\mathrm{A0}X_\mathrm{A}}{c_\mathrm{B0}})+\frac{1+y_\mathrm{A0}}{c_\mathrm{B0}-c_\mathrm{A0}}\ln\frac{1}{1-X_\mathrm{A}}]$$
+%     \\这便是二级反应的转化率与反应时间的关系式。只有速率方程的形式较为简单时才能解析积分，多数需要采用数值积分。
+% \end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{block}{例2.5}
+    \[
+        \ce{C6H6 + 3H2 -> C6H12}
+    \]
+    已知在镍催化剂上进行苯气相加氢反应的动力学方程为
+    \[
+        r_\mathrm{B}=\frac{kp_\mathrm{B}p_\mathrm{H}^{0.5}}{1+Kp_\mathrm{B}}
+    \]
+    式中$p_\mathrm{B}$及$p_\mathrm{H}$依次为苯及氢的分压，$k$和$K$为常数。若反应气体的起始组成中不含环己烷，苯及氢的摩尔分数分别为$y_\mathrm{B0}$和$y_\mathrm{H0}$  。反应系统的总压为$p$，试将动力学方程变换为苯的转化率的$X_\mathrm{B}$函数。
+    \tcblower
+    \pause
+    \[
+        r_\mathrm{B} = k\left(p\frac{y_{B0}-y_\mathrm{B0}X_\mathrm{B}}{1-3y_\mathrm{B0}X_\mathrm{B}}\right)\left(p\frac{y_{H0}-3y_\mathrm{B0}X_\mathrm{B}}{1-3y_\mathrm{B0}X_\mathrm{B}}\right)^{0.5}\bigg/\left(1+Kp\frac{y_{B0}-y_\mathrm{B0}X_\mathrm{B}}{1-3y_\mathrm{B0}X_\mathrm{B}}\right)
+    \]
+    \end{block}
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{redblock}{例2.5 改}
+        $$\ce{C6H6 + 3H2 -> C6H12}$$
+    $$(\mathrm{B})~~~~~~~~(\mathrm{H})~~~~~~~~~~~~~(\mathrm{C})~~$$
+    已知在镍催化剂上进行苯气相加氢反应的动力学方程为
+    \[
+        r_\mathrm{B}=\frac{kp_\mathrm{B}p_\mathrm{H}^{0.5}}{1+Kp_\mathrm{B}}
+    \]
+    式中$p_\mathrm{B}$及$p_\mathrm{H}$依次为苯及氢的分压，$k$和$K$为常数。若反应气体的起始组成中不含环己烷，苯及氢的摩尔分数分别为$y_\mathrm{B0}$和$y_\mathrm{H0}$  。反应系统的总压为$p$，
+    
+    \red{试将动力学方程变换为氢的转化率的$X_\mathrm{H}$函数。}
+    \end{redblock}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{block}{习题2.11}
+        在210℃等温下进行亚硝酸乙酯的气相分解反应
+        \[
+            \ch{C2H5NO2 -> NO + 0.5 CH3CHO + 0.5 C2H5OH}
+        \]
+        该反应为一级不可逆反应，$k = 1.39\times 10^{14}\exp(-18973/T)$，\si{s^{-1}}。
+        
+        (1) 若反应是在恒容下进行，系统的起始总压为\SI{0.1013}{MPa}，采用的是纯亚硝酸乙酯，试计算亚硝酸乙酯的分解率为80\%时，亚硝酸乙酯的分解速率及乙醇的生成速率。
+
+        (2) 若采用恒压反应，乙醇的生成速率是多少？
+    \end{block}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        在恒压反应系统中，乙醇生成速率与恒容情况的差异主要源于？
+        \tcblower
+        A. 温度变化
+
+        \only<1>{
+            B. 体积膨胀导致的浓度变化
+        }
+        \only<2>{
+            \red{B. 体积膨胀导致的浓度变化}
+        }
+
+        C. 催化剂失活
+
+        D. 副反应的增加
+    \end{question}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        在恒压反应系统中，乙醇生成速率与恒容情况的差异是？
+        \tcblower
+        A. 恒压乙醇生成速率>恒容乙醇生成速率
+
+        \only<1>{
+            B. 恒压乙醇生成速率<恒容乙醇生成速率
+        }
+        \only<2>{
+            \red{B. 恒压乙醇生成速率<恒容乙醇生成速率}
+        }
+    \end{question}
+\end{frame}
+
+
+\begin{frame}{复合反应}
+    反应系统中同时进行数个化学反应时，亦可仿照单一反应的处理方法对速率方程作变换。设气相反应系统中含有N个反应组分，它们之间共进行M个化学反应，各个反应的反应进度为$\xi_j$。为了数学上处理方便，将这些化学反应式写成代数式的形式：
+    $$\nu_{11}\mathrm{A_1}+\nu_{21}\mathrm{A_2}+\cdots+\nu_{N1}\mathrm{A_N} = 0$$
+    $$\nu_{12}\mathrm{A_1}+\nu_{22}\mathrm{A_2}+\cdots+\nu_{N2}\mathrm{A_N} = 0$$
+    $$\cdots \cdots$$
+    $$\nu_{1M}\mathrm{A_1}+\nu_{2M}\mathrm{A_2}+\cdots+\nu_{NM}\mathrm{A_N} = 0$$
+\end{frame}
+
+
+\begin{frame}{复合反应}
+    将组分$i$在各个反应中的反应量相加，即得该组分的总反应量
+    $$n_i-n_{i0}=\sum_{j=1}^{M}\nu_{ij}\xi_j$$
+    \\将所有反应组分的反应量相加，则得整个系统的总摩尔数变化
+    $$n_\mathrm{t}-n_\mathrm{t0}=\sum_{i=1}^{N}\sum_{j=1}^{M}\nu_{ij}\xi_j$$
+    \\代入$V/V_0=n_\mathrm{t}/n_\mathrm{t0}$整理，得
+    $$c_i=\frac{n_i}{V}=\frac{n_{i0}+\sum_{j=1}^{M}\nu_{ij}\xi_j}{V_0(1+\frac{1}{n_\mathrm{t0}}\sum_{i=1}^{N}\sum_{j=1}^{M}\nu_{ij}\xi_j)}$$
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{redblock}{小组讨论：根据$c_i$推导计算$p_i$的公式}
+        \[
+            c_i=\frac{n_i}{V}=\frac{n_{i0}+\sum_{j=1}^{M}\nu_{ij}\xi_j}{V_0(1+\frac{1}{n_\mathrm{t0}}\sum_{i=1}^{N}\sum_{j=1}^{M}\nu_{ij}\xi_j)}
+        \]
+        \tcblower
+        提示1：理想气体方程
+
+        提示2：化简，结果中用总压$p$表示
+    \end{redblock}
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{block}{例2.6}
+        在常压和898K下进行乙苯催化脱氢反应：
+    
+        $(1)~~~~\ce{C6H5C2H5 <=> C6H5-CH=CH2 + H2}$
+    
+        $(2)~~~~\ce{C6H5C2H5 -> C6H6 + C2H4}$
+    
+        $(3)~~~~\ce{C6H5C2H5 + H2 -> C6H5CH3 + CH4}$
+    
+        为简便起见，以A，B，T，H及S分别代表乙苯，苯，甲苯，氢及苯乙烯，在反应温度及压力下，上列各反应的速率方程为
+    $$\begin{array}{l}
+        r_{1}=0.1283\left(p_{\mathrm{A}}-p_{\mathrm{S}} p_{\mathrm{H}} / 0.04052\right) \qquad\mathrm{kmol/(kg·h)}\\
+        r_{2}=5.745 \times 10^{-3} p_{\mathrm{A}} \qquad\mathrm{kmol/(kg·h)}\\
+        r_{3}=0.2904 p_{\mathrm{A}} p_{\mathrm{H}} \qquad\mathrm{kmol/(kg·h)}
+    \end{array}$$
+    \vspace{-1em}
+
+    压力的单位用MPa，进料中含乙苯10\%和$\mathrm{H_2O}$ 90\%。当苯乙烯，苯及甲苯的收率分别为60\%，0.5\%及1\%时，试计算乙苯的转化速率。
+    \end{block}
+\end{frame}

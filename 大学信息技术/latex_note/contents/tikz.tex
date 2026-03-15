@@ -1,0 +1,1270 @@
+\section{Tikz基础}
+\subsection{TikZ是什么？}
+
+PGF: Portable Graphics Format
+
+由 beamer 的作者 Till Tantau 开发
+
+PGF 可以精确的绘制复杂的几何图形及各种曲线
+
+TikZ 是 PGF 的前端，使用时只需调用tikz 宏包
+
+tikz图是矢量图。
+
+\begin{itemize}
+  \item 矢量图
+    \begin{itemize}
+      \item 由数学曲线计算得到，保留图的几何特征，不因缩放而影响清晰度；
+      \item 具有很高的精度，且通常文件很小；
+      \item 用来表达一些具有逻辑的示意图，如流程图、数学曲线等。
+    \end{itemize}
+  \item 点阵图
+    \begin{itemize}
+      \item 以矩阵形式存储每个像素的色值，缩放和坐标变换会影响清晰度；
+      \item 图像采样得到，可以描述极其复杂的图形；%矢量图很难做到。
+      \item 通常文件较大。
+    \end{itemize}
+\end{itemize}
+
+\subsection{TikZ 使用}
+
+
+
+
+\begin{lstlisting}
+% 使用方法:
+\usepackage{tikz}
+% 根据需要调用tikz 扩展
+\usetikzlibrary{arrows,backgrounds,...}
+% 使用tikz命令
+\tikz\draw(0,0) -- (3,1);
+\tikz{\draw(0,0) -- (3,1);}
+% 使用tikzpicture环境
+\begin{tikzpicture}
+    \draw(0,0) -- (3,1);
+\end{tikzpicture}
+\end{lstlisting}
+
+\begin{itemize}
+  \item tikz 基于坐标绘图，原点在左下角
+  \item 每条tikz 绘图命令以分号结束
+  \item 使用长度或坐标时数字可以带单位（cm, em, pt...）也可不带
+\end{itemize}
+
+pt	\qquad 1pt = 1/72.27 英寸~=0.035146厘米(cm)
+
+bp	\qquad 1bp = 1/72 英寸
+
+mm	\qquad 毫米
+
+cm	\qquad 厘米
+
+in	\qquad 英寸
+
+ex	\qquad 当前字体中 “x” 的高度
+
+em	\qquad 当前字体的一个 “quad” 的宽度（在以前，它是字母 “M” 的宽度，现在不是了）
+
+\subsection{坐标系统}
+
+\begin{itemize}
+  \item 使用直角坐标(x,y)，如(0,1)，(0.4cm,5pt)
+  \item 使用极坐标($\theta$:r)，如(30,1cm)
+  \item 使用相对位置：
+    \begin{itemize}
+      \item 一个加号：+(0,5pt)从指定的点向上移5pt
+      \item 两个加号：++(0,5pt)从指定的点向上移5pt，并把此点作为新的当前点
+    \end{itemize}
+\end{itemize}
+
+\begin{lstlisting}
+    \begin{tikzpicture}[scale=2]
+        \draw(0,0)--(90:1cm)arc(90:360:1cm)
+        arc(0:30:1cm)--cycle;
+        \draw(60:5pt)-- +(30:1cm) arc (30:90:1cm) -- cycle;
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}[scale=2]
+        \draw(0,0)--(90:1cm)arc(90:360:1cm)
+        arc(0:30:1cm)--cycle;
+        \draw(60:5pt)-- +(30:1cm) arc (30:90:1cm) -- cycle;
+    \end{tikzpicture}
+\end{center}
+
+\subsection{常用元素}
+
+几何中常见的元素包括: 点、线、圆、面。在TikZ下分别通过以下关键词定义:
+
+\begin{table}[h]
+    \begin{tabular}{@{}ccll@{}}
+    \toprule
+    元素 & 关键词 & \multicolumn{1}{c}{示例} & \multicolumn{1}{c}{效果} \\ \midrule
+    点 & \verb|\coordinate| &  \verb|\coordinate (A) at (1,-1);| &  创建点A，位于(1,-1)  \\
+     & \verb|| &  \verb|\coordinate (B) at (45:2);|  & 创建点B，位于以圆点为圆心， \\
+     &  &                      &   2为半径，逆时针旋转45\degree 处  \\
+    线 & \verb|--| &  \verb|\draw [dashed] (A)--(B)|  & 用虚线连接A与B \\
+    圆 & \verb|circle| &  \verb|\draw (1,2) circle (1cm)| & 以(1,2)为圆心，1cm为半径画圆 \\
+    面 & \verb|\fill| &  \verb|\fill[gray!50](A)--(B)--(C)| &  以50\%透明度灰色填充三角形ABC \\ \bottomrule 
+    \end{tabular}
+    \end{table}
+
+\section{基本图形对象}
+\subsection{直线和矩形}
+
+使用PGF绘图的基本语法是：
+\begin{lstlisting}
+    \draw[option]...;
+\end{lstlisting}
+
+其中\verb|\draw|称为绘图命令；后面的...部分称为操作；而[ ]中的内容称为选项，也就是说[ ]内可以不写内容。
+
+如果我们要绘制一条直线的话，我们只需要在\verb|\draw|命令后面输入点的坐标并使用\verb|--|连结起来即可。比如：
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (1,3)--(2,2)--(4,5);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (1,3)--(2,2)--(4,5);
+    \end{tikzpicture}
+\end{center}
+
+可以通过[option]将图片1中锋利的角变成圆角，在option 处填写rounded corners 即可：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw[rounded corners] (1,3)--(2,2)--(4,5);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[rounded corners] (1,3)--(2,2)--(4,5);
+    \end{tikzpicture}
+\end{center}
+
+也可以将其首尾相连，使他成为一个“封闭”图形。做法也很简单，就是让最后一个点的坐标与起点相同即可：
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (1,3)--(2,2)--(4,5)--(1,3);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (1,3)--(2,2)--(4,5)--(1,3);
+    \end{tikzpicture}
+\end{center}
+
+但图片三并非真正意义上的封闭图形，因为那只是我们人为的设置了终点和起点一致而已。如果想要绘制真正意义上的封闭图形，那我们需要使用cycle 操作:
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (1,3)--(2,2)--(4,5)--cycle;
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (1,3)--(2,2)--(4,5)--cycle;
+    \end{tikzpicture}
+\end{center}
+
+你会发现两张图片似乎没有什么区别，但是，如果将所有的角都换成圆角，那么区别就立刻出现了：
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[rounded corners] (1,3)--(2,2)--(4,5)--(1,3);
+        \draw[rounded corners] (5,3)--(6,2)--(8,5)--cycle;        
+    \end{tikzpicture}
+\end{center}
+
+伪封闭的图形它的左上顶点并未被圆角化，而真封闭的图形中所有角均被圆角化了。
+
+下面我们再来看看如何绘制一个矩形。
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (4,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (4,2);
+    \end{tikzpicture}
+\end{center}
+
+可见绘制矩形使用到的操作是 rectangle。我们只需要给出矩形的一对对角顶点然后将 rectangle 写在两者中间即可。比如图中的两个对角顶点分别是(0,0)和(4,2)。矩形也有圆角选项，设置方式与之前一样：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw[rounded corners] (0,0) rectangle (4,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[rounded corners] (0,0) rectangle (4,2);
+    \end{tikzpicture}
+\end{center}
+
+
+
+\subsection{圆、椭圆、弧}
+画一个圆的命令十分的简单，给出圆心坐标和半径，然后将circle 操作写在两者之间即可，注意半径值需要用小括号括起来：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (1,1) circle (1);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (1,1) circle (1);
+    \end{tikzpicture}
+\end{center}
+
+绘制了一个圆心在(1,1)，半径为1的圆。
+
+绘制椭圆的方式也很简单，只要给出椭圆的重心和长轴长、短轴长，然后将ellipse 操作写在两者中间即可，注意，长轴长和短轴长需要用括号括起来，两者之间用and 隔开：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (1,1) ellipse (2 and 1);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (1,1) ellipse (2 and 1);
+    \end{tikzpicture}
+\end{center}
+
+绘制了一个中心在 (1,1)，长轴长为2、短轴长为1的椭圆。
+
+绘制圆弧或者椭圆弧我们只需要使用arc 操作并给出相应角度即可：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (1 ,1) arc (0:270:1);
+        \draw (6 ,1) arc (0:270:2 and 1);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (1 ,1) arc (0:270:1);
+        \draw (6 ,1) arc (0:270:2 and 1);
+    \end{tikzpicture}
+\end{center}
+
+其中，参数0:270代表的是0$^{\circ}$到270$^{\circ}$，即分别绘制了一个圆心在(1 ,1)，半径为1的四分之三圆弧和一个中心在(6 ,1)，长轴长为2、短轴长为1的四分之三椭圆弧。在终止角度之后，使用一个冒号隔开终止角度与半径（长轴长 and 短轴长）。
+
+\subsection{曲线}
+
+我们把直线的 \verb|--| 换成 \verb|..| ，就得到贝塞尔曲线，它需要至少一个控制点(controls)。
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (1,3) .. controls (2,2)..(4,5);
+        \draw (5,3) .. controls (6,2) and (8,5)..(9,4);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (1,3) .. controls (2,2)..(4,5);
+        \draw (5,3) .. controls (6,2) and (8,5)..(9,4);
+    \end{tikzpicture}
+\end{center}
+
+(5,3)代表曲线的起点，(6,2)(8,5)代表曲线的控制点，(9,4)代表曲线的终点。
+\bigskip
+
+抛物线用parabola 操作，bend 操作可以指明顶点。
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (5,1) parabola bend (6,0) (7.414,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (5,1) parabola bend (6,0) (7.414,2);
+    \end{tikzpicture}
+\end{center}
+
+(5,1)代表抛物线的起点，(6,0)代表抛物线的顶点，(7.414,2)代表抛物线的终点。如果我们想要将这些点也进行标记那我们可以使用\verb|\filldraw|命令:
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (5,1) parabola bend (6,0) (7.414 ,2);
+        \filldraw (5,1) circle (.1)
+        (6,0) circle (.1)
+        (7.414 ,2) circle (.1);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (5,1) parabola bend (6,0) (7.414 ,2);
+        \filldraw (5,1) circle (.1)
+        (6,0) circle (.1)
+        (7.414 ,2) circle (.1);
+    \end{tikzpicture}
+\end{center}
+
+利用\verb|\filldraw|命令在坐标(5,1)、(6,0)、(7.414 ,2)填充半径为0.1pt的圆。
+
+\subsection{箭头}
+
+一些绘制箭头的命令如下：
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw [->] (0,0)--(9,0);
+        \draw [<-] (0,1)--(9,1);
+        \draw [<->] (0,2)--(9,2);
+        \draw [>->>] (0,3)--(9,3);
+        \draw [|<->|] (0,4)--(9,4);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw [->] (0,0)--(9,0);
+        \draw [<-] (0,1)--(9,1);
+        \draw [<->] (0,2)--(9,2);
+        \draw [>->>] (0,3)--(9,3);
+        \draw [|<->|] (0,4)--(9,4);
+    \end{tikzpicture}
+\end{center}
+
+绘制箭头的命令很简单。[ ]仍是选项，这个选项中是你要绘制的箭头的形式，其中<和>代表了箭头两侧的指向，而\verb|-|表示线。因为我们的箭头都是有限长度的，所以，我们需要在[ ]后面指定箭头的起点和终点，而线是直线，所以我们仍使用\verb|--|连接起点和终点。
+
+更改默认箭头样式：
+
+\begin{lstlisting}
+    \tikzset{>=stealth} 
+\end{lstlisting}
+
+\subsection{网格和坐标轴}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw [help lines ,step=0.5] (-3,-3) grid (0,0);
+        \draw [help lines ,step=3] (-3,3) grid (0,0);
+        \draw [help lines] (0,0) grid (3,3);
+        \draw [help lines,step=10pt] (0,0) grid (3,-3);
+        \draw [->] (-3.5,0) -- (3.5,0);
+        \draw [->] (0,-3.5) -- (0,3.5);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw [help lines ,step=0.5] (-3,-3) grid (0,0);
+        \draw [help lines ,step=3] (-3,3) grid (0,0);
+        \draw [help lines] (0,0) grid (3,3);
+        \draw [help lines,step=10pt] (0,0) grid (3,-3);
+        \draw [->] (-3.5,0) -- (3.5,0);
+        \draw [->] (0,-3.5) -- (0,3.5);
+    \end{tikzpicture}
+\end{center}
+
+grid操作表示绘制网格，需要起止点两个参数。help lines表示辅助线，为0.2pt 的灰线。step是步长，即每一个小单元格的边长（小单元格均为正方形），其单位是cm，缺省步长是1cm。可设置为其它单位。
+
+\subsection{函数}
+
+原生 TikZ 作图使用到的命令是
+\begin{lstlisting}
+    \draw [options] plot (\x,{function(\x)});
+\end{lstlisting}
+
+绘制二次函数$y = -x^2 +3x$图像：
+\begin{lstlisting}
+    \draw [smooth, domain = 0:2] plot  (\x,{-\x^2 + 3*\x});
+\end{lstlisting}
+
+smooth：平滑效果适合绘制函数图像；domain：定义域为[0,2]
+
+\begin{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw [smooth, domain = 0:2] plot  (\x,{-\x^2 + 3*\x});
+        \end{tikzpicture}
+    \end{center}
+\end{center}
+
+使用$\pi$：
+
+\begin{lstlisting}
+    \draw[->] (-pi,0) -- (pi,0) node[below] {$x$};
+    \draw[->] (0,-pi) -- (0,pi) node[above] {$f(x)$};
+    \draw[domain=-pi:-1/pi] plot(\x,{1/\x});
+    \draw[domain=1/pi:pi] plot(\x,{1/\x});
+    \draw[orange,domain=-pi:pi] plot(\x,{sin(\x r)});
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+       \draw[->] (-pi,0) -- (pi,0) node[below] {$x$};
+       \draw[->] (0,-pi) -- (0,pi) node[above] {$f(x)$};
+       \draw[domain=-pi:-1/pi] plot(\x,{1/\x});
+       \draw[domain=1/pi:pi] plot(\x,{1/\x});
+       \draw[orange,domain=-pi:pi] plot(\x,{sin(\x r)});
+   \end{tikzpicture}
+\end{center}
+\subsection{显示绘图区域边界}
+
+\begin{lstlisting}
+    \usetikzlibrary{backgrounds} % 写在导言区
+\end{lstlisting}
+
+例：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        [scale=2, show background rectangle]
+        \draw[style=dashed] (2,.5) circle (0.5);
+        \draw[fill=green] (1,1) ellipse (.5 and 1);
+        \draw[fill=blue] (0,0) rectangle (1,1);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        [scale=2, show background rectangle]
+        \draw[style=dashed] (2,.5) circle (0.5);
+        \draw[fill=green] (1,1) ellipse (.5 and 1);
+        \draw[fill=blue] (0,0) rectangle (1,1);
+    \end{tikzpicture}
+\end{center}
+
+\section{图形样式}
+
+\subsection{线型和线宽}
+
+PGF 中线条的缺省宽度是0.4pt，线型是实线。
+
+\begin{itemize}
+  \item 直线的宽度参数有ultra thin(超细)、very thin(非常细)、thin(细)、semithick(半粗)、thick(粗)、very thick(非常粗)、ultra thick(超粗)
+  \item 直线的类型参数有dashed(虚线)、dotted(虚点)、dash dot(点划线)、solid(实线)
+  \item 虚线的样式有densely(较密)和loosely(较疏)
+\end{itemize}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw [line width =2pt] (0,0)--(0,3); 
+        \draw [ultra thick] (0.5,0)--(0.5,3); 
+        \draw [thick] (1,0)--(1,3); 
+        \draw [semithick] (1.5,0)--(1.5,3);
+        \draw (2,0)--(2,3); 
+        \draw [thin] (2.5,0)--(2.5,3); 
+        \draw [very thin] (3,0)--(3,3); 
+        \draw [ultra thin] (3.5,0)--(3.5,3); 
+        \draw [densely dotted] (5,0)--(5,3); 
+        \draw [dotted] (5.5,0)--(5.5,3); 
+        \draw [loosely dotted] (6,0)--(6,3); 
+        \draw [densely dashed] (7.5,0)--(7.5,3); 
+        \draw [dashed] (8,0)--(8,3); 
+        \draw [loosely dashed] (8.5,0)--(8.5,3); 
+        \draw [densely dash dot] (10,0)--(10,3); 
+        \draw [dash dot] (10.5,0)--(10.5,3); 
+        \draw [loosely dash dot] (11,0)--(11,3); 
+    \end{tikzpicture}   
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw [line width =2pt] (0,0)--(0,3); 
+        \draw [ultra thick] (0.5,0)--(0.5,3); 
+        \draw [thick] (1,0)--(1,3); 
+        \draw [semithick] (1.5,0)--(1.5,3);
+        \draw (2,0)--(2,3); 
+        \draw [thin] (2.5,0)--(2.5,3); 
+        \draw [very thin] (3,0)--(3,3); 
+        \draw [ultra thin] (3.5,0)--(3.5,3); 
+        \draw [densely dotted] (5,0)--(5,3); 
+        \draw [dotted] (5.5,0)--(5.5,3); 
+        \draw [loosely dotted] (6,0)--(6,3); 
+        \draw [densely dashed] (7.5,0)--(7.5,3); 
+        \draw [dashed] (8,0)--(8,3); 
+        \draw [loosely dashed] (8.5,0)--(8.5,3); 
+        \draw [densely dash dot] (10,0)--(10,3); 
+        \draw [dash dot] (10.5,0)--(10.5,3); 
+        \draw [loosely dash dot] (11,0)--(11,3); 
+    \end{tikzpicture}   
+\end{center}
+
+\subsection{颜色和填充}
+
+PGF 可以结合xcolor 宏包的色彩功能。颜色和填充的用法见下例，其中\verb|\filldraw|命令可以用不同颜色画线和填充。注意封闭路径才可以填充！
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw[red] (0,0) --(9,0);
+        \draw[green] (0,1) --(9,1);
+        \draw[blue] (0,2) --(9,2);
+        \filldraw[draw=blue!80,fill=blue!20] (14 ,1) circle (1);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[red] (0,0) --(9,0);
+        \draw[green] (0,1) --(9,1);
+        \draw[blue] (0,2) --(9,2);
+        \filldraw[draw=blue!80,fill=blue!20] (14 ,1) circle (1);
+    \end{tikzpicture}
+\end{center}
+
+上例中如果我们想设置直线的颜色那么我们可以直接在\verb|\draw|命令后面的选项中填写颜色即可。
+
+\verb|\filldraw|命令的选项中，draw是为封闭图形的边界设置颜色，fill对封闭图形的内部填充颜色。
+
+\subsection{自定义样式}
+PGF可以自定义一些样式，这些样式一旦被定义了就可以像面向对象的类一样被继承。也就是说我们可以在导言区定义一个样式，然后将来我们可以直接在文本区调用它。比如：
+
+\begin{lstlisting}
+    \tikzset{
+        dline/.style ={color = blue, line width =2pt}
+        }
+    \begin{document}
+        \begin{tikzpicture}
+            \draw[dline] (0,0) --(9,0);
+        \end{tikzpicture}
+    \end{document}
+\end{lstlisting}
+
+\tikzset{
+        dline/.style ={color = blue, line width =2pt}
+        }
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[dline] (0,0) --(9,0);
+    \end{tikzpicture}
+\end{center}
+
+除了用\verb|\tikzset|命令定义样式，我们也可以在tikzpicture 环境头部声明样式。前者是全局有效，后者则是局部范围有效。
+
+\begin{lstlisting}
+    \begin{tikzpicture}[dline /. style ={line width =2pt}]
+        \draw[dline] (0,0) --(9,0);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\section{图形变换}
+
+\subsection{平移(shift)}
+
+\begin{enumerate}
+    \item 整体平移
+\end{enumerate}
+
+首先，先来画一个正方形：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+接下来，对其进行平移：
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[shift ={(3 ,0)}] (0,0) rectangle (2,2);
+        \draw[shift ={(0 ,3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(0 ,-3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(-3 ,0)}] (0,0) rectangle (2,2);
+        \draw[shift ={(3 ,3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(-3 ,3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(3 ,-3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(-3 ,-3)}] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+shift表示整体平移。
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[shift ={(3 ,0)}] (0,0) rectangle (2,2);
+        \draw[shift ={(0 ,3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(0 ,-3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(-3 ,0)}] (0,0) rectangle (2,2);
+        \draw[shift ={(3 ,3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(-3 ,3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(3 ,-3)}] (0,0) rectangle (2,2);
+        \draw[shift ={(-3 ,-3)}] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item 水平缩放和垂直缩放
+\end{enumerate}
+
+xshift 表示水平平移；yshift 表示垂直平移，后面直接跟平移的距离即可，单位是pt。需要注意的是如果指定了平移的方向那么后面就不能使用坐标了，而只能自定义平移距离。
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =70] (0,0) rectangle (2,2);
+        \draw[xshift =-70] (0,0) rectangle (2,2);
+        \draw[yshift =70pt] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =70] (0,0) rectangle (2,2);
+        \draw[xshift =-70] (0,0) rectangle (2,2);
+        \draw[yshift =70pt] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+\subsection{缩放(scale)}
+
+\begin{enumerate}
+    \item 对图形进行整体缩放
+\end{enumerate}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[shift ={(3,0)},scale =1.5] (0,0) rectangle (2,2);
+        \draw[shift ={(-2 ,0)},scale =0.5] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[shift ={(3,0)},scale =1.5] (0,0) rectangle (2,2);
+        \draw[shift ={(-2 ,0)},scale =0.5] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+这里在缩放的基础上又进行了平移是为了方便说明所有缩放的效果。
+
+scale = $\alpha$ ：缩放$\alpha$倍。若$\alpha > 1$则代表放大，$\alpha < 1$则代表缩小。
+
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item 水平缩放和垂直缩放
+\end{enumerate}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =70pt ,xscale =1.5] (0,0) rectangle (2,2);
+        \draw[yshift =70pt ,yscale =1.5] (0,0) rectangle (2,2);
+        \draw[xshift =-70pt ,xscale =0.5] (0,0) rectangle (2,2);
+        \draw[yshift =-70pt ,yscale =0.5] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =70pt ,xscale =1.5] (0,0) rectangle (2,2);
+        \draw[yshift =70pt ,yscale =1.5] (0,0) rectangle (2,2);
+        \draw[xshift =-70pt ,xscale =0.5] (0,0) rectangle (2,2);
+        \draw[yshift =-70pt ,yscale =0.5] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+xscale代表水平方向缩放，yscale代表垂直方向缩放。
+
+\subsection{旋转(rotate)}
+
+\begin{enumerate}
+  \item 围绕起点旋转
+\end{enumerate}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =125pt ,rotate =45] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =125pt ,rotate =45] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+rotate 后面的数值写要旋转的角度，正数表示逆时针旋转相应角度，而负数表示顺时针旋转相应角度，这与数学上的正方向规定是一致的。而且如果没有指定对某个点进行旋转的话那么默认是围绕起点进行旋转。
+
+\begin{enumerate}
+    \setcounter{enumi}{1}
+    \item 围绕定点旋转
+\end{enumerate}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =125pt ,rotate =45] (0,0) rectangle (2,2);
+        \draw[xshift =200pt ,rotate around ={45:(2 ,0)}] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =125pt ,rotate =45] (0,0) rectangle (2,2);
+        \draw[xshift =200pt ,rotate around ={45:(2 ,0)}] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+定点旋转的只需要在rotate around 后面的{}中写上旋转的角度和指定点的坐标即可。旋转的方向与非定点旋转时的方向规定一致。
+
+\subsection{倾斜(slant)}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =70pt ,xslant =2] (0,0) rectangle (2,2);
+        \draw[xshift =-70pt ,xslant =-2] (0,0) rectangle (2,2);
+        \draw[yshift =70pt ,yslant =1] (0,0) rectangle (2,2);
+        \draw[yshift =-70pt ,yslant =-1] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) rectangle (2,2);
+        \draw[xshift =70pt ,xslant =2] (0,0) rectangle (2,2);
+        \draw[xshift =-70pt ,xslant =-2] (0,0) rectangle (2,2);
+        \draw[yshift =70pt ,yslant =1] (0,0) rectangle (2,2);
+        \draw[yshift =-70pt ,yslant =-1] (0,0) rectangle (2,2);
+    \end{tikzpicture}
+\end{center}
+
+xslant表示水平倾斜，yslant表示垂直倾斜。其值越大，代表倾斜的角度越大。
+
+\section{示意图}
+
+\subsection{文字节点}
+
+利用Tikz宏包绘制文字节点需要调用\verb|\node|命令，其语法格式如下：
+
+\begin{lstlisting}
+    \node [<options>] (<name>) at (<coordinate>) {<text>}
+\end{lstlisting}
+
+语法中各参数意义如下：
+
+\begin{enumerate}
+  \item <options> ：可选参数，用来设定绘制文字节点的样式或图形
+  \item <name> ：文字节点的名称
+  \item <coordinate> ：用来指定节点的位置
+  \item <text> ：文字节点要显示的文字内容
+\end{enumerate}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \node (A) at (0,0) {\footnotesize 独立货币政策};
+        \node (B) at (4,0) {\footnotesize 资本自由移动};
+        \node (C) at (60:4) {\footnotesize 固定汇率};
+        \draw (A) -- (B) -- (C) -- (A);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \node (A) at (0,0) {\footnotesize 独立货币政策};
+        \node (B) at (4,0) {\footnotesize 资本自由移动};
+        \node (C) at (60:4) {\footnotesize 固定汇率};
+        \draw (A) -- (B) -- (C) -- (A);
+    \end{tikzpicture}
+\end{center}
+
+\subsection{图形文字节点}
+
+\tikzset{
+box/.style ={
+rectangle, % 矩形节点
+rounded corners =5pt, % 圆角
+minimum width =50pt, % 最小宽度
+minimum height =20pt, % 最小高度
+inner sep=5pt, % 文字和边框的距离
+draw=blue} % 边框颜色
+}
+
+\begin{lstlisting}
+    \tikzset{
+        box/.style ={
+        rectangle, % 矩形节点
+        rounded corners =5pt, % 圆角
+        minimum width =50pt, % 最小宽度
+        minimum height =20pt, % 最小高度
+        inner sep=5pt, % 文字和边框的距离
+        draw=blue} % 边框颜色
+    }
+\end{lstlisting}
+
+上述代码设置一个名为box的样式，它的边框是矩形，有圆角；它有最小宽度、高度、文字和边框的距离，边框和填充颜色等属性。
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \node[box] (A) at(0,0) {进入APP};
+        \node[box, text=red] (B) at(4,0) {随便看看};
+        \node[box, node font={\kaishu}] (C) at(9,0) {查看相关内容消息};
+        \draw[->] (A)--(B);
+        \draw[->] (B)--(C);
+        \node at(2,0.5) {a};
+        \node at(6,0.5) {b};
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \node[box] (A) at(0,0) {进入APP};
+        \node[box, text=red] (B) at(4,0) {随便看看};
+        \node[box, node font={\kaishu}] (C) at(9,0) {查看相关内容消息};
+        \draw[->] (A)--(B);
+        \draw[->] (B)--(C);
+        \node at(2,0.5) {a};
+        \node at(6,0.5) {b};
+    \end{tikzpicture}
+\end{center}
+
+上述代码中，文字节点样式为[box]，\verb|text=red|表示矩形内文字的颜色为红色；
+
+\verb|node font| = \verb|{\kaishu}|表示矩形内文字为楷体。
+
+\subsection{为绘制的图形添加文字节点}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw (0,0) circle [radius=2];
+        \fill (0,0) circle [radius=2pt];
+        \node[draw] (P) at (15:6) {圆心坐标是(0,0)，半径为2cm};
+        \draw[dotted] (0,0) -- (P.west);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw (0,0) circle [radius=2];
+        \fill (0,0) circle [radius=2pt];
+        \node[draw] (P) at (15:6) {圆心坐标是(0,0)，半径为2cm};
+        \draw[dotted] (0,0) -- (P.west);
+    \end{tikzpicture}
+\end{center}
+
+\verb|\draw|命令中可以使用某个节点的相对位置，以“东南西北”的方式命名。P.west表示P节点的左边；east表示右边；north表示上边；south表示下边。
+
+\subsection{绘制一颗树}
+
+\tikzset{
+cir/.style ={
+circle, % 圆形节点
+minimum width =30pt, % 最小宽度
+minimum height =30pt, % 最小高度
+fill =blue!10, % 填充色
+text =red, % 文字红色
+inner sep=5pt, % 文字和边框的距离
+draw=blue} % 边框颜色
+}
+
+\begin{lstlisting}
+    \tikzset{
+        cir/.style ={
+        circle, % 圆形节点
+        minimum width =30pt, % 最小宽度
+        minimum height =30pt, % 最小高度
+        fill =blue!10, % 填充色
+        text =red, % 文字红色
+        inner sep=5pt, % 文字和边框的距离
+        draw=blue} % 边框颜色
+    }
+\end{lstlisting}
+
+上述代码设置一个名为cir的样式，它是圆形节点，它有最小宽度、高度、文字和边框的距离，边框和填充颜色等属性。
+
+\begin{lstlisting}
+    \begin{tikzpicture}[sibling distance =80pt]
+        \node[cir] {1}
+            child {node[cir] {2}}
+            child {node[cir] {3}}
+            child {node[cir] {4}
+                child {node[cir] {5}}
+                child {node[cir] {6}}
+                child {node[cir] {7}}
+            };
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}[sibling distance =80pt]
+        \node[cir] {1}
+            child {node[cir] {2}}
+            child {node[cir] {3}}
+            child {node[cir] {4}
+                child {node[cir] {5}}
+                child {node[cir] {6}}
+                child {node[cir] {7}}
+            };
+    \end{tikzpicture}
+\end{center}
+
+child关键字用来声明子节点；sibling distance选项控制相邻节点之间的距离，单位为pt。
+
+\subsection{绘制函数图像}
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \draw[->] (-0.2,0) --(6,0) node[right] {$x$};
+        \draw[->] (0,-0.2) --(0,6) node[above] {$f(x)$};
+        \draw[domain =0:4] plot (\x ,{0.1* exp(\x)}) node[right] {$f(x)=\frac{1}{10}e^x$};
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[->] (-0.2,0) --(6,0) node[right] {$x$};
+        \draw[->] (0,-0.2) --(0,6) node[above] {$f(x)$};
+        \draw[domain =0:4] plot (\x ,{0.1* exp(\x)}) node[right] {$f(x)=\frac{1}{10}e^x$};
+    \end{tikzpicture}
+\end{center}
+
+其中domain 设置了我们想要绘制的范围，起始点和终止点之间用 : 隔开。plot是绘制操作，node后面[]中填写我们文本的位置。
+
+\section{流程图}
+
+\begin{lstlisting}
+    \usepackage{tikz}
+    \usetikzlibrary{graphs, positioning, quotes, shapes.geometric,calc}
+    % 流程图定义基本形状
+    \tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 2cm, minimum height=1cm,text centered, draw = black]
+    \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black]
+    \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black]
+    \tikzstyle{decision} = [diamond, aspect = 3, text centered, draw=black]
+\end{lstlisting}
+
+示例：
+\begin{center}
+    \begin{tikzpicture}[node distance=2cm]
+        \node (start) [startstop] {start};
+        \node (pro1) [process, below of=start, left of=start, xshift=-1cm] {PROCESS 1};
+        \node (pro2) [process, right of=pro1, xshift= 4cm] {PROCESS 2};
+        \node (in1) [io, below of=pro1, right of=pro1, xshift=1cm] {IO};
+        \node (pro3) [process, below of=in1] {PROCESS 3};
+        \node (in2) [io, below of=pro3] {IO 2};
+        \node (dec1) [decision, below of=in2] {DECISION};
+        \node (end) [startstop, below of=dec1] {end};
+
+        \draw [->](dec1) -- ($(dec1.east) + (1.5,0)$) node[anchor=north] {NO} |- (pro3);
+        \graph[use existing nodes=true]{
+        start  ->  pro1  ->  in1  ->  pro3  ->  in2  ->  dec1  ->["Yes"left]  end ;
+        start  ->  pro2  ->  in1 ;
+        };
+    \end{tikzpicture}
+\end{center}
+
+\begin{lstlisting}
+    \begin{tikzpicture}[node distance=2cm]
+        \node (start) [startstop] {start};
+        \node (pro1) [process, below of=start, left of=start, xshift=-1cm] {PROCESS 1};
+        \node (pro2) [process, right of=pro1, xshift= 4cm] {PROCESS 2};
+        \node (in1) [io, below of=pro1, right of=pro1, xshift=1cm] {IO};
+        \node (pro3) [process, below of=in1] {PROCESS 3};
+        \node (in2) [io, below of=pro3] {IO 2};
+        \node (dec1) [decision, below of=in2] {DECISION};
+        \node (end) [startstop, below of=dec1] {end};
+
+        \draw [->](dec1) -- ($(dec1.east) + (1.5,0)$) node[anchor=north] {NO} |- (pro3);
+        \graph[use existing nodes=true]{
+        start  ->  pro1  ->  in1  ->  pro3  ->  in2  ->  dec1  ->["Yes"left]  end ;
+        start  ->  pro2  ->  in1 ;
+        };
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{itemize}
+  \item 少用、甚至不用具体坐标
+    \begin{itemize}
+      \item 第一个 node 省略了坐标，相当于指定了 (0, 0)
+      \item 从第二个 node 开始，利用 tikz library positioning 提供的选项（例如 below=of <node name>）， 指定相对位置关系。效果是，每组 node，外框之间的（最小）距离都相同，是 node distance 指定的 2cm；在需要手动调整距离时，可以使用right=<dimen> of <node name>。
+    \end{itemize}
+  \item 简化 arrow 的输入
+    \begin{itemize}
+      \item \verb|\graph| 命令接受\verb|(start) -> (step 1) -> (step 2)| 这样的输入
+      \item 使用\verb|\graph[use existing nodes=true]|，能进一步简化为 \verb|start -> step 1 -> step 2|
+    \end{itemize}
+  \item 简化node label的输入
+    \begin{itemize}
+      \item  虽然\verb|(start) -> (step 1) -> (step 2)| 的语法大大简化了输入，但是标记 node label 和绘制非简单 arrow 变麻烦了，带来了学习成本
+      \item 利用tiklibrary{quotes}，将 node label 的输入从 label={[<options>]<text>} 简化为 "<text>"<options>
+    \end{itemize}
+\end{itemize}
+
+\section{节点文字位置}
+
+\subsection{文字换行}
+
+选项中加align=center，并用\verb|\\|换行，例如
+
+\begin{lstlisting}
+    \node at (-0.5,1)[draw, align=center]{example \\ example example};
+\end{lstlisting}
+
+\subsection{折线文字位置}
+
+With \verb|-|| and |\verb|-|, midway (or pos=.5) is defined as the point where the two legs meet, regardless of how uneven the two legs are.
+
+\begin{lstlisting}
+    \coordinate (a) at (0,0);
+    \coordinate (b) at (3,1);
+    \draw (a) |- node[pos=.25,left]{A}
+        node[pos=.5,above left]{B}
+        node[pos=.75,above]{C} (b);
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate (a) at (0,0);
+        \coordinate (b) at (3,1);
+        \draw (a) |- node[pos=.25,left]{A}
+          node[pos=.5,above left]{B}
+          node[pos=.75,above]{C} (b);
+        \end{tikzpicture}
+\end{center}
+\section{常见需求}
+
+\subsection{描点}
+
+\verb|\coordinate|方法只是创建了点, 但实际上并不会显示(因为点并没有大小), 而实际中可能需要将相应的点标注出来, 即描点。通过以下方式即可:
+
+\begin{lstlisting}
+    \node at (O)[circle,fill,inner sep=1pt]{};
+\end{lstlisting}
+
+即在O点创建一个node对象, 其风格为填充(fill)圆(circle), 宽度为1pt, 看起来也就是一个可见的点。 {}中为node对象的标识, 此处不需要故留白。
+
+或者：
+
+\begin{lstlisting}
+    \filldraw (O) circle (.05);
+\end{lstlisting}
+
+即在O点填充一个半径为0.05cm的圆，看起来也是一个可见的点。
+
+\subsection{指定标签位置}
+
+在创建元素时, 可以为其添加标签, 并控制标签出现在元素的相对位置, 如下:
+
+\begin{lstlisting}
+    \begin{tikzpicture}
+        \coordinate[label=above:$O$] (O) at (0,0);
+        \coordinate[label=below:$A$] (A) at (0.75,0);
+        \coordinate[label=above right:$B$] (B) at (45:1);
+    \end{tikzpicture}    
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate[label=above:$O$] (O) at (0,0);
+        \coordinate[label=below:$A$] (A) at (0.75,0);
+        \coordinate[label=above right:$B$] (B) at (45:1);
+        \filldraw (O) circle (.05);
+        \filldraw (A) circle (.05);
+        \filldraw (B) circle (.05);
+    \end{tikzpicture}
+\end{center}
+
+以上代码分别演示将标签放置于元素的上方|下方|右上方, 共可设置八种方位。
+
+\subsection{为线添加标签}
+
+除了为点标注标签外, 也可为线添加标签，代码如下：
+
+\begin{lstlisting}
+    \draw[blue] (A) -- (B) node[above,midway](line){$a$};
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \coordinate[label=left:$A$] (A) at (0,0);
+        \coordinate[label=right:$B$] (B) at (6,0);
+        \filldraw (A) circle (.05);
+        \filldraw (B) circle (.05);
+        \draw[blue] (A) -- (B) node[above,midway](line){$a$};
+    \end{tikzpicture}
+\end{center}
+
+前半部分为画线, 然后创建node元素以承载对线条AB的标签, 通过above|midway控制标签相对于线条AB的位置, 即置于线条上方|中间。此外, (line)为该对象设置索引, 方便其他语句引用该对象。(若无需再指向该对象则可以省略)
+
+\subsection{设定数值包含根式的元素}
+
+某些情况下可能需要以根式值作为线段或圆半径设定对象, 而实际上TikZ支持在语句中使用sqrt函数, 以下为用例: 
+
+\begin{lstlisting}
+    \begin{tikzpicture}[scale=2]
+        \coordinate[label=left:$A$] (A) at (0,0);
+        \coordinate[label=right:$B$] (B) at ({sqrt(3)},0,0);
+        \coordinate[label=left:$C$] (C) at (0,1);
+        \draw[fill=gray!20,dotted] ({sqrt(3)/2},0.5) circle (1);
+        \fill[blue!80] (A) -- (B) -- (C);
+    \end{tikzpicture}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}[scale=2]
+        \coordinate[label=left:$A$] (A) at (0,0);
+        \coordinate[label=right:$B$] (B) at ({sqrt(3)},0,0);
+        \coordinate[label=left:$C$] (C) at (0,1);
+        \draw[fill=gray!20,dotted] ({sqrt(3)/2},0.5) circle (1);
+        \fill[blue!80] (A) -- (B) -- (C);
+    \end{tikzpicture}
+\end{center}
+
+注意: 务必将sqrt运算符用{}花括号括起来, 以告诉TikZ需要运算。
+
+\subsection{标注直角符号}
+
+以下公式可用于创建直角符号:
+
+
+
+
+\subsection{foreach循环功能}
+
+利用\verb|foreach|命令实现简单的循环功能，其语法格式如下：
+
+\begin{lstlisting}
+    \foreach \a in {<list>} <commands>
+\end{lstlisting}
+
+其中，\verb|foreach|表示实现循环功能的命令；\verb|\a|表示变量； in 表示在什么内，这里是指变量\verb|\a|只要在<list>内；<commands>表示循环执行的命令。
+
+\begin{lstlisting}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw[fill=yellow,draw=red] (0,0) circle [radius=1.5];
+            \foreach \x in {0,30,60,90,120,150,180,210,240,270,300,330}
+            \draw[red] (\x:2) -- (\x:4);
+        \end{tikzpicture}
+    \end{center}
+\end{lstlisting}
+
+\begin{center}
+    \begin{tikzpicture}
+        \draw[fill=yellow,draw=red] (0,0) circle [radius=1.5];
+        \foreach \x in {0,30,60,90,120,150,180,210,240,270,300,330}
+        \draw[red] (\x:2) -- (\x:4);
+    \end{tikzpicture}
+\end{center}
+
+只要x在{0,30,60,90,120,150,180,210,240,270,300,330}之中，就绘制直线。直线是极坐标系下的直线，起点坐标的角度为\verb|\x|，半径为2；终点坐标的角度为\verb|\x|，半径为4。
+
+\subsection{利用循环功能绘制时间线}
+
+\begin{lstlisting}
+    \draw [->,semithick] (0,0) -- (10,0);
+    \foreach \x [count=\i] in {2014,2015,2016,...,2022}
+    \filldraw ({\i},0) circle (.05) node [below,font=\fontsize{6}{6}\selectfont] {\x};
+\end{lstlisting}
+
+\begin{remark}
+    如果 j 的取值范围是像自然数一样的, 可以先写前三个, 中间三个点 ...,, 最后以一个值停止即可, 比如还可以 -1,-0.9,-0.8,…,1 得到 21 个值. 
+\end{remark}
+
+\begin{center}
+    \begin{center}
+        \begin{tikzpicture}
+            \draw [->,semithick] (0,0) -- (10,0);
+            \foreach \x [count=\i] in {2014,2015,2016,2017,2018,2019,2020,2021,2022}
+            \filldraw ({\i},0) circle (.05) node [below,font=\fontsize{6}{6}\selectfont] {\x};
+        \end{tikzpicture}
+    \end{center}
+\end{center}
+
+\subsection{多变量同时循环}
+\begin{lstlisting}
+    \begin{tikzpicture}[scale=4,auto,swap]
+        \foreach \pos/\name in {{(0,0)/4},{(1,0)/5},{(2,0)/6},{(0,1)/1},{(1,1)/2},{(2,1)/3}}
+        {\node[draw,circle,black] (\name) at \pos{$\name$};}
+        \foreach \source /\dest /\weight /\pos in
+        {1/6/12/0.1,3/4/10/0.25,4/5/6/0.40,5/6/9/0.65,1/5/7/0.80,3/5/6/0.95}
+        {\path[draw,dotted,cyan] (\source) -- node[pos=\pos, above] {$\weight$} (\dest);}
+        \foreach \source /\dest /\weight/\pos in
+        {1/2/12/0.1,2/3/7/0.25,2/4/4/0.40,3/6/5/0.65,4/1/10/0.8,6/2/8/0.95}
+        {\path[draw,dotted, red] (\source) -- node[pos=\pos, below] {$\weight$} (\dest);}
+        \end{tikzpicture}
+\end{lstlisting}
+\begin{center}
+    \begin{tikzpicture}[scale=4,auto,swap]
+        \foreach \pos/\name in {{(0,0)/4},{(1,0)/5},{(2,0)/6},{(0,1)/1},{(1,1)/2},{(2,1)/3}}
+        {\node[draw,circle,black] (\name) at \pos{$\name$};}
+        \foreach \source /\dest /\weight /\pos in
+        {1/6/12/0.1,3/4/10/0.25,4/5/6/0.40,5/6/9/0.65,1/5/7/0.80,3/5/6/0.95}
+        {\path[draw,dotted,cyan] (\source) -- node[pos=\pos, above] {$\weight$} (\dest);}
+        \foreach \source /\dest /\weight/\pos in
+        {1/2/12/0.1,2/3/7/0.25,2/4/4/0.40,3/6/5/0.65,4/1/10/0.8,6/2/8/0.95}
+        {\path[draw,dotted, red] (\source) -- node[pos=\pos, below] {$\weight$} (\dest);}
+        \end{tikzpicture}
+\end{center}
+
+\begin{remark}
+    当有两个甚至更多的变量伴随时, 使用 \verb|\j/\k/\l| 之类, 取值范围也是对应赋值, 如果某一组 \verb|\j,\k,\l| 的值相等, 可以只提供一个, 即 3/3/3 和 一个 3 效果一样.
+\end{remark}
+\subsection{嵌套循环}
+\begin{lstlisting}
+    \foreach \i in {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+    {
+        \foreach \j in {0, 1, 2, 3, 4}
+        {
+           ...
+        }
+    }
+\end{lstlisting}
+\subsection{长图片跨页}
+
+转自：http://tex.stackexchange.com/questions/22826/breaking-pictures-across-multiple-pages
+
+\begin{lstlisting}
+    \usepackage{adjustbox} 
+    \newsavebox{\mysavebox}
+    \newlength{\myrest}
+    \begin{document}
+     
+    \begin{lrbox}{\mysavebox}
+    \begin{tikzpicture}
+        ...
+    \end{tikzpicture}
+    \end{lrbox}
+    %
+    \ifdim\ht\mysavebox>\textheight
+        \setlength{\myrest}{\ht\mysavebox}
+        \loop\ifdim\myrest>\textheight
+            \newpage\par\noindent
+            \clipbox{0 {\myrest-\textheight} 0 {\ht\mysavebox-\myrest}}{\usebox{\mysavebox}}
+            \addtolength{\myrest}{-\textheight}
+        \repeat
+        \newpage\par\noindent
+        \clipbox{0 0 0 {\ht\mysavebox-\myrest}}{\usebox{\mysavebox}}
+    \else
+        \usebox{\mysavebox}
+    \fi
+\end{lstlisting}

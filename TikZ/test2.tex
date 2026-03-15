@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage[a5paper]{geometry}
+
+% \title{algorithmicx (algpseudocode) example}
+
+% From the package documentation:
+% "The package algorithmicx itself doesn’t define any
+% algorithmic commands, but gives a set of macros to 
+% define such a command set.  You may use only 
+% algorithmicx, and define the commands yourself, or you 
+% may use one of the predefined command sets."
+% 
+% Popular predefined command sets include algpseudocode and algpascal. algcompatible should only be used in old documents, and algc is incomplete.
+
+\usepackage{algpseudocode}
+
+\begin{document}
+
+\begin{algorithmic}
+\Require $n \geq 0$
+\Ensure $y = x^n$
+\State $y \Leftarrow 1$
+\State $X \Leftarrow x$
+\State $N \Leftarrow n$
+\While{$N \neq 0$}
+\If{$N$ is even}
+  \State $X \Leftarrow X \times X$
+  \State $N \Leftarrow \frac{N}{2} $  \Comment{This is a comment}
+\ElsIf{$N$ is odd}
+  \State $y \Leftarrow y \times X$
+  \State $N \Leftarrow N - 1$
+\EndIf
+\EndWhile
+\end{algorithmic}
+
+
+
+\end{document}

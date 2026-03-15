@@ -1,0 +1,728 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme}
+\usetikzlibrary{tikzmark}
+
+
+%封面
+\title{第四章\ 药物的代谢}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\section{概述}
+
+
+\begin{frame}
+    \frametitle{定义}
+    药物被机体吸收后 ， 在体内各种酶以及体液环境作用下发生化学结构改变的过程 ， 称为\highlight{药物代谢} （ drug metabolism ） ， 又称为生物转化 （ biotransformation ） 。 
+    
+    药物代谢主要在肝中进行，也发生在肠 、肾 、肺 、血液和皮肤等器官 。
+
+    \begin{itemize}
+      \item I相代谢
+        \begin{itemize}
+          \item 在药物分子中引入或使药物分子暴露出极性基团， 如羟基 、 羧基 、 巯基和氨基等
+          \item 包括氧化 、 还原和水解等反应
+        \end{itemize}
+      \item II相代谢
+        \begin{itemize}
+          \item 药物或I相代谢产生的极性基团与体内某些内源性小分子结合的反应
+          \item 如葡萄糖醛酸结合 、 磺酸化 、 甲基化 、 乙酰化 、 谷胱甘肽结合等反应
+        \end{itemize}
+    \end{itemize}
+    各种药物代谢的方式不同 ，有的药物经第 I 相反应后 ， 无需进行第 II 相的结合反应 ， 即可排出体外 ；也有一些药物不经 I 相反应 ， 直接进行 II 相反应而排出体外 ；但多数药物要经受两相反应 。多数药物的代谢是从 I 相到 II 相反应序贯进行 ， 但也有例外 。 
+
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{首过效应}
+    口服药物主要经小肠和大肠吸收进入肠毛细血管床 ， 通过门静脉经过肝脏到达体循环 ； 只有部分经淋巴系统或远端直肠吸收的药物才能绕过肝脏直接进入体循环 。 
+
+    在消化道和肝脏中，口服药物部分被代谢而导致进入体循环的原形药物量减少的现象 ， 称为\highlight{首过效应}， 亦称为\highlight{首过代谢}。
+    \begin{itemize}
+      \item 胃肠道首过效应
+      \item 肝首过效应
+    \end{itemize}
+    \begin{blankblock}{}
+      通常肝脏代谢比较强的药物和受消化道酶影响较大的药物都会有明显的首过效应 ， 如异丙肾上腺素 、 阿司匹林 、 吗啡 、 氯内嗪等 。 为了避免首过效应 ， 可以采用舌下和直肠下部给药等 ， 使药物不经过消化道和肝脏 ， 直接进入体循环 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肝提取率}
+    自消化道吸收的药物首先经过门脉系统进入肝，在肝脏被肝药酶转化或与组织成分结合，或随胆汁排出，最终导致进入体循环的药物明显减少，其减少的比例可用肝提取率 （ extraction ratio ，$ER$ ） 来描述 ：
+    \[
+        ER=\frac{C_{\mathrm{A}}-C_{\mathrm{V}}}{C_{\mathrm{A}}}
+    \]
+    式中，$C_{\mathrm{A}}$和$C_{\mathrm{V}}$分别代表进入和流出肝脏的血中药物浓度 。
+
+    肝提取率$ER$介于$0\sim 1$之间，肝提取率为0.5表示药物从门脉进入肝脏后有一半量被清除，其余量（$1-ER$）通过肝脏进入体循环。
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{肝清除率}
+    肝脏对药物的消除能力可进一步用肝清除率 (hepatic clearance, $Cl_{\mathrm{h}}$) 来描述 ， 它是指单位时间内有多少体积血浆中所含的药物被肝脏清除 ， 即单位时间肝脏清除药物的总量与当时血浆浓度($C$)的比值 ， 单位是 mL/min 或 L/h 。
+    \[
+      Cl_{\mathrm{h}}=\frac{\mathrm{d}X}{\mathrm{d}t}C
+    \]
+    据肝血流量($Q$)和肝提取率可计算$Cl_{\mathrm{h}}$：
+    \[
+      Cl_{\mathrm{h}}=\frac{Q(C_{\mathrm{A}}-C_{V})}{C_{\mathrm{A}}}=Q\cdot ER
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{影响$Cl_{\mathrm{h}}$的因素}
+    \begin{enumerate}
+      \item 肝酶代谢药物的固有能力称为“肝内在清除率”($Cl_{\mathrm{int}}$)，它被用来测定肝脏整体清除率
+        \[
+          Cl_{\mathrm{h}}=Q\left[\frac{Cl_{\mathrm{int}}}{Q+Cl_{\mathrm{int}}}\right]
+        \]
+        \begin{itemize}
+          \item 对于低提取率药物 ， 其肝清除率主要取决于其内在清除率
+          \item 对于高提取率药物 ， 其肝清除率主要取决于肝血流量
+        \end{itemize}
+      \item 血浆蛋白结合的影响
+        \[
+          Cl_{\mathrm{h}}=Q\left[\frac{f_{\mathrm{u}}Cl_{\mathrm{int}}^{\prime}}{Q+f_{\mathrm{u}}Cl_{\mathrm{int}}^{\prime}}\right]
+        \]
+        式中$f_{\mathrm{u}}$表示血浆中游离药物的百分数 ； $Cl_{\mathrm{int}}^{\prime}$表示游离药物的内在清除率 。
+          \begin{itemize}
+            \item 当$Cl_{\mathrm{int}}^{\prime}$很小 ， 即$Q$远大于$Cl_{\mathrm{int}}^{\prime}$时，$Cl_{\mathrm{h}}\approx Cl_{\mathrm{int}}$
+            \item 当$Cl_{\mathrm{int}}^{\prime}$很大 ， 即$Q$远小于$Cl_{\mathrm{int}}^{\prime}$时，$Cl_{\mathrm{h}}\approx Q$
+          \end{itemize}
+    \end{enumerate}
+    
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{药物代谢的作用}
+  \begin{enumerate}
+    \item 代谢使药物失去活性
+      \begin{itemize}
+        \item 局麻药普鲁卡因 ， 在体内被水解后 ， 迅速失去活性 ；
+      \end{itemize}
+    \item 代谢使药物活性降低
+      \begin{itemize}
+        \item 氯丙嗪的代谢产物去甲氯丙嗪 ， 其药理活性比氯丙嗪低 ；
+      \end{itemize}
+    \item 代谢使药物活性增强
+      \begin{itemize}
+        \item 非那西丁在体内转化为极性更大的代谢物对乙酰氨基酚，其药理作用明显增强；
+      \end{itemize}
+    \item 代谢使药理作用激活
+      \begin{itemize}
+        \item 根据此原理设计前体药物；
+        \item 左旋多巴在体内经酶解脱羧后再生成多巴胺而发挥治疗作用；
+      \end{itemize}
+    \item 代谢产生毒性代谢物
+      \begin{itemize}
+        \item 如异烟肼在体内的代谢物乙酰肼可引起肝脏的损害。
+      \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+
+\section{药物的I相代谢}
+
+\subsection{氧化反应}
+
+
+\begin{frame}
+    \frametitle{细胞色素P450酶}
+    \begin{minipage}{0.48\linewidth}
+      CYP450是一个超基因家族 ， 参与编码 500 多种酶蛋白 。人类CYPs 具有 57 个基因和超过 59 个假基因 ， 被分为 18 个家族和 41 个亚家族。
+
+      \bigskip    
+    \begin{tikzpicture}[scale=1]
+      \foreach \x [count=\i] in {C,Y,P,2,D,6}
+      \draw [maincolor,shift={({\i-1},0)}] (0,0) rectangle (1,1) node [midway] {\x};
+      \draw [maincolor] (3.5,1) -- (3.5,1.5) node [above] {氨基酸同源性大于40\%视为同一家族};
+      \draw [maincolor] (4.5,0) -- (4.5,-0.5) node [below] {同源性大于55\%为同一亚家族};
+  \end{tikzpicture}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+      \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{CYP450}
+      \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{CYP450 酶催化反应原理}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.7\linewidth]{CYP450酶催化反应原理}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{黄素单加氧酶}
+    黄素单加氧酶(FMOs)是一组依赖黄素腺嘌呤二核苷酸(FAD) 、 还原型烟酰胺腺嘌呤二核苷酸磷酸(NADPH)和分子氧的微粒体酶 ， 是重要的肝内药物和化学异物代谢酶 ， 可催化含氮 、硫 、 磷 、 硒和其他亲核杂原子的化合物和药物的氧化 。
+
+  目前 ， 人体内具有药物代谢功能的 FMOs 有 5 种 （ FMO1 ～ FMO5 ） ， 不同的亚型在不同组织 、不同人群中具有不同的分布特征 。 
+  \begin{itemize}
+    \item 在成人肝脏中表达量最高的亚型为 FMO3 和 FMO5 ； 
+    \item 在成人肾脏和肺中表达量最高的亚型为 FMO1 和 FMO2 ；
+    \item 在胎儿肝脏中 FMOs 主要以 FMO1 和FMO5 为主 。
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{单胺氧化酶}
+   单胺氧化酶(MAOs)是机体内参与胺类物质代谢的主要酶类 ， 其底物主要为单胺类物质 。
+   
+   单胺类物质在机体内多具有重要的生理功能 ， MAOs 的代谢作用显得十分重要 。
+
+  根据MAOs的作用底物 、 分布位置和选择性抑制剂的不同 ， 可将其分为两类：
+  \begin{enumerate}
+    \item MAO-A 主要以儿茶酚胺类和含有羟基的胺类物质为作用底物，在脑内主要存在于肾上腺素能神经元内；
+    \item MAO-B 则主要代谢不含羟基的胺类物质，在脑内主要存在于 5-羟色胺能神经元和神经胶质细胞中 。
+  \end{enumerate} 
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{烷基氧化}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{烷烃氧化}
+    \end{figure}
+\end{frame}
+
+% 长碳链的烷烃常在碳链末端甲基上氧化生成羟基 ， 羟基化合物可被脱氢酶进一步氧化生成羧基 ， 称为 $\omega$ - 氧化 ； 氧化还会发生在碳链末端倒数第二位碳原子上 ， 称 $\omega$-1 氧化 。
+
+% 例如抗癫痫药丙戊酸钠 （ sodium valproate ） ， 经 $\omega$-氧化生成羟基丙戊酸钠和丙基戊二酸钠 ； 经 $\omega$-1 氧化生成 2-丙基-4-羟基戊酸钠 。
+
+
+\begin{frame}
+  \frametitle{芳环氧化}
+  \begin{minipage}{0.48\linewidth}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{芳环氧化}
+    \end{figure}
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\linewidth}
+    苯妥英 (phenytoin) 和在体内经代谢后生成羟基化合物 。
+    
+    \bigskip
+
+    \bigskip
+
+    \bigskip
+    
+    保泰松 (phenylbutazone) 在体内氧化代谢后生成的代谢产物羟布宗 (oxyphenbutazone) 抗炎作用比保泰松强而毒性副作用比保泰松低 ， 这是药物经代谢后活化的例子 。
+  \end{minipage}
+  
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{烯炔氧化}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{烯炔氧化}
+  \end{figure}
+  抗癫痫药物卡马西平 ， 在体内代谢生 10 ， 1 1 -环氧化合物，这一环氧化合物是卡马西平产生抗癫痫作用的活性成分，是代谢活化产物 。 该环氧化合物会经进一步代谢 ， 被环氧化物酶立体选择性地水解产生 10S ， 11S-二羟基化合物 ， 经由尿排出体外 。
+\end{frame}
+
+\begin{frame}
+  \frametitle{烯炔氧化}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{烯炔氧化2}
+  \end{figure}
+  黄曲霉素B$_1$ 经代谢后生成环氧化合物 ， 该环氧化合物会进一步与 DNA 作用生成共价键化合物 ， 是该化合物致癌的分子机制 。
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{醛酮氧化}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{醛酮氧化}
+    \caption{视黄醛的醛基通过氧化生成相应的羧酸}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{氮氧化}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{N氧化}
+  \end{figure}
+  \vspace{-1.8em}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{脱N烷基化}
+  \end{figure}
+  \vspace{-1em}
+  物丙米嗪经脱甲基代谢生成地昔帕明具有抗抑郁活性；
+  
+  异丙甲氧明经脱烷基后生成甲氧明， 会引起血压升高 ， 临床上用于升高血压 。
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{硫氧化}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{硫氧化}
+    \caption{奥美拉唑中硫原子的氧化反应过程}
+  \end{figure}
+\end{frame}
+
+
+\subsection{还原反应}
+
+
+\begin{frame}
+    \frametitle{还原酶}
+    还原反应主要针对药物结构中的羰基 、 羟基 、 硝基和偶氮基等功能基团进行反应 。机体内大部分的酶系都可以催化还原反应 ，而且不同酶系的反应底物没有明确界限。能进行还原反应的酶系包括：
+    \begin{itemize}
+      \item 乙醇脱氢酶(ADHs)
+      \item 醛-酮还原酶(AKR)
+      \item 羰基还原酶(CBR)
+      \item 醌还原酶
+      \item CYP450还原酶
+      \item 一些消化道细菌产生的还原酶
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{羰基的还原}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.85\linewidth]{羰基还原}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{脱卤还原}
+    CYP450催化多卤代烷发生还原反应生成卤代烯：
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{脱卤还原}
+      \caption{吸入性麻醉剂氟烷脱去F和 Br生成卤代烯}
+    \end{figure}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{硝基的还原}
+    在一定条件下，CYP450催化含硝基的药物发生还原反应，将硝基还原为氨基：
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{氯霉素}
+    \caption{氯霉素的还原反应过程}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{偶氮基的还原}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{偶氮基}
+      \caption{抗溃疡性结肠炎药物柳氮磺吡啶在肠中被肠道细菌还原成磺胺吡啶和5-氨基水杨酸}
+    \end{figure}
+\end{frame}
+
+
+
+\subsection{水解反应}
+
+
+\begin{frame}
+    \frametitle{水解酶}
+    \begin{enumerate}
+      \item 环氧水解酶(EHs)
+        \begin{itemize}
+          \item 微粒体型 EH
+          \item 可溶性 EHO
+        \end{itemize}
+      \item 酯键水解酶
+      
+      酶酯键水解酶在体内可以水解多肽类 、 酰胺 、 卤化物以及羧酸酯 、硫酸酯和磷酸酯 。 
+    \end{enumerate}
+    \begin{blankblock}{}
+      羧酸酯酶(CESs)和胆碱酯酶(CHEs) 是人体内最重要的酯键水解酶系 。 CESs 在体内具有平衡胆固醇和脂肪酸的作用 ， 并可以影响内质网蛋白的转运功能 ， 但对于 CESs 的生理功能目前尚不能明确 。 CESs 主要在肝脏 、 肠道和肾脏中表达 ， 而则在血浆中含量很高 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{酯类药物水解}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{阿司匹林水解}
+    \caption{阿司匹林水解生成水杨酸和乙酸}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{酰胺类药物水解}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{利多卡因水解}
+    \caption{利多卡因水解}
+  \end{figure}
+  \begin{blankblock}{}
+    利用酯和酰胺在体内可进行水解代谢的性质，可将含具有刺激作用的羧基、不稳定的酚羟基或醇羟基设计成酯的前药，在体内经水解，释放出具有治疗活性的药物 。
+  \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{芳烃类药物水解}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{芳烃水解}
+    \caption{罗非昔布的苯环在体内可发生水解生成双羟基衍生物}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{烯烃类药物水解}
+  \begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{卡马西平水解}
+    \caption{抗癫痫药物卡马西平的C=C经水解后生成相应的二醇类代谢产物}
+  \end{figure}
+\end{frame}
+
+
+
+\section{药物的II相代谢}
+
+
+\begin{frame}
+  \frametitle{葡萄糖醛酸转移酶}
+  \begin{minipage}{0.48\linewidth}
+    葡萄糖醛酸转移酶(UGTs)是一个超级家族 ， 广泛分布于机体各个组织器官 ， 包括肝脏 、 肠道 、 肾脏等 ， 在肝脏中的表达最高。
+
+    UGT可以分为UGT1、UGT2、UGT3和UGT8四个基因家族，迄今为止已经确认了46个UGT亚型。
+  \end{minipage}\hfill
+  \begin{minipage}{0.48\linewidth}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{UGTs}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{葡萄糖醛酸结合反应}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.6\linewidth]{葡萄糖醛酸结合反应机制}
+      \caption{葡萄糖醛酸结合反应机制}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{磺基转移酶}
+  \begin{minipage}{0.68\linewidth}
+    \begin{itemize}
+      \item 磺基转移酶(SULTs) 是机体催化多种内源性和外源性物质磺酸化代谢的关键酶。
+      \item SULT1 和 SULT2 是SULT中两个重要的家族。
+      \item SULT1主要参与酚类物质的反应 ，在肝脏中有很高的表达量 ；
+      \item SULT2 主要参与类固醇的反应 ， 主要存在于肾上腺皮质 、 肝脏及肾脏 。
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}{0.28\linewidth}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{SULTs}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{磺基结合反应}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{米诺地尔的磺酸化结合反应过程}
+      \caption{米诺地尔的磺酸化结合反应过程}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{甲基转移酶}
+  \begin{enumerate}
+    \item 儿茶酚-$O$-甲基转移酶(COMTs)
+    
+    在机体各组织中广泛存在的甲基转移酶 ，在肝脏 、 肾脏 、 血细胞 、 脑 、 子宫内膜 、 乳腺以及中枢神经系统中含量较高。
+    \item 巯嘌呤甲基转移酶(TPMTs)
+    
+    是硫唑嘌呤、 6-巯基嘌呤、硫鸟嘌呤等嘌呤类药物代谢过程中的重要代谢酶。
+    \item N-甲基转移酶
+    
+    是一种胞内蛋白质 ， 主要分布于消化系统 、 支气管 、 肾脏和大脑 。 在体内发生 N-甲基化的药物为数不多 ， 组胺和烟酰胺是该酶底物 。
+  \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{甲基化结合反应}
+    \begin{itemize}
+      \item 药物甲基化的部位通常在药物结构中的 N 、 O 、 和S等杂原子上
+      \item 甲基的主要来源是蛋氨酸，经活化后作为甲基供体，在甲基转移酶作用下发生结合反应
+      \item 甲基化后的代谢产物极性减小
+    \end{itemize}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.5\linewidth]{烟酰胺的甲基化结合反应过程}
+      \caption{烟酰胺在体内经甲基转移酶作用下生成$N$-甲基烟酰胺}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{$N$-乙酰基转移酶}
+  $N$-乙酰基转移酶(NATs)是机体催化体内含氮物质使其发生乙酰化的酶系 ， 对含氮外源性物质在体内的生物转化 、 活化及降解都有很重要的影响 。
+  \begin{itemize}
+    \item NATs 是由 281 个氨基酸残基组成的一个特异性三维结构
+    \item 人类 NATs 家族由NAT1 、 NAT2 和 NATP 三个亚家族组成
+    \item NATs 在人体多种组织器官中均有分布 ， 主要分布在肝脏 、 脾 、 肺和肠的网状内皮细胞中 ， 具有显著的种族 、 家族和个体差异 。
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{乙酰基结合反应}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.8\linewidth]{黄胺类药物乙酰化}
+      \caption{黄胺类药物的乙酰化结合反应过程}
+    \end{figure}
+    \begin{blankblock}{}
+      乙酰辅酶A(coA)首先通过它的游离巯基与活泼型羧酸反应生成乙酰coA衍生物，然后把乙酰基转移到合适的受体上 。 通常情况下 ， 药物发生乙酰化后其水溶性降低 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{谷胱甘肽-S-转移酶}
+  谷胱甘肽转移酶(GSTs)是一种球状二聚体蛋白 ， 由两个同源二聚体亚基组成的超基因家族 。
+  \begin{itemize}
+    \item GSTs 可催化机体内某些内源性及外源性物质的亲电基团与还原型谷胱甘肽(GSH)结合 ， 将亲电子疏水性物质与GSH结合成易于排泄的物质 ；
+    \item GSTs 本身还可作为结合蛋白 ， 以较高亲和力结合 、 转运多种疏水性物质 。
+    \item GSTs 主要存在于细胞液中 ， 在哺乳类动物各组织中均有不同种类和不同水平的表达 ， 在哺乳动物的胎盘及肝脏中表达水平最高 ， 约占肝脏可溶性蛋白的5\%。
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{谷胱甘肽结合反应}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{依他尼酸谷胱甘肽结合}
+      \caption{依他尼酸的谷胱甘肽结合反应过程}
+    \end{figure}
+    \begin{blankblock}{}
+      谷胱甘肽中的巯基通过与代谢酶的活性位点结合后增强其酸性，GSTs 再将谷胱甘肽转变成各种不同的亲电子基团 。 谷胱甘肽在发生结合反应的过程中主要对电子缺失的C原子进行亲核攻击 ，N和S原子也是谷胱甘肽的靶原子。
+    \end{blankblock}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{药物既可以发生I相代谢，又可以发生II相代谢}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.6\linewidth]{阿司匹林水解}
+      \caption{阿司匹林在水解酶的催化作用下发生水解反应}
+    \end{figure}
+    \vspace{-1em}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.6\linewidth]{阿司匹林结合}
+      \caption{阿司匹林在 UGTs 的催化作用下与体内的葡萄糖醛酸发生结合反应}
+    \end{figure}
+\end{frame}
+
+
+\section{影响药物代谢的因素}
+
+\begin{frame}
+    \frametitle{种属差异}
+    对于同一种药物 ， 在不同物种间的代谢存在种属差异 。 一般来说 ， 不同种属动物的某些同工酶在蛋白质结构和催化能力上高度一致 ， 其底物在不同种属间的代谢动力学表现出类似性 ，而对于不一致的酶 ， 其底物的代谢则更多地表现出种属差异 。II 相代谢反应所涉及的代谢途径的数目少于 I 相代谢 ， 种属差异表现得更为明显 。
+    \begin{itemize}
+      \item CYP3A4 在不同种属间明显一致 ， 但大鼠体内不具有该酶 。
+      \item CYP2D 在不同种属间相当一致 。
+      \item CYP2C 在种属间的差异较大 。 狗体内缺乏相关的酶。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{个体差异与种族差异}
+    药物代谢酶在人群中广泛存在着遗传多态性现象，所谓遗传多态性是指一个或多个等位基因发生突变而产生遗传变异 ， 在人群中呈不连续多峰分布 ， 其代谢药物的能力明显不同 ， 根据其代谢快慢的不同 ，可分为超快代谢型 （UM ） 、 快代谢型 （EM ） 、 中间代谢型 （IM ） 和慢代谢型 （PM ） ， 后者发生药物不良反应的概率通常较高 。
+    \begin{itemize}
+      \item CYP2C19 的 PM 在日本人群中的发生率约为 25\%， 中国人群约为 13.6\%， 而北美和欧洲白人仅约为 2\% 。 
+      \item 主要由 CYP2D6 介导的降压药异喹胍的 4-羟基化代谢 ， 在人群中存在双峰分布 ， 有 EM 和 PM 两种人群 ， 5\% ～ 10\% 的北美和欧洲白人以及约 1 \% 的亚洲人为 PM 。 
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{年龄}
+  新生儿与老年人对药物的清除能力同其他年龄段的人群有很大差异，这是因为机体的许多生理机能（如肝、肾功能等）与年龄有关。 对新生儿 ， 特别是早产儿 ， 药物代谢酶系统尚未发育完全 ， 因此胎儿及新生儿用药时 ， 多数情况下不仅药效高 ， 而且容易产生毒性 。
+  \begin{blankblock}{}
+    新生儿黄疸是由于胆红素的葡萄糖醛酸化代谢不充分引起 。 葡萄糖醛酸转移酶直到出生时才开始表达 ， 约 3 岁才达到正常水平 ， 所以新生儿的葡萄糖醛酸化能力非常
+    有限 。 又如新生儿肝中内质网发育不完全 ， CYP450 含量低 ， CYP450 和 NADPH-CYP450 还原酶的活性约为成年人的 50\% ， 使得药物的氧化代谢速度较慢 。 
+    
+    此外 ， 参与新生儿肝中羟基化反应 、N-脱甲基反应 、 脱烷基反应及硝基还原反应等的有关酶也表达不充分 。
+  \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{年龄}
+  老年人的心、肝、肾、中枢神经系统等器官的功能明显衰退，老年人的肝脏和肾脏实质减少，肝、肾血流量下降，尤其是肝中的药物代谢酶的数量和活性均有不同程度的降低，对药物的代谢和排泄能力明显降低，可使血药浓度过高或作用持续时间过于持久而出现不良反应甚至毒性。
+  \begin{blankblock}{}
+    庆大霉素在老年人和青年人中的药动学就存在显著的差异，与青年人相比，老年人的$t_{1/2}$明显延长，$Cl_{\mathrm{renal}}$明显降低，$AUC$值显著升高，因此应针对老年人的药动学特点制订相应的老年人给药方案，以确保老年人用药的安全有效。
+  \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{性别}
+    药物代谢存在一定的性别差异，但这一差异没有年龄差异那么显著，且其在人体内的代谢性别差异没有动物那么明显。性别对药物代谢的影响主要受激素的控制。
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.6\linewidth]{大鼠}
+    \end{figure}
+\end{frame}
+
+% 由上述图表可以看出盐酸雷诺嗪在雌雄大鼠体内的血药浓度和主要的药动学参数存在显著性的差异，盐酸雷诺嗪雌性大鼠体内的消除比雄性大鼠慢，这表明盐酸雷诺嗪在大鼠体内的消除存在显著的性别差异。这一现象应引起重视，在选择大鼠进行药动学、药效学和毒理学研究时应考虑其是否存在性别差异，及其对药动学、药效学和毒理学的影响。 
+
+
+
+\begin{frame}
+    \frametitle{生理状态}
+    生理状态的变化会导致体内激素水平的差异，从而影响药物代谢酶的表达和活性。例如女性在生理周期和妊娠期内的激素水平变化会影响药物代谢。
+    \begin{blankblock}{}
+      妊娠期雌性体内激素平衡发生巨大变化 ， 血液中肽和甾体类激素的水平也有很大的变化 ，这些都会影响药物的代谢 ， 而妊娠也会使一些药物的血药浓度和清除半衰期发生变化 。 此外 ，孕妇机体的代谢能力也发生了变化 ， 如由某些 CYP450 （ 如 CYP3A4 、 CYP2D6 、 CYP2C9 ） 和 UGTs（ 如 UGT1A4 和 UGT2B7 ） 催化的药物代谢增加 ， 而 CYP1A2 和 CYP2C19 的活性降低 。 研究发现对乙酰氨基酚葡萄糖醛酸结合物的血浆清除率和代谢清除率 ， 在孕妇体内比非孕妇分别高 58\% 和 75\% 。
+    \end{blankblock}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{病理状态}
+    许多疾病影响药物的代谢 ， 如肝硬化 、 酒精性肝疾病 、 病毒性肝炎 、 黄疸 、 肝细胞瘤 、 感染 、 心血管疾病和其他非肝肿瘤等 ， 其中肝脏疾病是最主要的病理因素 。
+    \begin{blankblock}{}
+      肝脏是药物的主要代谢器官，因此当肝功能严重不足时，必然会对主要经肝脏代谢转化的药物的代谢产生非常显著的影响。经肝脏代谢激活的药物，如可的松、强的松等的代谢激活作用被减弱，其疗效也被减弱；而主要经肝脏代谢失活的药物如甲苯磺丁脲、氯霉素等的代谢减弱，作用则被加强。
+    \end{blankblock}
+    \begin{blankblock}{}
+      许多非肝脏疾病如心血管疾病 、 癌症和感染等也可影响药物的代谢 。心脏病可使肝血流量减少而使肝血流限制性清除的药物如普萘洛尔、利多卡因等的代谢速率减慢。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{给药途径与剂型}
+    \begin{enumerate}
+      \item 给药途径不同引起的代谢差异与是否有首过效应有关。
+      \item 与药物代谢酶在体内的分布以及局部器官和组织的血流量有关。
+    \end{enumerate}
+    \begin{blankblock}{}
+      水杨酰胺口服时血药浓度时间曲线下面积比静注时小得多 ， 原因是水杨酰胺有 60\%以上在消化道黏膜发生结合反应 ， 从曲影响其吸收 。
+    \end{blankblock}
+    \begin{blankblock}{}
+      普萘洛尔在人和其他动物体内可代谢产生4-羟基普萘洛尔和萘氧乳酸两个代谢物 ， 且前者与普萘洛尔有相同的作用，而后者没有药理作用。 普萘洛尔静注后，血液中未检测到 4-羟基普萘洛尔，口服后却能检测到两种代谢产物的血药浓度几乎相等。同样的剂量 ， 口服时的药理作用比静注时强 $2\sim 5$倍。说明口服后，由于首过效应，产生了活性代谢产物 4-羟基普萘洛尔，导致药理作用增强 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{基于代谢的药物-药物相互作用}
+    \begin{enumerate}
+      \item 酶诱导作用
+      
+      许多药物特别是在肝中停留时间长且脂溶性好的药物 ， 能够使某些药物代谢酶过量生成 ，从而促进自身或其他药物的代谢 ， 这种现象被称为酶诱导作用 ， 这些药物称为酶诱导剂 。 
+      \item 酶抑制作用
+      
+      一些药物对代谢酶具有抑制作用 ， 使其他药物代谢减慢 ， 作用时间延长 ， 导致药理活性或毒副作用增强 。 
+    \end{enumerate}
+    \begin{blankblock}{}
+      临床常见的代谢抑制剂有氯霉素 、 双香豆素 、 异烟肼 、 对氨基水杨酸 、 西咪替丁 、 保泰松以及乙酰苯胺等 。 如氯霉素通过抑制肝微粒体酶的作用 ， 能抑制甲苯磺丁脲的代谢 ， 引起低血糖昏迷 ； 也能抑制苯妥英钠的代谢 ， 可能产生眼球震颤及精神错乱等苯妥英钠的中毒症状 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{饮食}
+    饮食对药物代谢的影响主要取决于饮食中糖 、 蛋白质 、 脂肪 、 微量元素和维生素等营养成分 。
+    \begin{itemize}
+      \item 蛋白质缺乏时 ， 可使肝细胞分化减慢 ， 同时CYP450 及 NADPH-CYP450 还原酶活性下降 ， 导致药物代谢能力降低 。
+      \item 脂类作为膜组成部分影响药物代谢酶的催化能力 ， 因此 ， 食物中的脂肪会影响药物的代谢 。
+      \item 微量元素如铁 、 锌 、 钙 、 镁 、 铜 、 硒和碘等 ， 对药物代谢有一定影响 。 多数情况下微量元素缺乏会导致药物代谢能力下降 。
+      \item 许多维生素能影响药物代谢 ， 但不像蛋白质那样明显 ， 仅在严重缺乏时才表现出来 。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{环境}
+    环境中存在多种能影响药物代谢的物质 ， 如放射性物质 、 重金属 、 工业污染物 、 杀虫剂和除草剂等 。
+    \begin{blankblock}{}
+      大鼠长期饮用铀污染水后，CYP3A1/A2 和CYP2B1分别在代谢器官中的表达显著增高 。 
+      
+      动物长期接触铅可诱导 CYP450 ， 而短期与铅接触则会降低药物代谢能力 。 
+      
+      长期摄入无机汞可能诱导药物代谢 ， 而有机汞则抑制药物代谢 。 
+      
+      镉作为蔬菜中的污染物及铝制品的杂质 ， 大量摄入会抑制药物代谢酶 ， 机制可能是镉能诱导血红蛋白氧化酶的活性 。
+    \end{blankblock}
+\end{frame}
+
+
+\end{document}

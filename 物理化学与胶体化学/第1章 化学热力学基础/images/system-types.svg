@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="850px" height="420px" viewBox="0 0 850 420" enable-background="new 0 0 850 420" xml:space="preserve">
+<path fill="#D1F0FF" d="M129,276v86.5c0,15.163,12.589,27.5,28.062,27.5C172.467,390,185,377.663,185,362.5V276"/>
+<path fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" d="M128.5,176v186.5c0,15.163,12.589,27.5,28.062,27.5
+	c15.404,0,27.938-12.337,27.938-27.5V176"/>
+<path fill="#D1F0FF" d="M401,263v86.5c0,15.163,12.589,27.5,28.062,27.5C444.467,377,457,364.663,457,349.5V263"/>
+<path fill="none" stroke="#666666" stroke-width="3" stroke-miterlimit="10" d="M400.5,163v186.5c0,15.163,12.589,27.5,28.062,27.5
+	c15.404,0,27.938-12.337,27.938-27.5V163"/>
+<path fill="#D1F0FF" d="M730,254v86.5c0,15.163,12.589,27.5,28.062,27.5C773.467,368,786,355.663,786,340.5V254"/>
+<path fill="#E6E6E6" stroke="#666666" stroke-width="3" stroke-miterlimit="10" d="M758.562,387
+	c-25.398,0-46.062-20.411-46.062-45.5V155c0-4.971,4.029-9,9-9s9,4.029,9,9v186.5c0,15.163,12.589,27.5,28.062,27.5
+	c15.404,0,27.938-12.337,27.938-27.5V155c0-4.971,4.029-9,9-9s9,4.029,9,9v186.5C804.5,366.589,783.893,387,758.562,387z"/>
+<rect x="10.5" y="206" fill="none" width="90.5" height="16"/>
+<text transform="matrix(1 0 0 1 15.2812 216.0659)" fill="#6699CC" font-family="'Helvetica'" font-size="14">surroundings</text>
+<rect x="284.5" y="201" fill="none" width="90.5" height="16"/>
+<text transform="matrix(1 0 0 1 289.2812 211.0659)" fill="#6699CC" font-family="'Helvetica'" font-size="14">surroundings</text>
+<rect x="582.5" y="187" fill="none" width="90.5" height="16"/>
+<text transform="matrix(1 0 0 1 587.2812 197.0659)" fill="#6699CC" font-family="'Helvetica'" font-size="14">surroundings</text>
+<rect x="129.5" y="331" fill="none" width="54.5" height="18"/>
+<text transform="matrix(1 0 0 1 134.5811 341.0664)" fill="#6699CC" font-family="'Helvetica'" font-size="14">system</text>
+<rect x="400.5" y="309" fill="none" width="54.5" height="18"/>
+<text transform="matrix(1 0 0 1 405.5811 319.0664)" fill="#6699CC" font-family="'Helvetica'" font-size="14">system</text>
+<rect x="730.5" y="301" fill="none" width="54.5" height="18"/>
+<text transform="matrix(1 0 0 1 735.5811 311.0664)" fill="#6699CC" font-family="'Helvetica'" font-size="14">system</text>
+<rect x="275" y="249" fill="none" width="87" height="31"/>
+<text transform="matrix(1 0 0 1 281.9321 259.0801)"><tspan x="0" y="0" font-family="'Helvetica-Light'" font-size="14">only energy </tspan><tspan x="1.939" y="16.8" font-family="'Helvetica-Light'" font-size="14">exchanges</tspan></text>
+<rect x="294" y="349" fill="none" width="87" height="31"/>
+<text transform="matrix(1 0 0 1 310.6621 359.0801)"><tspan x="0" y="0" font-family="'Helvetica-Light'" font-size="14">matter is </tspan><tspan x="-4.291" y="16.8" font-family="'Helvetica-Light'" font-size="14">contained</tspan></text>
+<path fill="#4D4D4D" d="M456.596,176.964c0,5.542-5.208,10.036-12.156,10.036h-31.453c-6.948,0-12.582-4.494-12.582-10.036
+	L397,151.036c0-5.543,2.228-10.036,9.175-10.036h45.075c6.947,0,8.75,4.493,8.75,10.036L456.596,176.964z"/>
+<path fill="#4D4D4D" d="M785.596,167.964c0,5.542-5.208,10.036-12.156,10.036h-31.453c-6.948,0-12.582-4.494-12.582-10.036
+	L726,142.036c0-5.543,2.228-10.036,9.175-10.036h45.075c6.947,0,8.75,4.493,8.75,10.036L785.596,167.964z"/>
+<g>
+	<g>
+		<line fill="none" stroke="#6D98C9" stroke-width="5" stroke-miterlimit="10" x1="146.5" y1="157" x2="146.5" y2="238"/>
+		<g>
+			<polygon fill="#6D98C9" points="146.5,143 138.369,162.898 146.5,158.177 154.629,162.898 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#6D98C9" stroke-width="5" stroke-miterlimit="10" x1="376" y1="254.5" x2="425" y2="254.5"/>
+		<g>
+			<polygon fill="#6D98C9" points="362,254.5 381.898,262.631 377.177,254.5 381.898,246.371 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#6D98C9" stroke-width="5" stroke-miterlimit="10" x1="362" y1="271.5" x2="411" y2="271.5"/>
+		<g>
+			<polygon fill="#6D98C9" points="425,271.5 405.102,279.631 409.823,271.5 405.102,263.371 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#6D98C9" stroke-width="5" stroke-miterlimit="10" x1="165.5" y1="143" x2="165.5" y2="224"/>
+		<g>
+			<polygon fill="#6D98C9" points="165.5,238 157.369,218.102 165.5,222.823 173.629,218.102 			"/>
+		</g>
+	</g>
+</g>
+<rect x="91" y="107" fill="none" width="141" height="35"/>
+<text transform="matrix(1 0 0 1 103.9253 117.0796)"><tspan x="0" y="0" font-family="'Helvetica-Light'" font-size="14">matter and energy</tspan><tspan x="7.385" y="16.8" font-family="'Helvetica-Light'" font-size="14">freely exchange</tspan></text>
+<line fill="none" stroke="#6D98C9" stroke-width="2" stroke-miterlimit="10" x1="371" y1="354" x2="431" y2="341"/>
+<rect x="558" y="243" fill="none" width="123" height="72"/>
+<text transform="matrix(1 0 0 1 561.9258 253.0801)"><tspan x="0" y="0" font-family="'Helvetica-Light'" font-size="14">matter and energy </tspan><tspan x="-1.568" y="16.8" font-family="'Helvetica-Light'" font-size="14">are both contained</tspan></text>
+<line fill="none" stroke="#6D98C9" stroke-width="2" stroke-miterlimit="10" x1="681" y1="252" x2="758" y2="279"/>
+<rect x="3" y="5" fill="none" stroke="#999999" stroke-width="2" stroke-miterlimit="10" width="843" height="409"/>
+<line fill="none" stroke="#999999" stroke-width="2" stroke-miterlimit="10" x1="253" y1="6" x2="253" y2="414"/>
+<line fill="none" stroke="#999999" stroke-width="2" stroke-miterlimit="10" x1="523" y1="3" x2="523" y2="411"/>
+<rect x="54" y="19" fill="none" width="127" height="34"/>
+<text transform="matrix(1 0 0 1 77.457 44.8838)" fill="#217047" font-family="'Helvetica'" font-size="36">open</text>
+<rect x="313" y="19" fill="none" width="127" height="32"/>
+<text transform="matrix(1 0 0 1 324.4688 44.8838)" fill="#217047" font-family="'Helvetica'" font-size="36">closed</text>
+<rect x="609" y="19" fill="none" width="136" height="35"/>
+<text transform="matrix(1 0 0 1 614.958 44.8838)" fill="#217047" font-family="'Helvetica'" font-size="36">isolated</text>
+</svg>

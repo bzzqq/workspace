@@ -1,0 +1,268 @@
+\section{相律}
+
+
+\begin{frame}{相平衡}
+    相平衡研究的是体系的温度、压力、浓度等与相态和相组成的关系。
+    
+    本章介绍吉布斯相律和单组分两相平衡体系的克拉贝龙方程及克拉贝龙-克劳修斯方程；讨论单组分和二组分体系相图及其应用，明确体系在某一条件下稳定存在的相态及可实现的相变。
+    
+    在科研和生产中，常常需要对原料和产品进行必要的分离和提纯。最常用的分离和提纯方法是蒸馏、萃取、结晶和吸收等。这些方法的理论基础就是相平衡原理。相平衡是化学热力学的主要研究对象之一。
+\end{frame}
+
+
+\begin{frame}{相与相数}
+    体系内部物理性质与化学性质完全均匀的部分称为\highlight{相}(phase)。相与相之间有明显的界面(interface)，可以用物理的方法将其分开。
+    
+    体系中相的总数称为\highlight{相数}，以P表示。同一体系在不同的条件下可以有不同的相，其相数也可能不同。
+    
+    例如，水在101.3kPa压力下，373K以上时以气相存在；在373K时气、液两相共存；在273$\sim$373K时以液相存在；而在611.0Pa，273.16K时气、液、固三相共存。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{相 ≠ 态}
+     
+    \begin{itemize}
+        \item[\bullet ] 由于各种气体可以无限制的均匀混合，彼此之间无界面可分，因此无论体系中有多少种气体存在，都是一相。
+        \item[\bullet ] 对于液体，则视不同液体间的相互溶解度不同，可以有一相、两相甚至三个液相同时共存。
+        \item[\bullet ] 对于固体，不管混合得多么均匀，体系中有几种固体物质，就有几个固相。如果几种固体物质之间已达到分子程度的混合，则只有一相，称为固溶体。
+        
+        固溶体：溶质原子溶入溶剂晶格中而仍保持溶剂类型的合金相。
+    \end{itemize}    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{组分与组分数$C$}
+
+    用以确定平衡体系中所有各相组成所需的最少数目的独立物质称为独立组分(independent component)，简称\highlight{组分}(component)。
+    
+    组分的数目称为组分数，以符号$C$表示。
+    
+    体系中所含的化学物质的数目称为物种数，以符号$S$表示。
+    
+    当构成体系的各种物质之间没有任何化学平衡存在时，体系中有多少种物质就应该有多少个组分，即$C=S$。
+    
+    若各种物质之间有化学平衡存在，则组分数小于物种数。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{组分数 ≠ 物种数}
+
+    例如，Cl$_2$、PCl$_3$和PCl$_5$三种物质之间存在如下化学平衡：
+    $$\ce{PCl5 <=> PCl3 + Cl2}$$
+
+    该体系中物种数为3，但组分数$C$=2。因为此体系的三种物质中，某一物质可由其他两种物质通过化学反应产生。即使一开始在体系中不加入这种物质，它也仍然可以产生，并存在于体系之中。如用$R$表示体系中独立的化学平衡数，则
+    $$C=S-R$$
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{独立化学平衡数$R$}
+
+    需要注意的是，$R$表示的是独立的化学平衡数。
+
+    例如，气相反应
+    $$\mathrm{CO}+\mathrm{H}_{2} \mathrm{O}=\mathrm{CO}_{2}+\mathrm{H}_{2}$$
+    $$\mathrm{H}_{2}+\frac{1}{2} \mathrm{O}_{2}=\mathrm{H}_{2} \mathrm{O}$$
+    $$\mathrm{CO}+\frac{1}{2} \mathrm{O}_{2}=\mathrm{CO}_{2}$$
+    虽然三个反应同时存在，但反应（3）可由（1）和（2）得到，因此其独立化学平衡数$R$=2。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{独立浓度限制条件数$R'$}
+
+    若体系中除化学平衡外，还存在浓度限制条件，则用$R'$表示独立浓度限制条件数。
+    
+    如上面提过的Cl$_2$、PCl$_3$和PCl$_5$三种物质组成的体系，若三种物质间的浓度比为任意值，则为二组分体系。
+    
+    若控制$c(\mathrm{PCl_3})=c(\mathrm{Cl_2})$，则为单组分体系。通过PCl$_5$一种物质即可产生PCl$_3$和Cl$_2$，且$c(\mathrm{PCl_3}):c(\mathrm{Cl_2})=1$，因此
+    $$C=S-R-R'$$
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{独立浓度限制条件数}
+    独立浓度限制条件数中的“独立”二字的含义与独立化学平衡数中的“独立”的含义完全相同，如NaCl水溶液中离子浓度间存在如下关系：
+    $$\begin{aligned}    
+    c(\mathrm{Na}^{+}) &=c(\mathrm{Cl}^{-}) \\
+    c(\mathrm{H}^{+}) &=c(\mathrm{OH}^{-}) \\
+    c(\mathrm{Na}^{+})+c(\mathrm{H}^{+}) &=c(\mathrm{Cl}^{-})+c(\mathrm{OH}^{-})
+    \end{aligned}$$
+    三个关系式中浓度限制条件只有两个是独立的，第三个条件可由其他两个得到，因此$R'=2$。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{不同相之间不存在浓度限制条件}
+
+    物质之间的浓度限制条件只能在同一相中应用。
+    
+    不同相之间不存在浓度限制条件。
+    
+    例如，CaCO$_3$分解生成CaO和CO$_2$，
+    $$\ce{CaCO3 = CaO + CO2}$$
+    
+    虽然分解产物的物质的量相同，但CO$_2$为气相，CaO为固相，二者之间不存在浓度限制条件。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{为什么要使用组分数$C$}
+
+    由于考虑问题角度不同，$S$可能不同，但组分数$C$一定是确定的
+
+    例如：NaCl 水溶液
+
+    不考虑离子存在： NaCl ，H$_2$O
+    $$S = 2\text{，} C = 2$$
+
+    考虑NaCl电离平衡：$\mathrm{NaCl}, \mathrm{H}_{2} \mathrm{O}, \mathrm{Na}^{+}, \mathrm{Cl}^{-}$
+    $$S = 4\text{，} C = 2$$
+
+    考虑水微弱的电离：$\mathrm{NaCl}, \mathrm{H}_{2} \mathrm{O}, \mathrm{Na}^{+}, \mathrm{Cl}^{-}, \mathrm{H}^{+}, \mathrm{OH}^{-}$
+    $$S = 6\text{，} C = 2$$
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{自由度$f$}
+
+    在不引起旧相消失和新相产生（保持相的数目和类型不变）的前提下，可以在一定范围内变动的独立变量如浓度、温度、压力等称为独立可变因素。其数目为\highlight{自由度}(degree of freedom)，用$f$表示。
+    \begin{itemize}
+        \item[\bullet] 水以单液相存在时，温度和压力在一定范围内发生变化都不会使液相消失或生成新相，此时温度、压力是两个独立可变的强度性质，自由度$f=2$。
+        \item[\bullet] 当水与水蒸气（或冰）两相平衡共存时，若指定了温度，压力必须为此温度下水的饱和蒸气压，不能改变。反之指定了压力，温度也随之而定，故此时只有一个独立变量，$f=1$。
+        \item[\bullet] 当冰、水、水蒸气三相平衡共存时，温度一定为273.16K，压力一定为611Pa，均不能任意改变，一旦改变条件，必然引起某一相或两相消失，此时体系自由度$f=0$。
+    \end{itemize}
+    
+    自由度是研究相平衡的重要概念，可以通过相律确定体系的自由度。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{相律的一般推导}
+
+    设在平衡体系中有$S$种物质，$P$个相。
+    \begin{table}
+        \begin{tabular}{|>{\columncolor{pink!10}}c|>{\columncolor{blue!10}}c|>{\columncolor{blue!20}}c|>{\columncolor{yellow!10}}c|>{\columncolor{red!10}}c|>{\columncolor{black!10}}c|}
+            \hline          
+            \quad $A^1$ \quad \quad & \quad $A^2$ \quad \quad & \quad $A^3$ \quad \quad & \qquad \quad \quad & \qquad \quad \quad & \quad $A^\mathrm{P}$ \quad \quad \\            
+            $\vdots$ & $\vdots$ & $\vdots$ & $\cdots$ & $\cdots$ & $\vdots$ \\
+            $S^1$ & $S^2$ & $S^3$ &  &  & $S^\mathrm{P}$ \\
+            \hline
+        \end{tabular}        
+    \end{table}
+
+    若每一种物质在$P$个相中都存在，则每一相中有$S$个浓度变量，描述体系状态的总变量数为$SP+2$，2是指温度和压力两个变量。
+
+    各变量间的平衡关系式共三种。
+
+    \begin{itemize}
+        \item[\bullet] 每一相中各物质摩尔分数之和等于1，共$P$个关系式。
+        \item[\bullet] 根据相平衡条件，每种物质在各相中的化学势相等，共$S(P-1)$个关系式。
+        \item[\bullet] 独立化学平衡关系式的数目$R$和独立浓度限制条件数目$R'$
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{相律的一般推导}
+
+    由此，自由度数
+    $$f=SP+2-[P+S(P-1)+R+R']$$
+    $$=(S-R-R')-P+2 \qquad \qquad~~~$$
+    $$=C-P+2 \qquad \qquad \qquad \qquad \quad ~~$$
+    即相律的一般表达式为
+    $$f=C-P+2$$
+    体系中每种物质不一定都存在于每一相中，这并不影响相律的结果。
+    
+    在推导相律的过程中应用了相平衡条件，因此相律只适用于平衡体系。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{相律}
+
+    相律(phaserule)是1876年吉布斯根据热力学基本原理推导而来的，它是热力学在多相体系应用的结果。
+        
+    设在平衡体系中组分数为$C$，有$P$个相。
+
+    则自由度数
+    $$f=C-P+2$$
+    相律反映了体系内自由度与组分数和相数之间的关系。
+
+    自由度随系统组分数增加而增加，随相数增加而减少。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{条件自由度}
+
+    当体系固定温度或压力时
+    {$$f'=C-P+1$$}
+    当体系温度和压力都固定时
+    {$$f''=C-P$$}
+    $f'$和$f''$都称为条件自由度。
+    
+    相律只能对多相平衡体系做定性描述，不能解决各变量间的定量关系。如根据相律可确定一个体系有几个相，有几个因素对相平衡产生影响，但不能指明具体是哪些相，以及每一相的数量是多少。研究相平衡体系，除了相律，还需用热力学的有关定律和经验加以补充。
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+
+    \begin{example}
+        碳酸钠和水可以组成下列化合物：
+
+    \ce{Na2CO3.H2O \quad Na2CO3.7H2O \quad Na2CO3.10H2O}
+
+    (1)标压下，与碳酸钠水溶液及冰共存的含水盐最多可有几种？
+
+    (2)30℃时，与水蒸气平衡共存的含水盐最多可有几种？ 
+
+    \end{example}\pause
+
+    $C=S-R-R'=5-3-0=2$
+
+    $f=C-P+1=3-P$，$f=0$时，$P$最多有3相。
+
+    (1)已有碳酸钠水溶液(l)，冰(s)两相，因此含水盐最多1种。
+
+    (2)已有水蒸气(g)一相，因此含水盐最多2种。
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+
+    \begin{example}
+        下列各体系的独立组分数和自由度分别为多少？
+
+    （l）NH$_4$Cl(s)在抽空容器中，部分分解为NH$_3$(g)和HCl(g)达平衡；
+
+    （2）NH$_4$Cl(s)在含有一定量NH$_3$(g)的容器中，分分解为NH$_3$(g)和HCl(g)达平衡；
+
+    （3）NH$_4$Cl(s)和任意量的NH$_3$(g)、HCl(g)混合达平衡。
+    \end{example}\pause
+
+    （l）$C=S-R-R'=3-1-1=1$，$P=2$，$f=C-P+2=1$
+
+    （2）$C=S-R-R'=3-1-0=2$，$P=2$，$f=C-P+2=2$
+
+    （3）$C=S-R-R'=3-1-0=2$，$P=2$，$f=C-P+2=2$
+
+\end{frame}

@@ -1,0 +1,129 @@
+\section{气体在多孔介质中的扩散}
+
+
+\begin{frame}
+    \frametitle{孔扩散}
+
+    当孔内外不存在压力差，因而也就不存在由于压力差造成的层流流动时，流体中的某一组分靠扩散才可能进入孔内。因孔半径$r_\mathrm{a}$和分子运动平均自由程$\lambda$的相对大小的不同，孔扩散分为以下两种形式。
+    \begin{itemize}
+        \item 正常扩散 \qquad $\lambda /2r_\mathrm{a} \leqslant 10^{-2}$
+        \item 努森扩散 \qquad $\lambda /2r_\mathrm{a} \geqslant 10$
+    \end{itemize}
+    当$\lambda /2r_\mathrm{a} \leqslant 10^{-2}$时，孔内扩散属正常扩散，这时的孔内扩散与通常的气体扩散完全相同。扩散速率主要受分子间相互碰撞的影响，与孔半径尺寸无关。对二组分气体A、B间的正常扩散系数$\mathscr{D}_\mathrm{AB}$，宜尽可能采用有关手册上的实验数据，缺乏实验数据时，或自己用实验测定，或用有关经验式估算。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{孔扩散}
+
+    
+二组分气体扩散系数可按下式估算
+\[
+    D_{\mathrm{AB}}=\frac{0.001 T^{1.75} \sqrt{\frac{1}{M_{\mathrm{A}}}+\frac{1}{M_{\mathrm{B}}}}}{p\left[(\Sigma V)_{\mathrm{A}}^{1 / 3}+(\Sigma V)_{\mathrm{A}}^{1 / 3}\right]^{2}}
+\]
+式中，$p$为总压，atm，$T$为绝对温度，K；$M_\mathrm{A}$和$M_\mathrm{B}$分别为A和B的相对分子质量；$(\Sigma V)_{\mathrm{A}}$和$(\Sigma V)_{\mathrm{B}}$分别为组分A及B的扩散体积。
+
+由上式计算得到的扩散系数，单位为\si{cm^2/s}。由于该式为经验式，各有关数值的单位必须按规定使用。
+
+一些简单原子和分子的扩散体积可以从物理化学手册中查取，对于手册中没有的一些复杂分子，其扩散体积可按照组成该分子的原子扩散体积进行加和得到。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{孔扩散}
+
+    在化学反应过程中，经常遇到的是多组分扩散，在多组分流动物系中组分的扩散系数与物系组成有关，且各组分的扩散系数与扩散通量有一定的关系，此时组分A的扩散系数$D_\mathrm{1m}$可由下式计算
+    \[
+        \frac{1}{D_{1 \mathrm{~m}}}=\sum_{j=2}^{n} \frac{y_{\mathrm{j}}-y_{1} N_{j} / N_{1}}{D_{1 j}} 
+    \]
+    上式称为Stefan-Maxwell方程。如果系统中无化学反应发生，系统中各组分扩散通量之比与其分子量之比存在如下关系
+    \[
+        N_{\mathrm{A}} / N_{\mathrm{B}}=\sqrt{M_{\mathrm{B}} / M_{\mathrm{A}}} 
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{孔扩散}
+
+    对于存在化学反应的系统，各组分的扩散通量与其化学计量系数成正比。存在化学反应的多组分系统中惰性组分I的扩散通量$N_1 = 0$。如果混合物系只有A$_1$组分扩散，其他组分均为不流动组分，则组分A$_1$向其余$n-1$个组分构成的混合物扩散，其扩散系数$D_\mathrm{1m}$可用下式计算
+    \[
+        \frac{1}{D_{1\mathrm{m}}}=\frac{1}{1-y_{1}} \sum_{j=2}^{n} \frac{y_{j}}{D_{1 j}}
+    \]
+    式中，$y_{j}$为组分A$_j$的摩尔分数；$D_\mathrm{1j}$为组分A$_1$与组分A$_j$所组成的二组分系统的扩散系数。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{孔扩散}
+
+    当$\lambda /2r_\mathrm{a} \geqslant 10$时，孔内扩散为努森扩散，这时主要是气体分子与孔壁的碰撞、而分子之间的相互碰撞则影响甚微，故分子在孔内的努森扩散系数$D_\mathrm{K}$只与孔半径$r_\mathrm{a}$有关，与系统中共存的其他气体无关。$D_\mathrm{K}$可按下式估算
+    \[
+        D_{\mathrm{K}}=9.7 \times 10^{3} r_{\mathrm{a}} \sqrt{T / M} 
+    \]
+    式中孔径$r_\mathrm{a}$的单位用cm，$D_\mathrm{K}$的单位为\si{cm^2/s}。
+    
+    不同压力下，气体分子的平均自由程入可用下式估算
+    \[
+        \lambda=1.013 / p \quad \mathrm{~cm}
+    \]
+    式中$p$的单位为Pa。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{孔扩散}
+
+    当气体分子的平均自由程与颗粒孔半径的关系介于上述两种情况之间时，$10^{-2} \leqslant \lambda /2r_\mathrm{a} \leqslant 10$，则两种扩散均起作用，这时应使用复合扩散系数$D$，对二组分扩散有
+    \[
+        D_{\mathrm{A}}=\frac{1}{1 /(D_{\mathrm{K}})_{\mathrm{A}}+(1-b y_{\mathrm{A}}) / D_{\mathrm{AB}}}
+    \]
+    \vspace{-10 pt}    
+    \[
+        b=1+N_{\mathrm{B}} / N_{\mathrm{A}}
+    \]
+    式中，$N_{\mathrm{A}}$、$N_{\mathrm{B}}$为气体A和B的扩散通量，$y_{\mathrm{A}}$为气体A的摩尔分数，$D_{\mathrm{A}}$为A气体的复合扩散系数，$(D_{\mathrm{K}})_{\mathrm{A}}$为气体A的努森扩散系数。上式中含有$b$与$y_{\mathrm{A}}$，而$b$又与$N_{\mathrm{A}}$、$N_{\mathrm{B}}$有关，使用起来不方便。
+    
+    若为等摩尔二组分逆向扩散，则$N_{\mathrm{A}} = -N_{\mathrm{B}}$，上式可简化为
+    \[
+        D_{\mathrm{A}}=\frac{1}{1 /(D_{\mathrm{K}})_{\mathrm{A}}+1 / {D}_{\mathrm{AB}}}
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多孔颗粒中的扩散}
+
+    上面讨论的是单一孔道中的扩散，在多孔催化剂或多孔固体颗粒中，组分$i$的摩尔扩散通量为
+    \[
+        N_{i}=-\frac{P}{R T} D_{\mathrm{e} i} \frac{\mathrm{d} y_{i}}{\mathrm{~d} Z}=-D_{\mathrm{e} i} \frac{\mathrm{d} c_{i}}{\mathrm{~d} Z} 
+    \]
+    式中$D_{\mathrm{e} i}$为组分$i$在催化剂中的有效扩散系数，$Z$为气体组分$i$的扩散距离。当催化剂粒内孔道是任意取向，而颗粒的孔隙率为$\varepsilon_{\mathrm{p}}$时，对颗粒的单位外表面而言，微孔开口所占的分率也是$\varepsilon_{\mathrm{p}}$。孔道间会有相互交叉，各孔道的形状和每根孔道的不同部位的截面积也会有差异，由于这些因素，使得在颗粒中的扩散距离与在圆柱形孔道中的扩散距离有所不同，通常是引入一校正参数$\tau_{\mathrm{m}}$，称为曲节因子，其数值因催化剂颗粒的孔结构而变化，范围多在3～5之间。校正后的扩散距离为$\tau_{\mathrm{m}}Z$，由上可得催化剂颗粒的有效扩散系数为
+    \[
+        D_{\mathrm{e} i}=\varepsilon_{\mathrm{p}} D_{i} / \tau_{\mathrm{m}}
+    \]
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+
+    \begin{example}
+        噻吩(\ch{C4H4S})在氢气中于600K、\SI{3.04}{MPa}时，在催化剂颗粒中进行扩散。用BET法测得催化剂的比表面为\SI{180}{m^2/g}，孔隙率为0.4，颗粒密度为\SI{1.4}{g/cm^3}，而且测知其孔径分布相当集中，试计算噻吩在上述条件下于该催化剂中的有效扩散系数。巳知$\tau_{\mathrm{m}} = 3.0$，噻吩与氢二组分分子扩散系数等于\SI{0.0457}{cm^2/s}。
+    \end{example}\pause
+    $\begin{aligned}
+        V_{\mathrm{g}} &=\varepsilon_{\mathrm{p}} / \rho_{\mathrm{p}} \\
+        \left\langle r_{\mathrm{a}}\right\rangle &= 2V_{\mathrm{g}}/S_{\mathrm{g}} = 2 \varepsilon_{\mathrm{p}} / S_{\mathrm{g}} \rho_{\mathrm{p}}=2 \times 0.4 /(180 \times 1.4 \times 10^{4})=31.7 \times 10^{-8} \mathrm{~cm} \\
+        (D_{\mathrm{K}})_{\mathrm{A}} &=9.7 \times 10^{3} \times 31.7 \times 10^{-8} \sqrt{600 / 84}=8.22 \times 10^{-3} \mathrm{~cm}^{2} / \mathrm{s} \\
+        D_{\mathrm{A}} &=\frac{1}{1 /(D_{\mathrm{K}})_{\mathrm{A}}+1 / \mathscr{D}_{\mathrm{AB}}}=\frac{1}{1000 / 8.22+1 / 0.0454}=6.97 \times 10^{-3} \mathrm{~cm}^{2} / \mathrm{s} \\
+        D_{\mathrm{eA}} &= \varepsilon_{\mathrm{p}} D_{\mathrm{A}}/ \tau_{\mathrm{m}}=6.97 \times 10^{-3} \times 0.4 / 3=9.29 \times 10^{-4} \mathrm{~cm}^{2} / \mathrm{s}
+        \end{aligned}$
+
+\end{frame}

@@ -1,0 +1,354 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme2024}
+
+
+
+\title{生物药剂学与药物动力学}
+\subtitle{绪论}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+\maketitle
+
+
+
+
+	\begin{frame}
+		\frametitle{}
+        \hspace{-2em}
+        \begin{minipage}{0.48\linewidth}
+            \begin{figure}[htpb]
+                \centering
+                \includegraphics[height=7.5cm]{课本}\quad
+            \end{figure}
+        \end{minipage}\hfill
+        \begin{minipage}{0.48\linewidth}
+            \hspace{-1em}{\Large \cbf {《生物药剂学与药物动力学》}} 
+            
+            {\large \cbf {林宁}}
+            
+            {\large \cbf {中国中医药出版社}}
+        \end{minipage}
+		
+	\end{frame}
+
+
+	\begin{frame}{}
+        \begin{center}
+            {\Huge \cbf{目 \ 录}}
+        \end{center}
+		\tableofcontents
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+    \begin{frame}
+        \frametitle{打针吃药的学问}
+        \begin{enumerate}
+          \item 生病了你会选择打针还是吃药？
+          \item 吃药、打针、输液有什么区别？
+          \item 为什么用药次数有一日三次/一日两次/一日一次之分？
+          \item 同一种药有胶囊的、有药片的、有冲剂的，怎么选择？
+          \item 一天两次一次两片的药物，分一天四次一次一片吃行不行？
+        \end{enumerate}
+    \end{frame}
+
+
+    % \begin{frame}[t]
+    %     \frametitle{}
+    %     \begin{block}{案例1}
+    %         患者，女，57岁。体重60 kg，因“心力衰竭”入院。每日静脉滴注某种抗心力衰竭药物一次，每次滴注时间为6 h。该药的一般治疗浓度范围为$1.25 \sim 5 \mu$g/mL。当血药浓度超过$5.5 \mu$g/mL时，常可观察到不良反应。已知该药物的$t_{1/2}=9$h，$V = 1.33$ L/kg。
+
+    %         问题：
+
+    %         1. 若每日给药500 mg，该给药方案是否合适？
+
+    %         2. 若要符合以上治疗浓度范围，给药剂量应为多少？
+    %     \end{block}
+    % \end{frame}
+
+
+    % \begin{frame}[t]
+    %     \frametitle{}
+    %     \begin{block}{案例2}
+    %         某药厂生产抗凝血药双香豆素片 17 年 ， 疗效一直受到肯定 。 后因药师反映 ， 某些轻症患者常常只需要服用半片 ， 服药时不方便 ， 该厂就将药片体积做大 ， 中间刻上线条 ， 以便分服 。但应用后很快发现此药无效 ， 患者的凝血酶原无明显下降 。 该厂遂将新旧两种片剂进行试验 ， 结果发现两种片剂在含量 、 崩解度及 《 中国药典 》 规定的其他所有项目指标都是一致的 ， 且全部合格 。 但是 ， 在人工肠液 （ pH 6.8 ） 中进行溶出度试验 ， 发现新片剂的溶出速度比原制剂慢 ； 在大鼠体内进行在体小肠吸收实验 ， 表明新片剂的吸收速度也比原制剂减慢 。 于是 ， 该厂增加了溶出度及在体小肠吸收试验为观察指标 ， 改良了处方辅料及生产工艺 ， 获得了良好的治疗效果 。
+            
+    %         问题 ：
+            
+    %         同一药物 ， 同一厂家生产 ， 为什么会出现不同的治疗效果 ？
+    %     \end{block}
+    % \end{frame}
+
+
+
+\section{药物代谢动力学定义}
+\begin{frame}
+    \frametitle{药物代谢动力学}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.7\linewidth]{药物体内处置与活性示意图}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{定义}
+	药物代谢动力学，主要研究药物的\cbf{体内过程}及\cbf{体内药物浓度随时间变化的规律}。
+
+	\begin{itemize}
+	  \item 前者主要以文字和图表定性地描述药物在体内的变化过程
+		\begin{itemize}
+		  \item 吸收 Absorption ： A
+		  \item 分布 Distribution ： D
+		  \item 代谢 Metabolism ： M
+		  \item 排泄 Excretion: E
+		\end{itemize}
+	  \item 后者主要以数学模型与公式定量地描述药物随时间改变的变化过程
+		\begin{itemize}
+		  \item 给药后，测定不同时间的血药浓度($c$)$-$时间($t$)数据
+		  \item 建立数学模型，得到函数方程$c=f(t)$。
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+% \begin{frame}
+%     \frametitle{本课程的主要内容及考核方式}
+%     \hspace{-2em}
+%     \begin{minipage}{0.48\linewidth}
+%             \cbf{生物药剂学：}
+%         \begin{itemize}
+%           \item 药物的吸收
+%           \item 药物的分布
+%           \item 药物的代谢
+%           \item 药物的排泄
+%         \end{itemize}
+%         \cbf{考核方式：客观题}
+%     \end{minipage}\hfill
+%     \begin{minipage}{0.48\linewidth}
+%             \cbf{药物动力学：}
+%         \begin{itemize}
+%           \item 单室模型
+%           \item 多室模型
+%           \item 重复给药
+%           \item 非线性药物动力学
+%         \end{itemize}
+%         \cbf{考核方式：分组实练}
+%     \end{minipage}
+    
+%     \medskip
+%     \hspace{-2em} \cbf{最终考核：论文汇报}
+% \end{frame}
+
+
+\section{药物代谢动力学发展史}
+
+
+\begin{frame}
+	\frametitle{药物代谢动力学在世界上的发展}
+	\begin{itemize}
+	  \item 1913 年 Michaelis 和 Menten 提出动力学方程
+	  \item 1924 年 Widmark 和 Tandberg 提出开放式一室动力学模型
+	  \item 1937 年 Teorell提出房室药代动力学模型的假设
+	  \item 1953 年 Dost博士，第一本药代动力学教科书问世
+	  \item 1972 年，药理学与药物动力学国际会议，第一次正式将药物动力学确认为一门独立学科 。
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{药物代谢动力学在我国的发展}
+	\begin{itemize}
+	  \item 20 世纪 50 年代，宋振玉教授 、 曾衍霖教授开展药物的体内过程研究
+	  \item 20世纪70年代末-80年代初，国内一批学者通过办班和讲学等方式 ，推动中国药物代谢动力学的发展
+	  \item 1980 年湖南科学技术出版社，国内第一本介绍这一新兴学科的著作 《 药物代谢动力学 》
+	  \item 1981 朱家璧翻译了Gibaldi的《药代动力学》第一版，1984 年第二版
+	  \item “ 十一五 ” 期间 ， 国家科技部重点启动了国家临床前药代动力学技术平台建设项目
+	  \item 21 世纪 ：药物代谢动力学研究呈现井喷式发展
+	\end{itemize}
+\end{frame}
+
+
+\section{药物代谢动力学的应用}
+	
+\begin{frame}
+	\frametitle{1. 新药研究与评价}
+	\begin{minipage}{0.48\linewidth}
+		\phantom{好药？}
+
+		\begin{itemize}
+			\item Toxicology
+			\item Pharmacodynamics
+			\item Pharmacokinetics
+		  \end{itemize}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\cbf{好药？}
+
+		\begin{itemize}
+			\item 安全
+			\item 有效
+			\item 合适的体内过程
+		  \end{itemize}
+	\end{minipage}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{1. 新药研究与评价}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.7\linewidth]{新药研发失败分析}
+		\caption{新药研发失败分析}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{1. 新药研究与评价}
+	合适的体内过程(ADME) 意义 ？
+	\begin{itemize}
+	  \item 吸收 ？
+	  \item 合适代谢途径 ？ 肝 、 肾
+	  \item 合适半衰期 ？
+	  \item 合适分布 ？药物要进入靶组织或器官
+	  \item 无明显药物相互作用
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{2. 新药合成与发现}
+	药物体内过程与化学结构构效关系 ： 合成合适的体内过程药物 ？
+
+	氨苄西林在胃酸 pH 下稳定 ， 但吸收不好 ， 生物利用度只有 $30\% - 50\%$ ，
+
+	阿莫西林生物利用度可达$90\%$。
+
+	\bigskip
+    \hspace{-2em}
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.8\linewidth]{氨苄西林}
+			\caption{氨苄西林}
+		\end{figure}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.8\linewidth]{阿莫西林}
+			\caption{阿莫西林}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{3. 在药剂学中的应用}
+	指导制剂学研究 ？
+
+	合适的制剂 ？ 
+
+	评价标准 ： 
+	\begin{itemize}
+	\item 生物利用度
+	\item 生物等效性
+	\item 缓、控释制剂研究
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{3. 在药剂学中的应用}
+	\begin{center}
+		\vspace{-6em}
+		\begin{tikzpicture}[scale=1.25]
+			\fill[cyan!50] (0,1.6) rectangle (8,3.2);
+			\draw[<->,thick] (0,5) -- node[pos=0,left]{\large $c$} (0,0) -- (8.5,0) node[below]{\large $t$} ;
+			\draw[red] (0,2) .. controls (0,7) and (1.5,0.2) .. (8,0.2);
+			\draw[blue] (0,0.5) .. controls (1,6) and (2.5,0.5) .. (8,0.5);
+			\draw[SpringGreen4] (0,0) parabola bend (4,1.5) (8,0.8);
+			\draw[dashed] (0,1.6) -- (8,1.6) node[right]{最小有效浓度};
+			\draw[dashed] (0,3.2) -- (8,3.2) node[right]{最小中毒浓度};
+			\draw[<->] (5.5,1.8) -- (5.5,3) node[midway,right]{治疗窗};
+			\node[red] at (0.3,4) {A};
+			\node[blue] at (0.5,2.7) {B};
+			\node[SpringGreen4] at (0.8,1) {C};
+			\node at (5,4.5) {药物的三种制剂的血药浓度-时间曲线};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{4. 在临床及药物治疗学中应用}
+	\begin{itemize}
+	  \item 药物疗效 、毒性-血药浓度 ： 控制血药浓度，控制药物的疗效或降低毒性。基于数学模型 ， 预测药物血药浓度变化规律 ， 制定临床给药方案。
+	  \item 对某些药理现象做出准确的解析。
+	  
+	  一些药物在某些病人中无效或出现毒性
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{5. 在基础药理学应用}
+	\begin{itemize}
+	  \item 药物代谢动力学是基础药理学的重要组成部分
+	  \item 理论和概念的改变 PK-PD model
+	\end{itemize}
+	\begin{minipage}{0.38\linewidth}
+		\begin{example}
+			两种药物，给药后，某个时间段，同一时刻，观察疗效，判断哪个药物更好。
+			
+			这种评判方式合理吗？
+		\end{example}
+	\end{minipage}\hfill
+	\begin{minipage}{0.58\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{评判}
+		\end{figure}
+	\end{minipage}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{6. 在安全性评价中的作用}
+	\begin{enumerate}
+	  \item 毒理学研究与药物代谢动力学结合---毒代动力学 (toxicokinetics，TK)
+		\begin{itemize}
+		  \item 毒物
+		  \item 高剂量
+		  \item 长期暴露，器官损伤情况下
+		\end{itemize}
+	  \item 药物致毒机制研究
+	\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{7. 与其它领域的关系}
+	药物对于机体来说 ， 是一种外来化学异物 ， 其体内过程研究同样适合于外来化学异物
+（如毒物 、 食品添加剂 、 化妆品等） 研究 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{药物代谢动力学}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.9\linewidth]{药代}
+	\end{figure}
+\end{frame}
+
+
+
+\end{document}

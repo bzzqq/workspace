@@ -1,0 +1,47 @@
+\documentclass[x11names]{standalone}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{ulem} % 下划线
+\usetikzlibrary{graphs, positioning, quotes, shapes.geometric,calc,decorations.pathreplacing}
+\usetikzlibrary{tikzlings}
+\tikzset{>=stealth}
+% 定义基本形状
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=LightYellow1]
+\tikzstyle{io} = [trapezium, trapezium left angle=60, trapezium right angle=120, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{op} = [rectangle, minimum width=2cm, minimum height = 2em, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{decision} = [diamond, aspect = 3, text centered, draw=black,fill=LightYellow1]
+% 定义颜色
+\newcommand*{\red}{\textcolor{red}}
+
+\special{dvipdfmx:config z 0} %
+
+\usepackage[Symbol]{upgreek}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+
+
+\begin{tikzpicture}[node distance=2cm]
+    \node (start) [startstop] {start};
+    \node (pro1) [op, below of=start, left of=start, xshift=-1cm] {PROCESS 1};
+    \node (pro2) [op, right of=pro1, xshift= 4cm] {PROCESS 2};
+    \node (in1) [io, below of=pro1, right of=pro1, xshift=1cm] {IO};
+    \node (pro3) [op, below of=in1] {PROCESS 3};
+    \node (in2) [io, below of=pro3] {IO 2};
+    \node (dec1) [decision, below of=in2] {DECISION};
+    \node (end) [startstop, below of=dec1] {end};
+
+    \draw [->](dec1) -- ($(dec1.east) + (1.5,0)$) node[anchor=north] {NO} |- (pro3);
+    \graph[use existing nodes=true]{
+    start  ->  pro1  ->  in1  ->  pro3  ->  in2  ->  dec1  ->["Yes"left]  end ;
+    start  ->  pro2  ->  in1 ;
+    };
+\end{tikzpicture}
+
+
+\end{document}
+

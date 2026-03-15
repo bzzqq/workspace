@@ -1,0 +1,448 @@
+\documentclass[10pt]{elegantnote}
+\usepackage{graphicx}
+\usepackage{unicode-math}
+\usepackage{framed} %段落加边框
+\usepackage{makecell} %表格内强制换行
+\usepackage{titletoc} % 章节目录
+\usepackage{tabularx}
+\usepackage{siunitx} % 数字，单位宏包
+\sisetup{
+    separate-uncertainty = true,
+    inter-unit-product = \ensuremath{{}\cdot{}}
+  } %单位间加小圆点
+\usepackage{array}
+
+\setmathfont{XITS Math}
+
+% 取消pdf的压缩，最终版取消这个命令即可
+\special{dvipdfmx:config z 0}
+
+%自定义命令 颜色
+\definecolor{epubblue}{RGB}{1,126,218}
+\newcommand*{\cepubblue}{\textcolor{epubblue}}
+
+% 字体
+
+\RequirePackage[fontset=none]{ctex}
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}[BoldFont=FandolSong Bold, AutoFakeSlant]
+\setCJKsansfont[BoldFont={FZHei-B01}]{FZKai-Z03}
+\setCJKmonofont[BoldFont={FZHei-B01}]{FZFangSong-Z02}
+\setCJKfamilyfont{zhsong}{FZShuSong-Z01}
+\setCJKfamilyfont{zhhei}{FZHei-B01}
+\setCJKfamilyfont{zhkai}[AutoFakeBold]{FZKai-Z03}
+\setCJKfamilyfont{zhfs}[BoldFont={FZHei-B01}]{FZFangSong-Z02}
+\setCJKfamilyfont{yahei}{Microsoft YaHei}
+\setmathfont{XITS Math}
+
+% 代码
+\RequirePackage{listings}
+%Python代码排版设置
+\lstset{
+    language=Python, % 设置语言
+ breaklines=true, % 自动换行
+ backgroundcolor=\color[rgb]{0.96,0.96,0.96},% 背景颜色
+ keywordstyle=\bfseries\color{RoyalBlue}, % 设置关键字为粗体，颜色为 RoyalBlue
+ morekeywords={syms,eqns,solve,simplify}, % 设置更多的关键字，用逗号分隔
+ emph={left,right,mid}, % 指定强调词，如果有多个，用逗号隔开
+    emphstyle=\bfseries\color{Rhodamine}, % 强调词样式设置
+    commentstyle=\color{black!50!white}, % 设置注释样式，斜体，浅灰色
+    stringstyle=\color{PineGreen!90!black}, % 设置字符串样式
+    columns=flexible,
+    numbers=left, % 显示行号在左边
+    numbersep=2em, % 设置行号的具体位置
+    numberstyle=\footnotesize, % 缩小行号
+    xleftmargin=1em, % 左边距
+    xrightmargin=1em, % 右边距
+    aboveskip=1em, % 上边距
+    % framexleftmargin=2em, % 行号在框内
+    framesep=1em, % 设置边框与代码的距离
+    frame=shadowbox,rulesep=3pt,rulesepcolor=\color{red!20!green!20!blue!20} % 阴影边框
+    }
+
+
+\setlist[itemize,1]{\textcolor{ecolor}{\label =\bullet} }
+\setlist[itemize,2]{\textcolor{ecolor}{\label =$\circ$} }
+
+\begin{document}
+
+\begin{sloppypar} %文字溢出自动换行
+
+
+\begin{center}
+    \bfseries \Large \textcolor{ecolor} {《计算思维与数学建模》}
+
+    \bfseries \Large \textcolor{ecolor} {教学设计}
+
+    \bfseries \Large \textcolor{ecolor} {张斌}
+\end{center}
+
+% \tableofcontents
+
+% \newpage
+
+\section{教学目标}
+    \begin{enumerate}
+        \item 知识目标
+            \begin{itemize}
+                \item 了解 MATLAB 的基本用法，包括常用的命令，脚本结构，程序的分节与注释，矩阵的基本操作，绘图方式；
+                \item 熟悉 MATLAB 的程序结构，编程模式，能自由地创建和引用函数；
+                \item 熟悉常见模型的求解算法和套路。
+            \end{itemize}
+        \item 能力目标
+            \begin{itemize}
+              \item 能够熟练运用 MALTAB 软件，能选择合适的方法建立数学模型和求解。
+            \end{itemize}
+        \item 素质目标
+            \begin{itemize}
+              \item 具有一定的表达能力，能清晰的描述所建立的模型及其结果；具备规范的撰写数学建模论文的能力；具有较好的沟通能力，掌握团队协作技能，保证成员共同完成任务目标。
+            \end{itemize}
+\end{enumerate}
+
+\begin{table}[htpb]
+    \centering
+    \caption{课程目标对专业毕业要求的支撑}
+    \begin{tabular}{cccc}
+        \bottomrule
+        毕业目标 & 课程目标 & 支撑度 &  \\ \hline
+        \begin{tabular}[c]{@{}c@{}}毕业目标1-1:掌握必要的数学和物理知识，\\ 能够针对复杂化工问题进行建模和求解。 \end{tabular} & \begin{tabular}[c]{@{}c@{}}目标1\\ 目标2\\ 目标3 \end{tabular} & M &  \\ \toprule
+    \end{tabular}
+\end{table}
+
+\section{教学安排}
+
+本课程共1.5学分，48学时实践，分散3周进行。
+
+% \begin{table}[htpb]
+%     \centering
+%     \begin{tabular}{cccc}
+%         \bottomrule
+%         时间 & 章节 & 教学内容 & 教学形式 \\ \hline
+%         第一周 & Matlab基础 & 界面功能、数据类型、符号运算 & 线下教学 \\ \hline
+%         第二周 & 程序设计方法 & 程序控制结构、关系、逻辑运算 & 线下教学 \\ \hline
+%         第三周 & 数学建模基础 & 分析抽象、建模步骤、初等模型 & 线下教学 \\ \hline
+%         第四周 & 常用建模函数 & 插值函数，曲线拟合，参数传递 & 线下教学 \\ \hline
+%         第五周 & 简单优化模型 & 优化目标、优化策略、函数极值 & 线下教学 \\ \hline
+%         第六周 & 数学规划模型 & 线性规划模型、非线性规划模型 & 线下教学 \\ \hline
+%         第七周 & 微分方程模型 & 导数、极限、定积分、不定积分 & 线下教学 \\ \hline
+%         第八周 & 智能优化算法 & 遗传算法，免疫算法，动态规划 & 线下教学 \\ \toprule
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}[htpb]
+%     \centering
+%     \begin{tabular}{@{}|c|c|c|c|c|@{}}
+%     \bottomrule
+%         & 学时 & 线下教学(32)                                                                                                             & 学时 & 线上学习(16)                                                       \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第1周\\ Matlab基础\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}Matlab的界面功能\\      Matlab中的数据类型\\      Matlab矩阵的操作\\      Matlab中的运算\end{tabular}         &    &                                                                \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第1周\\ Matlab程序设计\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}结构化程序设计方法\\      流程控制语句\\      关系、逻辑运算\\      函数文件与脚本文件\end{tabular}                      &    &                                                                \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第2周\\ 数学建模基础\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}对实际问题的分析、抽象过程\\      数学建模的基本步骤\\      用初等方法建立模型\\      双层玻璃窗保温原理的数学模型\end{tabular}        & 4  & \begin{tabular}[c]{@{}c@{}}划船比赛的成绩\\      节水洗衣机\end{tabular}   \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第2周\\ 常用建模函数\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}一维插值，二维插值，样条插值\\      多项式拟合\\      非线性曲线拟合\\      参数传递函数\end{tabular}                     &    &                                                                \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第2周\\ 简单优化模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}优化目标\\      优化策略\\      函数的极值\\      易拉罐形状和尺寸的最优设计\end{tabular}                           & 4  & \begin{tabular}[c]{@{}c@{}}生猪的出售时机\\      存储模型\end{tabular}    \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第3周\\ 数学规划模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}数学规划模型的概念\\      线性规划的求解方法\\      非线性规划模型\\      自来水运输问题\end{tabular}                     & 4  & \begin{tabular}[c]{@{}c@{}}奶制品的生产计划\\      汽车生产计划\end{tabular} \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第3周\\ 微分方程模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}Matlab求函数的导数、极限\\      Matlab求定积分、不定积分\\      Matlab求解微分方程\\      药物在体内的分布模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}人口增长模型\\      传染病模型\end{tabular}    \\ \hline
+%         \begin{tabular}[c]{@{}c@{}}第3周\\ 智能优化算法\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}遗传算法\\ 免疫算法\\ 动态规划\\ 最短路径规划问题\\ 数学建模论文撰写规范\end{tabular}                                   &    &                                                                \\ \toprule
+%     \end{tabular}
+%     \end{table}
+
+\begin{table}[htpb]
+    \centering
+    \begin{tabular}{@{}|c|c|c|c|c|@{}}
+    \bottomrule
+        & 学时 & 线下教学(32)                                                                                                             & 学时 & 线上学习(16)                                                       \\ \hline
+        \begin{tabular}[c]{@{}c@{}}第1周\\ Matlab基础\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}Matlab的界面功能\\      Matlab中的数据类型\\      Matlab矩阵的操作\\      Matlab中的运算\end{tabular}         &  2  &  \begin{tabular}[c]{@{}c@{}}结构化程序设计方法\\      流程控制语句\\      关系、逻辑运算\\      函数文件与脚本文件\end{tabular}                               \\ \hline
+        
+        \begin{tabular}[c]{@{}c@{}}第1周\\ 初等模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}      数学建模的基本步骤\\  常用建模函数\\    用初等方法建立模型\\      双层玻璃窗保温原理数学模型\end{tabular}        & 2  & \begin{tabular}[c]{@{}c@{}}划船比赛的成绩\\      节水洗衣机\end{tabular}   \\ \hline
+        
+        \begin{tabular}[c]{@{}c@{}}第2周\\ 简单优化模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}优化目标\\      优化策略\\      函数的极值\\      易拉罐形状和尺寸的最优设计\end{tabular}                           & 2  & \begin{tabular}[c]{@{}c@{}}生猪的出售时机\\      存储模型\end{tabular}    \\ \hline
+        \begin{tabular}[c]{@{}c@{}}第2周\\ 数学规划模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}数学规划模型的概念\\      线性规划的求解方法\\      非线性规划模型\\      自来水运输问题\end{tabular}                     & 2  & \begin{tabular}[c]{@{}c@{}}奶制品的生产计划\\      汽车生产计划\end{tabular} \\ \hline
+        \begin{tabular}[c]{@{}c@{}}第2周\\ 微分方程模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}Matlab求函数的导数、极限\\      Matlab求定积分、不定积分\\      Matlab求解微分方程\\      药物在体内的分布模型\end{tabular} & 2  & \begin{tabular}[c]{@{}c@{}}人口增长模型\\      传染病模型\end{tabular}    \\ \hline
+        \begin{tabular}[c]{@{}c@{}}第3周\\ 离散模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}多属性决策问题\\      层次分析法\\      汽车选购\end{tabular} & 2  & \begin{tabular}[c]{@{}c@{}}席位分配\end{tabular}    \\ \hline
+        \begin{tabular}[c]{@{}c@{}}第3周\\ 统计模型\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}线性回归\\      非线性回归\\      自回归\\      logit回归\end{tabular} & 2  & \begin{tabular}[c]{@{}c@{}}判别分析模型\\主成分分析模型\end{tabular}    \\ \hline
+        \begin{tabular}[c]{@{}c@{}}第3周\\ 智能优化算法\end{tabular} & 4  & \begin{tabular}[c]{@{}c@{}}遗传算法\\ 免疫算法\\ 神经网络 \\ 数学建模论文撰写规范\end{tabular}                                   &  2  &   \begin{tabular}[c]{@{}c@{}} 动态规划\\ 最短路径规划问题\end{tabular}                                                      \\ \toprule
+    \end{tabular}
+    \end{table}
+
+\newpage
+\section{考核评价}
+
+学生的成绩由个人成绩(40\%)和团队成绩(60\%)组成。
+
+个人考核形式为完成测试。
+
+团队考核形式为以小组为单位完成分组任务。
+
+\begin{table}[htpb]
+    \centering
+    \caption{考核评价方式及权重}
+    \begin{tabular}{cccc}
+        \bottomrule
+        & 个人考核(40\%) & 团队考核(60\%) &  \\ \hline
+        Matlab基础 & 自测题(5\%) & 利用Matlab求解反应平衡常数(5\%) &  \\ \hline
+        初等模型 & 自测题(5\%) & 三层玻璃窗保温原理的数学模型(5\%) &  \\ \hline
+        简单优化模型 & 自测题(5\%) & 易拉罐球台模型的最优尺寸设计(5\%) &  \\ \hline
+        数学规划模型 & 自测题(5\%) & 有限制的自来水运输模型规划(5\%) &  \\ \hline
+        微分方程模型 & 自测题(5\%) & 一室模型多次重复给药的方案(5\%) &  \\ \hline
+        离散模型 & 自测题(5\%) & 奖学金申请(5\%) &  \\ \hline
+        统计模型 & 自测题(5\%) & 蛋白质含量对婴儿身高影响(5\%) &  \\ \hline
+        智能优化算法 & 自测题(5\%) & 完成一篇完整的数学建模论文(25\%) &  \\ \toprule
+    \end{tabular}
+\end{table}
+
+
+% \section{教学大纲}
+
+% \begin{center}
+%     第一周\ Matlab基础
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item Matlab的界面功能
+%   \item Matlab中的数据类型
+%   \item Matlab矩阵的操作
+%   \item Matlab中的运算
+% \end{enumerate}
+
+% \begin{center}
+%     第二周\ 程序设计方法
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item 结构化程序设计方法
+%   \item 流程控制语句
+%   \item 关系、逻辑运算
+%   \item 函数文件与脚本文件
+% \end{enumerate}
+
+% \begin{center}
+%     第三周\ 数学建模基础
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item 对实际问题的分析、抽象过程
+%   \item 数学建模的基本步骤
+%   \item 用初等方法建立模型
+%   \item 双层玻璃窗保温原理的数学模型
+% \end{enumerate}
+
+% \begin{center}
+%     第四周\ 常用建模函数
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item 一维插值，二维插值，样条插值
+%   \item 多项式拟合
+%   \item 非线性曲线拟合
+%   \item 参数传递函数
+% \end{enumerate}
+
+% \begin{center}
+%     第五周\ 简单优化模型
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item 优化目标
+%   \item 优化策略
+%   \item 函数的极值
+%   \item 易拉罐形状和尺寸的最优设计
+% \end{enumerate}
+
+
+% \begin{center}
+%     第六周\ 数学规划模型
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item 数学规划模型的概念
+%   \item 线性规划的求解方法
+%   \item 非线性规划模型
+%   \item 自来水运输问题
+% \end{enumerate}
+
+% \begin{center}
+%     第七周\ 微分方程模型
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item Matlab求函数的导数、极限
+%   \item Matlab求定积分、不定积分
+%   \item Matlab求解微分方程
+%   \item 药物在体内的分布模型
+% \end{enumerate}
+
+% \begin{center}
+%     第八周\ 智能优化算法
+% \end{center}
+
+% 主要内容：
+
+% \begin{enumerate}
+%   \item 遗传算法
+%   \item 免疫算法
+%   \item 动态规划
+%   \item 最短路径规划问题
+%   \item 数学建模论文撰写规范
+% \end{enumerate}
+
+\section{建模案例}
+
+\begin{center}
+    双层玻璃窗保温原理的数学模型
+\end{center}
+
+\cepubblue{一. 问题提出}
+
+    北方城镇楼房的窗户通常都是双层玻璃的，中间有一定空隙，双层玻璃比单层玻璃更保暖，那么到底比单层玻璃能减少多少热量损失呢？
+
+\cepubblue{二. 问题分析}
+
+    \begin{enumerate}
+      \item 为了具有比较意义，双层玻璃与单层玻璃的厚度应该相同。
+      \item 室内温度高，室外温度低，热量从室内往室外流失。
+      \item 流失热量与窗户面积成正比，考虑总量没有意义，应该考虑单位面积流失的热量。
+      \item 热传导需要考虑温度差、介质厚度，用变量把这些量表示出来。
+    \end{enumerate}
+
+    明确问题：
+    \begin{enumerate}
+      \item 根据热传导规律分别对单层玻璃、双层玻璃的热量流失规律建模，得到单位面积热量流失量，做出相对比较。
+      \item 建立双层玻璃流失热量与空气层厚度的函数关系，合理地确定最优空气层厚度。
+    \end{enumerate}
+
+\cepubblue{三. 模型假设}
+
+\begin{enumerate}
+    \item 热量传递过程只有从室内到室外的单方向传导，没有对流辐射 (即不考虑热量流失到墙体等)。
+    \item 室内温度与室外温度恒定不变，热传导处于稳定状态，即沿热传导方向，单位时间通过单位面积的热量是常数。
+    \item  玻璃材质均匀，即导热系数 (也称热导率) 是常数。
+  \end{enumerate}
+
+
+\cepubblue{四. 建立模型}
+
+热传导速率：
+\[
+    Q = -k \frac{\Delta T}{d}
+\]
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=.4\linewidth]{双层玻璃}
+    \caption{双层玻璃模型}
+\end{figure}
+
+双层玻璃模型中，热量经历3次传递，每次传递热量相等。
+\[
+    Q_2 = k_g \frac{T_1-T_a}{d} = k_a \frac{T_a-T_b}{l} = k_g \frac{T_b-T_2}{d}
+\]
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=.4\linewidth]{单层玻璃}
+    \caption{单层玻璃模型}
+\end{figure}
+
+单层玻璃模型热量流失为：
+\[
+    Q_1 = k_g \frac{T_1-T_2}{2d}
+\]
+
+\cepubblue{五. 模型求解}
+
+双层玻璃模型为3个方程构成的方程组，用Matlab求解。
+\[
+    \begin{cases}
+        Q_2 = k_g \frac{T_1-T_a}{d} \\
+        Q_2 = k_a \frac{T_a-T_b}{l} \\
+        Q_2 = k_g \frac{T_b-T_2}{d}
+    \end{cases}
+\]
+Matlab代码如下：
+\begin{lstlisting}
+    syms kg ka T1 T2 l d Q2 Ta Tb; % 定义符号变量
+    % 定义方程组
+    eqns = [Q2 == kg*(T1-Ta)/d,
+            Q2 == ka*(Ta-Tb)/l,
+            Q2 == kg*(Tb-T2)/d];
+    % 求解方程组
+    S = solve(eqns,[Q2,Ta,Tb]);
+    simplify(S.Q2)
+\end{lstlisting}
+
+计算结果：
+\[
+    Q_2=\frac{k_a k_g (T_1 - T_2)}{2 d k_a + lk_g }
+\]
+
+\cepubblue{六. 结果分析}
+
+为了便于比较，将双层玻璃模型和单层玻璃模型流失热量方程形式一致化：
+\[
+    Q_1 = \frac{k_g(T_1-T_2)}{d(2+0)}
+\]
+\[
+    Q_2 = \frac{k_g(T_1-T_2)}{2\left(2+\frac{l}{d}\frac{k_g}{k_a}\right)
+    }
+\]
+
+双层玻璃和单层玻璃流失热量相比：
+\[
+    \frac{Q_2}{Q_1} = \frac{2}{2+s}
+\]
+
+其中，
+\[
+    s=\frac{l}{d}\frac{k_g}{k_a}
+\]
+
+查资料确定$k_g= 4 \sim 8 \times 10^{-3}$ \si{W/(m.K)}，$k_a= 2.5 \times 10^{-3}$ \si{W/(m.K)}，引入$h=l/d$(空气层与一层玻璃厚度之比)减少变量数，
+
+\[
+    r = \frac{Q_2}{Q_1} = \frac{2}{2+16h} = \frac{1}{1+8h}
+\]
+
+Matlab绘图展示：
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=.56\linewidth]{热量损失绘图}
+\end{figure}
+
+Matlab代码如下：
+
+\begin{lstlisting}
+r = @(h) 1 ./(1+8*h) % 定义匿名函数
+h = 0:0.1:8;
+plot(h,r(h),'-')
+xlabel('$l/d$',Interpreter='latex'),ylabel('$Q_2/Q_1$',Interpreter='latex')
+title('热量损失比Q2/Q1与l/d的关系')
+\end{lstlisting}
+
+比值$h$取多少最优呢？可以根据效果基本不再改进选择$h$，比如$\frac{\Delta r}{\Delta h}<0.01$：
+
+\begin{lstlisting}
+eqn = 1./(1+8*x);
+h = double(solve(abs(diff(eqn)) == 0.01))
+\end{lstlisting}
+
+解得，$h=3.41$，此时$r=0.0354$，即可以减少热量损失96.46\%。
+
+实际上，房间热量还可以通过墙壁、地面、顶棚等流失，双层玻璃功效会比模型结果差一些。
+
+
+\end{sloppypar}
+\end{document}

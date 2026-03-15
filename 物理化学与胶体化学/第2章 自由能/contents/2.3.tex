@@ -1,0 +1,85 @@
+\section{\texorpdfstring{$\Delta G$}.的计算}
+
+
+\begin{frame}{等温过程}
+    计算$\Delta G$时，只有可逆过程才可用积分式，不可逆过程必须设计可逆过程计算。
+    \begin{example}
+    298K时，1 mol 理想气体从压力为101.325 kPa膨胀至10.1325 kPa ，试计算经(1)定温可逆膨胀 (2)自由膨胀过程的$\Delta G$。
+    \end{example}
+    \pause
+    解：(1)定温可逆膨胀过程
+    $$\begin{aligned}
+        \Delta G &=n R T \ln \frac{p_{2}}{p_{1}}=1 \mathrm{~mol} \times 8.314 \mathrm{~J} \cdot \mathrm{mol}^{-1} \cdot \mathrm{K}^{-1} \times 298 \mathrm{~K} \times \ln \frac{10.1325 \mathrm{kPa}}{101.325 \mathrm{kPa}} \\
+        &=-5705 \mathrm{~J}
+    \end{aligned}$$
+    (2)气体的自由膨胀虽然是不可逆过程，但始终态与1相同，故$\Delta G=-5705 \mathrm{~J}$。
+\end{frame}
+
+
+\begin{frame}{相变过程}
+    可逆相变是在两相平衡条件下进行的，是定温定压过程，$\mathrm{d}T=0$、$\mathrm{d}p=0$，所以可逆相变$\Delta G_{T,p}=0$。若为不可逆相变，应在始终态间设计可逆过程计算$\Delta G$。
+    \begin{example}
+        计算1mol 298K、101.325kPa的过冷水蒸气变成同温同压下的液态水的$\Delta G$ 。该温度下液态水的饱和蒸汽压为3.168kPa，摩尔体积$V_\mathrm{m} = 0.018 \si{dm^3.mol^{-1}}$。
+    \end{example}
+    \pause
+    \begin{center}
+        \begin{tikzpicture}
+            \node (A) at (0,0) {\ce{H2O(g, 298K, 3.168kPa)}};
+            \node (B) at (6,0) {\ce{H2O(l, 298K, 3.168kPa)}};
+            \node (C) at (0,2) {\ce{H2O(g, 298K, 101.325kPa)}};
+            \node (D) at (6,2) {\ce{H2O(l, 298K, 101.325kPa)}};
+            \draw [->, dashed] (A) -- (B) node [above,midway] {$\Delta G_2$};
+            \draw [->, dashed] (A) -- (B) node [below,midway] {定温可逆};
+            \draw [->, red] (C) -- (D) node [above,midway] {$\Delta G$};
+            \draw [->, dashed] (C) -- (A) node [left,midway] {定温可逆};
+            \draw [->, dashed] (C) -- (A) node [right,midway] {$\Delta G_1$};
+            \draw [->, dashed] (B) -- (D) node [left,midway] {$\Delta G_3$};
+            \draw [->, dashed] (B) -- (D) node [right,midway] {定温可逆};
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}{化学反应的$\Delta G$}
+    计算化学反应的$\Delta_\mathrm{r} G_\mathrm{m}$，可先由各物质的$\Delta_\mathrm{f} H_\mathrm{m,B}^\ominus$和$S_\mathrm{m,B}^\ominus$算出反应的$\Delta_\mathrm{r} H_\mathrm{m}^\ominus$和$\Delta_\mathrm{r} S_\mathrm{m}^\ominus$，再根据$\Delta_\mathrm{r} G_\mathrm{m}^\ominus=\Delta_\mathrm{r} H_\mathrm{m}^\ominus-T\Delta_\mathrm{r} S_\mathrm{m}^\ominus$算出$\Delta_\mathrm{r} G_\mathrm{m}^\ominus$。
+    \\也能由$\mathrm{d}G=-S\mathrm{d}T$计算出某温度$T$的$\Delta_\mathrm{r} G_\mathrm{m}^\ominus(T)$。
+    \begin{example}
+        已知化学反应及各物质的标准生成热、标准熵如下，(1)判断298K及$p^\ominus$下反应的自发性；(2)假定$\Delta_\mathrm{r} S_\mathrm{m}^\ominus$与温度无关，估算\ce{(NH2)2CO}自发分解的温度。
+        $$~~~~\ce{CO2(g) + 2NH3 = (NH2)2CO(s) + H2O(l)}$$
+        $\Delta_\mathrm{f} H_\mathrm{m}^\ominus /(\si{kJ.mol^{-1}})$ \quad \num{-393.5} ~~\num{-46.19}\qquad~~ \num{-333.2} \qquad \num{-285.8}
+        \\$S_\mathrm{m}^\ominus /(\si{J.mol^{-1}.K^{-1}})$\quad 213.6 \quad192.5 \qquad\quad 104.6 \qquad~~ 69.96
+    \end{example}
+\end{frame} 
+
+
+\begin{frame}[t]
+    \frametitle{理想气体混合过程的$\Delta G$}
+    \begin{example}
+        设有$n_\mathrm{A}$ mol体积为$V_\mathrm{A}$的理想气体A和$n_\mathrm{B}$ mol体积为$V_\mathrm{B}$的理想气体B分别放置在用隔板分开的容器内，隔板两侧压力相同，抽去隔板，两种气体在定温下混合达到平衡，求定温混合过程的$\Delta G$。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{example}
+        lmol液态苯在其沸点353K、标准压力下汽化，汽化热为395J·g$^{-1}$，求此过程的$Q$、$W$、$\Delta U$、$\Delta H$、$\Delta G$。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        试判断在100℃，$p^\ominus$下白锡和灰锡哪一种晶型稳定。25℃，$p^\ominus$时的数据如下所列。
+        \begin{table}
+            \centering
+            \begin{tabular}{cccc}
+                \bottomrule
+                 & $\Delta_\mathrm{f} H_\mathrm{m}^\ominus$/(\si{J.mol^{-1}}) & $S_\mathrm{m}^\ominus$/(\si{J.K^{-1}.mol^{-1}}) & $C_\mathrm{p,m}^\ominus$/(\si{J.K^{-1}.mol^{-1}}) \\ \hline
+                白锡 & 0 & 52.30 & 26.15 \\ \hline
+                灰锡 & $-2197$ & 44.76 & 25.73 \\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{example}
+\end{frame}
+

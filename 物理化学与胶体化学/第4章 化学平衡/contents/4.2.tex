@@ -1,0 +1,185 @@
+\section{化学反应定温式及化学反应的平衡常数}
+
+
+\begin{frame}
+    \frametitle{化学反应定温式}
+
+    定温定压下，任一化学反应\ch{aA + dD = gG + hH}
+    \[
+        \Delta _\mathrm{r}G_\mathrm{m}=\sum_B{\nu_\mathrm{B}\mu_\mathrm{B}}
+    \]
+    代入组分B的化学势$\mu_\mathrm{B}=\mu_\mathrm{B}^\ominus +RT \ln a_\mathrm{B}$得
+    \[
+        \sum_{\mathrm{B}} \nu_{\mathrm{B}} \mu_{\mathrm{B}}=\sum_{\mathrm{B}} \nu_{\mathrm{B}}\left(\mu_{\mathrm{B}}^{\ominus}+R T \ln a_{\mathrm{B}}\right)=\sum_{\mathrm{B}} \nu_{\mathrm{B}} \mu_{\mathrm{B}}^{\ominus}+R T \ln \frac{a_{\mathrm{G}}^{\mathrm{g}} a_{\mathrm{H}}^{h}}{a_{\mathrm{A}}^{a} a_{\mathrm{D}}^{d}}
+    \]
+    \[
+        \Delta _\mathrm{r}G_\mathrm{m}=\Delta _\mathrm{r}G_\mathrm{m}^\ominus + RT \ln Q
+    \]
+    其中，$Q=\frac{a_{\mathrm{G}}^{\mathrm{g}} a_{\mathrm{H}}^{h}}{a_{\mathrm{A}}^{a} a_{\mathrm{D}}^{d}}$，称为相对活度商。上式表明，决定反应自发方向的量$\Delta _\mathrm{r}G_\mathrm{m}$除与物质本性决定的$\Delta _\mathrm{r}G_\mathrm{m}^\ominus$有关外，还与体系中各组分的相对活度商Q有关，上式称为化学反应定温式(reaction isotherm)，又称范特霍夫定温式。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应定温式}
+
+    当化学反应达平衡时，$\Delta _\mathrm{r}G_\mathrm{m}=0$。在一定的温度下，$\Delta _\mathrm{r}G_\mathrm{m}^\ominus$为一常数，平衡时的相对活度商也为一常数，用$K^\ominus$表示，称为标准平衡常数（standard equilibrium constant），即
+    \[
+        K^\ominus = \frac{a_{\mathrm{G}}^{\mathrm{g}} a_{\mathrm{H}}^{h}}{a_{\mathrm{A}}^{a} a_{\mathrm{D}}^{d}}
+    \]
+    \[
+        \Delta _\mathrm{r}G_\mathrm{m}^\ominus = -RT \ln K^\ominus
+    \]
+    化学反应定温式又可写成如下形式
+
+        $\begin{cases}
+        \Delta_{\mathrm{r}} G_{\mathrm{m}}=-R T \ln K^{\ominus}+R T \ln Q \\
+        \Delta_{\mathrm{r}} G_{\mathrm{m}}=R T \ln \frac{Q}{K^{\ominus}}
+        \end{cases}\qquad
+        \begin{cases}
+            K^{\ominus} > Q \text{正向自发}\\
+            K^{\ominus} = Q \text{平衡}\\
+            K^{\ominus} < Q \text{逆向自发}
+        \end{cases}$
+    
+    比较一个反应的$Q$与$K^{\ominus}$的比值，可根据上式判断反应的自发方向。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{标准平衡常数的性质}
+    \begin{enumerate}
+      \item 标准平衡常数是温度的函数
+        \[
+            K^{\ominus}=\exp(-\frac{\Delta _\mathrm{r}G_\mathrm{m}^\ominus}{RT})
+        \]
+      \item 标准平衡常数是量纲为1的量
+        \begin{itemize}
+          \item 因为广义活度$a$是量纲为1的量
+          \item 经验平衡常数如$K_p$，$K_c$是有量纲的
+        \end{itemize}
+      \item 标准平衡常数与反应方程式的写法有关
+        \begin{itemize}
+          \item 如果方程式采用不同的写法，相应的$\Delta _\mathrm{r}G_\mathrm{m}^\ominus$的值就会不同，平衡常数也会随之变化
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{理想气体反应的平衡常数}
+
+    对理想气体反应体系，各组分的化学势为
+    \[
+        \mu_{\mathrm{B}}=\mu_{\mathrm{B}}^{\ominus}(T)+R T \ln \frac{p_{\mathrm{B}}}{p^{\ominus}}
+    \]
+    用平衡时各组分的$p_\mathrm{B}/p^\ominus$代替相对活度$a$，可得
+    \[
+        K^{\ominus}=\frac{a_{\mathrm{G}}^{\mathrm{g}} a_{\mathrm{H}}^{h}}{a_{\mathrm{A}}^{a} a_{\mathrm{D}}^{d}}=\frac{(p_{\mathrm{G}} / p^{\ominus})^{g}(p_{\mathrm{H}} / p^{\ominus})^{h}}{(p_{\mathrm{A}} / p^{\ominus})^{a}(p_{\mathrm{D}} / p^{\ominus})^{d}}
+    \]
+    $K^{\ominus}$量纲为1。因$\mu_{\mathrm{B}}^{\ominus}(T)$仅为温度的函数，所以$K^{\ominus}$也仅是温度的函数。相应的化学反应等温式为
+    \[
+        \Delta _\mathrm{r}G_\mathrm{m}=\Delta _\mathrm{r}G_\mathrm{m}^\ominus + RT \ln Q
+    \]
+    式中，$Q$为以$p_\mathrm{B}/p^\ominus$表示的分压商。
+
+\end{frame}
+
+
+
+\begin{frame}[t]
+    \frametitle{}
+
+    \begin{example}
+        在27℃时，理想气体反应\ch{A = B}的$K^{\ominus}=0.10$。
+        
+        计算(1)化学反应的$\Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}$；(2)当反应物A的分压为\SI{2.02e6}{Pa}，产物B的分压为\SI{1.01e5}{Pa}时，求反应体系的$\Delta_{\mathrm{r}} G_{\mathrm{m}}$，判断反应自发进行的方向。
+    \end{example}
+    \pause
+    $\begin{array}{l}
+        \text { (1) } \quad \Delta_{\mathrm{r}} G_{\mathrm{m}}{ }^{\ominus}=-R T \ln K=5.743 \mathrm{kJ} / \mathrm{mol}\\
+        \begin{array}{cccc} 
+        (2) & \mathrm{A} & \mathrm{B} \\
+        & 2.02 \times 10^{6} \mathrm{Pa} & 1.01 \times 10^{5} \mathrm{Pa}
+        \end{array}\\
+        \Delta_{\mathrm{r}} G_{\mathrm{m}}=\Delta_{\mathrm{r}} G_{\mathrm{m}}{ }^{\ominus}+R T \ln \frac{1.01 \times 10^{5}/p^\ominus}{2.02 \times 10^{6}/p^\ominus}=-1.73 \mathrm{kJ} / \mathrm{mol}<0
+        \end{array}$
+
+        反应向正反应方向进行
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{非理想气体反应的平衡常数}
+
+    \large 非理想气体反应体系各组分的化学势为
+    \[
+        \mu_{\mathrm{B}}=\mu_{\mathrm{B}}^{\ominus}(T)+R T \ln \frac{f_{\mathrm{B}}}{p^{\ominus}}
+    \]
+    用各组分的$f_\mathrm{B}/p^\ominus$代替相对活度，则非理想气体反应体系的标准平衡常数为
+    \[
+        K^{\ominus}=\frac{a_{\mathrm{G}}^{\mathrm{g}} a_{\mathrm{H}}^{h}}{a_{\mathrm{A}}^{a} a_{\mathrm{D}}^{d}}=\frac{(f_{\mathrm{G}} / p^{\ominus})^{g}(f_{\mathrm{H}} / p^{\ominus})^{h}}{(f_{\mathrm{A}} / p^{\ominus})^{a}(f_{\mathrm{D}} / p^{\ominus})^{d}}
+    \]
+    化学反应等温式中的$Q$是以$f_\mathrm{B}/p^\ominus$表示的逸度商。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{理想溶液反应的平衡常数}
+
+    \large 理想溶液反应体系中各组分的化学势为
+    \[
+        \mu_{\mathrm{B}}=\mu_{\mathrm{B}}^{\ominus}(T,p)+R T \ln {x_{\mathrm{B}}}
+    \]
+    所以
+    \[
+        K^{\ominus}=\frac{x_{\mathrm{G}}^{\mathrm{g}} x_{\mathrm{H}}^{h}}{x_{\mathrm{A}}^{a} x_{\mathrm{D}}^{d}}
+    \]
+    对凝聚体系，$K^{\ominus}$受压力的影响较小，所以可认为凝聚相体系中$K^{\ominus}$与压力无关。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{稀溶液反应的平衡常数}
+
+    \large 稀溶液反应体系中各组分的浓度除用摩尔分数$x_{\mathrm{B}}$表示外，还可以用相对物质的量浓度$c_{\mathrm{B}}/c^\ominus$或相对质量摩尔浓度$b_{\mathrm{B}}/b^\ominus$表示，所以平衡常数有
+    \[
+        K^{\ominus}=\frac{x_{\mathrm{G}}^{\mathrm{g}} x_{\mathrm{H}}^{h}}{x_{\mathrm{A}}^{a} x_{\mathrm{D}}^{d}}
+    \]
+    \[
+        K^{\ominus} =\frac{(c_{\mathrm{G}} / c^{\ominus})^{g}(c_{\mathrm{H}} / c^{\ominus})^{h}}{(c_{\mathrm{A}} / c^{\ominus})^{a}(c_{\mathrm{D}} / c^{\ominus})^{d}}
+    \]
+    \[
+        K^{\ominus} =\frac{(b_{\mathrm{G}} / b^{\ominus})^{g}(b_{\mathrm{H}} / b^{\ominus})^{h}}{(b_{\mathrm{A}} / b^{\ominus})^{a}(b_{\mathrm{D}} / b^{\ominus})^{d}}
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多相反应的平衡常数}
+
+    参与反应的各组分处于不同相的化学反应称为多相反应。在多相反应中，如果凝聚相都处于纯态，不形成固溶体或溶液，则其活度为1，在平衡常数表示式中不出现，只考虑气态物质的压力商。例如，定温定压下\ch{CaCO3}的分解反应
+    \[
+        \ch{CaCO3(s) = CaO(s) + CO2(g)}
+    \]
+    平衡时，反应物化学势与化学计量系数乘积总和等于产物化学势与化学计量系数乘积总和：
+    \[
+        \mu_{\mathrm{CaCO}_{3}(\mathrm{~s})}=\mu_{\ch{CO2(g)}} + \mu_{\mathrm{CaO}(\mathrm{~s})}
+    \]
+    视\ch{CO2}为理想气体，$\mu_{\ch{CO2(g)}} = \mu^{\ominus}(T) + RT\ln \frac{p}{p^{\ominus}}$，所以
+    \[
+        R T \ln (p_{\mathrm{CO}_{2}} / p^{\ominus})=-[\mu_{\mathrm{CO}_{2}}(\mathrm{g})+\mu_{\mathrm{CaO}(\mathrm{s})}^{\ominus}-\mu_{\mathrm{CaCO}_{3}(\mathrm{~s})}^{\ominus}]
+    \]
+    \[
+        R T \ln (p_{\mathrm{CO}_{2}} / p^{\ominus})=-\Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}
+    \]
+    \[
+        K^{\ominus}=p_{\mathrm{CO}_{2}} / p^{\ominus}
+    \]
+    \vspace{-7pt}
+\end{frame}

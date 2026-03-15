@@ -1,0 +1,74 @@
+\section{吉布斯自由能判据}
+
+\begin{frame}{1 热力学第一、第二定律联合式}
+    将热力学第一定律$\delta Q= \mathrm{d}U+p_\mathrm{e}\mathrm{d}V-\delta W'$代入克劳修斯不等式$\mathrm{d}S\ge\frac{\delta Q}{T}$，整理后得
+    $$-\mathrm{d}U+T\mathrm{d}S-p_\mathrm{e}\mathrm{d}V\ge-\delta W'$$
+    \\式中，$\delta W'$为非体积功，也称有用功。上式即为热力学第一、第二定律联合式。由该式出发，限制某些条件可引出两个新的判断过程变化方向和限度的判据。
+\end{frame}
+
+
+\begin{frame}{2 吉布斯自由能}
+    在\highlight{定温定压}条件下，$T\mathrm{d}S=\mathrm{d}(TS)$，$p_\mathrm{e}\mathrm{d}V=p\mathrm{d}V=\mathrm{d}(pV)$，代入热力学第一第二定律联合式，得
+    $$-\mathrm{d}(U+pV-TS)\ge -\delta W' \qquad \text{或}\qquad -\mathrm{d}(H-TS)\ge -\delta W'$$
+    \\式中$U$、$p$、$V$、$T$、$S$、$H$都是状态函数，它们的组合也必定是状态函数。吉布斯(Gibbs)定义这个新函数为自由能，称为吉布斯自由能，用符号$G$表示。
+    $$G\equiv U+pV-TS\equiv H-TS$$
+    \\吉布斯自由能是状态函数，具广度性质，其绝对值不能确定，具有能量量纲。
+\end{frame}
+
+
+\begin{frame}{2 吉布斯自由能}
+    将式$G\equiv U+pV-TS$代入$-\mathrm{d}(U+pV-TS)\ge -\delta W'$得
+    $$~~~~-\mathrm{d}G_{T,p}\ge -\delta W'$$
+    $$\text{或} -\Delta G_{T,p}\ge -W'$$
+    \\上式表面，定温定压下的可逆过程，体系吉布斯自由能的减少等于体系对外所做最大非体积功，即$-\Delta G_{T,p}= -W_R'$。
+    \\在定温定压不可逆过程中，体系吉布斯自由能的减少大于体系所做的非体积功，即$-\Delta G_{T,p}> -W_R'$。
+\end{frame}
+
+
+\begin{frame}{3 吉布斯自由能判据}
+    许多化学反应和相变化都是在定温定压下进行的，故对定温定压下只做体积功$(W'=0)$的封闭体系，有
+    $$~~~~\mathrm{d}G_{T,p}\le 0$$
+    $$\text{或}\Delta G_{T,p}\le 0$$
+    
+    \uline{定温定压下，只做体积功的封闭体系}总是自发地向着吉布斯自由能降低$\Delta G_{T,p}< 0$的方向变化；当吉布斯自由能降低到最小值$\Delta G_{T,p}= 0$时体系便达到了平衡态；体系吉布斯自由能升高$\Delta G_{T,p}> 0$的过程不能自发进行。
+    \\这个原理称为吉布斯自由能降低原理。
+    \\这两个式子就是吉布斯自由能判据(criterion of Gibbs free energy)。
+\end{frame}
+
+
+\begin{frame}{3 吉布斯自由能判据}
+    吉布斯自由能判据通常又写成
+    $$\text{封闭体系}\qquad \Delta G_{T,p,W'=0}\left\{
+    \begin{aligned}
+        <0 &\qquad \text{自发过程} \qquad\\
+        =0 &\qquad \text{平衡态} \qquad\\
+        >0 &\qquad \text{非自发过程} \qquad
+    \end{aligned}    
+    \right.
+    $$
+    \\只要计算出体系的$\Delta G_{T,p,W'=0}$，就能对体系的自发性做出判断。
+    \\吉布斯自由能判据的优点：
+    \\在定温定压下可直接用体系的热力学量变化进行判断，不需要考虑环境的热力学量；既能判断过程进行的方式是可逆还是不可逆，又可判断过程的方向和限度。
+5\end{frame}
+
+
+\begin{frame}{4 亥姆霍兹自由能}
+    在定温定容条件下，热力学第一第二定律联合式可得$-\mathrm{d}(U-TS)\ge -\delta W'$，亥姆霍兹定义
+    $$F\equiv U-TS$$
+    \\F称为亥姆霍兹自由能(Helmholtz free energy)。
+    \\在定温定容下，只做体积功的封闭体系发生变化，则
+    $$\mathrm{d}F \le 0 \qquad \text{或} \qquad \Delta F \le 0$$
+    \\这就是定温定容条件下体系变化方向和限度的亥姆霍兹自由能判据。式中，等号适用于可逆过程，不等号适用于不可逆过程。$\Delta F = 0$，体系处于平衡态；$\Delta F < 0$，自发过程；$\Delta F > 0$，非自发过程。
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        判断下列过程的$Q$、$W$、$\Delta U$、$\Delta H$、$\Delta S$、$\Delta G$值的正负。
+
+        (1) 理想气体自由膨胀
+
+        (2) 两种理想气体在绝热箱中混合。
+    \end{example}
+\end{frame}

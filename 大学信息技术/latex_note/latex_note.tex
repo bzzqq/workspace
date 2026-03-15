@@ -1,0 +1,120 @@
+\documentclass[lang=cn,12pt,chinesefont=founder]{elegantbook}
+\usepackage{graphicx}
+\usepackage{unicode-math}
+\usepackage{framed} %段落加边框
+\usepackage{makecell} %表格内强制换行
+\usepackage{titletoc} % 章节目录
+\usepackage{tabularx}
+\usepackage{array}
+\setmathfont{XITS Math}
+
+% 取消pdf的压缩，最终版取消这个命令即可
+\special{dvipdfmx:config z 0}
+
+%自定义命令 颜色
+\definecolor{epubblue}{RGB}{1,126,218}
+\newcommand*{\cepubblue}{\textcolor{epubblue}}
+
+
+\def\degree{${}^{\circ}$}
+
+\usepackage{adjustbox}
+ 
+\newsavebox{\mysavebox}
+\newlength{\myrest}
+
+
+
+
+
+%封面
+\title{Latex}
+\subtitle{学习笔记}
+\author{张斌}
+\institute{河北农业大学\quad 理工系}
+\date{\today}
+\cover{cover}
+\extrainfo{内容收集于网络}
+
+
+% 本文档命令
+% \usepackage{array}
+% \newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+
+
+\begin{document}
+\maketitle
+\begin{sloppypar} %文字溢出自动换行
+\frontmatter
+\tableofcontents
+\mainmatter
+
+\chapter{入门}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/introduction.tex}
+
+\chapter{文字}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/symbol.tex}
+
+\chapter{样式}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/style.tex}
+
+\chapter{表格}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/table.tex}
+
+\chapter{图片}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/fig.tex}
+
+\chapter{绘图}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/tikz.tex}
+
+\chapter{公式}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/math.tex}
+
+\chapter{代码}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/code.tex}
+
+\chapter{幻灯片}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/beamer.tex}
+
+\chapter{自定义命令}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/command.tex}
+
+\chapter{参考文献}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/bib.tex}
+
+\chapter{试卷排版}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/exam.tex}
+
+\chapter{Linux篇}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{contents/linux.tex}
+
+
+\end{sloppypar}
+\end{document}

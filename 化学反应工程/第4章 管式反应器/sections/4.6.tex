@@ -1,0 +1,142 @@
+\section{管式反应器的最佳温度序列}
+
+
+\begin{frame}[t]
+    \frametitle{单一反应}
+    单一反应，以生产强度最大为目标
+    \only<1>{        
+    \begin{table}[]
+        \begin{tabular}{
+            >{\columncolor[HTML]{f4f8f9}}c 
+    >{\columncolor[HTML]{f4f8f9}}c 
+    >{\columncolor[HTML]{f4f8f9}}c }
+        \hline
+        & 等温 & 变温 \\ \hline
+        不可逆反应 &  &  \\
+        可逆吸热反应 &  &  \\
+        可逆放热反应 & \phantom{高温操作有利$^{[1]}$} & \phantom{按最佳温度操作序列，先高后低$^{[3]}$} \\ \hline
+        \end{tabular}
+        \end{table}
+    }
+    \only<2>{
+        \begin{table}[]
+            \begin{tabular}{
+                >{\columncolor[HTML]{f4f8f9}}c 
+        >{\columncolor[HTML]{f4f8f9}}c 
+        >{\columncolor[HTML]{f4f8f9}}c }
+            \hline
+             & 等温 & 变温 \\ \hline
+            不可逆反应 & 高温操作有利$^{[1]}$ & 先低后高$^{[2]}$ \\
+            可逆吸热反应 & 高温操作有利$^{[1]}$ & 先低后高$^{[2]}$ \\
+            可逆放热反应 & 存在最佳温度~~~~ & 按最佳温度操作序列，先高后低$^{[3]}$ \\ \hline
+            \end{tabular}
+            \end{table}
+        
+            \begin{itemize}
+                \item[{[1]}] 实际上能够采用多高的操作温度，还受到反应器的构成材料、能源、催化剂的耐热性能等方面的限制，需要结合这些因素来考虑。
+                \item[{[2]}] 反应过程中，由于反应物浓度逐渐降低而导致反应速率下降，如果保持反应过程的温度逐渐上升，则可补偿由于浓度降低而引起的反应速率减小。
+                \item[{[3]}] 要完全按最佳温度曲线操作，实行起来会困难不少，但应力图接近。
+            \end{itemize}
+    }
+
+\end{frame}
+
+
+
+\begin{frame}[t]
+    \frametitle{复合反应}
+
+    复合反应，以目标产物收率最大为目标
+\only<1>{
+    \begin{table}[]\
+        \begin{tabular}{
+        >{\columncolor[HTML]{f4f8f9}}c |
+        >{\columncolor[HTML]{f4f8f9}}c 
+        >{\columncolor[HTML]{f4f8f9}}c }
+        \hline
+        \cellcolor[HTML]{f4f8f9}                   & $E_1 < E_2$ &  \\ \cline{2-3} 
+        \multirow{-2}{*}{\cellcolor[HTML]{f4f8f9} \makecell{\ch{A + B -> P} \\ \ch{A + B -> Q}}} & $E_1 > E_2$ &   \\ \hline
+        \cellcolor[HTML]{f4f8f9}                   & $E_1 < E_2$ & \makecell{等温操作：\phantom{温度越低越好~~~~} \\ 变温操作：\phantom{先高温后低温$^{[2]}$}} \\ \cline{2-3} 
+        \multirow{-2}{*}{\cellcolor[HTML]{f4f8f9} \ch{A -> P -> Q}} & $E_1 > E_2$ & 等温操作：\phantom{温度越低越好~~~~} \\ \hline
+        \end{tabular}
+        \end{table}
+}
+\only<2>{
+    \begin{table}[]\
+        \begin{tabular}{
+        >{\columncolor[HTML]{f4f8f9}}c |
+        >{\columncolor[HTML]{f4f8f9}}c 
+        >{\columncolor[HTML]{f4f8f9}}c }
+        \hline
+        \cellcolor[HTML]{f4f8f9}                   & $E_1 < E_2$ & 低温操作有利$^{[1]}$ \\ \cline{2-3} 
+        \multirow{-2}{*}{\cellcolor[HTML]{f4f8f9} \makecell{\ch{A + B -> P} \\ \ch{A + B -> Q}}} & $E_1 > E_2$ & 高温操作有利 ~~~~  \\ \hline
+        \cellcolor[HTML]{f4f8f9}                   & $E_1 < E_2$ & \makecell{等温操作：温度越低越好~~~~ \\ 变温操作：先高温后低温$^{[2]}$} \\ \cline{2-3} 
+        \multirow{-2}{*}{\cellcolor[HTML]{f4f8f9} \ch{A -> P -> Q}} & $E_1 > E_2$ & 等温操作：温度越高越好~~~~ \\ \hline
+        \end{tabular}
+        \end{table}
+    
+        \begin{itemize}
+            \item[{[1]}] 总选择性提高，但生产强度下降，所需的反应体积增大。
+            \item[{[2]}] 先高温是为了加快第一个反应，促使P的生成，待P累积到一定的量后，降低温度以减小副产物Q的生成。
+        \end{itemize}
+}
+
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{化学反应工程问题优化}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \node (A) at (0,0) {A + B};
+            \node (B) at (2,0) {Q};
+            \node (C) at (4,0) {P};
+            \node (D) at (0,-2) {X};
+            \node (E) at (2,-2) {Y};
+            \draw[->] (A) -- (B) node[above,midway]{1};
+            \draw[->] (B) -- (C) node[above,midway]{3};
+            \draw[->] (A) -- (D) node[right,midway]{2};
+            \draw[->] (B) -- (E) node[right,midway]{4};
+            \end{tikzpicture}
+    \end{center}
+    
+    设P为目的产物，且$E_1 < E_2$，$E_3 > E_4$。
+    \begin{itemize}
+        \item 由于$E_1 < E_2$，低温有利于生成Q而不利于生成X
+        \item 由于$E_3 > E_4$，低温有利于Q转化成Y而不利于转化成P
+        \item 采用等温操作无论选定什么温度，P的收率都不会高
+        \item 只有保持由低到高的温度序列，才能获得较高的P的收率
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{化学反应工程问题优化}
+
+    \begin{center}
+        \begin{tikzpicture}
+            \node (A) at (0,0) {A + B};
+            \node (B) at (2,0) {Q};
+            \node (C) at (4,0) {P};
+            \node (D) at (0,-2) {X};
+            \node (E) at (2,-2) {Y};
+            \draw[->] (A) -- (B) node[above,midway]{1};
+            \draw[->] (B) -- (C) node[above,midway]{3};
+            \draw[->] (A) -- (D) node[right,midway]{2};
+            \draw[->] (B) -- (E) node[right,midway]{4};
+            \end{tikzpicture}
+    \end{center}
+
+    设P为目的产物。
+    \begin{itemize}
+        \item 若$E_1 > E_2$，$E_3 > E_4$，高温操作
+        \item 若$E_1 < E_2$，$E_3 < E_4$，低温操作
+        \item 若$E_1 > E_2$，$E_3 < E_4$，由高温到低温
+        \item 若$E_1 < E_2$，$E_3 > E_4$，由低温到高温
+    \end{itemize}
+    
+
+\end{frame}

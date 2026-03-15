@@ -1,0 +1,18 @@
+\frametitle{通过化学计量系数矩阵得到独立反应数}
+^^I对于化学计量系数矩阵A，其元素由全部5个反应组分在对应的3个化学反应式中的化学计量系数构成。
+^^I$$\mathrm{CH_4~H_2~H_2O~CO~CO_2}$$
+^^I$$\mathrm{A} = \begin{pmatrix}
+^^I-1&  3&  -1&  -1& 0\\
+^^I-1&  4&  -2&  0& 1\\
+^^I0&  1&  -1&  -1& 1
+\end{pmatrix}~~~~
+\begin{matrix}
+^^I(1)\\
+^^I(2)\\
+^^I(3)
+\end{matrix}$$
+^^I\\经初等变换后，求得矩阵A的秩$R(\mathrm{A})=2$，此时独立反应数等于矩阵的秩。
+    \begin{codeblock}{使用Matlab计算矩阵A的秩}
+A = [-1 3 -1 1 0; -1 4 -2 0 1; 0 1 -1 -1 1];
+rank(A) # 返回结果 2
+    \end{codeblock}

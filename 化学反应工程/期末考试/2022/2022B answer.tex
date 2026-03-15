@@ -1,0 +1,149 @@
+%!TEX program = xelatex
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\Large 河北农业大学2022——2023学年第1学期}}
+
+\centerline{\Large 参考答案及评分标准（B）卷}
+
+\centerline{开课学院：\underline{\quad 理工学院 \quad} \quad 出\ \ 题\ \ 人：\underline{ \qquad \qquad 张斌 \qquad \qquad}}
+
+\centerline{课\ \ 程\ \ 号：\underline{HBX250037-01} \quad 课程名称：\underline{\quad \quad \ \ 化学反应工程 \quad \ \ \ }}
+
+\bigskip
+
+
+1. 简答题(15分)
+
+凡是流体通过不动的固体物料所形成的床层而进行反应的装置都称作固定床反应器。
+
+（1） 催化剂在床层内不易磨损； 
+
+（2）床层内流体的流动接近于平推流，与返混式反应器相比，用较少的催化剂和较小的反应器容积来获得较大的生产能力； 
+
+（3）	固定床中的传热较差； 
+
+（4）	催化剂的更换必须停产进行。
+
+\bigskip
+\bigskip
+
+2. 简答题(15分)
+
+工业反应器有三种操作方式：间歇操作，连续操作，半间歇(半连续)操作。
+
+$\hfill  \cdots \cdots \cdots \cdots (6\text{分})$
+
+间歇操作反应器的特点是分批操作，间歇反应过程是一个非定态过程，反应器内物系的组成随时间改变。 $\hfill  \cdots \cdots \cdots \cdots (3\text{分})$
+
+连续操作反应器多属于定态操作，反应器内任何部位的物系参数，如浓度和温度等均不随时间而改变，但却随位置而变。 $\hfill  \cdots \cdots \cdots \cdots (3\text{分})$
+
+半间歇(半连续)操作具有连续操作和间歇操作的某些特征。 $\hfill  \cdots \cdots \cdots \cdots (3\text{分})$
+
+
+\bigskip
+\bigskip
+
+3. 简答题(16分)
+
+可以从反应工程的研究内容，研究方法，研究进展，应用等方面进行回答。
+
+\bigskip
+\bigskip
+
+4. 读图题(24分)
+
+(1) C>B>A，因为对于一定转化率，当反应温度低于最佳温度时，反应速率随温度升高而增加。
+$\hfill \qquad \cdots \cdots \cdots \cdots (8\text{分})$
+
+(2) E> F，D点无法判断。因为对于一定转化率，当反应温度高于最佳温度时，反应速率随温度升高而降低。D点和E F点位于最佳温度两侧，无法确定大小。
+
+$\hfill \qquad \cdots \cdots \cdots \cdots (8\text{分})$
+
+(3) 等温操作：存在最佳操作温度，使生产效率最高；
+
+变温操作：沿最佳温度曲线操作；
+
+绝热操作：存在最佳进料温度。$\hfill \qquad \cdots \cdots \cdots \cdots (8\text{分})$
+
+\bigskip
+\bigskip
+
+5. 计算题(30分)
+
+设小釜体积为$V_{r1}$，大釜体积为$V_{r2}$
+
+（1）活塞流在前，全混流在后：
+
+$
+    \begin{aligned}
+        \tau &= \frac{1}{k}\ln\frac{1}{1-X_\mathrm{A1}} \hspace{19em} \cdots \cdots \cdots \cdots (5\text{分})\\
+        X_\mathrm{A1}&=0.629 \\
+        c_\mathrm{A1}&=c_\mathrm{A0}(1-X_\mathrm{A1})=\SI{3.71}{mol/L} \hspace{13.5em} \cdots \cdots \cdots \cdots (2\text{分})\\
+        \tau &= \frac{c_\mathrm{A1}X_\mathrm{A2}}{kc_\mathrm{A1}(1-X_\mathrm{A2})} \hspace{18.5em} \cdots \cdots \cdots \cdots (5\text{分})\\
+        X_\mathrm{A2}&=0.5\\
+        c_\mathrm{A2}&=c_\mathrm{A1}(1-X_\mathrm{A2})=\SI{1.855}{mol/L} \hspace{13em} \cdots \cdots \cdots \cdots (3\text{分})
+    \end{aligned}
+$
+
+（2）全混流在前，活塞流在后：
+
+$
+    \begin{aligned}
+        \tau &= \frac{c_\mathrm{A0}X_\mathrm{A1}}{kc_\mathrm{A0}(1-X_\mathrm{A1})} \hspace{17.5em} \cdots \cdots \cdots \cdots (5\text{分})\\
+        X_\mathrm{A1}&=0.5\\        
+        c_\mathrm{A1}&=c_\mathrm{A0}(1-X_\mathrm{A1})=\SI{5}{mol/L} \hspace{13.5em} \cdots \cdots \cdots \cdots (2\text{分})\\
+        \tau &= \frac{1}{k}\ln\frac{1}{1-X_\mathrm{A2}} \hspace{18em} \cdots \cdots \cdots \cdots (5\text{分})\\
+        X_\mathrm{A2}&=0.63 \\
+        c_\mathrm{A2}&=c_\mathrm{A1}(1-X_\mathrm{A2})=\SI{1.855}{mol/L} \hspace{12em} \cdots \cdots \cdots \cdots (3\text{分})
+    \end{aligned}
+$
+
+两种情况下出口浓度均为\SI{1.855}{mol/L}。
+
+
+\end{spacing}
+\end{document}

@@ -1,0 +1,39 @@
+\section{公式对齐}
+
+\subsection{等号对齐}
+
+使用aligned环境实现公式的拆分，代码公式如下：
+
+\begin{lstlisting}
+    \begin{aligned}
+        \cos 2x &=\cos^2x - \sin^2x \\
+        &=2\cos^2x-1
+    \end{aligned}
+\end{lstlisting}
+
+\[
+    \begin{aligned}
+        \cos 2x &=\cos^2x - \sin^2x \\
+        &=2\cos^2x-1
+        \end{aligned}
+\]
+
+\subsection{大括号连接的多行公式}
+
+使用cases环境实现公式的组合，\&分隔公式和条件，具体LaTex代码如下：
+
+\begin{lstlisting}
+    D(x) = \begin{cases}
+    \lim \limits_{x \to 0} \frac{a^x}{b+c},&x<3 \\
+    \pi,&x=3\\
+    \int_a^{3b}x_{ij}+e^2dx,&x>3\\
+    \end{cases}
+\end{lstlisting}
+
+\[
+    D(x) = \begin{cases}
+    \lim \limits_{x \to 0} \frac{a^x}{b+c},&x<3 \\
+    \pi,&x=3\\
+    \int_a^{3b}x_{ij}+e^2dx,&x>3\\
+    \end{cases}
+\]

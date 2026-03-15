@@ -1,0 +1,127 @@
+\contentsline {chapter}{\numberline {1}入门}{1}{chapter.1}%
+\ttl@starttoc {chapters@1}
+\contentsline {section}{\numberline {1.1}配置}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}外部PDF阅读器的设置}{1}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Sumatra Pdf 反向搜索}{1}{subsection.1.1.2}%
+\contentsline {section}{\numberline {1.2}文档类}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}颜色}{2}{section.1.3}%
+\contentsline {chapter}{\numberline {2}文字}{7}{chapter.2}%
+\ttl@stoptoc {chapters@1}
+\ttl@starttoc {chapters@2}
+\contentsline {section}{\numberline {2.1}字体属性}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Family}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Shape}{7}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Series}{8}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}字号}{8}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}字号命令}{8}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}中文字号}{8}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}特殊符号}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}保留字符}{8}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}波浪线}{9}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}角度和摄氏度}{9}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}输出命令}{9}{subsection.2.3.4}%
+\contentsline {chapter}{\numberline {3}样式}{10}{chapter.3}%
+\ttl@stoptoc {chapters@2}
+\ttl@starttoc {chapters@3}
+\contentsline {section}{\numberline {3.1}段落}{10}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}分段}{10}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}缩进}{10}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}行距}{10}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Latex与Word行距的对应关系}{11}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}段间距}{11}{subsection.3.1.5}%
+\contentsline {section}{\numberline {3.2}调整水平间距}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}不可换行的水平间距}{11}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}可换行的水平间距}{12}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}表格}{13}{chapter.4}%
+\ttl@stoptoc {chapters@3}
+\ttl@starttoc {chapters@4}
+\contentsline {section}{\numberline {4.1}对齐}{13}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}表格整体居中}{13}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}tabularx宏包}{13}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}表格内自动换行}{13}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}不同宽度的X列}{14}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}让tabularx表格中的内容垂直居中}{15}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}三线表}{15}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}三线表竖线断掉}{15}{subsection.4.3.1}%
+\contentsline {section}{\numberline {4.4}问题与解决方法}{15}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}解决表格过宽问题，自适应调整宽度}{15}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}图片}{16}{chapter.5}%
+\ttl@stoptoc {chapters@4}
+\ttl@starttoc {chapters@5}
+\contentsline {chapter}{\numberline {6}绘图}{17}{chapter.6}%
+\ttl@stoptoc {chapters@5}
+\ttl@starttoc {chapters@6}
+\contentsline {section}{\numberline {6.1}Tikz基础}{18}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}TikZ是什么？}{18}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}TikZ 使用}{18}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}坐标系统}{19}{subsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.1.4}常用元素}{19}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}基本图形对象}{20}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}直线和矩形}{20}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}圆、椭圆、弧}{22}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}曲线}{23}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}箭头}{24}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}网格和坐标轴}{24}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}函数}{25}{subsection.6.2.6}%
+\contentsline {subsection}{\numberline {6.2.7}显示绘图区域边界}{26}{subsection.6.2.7}%
+\contentsline {section}{\numberline {6.3}图形样式}{26}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}线型和线宽}{26}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}颜色和填充}{27}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}自定义样式}{28}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}图形变换}{28}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}平移(shift)}{28}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}缩放(scale)}{29}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}旋转(rotate)}{30}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}倾斜(slant)}{31}{subsection.6.4.4}%
+\contentsline {section}{\numberline {6.5}示意图}{32}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}文字节点}{32}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}图形文字节点}{33}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.3}为绘制的图形添加文字节点}{33}{subsection.6.5.3}%
+\contentsline {subsection}{\numberline {6.5.4}绘制一颗树}{34}{subsection.6.5.4}%
+\contentsline {subsection}{\numberline {6.5.5}绘制函数图像}{35}{subsection.6.5.5}%
+\contentsline {section}{\numberline {6.6}流程图}{35}{section.6.6}%
+\contentsline {section}{\numberline {6.7}节点文字位置}{37}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}文字换行}{37}{subsection.6.7.1}%
+\contentsline {subsection}{\numberline {6.7.2}折线文字位置}{37}{subsection.6.7.2}%
+\contentsline {section}{\numberline {6.8}常见需求}{37}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}描点}{37}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}指定标签位置}{38}{subsection.6.8.2}%
+\contentsline {subsection}{\numberline {6.8.3}为线添加标签}{38}{subsection.6.8.3}%
+\contentsline {subsection}{\numberline {6.8.4}设定数值包含根式的元素}{38}{subsection.6.8.4}%
+\contentsline {subsection}{\numberline {6.8.5}标注直角符号}{39}{subsection.6.8.5}%
+\contentsline {subsection}{\numberline {6.8.6}foreach循环功能}{39}{subsection.6.8.6}%
+\contentsline {subsection}{\numberline {6.8.7}利用循环功能绘制时间线}{39}{subsection.6.8.7}%
+\contentsline {subsection}{\numberline {6.8.8}多变量同时循环}{40}{subsection.6.8.8}%
+\contentsline {subsection}{\numberline {6.8.9}嵌套循环}{40}{subsection.6.8.9}%
+\contentsline {subsection}{\numberline {6.8.10}长图片跨页}{40}{subsection.6.8.10}%
+\contentsline {chapter}{\numberline {7}公式}{42}{chapter.7}%
+\ttl@stoptoc {chapters@6}
+\ttl@starttoc {chapters@7}
+\contentsline {section}{\numberline {7.1}公式对齐}{42}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}等号对齐}{42}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}大括号连接的多行公式}{42}{subsection.7.1.2}%
+\contentsline {chapter}{\numberline {8}代码}{43}{chapter.8}%
+\ttl@stoptoc {chapters@7}
+\ttl@starttoc {chapters@8}
+\contentsline {chapter}{\numberline {9}幻灯片}{44}{chapter.9}%
+\ttl@stoptoc {chapters@8}
+\ttl@starttoc {chapters@9}
+\contentsline {chapter}{\numberline {10}自定义命令}{45}{chapter.10}%
+\ttl@stoptoc {chapters@9}
+\ttl@starttoc {chapters@10}
+\contentsline {chapter}{\numberline {11}参考文献}{46}{chapter.11}%
+\ttl@stoptoc {chapters@10}
+\ttl@starttoc {chapters@11}
+\contentsline {chapter}{\numberline {12}试卷排版}{47}{chapter.12}%
+\ttl@stoptoc {chapters@11}
+\ttl@starttoc {chapters@12}
+\contentsline {chapter}{\numberline {13}Linux篇}{48}{chapter.13}%
+\ttl@stoptoc {chapters@12}
+\ttl@starttoc {chapters@13}
+\contentsline {section}{\numberline {13.1}WSL}{48}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}安装WSL}{48}{subsection.13.1.1}%
+\contentsline {subsection}{\numberline {13.1.2}安装Texlive}{48}{subsection.13.1.2}%
+\contentsline {subsection}{\numberline {13.1.3}安装windows字体}{49}{subsection.13.1.3}%
+\contentsline {subsection}{\numberline {13.1.4}VSCode配置}{49}{subsection.13.1.4}%
+\contentsline {subsection}{\numberline {13.1.5}Gitee同步}{50}{subsection.13.1.5}%
+\contentsfinish 

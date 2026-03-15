@@ -1,0 +1,344 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme}
+
+
+%封面
+\title{药物代谢动力学}
+\subtitle{Pharmacokinetics}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.65\linewidth]{血药浓度}
+		\end{figure}
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[height=7.5cm]{课本}\quad
+			\includegraphics[height=7cm]{刘晓东}
+		\end{figure}
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{《我不是药神》}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[height=6.5cm]{药神1}\quad
+			\includegraphics[height=6.5cm]{药神3}\quad
+			\includegraphics[height=6.5cm]{药神2}
+		\end{figure}
+	\end{frame}
+
+% 售卖天价药，药厂到底有没有错？
+
+% 走私有效果的仿药，到底该不该判罪？
+
+% 救了人却犯了法，警察该不该追捕？
+
+% 在这部电影里，充满了这些社会矛盾，引起了社会大众的共鸣与反思。
+
+
+	\begin{frame}
+		\frametitle{药价为什么贵？}
+		理由1：研发投入巨大
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{药品研发}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{药价为什么贵？}
+		理由2：流通环节的隐形成本
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[height=5.5cm]{销售链条}\quad
+			\includegraphics[height=5.5cm]{费用}
+		\end{figure}
+	\end{frame}
+
+
+	\begin{frame}
+		\frametitle{医疗反腐风暴}
+		\qquad 2023年07月21日，全国医药领域腐败问题集中整治工作视频会议在京召开。国家卫生健康委会同教育部、公安部、审计署、国务院国资委、市场监管总局、国家医保局、国家中医药局、国家疾控局、国家药监局，联合召开视频会议，部署开展为期1年的全国医药领域腐败问题集中整治工作。
+
+		\qquad 2023年08月15日，国家卫健委发布《全国医药领域腐败问题集中整治工作有关问答》，就开展医药领域腐败问题集中整治工作的目的、主要原则、重点内容和措施等进行解读。
+	\end{frame}
+
+	\begin{frame}
+		\frametitle{医疗反腐风暴 \link{https://news.cnr.cn/rebang/20230819/t20230819_526385832.shtml}}
+		截至8月17日，今年至少已有184位医院院长、书记被查，特别是6月以来，至少有10位医院领导主动投案。
+
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[height=5.5cm]{落马}\quad
+			\includegraphics[height=5.5cm]{投案}\quad
+			\includegraphics[height=5.5cm]{年龄分布}
+		\end{figure}
+	\end{frame}
+
+	\begin{frame}{}
+        \begin{center}
+            {\Huge \cbf{目 \ 录}}
+        \end{center}
+		\tableofcontents
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+\section{药物代谢动力学定义}
+\begin{frame}
+    \frametitle{药物代谢动力学}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.7\linewidth]{药物体内处置与活性示意图}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\frametitle{定义}
+	药物代谢动力学，主要研究药物的\cbf{体内过程}及\cbf{体内药物浓度随时间变化的规律}。
+
+	\begin{itemize}
+	  \item 前者主要以文字和图表定性地描述药物在体内的变化过程
+		\begin{itemize}
+		  \item 吸收 Absorption ： A
+		  \item 分布 Distribution ： D
+		  \item 代谢 Metabolism ： M
+		  \item 排泄 Excretion: E
+		\end{itemize}
+	  \item 后者主要以数学模型与公式定量地描述药物随时间改变的变化过程
+		\begin{itemize}
+		  \item 给药后，测定不同时间的血药浓度($c$)$-$时间($t$)数据
+		  \item 建立数学模型，得到函数方程$c=f(t)$。
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+\section{药物代谢动力学发展史}
+
+
+\begin{frame}
+	\frametitle{药物代谢动力学在世界上的发展}
+	\begin{itemize}
+	  \item 1913 年 Michaelis 和 Menten 提出动力学方程
+	  \item 1924 年 Widmark 和 Tandberg 提出开放式一室动力学模型
+	  \item 1937 年 Teorell提出房室药代动力学模型的假设
+	  \item 1953 年 Dost博士，第一本药代动力学教科书问世
+	  \item 1972 年，药理学与药物动力学国际会议，第一次正式将药物动力学确认为一门独立学科 。
+	\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{药物代谢动力学在我国的发展}
+	\begin{itemize}
+	  \item 20 世纪 50 年代，宋振玉教授 、 曾衍霖教授开展药物的体内过程研究
+	  \item 20世纪70年代末-80年代初，国内一批学者通过办班和讲学等方式 ，推动中国药物代谢动力学的发展
+	  \item 1980 年湖南科学技术出版社，国内第一本介绍这一新兴学科的著作 《 药物代谢动力学 》
+	  \item 1981 朱家璧翻译了Gibaldi的《药代动力学》第一版，1984 年第二版
+	  \item “ 十一五 ” 期间 ， 国家科技部重点启动了国家临床前药代动力学技术平台建设项目
+	  \item 21 世纪 ：药物代谢动力学研究呈现井喷式发展
+	\end{itemize}
+\end{frame}
+
+
+\section{药物代谢动力学的应用}
+	
+\begin{frame}
+	\frametitle{1. 新药研究与评价}
+	\begin{minipage}{0.48\linewidth}
+		\phantom{好药？}
+
+		\begin{itemize}
+			\item Toxicology
+			\item Pharmacodynamics
+			\item Pharmacokinetics
+		  \end{itemize}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\cbf{好药？}
+
+		\begin{itemize}
+			\item 安全
+			\item 有效
+			\item 合适的体内过程
+		  \end{itemize}
+	\end{minipage}
+	
+\end{frame}
+
+\begin{frame}
+	\frametitle{1. 新药研究与评价}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.7\linewidth]{新药研发失败分析}
+		\caption{新药研发失败分析}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{1. 新药研究与评价}
+	合适的体内过程(ADME) 意义 ？
+	\begin{itemize}
+	  \item 吸收 ？
+	  \item 合适代谢途径 ？ 肝 、 肾
+	  \item 合适半衰期 ？
+	  \item 合适分布 ？药物要进入靶组织或器官
+	  \item 无明显药物相互作用
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{2. 新药合成与发现}
+	药物体内过程与化学结构构效关系 ： 合成合适的体内过程药物 ？
+
+	氨苄西林在胃酸 pH 下稳定 ， 但吸收不好 ， 生物利用度只有 $30\% - 50\%$ ，
+
+	阿莫西林生物利用度可达$90\%$。
+
+	\bigskip
+
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.8\linewidth]{氨苄西林}
+			\caption{氨苄西林}
+		\end{figure}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.8\linewidth]{阿莫西林}
+			\caption{阿莫西林}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+\begin{frame}
+	\frametitle{3. 在药剂学中的应用}
+	指导制剂学研究 ？
+
+	合适的制剂 ？ 
+
+	评价标准 ： 
+	\begin{itemize}
+	\item 生物利用度
+	\item 生物等效性
+	\item 缓、控释制剂研究
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{3. 在药剂学中的应用}
+	\begin{center}
+		\vspace{-6em}
+		\begin{tikzpicture}[scale=1.25]
+			\fill[cyan!50] (0,1.6) rectangle (8,3.2);
+			\draw[<->,thick] (0,5) -- node[pos=0,left]{\large $c$} (0,0) -- (8.5,0) node[below]{\large $t$} ;
+			\draw[red] (0,2) .. controls (0,7) and (1.5,0.2) .. (8,0.2);
+			\draw[blue] (0,0.5) .. controls (1,6) and (2.5,0.5) .. (8,0.5);
+			\draw[SpringGreen4] (0,0) parabola bend (4,1.5) (8,0.8);
+			\draw[dashed] (0,1.6) -- (8,1.6) node[right]{最小有效浓度};
+			\draw[dashed] (0,3.2) -- (8,3.2) node[right]{最小中毒浓度};
+			\draw[<->] (5.5,1.8) -- (5.5,3) node[midway,right]{治疗窗};
+			\node[red] at (0.3,4) {A};
+			\node[blue] at (0.5,2.7) {B};
+			\node[SpringGreen4] at (0.8,1) {C};
+			\node at (5,4.5) {药物的三种制剂的血药浓度-时间曲线};
+		\end{tikzpicture}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\frametitle{4. 在临床及药物治疗学中应用}
+	\begin{itemize}
+	  \item 药物疗效 、毒性-血药浓度 ： 控制血药浓度，控制药物的疗效或降低毒性。基于数学模型 ， 预测药物血药浓度变化规律 ， 制定临床给药方案。
+	  \item 对某些药理现象做出准确的解析。
+	  
+	  一些药物在某些病人中无效或出现毒性
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{5. 在基础药理学应用}
+	\begin{itemize}
+	  \item 药物代谢动力学是基础药理学的重要组成部分
+	  \item 理论和概念的改变 PK-PD model
+	\end{itemize}
+	\begin{minipage}{0.38\linewidth}
+		\begin{example}
+			两种药物，给药后，某个时间段，同一时刻，观察疗效，判断哪个药物更好。
+			
+			这种评判方式合理吗？
+		\end{example}
+	\end{minipage}\hfill
+	\begin{minipage}{0.58\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{评判}
+		\end{figure}
+	\end{minipage}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{6. 在安全性评价中的作用}
+	\begin{enumerate}
+	  \item 毒理学研究与药物代谢动力学结合---毒代动力学 (toxicokinetics，TK)
+		\begin{itemize}
+		  \item 毒物
+		  \item 高剂量
+		  \item 长期暴露，器官损伤情况下
+		\end{itemize}
+	  \item 药物致毒机制研究
+	\end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{7. 与其它领域的关系}
+	药物对于机体来说 ， 是一种外来化学异物 ， 其体内过程研究同样适合于外来化学异物
+（如毒物 、 食品添加剂 、 化妆品等） 研究 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{药物代谢动力学}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.9\linewidth]{药代}
+	\end{figure}
+\end{frame}
+
+
+
+\end{document}

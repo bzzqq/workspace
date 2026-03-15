@@ -1,0 +1,471 @@
+\section{反应速率方程}
+
+\begin{frame}
+    \frametitle{反应动力学方程}
+    溶剂、催化剂和压力等因素一定的情况下，描述反应速率与温度和浓度的定量关系，即速率方程或动力学方程。
+    \[
+        r = f(\bar{c},T)
+    \]
+    式中$\bar{c}$为浓度向量，表示影响反应速率的反应组分浓度不限于1个。对于由多个组分组成的反应，其反应速率与各个组分的浓度都有关系。当然，各个反应组分的浓度并不都是相互独立的。
+    \begin{itemize}
+      \item 对于多组分的简单反应， 如果反应物料的原始组成给定 ，则由于化学计量关系的约束，在反应过程中只要某一组分的浓度确定，其他组分的浓度也相应确定。这时，反应物系的组分浓度可以仅由一个组分浓度来表示。 
+      \item 对于多组分的复合反应系统，情况将略趋复杂，但只要物料的原始组成和目的产物的收率已知，上述原则同样适用 。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应动力学方程}
+    因此， 无论是简单反应还是复杂反应，在满足上述假设的情况下，反应速率可以表示为某一组分的浓度函数，即可写成
+    \[
+        r = f(c,T)
+    \]
+    大量实验测定的结果表明 ，在多数情况下浓度和温度可以进行变量分离\footnote{实际上也有发现在不同的温度范围内，反应的浓度效应呈现不同的规律性，表明不同温度范围的反应机理可能不同。此时，原则上就不能作变量分离。}，上式可表示为
+    \[
+        r = f_1(T)f_2(c)
+    \]
+    表示反应速率$r$分别受到温度和浓度的影响。$f_1(T)$称为反应速率的温度效应 ，$f_2(c)$称为反应速率的浓度效应 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应速率的温度效应}
+    式$r = f(T)f(c)$中温度效应项常用反应速率常数$k$表示 ， 即
+    \[
+        r = kf(c)
+    \]
+    对大多数化学反应 ，速率常数与反应温度关系可由阿伦尼乌斯 (Arrhenius) 公式表示
+    \[
+        k = A\mathrm{e}^{-\frac{E}{RT}}
+    \]
+    式中，$A$为指前因子；$E$为活化能；$R$为气体常数。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应速率的浓度效应}
+    \begin{minipage}{0.48\linewidth}
+        反应速率的浓度效应通常采用三种形式 ：
+        \begin{enumerate}
+            \item 幂函数型
+              \[
+                  r=kc_\mathrm{A}^{\alpha}c_\mathrm{B}^{\beta}\cdots
+              \]
+            \item 双曲线型
+              \[
+                  r=\frac{kc_\mathrm{A}^{\alpha}c_\mathrm{B}^{\beta}\cdots}{[1+k_\mathrm{A}c_\mathrm{A}+k_\mathrm{B}c_\mathrm{B}+\cdots]^n}
+              \]
+            \item 级数型
+              \[
+                  r=a_0+a_1c_\mathrm{A}+a_2c_\mathrm{A}^2+\cdots
+              \]
+          \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \bigskip
+
+        \bigskip
+        常用于均相反应以及实际工业生产中的非理想吸附气固相催化反应 ；
+        
+        \bigskip
+
+        \bigskip
+        大多用于理想吸附的气固相催化反应；
+        
+        \bigskip
+
+        \bigskip
+        在对反应特征了解甚少时采用的数值回归模型。
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{幂函数型动力学方程}
+    幂函数型的动力学方程表示为
+    \[
+        r=kc_\mathrm{A}^{\alpha}c_\mathrm{B}^{\beta}\cdots
+    \]
+    $\alpha$、$\beta$分别为反应速率对反应物A和B的\highlight{反应级数} ， ($\alpha+\beta$)为反应的\highlight{总级数} 。
+
+    \begin{enumerate}
+      \item 反应级数必须通过实验来确定
+      \item 反应级数通常是 0 、 1 和 2 整数级 ， 但也可能是非整数级
+      \item 反应级数和反应分子数不同
+      \item 只有按化学计量式进行的基元反应 ， 反应级数和反应分子数相等，而且级数也一定是整数 。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{基元反应的速率方程}
+    对化学反应机理研究结果表明 ， 化学反应一般是由若干步基元物理化学变化过程组成的，
+只包含一步基元物理化学变化过程的化学反应称为\highlight{基元反应}。基元反应的反应速率方程与参加该反应的分子数目相关 ， 根据质量作用定律， 基元反应的反应速率与参加反应的各反应物的浓度的幂的乘积成正比。
+    \[
+        \ch{a A + b B -> c C + d D}
+    \]
+    \[
+        r=kc_\mathrm{A}^{\mathrm{a}}c_\mathrm{B}^{\mathrm{b}}
+    \]
+    \ch{N2O4}分解为\ch{NO2}的反应为一个单分子基元反应:
+    \[
+        \ch{N2O4 -> 2 NO2}
+    \]
+    反应速率方程式可以写为
+    \[
+        r = kc_{\mathrm{_{N_2O_4}}}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{非基元反应的速率方程}
+    非基元反应可看作若干基元反应的综合结果，即反应机理。非基元反应由反应机理推导速率方程：
+
+    \smallskip
+    \begin{minipage}{0.48\linewidth}
+    假定第2步为速率控制步骤
+    \[
+        r_\mathrm{A}=r_\mathrm{A}^*=k_2c_\mathrm{A}^*
+    \]
+    第1步达到化学平衡
+    \[
+        c_\mathrm{A}^*c_\mathrm{p}/c_\mathrm{A}=\mathrm{K}_1
+    \]
+    则：
+    \[
+        r_\mathrm{A}=k_2\mathrm{K}_1c_\mathrm{A}/c_\mathrm{p}=\mathrm{k}c_\mathrm{A}/c_\mathrm{p}
+    \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{framed}
+        反应\ch{A->P+D}的反应机理如下：
+
+        \begin{enumerate}
+          \item[\large{\ding{172}}] \ch{A <=>[k+][k-] A^* + P}
+          \item[\large{\ding{173}}] \ch{A^* ->[k2] D}
+        \end{enumerate}
+        \end{framed}
+    \end{minipage}
+
+    \smallskip
+    $k_2$和$K_1$均为温度的函数，合并为一新的常数$k$，即该反应的反应速率常数。
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        \[
+            \ch{2 NO + O2 -> 2 NO2}
+        \]
+        (1) 如果是基元反应，速率方程为？
+
+        (2) 有人认为该反应由以下两步组成，且第二步为速率控制步骤。速率方程为？
+        \begin{enumerate}
+          \item \ch{NO + NO <=> (NO)2}
+          \item \ch{(NO)2 + O2 -> 2 NO2}
+        \end{enumerate}
+        (3) 如果该反应由以下两步组成，且第二步为速率控制步骤时，速率方程为？
+        \begin{enumerate}
+            \item \ch{NO + O2 <=> NO3}
+            \item \ch{NO3 + NO -> 2 NO2}
+          \end{enumerate}
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{可逆反应的反应速率方程}
+    可逆反应的反应速率等于正逆反应速率之差。
+    \[
+        r=\overrightarrow{k}\prod_{i=1}^Nc_i^{\alpha_i}-\overleftarrow{k}\prod_{i=1}^Nc_i^{\beta_i}
+    \]
+    $\overrightarrow{k}$及$\overleftarrow{k}$为正逆反应的反应速率常数。
+
+    $\alpha_i$及$\beta_i$为正逆反应对反应组分i的反应级数。
+
+    严格地说所有化学反应都是可逆反应。一般所谓不可逆反应只是表明逆反应的反应速率甚小可忽略不计而已。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{$\alpha_i$、$\beta_i$、$\overrightarrow{k}$、$\overleftarrow{k}$、$K_\mathrm{c}$的关系}
+    \begin{minipage}{0.48\linewidth}
+        \[
+            \nu_\mathrm{A}\mathrm{A}+\nu_\mathrm{B}\mathrm{B}\rightleftharpoons \nu_\mathrm{R}\mathrm{R}
+        \]
+        \[
+            r =\vec{k}c_\mathrm{A}^{\alpha_\mathrm{A}}c_\mathrm{B}^{\alpha_\mathrm{B}}c_\mathrm{R}^{\alpha_\mathrm{R}}-\overleftarrow{k}c_\mathrm{A}^{\beta_\mathrm{A}}c_\mathrm{B}^{\beta_\mathrm{B}}c_\mathrm{R}^{\beta_\mathrm{R}}
+        \]
+        \[
+            \vec{k}c_\mathrm{A}^{\alpha_\mathrm{A}}c_\mathrm{B}^{\alpha_\mathrm{B}}c_\mathrm{R}^{\alpha_\mathrm{R}}=\overleftarrow{k}c_\mathrm{A}^{\beta_\mathrm{A}}c_\mathrm{B}^{\beta_\mathrm{B}}c_\mathrm{R}^{\beta_\mathrm{R}}
+        \]
+        \[
+            \frac{c_\mathrm{R}^{\beta_\mathrm{R}-\alpha_\mathrm{R}}}{c_\mathrm{A}^{\alpha_\mathrm{A}-\beta_\mathrm{A}}c_\mathrm{B}^{\alpha_\mathrm{B}-\beta_\mathrm{B}}}=\frac{\vec{k}}{\overleftarrow{k}}
+        \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \[
+            C_{\mathrm{A}}^{\nu_{A}}C_{\mathrm{B}}^{\nu_{B}}C_{\mathrm{R}}^{\nu_{R}}=K_{\mathrm{C}}
+        \]
+        \[
+            C_{\mathrm{A}}^{\nu_{\mathrm{A}}/\nu}C_{\mathrm{B}}^{\nu_{\mathrm{B}}/\nu}C_{\mathrm{R}}^{\nu_{\mathrm{R}}/\nu}=K_{\mathrm{C}}^{1/\nu}
+        \]
+        \[
+            \beta_{\mathrm{A}}-\alpha_{\mathrm{A}}=\nu_{\mathrm{A}}/\nu
+        \]
+        \[
+            \beta_{\mathrm{B}}-\alpha_{\mathrm{B}}= \nu_{\mathrm{B}}/\nu
+        \]
+        \[
+            \beta_{\mathrm{R}}-\alpha_{\mathrm{R}} =\nu_{\mathrm{R}}/\nu 
+        \]
+        \[
+            \frac{\beta_\mathrm{A}-\alpha_\mathrm{A}}{\nu_\mathrm{A}}=\frac{\beta_\mathrm{B}-\alpha_\mathrm{B}}{\nu_\mathrm{B}}=\frac{\beta_\mathrm{R}-\alpha_\mathrm{R}}{\nu_\mathrm{R}}=\frac{1}{\nu}
+        \]
+        \[
+            \vec{k}/\overleftarrow{k}=K_{\mathrm{C}}^{1/\nu}
+        \]
+    \end{minipage}
+
+    正逆反应级数之差与相应得到化学计量系数之比为一定值。这一结果可以用来检验速率方程推导的正确性。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{$\nu$的物理意义}
+    $\nu$为速率控制步骤出现的次数。
+反应 \ch{2 A + B <=> R} 的机理由以下3步组成：
+\begin{enumerate}
+  \item \ch{A <=> A^*}
+  \item \ch{A^* + B <=> X}
+  \item \ch{A^* + X <=> R}
+\end{enumerate}
+若要生成1mol R，则第1步需要出现两次，其余两步各出现1次。
+
+若第一步为速率控制步骤，则$\nu = 2$ 。
+\end{frame}
+
+
+\section{反应动力学测定方法}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        \textbf{【例2.1】}在$350^{\circ}\mathrm{C}$等温恒容下纯的丁二烯进行二聚反应\ch{2 A -> A2}，测得反应系统总压$p$与反应时间$t$的关系如下：
+
+\begin{table}[h]
+    \caption{反应时间与总压关系表}
+    \centering
+    \begin{tabular}{c c c c c c c}
+        $t/\mathrm{min}$ & 0 & 6 & 12 & 26 & 38 & 60 \\
+        $p/\mathrm{kPa}$ & 66.7 & 62.3 & 58.9 & 53.5 & 50.4 & 46.7 \\
+    \end{tabular}
+\end{table}
+
+试求时间为$26\,\mathrm{min}$时的反应速率。
+
+\tcblower
+
+XXX同学说这个反应是二级反应，可以根据二级反应来计算反应速率，可以吗？
+    \end{question}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{以实验为基础确定反应速率方程}
+    目前，绝大多数化学反应的机理还不清楚，因此主要是根据实验为基础确定反应速率方程(幂函数型)。
+    \[
+        r=kc_\mathrm{A}^{\alpha_\mathrm{A}}c_\mathrm{B}^{\alpha_\mathrm{B}}\ldots=k\prod_{i=1}^{N}c_\mathrm{i}^{\alpha_\mathrm{i}}
+    \]
+    
+    \begin{itemize}
+      \item $k$、$\alpha_\mathrm{A}$ 、 $\alpha_\mathrm{B}$等动力学参数需要由实验测定。
+      \item 反应产物的浓度可能影响反应速率，因次式中应包含所有反应组分浓度的影响。
+      \item 可用孤立法\footnote{控制某种物质过量，其浓度在反应过程中可认为没有变化，则反应速率只随其他物质的浓度改变。}分别测定反应对各物质的级数。
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应速率方程积分式}
+    \begin{table}
+        \centering
+        \caption{恒容简单反应的反应速率方程及其积分式}
+        \begin{tabular}{cccc>{\columncolor[HTML]{99CCFF}}c<{}cc}
+            \bottomrule
+            级数 & 反应式 & 速率方程 & 积分式 & 函数关系 & 斜率 & 截距\\ \hline
+             0 & \ch{A -> P} & $r=k$ & $c_\mathrm{A0}-c_\mathrm{A}=kt$ & $c_\mathrm{A} \propto  t$ & $-k$ & $c_\mathrm{A0}$\\ \hline
+             1 & \ch{A -> P} & $r=kc_\mathrm{A}$ & $\ln \frac{c_\mathrm{A}}{c_\mathrm{A0}} = -kt$ & $\ln c_\mathrm{A} \propto  t$ & $-k$ & $\ln c_\mathrm{A0}$\\ \hline
+            2 & \begin{tabular}[c]{@{}c@{}}\ch{2 A -> P}\\ \ch{A + B -> P} \\ $(c_\mathrm{A0}=c_\mathrm{B0})$ \end{tabular} & $r=kc_\mathrm{A}^2$ & $\frac{1}{c_\mathrm{A}} - \frac{1}{c_\mathrm{A0}} = kt$ & $\frac{1}{c_\mathrm{A}} \propto  t$ & $k$ & $\frac{1}{c_\mathrm{A0}}$ \\ \toprule
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{实验测定反应级数\quad 1.尝试法(积分法)}
+    \begin{minipage}{0.38\linewidth}
+              \begin{itemize}
+                \item 零级反应
+                  \[
+                    c_\mathrm{A} \propto  t
+                  \]
+                \item 一级反应
+                \[
+                    \ln c_\mathrm{A} \propto  t
+                \]
+                \item 二级反应
+                \[
+                    \frac{1}{c_\mathrm{A}} \propto  t
+                \]
+              \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        尝试法优点：
+        \begin{itemize}
+          \item 只要一次实验数据即能进行尝试
+          \item 全部使用原始数据，不用进行处理
+        \end{itemize}
+        尝试法缺点：
+        \begin{itemize}
+          \item 只对简单级数反应才适用
+          \item 测定浓度范围如果不够大，很难区别出各级反应的特征
+        \end{itemize}
+    \end{minipage}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{实验测定反应级数\quad 2.微分法}
+        \[
+        \ch{a A + b B -> p P + s S} \qquad r=kc_\mathrm{A}^{\alpha}c_\mathrm{B}^{\beta}
+        \]
+        \[
+            \ln r_{\mathrm{A}}=\alpha\ln c_{\mathrm{A}}+\ln(kc_{\mathrm{B}}^{\beta})
+        \]
+        要测定组分A的级数，可以在给定的反应条件下固定组分B的浓度(如使之大量过量)，改变组分A浓度并测定相应的反应速率$r_\mathrm{A}$，作$\ln r_{\mathrm{A}}$-$\ln c_{\mathrm{A}}$图，直线的斜率便是组分A的反应级数。
+
+        有时候反应产物对反应速率也存在一定影响，为了消除这种干扰，通常采取配制几种不同初始浓度的系列反应物分别进行反应，测量不同的初始反应速率，然后以这些初始反应速率的对数与相应初始浓度的对数作图。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{微分反应器}
+    用直径1 cm或更小些的金属管或硬质玻璃管制作而成，内装合适粒度的催化剂颗粒，催化剂床层高度较低。微分反应器进出口组成相差不大，即反应物的进出口浓度差$\Delta c$只有很小的变化，远小于浓度值，即$\Delta c \ll  c$。
+
+    因此，$\Delta c / \Delta t$可近似为$\mathrm{d}c/\mathrm{d}t$，并等于反应速率$r$：
+    \[
+        r = - \frac{Q_0 \Delta c}{V_\mathrm{R}}
+    \]
+    使用微分法测定动力学数据存在的问题：
+    \begin{itemize}
+      \item 必须配成各种可能的包括反应物和产物的浓度，这在实际操作中是有一定困难的；
+      \item 进出口浓度差$\Delta c$越小越好，但$\Delta c$越小，对分析精度的要求越高。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{block}{习题2.1}
+        在一体积为 4L 的恒容反应器中进行 A 的水解反应，反应前 A 的含量为12.23\% (质量分数)，混合物的密度为 1g/mL，反应物 A 的分子量为 88。在等温常压下不断取样分析，测的组分 A 的浓度随时间变化的数据如下：
+        \begin{table}[]
+            \begin{tabular}{cccccccccc}
+            反应时间(h)    & 1   & 2    & 3    & 4    & 5    & 6    & 7    & 8     & 9    \\
+            $c_\mathrm{A}$ (mol/L) & 0.9 & 0.61 & 0.42 & 0.28 & 0.17 & 0.12 & 0.08 & 0.045 & 0.03
+            \end{tabular}
+        \end{table}
+        求反应时间为3.5 h时A的水解速率。该反应的反应级数是？
+        \tcblower
+    提示： 作$c_\mathrm{A}\sim t$关系曲线，求$t = 3.5$ h时该点的切线，即可得到水解速率。
+
+    一级反应：$\ln \frac{c_A}{c_{A0}} = -kt$
+    
+    二级反应：$\frac{1}{c_{A}} - \frac{1}{c_{A0}} = kt$
+    \end{block}
+    
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{block}{例2.1改}
+        在350°C等温恒容下纯的丁二烯进行二聚反应\ch{2 A -> R}，测得反应系统总压$p$与反应时间$t$的关系如下：
+        \begin{table}[]
+            \begin{tabular}{cccccccccc}
+                $t$(min)    & 0   & 6    & 12    & 26    & 38    & 60 \\
+                $p$(kPa)    & 66.7 & 62.3 & 58.9 & 53.5 & 50.4 & 46.7 
+            \end{tabular}
+        \end{table}
+        该反应的反应级数是？
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{block}{例2.2}
+        等温下进行醋酸（A）和丁醇（B）酯化反应
+        \[
+            \ch{CH3COOH + C4H9OH <=> CH3COOC4H9 + H2O}
+        \]
+        醋酸和丁醇的初始浓度分别为0.2332和1.16 kmol/m$^3$ ，测得不同时间下醋酸转化量，试求该反应的速率方程。
+        \begin{table}[]
+            \begin{tabular}{cc|cc}
+            时间(h)    & 醋酸转化量 (kmol/m$^3$) & 时间(h)    & 醋酸转化量 (kmol/m$^3$)  \\
+            0 & 0        &  5 &  0.05405 \\
+            1 & 0.01636  &  6 & 0.06086  \\
+            2 & 0.02732  &  7 & 0.06833  \\
+            3 & 0.03662  &  8 & 0.07398  \\
+            4 & 0.04525  &   &   
+            \end{tabular}
+        \end{table}
+        \vspace{-1em}
+    \end{block}
+\end{frame}
+
+
+
+\section{浓度/转化率与时间的关系}
+
+
+\begin{frame}{反应时间的计算}      
+    \begin{table}        
+        \caption{简单级数反应特征}
+        \begin{tabular}{c l l l l}
+            \Xhline{1pt}
+            级数 & \makecell[c]{速率方程} & \makecell[c]{速率方程积分式}  & \makecell[c]{$t$和$c_\mathrm{A}$关系} & \makecell[c]{$t$和$X_\mathrm{A}$关系}\\
+            \hline
+            \rule{0pt}{16pt} 1 & $r=kc_\mathrm{A}$ & $\ln c_\mathrm{A}=-kt+\ln c_\mathrm{A0}$ & $t=\frac{1}{k}\ln\frac{c_\mathrm{A0}}{c_\mathrm{A}}$ & $t=\frac{1}{k}\ln \frac{1}{1-X_\mathrm{A}}$\\
+            \rule{0pt}{16pt} 2 & $r=kc_\mathrm{A}^2$ & $\frac{1}{c_\mathrm{A}}=kt + \frac{1}{c_\mathrm{A0}}$ & $t=\frac{1}{k}(\frac{1}{c_\mathrm{A}}-\frac{1}{c_\mathrm{A0}})$ & $t=\frac{1}{kc_\mathrm{A0}} \frac{X_\mathrm{A}}{1-X_\mathrm{A}}$\\
+            \rule{0pt}{16pt} 0 & $r=k$ & $c_\mathrm{A}=-kt+c_\mathrm{A0}$ & $t=\frac{1}{k}(c_\mathrm{A0}-c_\mathrm{A})$ & $t=\frac{1}{k}c_\mathrm{A0}X_\mathrm{A}$\\
+            \Xhline{1pt}
+        \end{tabular}
+\end{table}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        设某等温恒容一级反应的动力学方程式为$r=kc_{\mathrm{A}}$，$k=0.15$ min$^{-1}$，求反应转化率为60\%时所需的反应时间。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{block}{习题2.4}
+        在等温下进行液相反应\ch{A + B -> C + D}，在该条件下的反应速率方程为:
+        \[
+            r_{\mathrm{A}}= 0.8c_{\mathrm{A}}^{1.5}c_{\mathrm{B}}^{0.5} \qquad \si{mol.L^{-1}.min^{-1}}
+        \]
+    若将A和B的初始浓度均为3 mol/L的原料混合后进行反应，求反应4 min时A的转化率。
+    \end{block}
+\end{frame}

@@ -1,0 +1,65 @@
+\subsection{VLOOKUP 函数}
+
+需要在表格或区域中按行查找内容时，请使用 VLOOKUP。
+
+语法：
+
+=VLOOKUP(要查找的内容、要查找的位置、包含要返回的值的范围内的列号、返回表示为 1/TRUE 或 0/FALSE 的近似或精确匹配项)。
+
+\begin{itemize}
+    \item 查阅值应该始终位于所在区域的第一列，这样 VLOOKUP 才能正常工作。 
+    
+    例如，如果查阅值位于单元格 C2 内，那么您的区域应该以 C 开头。
+    \item 返回值的列号：如果指定 B2:D11 作为区域，那么应该将 B 算作第一列，C 作为第二列，以此类推。
+    \item 使用VLOOKUP将多个表中的数据合并到一个工作表上
+    
+    只要其中一个表具有与所有其他表共有的字段，就可以使用 VLOOKUP 将多个表合并为一个表。
+\end{itemize}
+
+\subsection{HLOOKUP 函数}
+
+查找数组的首行，并返回指定单元格的值。
+
+语法
+
+HLOOKUP(lookup\_value, table\_array, row\_index\_num, [range\_lookup])
+
+\begin{itemize}
+    \item Lookup\_value    必需。 要在表格的第一行中查找的值。 Lookup\_value 可以是数值、引用或文本字符串。
+    \item Table\_array    必需。 在其中查找数据的信息表。 使用对区域或区域名称的引用。
+    \item Row\_index\_num    必需。 行号table\_array匹配值将返回的行号。
+    \item Range\_lookup    可选。 一个逻辑值，指定希望 HLOOKUP 查找精确匹配值还是近似匹配值。 如果为 TRUE 或省略，则返回近似匹配值。
+\end{itemize}
+
+\subsection{XLOOKUP 函数}
+
+XLookup函数是微软在2019年8月份发布的一个最新的查找函数。
+
+XLOOKUP 函数搜索区域或数组，然后返回与它找到的第一个匹配项对应的项。 如果不存在匹配项，则 XLOOKUP 可以返回最接近 () 匹配项。
+
+语法
+
+=XLOOKUP(lookup\_value, lookup\_array, return\_array, [if\_not\_found], [match\_mode], [search\_mode]) 
+
+\begin{itemize}
+    \item lookup\_value （必需）要搜索的
+    \item lookup\_array （必需）要搜索的数组或区域
+    \item return\_array （必需）要返回的数组或区域
+    \item $[\mathrm{if\_not\_found}]$（可选）如果找不到有效的匹配项，请返回你提供的 [if\_not\_found] 文本。
+    
+    如果找不到有效的匹配项，并且 [if\_not\_found] 缺失， 则返回\#N/A 。
+    \item $[\mathrm{match\_mode}]$（可选）指定匹配类型：
+        \begin{itemize}
+            \item 0 - 完全匹配。 如果未找到，则返回 \#N/A。 这是默认选项。
+            \item -1 - 完全匹配。 如果没有找到，则返回下一个较小的项。
+            \item 1 - 完全匹配。 如果没有找到，则返回下一个较大的项。
+            \item 2 - 通配符匹配。
+        \end{itemize} 
+    \item $[\mathrm{search\_mode}]$（可选）指定要使用的搜索模式：
+        \begin{itemize}
+            \item 1 - 从第一项开始执行搜索。 这是默认选项。
+            \item -1 - 从最后一项开始执行反向搜索。
+            \item 2 - 执行依赖于 lookup\_array 按升序排序的二进制搜索。 如果未排序，将返回无效结果。
+            \item 2 - 执行依赖于 lookup\_array 按降序排序的二进制搜索。 如果未排序，将返回无效结果。
+        \end{itemize} 
+\end{itemize}

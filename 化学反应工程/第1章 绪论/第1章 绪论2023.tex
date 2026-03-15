@@ -1,0 +1,546 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme}
+
+\title{第一章}
+\subtitle{绪论}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+%-----------------------------------------------------------------
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{center}
+        \cbf{\Large{张斌\quad 15920464144}}
+    \end{center}
+    \vspace{-1em}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat{\includegraphics[height=7cm]{微信}}\quad
+        \subfloat{\includegraphics[height=7cm]{反应工程}}\quad
+        \subfloat{\includegraphics[height=7cm]{qq}}
+    \end{figure}
+\end{frame}
+
+
+\section{化学反应工程}
+
+
+\begin{frame}
+    \frametitle{学科定义}
+    化学反应工程是化学工程学科的一个分支，通常简称为反应工程。
+
+    反应工程是以工业反应过程为主要研究对象，以反应技术的开发、反应过程的优化和反应器设计为主要目的一门工程学科。它是在化工热力学、反应动力学、传递过程理论以及化工单元操作的基础上发展起来的。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应工程的历史及发展}
+    \definecolor{baseD}{HTML}{7CAFC2}
+    \newcommand{\foo}{\color{baseD}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{baseD}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.8\linewidth}}
+        18世纪末 & 化学工业初级阶段，硫酸 ， 硝酸 ， 纯碱的工业规模化生产\\
+        20世纪初 & 化学工业真正大规模生产，合成氨的工业生产\\
+        1930s,萌芽 & 丹克莱尔 ： 扩散 ， 流体流动 ， 传热对反应器产率的影响；
+        梯尔 ， 史尔多维奇 ： 扩散反应问题\\
+        1940s,形成 & 霍根 ， 华生 ： 《 化学过程原理 》；
+        法兰克  卡明涅斯基 ： 《 化学动力学中的扩散与传热 》 \\
+        1957,提出 & 第一次欧洲化学反应工程会议上正式提出 “化学反应工程学” 的概念 \\
+        1960s,加速 & 石油化工的大发展；计算机的发展与应用\\
+        1980s,分支 & 生化反应工程；聚合反应工程；电化学反应工程
+        \end{tabular}
+        \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应工程的研究内容}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{化工过程}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应工程的研究内容}
+    \begin{enumerate}
+      \item 反应动力学
+            \begin{itemize}
+                \item 反应的机理和速率
+                \item 温度/浓度/压力对反应速率的影响
+            \end{itemize}
+      \item 反应器设计与分析
+            \begin{itemize}
+                \item 选择合适的反应器型式
+                \item 选择合适的反应器操作方式
+                \item 确定最佳的操作条件
+                \item 计算完成规定的生产任务所需的反应体积
+                \item 反应器优化
+            \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应工程的研究方法}
+    对工业反应过程的研究，主要采用数学模型方法。首先将工业反应器内进行的过程分解为化学反应过程和传递过程，然后分别研究化学反应规律和传递过程规律。经过合理简化，建立数学模型，通过方程的联立求解。
+    \begin{enumerate}
+      \item 动力学方程式
+      \item 物料衡算式
+      \item 能量衡算式
+      \item 动量衡算式
+      \item 参数计算式
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{工业反应器的放大}
+    \begin{enumerate}
+      \item 相似放大法
+        \begin{itemize}
+          \item 应用相似原理进行放大
+          \item 有一定局限性，只适用于物理过程放大，不适用于化学过程的放大。
+        \end{itemize}
+      \item 逐级经验放大法
+        \begin{itemize}
+          \item 小型反应器进行工艺试验→规模稍大模型试验→中间试验→工业规模
+          \item 不能深入研究过程的内在规律；
+          \item 试验步骤由人为规定，并非科学合理的研究程序；
+          \item 放大是根据试验结果外推，并不一定可靠。
+        \end{itemize}
+      \item 数学模型法
+        \begin{itemize}
+          \item 实验室研究化学反应特征→冷模试验研究传递过程特征→建立数学模型，预测工业反应器性能→中试检验模型的等效性→计算机试验进行检验和修正→工业反应器
+          \item 可实现高倍数放大；缩短开发周期；减少人力物力消耗。
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+% 冷模试验：冷态模型试验的简称,在没有化学反应的条件下,考察设备内物料的流动与混合，以探明反应器传热和传质等物理过程的规律。
+
+
+
+\section{反应器类型和操作方式}
+
+
+\begin{frame}
+    \frametitle{反应器类型}
+    \begin{minipage}{0.58\linewidth}
+      \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{工业反应器}
+    \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.4\linewidth}
+      \begin{blankblock}{}
+        管式反应器：
+          \begin{itemize}
+            \item 轻油裂解生产乙烯
+            \item 乙烯液相氧化制乙醛
+            \item 氮气氢气催化合成氨
+          \end{itemize}
+        
+      \end{blankblock}
+      \begin{blankblock}{}
+        釜式反应器：
+        \begin{itemize}
+          \item 许多氯化反应、酯化反应
+          \item 悬浮法生产聚氯乙烯
+          \item 酸解钛精矿制硫酸钛盐
+        \end{itemize}
+      \end{blankblock}
+    \end{minipage}
+    
+\end{frame}
+
+% \ch{FeTiO3 + 2 H2SO4 == TiOSO4 + FeSO4 + 2H2O}
+% 钛精矿和硫酸一次加入反应罐，在空气搅拌下加水引发，约半个小时后，反应产物加水或稀酸溶解后放料，完成一个周期6-8h。
+
+
+\begin{frame}
+    \frametitle{釜式反应器的结构}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.9\linewidth]{釜式反应器的结构}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{釜式反应器的操作方式}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat[间歇操作]{\includegraphics[height=4cm]{间歇操作}}\hfill
+        \subfloat[连续操作]{\includegraphics[height=4cm]{连续操作}}\hfill
+        \subfloat[半连续操作]{\includegraphics[height=4cm]{半连续操作}}
+    \end{figure}
+    \begin{enumerate}
+      \item 大规模生产过程多采用连续操作，容易实现机械化，自动化
+      \item 对于反应时间长或产品批量小的过程，分批间歇操作更合适
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{管式反应器}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.7\linewidth]{管式反应器}
+    \end{figure}
+\end{frame}
+
+
+\section{反应动力学基础}
+
+
+\begin{frame}
+    \frametitle{化学反应的分类}
+    \begin{enumerate}
+      \item 根据反应是否可以用一个化学反应方程式描述
+        \begin{itemize}
+          \item 单一反应、复合反应
+        \end{itemize}
+      \item 根据反应物系相态分
+        \begin{itemize}
+          \item 均相反应、多相反应
+        \end{itemize}
+      \item 按是否使用催化剂分
+        \begin{itemize}
+          \item 催化反应、非催化反应
+        \end{itemize}
+      \item 按反应热分
+        \begin{itemize}
+          \item 吸热反应、放热反应
+        \end{itemize}
+      \item 按反应可逆性分
+        \begin{itemize}
+          \item 可逆反应、不可逆反应
+        \end{itemize}
+      \item ……
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{三传一反}
+    \begin{minipage}{0.68\linewidth}
+        在Pt-Rh合金网催化剂上进行氨氧化反应：
+        
+        \ch{4 NH3 + 5 O2 -> 4 NO + 6 H2O}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.7\linewidth]{氨氧化}
+    \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{itemize}
+          \item 质量传递
+          \item 热量传递
+          \item 动量传递
+          \item 化学反应
+        \end{itemize}
+    \end{minipage}
+    \begin{blankblock}{}
+        1906年，德国科学家Ostward以Pt/Rh合金网作为催化剂，开发了氨气的接触氧化工艺，用于生产硝酸。在氧化炉中于800℃进行氨氧化反应，生成的NO在冷却时与O$_2$生NO$_2$，NO$_2$在吸收塔内用水吸收在过量空气中O$_2$的作用下转化为硝酸。
+
+        1935年，在化学家侯德榜的领导下，我国建成了第一座兼产合成氨、硝酸、硫酸和硫酸铵的联合企业-永利宁厂。
+    \end{blankblock}
+    
+\end{frame}
+
+% 我国重化学工业的开拓者——侯德榜
+% “联合制碱法”，又称“侯式制碱法”，同时获得两种工农业需要的产品——纯碱(碳酸钠)和氯化铵。
+% 众所周知，三酸二碱是化学工业的基本原料，仅能生产纯碱显然是不行的。侯德榜开始设计一个可以同时生产氨、硫酸、硝酸和硫酸铵的硫酸铵厂。
+
+
+\begin{frame}
+    \frametitle{化学反应进行的程度}
+    \begin{question}
+      合成氨反应：
+      \begin{center}
+          \ch{N2 + 3 H2 -> 2 NH3}
+  
+      反应开始(mol)： \qquad 3  \quad   10 \qquad  \qquad 0 \qquad  \qquad \qquad  \qquad  \qquad  \qquad
+  
+      反应结束(mol)： \qquad  1  \quad ~  4  \qquad  \qquad 4 \qquad \qquad \qquad  \qquad  \qquad  \qquad  \qquad
+      \end{center}
+      
+      这个反应进行了多少？
+    \end{question}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应进度($\xi$)}
+    \[
+        {\nu_\mathrm{A}}{A}+{\nu_\mathrm{B}}{B}\to{\nu_\mathrm{R}}{R}
+    \]
+    \[
+        (n_{\mathrm{A}}-n_{\mathrm{A0}}):(n_{\mathrm{B}}-n_{\mathrm{B0}}):(n_{\mathrm{R}}-n_{\mathrm{R0}})=\nu_{\mathrm{A}}:\nu_{\mathrm{B}}:\nu_{\mathrm{R}}
+    \]
+    \[
+        \frac{n_{\mathrm{A}}-n_\mathrm{A0}}{\nu_{\mathrm{A}}}=\frac{n_{\mathrm{B}}-n_\mathrm{B0}}{\nu_{\mathrm{B}}}=\frac{n_{\mathrm{R}}-n_\mathrm{R0}}{\nu_{\mathrm{R}}}=\xi 
+    \]
+    任何反应组分的反应量与其化学计量系数的之比恒为定值。这里的$\xi$ 叫做反应进度，量纲为mol。可见，只用一个变量便可描述一个化学反应进行的程度。
+
+    推广到任何反应，表示为：
+    \[
+        \xi=\frac{n_\mathrm{i}-n_\mathrm{i0}}{\nu_\mathrm{i}}
+    \]
+    \begin{itemize}
+      \item $\xi$永远取正值
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{反应进度$\xi$的值与方程式的写法有关}
+    \begin{block}{反应进度$\xi$为多少？}
+        \begin{center}
+            \ch{N2 + 3 H2 -> 2 NH3}
+    
+        反应开始(mol)： \qquad 3  \quad   10 \qquad  \qquad 0 \qquad  \qquad \qquad  \qquad  \qquad  \qquad
+    
+        反应结束(mol)： \qquad  1  \quad ~  4  \qquad  \qquad 4 \qquad \qquad \qquad  \qquad  \qquad  \qquad  \qquad
+        \end{center}
+    \end{block}
+    \begin{block}{反应进度$\xi$为多少？}
+        \begin{center}
+            \ch{1/2 N2 + 3/2 H2 -> NH3}
+    
+        反应开始(mol)： \qquad 3  \qquad   10 \quad  \qquad 0 \qquad  \qquad \qquad  \qquad  \qquad  \qquad
+    
+        反应结束(mol)： \qquad  1  \qquad ~  4  \quad  \qquad 4 \qquad \qquad \qquad  \qquad  \qquad  \qquad  \qquad
+        \end{center}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转化率($X$)}
+    普遍使用转化率来表示一个化学反应进行的程度。
+
+    转化率是指某一反应物转化的百分率或分率，用$X$表示。
+    \[
+      X = \frac{\text{某一反应物的转化量}}{\text{该反应物的起始量}}
+    \]
+    \smallskip
+    \[
+        X = \frac{n_\mathrm{i0}-n_\mathrm{i}}{n_\mathrm{i0}}
+    \]
+    \begin{enumerate}
+      \item 转化率是针对反应物而言的
+      \item 根据不同反应物计算得到的转化率数值可能是不一样的
+      \item 工业反应过程的原料中，各反应组分之间往往不符合化学计量数的关系，此时通常选择不过量的反应物计算转化率，这样的组分称为关键组分。
+    \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        合成聚氯乙烯单体的合成反应如下：\ch{C2H2 + HCl -> CH2=CHCl}
+
+    由于乙炔价格高于氯化氢，通常使用的原料混合气中氯化氢是过量的，设其过量10\%。若反应器出口气体中氯乙烯含量摩尔分数为90\%，分别计算乙炔和氯化氢的转化率。
+    \end{example}
+    \pause
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.65\linewidth]{答案}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转化率起始状态的选择}
+    \begin{itemize}
+      \item 连续反应器：以反应器进口原料的状态作为起始状态；
+      \item 间歇反应器：以反应开始时的状态为起始状态；
+      \item 当数个反应器串联时，往往以进入第一个反应器的原料组成作为起始状态。
+    \end{itemize}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.8\linewidth]{串联}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转化率起始状态的选择}
+    对于有循环物料的反应系统：
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.7\linewidth]{循环}
+    \end{figure}
+    
+    \highlight{单程转化率}：新鲜原料通过反应器一次所达到的转化率，以反应器进口物料为基准的转化率；
+    
+    \highlight{全程转化率}：新鲜原料进入反应系统到离开系统止所达到的转化率，以新鲜原料为基准计算的转化率，其值必定大于单程转化率。
+    
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+      用乙烷作原料裂解生产乙烯， 通入裂解炉的新鲜原料乙烷为5000 kg/h ， 裂解气分离后， 没有反应的乙烷2000kg/h又循环返回了裂解炉进行反应， 最终分析裂解气中含乙烷1500kg/h， 求乙烷的单程转化率和全程转化率。
+    \end{example}
+    \pause
+    单程转化率：
+    \[
+      \frac{5000-1500}{5000+2000} \times 100\% = 50\%
+    \]
+    全程转化率：
+    \[
+        \frac{5000-1500}{5000} \times 100\% = 70\%
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{收率($Y$)}
+    \[
+        {\nu_\mathrm{A}}{A}+{\nu_\mathrm{B}}{B}\to{\nu_\mathrm{R}}{R}+{\nu_\mathrm{P}}{P}
+    \]
+    转化率系针对反应物而言，收率则是针对反应产物而言，其定义为
+    \[
+        Y=\frac{\text{生成反应产物所消耗的关键组分量}}{\text{关键组分的起始量}}
+    \]
+    \[
+        Y_\mathrm{R}=\left|\frac{\nu_\mathrm{A}}{\nu_\mathrm{R}}\right|\frac{\text{反应产物的生成量}}{\text{关键组分的起始量}}
+    \]
+    \begin{itemize}
+      \item 对于单一反应，收率与按关键组分计算的转化率数值上相等，且无论按哪一个反应产物计算的收率数值上都相等。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+      合成聚氯乙烯单体的合成反应如下：\ch{C2H2 + HCl -> CH2=CHCl}
+
+      由于乙炔价格高于氯化氢，通常使用的原料混合气中氯化氢是过量的，设其过量10\%。若反应器出口气体中氯乙烯含量摩尔分数为90\%，计算聚氯乙烯单体的收率。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{复合反应的收率}
+    \begin{example}
+        在银催化剂上进行乙烯氧化反应：
+
+        \ch{C2H4 + 1/2 O2 -> CH2CH2O}
+
+        \ch{C2H4 + 3 O2 -> 2 CO2 + 2 H2O}
+        
+        进入的乙烯量为100mol，反应器出口环氧乙烷20mol，二氧化碳30mol。求乙烯的转化率，环氧乙烷的收率和\ch{CO2}的收率。
+    \end{example}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{收率}
+    \highlight{质量收率}：以质量作为计算单位，不计入化学计量系数比，因此最大值可以超过100\%。
+
+    \highlight{单程收率}：对于有循环物料的反应系统，原料通过反应器一次时反应产物的收率。
+
+    \highlight{全程收率}：对于有循环物料的反应系统，原料多次循环后达到的收率。
+    \begin{example}
+      用乙烷作裂解原料生产乙烯 \ch{C2H6 -> C2H4 + H2}
+      
+      在一定的生产条件下， 通入裂解炉的乙烷量为7000kg/h， 反应后， 尾气中含乙烷2450kg/h， 得到乙烯量为3332 kg/h， 求乙烯的单程收率。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应选择性($S$)}
+    一个反应变量只能描述一个反应的进行程度，若多个反应，则反应变量要相应增多。
+    \begin{center}
+      \ch{C2H4 + 1/2 O2 -> CH2CH2O}
+
+      \ch{C2H4 + 3 O2 -> 2 CO2 + 2 H2O}
+    \end{center}
+    如果只知道乙烯的转化率，它只说明两个反应的总结果，而不能说明有多少转化成环氧乙烷，又有多少转化成二氧化碳。所以需要再增加一个反应变量，才能对该反应系统作完整描述。
+    
+    评价复合反应时，除采用转化率和收率外，还可用反应\highlight{选择性}这一概念：
+    \[
+        S = \frac{\text{生成目的产物所消耗的关键组分量}}{\text{已转化的关键组分量}}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转化率、收率、选择性的关系}
+    \[
+      X = \frac{\text{某一反应物的转化量}}{\text{该反应物的起始量}}
+    \]
+    \[
+        Y=\frac{\text{生成反应产物所消耗的关键组分量}}{\text{关键组分的起始量}}
+    \]
+    \[
+        S = \frac{\text{生成目的产物所消耗的关键组分量}}{\text{已转化的关键组分量}}
+    \]
+    转化率、收率、选择性的关系：
+    \[
+        Y = SX
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+      乙烷脱氢生产乙烯时， 原料乙烷处理量为8000kg/h，产物中乙烷为4000kg/h， 获得产物乙烯为3200kg/h， 求乙烷转化率、 乙烯的选择性及收率。
+    \end{example}
+    \pause
+    \[
+        \begin{aligned}
+             X &= (8000-4000)/8000 \times 100\% = 50\%\\
+             S &= \frac{3200\times 30 \div 28}{4000} \times 100\% = 85.7\%\\
+             Y &= 50\% \times 85.7\% \times 100\% = 42.9\%
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+      在银催化剂上进行乙烯氧化反应以生产环氧乙烷，进入催化反应器的气体中各组分的摩尔分数分别为C$_2$H$_2$ 15\%, O$_2$ 7\%, CO$_2$ 10\%, Ar 12\%, 其余为N$_2$。反应器出口气体中含C$_2$H$_4$和O$_2$ 的摩尔分数分别为13.1\%，4.8\%。试计算乙烯的转化率、环氧乙烷收率和反应选择性。
+    \end{example}
+    \pause
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{答案2}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+      一家工厂通过将乙烷在裂解器中裂解生产乙烯，每100kg纯的乙烷可生产42.4kg乙烯，但出口处所得气体中会含有2kg乙烷，其余未反应的乙烷通过循环流循环使用，乙烷的单程转化率为60\%。求乙烯的单程收率、全程收率、选择性和乙烷的总转化率。
+    \end{question}
+\end{frame}
+
+\end{document}

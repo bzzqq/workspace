@@ -1,0 +1,129 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+\usetheme{mytheme}
+% \usepackage{float}
+% \usepackage{algorithm,algorithmic}
+
+\newtcolorbox{boxmine}[2][]{colbacktitle=red!10!white,
+colback=blue!10!white,coltitle=red!70!black,
+title={#2},fonttitle=\bfseries,#1}
+
+\title{第五章}
+\subtitle{计算思维与算法}
+\author{张斌}
+\institute{理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+
+\begin{document}  
+
+\begin{frame}
+  \titlepage
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+\begin{frame}{}
+  \begin{center}
+      {\Huge \cbf{目 \ 录}}
+  \end{center}
+  \tableofcontents[subsectionstyle=hide/hide/show]
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+\section{计算思维}
+
+\begin{frame}{什么是计算思维？}
+\begin{itemize}                                                   
+  \item {\cbf{人类科学发现的三大支柱}}
+    \begin{itemize}
+      \item 理论科学
+      \item 实验科学
+      \item 计算科学
+    \end{itemize}
+  \item \cbf{人类认识世界和改造世界的三种思维}
+    \begin{itemize}
+      \item 逻辑思维
+      
+      以推理和演绎为特征，以数学学科为代表。
+      
+      \item 实证思维
+      
+      以观察和总结自然规律为特征，以物理等学科为代表。
+      \item 计算思维
+      
+      以设计和构造为特征，以计算机学科为代表。
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{}
+    \begin{boxmine}{ここにTitleを書くのだ}
+      吾輩は猫である。名前はまだない。\\
+      どこで生れたか頓（とん）と見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪（どうあく）な種族であったそうだ。
+      \end{boxmine}
+\end{frame}
+
+\begin{frame}
+    \frametitle{顺序结构}
+    \begin{tbox}哈哈哈哈哈哈
+    \end{tbox}
+
+        
+            \begin{example}
+                哈哈哈哈哈哈
+            \end{example}
+
+            \begin{tcolorbox}[title=\textbf{Lemma},colback=SeaGreen!10!CornflowerBlue!10,colframe=RoyalPurple!55!Aquamarine!100!] 子数整数问题 Python代码
+            \end{tcolorbox}
+
+            
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{}
+      \begin{block}{}
+        哈哈哈哈哈哈
+    \end{block}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{子数整数问题 Python代码}
+\begin{codeblock}{子数整数问题}
+  k = int(input("请输入k："))
+  n = 10000
+  while n <= 30000:
+      sub1 = int(n / 100)
+      sub2 = int(n / 10) % 1000
+      sub3 = n % 1000
+      if sub1 % k == 0 and sub2 % k == 0 and sub3 % k == 0:
+          print(n)
+          n = n + 1
+      else:
+          n = n + 1
+\end{codeblock}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{}
+    \begin{algorithm}[H]  
+      \caption{Calculate $y = x/y$}
+    \begin{algorithmic}[1]
+      \Begin
+      \State \textbf{input} $x,y$;
+      \If {$y=0$}
+      \State \textbf{print} Error;
+      \Else
+      \State $z \gets x/y$
+      \State \textbf{return}($z$);
+      \End
+      \end{algorithmic}
+      \end{algorithm}
+\end{frame}
+
+
+\end{document}

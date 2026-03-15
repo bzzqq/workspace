@@ -1,0 +1,731 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme2024}
+
+\title{计算思维与数学建模}
+\subtitle{相关性分析\&回归分析}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+%-----------------------------------------------------------------
+\begin{document}
+
+
+\maketitle
+
+
+\begin{frame}
+    \frametitle{目录}
+    \tableofcontents
+\end{frame}
+
+
+\section{相关性分析}
+
+
+\begin{frame}
+    \frametitle{相关分析}
+    相关性分析：衡量事物之间或称变量之间线性相关程度的强弱，并用适当的统计指标（相关系数）表示出来的过程 。
+
+    三种常用的相关系数 ：
+
+    \begin{itemize}
+      \item Pearson相关系数
+      \item Spearman相关系数
+      \item Kendall相关系数
+    \end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}
+    \frametitle{根据变量的类型选择合适的统计方法}
+    \begin{enumerate}
+      \item 连续变量：
+        \begin{itemize}
+          \item 在一定区间内可以任意取值的变量
+          \item 距离、温度、体重等
+        \end{itemize}
+      \item 有序分类变量
+        \begin{itemize}
+          \item 满意程度：1-非常不满意、2-不满意、3-一般、4-满意、5-非常满意
+          \item 疾病疗效：1-痊愈、2-好转、3-不变、4-变差
+        \end{itemize}
+      \item 二分类变量
+        \begin{itemize}
+          \item 是，否
+          \item 男性，女性
+        \end{itemize}
+      \item 无序分类变量
+        \begin{itemize}
+          \item 手机品牌：苹果、三星、华为或其他
+          \item 头发的颜色：黑色、棕色、金色、红色或者灰色
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Pearson相关系数}
+    皮尔逊相关性的五个假设前提：
+    \begin{enumerate}
+      \item 变量类型：连续变量
+      \item 线性关系：两个变量之间存在一定线性关系
+      \item 正态分布：两个变量应该大致符合正态分布
+      \item 数据配对：数据集中的每个观测数据应该为一对值
+      \item 无异常值：数据集中不应包括极端异常值数据，通常绘制箱线图检验。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Spearman相关系数}
+    能够适用皮尔逊相关的场合当然是优先使用皮尔逊相关，但是在有些场合，皮尔逊相关所需要的前提假设不能得到满足，这是就可以考虑使用斯皮尔曼相关，比如说以下一些情况下：
+    \begin{enumerate}
+      \item 如果数据展现的是非线性关系，或者不是正态分布的。
+      \item 如果至少有一方数据是序数类型（ordinal）而非数值类型。比如说，如果数据的赋值为"第一、第二、第三、... "
+      \item 如果数据中有明显的异常值（outliers）。与皮尔逊相关不同，斯皮尔曼相关对于异常值不太敏感，因为它基于排序位次进行计算，实际数值之间的差异大小对于计算结果没有直接影响
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Kendall相关系数}
+    当多个 （ 两个以上 ） 变量值以等级次序排列或以等级次序表示 ， 描述这几个变量之间的一致性程度的量 ， 称为肯德尔和谐系数 。 它常用来表示几个评定者对同一组学生成绩用等级先后评定次之间的一致性程度 。
+
+    Kendall's tau-b等级相关性分析主要适用于两变量为有序分类变量的情况。
+
+    Kendall's tau-b等级相关性分析，需要满足2个条件：
+
+    \begin{enumerate}
+      \item 两变量是两个连续变量，或两变量是两个有序分类变量，或一个有序分类变量一个连续变量。
+      \item 两变量应当是配对的，即来源于同一个个体。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{协方差}
+    可以通过计算协方差来衡量两个变量之间线性相关性。
+    
+    \[
+        cov(x,y) = \frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{n-1}
+    \]
+    
+    \begin{itemize}
+      \item 如果两个变量的变化趋势一致 ， 协方差就是正值 ， 说明两个变量正相关 。 
+      \item 如果两个变量的变化趋势相反 ， 协方差就是负值 ， 说明两个变量负相关 。
+      \item 如果两个变量相互独立 ， 那么协方差就是 0 ， 说明两个变量不相关 。 
+    \end{itemize}
+    
+    虽然协方差能反映两个随机变量的相关程度，但是协方差值的大小并不能很好地度量两个
+    随机变量的关联程度 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Pearson相关系数}
+    为了更好的度量两个随机变量的相关程度， 引入了Pearson相关系数 ， 其在协方差的基础上除以了两个随机变量的标准差。当两个变量都是正态连续变量，而且两者之间呈线性关系时，通常用 Pearson 相关系数来衡量。
+
+    \[
+        \rho_{x,y} = \frac{cov(x,y)}{\sigma_x \sigma_y} =\frac{\frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{n-1}}{\sqrt{\frac{\sum (x_i-\bar{x})^2}{n-1}} \sqrt{\frac{\sum (y_i-\bar{y})^2}{n-1}}}
+    \]
+
+    \[
+        \rho_{x,y} = \frac{\sum_{i=1}^{n}(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum (x_i-\bar{x})^2}\sqrt{\sum (y_i-\bar{y})^2}}
+    \]
+
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{不同的数据分布对应的皮尔逊相关系数的大小}
+    \hspace{-2em}
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{Pearson}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{itemize}
+          \item Pearson相关系数是一个介于 $-1$ 和 $1$ 之间的值
+          \item 相关系数大于 $0$，正相关
+          \item 相关系数小于 $0$，负相关
+          \item 相关系数等于 $0$，不存在线性相关关系。
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{相关性强弱的判断}
+    相关系数的绝对值越大，相关性越强，相关系数越接近于 $1$ 或$-1$， 相关度越强 ， 相关系数越接近于 0 ， 相关度越弱 。
+
+    通情况下通过以下取值范围判断变量的相关强度 ：
+
+    \begin{itemize}
+      \item $0.8 \sim 1.0$  极强相关
+      \item $0.6 \sim 0.8$ 强相关
+      \item $0.4 \sim 0.6$ 中等程度相关
+      \item $0.2 \sim 0.4$ 弱相关
+      \item $0 \sim 0.2$ 极弱相关或无相关
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Pearson相关系数注意事项}
+    \hspace{-2em}
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{注意事项}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{itemize}
+          \item 四个图中， 相关系数都是一样的
+          \item 左上角是一个正常的图
+          \item 右上角明显符合二次函数的相关，不符合线性相关
+          \item 左下角存在一个噪声点 ， 如果没有噪声点的存在将是很完美的相性相关
+          \item 右下角同样存在离群点
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Pearson相关系数注意事项}
+    四个例子的皮尔逊相关系数完全一致 ， 然而相关性千差万别 ， 所以说我们在应用皮尔逊相关系数进行相关性判断的时候 ，一定要注意以下的几点 ：
+    \begin{enumerate}
+      \item 皮尔逊相关系数是用于衡量线性相关关系的 ， 因此 ， 在数据的分布不清楚的情况下 ， 直接比较皮尔逊相关系数不能说明任何问题 ，就算是皮尔逊相关系数大 （ 非线性相关也可能会使皮尔逊相关系数很大 ） ， 也不能说明两个变量线性相关 ， 我们必须画出散点图进行比较 。
+      \item 如果二者确实是线性关系 ， 则皮尔逊相关系数大 ， 就说明了确实更加的线性相关 。
+      \item 离群点对于皮尔逊相关系数的影响很大 ， 可以根据情况思考是否要将其剔除 。
+      \item 就算皮尔逊相关系数是 0 也不能说明其完全不相关 ， 可能是非线性相关的 。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{相关性分析的一般步骤}
+    \begin{enumerate}
+      \item 准备好数据
+      \item 画散点图，观察两个变量是否有规律变化
+      \item 根据变量类型或正态性检验，选择合适的相关系数类型
+      \item 计算相关系数，评估相关程度
+      \item 进行显著性检验，如果$p<\alpha$(一般取0.05)，表示存在显著相关性
+      \item 总结结论，进行业务判断
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Matlab进行正态分布检验}
+    需要 Statistics and Machine Learning Toolbox
+
+    \begin{codeblock}{函数 lillietest}
+# 对输入向量X进行Lilliefors测试,显著性水平为0.05.
+H = lillietest(X) 
+# 在水平alpha而非5%下施行Lilliefors测试,alpha在0.01和0.2之间.
+H = lillietest(X,alpha) 
+# P为接受假设的概率值,P越接近于0,则可以拒绝是正态分布的原假设;LSTAT为测试统计量的值,CV为是否拒绝原假设的临界值.
+[H,P,LSTAT,CV] = lillietest(X,alpha) 
+    \end{codeblock}
+
+    H为测试结果，若H=0，则可以认为X是服从正态分布的；若H=1，则可以否定X服从正态分布。
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{}
+    \begin{codeblock}{normplot：正态概率图}
+normplot(x) # 用于图形化检验正态性，x就是待分析的数据    
+    \end{codeblock}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.5\linewidth]{正态概率图}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Matlab计算相关系数}
+    \vspace{-2pt}
+    \begin{codeblock}{}
+A = importdata('6品类销售数据.xlsx');
+R = corr(A.data) # Pearson相关系数
+R = corr(A.data,'type','Spearman') # Spearman相关系数
+labels =  {'花菜类', '花叶类', '辣椒类', '茄类', '食用菌', '水生根茎类'};
+h = heatmap(labels,labels,R);
+h.Title = '相关系数';
+    \end{codeblock}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.8\linewidth]{R值}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{数据可视化：热图}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.64\linewidth]{热图}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{相关系数检验}
+    \begin{codeblock}{}
+[R,P] = corr(A.data) # Pearson相关系数及p值
+[R,P] = corr(A.data,'type','Spearman') # Spearman相关系数及p值
+    \end{codeblock}
+    \begin{figure}[htpb]
+        \centering
+        \caption{Spearman相关系数检验P值}
+        \includegraphics[width=.8\linewidth]{P值}        
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{函数说明}
+    \begin{codeblock}{corr函数：线性或秩相关性}
+rho = corr(X) # 返回输入矩阵 X 中各列之间的两两线性相关系数矩阵。
+rho = corr(X,Y) # 返回输入矩阵 X 和 Y 中各列之间的两两相关系数矩阵。
+[rho,pval] = corr(X,Y) # 还返回一个 p 值矩阵，用于基于非零相关性备择假设来检验无相关性假设。
+[rho,pval] = corr(___,Name,Value) # 可在前面语法中的输入参数外使用一个或多个名称-值对组参数指定选项。例如，'Type','Kendall' 指定计算肯德尔 tau 相关系数。
+# Type — 相关性的类型 'Pearson' （默认） | 'Kendall' | 'Spearman'
+    \end{codeblock}
+
+    \begin{codeblock}{heatmap函数：创建热图}
+# 基于矩阵 cdata 创建一个热图。热图上的每个单元格对应 cdata 中的一个值。
+heatmap(cdata) 
+# 指定沿 x 轴和 y 轴显示的值的标签。
+heatmap(xvalues,yvalues,cdata) 
+    \end{codeblock}
+\end{frame}
+
+
+
+
+\begin{frame}
+    \frametitle{使用SPSS进行正态分布检验}
+    使用 SPSS 进行正态分布检验 ， 可以按照以下步骤进行操作 ：
+    \begin{enumerate}
+      \item 打开SPSS 软件并导入数据集
+      \item 在菜单栏中选择“分析”， 然后选择“描述统计”
+      \item 从弹出的子菜单中选择“探索”
+      \item 在“探索”对话框中，将感兴趣的变量移动到“因变量列表”框中
+      \item 点击“图”按钮 ， 然后勾选“含检验的正态图”
+      \item 可以将“直方图”选项也选中
+      \item 点击“继续”“确定”来运行正态分布检验
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{使用SPSS进行正态分布检验}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.9\linewidth]{SPSS正态}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{使用SPSS进行相关性分析}
+    使用 SPSS 进行Pearson相关性分析 ， 可以按照以下步骤进行操作 ：
+    \begin{enumerate}
+      \item 打开SPSS 软件并导入数据集
+      \item 首先点击菜单中的 “分析”按钮 ， 然后点击下级菜单的“相关”按钮，最后点击“双变量”按钮 。
+      \item 将感兴趣的变量变量加入到变量框中。
+      \item 根据需要勾选“标记显著性相关性” 
+      \item 点击“选项”按钮 ， 根据需要勾选“平均值和标准差” 、 “叉积偏差和协方差” 。
+      \item 点击“确定”来运行Pearson相关性分析
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{使用SPSS进行相关性分析}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.6\linewidth]{SPSS相关}
+    \end{figure}
+\end{frame}
+
+
+
+\section{回归分析}
+
+
+\begin{frame}
+    \frametitle{回归分析}
+    相关分析是研究两个或两个以上的变量之间相关程度及大小的一种统计方法。
+
+    回归分析是寻找存在相关关系的变量间的数学表达式，并进行统计推断的一种统计方法。
+
+    在对回归分析进行分类时 ， 主要有两种分类方式 :
+
+    \begin{enumerate}
+      \item 根据变量的数目 ， 可以分为一元回归 、 多元回归
+      \item 根据自变量与因变量的表现形式 ， 分为线性与非线性回归
+    \end{enumerate}
+
+    所以 ， 回归分析包括四个方向 ：
+
+    \begin{enumerate}
+      \item 一元线性回归分析
+      \item 多元线性回归分析
+      \item 一元非线性回归分析
+      \item 多元非线性回归分析
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{回归分析的一般步骤}
+    \begin{enumerate}
+      \item 确定回归方程中的解释变量和被解释变量
+      \item 确定回归模型，建立回归方程
+      \item 对回归方程进行各种检验
+      \item 利用回归方程进行预测
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{建立回归方程}
+    \hspace{-2em}
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{观测值}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        直线方程无确定解，但能不能求出近似解， 使得模型能在各个观测点上达到“最佳”拟合？“最佳”的准则如何选择？ 
+        
+        \begin{itemize}
+          \item 可以是所有观测点到直线的距离和最小
+          \item 也可以是所有观测点到直线的误差绝对值和最小
+          \item 也可以是其它
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{最小二乘法}
+    最小二乘法的思想是令误差的平方和最小。$S = \sum (y_i - \hat{y})^2$
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.8\linewidth]{最小二乘法}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{基于最小二乘准则拟合简单线性回归模型}
+    在统计学中，最广泛使用的回归模型是简单线性回归模型，它使用直线来近似自变量 X 和因变量 Y 之间的关系。
+
+    \[
+        y = b_0 + b_1 x
+    \]
+
+    将数据集拟合到简单线性回归模型的公式为：
+
+    \[
+        b_1=\frac{\sum\limits_{i=1}^n(x_i-\overline{x})(y_i-\overline{y})}{\sum\limits_{i=1}^n(x_i-\overline{x})^2}
+    \]
+
+    \[
+        b_0=\overline{y}-b_1\overline{x}
+    \]
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Matlab简单线性回归}
+    \hspace{-2em}
+    \begin{minipage}{0.5\linewidth}
+        \begin{codeblock}{Matlab简单线性回归}
+# 创建几个由样本数据点 (x,y) 组成的向量。
+x = 1:50; 
+y = -0.3*x + 2*randn(1,50); 
+# 对数据进行一次多项式拟合。
+p = polyfit(x,y,1); 
+# 计算在 x 中的点处拟合的多项式 p。
+f = polyval(p,x); 
+# 用这些数据绘制得到的线性回归模型。
+plot(x,y,'o',x,f,'-') 
+legend('data','linear fit')  
+        \end{codeblock}        
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{拟合}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{fitlm函数：拟合线性回归模型}
+\begin{codeblock}{语法}
+# 返回基于表或数据集数组 tbl 中变量拟合的线性回归模型。默认情况下，fitlm 将最后一个变量作为响应变量。
+mdl = fitlm(tbl)
+# 返回基于数据矩阵 X 拟合的响应 y 的线性回归模型。
+mdl = fitlm(X,y)
+\end{codeblock}    
+
+函数返回值 mdl 是一个线性回归模型对象，包含拟合的系数、差等信息。
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{fitlm函数：拟合线性回归模型}
+    \hspace{-2em}
+    \begin{minipage}{0.4\linewidth}
+        \begin{codeblock}{}
+# 创建数据
+x = 1:50;
+y = -0.3*x + 2*randn(1,50);
+# 使用fitlm函数拟合线性回归模型
+mdl = fitlm(x,y)
+# 绘图
+plot(mdl)
+        \end{codeblock}   
+        \vspace{-1em}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{mdl}
+        \end{figure}     
+    \end{minipage}\hfill
+    \begin{minipage}{0.58\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{plotmdl}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{回归结果解读}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.55\linewidth]{mdl}
+        \end{figure}
+        \vspace{-5pt}
+
+        \begin{enumerate}
+          \item 线性回归模型：$y = \beta_0 + \beta_1 x_1$
+          \item Estimate：从上到下分别为常系数，自变量x的系数。
+          \item SE: 系数的标准误差
+          \item tStat：每个系数的t统计量
+          \item pValue：每个系数对应的p值
+        \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{回归模型评价指标}
+    \hspace{-2em}
+    \begin{minipage}{0.48\linewidth}
+        \begin{itemize}
+          \item \bf{总平方和(SST)：$\sum (y_i-\bar{y}_i)^2$}
+          
+          反映因变量的 $n$ 个观察值与其均值的总离差。
+          \item \bf{回归平方和(SSR)：$\sum (\hat{y}_i-\bar{y}_i)^2$}
+          
+          反映了$y$的总变差中 ， 由于 $x$ 与 $y$ 之间的线性关系引起的 $y$ 的变化部分。
+          \item \bf{残差平方和(SSE)：$\sum (y_i-\hat{y}_i)^2$}
+          
+          反映了除了 $x$ 对 $y$ 的线性影响之外的其他因素对 $y$ 变差的作用 ， 是不能由回归直线来解释的 $y$ 的变差部分。
+        \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{平方和}
+        \end{figure}
+        \[
+            SST=SSR+SSE
+        \]
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{回归模型评价指标：R方}
+    对于模型来讲肯定是能用回归直线解释的变差部分越大越好，也就是说明SSR占SST的比例越大，解释越多，同时也可以说明直线拟合的越好，所以我们引出一个指标R方，回归平方和占总平方和的比例，即为R方。计算公式为：
+
+    \[
+        R^2 = \frac{SSR}{SST} = \frac{\sum (\hat{y}_i-\bar{y}_i)^2}{\sum (y_i-\bar{y}_i)^2} = 1 - \frac{\sum (y_i-\hat{y}_i)^2}{\sum (y_i-\bar{y}_i)^2}
+    \]
+
+    $R^2$最大值为 1 ， 越接近 1 ， 表示回归直线对观测值的拟合程度越好 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{显著性检验}
+    显著性检验的主要目的是根据所建立的估计方程用自变量 $x$ 来估计或预测因变量 $y$ 的取值 。当建立了估计方程后 ， 还不能马上进行估计或预测 ， 因为该估计方程是根据样本数据得到的 ， 它是否真实的反映了变量 $x$ 和 $y$ 之间的关系 ， 则需要通过检验后才能证实 。
+
+    根据样本数据拟合回归方程时 ， 实际上就己经假定变量 $x$ 与 $y$ 之间存在着线性关系 ， 并假定误差项是一个服从正态分布的随机变量 ， 且具有相同的方差 。 但这些假设是否成立需要检验。
+
+    显著性检验包括两方面 ：
+
+    \begin{enumerate}
+      \item 线性关系检验
+      \item 回归系数检验
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{线性关系检验($F$检验)}
+    线性关系检验是检验自变量 $x$ 和因变量 $y$ 之间的线性关系是否显著 ， 或者说 ， 它们之间能否用一个线性模型来表示 。
+
+    将均方回归 （ MSR ） 同均方残差 （ MSE ） 加以比较 ， 应用 F 检验来分析二者之间的差别是否显著 。
+
+    \begin{itemize}
+      \item 均方回归 ： 回归平方和 SSR 除以相应的自由度 （ 自变量的个数$k$ ）
+      \item 均方残差 ： 残差平方和 SSE 除以相应的自由度 （ $n-k-1$ ）
+    \end{itemize}
+
+    H0 ： $\beta 1 = 0$ 所有回归系数与零无显著差异 ， $y$ 与全体 $x$ 不存在线性关系。
+
+    构造F检验统计量 ：
+    \[
+        F = \frac{MSR}{MSE} = \frac{SSR/1}{SSE/(n-2)}
+    \]
+    在正态假设下，原假设H0成立时，$F\sim F(1,n-2)$。当$F > F_\alpha(1,n-2)$，拒绝原假设。
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{$F$分布}
+    \hspace{-2em}
+    \begin{minipage}{0.48\linewidth}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{F分布}
+    \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        自由度为$m,n$的 $F$ 分布的密度函数如图。
+
+        当$m,n$和$\alpha$给定时 ， 可以通过查表求出$F_{m,n}(\alpha)$的值。
+    
+    例如，$F_{4,10}(0.05)=3.48$
+    
+    $F_{10,15}(0.01)=3.80$。
+
+\begin{codeblock}{求$F_\alpha$的matlab函数}
+Fa = finv(1 - alpha, m, n - m - 1)
+\end{codeblock}
+    \end{minipage}
+\end{frame}
+ 
+
+\begin{frame}
+    \frametitle{回归系数的显著性检验($t$检验)}
+    回归系数显著性检验的目的是通过检验回归系数$\beta$的值与 0 是否有显著性差异 ， 来判断 $y$ 与 $x$ 之间是否有显著的线性关系。若$\beta=0$， 则总体回归方程中不含 $x$ 项 （ 即 $y$ 不随$x$变动而变动 ） ， 因此 ， 变量 $y$ 与$x$之间并不存在线性关系 ； 若$\beta \neq 0$， 说明变量 $y$ 与$x$之间存在显著的线性关系 。
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{回归系数的显著性检验($t$检验)}
+    \hspace{-2em}
+    \begin{minipage}{0.48\linewidth}
+        \begin{enumerate}
+          \item 原假设 H0 ：$\beta 1 = 0$ 
+          
+          （x 与 y 不存在线性关系）
+          \item 对立假设  H1 ： $\beta 1 \neq 0$
+          \item 构造 $t$ 统计量
+          \item 计算$|t|$
+          \item $|t| \geqslant  t_{\alpha/2}$， 拒绝 H0
+          \item $|t| \leqslant  t_{\alpha/2}$， 接受 H0
+        \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{t检验}
+        \end{figure}
+    \end{minipage}
+
+\begin{codeblock}{求$t_{\alpha/2}$的matlab函数}
+ta = tinv(1 - alpha/2, n - m - 1)
+# alpha通常为0.05，n为样本点个数，m为自变量个数
+\end{codeblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{线性关系检验与回归系数检验的区别}
+    线性关系的检验是检验自变量与因变量是否可以用线性来表达 ， 而回归系数的检验是对样本数据计算的回归系数检验总体中回归系数是否为 0。
+
+    \begin{itemize}
+      \item 在一元线性回归中，自变量只有一个，线性关系检验与回归系数检验是等价的。对于一元线性回归只需要做一种检验即可。
+      \item 多元回归分析中，这两种检验的意义是不同的。线性关系检验只能用来检验总体回归关系的显著性 ， 而回归系数检验可以对各个回归系数分别进行检验。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多元线性回归分析}    
+    经常会遇到某一现象的发展和变化取决于几个影响因素的情况 ， 也就是一个因变量和几个自变量有依存关系的情况 ， 这时需用多元线性回归分析 。
+
+    多元线性回归分析预测法 ， 是指通过对两上或两个以上的自变量与一个因变量的相关分析 ， 建立预测模型进行预测和控制的方法。
+    
+    多元线性回归预测模型一般式为 ：
+
+    \[
+        y = A + B_1x_1 + B_2x_2 + B_3x_3 + \cdots + B_nx_n + \epsilon
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{曲线回归分析}
+    直线关系是两变量间最简单的一种关系 ， 曲线回归分析的基本任务是通过两个相关变量 $x$ 与 $y$ 的实际观测数据建立曲线回归方程 ， 以揭示 $x$ 与 $y$ 间的曲线联系的形式。
+
+    曲线回归分析最困难和首要的工作是确定自变量与因变量间的曲线关系的类型 ， 曲线回归分析的基本过程 ：
+
+    \begin{enumerate}
+      \item 先将 $x$ 或 $y$ 进行变量转换
+      \item 对新变量进行直线回归分析 、 建立直线回归方程并进行显著性检验和区间估计
+      \item 将新变量还原为原变量 ， 由新变量的直线回归方程和置信区间得出原变量的曲线回归方程和置信区间
+    \end{enumerate}
+
+    由于曲线回归模型种类繁多 ， 所以没有通用的回归方程可直接使用 。 但是对于某些特殊的回归模型 ， 可以通过变量代换 、 取对数等方法将其线性化 ， 然后使用标准方程求解参数 ， 再将参数带回原方程就是所求 。
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+

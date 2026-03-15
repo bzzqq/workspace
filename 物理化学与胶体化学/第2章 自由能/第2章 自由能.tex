@@ -1,0 +1,42 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme}
+
+\special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+\title{第二章}
+\subtitle{自由能、化学势和溶液}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+	\begin{frame}{}
+        \begin{center}
+            {\Huge \cbf{目 \ 录}}
+        \end{center}
+		\tableofcontents
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+
+\input{contents/2.1.tex}
+\input{contents/2.2.tex}
+\input{contents/2.3.tex}
+\input{contents/2.4.tex}
+\input{contents/2.5.tex}
+\input{contents/2.6.tex}
+\input{contents/2.7.tex}
+\input{contents/2.8.tex}
+
+
+\end{document}

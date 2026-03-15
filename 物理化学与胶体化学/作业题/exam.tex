@@ -1,0 +1,125 @@
+%!TEX program = xelatex
+\documentclass[cn,blue,14pt,normal]{elegantnote}
+\title{ElegantNote：一个优美的 \LaTeX{} 笔记模板}
+
+\author{张斌}
+\institute{Elegant\LaTeX{} Program}
+\version{2.40}
+\date{\zhtoday}
+
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\begin{document}
+
+\section*{第一、二章}
+1. 在298K及$p^\ominus$下，金刚石、石墨的有关数据如下表所示。试判断，在1000K及$p^\ominus$下，石墨能否转变为金刚石。
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ccc}
+        \Xhline{1pt}
+        物质 & $\Delta_\mathrm{c}H_\mathrm{m}^\ominus ~/(\si{kJ.mol^{-1}})$ & $S_\mathrm{m}^\ominus ~/(\si{J.mol^{-1}.K^{-1}})$ \\
+        \hline
+        金刚石 & -395.40 & 2.377 \\
+        石墨 & -393.51 & 5.740 \\
+        \Xhline{1pt} 
+    \end{tabular}
+\end{table}
+
+2. 在计算化学反应热效应时，为什么用标准摩尔生成焓计算时是用反应产物的总生成焓减反应物总生成焓，而用标准摩尔燃烧焓计算时是用反应物总燃烧焓减反应产物的总燃烧焓？
+\bigskip
+
+3. 在298K和标准大气压力下，向体积为10.0 m$^3$的乙醇中加水，调制含乙醇的质量分数为0.56的酒。试计算(1)应加入水的体积；(2)加水后的总体积。已知该条件下，乙醇的摩尔体积为$\SI{58.28e{-6}}{m^3.mol^{-1}}$；乙醇质量分数为0.56时，乙醇偏摩尔体积为$\SI{56.58e{-6}}{m^3.mol^{-1}}$，水偏摩尔体积为$\SI{17.11e{-6}}{m^3.mol^{-1}}$。
+\bigskip
+
+4.液体A与液体B能形成理想液态混合物，在343K时，1mol纯A与2mol纯B形成的理想溶液混合物的总蒸汽压为50.66kPa，若在液态混合物中再加入3mol纯A，则液态混合物的总蒸汽压为70.93kPa。求纯A与纯B的饱和蒸汽压。
+
+\section*{第三、四章}
+
+1. 在298K及$p^\ominus$下，金刚石、石墨的有关数据如下表所示。试判断，在1000K及$p^\ominus$下，石墨能否转变为金刚石。
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{cccc}
+        \Xhline{1pt}
+         &\makecell{$\Delta_\mathrm{c}H_\mathrm{m}^\ominus$ \\ ($\si{kJ.mol^{-1}})$}   & \makecell{$S_\mathrm{m}^\ominus$  \\$(\si{J.mol^{-1}.K^{-1}})$} & \makecell{$C_{p,\mathrm{m}}$ \\ $(\si{J.mol^{-1}.K^{-1}})$}\\
+        \hline
+        金刚石 & -395.40 & 2.377 & 8.527\\
+        石墨 & -393.51 & 5.740 & 6.113\\
+        \Xhline{1pt} 
+    \end{tabular}
+\end{table}
+
+2. 已知水的三相点为273.16K，611Pa。水的升华热$\Delta_\mathrm{sub}H_\mathrm{m}=\SI{51.06}{kJ.mol^{-1}}$。某日早晨气温-10℃，当大气中的水蒸气分压为300Pa时，霜能否升华变为水气？
+
+\bigskip
+3.化学反应的$\Delta_\mathrm{r}G_\mathrm{m}^\ominus$的下标m的含义是什么？若用下列两个化学计量方程式来表示CO氧化反应，两者的$\Delta_\mathrm{r}G_\mathrm{m}^\ominus$之间有何关系？两者的$K_p^\ominus$之间有何关系？
+
+(1) \ch{CO (g) + 1/2 O2 (g) -> CO2 (g)} \qquad ~~ $\Delta_\mathrm{r}G_\mathrm{m,1}^\ominus$，$K_{p,1}^\ominus$
+
+(2) \ch{2 CO (g) + O2 (g) -> 2 CO2 (g)} \qquad $\Delta_\mathrm{r}G_\mathrm{m,2}^\ominus$，$K_{p,2}^\ominus$
+\bigskip
+
+4. 设计实验，计算水在火星表面的沸点。说明计算过程。已知火星表面大气压力为\SI{600}{Pa}。
+
+\section*{第四章\ 化学平衡}
+
+\begin{enumerate}
+  \item 假设反应\ch{C2H4 (g) + H2O (g) -> C2H5OH (g)}的$\Delta_\mathrm{r}H_\mathrm{m}^\ominus$与温度无关，此反应在300K时的$K_p^\ominus$为多少？
+\end{enumerate}
+
+
+
+\section*{第五、六章\ 电化学}
+\begin{enumerate}
+  \item 有电池\ch{Ag (s) | AgBr (s) | Br- (a = 0.01) || Cl-  (a = 0.01) AgCl (s) | Ag (s)}，试计算25℃时的电动势，并判断反应能否自发进行。（简明物理化学P211）
+  \item 计算25℃时下列反应的$\Delta_\mathrm{r}G_\mathrm{m}^\ominus$和$K^\ominus$。（物理化学教程习题精解P132）
+		\begin{enumerate}
+		  \item \ch{Cl2 (g) + 2 Br- (aq) <=> 2 Cl- + Br2 (g)}
+		  \item \ch{1/2 Cl2 (g) + Br- (aq) <=> Cl- + 1/2 Br2 (g)}
+		  \item \ch{2 Ag + Cl2 (g) <=> 2 AgCl (s)}
+		  \item \ch{2 AgCl (s) <=> 2 Ag + Cl2 (g)}
+		  \item \ch{3 Fe^{2+} (aq) <=> Fe + 2 Fe^{3+} (aq)}
+		\end{enumerate}
+  \item 在25℃时，将某电导池装入\SI{0.1}{mol/L}的KCl溶液，测得电阻为23.78 $\Omega$。换成\SI{0.002414}{mol/L}的HAc溶液，测得电阻为3942 $\Omega$。求HAc溶液的电离度。（简明物理化学P226）
+\end{enumerate}
+
+\bigskip
+
+\bigskip
+
+
+
+\newpage
+\section*{第七章}
+
+\begin{enumerate}
+  \item 某反应\ch{A + B -> P}，设计实验，测定其反应速率方程。
+  \item 已知某药物的失活反应为一级反应，其活化能约为\SI{100}{kJ.mol^{-1}}。该药物在298K下的保质期为1年，那么将此药物存放到4℃冷藏保存，可以保存多久？
+\end{enumerate}
+
+\end{document}

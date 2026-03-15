@@ -1,0 +1,65 @@
+\documentclass[11pt]{article}
+\usepackage[fontset=none]{ctex}
+\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage{multirow}
+\usepackage{float} % 借助float包的H选项使tbox内可以插入表格
+% \usepackage{fontspec} % 局部字体
+% \newfontfamily\datika{HYT_OMR_Zkh} %答题卡字体
+
+\usepackage{geometry}
+\geometry{b4paper,landscape,left=0.2cm,right=1.1cm,top=1.5cm,bottom=2cm}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont{SimSun}[BoldFont=FandolSong-Bold, ItalicFont=STXingkai] % 中文字体
+
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize \qquad 第 \thepage\ 页 \quad 共 \pageref{LastPage}页}%当前页 of 总页数
+
+\newcommand{\tk}[1][4]{\,\underline{\mbox{\hspace{#1 cm}}}\,} % 短横线
+\newcommand{\tkk}[1][2.5]{\,\underline{\mbox{\hspace{\fill}}}\,} % ????
+
+
+\begin{document}
+
+    \begin{minipage}{0.477\linewidth}
+        \begin{tcolorbox}[left=0.5mm,right=0.5mm,height=21.5cm,colback=white,boxrule=0.5pt]
+        \begin{center}
+            {\large \bfseries 语文答题卡}
+            \smallskip
+
+            考号：\underline{ \qquad \qquad} \quad 姓名：\underline{ \qquad \qquad} \quad 考场：\underline{ \qquad \qquad} \quad 座号：\underline{ \qquad \qquad}
+        \end{center}
+    \vspace{-10pt}
+
+\begin{table}[H]
+    \begin{tabular}{|l|c|}
+    \hline
+    \multicolumn{1}{|c|}{注意事项}                                                                                                                                                                      & \multirow{3}{*}{} \\ \cline{1-1}
+    \begin{tabular}[c]{@{}l@{}}{\scriptsize 1.   答题前请将姓名、班级、考场、座号和准考证填写清楚。}\\      {\scriptsize 2. 客观题答题，必须使用2B铅笔填涂，修改时用橡皮擦干净。}\\      {\scriptsize 3. 主观题必须用黑色签字笔书写。}\\      {\scriptsize 4. 必须在题号对应的答题区域内作答，超出答题区域书写无效。\qquad \qquad \qquad \qquad \qquad }\\      {\scriptsize 5. 保持答卷清洁完整。}\end{tabular} & \qquad  \quad ~~贴条形码区  \qquad \quad  \qquad \\ \cline{1-1}
+    正确填涂 \qquad  
+    \fcolorbox{black}{black}{\parbox[c][0.05cm]{0.4cm}{~}}  \qquad    缺考标记   \qquad  \fcolorbox{black}{white}{\parbox[c][0.05cm]{0.4cm}{~}}   &        \\ \hline
+    \end{tabular}
+    \end{table}
+
+    {\bfseries 第一部分(40分)}
+    
+    \tk
+
+
+        \end{tcolorbox}
+    \end{minipage}\hfill
+    \begin{minipage}{0.477\linewidth}
+        \begin{tcolorbox}[left=0.5mm,right=0.5mm,height=21.5cm,colback=white,boxrule=0.5pt]
+        Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test.
+        \end{tcolorbox}
+    \end{minipage}
+
+
+
+
+\end{document}

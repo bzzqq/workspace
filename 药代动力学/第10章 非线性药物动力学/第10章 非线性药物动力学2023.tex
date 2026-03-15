@@ -1,0 +1,616 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme}
+\usetikzlibrary{tikzmark}
+%\special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+%封面
+\title{非线性药物动力学}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+	\end{frame}
+
+
+
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+\end{frame}
+
+
+\section{概述}
+
+
+\begin{frame}
+    \frametitle{线性药物动力学的特点}
+    在线性药物动力学中，有三个基本假设：
+    \begin{enumerate}
+      \item 吸收速度为零级或一级速率过程；
+      \item 与消除相相比，药物分布相很快完成；
+      \item 药物在体内消除属于一级速率过程。
+    \end{enumerate}
+    
+    线性药物动力学的基本特征是血药浓度与体内药物量（包括各组织间转运量）成正比。根据线性药物动力学的基本特征和三个基本假设，可以用线性微分方程组来描述药物体内过程的动态变化规律。线性药物动力学的基本特征还表现在：
+    \begin{enumerate}
+      \item 药物的生物半衰期与剂量无关；
+      \item 血药浓度、血药浓度-时间曲线下面积及尿中累积排药量与剂量成正比关系；
+      \item 当剂量改变时，其相应时间点上的血药浓度与剂量成正比等。
+    \end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{非线性药物动力学的特点}
+    非线性药物动力学的基本特征是一些药物动力学参数随剂量不同而改变，因此又称为剂量依赖性药物动力学。呈现非线性动力学特征的药物其体内过程具有以下特点：
+    \begin{enumerate}
+      \item 药物的消除不遵循一级动力学，而是非线性的；
+      \item 血药浓度和AUC与剂量不成正比；
+      \item 药物消除半衰期随剂量增加而延长；
+      \item 其他药物可能竞争酶或载体系统，其动力学过程可能受合并用药的影响；
+      \item 药物代谢物的组成和（或）比例可能由于剂量变化而变化。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{非线性药物动力学}
+    \begin{minipage}{0.58\linewidth}
+        非线性药物动力学的这些特征，主要与药物在高浓度条件下体内药物代谢酶或载体的饱和过程有关。这些药物在较大剂量时的表观
+        \begin{enumerate}
+          \item 一旦消除过程在高浓度下达到饱和，血药浓度则会急剧增大。
+          \item 当血液中药物浓度下降到一定程度时，消除过程逐渐脱离饱和状态，此时其消除速度受血药浓度影响，但消除速度与血浆浓度仍不成正比。
+          \item 血浆浓度进一步下降时，药物消除速度与血药浓度成正比，此时表现为线性动力学特征。
+        \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.38\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{可饱和消除过程}
+            \caption{具有可饱和消除过程的血药浓度-时间曲线。1高剂量；2低剂量}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\section{产生非线性药物动力学的原因}
+
+
+\begin{frame}
+    \frametitle{产生非线性药物动力学的原因}
+    通常药物的非线性动力学过程有两种类型：
+    \begin{enumerate}
+      \item 一种是符合米氏（Michaelis·Menten）动力学方程，故称为米氏非线性动力学；
+        \begin{itemize}
+          \item 与药物吸收、排泄有关的可饱和载体转运过程；
+          \item 与药物代谢有关的可饱和酶代谢过程；
+        \end{itemize}
+      \item 另一种是不符合米氏动力学方程，故称为非米氏非线性动力学。
+        \begin{itemize}
+          \item 与药物分布有关的可饱和血浆/组织蛋白结合过程；
+          \item 药物及其代谢产物酶抑制及酶诱导等特殊过程。
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{非线性药物动力学产生的机制及对药动学参数的影响}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.63\linewidth]{非线性药物动力学产生机制}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{代谢酶饱和}
+    在体内由于一些药物代谢酶的代谢能力具有容量限制性，在给予较大剂量或多剂量给药的情况下，会导致相对应的底物药物出现可饱和的代谢过程。这时血药浓度和药时曲线下面积与剂量不成正比，会高于按一级动力学预测的值，可能会导致体内血药浓度显著升高，且维持时间长，易引起明显的临床效应和毒副作用。
+    \begin{blankblock}{}
+        例如治疗指数低的抗癫痫药苯妥英钠，主要在肝脏代谢发生羟基化反应，生成无药理活性的羟基苯妥英（占50\%～70\%），应用一定剂量药物后肝代谢能力达到饱和，肝代谢清除率下降，半衰期延长，此时即使增加很小剂量，血药浓度非线性急剧增加，会有中毒危险，临床上需要监测血药浓度。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{代谢酶饱和}
+    一般情况下药物在体内代谢达到饱和的情况并不多见，但在首过代谢过程中出现代谢酶饱和现象的可能性较大。在口服给药后的吸收相，肝门静脉中的非结合型血药浓度是比较高的，此时若超过酶的催化能力，就会导致肝代谢清除率短暂的降低，药时曲线下面积会呈现非线性增加。
+    \begin{blankblock}{}
+        口服给药后具有明显首过代谢效应的药物有维拉帕米、普罗帕酮、普萘洛尔、紫杉醇和帕罗西汀等，这些药物由于首过代谢效应比较明显，故呈现较低且个体差异大的口服绝对生物利用度。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{载体系统的饱和}
+    目前，在机体内各器官中揭示了许多与药物胞内摄取和胞外分泌相关的载体系统，它们在药物转运过程（如肠吸收、胆汁排泄、肾小管分泌）中发挥着重要作用，决定着细胞或组织的药物暴露程度。
+    \begin{enumerate}
+      \item 介导吸收的转运蛋白
+            \begin{itemize}
+              \item 寡肽转运蛋白
+              \item 氨基酸转运蛋白
+            \end{itemize}
+      \item 介导分泌的转运蛋白
+            \begin{itemize}
+              \item P-糖蛋白（P-gp）
+              \item 有机阴离子转运蛋白（OAT）
+            \end{itemize}
+    \end{enumerate}
+    上述两种转运机制均可产生饱和情况，从而造成药物体内动态的非线性现象。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{载体系统的饱和}
+    吸收型载体的饱和会导致剂量增加时$C_\mathrm{max}$或$AUC$不按比例增加，而分泌型载体的饱和会由于外排分泌的药物比例减少，$AUC/\mathrm{Dose}$随剂量的增加而增大，从而提高生物利用度。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.47\linewidth]{载体系统的饱和}
+        \caption{1：分泌饱和；2：线性吸收；3：吸收饱和}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血浆蛋白结合}
+    \begin{minipage}{0.48\linewidth}
+        对于与血浆蛋白高度结合及低清除率的药物，当药物剂量达到一定量后血浆蛋白结合发生饱和，此时再增大剂量，将显著提高游离型药物的百分数。由于只有游离型药物才能进行组织分布，转运到肝和肾的组织间隙进行消除，因此，增大剂量将促进其经肝代谢和肾排泄的消除过程，反而导致半衰期降低，血药浓度和AUC较按剂量比例预测值低，见图。由于药物效应与游离型药物直接相关，因此不仅要注意药物总浓度，更要注意游离型药物浓度随剂量的变动情况。
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{血浆蛋白结合}
+            \caption{1：线性蛋白结合；2：非线性蛋白结合}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{自身酶诱导作用}
+    一些药物能够诱导其自身的药物代谢酶过量生成，从而促进了自身的代谢，半衰期缩短，血药浓度及$AUC$降低，导致药理活性的下降或无效，称为自身诱导代谢，包括苯妥英钠、苯巴比妥、保泰松和卡马西平等。自身诱导代谢属于时间依赖性药物动力学，它不符合米氏动力学。值得注意的是，给予单剂量
+    \begin{blankblock}{}
+        典型药物是青蒿素，青蒿素连续给药后，可诱导自身药物代谢酶，使清除率增加。青蒿素在健康志愿者及疟疾患者体内的药物动力学均呈现明显的时间依赖性，连续给药7天后，口服清除率提高了约5倍（由186L/h到1031L/h），$AUC$下降为单剂量给药的20\%。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{自身酶抑制作用}
+    \highlight{自身抑制代谢}与自身诱导代谢相似，一些药物能抑制自身药物代谢酶的活性，从而能使代谢减慢，半衰期延长，血药浓度及$AUC$升高，导致药理活性及毒副作用的增强，包括双香豆素和地西泮等。自身抑制代谢会产生时间依赖性药物动力学，不符合米氏动力学。
+
+    \highlight{产物抑制}某些药物的代谢产物消除较慢，当达到足够高的血药浓度时，可竞争性抑制原形药物的代谢酶，从而抑制原形药物的代谢，这种抑制同样能引起非线性药物动力学。
+    \begin{blankblock}{}
+        一些药物在较高剂量时的消除速率比较低剂量时的消除速率低，是产物抑制所导致的非线性药物动力学的典型特征之一。双香豆素是这种特殊的由产物抑制所导致非线性药物动力学的典型药物，当分别静脉注射150mg、286mg及600mg后，发现$t_{1/2}$从10小时分别增加到18小时及32小时，但所有剂量下双香豆素的血药浓度时程仍呈现为一级动力学。
+    \end{blankblock}
+\end{frame}
+
+
+\section{米氏非线性药物动力学方程}
+
+
+\begin{frame}
+    \frametitle{Michaelis-Menten方程}
+    Michaelis-Menten方程发表于1913年，主要用于描述酶参与的物质变化动力学过程。药物生物转化、肾小管分泌、胆汁排泄通常需要酶或载体系统的参与，这些系统呈现容量限制性的药物消除过程。这些过程常用Michaelis-Menten方程来表征非线性药物动力学过程，也称为米氏非线性药物动力学过程。
+
+    对于静脉注射给药后，可饱和的药物消除过程，其动力学方程如下：
+    \[
+        -\frac{\mathrm{d}C}{\mathrm{d}t}=\frac{V_{\mathrm{max}}\cdot C}{K_{\mathrm{m}}+C}
+    \]
+    式中，$-\frac{\mathrm{d}C}{\mathrm{d}t}$为药物在$t$时间的下降速率，表示消除速率的大小；$V_{\mathrm{max}}$为药物在体内消除过程中理论上的最大消除速率；$K_{\mathrm{m}}$为米氏常数，是指药物在体内的消除速度为$V_{\mathrm{max}}$的一半时所对应的血药浓度，即当$-\frac{\mathrm{d}C}{\mathrm{d}t}=\frac{V_{\mathrm{max}}}{2}$时，$K_{\mathrm{m}}=C$。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Michaelis-Menten过程中药物的消除速率与药物浓度之间关系}
+    \begin{minipage}{0.43\linewidth}
+        \begin{itemize}
+          \item $K_{\mathrm{m}}$、$V_{\mathrm{max}}$在一定条件下是个常数 ， 取决于药物的有关性质和酶或载体介导的过程 。
+          \item 相对而言 ， $K_{\mathrm{m}}$是更重要的动力学参数 ， 它表征底物和酶或载体的亲和性
+            \begin{itemize}
+              \item $K_{\mathrm{m}}$越小 ， 底物与蛋白亲和性越强 ， 代谢或转运能力越强 ；
+              \item $K_{\mathrm{m}}$越大 ， 底物与蛋白亲和性越弱 ， 代谢或转运能力越弱 。
+            \end{itemize}
+        \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}{0.55\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{Michaelis-Menten过程}
+        \end{figure}
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{具米氏非线性消除过程的药物动力学特征}
+    Michaelis-Menten 方程有两种极端的情况：
+
+    \bigskip
+    \begin{minipage}{0.48\linewidth}
+        \begin{enumerate}
+            \item 当$C \ll K_{\mathrm{m}}$时
+            \[
+              -\frac{\mathrm{d}C}{\mathrm{d}t}=\frac{V_{\mathrm{max}}}{K_{\mathrm{m}}}\cdot C
+            \]
+          \end{enumerate}
+          血药浓度消除速度与血药浓度成正比 ， 这与一级动力学线性特征相一致 。 其消除速度常数$k$事实上等于${V_{\mathrm{max}}}/{K_{\mathrm{m}}}$。实际中这种情况很常见 ， 当药物的血药浓度远低于$K_{\mathrm{m}}$值 ， 如图中曲线的前端近似直线
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{enumerate}
+            \item[2.] 当$C \gg K_{\mathrm{m}}$时
+            \[
+              -\frac{\mathrm{d}C}{\mathrm{d}t}=V_{\mathrm{max}}
+            \]
+          \end{enumerate}
+          这种情况下 ， 静脉注射给药后血药浓度的消除速度与血药浓度无关 ， 消除过程达到饱和 ， 消除速度接近一恒定值 ， 如图中曲线的尾端 ， 趋向于一条水平线 。
+
+          ~~
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{具非线性动力学特征药物的血药浓度对消除速度影响}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.98\linewidth]{非线性动力学特征}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{米氏非线性药物动力学过程的识别}
+    对于米氏非线性 （ 消除或者吸收 ） 药物动力学过程的识别 ， 可静脉注射不同剂量 （ 如高 、 中 、低 3 个剂量 ） ， 得到各剂量下的一系列血药浓度-时间数据 ， 按下述方式处理数据 ：
+    \begin{enumerate}
+      \item 作血药浓度-时间曲线 ， 如不同剂量下的血药浓度-时间曲线相互平行，表明在该剂量范围内为线性动力学过程 ； 反之则为非线性动力学过程 。
+      \item 以剂量对相应的血药浓度进行归一化 ， 以单位剂量下血药浓度对时间作图 ， 所得的曲线若明显不重叠 ， 则可能存在非线性过程 。
+      \item 若AUC与剂量成正比 ， 说明为线性动力学 ， 否则为非线性动力学
+            \begin{itemize}
+              \item 若AUC随剂量增加较快 ， 可能为非线性消除 ；
+              \item 若AUC随剂量增加较慢 ， 血管外给药的情况下可能为非线性吸收
+            \end{itemize}
+      \item 将每个血药浓度-时间数据按线性动力学模型处理 ， 计算各个剂量下的动力学参数 ； 若所求得的动力学参数明显随剂量大小而改变 ， 则认为可能存在非线性过程 。
+    \end{enumerate}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{米氏非线性药物动力学过程的识别}
+    除了多剂量的实验外 ， 单剂量药物静脉注射实验也可以通过$\log{C}-t$图初步判断其动力学过程，为后续工作提供一些启示 。 若$\log{C}-t$图呈明显的上凸曲线 ， 则可能为非线性动力学 ； 若呈直线或下凹曲线则可能为线性动力学。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{单剂量药物静脉注射}
+    \end{figure}
+\end{frame}
+
+
+\section{米氏非线性消除药物血药浓度与时间的关系}
+
+
+\begin{frame}
+    \frametitle{血药浓度的经时过程}
+    $-\frac{\mathrm{d}C}{\mathrm{d}t}=\frac{V_{\mathrm{max}} C}{K_{\mathrm{m}}+C}$移项，得
+    \[
+        -\frac{\mathrm{d}C}{C}(C+K_{\mathrm{m}})=V_{\mathrm{max}}\mathrm{d}t
+    \]
+    或
+    \[
+        -\mathrm{d}C-\frac{K_{\mathrm{m}}}{C}\mathrm{d}C=V_{\mathrm{max}}\mathrm{d}t
+    \]
+    积分，得
+    \[
+        t=\frac{C_0-C}{V_{\mathrm{max}}}+\frac{K_{\mathrm{m}}}{V_{\mathrm{max}}}{\ln\frac{C_0}C}
+    \]
+    整理，得
+    \[
+        \ln C=\frac{C_{0}-C}{K_{\mathrm{m}}}+\ln C_{0}-\frac{V_{\mathrm{max}}}{K_{\mathrm{m}}}t
+    \]
+    由于式中同时存在$C$及$\ln C$，故不能如线性动力学中一样明确解出关系式 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{以血药浓度变化速率求${K_{\mathrm{m}}}$与${V_{\mathrm{max}}}$}
+    采用将米氏方程直线化的方法 ，将式$-\frac{\mathrm{d}C}{\mathrm{d}t}=\frac{V_{\mathrm{max}} C}{K_{\mathrm{m}}+C}$ 移项后 ，其瞬时速度${\mathrm{d}C}/{\mathrm{d}t}$以平均速度${\Delta C}{\Delta t}$表示，$C$以取样间隔内中点时间的血药浓度或平均血药浓度$C_\text{中}$（即$\Delta t$时间内开始血药浓度与末尾血药浓度的平均值 ） 表示 ， 可得 ：
+    \[
+        \begin{aligned}
+            \text{Lineweaver-Burk 方程式：} & \qquad \frac{1}{-\Delta C/\Delta t}=\frac{K_{\mathrm{m}}}{V_{\mathrm{max}}\cdot C_{\text{中}} }+\frac{1}{V_{\mathrm{max}}}\\
+            \text{Hanes-Woolf 方程式：} & \qquad \frac{C_{\text{中}}}{-\frac{\Delta C}{\Delta t}}=\frac{C_{\text{中}}}{V_{\mathrm{max}}}+\frac{K_{\mathrm{m}}}{V_{\mathrm{max}}}\\
+            \text{Eadie-Hofstee 方程式：} & \qquad -\frac{\Delta C}{\Delta t}=-\frac{\left(-\frac{\Delta C}{\Delta t}\right)}{C_\text{中}}{K_{\mathrm{m}} + V_{\mathrm{max}}}
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.96\linewidth]{回归1}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.96\linewidth]{回归2}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.67\linewidth]{回归3}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某药静脉注射后体内为单纯米氏非线性消除 ， 测定了一组不同时间点下血药浓度数据 ， 计算该药物非线性消除过程的${K_{\mathrm{m}}}$与${V_{\mathrm{max}}}$。
+    \end{example}
+    \vspace{-10pt}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.59\linewidth]{数据}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{用静脉注射后的$\ln C -t$数据估算${K_{\mathrm{m}}}$与${V_{\mathrm{max}}}$}
+    
+    \begin{minipage}{0.48\linewidth}
+        血药浓度-时间方程：
+        \[
+            \ln C=\frac{C_{0}-C}{K_{\mathrm{m}}}+\ln C_{0}-\frac{V_{\mathrm{max}}}{K_{\mathrm{m}}}t
+        \]
+        $C$很低时 ，$C_0-C\approx C_0$， 该曲线尾段为直线：
+        \[
+            \ln C=\frac{C_{0}}{K_{\mathrm{m}}}+\ln C_{0}-\frac{V_{\mathrm{max}}}{K_{\mathrm{m}}}t
+        \]
+        截距以$\ln C_0^*$表示：
+        \[
+            \ln C_0^*=\frac{C_{0}}{K_{\mathrm{m}}}+\ln C_{0}
+        \]
+        \[
+            K_{\mathrm{m}} = \frac{C_{0}}{\ln C_0^* - \ln C_0}
+        \]
+        再根据直线的斜率求${V_{\mathrm{max}}}$。
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{静脉注射外推}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某药静脉注射后体内过程符合单纯米氏非线性消除 ， 测定了一组不同时间点下血药浓度数据，计算该药物非线性消除过程的${K_{\mathrm{m}}}$与${V_{\mathrm{max}}}$。
+        \begin{table}
+            \centering
+            \begin{tabular}{cccccccccccc}
+                \bottomrule
+                时间(h) & 0 & 2.5 & 5 & 10 & 20 & 35 & 45 & 55 & 58 & 63 & 67 \\ \hline
+                $C$(mg/L) & 180 & 175 & 169 & 160 & 129 & 57.3 & 27.5 & 5.85 & 2.321 & 0.294 & 0.0616\\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据不同给药速度$R$与相应稳态血药浓度$C_\mathrm{ss}$计算${K_{\mathrm{m}}}$与${V_{\mathrm{max}}}$}
+    本方法必须给以两种以上的不同剂量，并需测定相应的$C_\mathrm{ss}$。
+
+    当给药达到稳态时，药物的给药速度$R$等于消除速度
+    \[
+        R = \frac{V_{\mathrm{max}}'\cdot C_\mathrm{ss}}{K_{\mathrm{m}}+C_\mathrm{ss}}
+    \]
+    式中，$V_{\mathrm{max}}'$为以体内药量表示的最大消除速率（相当于$V_{\mathrm{max}}$和表观分布容积的乘积 ）
+
+    上式可改写为
+    \[
+        C_\mathrm{ss} = \frac{V_{\mathrm{max}}'\cdot C_\mathrm{ss}}{R} - K_{\mathrm{m}}
+    \]
+    以$C_\mathrm{ss}$对$C_\mathrm{ss}/R$作图或回归，截距为$- K_{\mathrm{m}}$， 斜率为$V_{\mathrm{max}}'$。
+    \begin{blankblock}{}
+        此法还可以根据已求得的${K_{\mathrm{m}}}$与${V_{\mathrm{max}}'}$预测不同剂量时的稳态血药浓度或预测要达到预期稳态血药浓度所需的给药剂量。本方法特别适合临床给药方案的调整。 
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据不同给药速度$R$与相应稳态血药浓度$C_\mathrm{ss}$计算${K_{\mathrm{m}}}$与${V_\mathrm{max}'}$}
+    将剂量1（ 给药速度$R_1$）及其对应的稳态血药浓度 （$C_\mathrm{ss1}$） ， 剂量 2 （ 给药速度$R_2$） 及其对应的稳态血药浓度（$C_\mathrm{ss2}$）直接代入方程，然后解方程组
+    \[
+        \begin{aligned}
+            R_1 = \frac{V_{\mathrm{max}}'\cdot C_\mathrm{ss1}}{K_{\mathrm{m}}+C_\mathrm{ss1}} \\
+            R_2 = \frac{V_{\mathrm{max}}'\cdot C_\mathrm{ss2}}{K_{\mathrm{m}}+C_\mathrm{ss2}}
+        \end{aligned}
+    \]
+    可解出
+    \[
+        K_{\mathrm{m}} = \frac{R_2 - R_1}{\frac{R_1}{C_\mathrm{ss1}} - \frac{R_2}{C_\mathrm{ss2}}}
+    \]
+    当$K_{\mathrm{m}}$求得后 ， 代入上述方程组中任一方程便可求出${V_\mathrm{max}'}$。
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        一患者服用苯妥英钠 ， 该药在这名患者的体内消除呈现非线性动力学。 每天口服给药 300 mg 的稳态血药浓度为8 mg/L，每天口服给药 400 mg 达稳态后的血药浓度为 12 mg/L。求该药在这名患者的${K_{\mathrm{m}}}$与${V_\mathrm{max}'}$值 。 如欲达到稳态血药浓度为 10 mg/L ， 每天应口服多大剂量 ？
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{生物半衰期}
+    将$C = 1/2C_0$代入式$t=\frac{C_0-C}{V_{\mathrm{max}}}+\frac{K_{\mathrm{m}}}{V_{\mathrm{max}}}{\ln\frac{C_0}C}$，得
+    \[
+        t_{1/2}=\frac{\frac12C_0+0.693K_{\mathrm{m}}}{V_{\mathrm{max}}}=\frac{C_0+1.386K_{\mathrm{m}}}{2V_{\mathrm{max}}}
+    \]
+    可见，非线性动力学药物由初浓度消除一半所需时间与初浓度成正比，随着血药浓度增大，其生物半衰期延长 。
+
+    在任何时间$t$，同样可以导出由浓度$C$消除一半所需的时间，即生物半衰期：
+    \[
+        t_{1/2} = \frac{C +1.386K_{\mathrm{m}}}{2V_{\mathrm{max}}}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{$K_{\mathrm{m}}$对$t_{1/2}$的影响}
+    \[
+        t_{1/2} = \frac{C +1.386K_{\mathrm{m}}}{2V_{\mathrm{max}}}
+    \]
+    \begin{enumerate}
+      \item 当血药浓度较低时，$C\ll K_{\mathrm{m}}$
+      \[
+        t_{1/2} = \frac{0.693K_{\mathrm{m}}}{V_{\mathrm{max}}}
+      \]
+      $t_{1/2}$主要受$K_{\mathrm{m}}$的影响，与血药浓度无关 。
+      \item 当血药浓度较高时，$C\gg K_{\mathrm{m}}$
+      \[
+        t_{1/2} = \frac{C}{2V_{\mathrm{max}}}
+      \]
+      $t_{1/2}$主要受血药浓度的影响，随血药浓度的增加而延长 。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.85\linewidth]{生物半衰期}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{$V_{\mathrm{max}}$对$t_{1/2}$的影响}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.63\linewidth]{生物半衰期V}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{清除率}
+    单纯非线性消除的药物 ，清除率为单位时间内所消除的药物量$(-\frac{\dif X}{\dif t})$与血药浓度的比值：
+    \[
+            \mathrm{Cl}=\frac{-\frac{\mathrm{d}X}{\mathrm{d}t}}C=\frac{-\frac{\mathrm{d}C}{\mathrm{d}t}\cdot V}{C}=\frac{V_{\mathrm{max}}\cdot V}{K_{\mathrm{m}}+C}
+    \]
+    \begin{enumerate}
+      \item 当血药浓度较高时，$C\gg K_{\mathrm{m}}$
+      \[
+        \mathrm{Cl}=\frac{V_{\mathrm{max}}\cdot V}{C}
+      \]
+      总体清除率与血药浓度呈反比，血药浓度增大1倍，总体清除率减少至原来的一半 。
+      \item 当血药浓度较低时，$C\ll K_{\mathrm{m}}$
+      \[
+        \mathrm{Cl}=\frac{V_{\mathrm{max}}\cdot V}{K_{\mathrm{m}}}
+      \]
+      此时，清除率与血药浓度无关 ， 相当于线性动力学药物总体清除率 。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{清除率}
+    当一种药物既有线性消除又具非线性消除时 ， 药物消除的方程式为 ：
+    \[
+        \mathrm{Cl}=\frac{V_{\mathrm{max}}\cdot V}{K_{\mathrm{m}}+C} +kV
+    \]
+    清除率与血药浓度有关 ，血药浓度增大 ，清除率随之变小。 
+    
+    但血药浓度对清除率的影响程度 ， 除与血药浓度大小有关外 ， 还与两种清除途径所占比例有关 ， 如肾清除属于线性消除，而肝代谢属于非线性消除，药物绝大部分通过肾排泄，则其总体清除率受血药浓度影响的程度小；相反情况则影响显著。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血药浓度-时间曲线下面积}
+    \[
+        t=\frac{C_0-C}{V_{\mathrm{max}}}+\frac{K_{\mathrm{m}}}{V_{\mathrm{max}}}{\ln\frac{C_0}C}
+    \]
+    若药物静脉注射后 ， 体内消除按可饱和非线性过程进行 ， 则其血药浓度-时间曲线下面积：
+    \[
+        \mathrm{AUC}=\int_{0}^{\infty}C\mathrm{d}t=\int_{C_0}^{0}t\mathrm{d}C=\frac{1}{V_{\mathrm{max}}}\int_{C_{0}}^{0}\left[C_{0}-C+K_{\mathrm{m}}\mathrm{ln}\frac{C_{0}}{C}\right]\mathrm{d}C=\frac{C_{0}}{V_{\mathrm{max}}}\biggl(\frac{C_{0}}{2}+K_{\mathrm{m}}\biggr)
+    \]
+    上式表明 ， 血药浓度-时间曲线下面积与剂量不成正比关系 。
+
+    将$C_0=X_0/V$代入式，得
+    \[
+        \mathrm{AUC}=\frac{X_{0}}{V_{\mathrm{max}}V}\biggl(\frac{X_{0}}{2V}+K_{\mathrm{m}}\biggr)
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血药浓度-时间曲线下面积}
+    \[
+        \mathrm{AUC}=\frac{X_{0}}{V_{\mathrm{max}}V}\biggl(\frac{X_{0}}{2V}+K_{\mathrm{m}}\biggr)
+    \]
+    \begin{enumerate}
+      \item 当剂量低到$X_0/(2V)\ll K_{\mathrm{m}}$时
+      \[
+        \mathrm{AUC}=\frac{K_{\mathrm{m}}X_{0}}{V_{\mathrm{max}}V}
+      \]
+      即曲线下面积直接与剂量成正比 ， 相当于一级消除过程 。
+      \item 当$X_0/(2V)\gg K_{\mathrm{m}}$时
+      \[
+        \mathrm{AUC}=\frac{X_{0}^2}{2V_{\mathrm{max}}V^2}
+      \]
+      AUC与剂量平方成正比，此种情况下，剂量的少量增加，会引起AUC比较大的增加，如阿司匹林、苯妥英钠等药物的体内过程就属于此类情况，在临床应用时应引起注意 。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{稳态血药浓度}
+    具有非线性药物动力学性质的药物 ， 当多次给药达到稳态浓度时 ， 其药物消除速度和给药速度相等：
+    \[
+        R = \frac{X_0}{\tau} = \frac{V_{\mathrm{max}}'\cdot C_\mathrm{ss}}{K_{\mathrm{m}}+C_\mathrm{ss}}
+    \]
+    所以
+    \[
+        C_\mathrm{ss} = \frac{K_{\mathrm{m}}X_0}{\tau V_{\mathrm{max}}' - X_0}
+    \]
+    当增加剂量时，稳态血药浓度的升高幅度高于正比例的增加 。
+\end{frame}
+
+
+
+
+
+\end{document}

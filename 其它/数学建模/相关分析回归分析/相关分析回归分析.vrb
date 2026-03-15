@@ -1,0 +1,25 @@
+\frametitle{回归系数的显著性检验($t$检验)}
+    \hspace{-2em}
+    \begin{minipage}{0.48\linewidth}
+        \begin{enumerate}
+          \item 原假设 H0 ：$\beta 1 = 0$
+
+          （x 与 y 不存在线性关系）
+          \item 对立假设  H1 ： $\beta 1 \neq 0$
+          \item 构造 $t$ 统计量
+          \item 计算$|t|$
+          \item $|t| \geqslant  t_{\alpha/2}$， 拒绝 H0
+          \item $|t| \leqslant  t_{\alpha/2}$， 接受 H0
+        \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{t检验}
+        \end{figure}
+    \end{minipage}
+
+\begin{codeblock}{求$t_{\alpha/2}$的matlab函数}
+ta = tinv(1 - alpha/2, n - m - 1)
+# alpha通常为0.05，n为样本点个数，m为自变量个数
+\end{codeblock}

@@ -1,0 +1,6481 @@
+state rawpoll_johnson adjpoll_johnson
+U.S. 6.18 5.675099
+U.S. 3.0 3.401513
+Virginia 6.0 6.401513
+Florida 2.0 1.77773
+U.S. 6.0 3.61832
+U.S. 7.0 6.114222
+U.S. 4.2 3.15359
+Pennsylvania 3.0 3.466432
+U.S. 6.3 6.420006
+U.S. 5.0 4.220173
+Florida 4.0 2.676897
+California 5.0 3.17051
+U.S. 7.0 5.823322
+"North Carolina" 8.0 6.499082
+Florida 5.0 3.499082
+U.S. 6.0 5.044833
+Florida 4.0 3.054228
+Pennsylvania 5.0 6.359501
+Pennsylvania 6.0 4.421316
+U.S. 8.0 6.27284
+Colorado 7.0 8.359501
+U.S. 4.0 4.964521
+Arizona 4.0 5.359501
+U.S. 2.0 2.193952
+"North Carolina" 3.0 4.359501
+U.S. 5.0 5.160502
+U.S. 6.0 3.333669
+Missouri 4.0 4.308866
+"New Hampshire" 10.0 7.959227
+Pennsylvania 3.0 4.065788
+Ohio 3.0 4.065788
+"North Carolina" 2.0 3.065788
+Wisconsin 4.0 5.065788
+"North Carolina" 8.0 6.137042
+"New Mexico" 9.0 9.695195
+Arizona 5.0 4.172206
+Virginia 3.0 4.065788
+Iowa 4.0 2.92435
+Virginia 3.0 2.953504
+Minnesota 5.0 5.062005
+U.S. 7.0 5.325565
+Texas 5.0 5.680246
+U.S. 3.9 4.31719
+Florida 6.0 4.507492
+Florida 2.0 3.065788
+Maine 5.0 4.953504
+Georgia 7.0 4.46675
+Nevada 10.0 7.959227
+"New Hampshire" 6.0 6.023805
+Texas 2.96 3.286923
+Pennsylvania 4.0 4.154008
+California 7.0 4.46675
+Florida 1.0 1.193952
+Colorado 4.0 5.065788
+U.S. 5.0 5.083591
+Florida 5.0 2.46675
+Georgia 9.0 6.488977
+Florida 3.0 3.680246
+Georgia 3.0 2.624004
+U.S. 7.0 5.309163
+"North Carolina" 1.0 1.193952
+Virginia 4.0 2.92435
+Georgia 8.0 6.92435
+U.S. 3.0 1.689483
+Ohio 6.0 5.675094
+Vermont 5.0 4.715528
+Texas 8.0 5.46675
+Pennsylvania 6.0 3.46675
+"North Carolina" 4.0 4.205119
+"North Carolina" 5.0 3.92435
+Virginia 8.0 5.46675
+"South Carolina" 6.0 3.46675
+"New York" 5.0 2.46675
+Ohio 9.0 6.46675
+Nevada 4.0 5.065788
+Maine 5.0 4.353873
+Michigan 8.0 5.46675
+U.S. 5.0 3.080554
+Virginia 5.0 2.96151
+"North Carolina" 7.0 4.46675
+Missouri 3.0 2.779283
+Colorado 11.0 8.466749
+U.S. 5.0 3.919255
+Missouri 4.0 4.681268
+Arizona 8.0 5.46675
+"North Carolina" 4.0 3.675094
+Kansas 12.0 9.466749
+Illinois 5.6 4.397091
+U.S. 7.6 6.157888
+U.S. 5.0 3.914717
+Indiana 4.0 4.597736
+Florida 4.95 3.507888
+Wisconsin 7.0 4.46675
+Michigan 9.0 7.341999
+Florida 4.0 2.464277
+Utah 7.0 4.46675
+California 4.0 2.987635
+Nevada 6.0 5.218653
+Nevada 3.0 3.065412
+Minnesota 6.0 5.24644
+U.S. 6.0 4.313881
+"New Mexico" 17.0 14.46675
+Iowa 10.0 7.46675
+Illinois 2.0 1.953504
+"South Dakota" 6.0 5.781412
+"New Hampshire" 8.0 8.322947
+Texas 7.0 5.412182
+Montana 11.0 9.360102
+Illinois 8.0 5.46675
+Washington 1.0 1.462773
+Illinois 6.0 5.544566
+Utah 4.0 3.448703
+Nevada 12.0 9.466749
+Nevada 3.0 2.675094
+Pennsylvania 6.0 3.782832
+"North Carolina" 2.6 1.942694
+Kentucky 1.0 1.450507
+"New Hampshire" 6.0 5.280114
+Arizona 3.0 3.15742
+Pennsylvania 6.0 5.535694
+Utah 4.0 3.388899
+Idaho 6.0 5.487112
+U.S. 8.0 5.078035
+Massachusetts 4.0 4.828505
+"North Carolina" 6.0 5.056914
+Utah 7.0 6.448933
+Massachusetts 7.0 4.46675
+Florida 4.0 3.675094
+"New Hampshire" 7.0 6.924345
+"New York" 5.0 2.416225
+"North Carolina" 4.0 1.826469
+Maine 9.0 7.795682
+Louisiana 2.0 0.9115855
+Minnesota 9.0 6.46675
+Ohio 4.0 1.826469
+Nevada 4.0 3.817233
+Washington 7.0 4.46675
+Ohio 9.0 5.95136
+Oregon 7.0 4.46675
+Maryland 6.0 3.46675
+"New Hampshire" 6.0 6.015173
+Michigan 3.0 2.535694
+"New Jersey" 4.0 1.466749
+Wisconsin 9.0 5.795405
+Alaska 11.0 10.22262
+Utah 5.0 3.293923
+Florida 3.0 3.015173
+"North Carolina" 5.0 5.015173
+Nevada 9.0 9.015173
+Pennsylvania 5.0 5.015173
+Ohio 4.0 4.015173
+Michigan 6.0 6.293468
+Arizona 4.0 3.782474
+Georgia 5.0 4.528198
+Oregon 6.0 4.769864
+Pennsylvania 8.0 5.68949
+Wisconsin 1.0 0.6320456
+Texas 4.0 2.497429
+"New Hampshire" 10.0 7.46675
+Indiana 10.0 7.46675
+Mississippi 6.0 3.46675
+Texas 3.0 1.769864
+Nevada 7.0 4.826469
+Missouri 10.0 7.46675
+Idaho 9.0 8.222618
+Colorado 10.0 7.918934
+"North Carolina" 4.0 3.640071
+Kansas 7.0 5.914717
+"North Carolina" 8.0 5.722593
+Wisconsin 9.0 8.808175
+"Maine CD-1" 4.2 4.153504
+"Maine CD-2" 6.3 6.253504
+Florida 6.0 3.722593
+Pennsylvania 6.0 3.918934
+Florida 4.0 1.918934
+Georgia 8.0 5.722593
+U.S. 8.0 5.096575
+Vermont 7.0 5.744009
+U.S. 6.0 4.740836
+"North Carolina" 5.0 3.797497
+Colorado 6.0 4.791084
+Connecticut 5.0 2.46675
+Tennessee 6.0 3.46675
+Ohio 6.0 3.918934
+Oklahoma 4.5 3.931868
+Virginia 9.0 6.722593
+Indiana 5.0 4.7965
+Missouri 5.0 3.539457
+"North Carolina" 6.0 3.244338
+Iowa 6.0 3.510585
+"New Hampshire" 4.4 4.657977
+Alabama 5.0 2.46675
+Arkansas 5.0 2.46675
+Louisiana 4.8 3.424725
+Pennsylvania 7.0 4.049983
+"South Dakota" 7.0 6.402135
+Massachusetts 9.0 6.621108
+Oklahoma 12.0 9.466749
+Alaska 7.0 6.84151
+Hawaii 7.0 4.46675
+Pennsylvania 6.0 2.557987
+Ohio 2.0 1.960808
+Delaware 6.0 3.46675
+Ohio 5.0 4.347528
+Wisconsin 4.0 3.347528
+Florida 2.7 2.208402
+Idaho 10.0 7.46675
+Wisconsin 6.0 5.090873
+Ohio 7.0 4.049983
+Michigan 7.0 6.605309
+U.S. 7.0 4.22873
+Vermont 10.0 7.46675
+Nevada 7.0 6.001086
+Ohio 9.5 6.591003
+Kentucky 8.0 5.46675
+U.S. 5.0 3.190963
+Louisiana 5.0 2.46675
+Maine 6.0 3.46675
+"Rhode Island" 7.0 4.46675
+Indiana 10.0 7.049983
+"Maine CD-2" 6.0 5.353873
+"South Dakota" 7.0 6.010668
+Nebraska 10.0 7.46675
+Arkansas 3.5 3.138551
+Montana 11.0 8.466749
+"Maine CD-1" 8.9 7.695682
+U.S. 6.0 4.279817
+Oregon 5.0 3.203529
+"Maine CD-1" 4.0 3.353873
+Ohio 5.0 3.8724
+"Nebraska CD-2" 8.0 6.423684
+Georgia 2.6 1.16678
+Louisiana 7.0 4.956314
+Alaska 7.0 5.800428
+Oregon 7.0 4.588298
+Iowa 10.0 7.049983
+Nevada 10.0 7.384011
+"New Hampshire" 11.0 8.334057
+Maryland 4.0 1.649931
+Wyoming 9.0 6.877967
+"North Carolina" 9.0 5.95136
+Arizona 6.5 4.505079
+Oregon 4.0 2.193432
+Georgia 4.3 3.133347
+"Maine CD-2" 8.4 7.195682
+"New Hampshire" 8.0 6.421375
+Vermont 4.0 3.014014
+Wisconsin 4.0 3.051657
+Michigan 10.3 7.651839
+Indiana 9.0 7.302149
+Louisiana 4.0 2.444504
+Florida 2.8 1.36678
+Virginia 3.0 2.18723
+Utah 9.0 7.214797
+Illinois 5.8 4.416451
+"District of Columbia" 3.0 0.4667494
+Illinois 4.7 2.386975
+Pennsylvania 4.0 2.198
+Florida 5.0 2.769025
+"West Virginia" 6.0 3.46675
+Georgia 1.9 1.234994
+Ohio 6.0 3.821614
+California 6.51 6.0051
+Kentucky 5.7 3.509084
+Texas 7.74 7.235099
+"North Carolina" 5.2 4.609324
+Indiana 9.0 7.702041
+"New York" 5.21 4.7051
+Alaska 13.0 10.46675
+"South Dakota" 16.0 13.46675
+Florida 3.37 2.865099
+Illinois 7.16 6.655099
+U.S. 8.0 4.832564
+"New Mexico" 14.0 12.04392
+"New Hampshire" 9.0 6.78701
+Wisconsin 4.0 2.193432
+"New Hampshire" 10.0 8.539457
+California 4.0 2.377538
+Florida 5.0 4.342106
+Pennsylvania 6.0 4.352058
+"New Jersey" 5.82 5.315099
+"North Dakota" 12.0 9.466749
+Pennsylvania 4.27 3.765099
+Florida 7.0 4.514908
+Tennessee 7.0 4.742008
+Ohio 6.46 5.9551
+Tennessee 7.0 3.632502
+Nevada 4.0 3.063068
+Missouri 5.0 3.574145
+U.S. 10.0 6.015251
+Nevada 8.0 5.031559
+U.S. 6.0 3.449229
+Pennsylvania 4.0 2.539457
+Wisconsin 5.29 4.7851
+Indiana 6.23 5.725099
+U.S. 4.0 4.256183
+Virginia 7.0 5.352058
+Minnesota 7.26 6.7551
+U.S. 7.0 3.955676
+Wyoming 10.0 7.46675
+Indiana 11.0 7.861376
+Utah 14.0 10.40113
+Ohio 8.2 5.652133
+Arizona 8.3 5.967001
+Missouri 3.86 3.355099
+"North Carolina" 5.27 4.765099
+Virginia 7.0 5.569018
+Florida 5.0 1.498562
+Washington 6.59 6.0851
+U.S. 6.0 4.331541
+Colorado 12.0 10.36176
+Michigan 7.19 6.685099
+Virginia 5.73 5.225099
+Arizona 7.21 6.7051
+"Rhode Island" 5.0 2.463402
+Colorado 10.06 9.555099
+Alaska 10.0 8.590217
+U.S. 9.8 5.774858
+Texas 7.0 7.322947
+"New York" 7.0 2.847999
+U.S. 8.0 5.600378
+"New Jersey" 6.0 3.679824
+Georgia 5.31 4.805099
+Virginia 7.0 4.787673
+"New Hampshire" 5.0 3.956525
+Maryland 6.35 5.845099
+Missouri 5.0 3.569018
+Colorado 13.0 9.610222
+Colorado 6.0 4.352058
+Massachusetts 6.92 6.4151
+California 3.0 0.9246698
+Arizona 9.0 6.463401
+Pennsylvania 6.0 2.610222
+"North Carolina" 8.0 4.762693
+U.S. 4.0 4.123102
+"North Carolina" 5.0 3.110243
+Alabama 3.79 3.285099
+Oregon 9.38 8.875099
+Iowa 4.54 4.0351
+"New Mexico" 24.0 19.25713
+Ohio 5.0 3.107633
+Tennessee 6.3 5.7951
+Idaho 10.0 7.801977
+Illinois 6.0 3.538691
+Nevada 4.0 3.903062
+Oregon 8.0 4.95322
+Washington 10.0 7.025667
+U.S. 10.0 5.668427
+Washington 7.1 4.139849
+Nebraska 7.3 4.339849
+"South Carolina" 6.69 6.185099
+Pennsylvania 5.0 3.041832
+U.S. 7.0 4.822081
+Connecticut 6.19 5.685099
+Kentucky 5.87 5.365099
+Wisconsin 7.8 5.264072
+Colorado 5.0 4.903062
+Florida 2.0 1.903062
+Kansas 5.54 5.0351
+Ohio 6.0 2.583928
+Minnesota 4.0 2.268418
+Colorado 7.0 4.972583
+"North Carolina" 6.0 2.583928
+Colorado 10.0 7.08318
+"New Hampshire" 7.0 3.270664
+U.S. 5.0 3.505818
+U.S. 4.0 3.983703
+Virginia 8.0 5.093813
+Arizona 5.0 4.795477
+"New Hampshire" 11.0 7.350421
+U.S. 8.0 5.037767
+Arizona 5.0 3.240234
+Nevada 8.0 4.583928
+Virginia 3.0 2.903062
+Ohio 8.0 5.119866
+California 6.0 4.122397
+Delaware 7.0 4.418305
+Ohio 4.0 3.903062
+Montana 7.0 5.361583
+Louisiana 6.1 5.595099
+U.S. 8.0 4.134324
+Ohio 10.0 6.392526
+Wisconsin 5.0 4.903062
+Pennsylvania 5.0 4.903062
+"North Carolina" 3.0 2.903062
+Tennessee 5.0 2.769537
+Oklahoma 6.13 5.6251
+Nevada 6.6 5.16413
+Massachusetts 7.0 4.24787
+U.S. 11.0 7.736113
+Alaska 17.9 13.01727
+Mississippi 4.12 3.615099
+"New Mexico" 14.47 13.9651
+U.S. 4.0 3.855162
+Utah 8.8 5.876591
+Nebraska 3.98 3.475099
+Massachusetts 9.0 7.389446
+Michigan 10.0 6.601357
+U.S. 6.0 5.437468
+Ohio 6.0 3.574836
+Nevada 9.73 9.2251
+Arkansas 10.86 10.3551
+U.S. 8.0 6.59446
+Florida 2.0 0.7160667
+Pennsylvania 5.0 4.345241
+"North Carolina" 6.0 5.345241
+Florida 3.0 2.345241
+Ohio 6.0 5.345241
+U.S. 5.0 4.728122
+Florida 6.0 2.697601
+Montana 8.7 8.195099
+Maine 9.0 6.130181
+"North Carolina" 5.0 2.987973
+Maryland 6.0 2.984806
+Florida 5.0 2.048141
+Minnesota 6.0 3.48693
+"North Carolina" 9.0 6.137463
+Pennsylvania 5.0 2.048141
+Florida 6.0 2.131633
+"New Hampshire" 13.0 9.488863
+Pennsylvania 4.0 3.347528
+"North Carolina" 11.0 6.846241
+Ohio 6.0 3.048141
+Idaho 8.01 7.5051
+Kansas 9.0 6.289907
+Nevada 9.0 6.463401
+U.S. 5.0 4.586251
+Utah 5.0 3.269212
+Georgia 5.0 2.840318
+"North Carolina" 7.0 4.048141
+Pennsylvania 8.0 3.386306
+Florida 3.0 1.216805
+Georgia 10.0 5.311677
+U.S. 5.0 1.047777
+Georgia 8.0 5.306855
+Iowa 9.0 5.704531
+"North Carolina" 7.0 5.352058
+"New Hampshire" 10.0 7.394052
+Pennsylvania 8.0 5.100204
+Ohio 7.0 4.987973
+Virginia 6.0 3.987973
+U.S. 6.0 4.352058
+Florida 4.0 1.463402
+U.S. 9.0 5.512928
+Utah 5.0 3.222632
+U.S. 6.6 6.592966
+U.S. 5.0 4.443848
+Florida 6.0 3.349271
+Nevada 5.0 4.081309
+Arizona 12.0 7.311677
+"New Hampshire" 6.0 3.270528
+U.S. 6.0 3.428708
+Connecticut 9.0 5.263371
+Pennsylvania 5.0 2.607867
+Florida 6.0 3.360911
+"New York" 8.0 3.686092
+Texas 9.9 6.30435
+U.S. 6.0 3.121363
+Iowa 8.0 5.189121
+Iowa 10.0 6.217591
+"West Virginia" 2.77 2.265099
+U.S. 9.0 5.711617
+"Maine CD-1" 7.9 5.563552
+"South Carolina" 3.4 0.4890027
+Arkansas 5.0 1.476541
+Georgia 6.0 2.476541
+"Maine CD-2" 10.7 8.363552
+Georgia 9.0 5.448731
+Wisconsin 11.0 6.659817
+Michigan 8.0 4.312103
+Kansas 8.0 5.254416
+U.S. 6.6 6.451094
+Florida 9.0 4.65413
+U.S. 4.2 3.008261
+U.S. 8.0 4.742254
+Maine 9.0 6.663552
+"North Carolina" 6.0 2.517318
+"New Jersey" 5.0 1.263371
+Delaware 5.4 4.895099
+"South Dakota" 8.32 7.815099
+Kansas 8.0 5.186242
+"New Hampshire" 15.0 10.31168
+Colorado 10.0 6.448731
+Colorado 13.0 9.476541
+Iowa 10.0 6.448731
+Virginia 8.0 4.594752
+Michigan 9.0 5.506645
+Virginia 8.0 4.448731
+Pennsylvania 4.0 1.514533
+U.S. 5.6 4.27518
+Illinois 4.05 0.4859072
+"South Carolina" 7.0 2.984379
+Hawaii 4.78 4.275099
+Wisconsin 11.0 7.795454
+Maine 2.68 2.175099
+"New Jersey" 6.0 2.003714
+Colorado 10.0 8.193431
+California 2.0 -1.163266
+"North Dakota" 8.0 5.331525
+Nevada 5.0 2.365592
+Washington 14.0 10.83673
+Vermont 5.48 4.975099
+Nevada 8.0 5.157159
+Illinois 6.4 3.195454
+"North Dakota" 5.97 5.465099
+U.S. 6.9 6.608691
+Nevada 8.0 3.311678
+Colorado 7.0 5.569018
+Colorado 12.0 8.974485
+Wyoming 3.51 3.005099
+Florida 3.0 0.3803045
+Vermont 13.0 9.263371
+Ohio 11.0 6.547472
+Pennsylvania 8.0 3.547472
+Nevada 7.0 2.547472
+"North Carolina" 9.0 4.547472
+Alaska 8.88 8.375099
+Virginia 11.0 7.687182
+"New Hampshire" 6.17 5.6651
+Pennsylvania 10.0 5.531615
+"New York" 8.2 4.419158
+U.S. 6.8 5.335781
+Ohio 8.0 4.131633
+Florida 1.0 -0.7598903
+Maine 12.0 8.920671
+Florida 5.3 3.102093
+Arizona 8.0 4.836734
+"Maine CD-2" 8.0 5.130181
+Texas 9.0 4.889664
+"West Virginia" 4.0 0.8045112
+"District of Columbia" 4.0 0.938689
+Alaska 16.0 12.93869
+"North Carolina" 10.0 6.022974
+"District of Columbia" 1.93 1.425099
+California 10.0 6.111346
+U.S. 6.8 6.387163
+Arizona 8.0 5.568629
+Illinois 3.9 1.167028
+"Maine CD-1" 9.0 6.130181
+Iowa 8.0 4.226365
+Arizona 5.0 3.65984
+U.S. 8.0 5.742172
+"New Hampshire" 8.0 7.742692
+Utah 12.0 7.750044
+"New Mexico" 16.0 13.09744
+Wyoming 9.0 5.938689
+Massachusetts 9.0 5.263371
+Wyoming 10.0 7.130716
+"South Carolina" 3.0 -0.0009646
+Pennsylvania 5.0 4.742692
+Ohio 4.0 3.742692
+Florida 2.0 1.742693
+"North Carolina" 5.0 4.742692
+Nevada 8.0 7.742692
+U.S. 5.0 3.789037
+Florida 3.0 1.352059
+Arkansas 3.0 0.3928923
+U.S. 9.0 4.875959
+"New Mexico" 12.0 11.40305
+Massachusetts 9.0 4.750435
+"Rhode Island" 4.07 3.565099
+Minnesota 6.0 2.223438
+U.S. 8.0 4.976887
+Nevada 5.0 1.836734
+"North Carolina" 5.0 1.953571
+U.S. 7.3 5.707241
+Michigan 4.5 4.163585
+Pennsylvania 14.0 9.130623
+U.S. 7.0 3.861022
+Oregon 11.0 6.671791
+Virginia 6.0 3.64727
+"South Dakota" 11.0 7.938689
+"Rhode Island" 8.0 4.938689
+Texas 4.23 2.010781
+Montana 9.0 5.938689
+Delaware 7.0 3.938689
+Louisiana 6.0 3.921838
+Mississippi 5.0 1.938689
+U.S. 5.0 2.283067
+U.S. 6.6 6.065513
+"New Hampshire" 11.0 7.938689
+Arizona 12.0 7.919983
+U.S. 8.0 3.348832
+Kentucky 7.4 3.681419
+"West Virginia" 6.0 2.938689
+Maryland 7.0 3.938689
+"North Dakota" 10.0 6.938689
+Oklahoma 6.0 3.372705
+Oklahoma 10.0 6.938689
+Hawaii 8.0 4.938689
+U.S. 4.7 1.942368
+Maryland 6.0 2.63979
+Vermont 9.0 5.938689
+"North Carolina" 6.0 3.9591
+Nebraska 9.0 5.938689
+Iowa 7.0 4.933308
+Arkansas 6.0 2.938689
+Alaska 9.0 6.506471
+Ohio 4.0 1.966241
+U.S. 7.5 5.7802
+Idaho 15.0 11.93869
+U.S. 5.7 5.051391
+Tennessee 6.0 2.938689
+Indiana 12.0 8.938688
+Louisiana 7.5 4.000716
+U.S. 5.0 4.136641
+"New Hampshire" 6.0 5.614152
+Connecticut 6.0 2.938689
+California 7.0 2.790179
+Louisiana 5.0 1.938689
+Florida 5.0 3.059452
+Missouri 4.0 2.958665
+Alabama 6.0 2.938689
+Missouri 10.0 6.938689
+Nevada 8.0 7.614152
+Iowa 9.0 5.938689
+Washington 9.0 5.938689
+"New Mexico" 19.0 15.93869
+Ohio 14.0 10.0313
+"New Jersey" 4.0 0.938689
+Maine 7.0 3.938689
+Wisconsin 7.0 3.863389
+Kentucky 7.0 3.938689
+Illinois 8.0 4.938689
+U.S. 3.0 2.742692
+"Rhode Island" 8.0 4.263371
+U.S. 8.0 6.138329
+Michigan 10.0 5.716684
+Kansas 12.0 8.938688
+Ohio 7.0 5.059452
+Massachusetts 5.0 1.938689
+U.S. 5.4 4.652309
+Pennsylvania 6.0 2.862676
+Illinois 8.0 4.474632
+Idaho 6.67 5.352765
+U.S. 5.6 4.370661
+Pennsylvania 9.0 5.031302
+Nevada 11.0 7.938689
+Florida 8.0 4.031302
+Missouri 7.0 3.476541
+"North Carolina" 15.0 11.0313
+"North Carolina" 6.0 2.514916
+"West Virginia" 7.45 6.132764
+Minnesota 9.0 5.938689
+Oregon 8.0 4.938689
+Indiana 11.0 6.674492
+"South Dakota" 7.53 6.212764
+Wisconsin 8.0 4.938689
+"Maine CD-2" 10.4 7.586739
+Utah 7.0 3.840475
+Florida 8.0 3.934607
+"North Carolina" 4.0 1.738372
+Texas 6.0 3.522624
+U.S. 5.4 4.559494
+U.S. 5.0 5.015173
+"Maine CD-1" 7.3 4.48674
+Michigan 5.4 3.047016
+"New Hampshire" 7.0 6.487112
+Arizona 9.0 5.938689
+"South Carolina" 5.0 1.419115
+U.S. 8.4 6.395926
+"North Carolina" 7.0 5.268417
+Nevada 8.3 6.982765
+Nevada 9.0 8.487112
+Arkansas 6.66 5.342764
+Maine 12.0 8.263371
+Wyoming 9.51 8.192764
+"North Carolina" 4.0 1.910772
+Nebraska 7.41 6.092764
+Vermont 8.95 7.632764
+U.S. 4.0 1.811903
+U.S. 5.7 4.400825
+"South Carolina" 5.0 2.237332
+Maine 7.57 6.252764
+Oklahoma 8.99 7.672764
+Louisiana 6.36 5.042764
+"North Carolina" 7.0 3.938689
+Colorado 11.0 7.938689
+Alaska 10.35 9.032764
+"South Carolina" 6.0 2.938689
+"New Mexico" 11.78 10.46276
+"North Carolina" 7.0 3.867772
+U.S. 5.8 4.869707
+Montana 7.51 6.192765
+Mississippi 4.59 3.272764
+Virginia 8.0 4.881152
+Michigan 8.0 4.938689
+Ohio 8.0 4.607354
+"North Carolina" 9.0 4.919983
+U.S. 9.0 6.538946
+Michigan 6.5 2.71679
+Georgia 5.0 3.034159
+Arizona 5.0 3.178192
+U.S. 6.37 5.052764
+Oregon 10.0 5.228174
+"North Dakota" 6.22 4.902764
+U.S. 7.7 5.574398
+Kentucky 9.4 8.082764
+U.S. 13.0 9.262649
+U.S. 9.0 6.638141
+Connecticut 3.81 2.492764
+U.S. 5.0 3.991311
+U.S. 5.0 3.388427
+"Maine CD-1" 9.3 5.563371
+"Maine CD-2" 14.0 10.26337
+U.S. 4.0 3.614152
+Ohio 9.0 5.938689
+Texas 8.0 4.938689
+Ohio 10.0 6.87918
+"South Carolina" 7.0 3.919386
+Maine 8.8 5.98674
+Virginia 8.0 4.938689
+U.S. 6.0 4.987875
+Missouri 8.0 4.870571
+U.S. 5.9 4.542766
+U.S. 7.0 2.938838
+Oregon 6.31 4.992764
+Kansas 9.2 7.882764
+"New York" 4.0 0.938689
+"South Carolina" 6.97 5.652764
+Tennessee 5.45 4.132764
+Florida 8.0 3.611494
+"District of Columbia" 7.4 6.082764
+U.S. 9.3 5.122664
+Virginia 12.0 7.756279
+Iowa 8.71 7.392765
+"Rhode Island" 7.94 6.622764
+U.S. 9.0 5.796299
+Alabama 3.12 1.802764
+U.S. 7.2 4.952747
+Hawaii 7.57 6.252764
+U.S. 11.0 6.322193
+U.S. 5.0 4.202838
+Pennsylvania 6.0 2.938689
+Georgia 10.1 6.493495
+"North Carolina" 6.0 5.202838
+Ohio 6.0 5.202838
+Pennsylvania 5.0 4.202838
+Florida 2.0 1.202838
+Delaware 5.64 4.322764
+U.S. 5.6 4.518596
+Georgia 5.7 3.360149
+U.S. 8.0 4.563685
+Massachusetts 5.97 4.652764
+U.S. 8.0 4.378998
+U.S. 7.3 4.938626
+U.S. 5.0 3.121659
+U.S. 5.8 4.379699
+"District of Columbia" 4.0 0.6544144
+Florida 3.9 0.9160421
+Georgia 5.31 3.992764
+Mississippi 3.0 -0.4213157
+"New Hampshire" 10.0 5.716384
+Iowa 10.0 5.716384
+Florida 6.0 2.597793
+Maryland 5.74 4.422764
+Michigan 3.0 2.394673
+"New Hampshire" 5.36 4.042764
+U.S. 5.7 4.545678
+California 7.0 3.938689
+Colorado 6.6 5.282764
+Maine 6.56 4.693567
+"West Virginia" 10.0 5.726978
+U.S. 7.7 5.239543
+Alaska 16.0 12.65442
+Florida 5.0 1.938689
+Wyoming 9.0 5.654415
+Alaska 9.09 7.223567
+Iowa 12.0 6.775148
+U.S. 8.0 5.244101
+Colorado 15.0 9.718078
+Virginia 12.0 6.718077
+U.S. 10.0 4.693668
+Ohio 6.0 4.65364
+Pennsylvania 6.0 4.65364
+Florida 4.0 2.65364
+"North Carolina" 6.0 4.65364
+Washington 6.55 5.232765
+U.S. 4.0 3.487113
+"New York" 6.0 3.137208
+"South Dakota" 11.0 7.654415
+Maine 10.0 7.137208
+Arizona 6.8 5.482765
+"New Hampshire" 4.48 2.613567
+Delaware 12.04 10.17357
+Indiana 10.0 6.920096
+Minnesota 8.21 6.892765
+Georgia 8.0 5.137209
+Montana 9.0 5.654415
+"North Dakota" 12.0 8.654415
+"New Mexico" 18.0 13.71638
+Michigan 6.06 4.742764
+Georgia 8.0 4.938689
+U.S. 6.0 4.85823
+U.S. 5.9 4.411063
+Nebraska 11.0 7.654415
+"West Virginia" 7.0 3.654415
+Nevada 9.0 4.716384
+U.S. 8.0 3.855786
+Virginia 7.69 6.372764
+U.S. 7.3 4.746729
+Mississippi 5.0 2.333669
+Florida 6.0 2.940291
+U.S. 6.0 3.753973
+"Rhode Island" 8.0 5.333669
+"Rhode Island" 7.0 3.654415
+Florida 2.0 0.1934316
+"New Hampshire" 12.0 9.33367
+Vermont 9.0 6.333669
+Delaware 8.0 4.654415
+Indiana 7.47 6.152764
+Hawaii 4.87 3.003567
+Missouri 8.85 7.532765
+Wisconsin 6.39 5.072764
+Oklahoma 11.0 7.654415
+Hawaii 7.0 4.333669
+Delaware 6.0 3.333669
+Montana 11.0 8.33367
+Maryland 6.0 3.333669
+Arkansas 5.0 2.333669
+"New Hampshire" 11.0 6.681147
+U.S. 5.0 2.907405
+"New York" 6.0 1.786235
+Washington 8.0 5.333669
+Pennsylvania 5.0 1.562624
+"New Jersey" 4.0 1.333669
+"North Carolina" 5.85 4.532764
+Arkansas 7.0 3.654415
+U.S. 8.0 5.356941
+Oklahoma 11.0 8.33367
+Tennessee 6.0 2.654415
+"Rhode Island" 4.1 2.233567
+Idaho 11.0 8.33367
+Vermont 10.0 6.654415
+Maryland 6.0 2.654415
+Missouri 8.0 5.445687
+Alaska 11.0 8.33367
+Idaho 15.0 11.65442
+U.S. 10.0 6.99203
+"District of Columbia" 4.0 1.333669
+Connecticut 4.0 1.333669
+Pennsylvania 6.0 3.910772
+U.S. 12.0 7.219244
+"New Jersey" 4.76 3.442765
+Maine 7.0 4.333669
+"New Hampshire" 11.0 7.654415
+Massachusetts 8.0 5.333669
+Indiana 11.0 8.33367
+Wyoming 8.0 5.333669
+Illinois 8.0 5.333669
+Kentucky 8.0 4.654415
+Utah 13.0 8.864213
+Connecticut 7.0 3.654415
+Wisconsin 12.0 7.716384
+Louisiana 4.0 0.6544144
+Iowa 6.0 3.821634
+"West Virginia" 5.0 2.333669
+Virginia 11.0 7.217079
+Vermont 5.53 3.663567
+Alabama 6.0 3.333669
+Iowa 10.0 7.333669
+"North Carolina" 7.7 3.918445
+Alaska 10.0 7.14554
+Colorado 6.0 3.574836
+Hawaii 8.0 4.654415
+Arkansas 10.11 8.243567
+U.S. 6.0 3.42607
+"North Dakota" 11.0 8.33367
+Tennessee 5.0 2.333669
+"New Mexico" 18.0 15.33367
+Mississippi 4.0 0.6544144
+Missouri 9.0 5.654415
+Utah 7.0 4.309115
+Missouri 10.0 7.333669
+"New Hampshire" 14.0 10.26337
+Idaho 3.14 1.273567
+"South Dakota" 12.0 9.33367
+Oregon 7.0 4.333669
+Alabama 8.0 4.654415
+Indiana 12.0 8.654415
+"District of Columbia" 7.31 5.443567
+Minnesota 9.0 6.333669
+Arizona 7.0 4.255481
+Colorado 13.0 9.442524
+Idaho 13.0 9.487846
+Pennsylvania 3.0 1.268418
+Nebraska 10.0 7.333669
+Nevada 11.0 8.33367
+Ohio 6.33 5.012764
+Florida 5.7 1.522665
+Florida 8.0 4.738902
+Kansas 13.0 10.33367
+Iowa 9.0 5.654415
+Maine 7.0 3.654415
+"South Dakota" 2.15 0.2835668
+Wyoming 5.66 3.793567
+"New Mexico" 13.27 11.40357
+Pennsylvania 6.9 3.11679
+Nevada 5.29 3.423567
+Louisiana 5.0 2.333669
+"West Virginia" 9.31 7.443567
+Nebraska 6.66 4.793567
+"New Hampshire" 12.0 8.438615
+Wisconsin 8.0 5.333669
+Kentucky 8.0 5.333669
+Mississippi 3.97 2.103567
+Pennsylvania 5.53 4.212764
+"New Hampshire" 5.0 3.034159
+Alaska 11.0 8.074096
+U.S. 9.0 5.364256
+Washington 9.0 5.654415
+U.S. 10.0 6.012448
+U.S. 6.0 4.718831
+"South Carolina" 6.0 3.333669
+Illinois 8.0 4.654415
+Louisiana 8.11 6.243567
+Illinois 6.7 5.382764
+Arizona 8.0 5.333669
+"New York" 5.19 3.872764
+Ohio 9.8 6.017169
+Arizona 8.3 4.395236
+"New Mexico" 16.0 14.41095
+"New Mexico" 20.0 16.65442
+Michigan 5.0 3.37809
+"North Dakota" 16.91 15.04357
+"New Jersey" 4.0 0.6544144
+Colorado 11.0 8.33367
+Massachusetts 6.0 2.654415
+Nevada 11.0 7.869622
+Kansas 11.0 7.654415
+Oklahoma 11.55 9.683567
+Virginia 15.0 10.30418
+Oregon 9.0 5.654415
+Wisconsin 9.0 5.654415
+Texas 7.46 6.142765
+Ohio 12.0 6.775148
+"New York" 4.0 1.333669
+"North Carolina" 8.0 5.333669
+U.S. 7.0 4.123182
+Michigan 11.0 6.716384
+Pennsylvania 9.0 3.775149
+California 5.41 4.092764
+Minnesota 8.0 4.654415
+Kentucky 5.4 3.533567
+Nevada 4.8 1.788899
+U.S. 8.5 6.748026
+"South Carolina" 5.4 3.533567
+Texas 7.0 4.333669
+Michigan 8.0 5.333669
+"North Carolina" 9.0 4.716384
+Arizona 10.0 5.716384
+Virginia 9.0 5.761353
+Virginia 8.0 5.333669
+Ohio 9.0 6.333669
+Nevada 10.0 6.654415
+Utah 7.0 3.507094
+Montana 5.86 3.993567
+Kansas 6.51 4.643567
+U.S. 10.0 4.8535
+Oregon 5.83 3.963567
+Connecticut 7.17 5.303567
+Florida 5.71 4.392765
+Pennsylvania 6.0 3.333669
+Iowa 9.15 7.283566
+Colorado 16.0 12.09945
+Iowa 12.0 8.099453
+Alabama 3.64 1.773567
+U.S. 9.0 4.359684
+Colorado 12.0 7.716384
+U.S. 7.0 4.740646
+"North Carolina" 7.0 3.654415
+Tennessee 7.1 5.233567
+Florida 5.0 2.495918
+Ohio 9.0 4.716384
+U.S. 6.0 4.59029
+Arizona 10.0 6.654415
+Massachusetts 6.21 4.343567
+California 7.0 4.333669
+Georgia 7.0 4.333669
+Colorado 11.0 7.654415
+Pennsylvania 7.0 6.081309
+"North Carolina" 6.0 5.081309
+Ohio 6.0 5.081309
+Florida 3.0 2.081309
+U.S. 5.0 2.081493
+Michigan 8.0 4.654415
+Delaware 9.0 4.444294
+"Maine CD-2" 9.9 5.917181
+"South Carolina" 7.0 3.654415
+U.S. 6.49 4.623567
+Georgia 6.96 5.093567
+Florida 6.0 1.688389
+Georgia 5.0 2.399377
+Florida 5.0 2.333669
+Virginia 8.0 3.716384
+Georgia 11.0 5.7179
+"New Hampshire" 11.46 9.204735
+"Maine CD-1" 12.1 8.117182
+Arizona 9.0 5.955442
+U.S. 10.0 6.716199
+Ohio 9.0 5.654415
+Virginia 11.0 7.099453
+Delaware 5.07 2.814734
+"North Dakota" 10.23 7.974734
+"District of Columbia" 1.81 -0.445266
+Texas 8.0 3.716384
+Alaska 19.0 12.19133
+Ohio 6.0 3.933308
+Iowa 7.0 2.015883
+Maryland 5.26 3.393567
+Florida 4.0 2.959659
+Ohio 6.0 4.959659
+"North Carolina" 6.0 4.959659
+Pennsylvania 6.0 4.959659
+Wyoming 15.0 8.191334
+U.S. 7.0 3.495394
+Virginia 9.0 5.654415
+"District of Columbia" 3.0 -0.467114
+"South Dakota" 19.0 12.19133
+"West Virginia" 3.69 1.434734
+Washington 7.33 5.463567
+U.S. 5.0 2.33794
+U.S. 8.0 5.6704
+Alaska 16.0 12.53289
+Texas 8.0 4.654415
+Iowa 8.0 6.087249
+Wyoming 9.0 5.532886
+Pennsylvania 8.0 3.716384
+Michigan 6.0 4.795888
+U.S. 6.4 4.8404
+U.S. 5.0 3.845538
+Virginia 10.0 5.862855
+Colorado 13.0 8.862855
+Virginia 6.24 4.373567
+U.S. 6.0 4.46325
+"South Dakota" 8.63 6.374734
+U.S. 6.9 4.814775
+"New York" 5.0 1.654414
+"South Dakota" 11.0 7.532886
+Iowa 6.0 3.378861
+Nebraska 15.0 8.191334
+Missouri 5.0 3.124466
+"North Dakota" 14.0 10.53289
+Vermont 6.75 4.494734
+Alaska 4.87 2.614734
+Hawaii 1.49 -0.7652659
+Michigan 2.0 0.087249
+Vermont 5.0 2.9717
+"West Virginia" 6.0 2.532886
+Montana 14.0 7.191333
+"West Virginia" 12.0 5.191333
+Arizona 4.55 2.683567
+U.S. 6.7 5.075973
+Montana 13.84 11.58473
+U.S. 7.0 5.482021
+Wyoming 12.22 9.964735
+Louisiana 9.0 2.191333
+Virginia 10.0 5.015882
+Michigan 7.62 5.753567
+Idaho 7.98 5.724734
+Pennsylvania 6.0 2.654415
+Nebraska 10.0 6.532886
+Colorado 8.34 6.473567
+"North Carolina" 6.35 4.483567
+Minnesota 8.59 6.723567
+Colorado 13.0 8.015882
+Kentucky 5.0 1.127683
+Indiana 13.0 6.191333
+Montana 8.0 4.532886
+Oregon 6.0 3.610681
+"New York" 9.0 3.847904
+Arizona 3.0 0.9046043
+"North Dakota" 16.0 9.191334
+"Rhode Island" 2.26 0.004734
+"Rhode Island" 8.0 4.532886
+Delaware 9.0 5.532886
+Minnesota 15.0 8.191334
+Maine 9.22 6.964735
+Indiana 6.2 4.333567
+Oklahoma 13.0 6.191333
+Nebraska 6.04 3.784734
+U.S. 6.7 4.555631
+Alabama 8.0 1.191334
+Florida 8.3 3.838904
+Nevada 10.78 8.524734
+U.S. 10.0 5.025095
+Kentucky 7.0 0.191334
+Maine 11.1 7.117181
+Illinois 5.2 2.286038
+Colorado 5.0 2.36656
+U.S. 6.0 4.746455
+Florida 7.0 2.716384
+Vermont 11.0 7.532886
+Missouri 7.64 5.773567
+Oklahoma 10.0 6.532886
+Tennessee 7.0 3.532886
+California 7.0 3.654415
+Mississippi 6.06 3.804734
+Arkansas 9.0 5.532886
+Georgia 7.0 3.654415
+Arkansas 9.55 7.294734
+"New Hampshire" 14.35 11.76447
+Idaho 15.0 11.53289
+U.S. 5.0 2.503754
+Arizona 5.0 3.216389
+Pennsylvania 5.0 3.072944
+"New Mexico" 14.3 12.04473
+Louisiana 5.0 1.532886
+Florida 5.0 1.654414
+U.S. 6.0 4.321379
+Hawaii 9.0 5.532886
+"New Hampshire" 10.0 6.532886
+Delaware 5.11 2.524472
+Connecticut 12.0 5.191333
+Maryland 6.0 2.532886
+Iowa 3.0 1.37809
+Kentucky 7.0 3.532886
+U.S. 5.0 4.081309
+Tennessee 10.0 3.191333
+Maine 15.0 8.191334
+Louisiana 6.52 4.264734
+Nevada 4.0 2.216389
+Missouri 14.0 7.191333
+"District of Columbia" 4.88 2.294472
+Missouri 9.0 5.532886
+Idaho 19.0 12.19133
+Wisconsin 8.15 6.283566
+Connecticut 7.0 3.532886
+Oklahoma 6.91 4.654734
+Maine 6.0 2.532886
+Mississippi 4.0 0.532886
+U.S. 6.5 4.308567
+Florida 9.0 4.464516
+Florida 5.0 3.034159
+Alabama 8.0 4.532886
+Nevada 5.0 2.385513
+"New Hampshire" 8.0 3.962709
+Indiana 13.0 9.532887
+Virginia 7.0 5.216389
+"New Jersey" 3.71 1.843567
+U.S. 7.6 5.710453
+Arkansas 11.0 4.191333
+Kansas 8.0 5.287233
+U.S. 7.5 5.676253
+"Rhode Island" 3.7 1.114472
+Iowa 9.0 5.532886
+U.S. 7.4 5.374885
+U.S. 7.0 5.65364
+Ohio 5.4 3.533567
+Kansas 6.61 4.354734
+Wisconsin 10.0 5.213984
+"Rhode Island" 15.0 8.191334
+Utah 13.0 8.252111
+U.S. 7.9 5.941204
+Washington 10.0 6.532886
+"New Mexico" 21.0 17.53289
+Hawaii 13.99 11.40447
+U.S. 6.4 4.152701
+"South Carolina" 5.41 3.154734
+Georgia 10.8 6.869038
+California 10.0 5.937654
+Florida 3.8 1.805045
+U.S. 7.0 5.178976
+Tennessee 6.51 4.254735
+Georgia 7.0 4.45353
+Montana 4.07 1.484473
+Georgia 9.0 4.716384
+Vermont 10.0 5.89709
+Delaware 12.0 5.191333
+Texas 7.82 5.953567
+Michigan 7.0 5.244404
+Vermont 11.0 4.191333
+Massachusetts 6.0 2.532886
+"North Dakota" 7.37 4.784472
+Oregon 9.0 5.532886
+U.S. 8.0 4.584496
+Illinois 8.0 4.532886
+"New Jersey" 4.0 0.532886
+"New York" 5.27 3.403567
+Kansas 11.0 7.532886
+Kentucky 7.64 5.384734
+Illinois 6.22 4.353567
+Illinois 12.0 5.191333
+U.S. 11.0 6.634304
+Connecticut 6.0 1.737694
+California 5.62 3.753567
+Hawaii 7.0 0.191334
+Massachusetts 11.0 4.191333
+Wisconsin 10.0 6.532886
+Minnesota 9.0 5.532886
+Nevada 10.0 6.532886
+Pennsylvania 7.0 4.054146
+Florida 5.25 3.383567
+U.S. 5.0 3.147293
+Iowa 7.18 4.924734
+Utah 7.0 3.361012
+Alaska 17.1 14.51447
+Connecticut 4.65 2.394734
+Maryland 9.0 2.191333
+U.S. 6.5 4.208718
+Alabama 4.88 2.624734
+U.S. 9.0 5.449406
+Oregon 11.0 4.191333
+"New Jersey" 8.0 1.191334
+Nebraska 4.57 1.984473
+California 11.0 4.251632
+Massachusetts 5.1 2.844734
+Idaho 9.66 7.074472
+U.S. 7.0 5.057447
+Michigan 3.0 0.7733491
+Massachusetts 4.0 1.102579
+Oregon 6.62 4.364734
+Mississippi 4.0 -2.808666
+"Rhode Island" 4.4 1.348958
+Georgia 8.09 5.834734
+"North Carolina" 10.0 6.919386
+"District of Columbia" 5.14 2.088958
+U.S. 7.0 4.277464
+"North Carolina" 7.0 3.532886
+"New Hampshire" 8.61 5.558958
+Maryland 7.85 5.594734
+Iowa 16.0 10.18748
+Washington 6.97 4.714734
+"South Dakota" 6.99 4.404472
+Pennsylvania 7.58 5.713567
+Texas 2.6 0.1073358
+"West Virginia" 3.77 1.184472
+Arizona 12.0 8.532887
+U.S. 6.0 2.767969
+Arkansas 2.85 0.2644722
+U.S. 7.01 4.754735
+U.S. 10.0 4.796196
+Colorado 12.0 8.532887
+Oklahoma 6.24 3.654472
+Ohio 4.8 2.891044
+Vermont 10.26 7.674472
+U.S. 7.0 4.009053
+Michigan 9.0 5.532886
+California 3.0 0.2198809
+Minnesota 7.23 4.974734
+Mississippi 2.05 -0.5355277
+Ohio 8.0 4.532886
+"South Carolina" 7.0 3.532886
+Washington 16.0 9.191334
+"New Hampshire" 14.0 7.191333
+"West Virginia" 6.88 3.828958
+Missouri 7.76 5.504735
+U.S. 7.0 4.935797
+Illinois 4.3 1.435219
+Michigan 6.68 4.424734
+Montana 10.98 7.928957
+"New Mexico" 16.1 13.51447
+U.S. 7.0 5.005209
+Virginia 9.0 5.532886
+Alaska 5.49 2.438958
+Nevada 12.0 5.191333
+Virginia 8.59 6.334734
+Ohio 15.0 9.187485
+"New Hampshire" 10.0 6.909313
+Virginia 8.0 4.583977
+Texas 8.0 4.532886
+Virginia 11.0 5.187486
+Michigan 14.0 8.187485
+Vermont 6.65 3.598958
+Wyoming 14.56 11.97447
+"North Carolina" 10.0 4.187486
+Pennsylvania 13.0 7.187485
+U.S. 7.0 4.726884
+Florida 12.0 6.187485
+Indiana 7.76 5.504735
+Kansas 5.17 2.584472
+U.S. 9.0 5.078835
+U.S. 5.9 5.395099
+"New Jersey" 9.0 4.532293
+Tennessee 7.0 3.036747
+"North Carolina" 5.17 2.914734
+Arizona 7.81 5.554734
+Maine 2.51 -0.5410422
+Hawaii 5.27 2.218958
+Connecticut 6.01 3.424473
+U.S. 9.0 6.378193
+Colorado 11.42 9.164734
+Delaware 9.39 6.338958
+U.S. 6.0 4.264808
+Nevada 8.71 6.124472
+Missouri 7.0 4.576612
+Ohio 6.0 3.522935
+"South Dakota" 2.74 -0.3110422
+U.S. 10.0 5.061033
+Louisiana 4.46 1.874472
+U.S. 6.0 3.826766
+"North Dakota" 12.0 8.948957
+U.S. 9.0 5.114637
+Hawaii 11.85 8.493071
+U.S. 9.0 4.617548
+Tennessee 7.75 5.164472
+Iowa 6.0 2.632066
+U.S. 7.0 3.411236
+"Rhode Island" 6.31 2.953071
+"New York" 5.0 1.532886
+Michigan 7.5 3.48049
+Wisconsin 6.54 4.284734
+"New Mexico" 25.0 18.19134
+Idaho 8.17 5.118958
+U.S. 9.0 5.624479
+Pennsylvania 6.0 2.532886
+Wyoming 9.7 6.648958
+Pennsylvania 6.87 4.614734
+"South Carolina" 5.24 2.654472
+Iowa 7.56 4.974473
+U.S. 6.0 3.125315
+U.S. 6.8 3.819592
+U.S. 6.0 4.194971
+Alabama 4.17 1.584472
+Oregon 7.77 5.184473
+"New Jersey" 5.0 1.531661
+U.S. 7.0 4.209271
+U.S. 11.0 6.199667
+Georgia 6.0 3.4748
+Illinois 6.1 2.948518
+Nebraska 6.88 3.828958
+"Maine CD-2" 10.5 6.131427
+U.S. 6.0 3.821676
+Michigan 8.0 5.352146
+Wisconsin 3.0 1.434085
+Illinois 7.0 4.044157
+Georgia 7.0 3.532886
+Maryland 4.95 2.364472
+"North Dakota" 14.54 11.18307
+"New Jersey" 3.81 1.554734
+Iowa 16.0 9.191334
+Ohio 7.24 4.984734
+Michigan 8.0 3.787451
+Oklahoma 10.83 7.778958
+"Maine CD-1" 9.4 5.031426
+Massachusetts 6.19 3.604472
+Wyoming 11.77 8.413071
+Wisconsin 13.0 6.191333
+Florida 5.0 1.532886
+U.S. 6.0 2.096694
+California 8.0 4.532886
+U.S. 12.0 6.91334
+Delaware 12.39 9.033072
+Maine 4.64 2.054472
+U.S. 6.6 4.268998
+Mississippi 4.84 1.788958
+U.S. 8.0 5.155505
+"District of Columbia" 0.0 -3.356929
+U.S. 7.0 5.136912
+Missouri 8.0 5.266528
+"South Dakota" 11.86 8.503071
+"New Mexico" 11.6 8.548958
+Alaska 9.92 6.563071
+Arizona 4.0 1.643983
+U.S. 10.0 4.793422
+U.S. 6.1 3.729431
+U.S. 5.0 3.412743
+Pennsylvania 5.0 1.962458
+U.S. 12.0 6.912176
+U.S. 8.0 4.533097
+Texas 11.0 4.191333
+Georgia 7.45 4.864472
+U.S. 12.0 6.839156
+Florida 6.43 4.174734
+"New Hampshire" 12.73 9.079548
+"North Carolina" 6.0 3.387561
+Kentucky 4.92 1.868958
+U.S. 6.7 4.297463
+Kansas 8.8 5.748958
+Maine 17.14 13.78307
+"District of Columbia" 9.39 5.739549
+U.S. 6.67 4.084472
+U.S. 7.6 5.147911
+"South Carolina" 7.62 4.568958
+Virginia 6.0 3.228635
+"New York" 8.0 1.191334
+"West Virginia" 6.76 3.403071
+Washington 9.59 7.004472
+Ohio 5.0 3.37809
+Vermont 0.0 -3.356929
+Texas 7.83 5.574734
+Louisiana 5.78 2.728958
+Illinois 7.66 5.404734
+U.S. 13.0 8.693769
+Tennessee 6.66 3.608958
+Arkansas 3.96 0.9089578
+Minnesota 9.94 7.354472
+Wisconsin 16.0 11.67838
+Arizona 10.0 5.678376
+Michigan 12.0 7.678376
+U.S. 8.0 6.186348
+"North Carolina" 6.0 3.18686
+U.S. 6.0 3.722593
+U.S. 7.3 4.808306
+Idaho 5.0 1.989132
+"North Carolina" 6.67 4.084472
+"New York" 4.92 2.664734
+U.S. 9.0 6.53535
+Arizona 6.51 3.924472
+Kentucky 7.12 4.534472
+Colorado 10.02 7.434473
+Colorado 16.0 9.191334
+California 7.23 4.974734
+Georgia 4.0 1.392162
+Virginia 6.35 3.764472
+Connecticut 3.91 0.8589579
+Michigan 6.55 3.964472
+U.S. 7.8 5.262672
+Oklahoma 7.0 4.453775
+U.S. 12.0 7.746197
+Missouri 9.23 6.644472
+Wyoming 3.58 -0.0704518
+Montana 6.1 2.743071
+Kansas 7.0 4.097289
+U.S. 9.0 4.660508
+Maryland 6.86 3.808958
+U.S. 8.2 5.617891
+"North Dakota" 12.96 9.309547
+Iowa 6.48 3.428958
+Indiana 6.95 4.364472
+"North Carolina" 10.0 3.191333
+Maine 10.0 5.631427
+"Rhode Island" 8.84 5.189548
+Oregon 5.24 2.188958
+Florida 5.9 2.088963
+Wisconsin 3.99 1.404472
+Arizona 13.0 6.191333
+Idaho 9.04 5.683071
+U.S. 6.0 3.217166
+U.S. 7.4 4.775476
+Georgia 7.39 4.338958
+Michigan 13.0 6.191333
+Massachusetts 7.02 3.968958
+U.S. 6.0 3.629778
+Florida 2.0 -0.4555157
+Kansas 17.0 10.19133
+Pennsylvania 5.16 2.574472
+"New Hampshire" 4.68 1.323071
+Vermont 10.38 6.729548
+Alaska 16.0 10.58651
+Delaware 6.6 2.949548
+U.S. 6.7 4.041504
+U.S. 8.0 3.882
+Hawaii 10.64 6.764915
+Ohio 13.0 6.191333
+U.S. 6.2 3.518012
+Alabama 4.93 1.878958
+U.S. 5.0 2.690746
+Virginia 6.0 3.586967
+U.S. 9.0 4.702864
+Colorado 4.0 2.434085
+"New Mexico" 17.4 14.04307
+U.S. 7.0 4.801598
+"District of Columbia" 6.32 2.444915
+Nebraska 5.33 1.973071
+U.S. 7.0 4.539991
+Ohio 7.23 4.644473
+"New Jersey" 5.03 2.444473
+Texas 7.0 4.721873
+"North Carolina" 2.0 0.4340849
+"New Hampshire" 10.0 5.678376
+U.S. 6.2 3.492228
+U.S. 8.0 3.704906
+"South Dakota" 13.38 9.729548
+Alaska 8.53 4.879548
+U.S. 9.0 6.236377
+"North Dakota" 8.91 5.034915
+U.S. 6.5 3.757742
+Mississippi 3.6 0.2430709
+Nevada 12.95 9.898958
+U.S. 7.03 3.978958
+Wyoming 14.78 10.90491
+"New Hampshire" 10.44 6.564915
+U.S. 3.0 0.8996218
+U.S. 7.0 4.458159
+Illinois 6.88 4.294472
+"Rhode Island" 5.77 1.894915
+Nevada 9.94 6.583071
+Washington 8.26 5.208958
+U.S. 7.5 4.72578
+Montana 13.28 9.629547
+U.S. 8.0 3.844322
+Vermont 7.19 3.314915
+"North Carolina" 7.83 4.778958
+Pennsylvania 12.0 5.191333
+Ohio 14.0 9.678376
+Nevada 9.0 4.678376
+Pennsylvania 13.0 8.678376
+"North Carolina" 8.0 3.678376
+Virginia 7.23 4.178958
+Arkansas 4.38 1.023071
+"South Carolina" 10.0 3.191333
+Delaware 7.86 3.984915
+Kansas 9.46 6.103071
+Maine 7.28 3.629549
+U.S. 7.2 4.389392
+"West Virginia" 10.5 6.849548
+U.S. 9.0 5.615378
+Maine 8.49 4.614915
+Mississippi 4.33 0.6795483
+Texas 7.9 5.314473
+Michigan 7.76 4.708958
+U.S. 7.0 4.388881
+Florida 6.01 3.424473
+Louisiana 4.85 1.493071
+Colorado 9.21 6.158958
+Minnesota 8.46 5.408958
+Kentucky 6.86 3.503071
+Georgia 12.0 5.191333
+Arizona 6.48 3.428958
+Connecticut 7.61 4.253071
+California 5.65 3.064472
+"New York" 5.53 2.944473
+Arkansas 8.0 4.810829
+U.S. 10.0 5.217509
+Idaho 8.14 4.489549
+Virginia 13.0 6.191333
+Missouri 8.14 5.088958
+U.S. 7.8 4.950842
+Arkansas 6.93 3.279548
+U.S. 8.0 5.042057
+U.S. 6.0 3.194225
+Ohio 6.0 3.45459
+Nevada 15.06 11.40955
+Hawaii 2.79 -0.8604517
+Oklahoma 14.24 10.88307
+"Rhode Island" 7.0 2.932119
+U.S. 7.0 4.315963
+"North Dakota" 9.48 5.412119
+Tennessee 7.02 3.663071
+U.S. 7.0 4.934546
+"New Mexico" 17.9 14.24955
+"South Dakota" 5.61 1.734915
+"South Carolina" 5.09 1.733071
+U.S. 7.2 4.317202
+U.S. 9.0 4.070801
+U.S. 7.0 4.266691
+Nevada 8.0 5.239269
+Florida 10.0 3.191333
+Alaska 9.4 5.332119
+Hawaii 7.91 3.842119
+Maine 6.54 2.472119
+Pennsylvania 6.39 3.338958
+Iowa 10.58 7.223071
+Wyoming 9.73 5.662119
+U.S. 6.0 3.240946
+Indiana 9.37 6.318958
+Alabama 4.86 1.503071
+U.S. 8.0 5.408921
+U.S. 6.8 3.887897
+"New Jersey" 4.98 1.928958
+Delaware 7.68 3.612119
+Florida 3.0 1.434085
+U.S. 8.0 3.414937
+"West Virginia" 8.96 5.084915
+"New Hampshire" 15.6 11.53212
+U.S. 10.0 5.904822
+"Rhode Island" 12.98 8.883715
+Nebraska 6.77 3.119548
+U.S. 4.0 1.577503
+Wisconsin 8.4 5.348958
+"District of Columbia" 8.68 4.61212
+Montana 8.95 5.074915
+Florida 6.0 3.004845
+Florida 5.93 2.878958
+U.S. 6.7 3.761142
+Alaska 8.44 4.564915
+Illinois 7.0 3.588248
+Oregon 6.08 2.723071
+Ohio 6.43 3.378958
+U.S. 7.0 4.171109
+U.S. 7.0 3.910684
+Massachusetts 6.94 3.583071
+Louisiana 0.98 -2.670452
+"New Mexico" 14.0 11.64151
+Maryland 7.01 3.653071
+U.S. 6.0 3.349777
+Oklahoma 8.45 4.799548
+U.S. 8.1 5.129874
+Colorado 9.0 7.08725
+Idaho 17.29 13.41492
+U.S. 5.0 2.627487
+Nevada 10.0 6.824484
+Kentucky 7.07 3.419549
+U.S. 8.0 3.791401
+U.S. 7.6 4.59949
+California 12.0 5.191333
+Vermont 12.97 8.902119
+U.S. 7.0 4.11305
+Oklahoma 6.0 2.341318
+U.S. 7.0 4.302713
+Georgia 5.2 2.637872
+Illinois 6.8 3.748958
+Kansas 7.37 3.719548
+Connecticut 6.07 2.419549
+U.S. 7.0 3.846257
+U.S. 8.2 5.176222
+Georgia 7.79 4.433071
+"South Carolina" 7.28 3.629549
+"New York" 4.69 1.638958
+U.S. 7.0 3.751889
+U.S. 7.0 4.049983
+California 6.95 3.898958
+Wyoming 9.5 5.403715
+Washington 9.78 6.423071
+U.S. 7.8 4.443071
+Texas 8.06 5.008958
+U.S. 8.3 5.258047
+Arkansas 7.02 3.144915
+U.S. 9.0 4.731342
+Tennessee 9.14 5.489549
+Mississippi 5.25 1.374915
+Minnesota 8.74 5.383071
+Alabama 6.82 3.169549
+Colorado 10.22 6.863071
+Alaska 14.66 10.56371
+"New Mexico" 12.52 8.644915
+U.S. 7.7 4.650629
+Florida 9.0 4.678376
+Virginia 7.92 4.563071
+U.S. 7.0 3.777736
+U.S. 6.0 2.981348
+Iowa 11.39 7.739548
+Oklahoma 14.61 10.73491
+Nebraska 4.3 0.4249152
+Hawaii 4.8 0.7037154
+U.S. 8.8 5.739217
+"District of Columbia" 9.98 5.883715
+"North Carolina" 5.64 2.283071
+"West Virginia" 5.48 1.412119
+Missouri 9.23 5.873071
+U.S. 8.4 5.329931
+U.S. 6.7 3.631297
+Arizona 10.52 7.163072
+Idaho 9.14 5.07212
+U.S. 10.0 5.134575
+U.S. 7.7 4.626442
+Nevada 12.76 8.884914
+Oregon 7.93 4.279548
+Maine 15.58 11.48372
+U.S. 5.7 2.629642
+"New Hampshire" 13.01 8.913715
+Massachusetts 8.11 4.459548
+U.S. 7.1 4.03201
+Vermont 8.18 4.083715
+Michigan 8.21 4.853071
+Georgia 6.65 2.999548
+Indiana 10.73 7.373071
+Maryland 8.3 4.649549
+Kansas 8.3 4.424915
+U.S. 11.0 5.878042
+Louisiana 8.35 4.474916
+Pennsylvania 4.0 1.826766
+"North Dakota" 8.57 4.473715
+Wisconsin 6.85 3.493071
+U.S. 6.3 3.230021
+Montana 9.18 5.11212
+"South Dakota" 5.52 1.452119
+U.S. 9.0 5.555288
+"South Dakota" 7.03 2.933715
+Pennsylvania 8.86 5.503071
+"New Jersey" 7.41 4.053071
+Arizona 6.0 3.294721
+"Rhode Island" 11.35 7.271874
+U.S. 9.0 6.411748
+Delaware 9.61 5.513715
+U.S. 6.3 3.233895
+"North Carolina" 8.0 4.989748
+Kentucky 5.67 1.794915
+U.S. 10.7 6.695671
+Arkansas 8.1 4.03212
+Wyoming 11.65 7.571873
+U.S. 9.0 6.752122
+Connecticut 8.75 4.874915
+U.S. 6.0 2.935835
+Vermont 10.43 6.351874
+"South Carolina" 7.79 3.914915
+Nebraska 9.21 5.142119
+U.S. 7.9 4.249548
+Michigan 7.0 3.604721
+Nevada 8.0 4.867445
+Tennessee 6.15 2.274915
+Ohio 8.69 5.333071
+Maryland 9.49 5.614915
+Virginia 7.64 3.989548
+Minnesota 8.74 5.089548
+Oklahoma 10.37 6.302119
+Alaska 13.84 9.761873
+Alabama 4.95 1.074915
+Iowa 8.7 4.824915
+"New Mexico" 18.44 14.37212
+"North Carolina" 8.51 4.859549
+Texas 7.62 4.263071
+Arizona 9.91 6.259548
+Missouri 5.0 2.507702
+Colorado 9.36 5.709548
+Washington 10.83 7.179548
+"New Hampshire" 8.74 4.661873
+U.S. 9.0 3.330481
+Hawaii 15.04 10.96187
+"New York" 5.1 1.743071
+Michigan 7.93 4.279548
+"West Virginia" 11.18 7.083715
+Nevada 9.47 5.40212
+U.S. 5.0 2.697685
+Massachusetts 8.32 4.444915
+Missouri 10.02 6.369549
+Ohio 8.0 4.347152
+U.S. 12.0 7.813352
+Mississippi 5.61 1.54212
+Florida 6.38 3.023071
+Oregon 7.26 3.384915
+Illinois 6.21 2.853071
+U.S. 6.5 3.438517
+Maine 12.7 8.621874
+Louisiana 5.91 1.842119
+California 6.42 3.063071
+Michigan 11.5 7.444877
+Kansas 12.2 8.132118
+Indiana 9.42 5.769548
+California 4.0 2.020325
+"District of Columbia" 8.12 4.041873
+U.S. 8.0 3.321696
+"North Dakota" 15.45 11.37187
+Wisconsin 8.14 4.489549
+U.S. 7.1 4.036392
+Idaho 10.36 6.263715
+U.S. 7.0 3.71831
+U.S. 5.0 0.6912236
+"New Jersey" 5.48 1.829548
+U.S. 7.0 3.420589
+Kentucky 8.5 4.432119
+U.S. 5.0 1.580737
+Georgia 7.98 4.104915
+Delaware 9.96 5.881874
+U.S. 6.0 2.646538
+Washington 10.63 6.754915
+Mississippi 7.23 3.133715
+U.S. 6.5 3.439192
+Pennsylvania 7.56 3.909548
+"West Virginia" 5.89 1.811873
+Pennsylvania 8.0 3.015883
+U.S. 8.0 4.934123
+Connecticut 10.42 6.352119
+Ohio 7.79 4.139548
+Arkansas 4.77 0.6737152
+U.S. 6.0 2.511488
+U.S. 8.39 4.514915
+U.S. 6.9 3.8478
+"South Dakota" 13.39 9.311874
+Montana 8.52 4.423716
+U.S. 6.6 4.492669
+Colorado 12.02 8.144915
+"Rhode Island" 10.2 6.20027
+Oklahoma 12.77 8.673716
+"South Carolina" 8.14 4.07212
+"North Carolina" 7.64 3.764915
+U.S. 6.0 2.445169
+Michigan 6.86 2.984915
+Arizona 10.58 6.704915
+Maryland 7.1 3.032119
+U.S. 8.0 2.313747
+Florida 8.07 4.419548
+Oregon 8.53 4.462119
+Texas 7.62 3.969548
+U.S. 7.5 4.45575
+Iowa 10.4 6.332119
+U.S. 8.0 5.60745
+Tennessee 8.87 4.802119
+Louisiana 7.08 2.983715
+Missouri 8.64 4.764915
+"North Dakota" 6.94 2.94027
+Illinois 8.12 4.469548
+Indiana 11.13 7.254915
+U.S. 6.9 3.861753
+U.S. 9.0 5.429982
+Alaska 10.88 6.88027
+Virginia 8.57 4.694915
+"New Mexico" 16.45 12.35372
+"New Jersey" 6.34 2.464915
+Nevada 10.78 6.683715
+Nebraska 10.1 6.003716
+Maine 5.47 1.47027
+Massachusetts 9.47 5.40212
+U.S. 5.0 2.682818
+"New York" 6.76 3.109549
+Alabama 6.05 1.98212
+Wyoming 14.71 10.71027
+U.S. 6.8 3.767771
+California 6.88 3.229548
+Wisconsin 7.73 3.854915
+Georgia 6.54 2.472119
+Mississippi 3.12 -0.9581267
+"South Dakota" 9.34 5.34027
+Idaho 12.78 8.701874
+U.S. 7.2 4.17398
+"South Carolina" 6.94 2.843715
+U.S. 7.0 3.385059
+Arkansas 9.74 5.661873
+U.S. 9.0 3.860497
+U.S. 8.0 4.222986
+Pennsylvania 9.24 5.364915
+U.S. 8.0 4.325915
+"New Hampshire" 9.86 5.86027
+Minnesota 11.37 7.494915
+Hawaii 5.16 1.16027
+Vermont 11.43 7.43027
+U.S. 8.0 4.278852
+Kentucky 5.88 1.783715
+Connecticut 7.78 3.683715
+U.S. 7.0 3.179003
+Minnesota 10.59 6.52212
+Washington 9.75 5.682119
+U.S. 7.1 4.088717
+"District of Columbia" 6.22 2.22027
+Alabama 7.88 3.783715
+Texas 8.76 4.884915
+Florida 7.31 3.434915
+Maryland 6.87 2.773715
+U.S. 8.85 4.78212
+U.S. 7.8 4.808912
+Ohio 8.12 4.244915
+Illinois 8.23 4.354915
+Colorado 13.01 8.94212
+Nevada 9.33 5.251873
+Kansas 10.51 6.413715
+Oklahoma 11.97 7.891874
+Arizona 9.84 5.77212
+U.S. 5.0 2.65316
+U.S. 8.0 2.335602
+Montana 10.43 6.351874
+U.S. 7.0 3.139282
+Delaware 7.92 3.92027
+Florida 5.9 1.895672
+"New Mexico" 19.84 15.76187
+"West Virginia" 7.44 3.44027
+U.S. 8.1 5.126197
+Oregon 10.15 6.053715
+Indiana 9.81 5.74212
+U.S. 11.0 6.220247
+Massachusetts 7.08 2.983715
+Tennessee 7.13 3.033715
+Missouri 8.54 4.472119
+"New York" 5.45 1.574915
+"North Carolina" 8.48 4.412119
+Louisiana 3.31 -0.7681267
+Virginia 11.95 7.882119
+California 8.99 5.114915
+U.S. 10.0 5.609265
+Michigan 7.78 3.71212
+"New Jersey" 6.52 2.452119
+U.S. 8.0 5.044329
+U.S. 5.0 2.725456
+Kansas 9.46 5.381874
+U.S. 7.0 3.099715
+U.S. 9.0 5.468127
+U.S. 9.0 4.400216
+U.S. 8.1 5.162604
+Iowa 8.15 4.053715
+Georgia 8.9 4.803715
+U.S. 4.0 1.141474
+Nebraska 11.3 7.221874
+Wisconsin 8.31 4.24212
+Connecticut 8.72 4.641874
+U.S. 7.6 4.687695
+Washington 10.23 6.133715
+Kentucky 7.66 3.581873
+U.S. 9.0 5.067748
+Pennsylvania 10.74 6.672119
+Michigan 9.0 5.631274
+"South Carolina" 9.06 4.981874
+Idaho 15.11 11.11027
+U.S. 8.0 3.97859
+U.S. 7.0 2.932957
+U.S. 8.0 4.018195
+U.S. 11.0 5.504868
+Ohio 9.51 5.44212
+U.S. 7.2 4.313135
+Mississippi 7.26 3.26027
+U.S. 7.0 2.888175
+"New York" 7.16 3.092119
+U.S. 8.69 4.593715
+Nevada 12.84 8.840269
+Texas 9.18 5.11212
+U.S. 4.0 1.762335
+U.S. 8.0 3.762512
+Alabama 5.5 1.421873
+U.S. 8.0 3.84576
+Illinois 9.22 5.15212
+U.S. 8.0 3.811789
+Minnesota 9.46 5.363715
+Tennessee 7.62 3.541873
+Massachusetts 7.53 3.451874
+U.S. 8.0 3.788296
+Maryland 8.62 4.541873
+Wisconsin 10.0 5.554374
+U.S. 7.3 4.433774
+U.S. 9.0 3.406049
+"North Carolina" 9.6 5.503716
+Virginia 10.23 6.133715
+U.S. 6.0 3.582142
+Colorado 11.48 7.383715
+U.S. 7.0 2.587487
+U.S. 7.0 2.621127
+U.S. 7.7 4.861123
+Florida 8.32 4.252119
+"New Jersey" 7.69 3.593715
+Georgia 8.54 4.461874
+Oklahoma 12.88 8.88027
+U.S. 7.0 2.728027
+Arizona 8.7 4.603715
+Oregon 8.79 4.711874
+Missouri 8.19 4.093715
+Montana 8.0 4.00027
+Arkansas 9.77 5.77027
+Michigan 9.75 5.653715
+U.S. 7.0 2.659677
+U.S. 7.7 4.891803
+California 7.93 3.862119
+Indiana 8.61 4.513715
+U.S. 8.0 3.696064
+"New Mexico" 20.47 16.47027
+Iowa 6.33 2.251873
+Pennsylvania 8.12 4.023715
+Louisiana 7.4 3.40027
+U.S. 8.0 4.581841
+Nebraska 8.92 4.92027
+U.S. 8.0 5.753419
+U.S. 8.0 3.558182
+U.S. 8.7 5.918194
+Washington 9.69 5.611873
+U.S. 7.7 4.944834
+Wisconsin 9.12 5.023715
+Kentucky 7.65 3.65027
+Ohio 9.55 5.453715
+"New York" 6.98 2.883715
+Kansas 12.32 8.320269
+U.S. 5.8 3.175186
+U.S. 8.74 4.661873
+U.S. 7.4 4.673896
+Florida 8.44 4.343715
+"South Carolina" 7.42 3.42027
+Connecticut 9.18 5.18027
+Minnesota 9.04 4.961874
+U.S. 5.9 3.268878
+Texas 7.83 3.733715
+U.S. 6.2 3.573298
+U.S. 10.0 6.948958
+U.S. 8.0 3.531426
+Virginia 11.18 7.101874
+U.S. 5.3 2.660664
+U.S. 5.7 3.064445
+"North Carolina" 7.87 3.791873
+"New Jersey" 7.53 3.451874
+U.S. 10.0 4.543186
+U.S. 6.0 3.296546
+U.S. 6.6 3.976647
+California 8.24 4.143715
+U.S. 5.2 2.538944
+U.S. 5.5 2.849237
+U.S. 6.3 3.676661
+U.S. 5.0 2.329476
+Arizona 11.12 7.041873
+Illinois 9.38 5.283715
+Indiana 9.81 5.731874
+Colorado 10.86 6.781873
+U.S. 5.2 2.530338
+Alabama 5.69 1.69027
+U.S. 7.0 2.400305
+Maryland 8.47 4.47027
+U.S. 6.0 3.318522
+Oregon 6.13 2.13027
+Missouri 8.7 4.621873
+U.S. 6.0 3.378626
+Michigan 7.94 3.861874
+U.S. 4.0 1.724218
+Pennsylvania 8.22 4.141874
+Tennessee 9.62 5.62027
+Iowa 10.55 6.55027
+Massachusetts 10.02 6.02027
+U.S. 9.0 3.598046
+Wisconsin 6.76 2.681874
+U.S. 7.1 4.4892
+U.S. 7.6 4.982545
+U.S. 6.2 3.598085
+U.S. 9.0 4.500158
+Georgia 8.66 4.66027
+Washington 6.57 2.57027
+U.S. 7.2 4.604844
+U.S. 8.0 3.40612
+Texas 8.69 4.611873
+Ohio 7.48 3.401873
+U.S. 8.0 3.40418
+"New York" 7.77 3.691873
+U.S. 6.0 2.790692
+U.S. 7.6 5.00656
+U.S. 8.0 3.401581
+U.S. 7.0 4.406535
+Minnesota 9.02 5.02027
+U.S. 7.4 4.820349
+U.S. 10.0 4.263735
+Florida 7.62 3.541873
+U.S. 7.0 2.399927
+California 9.69 5.611873
+Virginia 12.4 8.400269
+Michigan 8.32 4.32027
+U.S. 8.59 4.59027
+Illinois 8.84 4.761874
+U.S. 7.3 4.726974
+U.S. 9.0 4.469775
+U.S. 7.1 4.535181
+Colorado 12.19 8.190269
+U.S. 12.0 5.191359
+"North Carolina" 8.0 4.183327
+U.S. 6.1 3.547482
+Arizona 8.23 4.230269
+"New Jersey" 6.17 2.17027
+"North Carolina" 6.71 2.71027
+Indiana 10.97 6.97027
+U.S. 5.0 2.454134
+U.S. 9.0 4.402294
+U.S. 11.0 5.71019
+Missouri 10.27 6.27027
+California 5.0 -0.6486948
+U.S. 4.3 1.758928
+U.S. 4.3 1.768142
+U.S. 10.0 5.396727
+U.S. 4.4 1.872842
+U.S. 11.0 5.786412
+U.S. 8.0 3.406677
+Pennsylvania 7.36 3.36027
+U.S. 4.5 1.981009
+U.S. 10.0 4.75315
+U.S. 6.2 3.684361
+U.S. 11.0 4.340039
+Wisconsin 7.63 3.63027
+U.S. 5.7 3.183336
+U.S. 6.2 3.683966
+Ohio 8.2 4.20027
+"New York" 6.19 2.19027
+U.S. 8.0 3.408801
+U.S. 6.0 3.482948
+U.S. 7.0 2.409477
+Texas 7.77 3.77027
+Florida 7.23 3.23027
+U.S. 6.3 3.781207
+U.S. 12.0 6.833986
+U.S. 9.0 5.975156
+U.S. 11.0 5.855297
+U.S. 5.8 3.27978
+U.S. 7.0 2.418085
+California 8.79 4.79027
+Illinois 9.83 5.83027
+U.S. 8.1 4.415577
+U.S. 5.2 2.677849
+U.S. 11.0 4.186037
+U.S. 5.5 2.977148
+U.S. 5.3 2.775445
+U.S. 11.0 5.863818
+U.S. 5.1 2.570041
+U.S. 7.0 2.426034
+U.S. 5.8 3.264647
+U.S. 6.0 3.459068
+U.S. 6.3 3.76253
+U.S. 8.0 3.444265
+U.S. 8.0 3.432037
+U.S. 6.1 3.553022
+U.S. 10.0 4.823984
+U.S. 8.0 3.459002
+U.S. 5.8 3.249617
+U.S. 6.0 1.631407
+U.S. 8.0 3.438055
+U.S. 5.5 2.946244
+U.S. 7.0 2.479196
+U.S. 5.6 3.044132
+U.S. 7.0 2.662087
+U.S. 5.9 3.346814
+U.S. 5.0 2.448916
+U.S. 5.7 3.143899
+U.S. 6.3 3.73733
+U.S. 7.0 2.496481
+U.S. 6.3 3.730749
+U.S. 6.0 3.421346
+U.S. 6.0 1.688479
+U.S. 7.4 4.812184
+U.S. 8.0 3.514614
+U.S. 7.0 4.405582
+U.S. 6.7 4.099254
+U.S. 7.0 2.604059
+U.S. 9.0 4.532888
+U.S. 11.0 4.213894
+U.S. 8.0 3.55798
+U.S. 9.4 5.324701
+U.S. 6.0 1.58342
+U.S. 6.8 4.192511
+U.S. 8.0 4.879824
+U.S. 7.1 4.485677
+U.S. 8.0 4.839715
+U.S. 11.0 4.314745
+U.S. 7.0 2.715118
+U.S. 6.0 1.744181
+U.S. 10.0 4.779106
+U.S. 6.0 1.76683
+U.S. 6.5 3.878121
+U.S. 10.4 6.329823
+U.S. 10.0 4.63029
+U.S. 10.0 3.496975
+U.S. 8.2 5.571176
+U.S. 9.0 2.601378
+U.S. 10.0 3.628802
+U.S. 9.8 5.965876
+U.S. 10.0 3.658676
+U.S. 11.0 4.720283
+U.S. 9.0 2.733348
+U.S. 9.0 2.701057
+U.S. 9.0 2.714671
+U.S. 9.0 2.651395
+U.S. 9.0 2.616379
+U.S. 6.0 1.76683
+Pennsylvania 9.0 4.852516
+Pennsylvania 9.0 4.817004
+Utah 8.4 7.895099
+Ohio 7.0 2.852517
+Utah 10.89 9.023567
+Utah 8.38 4.729548
+"North Carolina" 4.0 1.602659
+Wisconsin 9.0 4.476145
+Florida 4.0 1.513875
+Florida 7.0 2.015883
+California 7.0 3.225678
+Utah 13.75 9.750269
+"North Carolina" 7.0 2.015883
+Kansas 8.0 5.516521
+Utah 16.75 13.39307
+Pennsylvania 6.0 3.513875
+Utah 13.0 10.44021
+Utah 16.0 12.91461
+"North Carolina" 3.0 0.4000751
+Florida 7.0 2.852517
+Utah 23.0 16.19134
+U.S. 6.0 1.788807
+Wisconsin 8.0 3.738475
+Utah 10.0 6.291119
+"North Carolina" 7.0 4.688231
+Utah 9.31 5.434916
+Utah 14.51 11.45896
+Utah 15.32 11.25212
+Utah 12.93 8.851873
+"North Carolina" 9.0 3.718077
+Ohio 9.0 4.015882
+Florida 7.0 3.347152
+Utah 11.45 8.864471
+Pennsylvania 7.0 3.347152
+Florida 9.0 3.718077
+Florida 7.0 2.817005
+Utah 10.92 8.664734
+Utah 13.26 9.163715
+Utah 6.33 5.012764
+Utah 16.0 13.29097
+Ohio 8.0 3.817005
+U.S. 6.18 5.687949
+U.S. 3.0 3.348696
+Virginia 6.0 6.348697
+U.S. 4.2 3.23377
+U.S. 6.0 3.638172
+Florida 2.0 1.731254
+U.S. 7.0 6.137082
+Pennsylvania 3.0 3.421827
+U.S. 5.0 4.242413
+U.S. 6.3 6.426745
+U.S. 7.0 5.821567
+Florida 4.0 2.688943
+"North Carolina" 8.0 6.442063
+Florida 5.0 3.442064
+Pennsylvania 5.0 6.29196
+Florida 4.0 3.041939
+U.S. 6.0 5.101762
+California 5.0 3.2398
+Pennsylvania 6.0 4.44564
+U.S. 5.0 5.191904
+Colorado 7.0 8.29196
+Arizona 4.0 5.29196
+"North Carolina" 3.0 4.29196
+U.S. 2.0 2.156659
+Pennsylvania 3.0 4.067204
+U.S. 6.0 3.32019
+U.S. 4.0 4.911148
+Ohio 3.0 4.067204
+"North Carolina" 2.0 3.067205
+Wisconsin 4.0 5.067204
+Missouri 4.0 4.313616
+U.S. 8.0 6.217108
+Virginia 3.0 4.067204
+"New Hampshire" 10.0 7.885003
+Virginia 3.0 3.028677
+"North Carolina" 8.0 6.131883
+Arizona 5.0 4.138112
+"New Mexico" 9.0 9.768849
+Florida 2.0 3.067205
+Iowa 4.0 2.903502
+Colorado 4.0 5.067204
+Maine 5.0 5.028677
+Pennsylvania 4.0 4.14374
+Florida 5.0 2.44785
+Minnesota 5.0 5.045012
+Georgia 7.0 4.447849
+"New Hampshire" 6.0 6.074332
+Texas 2.96 3.277336
+Florida 1.0 1.156659
+California 7.0 4.447849
+Florida 6.0 4.662172
+"North Carolina" 1.0 1.156659
+U.S. 3.9 4.271393
+Nevada 10.0 7.885003
+Texas 5.0 5.597391
+Georgia 3.0 2.550454
+Ohio 6.0 5.751619
+U.S. 7.0 5.306385
+Pennsylvania 6.0 3.44785
+Virginia 4.0 2.903502
+U.S. 7.0 5.260238
+Florida 3.0 3.597391
+U.S. 5.0 5.06894
+Texas 8.0 5.447849
+Virginia 8.0 5.447849
+Vermont 5.0 4.668949
+U.S. 3.0 1.641393
+Georgia 8.0 6.903502
+Georgia 9.0 6.374772
+Nevada 4.0 5.067204
+"North Carolina" 4.0 4.19781
+Ohio 9.0 6.447849
+"South Carolina" 6.0 3.44785
+"New York" 5.0 2.44785
+"North Carolina" 5.0 3.903502
+Michigan 8.0 5.447849
+"North Carolina" 7.0 4.447849
+Missouri 4.0 4.665684
+Colorado 11.0 8.447849
+Virginia 5.0 3.109682
+Arizona 8.0 5.447849
+U.S. 5.0 3.047261
+Missouri 3.0 2.780413
+Maine 5.0 4.412435
+"North Carolina" 4.0 3.751619
+Indiana 4.0 4.569965
+Kansas 12.0 9.447849
+U.S. 7.6 6.135157
+Wisconsin 7.0 4.447849
+Florida 4.95 3.485157
+U.S. 5.0 3.853936
+Utah 7.0 4.447849
+Michigan 9.0 7.528176
+Illinois 5.6 4.280615
+Illinois 2.0 2.028677
+Nevada 3.0 3.035516
+Nevada 12.0 9.447849
+Illinois 8.0 5.447849
+"New Mexico" 17.0 14.44785
+Iowa 10.0 7.447849
+Nevada 6.0 5.431139
+Nevada 3.0 2.751619
+Illinois 6.0 5.456851
+Florida 4.0 2.445433
+Arizona 3.0 3.115191
+U.S. 5.0 3.855797
+Kentucky 1.0 1.494504
+"North Carolina" 2.6 2.003536
+Minnesota 6.0 5.215625
+Texas 7.0 5.330601
+Utah 4.0 3.499083
+Washington 1.0 1.391833
+Pennsylvania 6.0 5.61411
+"South Dakota" 6.0 5.739223
+California 4.0 2.925467
+"New Hampshire" 8.0 8.215092
+"New Hampshire" 6.0 5.370806
+Florida 4.0 3.751619
+Utah 4.0 3.432672
+Idaho 6.0 5.534034
+Massachusetts 7.0 4.447849
+Massachusetts 4.0 4.807311
+Minnesota 9.0 6.447849
+U.S. 6.0 4.332552
+Maine 9.0 7.777758
+Washington 7.0 4.447849
+Oregon 7.0 4.447849
+"New Hampshire" 7.0 6.912095
+Montana 11.0 9.328505
+Maryland 6.0 3.44785
+Michigan 3.0 2.61411
+Michigan 6.0 6.320579
+"New Hampshire" 6.0 6.042506
+"New Jersey" 4.0 1.44785
+Nevada 9.0 9.042505
+"North Carolina" 5.0 5.042506
+Florida 3.0 3.042506
+Pennsylvania 5.0 5.042506
+Ohio 4.0 4.042506
+Pennsylvania 6.0 3.759205
+Alaska 11.0 10.24278
+U.S. 8.0 5.054642
+"North Carolina" 6.0 4.986853
+Louisiana 2.0 0.8615621
+Indiana 10.0 7.447849
+Missouri 10.0 7.447849
+"New Hampshire" 10.0 7.447849
+"New York" 5.0 2.38748
+Arizona 4.0 3.758669
+Mississippi 6.0 3.44785
+Utah 7.0 6.341825
+Pennsylvania 8.0 6.033341
+"North Carolina" 4.0 1.765935
+Wisconsin 9.0 8.879278
+Ohio 4.0 1.765935
+Nevada 4.0 3.721933
+"Maine CD-2" 6.3 6.328677
+"Maine CD-1" 4.2 4.228676
+Idaho 9.0 8.242782
+Georgia 5.0 4.503201
+Utah 5.0 3.320711
+"North Carolina" 4.0 3.598338
+Ohio 9.0 5.869013
+Wisconsin 1.0 0.5214883
+Connecticut 5.0 2.44785
+"North Carolina" 8.0 5.692134
+Tennessee 6.0 3.44785
+Wisconsin 9.0 5.826732
+U.S. 6.0 4.709046
+Oregon 6.0 4.715264
+Florida 6.0 3.692134
+Vermont 7.0 5.679904
+Texas 4.0 2.393841
+Nevada 7.0 4.765935
+Colorado 10.0 7.867713
+Georgia 8.0 5.692134
+Kansas 7.0 5.855797
+Texas 3.0 1.715264
+Indiana 5.0 4.75993
+Florida 4.0 1.867713
+Pennsylvania 6.0 3.867713
+"North Carolina" 5.0 3.593429
+Oklahoma 4.5 3.977281
+Alabama 5.0 2.44785
+"New Hampshire" 4.4 4.612626
+Arkansas 5.0 2.44785
+Virginia 9.0 6.692134
+U.S. 8.0 5.160185
+Oklahoma 12.0 9.447849
+Colorado 6.0 4.724141
+Hawaii 7.0 4.447849
+Missouri 5.0 3.574116
+"South Dakota" 7.0 6.446341
+Delaware 6.0 3.44785
+Ohio 6.0 3.867713
+Alaska 7.0 6.903194
+Idaho 10.0 7.447849
+Louisiana 4.8 3.426953
+Vermont 10.0 7.447849
+Florida 2.7 1.905726
+Maine 6.0 3.44785
+Kentucky 8.0 5.447849
+Louisiana 5.0 2.44785
+"Rhode Island" 7.0 4.447849
+Ohio 2.0 1.88846
+Nebraska 10.0 7.447849
+Massachusetts 9.0 6.605313
+Montana 11.0 8.447849
+Michigan 7.0 6.154156
+Wisconsin 6.0 5.023766
+"Maine CD-2" 6.0 5.412435
+"Maine CD-1" 8.9 7.677758
+Nevada 7.0 5.933839
+Pennsylvania 7.0 4.052665
+Iowa 6.0 3.487871
+Arkansas 3.5 3.087865
+"Maine CD-1" 4.0 3.412434
+"South Dakota" 7.0 5.962196
+U.S. 5.0 3.158826
+U.S. 7.0 4.195762
+"North Carolina" 6.0 3.207945
+Ohio 7.0 4.052665
+Pennsylvania 6.0 2.491266
+"Nebraska CD-2" 8.0 6.369763
+Ohio 5.0 4.273204
+Ohio 9.5 6.576561
+Wisconsin 4.0 3.273204
+Georgia 2.6 1.255687
+"Maine CD-2" 8.4 7.177758
+Louisiana 7.0 4.943554
+Indiana 10.0 7.052665
+"District of Columbia" 3.0 0.4478495
+U.S. 6.0 4.234814
+Oregon 5.0 3.152861
+Alaska 7.0 6.038988
+"West Virginia" 6.0 3.44785
+Wisconsin 4.0 2.94181
+Florida 2.8 1.455687
+Nevada 10.0 7.373634
+Oregon 7.0 4.49623
+"New Hampshire" 11.0 8.333725
+California 6.51 6.017949
+Arizona 6.5 4.458257
+Ohio 5.0 3.873624
+Iowa 10.0 7.052665
+Texas 7.74 7.247949
+"North Carolina" 9.0 5.869013
+Florida 3.37 2.877949
+"New York" 5.21 4.717949
+"New Hampshire" 8.0 6.446316
+Georgia 4.3 3.113546
+Alaska 13.0 10.44785
+Illinois 7.16 6.667949
+"South Dakota" 16.0 13.44785
+Virginia 3.0 2.15263
+Wyoming 9.0 6.956232
+Indiana 9.0 7.281033
+Louisiana 4.0 2.365706
+Florida 5.0 2.777425
+Michigan 10.3 7.587094
+Illinois 5.8 4.151146
+Pennsylvania 4.27 3.777949
+Utah 9.0 7.151559
+Georgia 1.9 1.147746
+Ohio 6.46 5.967949
+Vermont 4.0 2.9327
+Oregon 4.0 2.146573
+"New Jersey" 5.82 5.327949
+"North Dakota" 12.0 9.447849
+Maryland 4.0 1.567623
+Wisconsin 5.29 4.797949
+Pennsylvania 4.0 2.11487
+"New Hampshire" 10.0 8.574117
+U.S. 4.0 4.199298
+Kentucky 5.7 3.272762
+Indiana 6.23 5.737949
+Indiana 9.0 7.648046
+"North Carolina" 5.2 4.555403
+Missouri 3.86 3.367949
+"North Carolina" 5.27 4.777949
+Minnesota 7.26 6.767949
+Wyoming 10.0 7.447849
+Illinois 4.7 2.36352
+Michigan 7.19 6.697949
+Virginia 5.73 5.237949
+Florida 5.0 4.322352
+Arizona 7.21 6.717949
+Tennessee 7.0 4.525057
+"New Hampshire" 9.0 6.732283
+Washington 6.59 6.097949
+Colorado 10.06 9.56795
+Ohio 6.0 3.805833
+California 4.0 2.347353
+Pennsylvania 4.0 2.574116
+Nevada 4.0 3.028734
+Wisconsin 4.0 2.146573
+Georgia 5.31 4.817949
+"New Mexico" 14.0 11.98641
+Maryland 6.35 5.857949
+Missouri 5.0 3.532798
+Massachusetts 6.92 6.427949
+Arizona 8.3 5.915558
+Texas 7.0 7.215091
+U.S. 4.0 4.071639
+Utah 14.0 10.41327
+Colorado 12.0 10.253
+U.S. 6.0 3.418984
+Alabama 3.79 3.297949
+U.S. 10.0 6.024816
+Pennsylvania 6.0 4.325077
+Iowa 4.54 4.047949
+Oregon 9.38 8.88795
+U.S. 8.0 4.801282
+"New Jersey" 6.0 3.645492
+Florida 7.0 4.471762
+Tennessee 6.3 5.807949
+Tennessee 7.0 3.55216
+Ohio 8.2 5.646144
+Indiana 11.0 7.870901
+Nevada 8.0 5.015424
+Florida 5.0 1.431978
+"South Carolina" 6.69 6.197949
+Alaska 10.0 8.685648
+Virginia 7.0 5.325077
+Nevada 4.0 3.870989
+U.S. 7.0 3.896548
+"Rhode Island" 5.0 2.52593
+Connecticut 6.19 5.697949
+Kentucky 5.87 5.377949
+"New Hampshire" 5.0 3.918368
+Virginia 7.0 4.77217
+Kansas 5.54 5.047949
+U.S. 6.0 4.270732
+Arizona 5.0 4.742415
+U.S. 4.0 3.93413
+Colorado 5.0 4.870989
+Florida 2.0 1.870989
+"North Carolina" 8.0 4.792841
+Virginia 7.0 5.491306
+Arizona 9.0 6.52593
+"New York" 7.0 2.778919
+California 3.0 0.8585214
+U.S. 8.0 5.55411
+Idaho 10.0 7.833663
+Colorado 6.0 4.325077
+"North Carolina" 5.0 3.057593
+Illinois 6.0 3.527358
+Virginia 8.0 5.190831
+U.S. 7.0 4.807335
+Louisiana 6.1 5.607949
+Virginia 3.0 2.870989
+Ohio 5.0 3.067219
+U.S. 9.8 5.747366
+Ohio 4.0 3.870989
+"New Mexico" 24.0 19.25474
+Colorado 13.0 9.561068
+Missouri 5.0 3.491306
+U.S. 5.0 3.426778
+Oklahoma 6.13 5.637949
+Oregon 8.0 4.889714
+Pennsylvania 6.0 2.561068
+Washington 10.0 6.955648
+Wisconsin 5.0 4.870989
+Pennsylvania 5.0 4.870989
+Pennsylvania 5.0 2.999086
+Wisconsin 7.8 5.168545
+"North Carolina" 3.0 2.870989
+Mississippi 4.12 3.627949
+"New Mexico" 14.47 13.97795
+U.S. 8.0 5.023651
+Washington 7.1 4.183449
+Nebraska 7.3 4.38345
+U.S. 4.0 3.812987
+Nebraska 3.98 3.487949
+Colorado 7.0 4.924676
+"New Hampshire" 7.0 3.213268
+Nevada 9.73 9.237948
+Montana 7.0 5.171837
+Colorado 10.0 7.025189
+Minnesota 4.0 2.257134
+Arkansas 10.86 10.36795
+U.S. 8.0 6.57645
+"New Hampshire" 11.0 7.276567
+U.S. 10.0 5.587264
+Arizona 5.0 3.008764
+Ohio 8.0 5.0963
+U.S. 6.0 5.284957
+U.S. 5.0 4.690826
+Ohio 6.0 5.380609
+"North Carolina" 6.0 5.380609
+Florida 3.0 2.380608
+Pennsylvania 5.0 4.380609
+Ohio 6.0 2.574925
+U.S. 8.0 4.115584
+Montana 8.7 8.20795
+"North Carolina" 6.0 2.574925
+Tennessee 5.0 2.725983
+Delaware 7.0 4.414876
+Utah 8.8 5.644347
+Massachusetts 7.0 4.210493
+Nevada 8.0 4.574925
+U.S. 11.0 7.706435
+Nevada 6.6 5.09866
+Alaska 17.9 13.03897
+Florida 2.0 0.6493069
+California 6.0 4.015645
+Idaho 8.01 7.517949
+Michigan 10.0 6.768592
+U.S. 5.0 4.537401
+"North Carolina" 5.0 3.041059
+Ohio 10.0 6.346447
+Massachusetts 9.0 7.299652
+Ohio 6.0 3.519274
+Florida 6.0 2.828179
+Utah 5.0 3.251691
+U.S. 6.6 6.604584
+Pennsylvania 4.0 3.273204
+U.S. 5.0 4.377069
+Florida 5.0 1.998327
+Nevada 5.0 4.091406
+Pennsylvania 5.0 1.998327
+"North Carolina" 9.0 6.158172
+"New Hampshire" 13.0 9.476982
+Utah 5.0 3.212858
+Ohio 7.0 5.041059
+Virginia 6.0 4.041059
+Nevada 9.0 6.52593
+"West Virginia" 2.77 2.277949
+Maryland 6.0 2.916785
+Ohio 6.0 2.998327
+Minnesota 6.0 3.433516
+U.S. 4.2 3.084372
+"North Carolina" 7.0 3.998326
+Kansas 9.0 6.146058
+Florida 4.0 1.52593
+U.S. 6.6 6.451158
+Maine 9.0 6.044696
+"North Carolina" 7.0 5.325077
+"North Carolina" 11.0 6.834144
+Georgia 5.0 2.819535
+Delaware 5.4 4.907949
+"South Dakota" 8.32 7.827948
+U.S. 6.0 4.325077
+"Maine CD-1" 7.9 5.497438
+"Maine CD-2" 10.7 8.297438
+U.S. 6.0 3.429589
+Iowa 9.0 5.602791
+Pennsylvania 8.0 3.713519
+Florida 6.0 2.059647
+"New Hampshire" 10.0 7.349938
+Florida 3.0 1.172159
+Georgia 8.0 5.252342
+U.S. 5.6 4.356712
+Pennsylvania 8.0 5.085153
+Florida 6.0 3.374708
+Maine 2.68 2.187949
+U.S. 5.0 0.8435593
+Hawaii 4.78 4.287949
+Maine 9.0 6.597438
+"New Hampshire" 6.0 3.178307
+Pennsylvania 5.0 2.576667
+Georgia 10.0 5.198444
+Vermont 5.48 4.987949
+Florida 6.0 3.300599
+"North Dakota" 5.97 5.477949
+U.S. 9.0 5.565148
+U.S. 6.9 6.590827
+Wyoming 3.51 3.017949
+U.S. 6.0 3.149308
+"New York" 8.0 3.675874
+Alaska 8.88 8.38795
+"New Hampshire" 6.17 5.677949
+Iowa 8.0 5.142329
+U.S. 6.8 5.419204
+Arizona 12.0 7.198444
+Connecticut 9.0 5.265203
+U.S. 8.0 4.698943
+Georgia 9.0 5.397174
+Michigan 8.0 4.293926
+Texas 9.9 6.335388
+U.S. 9.0 5.755765
+Arkansas 5.0 1.52189
+Georgia 6.0 2.52189
+Colorado 10.0 8.146573
+Iowa 10.0 6.156773
+Wisconsin 11.0 6.670022
+Michigan 9.0 5.430351
+"South Carolina" 3.4 0.4311135
+"North Carolina" 6.0 2.494586
+"District of Columbia" 1.93 1.437949
+"District of Columbia" 4.0 0.9393778
+Alaska 16.0 12.93938
+Virginia 11.0 7.798306
+Florida 9.0 4.639981
+Iowa 10.0 6.397174
+"New Hampshire" 8.0 7.777338
+U.S. 6.8 6.361957
+Nevada 5.0 2.558406
+Nevada 8.0 7.777338
+Pennsylvania 5.0 4.777338
+"North Carolina" 5.0 4.777338
+Florida 2.0 1.777337
+Ohio 4.0 3.777338
+Colorado 10.0 6.397174
+Kansas 8.0 5.109593
+Wyoming 9.0 5.939378
+Pennsylvania 4.0 1.453325
+Virginia 8.0 4.397174
+"New Hampshire" 15.0 10.19844
+Wisconsin 11.0 7.857815
+"New Jersey" 5.0 1.265203
+Arizona 5.0 3.564913
+Florida 5.3 3.200333
+Florida 1.0 -1.056289
+"Rhode Island" 4.07 3.577949
+Illinois 4.05 0.6589662
+U.S. 7.3 5.798061
+Colorado 13.0 9.521891
+Michigan 4.5 4.189151
+"South Carolina" 7.0 2.923312
+"North Dakota" 8.0 5.395413
+Illinois 6.4 3.257815
+Kansas 8.0 5.168056
+California 2.0 -1.205205
+Virginia 8.0 4.550596
+"New Jersey" 6.0 1.92945
+Washington 14.0 10.7948
+Colorado 7.0 5.491306
+"South Dakota" 11.0 7.939378
+"Rhode Island" 8.0 4.939378
+Montana 9.0 5.939378
+Delaware 7.0 3.939378
+Nevada 8.0 5.106437
+Mississippi 5.0 1.939378
+U.S. 8.0 5.767252
+U.S. 5.0 3.670242
+"New Mexico" 12.0 11.4391
+"New Hampshire" 11.0 7.939378
+Colorado 12.0 8.941727
+U.S. 6.6 6.030191
+"West Virginia" 6.0 2.939378
+Maryland 7.0 3.939378
+"North Dakota" 10.0 6.939378
+Maine 12.0 8.954364
+Ohio 11.0 6.490672
+Nevada 7.0 2.490672
+"North Carolina" 9.0 4.490672
+Pennsylvania 8.0 3.490672
+Oklahoma 10.0 6.939378
+Hawaii 8.0 4.939378
+Illinois 3.9 1.074862
+Vermont 9.0 5.939378
+Nevada 8.0 3.198445
+U.S. 5.0 4.146695
+U.S. 7.5 5.8759
+Nebraska 9.0 5.939378
+Arkansas 6.0 2.939378
+Vermont 13.0 9.265203
+"North Carolina" 10.0 6.046632
+Florida 3.0 0.32368
+Florida 3.0 1.325077
+Idaho 15.0 11.93938
+California 10.0 6.204437
+Ohio 8.0 4.059647
+Arizona 8.0 4.794796
+Indiana 12.0 8.939378
+U.S. 8.0 4.950592
+"West Virginia" 4.0 0.7146971
+Tennessee 6.0 2.939378
+"New Hampshire" 6.0 5.656195
+Connecticut 6.0 2.939378
+Texas 4.23 1.980263
+Louisiana 5.0 1.939378
+Texas 9.0 4.76837
+Missouri 10.0 6.939378
+"Maine CD-2" 8.0 5.044696
+Nevada 8.0 7.656195
+U.S. 5.7 5.008527
+"New York" 8.2 4.420766
+Alabama 6.0 2.939378
+Arkansas 3.0 0.336952
+Iowa 9.0 5.939378
+Washington 9.0 5.939378
+"Maine CD-1" 9.0 6.044696
+Wyoming 10.0 7.17001
+U.S. 9.0 4.848314
+U.S. 3.0 2.777338
+"New Mexico" 19.0 15.93938
+Maine 7.0 3.939378
+"New Jersey" 4.0 0.9393778
+Louisiana 6.0 3.8987
+Minnesota 6.0 2.150625
+Iowa 8.0 4.221872
+Massachusetts 9.0 5.265203
+Illinois 8.0 4.939378
+Kentucky 7.0 3.939378
+U.S. 8.0 6.222475
+Massachusetts 9.0 4.728054
+Pennsylvania 10.0 5.413359
+Kansas 12.0 8.939378
+Missouri 4.0 2.934319
+Nevada 5.0 1.794795
+U.S. 5.0 2.217578
+Pennsylvania 14.0 9.455347
+Massachusetts 5.0 1.939378
+"South Carolina" 3.0 -0.083289
+"North Carolina" 5.0 1.766027
+Utah 12.0 7.628034
+Nevada 11.0 7.939378
+"New Mexico" 16.0 13.0076
+Idaho 6.67 5.35572
+Kentucky 7.4 3.451962
+Arizona 8.0 5.497054
+U.S. 5.4 4.607894
+Oregon 11.0 6.425044
+Virginia 6.0 3.616065
+Minnesota 9.0 5.939378
+Oregon 8.0 4.939378
+Oklahoma 6.0 3.441918
+"West Virginia" 7.45 6.13572
+Wisconsin 8.0 4.939378
+U.S. 5.0 5.042506
+"North Carolina" 6.0 3.949411
+"South Dakota" 7.53 6.21572
+U.S. 8.0 3.325269
+Utah 7.0 3.838015
+Alaska 9.0 6.592172
+U.S. 5.6 4.340535
+Arizona 9.0 5.939378
+Louisiana 7.5 4.007805
+"New Hampshire" 7.0 6.534034
+U.S. 8.4 6.462143
+Ohio 4.0 1.915384
+U.S. 7.0 3.757932
+Nevada 9.0 8.534034
+U.S. 5.4 4.516254
+Nevada 8.3 6.98572
+Arkansas 6.66 5.34572
+Iowa 7.0 4.789994
+Wyoming 9.51 8.195721
+"North Carolina" 7.0 3.939378
+Colorado 11.0 7.939378
+"Maine CD-2" 10.4 7.552553
+Maryland 6.0 2.525113
+Nebraska 7.41 6.09572
+Vermont 8.95 7.63572
+U.S. 4.7 1.874154
+Maine 7.57 6.25572
+Arizona 12.0 7.809827
+Oklahoma 8.99 7.67572
+Louisiana 6.36 5.04572
+"South Carolina" 6.0 2.939378
+"Maine CD-1" 7.3 4.452553
+Alaska 10.35 9.035721
+Florida 5.0 2.942045
+"New Mexico" 11.78 10.46572
+Michigan 8.0 4.939378
+Montana 7.51 6.19572
+Mississippi 4.59 3.27572
+California 7.0 2.681116
+Illinois 8.0 4.366024
+U.S. 5.0 3.997296
+U.S. 5.7 4.374836
+Michigan 10.0 5.875943
+U.S. 5.8 4.826328
+U.S. 9.0 6.493586
+U.S. 6.37 5.05572
+"Rhode Island" 8.0 4.265203
+U.S. 4.0 3.656195
+U.S. 7.7 5.633273
+"North Dakota" 6.22 4.90572
+Ohio 9.0 5.939378
+Kentucky 9.4 8.08572
+Ohio 14.0 9.930383
+Ohio 7.0 4.942045
+"South Carolina" 5.0 2.188693
+Connecticut 3.81 2.49572
+Texas 8.0 4.939378
+"North Carolina" 6.0 2.549956
+Virginia 8.0 4.939378
+Texas 6.0 3.4741
+Missouri 7.0 3.52189
+Florida 8.0 3.962619
+"North Carolina" 7.0 5.257134
+Arizona 5.0 3.097554
+Wisconsin 7.0 3.762055
+Indiana 11.0 6.637368
+"New York" 4.0 0.9393778
+Oregon 6.31 4.99572
+Kansas 9.2 7.88572
+Pennsylvania 9.0 4.930382
+"South Carolina" 6.97 5.65572
+Florida 8.0 3.930382
+U.S. 6.0 4.946425
+"North Carolina" 15.0 10.93038
+Tennessee 5.45 4.13572
+Pennsylvania 6.0 2.761789
+"District of Columbia" 7.4 6.08572
+Iowa 8.71 7.39572
+"Rhode Island" 7.94 6.62572
+Pennsylvania 6.0 2.939378
+Alabama 3.12 1.80572
+"North Carolina" 4.0 1.644937
+U.S. 5.0 4.220277
+U.S. 7.2 5.001507
+Maine 8.8 5.952553
+U.S. 5.9 4.525287
+Hawaii 7.57 6.25572
+Georgia 5.0 2.921994
+"North Carolina" 6.0 5.220277
+Ohio 6.0 5.220277
+Florida 2.0 1.220277
+Pennsylvania 5.0 4.220277
+U.S. 5.0 3.260278
+U.S. 4.0 1.784972
+Delaware 5.64 4.32572
+"South Carolina" 5.0 1.339151
+Maine 12.0 8.265203
+Ohio 8.0 4.591481
+Massachusetts 5.97 4.65572
+Virginia 8.0 4.845411
+U.S. 7.3 4.979844
+U.S. 5.6 4.48504
+"District of Columbia" 4.0 0.6256206
+Georgia 5.31 3.99572
+Michigan 3.0 2.413565
+Maryland 5.74 4.42572
+"North Carolina" 4.0 1.762213
+"New Hampshire" 5.36 4.04572
+Michigan 5.4 2.93959
+Virginia 12.0 7.864318
+California 7.0 3.939378
+Colorado 6.6 5.28572
+Florida 5.0 1.939378
+Iowa 12.0 6.694705
+Oregon 10.0 5.032062
+"New Hampshire" 10.0 5.675329
+Iowa 10.0 5.675329
+U.S. 13.0 9.208012
+Alaska 16.0 12.62562
+U.S. 4.0 3.534034
+U.S. 5.8 4.368425
+Wyoming 9.0 5.625621
+U.S. 5.7 4.515369
+U.S. 7.7 5.27921
+Maine 6.56 4.671147
+Arizona 6.8 5.48572
+Washington 6.55 5.23572
+"South Dakota" 11.0 7.625621
+"South Carolina" 7.0 3.806778
+U.S. 6.0 4.869637
+"New York" 6.0 3.108578
+Alaska 9.09 7.201148
+U.S. 5.0 3.068479
+"Maine CD-1" 9.3 5.565203
+"Maine CD-2" 14.0 10.2652
+Pennsylvania 6.0 4.645704
+Florida 4.0 2.645704
+Ohio 6.0 4.645704
+"North Carolina" 6.0 4.645704
+Minnesota 8.21 6.89572
+Michigan 6.06 4.74572
+Montana 9.0 5.625621
+"North Dakota" 12.0 8.625621
+Georgia 8.0 5.108578
+"North Carolina" 7.0 3.763697
+Georgia 8.0 4.939378
+"New Hampshire" 4.48 2.591147
+Maine 10.0 7.108577
+Georgia 5.7 3.357753
+Delaware 12.04 10.15115
+Mississippi 5.0 2.32019
+Florida 3.9 1.006877
+Virginia 7.69 6.37572
+Michigan 6.5 2.716643
+U.S. 9.3 5.065391
+Nebraska 11.0 7.625621
+"Rhode Island" 8.0 5.32019
+"West Virginia" 7.0 3.625621
+Mississippi 3.0 -0.5469429
+"North Carolina" 9.0 4.809826
+Georgia 10.1 6.598661
+"New Hampshire" 12.0 9.32019
+Vermont 9.0 6.32019
+U.S. 9.0 6.530987
+U.S. 7.0 2.828604
+"Rhode Island" 7.0 3.625621
+Hawaii 7.0 4.32019
+U.S. 7.3 4.787571
+Delaware 6.0 3.32019
+"New Mexico" 18.0 13.67533
+Colorado 15.0 9.610212
+Virginia 12.0 6.610212
+Indiana 7.47 6.15572
+Montana 11.0 8.32019
+Delaware 8.0 4.625621
+Missouri 8.85 7.53572
+Maryland 6.0 3.32019
+Wisconsin 6.39 5.07572
+Arkansas 5.0 2.32019
+Washington 8.0 5.32019
+U.S. 9.0 5.690511
+"New Jersey" 4.0 1.32019
+Oklahoma 11.0 8.32019
+Ohio 10.0 6.777061
+Idaho 11.0 8.32019
+Oklahoma 11.0 7.625621
+Nevada 9.0 4.675329
+Alaska 11.0 8.32019
+"North Carolina" 5.85 4.53572
+"District of Columbia" 4.0 1.32019
+Connecticut 4.0 1.32019
+Hawaii 4.87 2.981147
+Arkansas 7.0 3.625621
+U.S. 5.9 4.40154
+Tennessee 6.0 2.625621
+Maine 7.0 4.32019
+Missouri 8.0 4.766772
+U.S. 8.0 4.367316
+Vermont 10.0 6.625621
+Maryland 6.0 2.625621
+Indiana 11.0 8.32019
+Illinois 8.0 5.32019
+Idaho 15.0 11.62562
+Massachusetts 8.0 5.32019
+Wyoming 8.0 5.32019
+"West Virginia" 5.0 2.32019
+U.S. 8.0 5.397644
+"Rhode Island" 4.1 2.211147
+Alabama 6.0 3.32019
+Iowa 10.0 7.32019
+"New Jersey" 4.76 3.44572
+"New Hampshire" 11.0 7.625621
+U.S. 11.0 6.330044
+"New Hampshire" 11.0 6.585637
+Florida 8.0 3.357989
+Missouri 10.0 7.32019
+"North Dakota" 11.0 8.32019
+Tennessee 5.0 2.32019
+"New Mexico" 18.0 15.32019
+Kentucky 8.0 4.625621
+Connecticut 7.0 3.625621
+Louisiana 4.0 0.6256206
+U.S. 10.0 6.948434
+Utah 7.0 4.29485
+Florida 2.0 0.1465734
+"South Dakota" 12.0 9.32019
+U.S. 8.0 4.526716
+Oregon 7.0 4.32019
+Hawaii 8.0 4.625621
+Minnesota 9.0 6.32019
+Missouri 9.0 5.625621
+Mississippi 4.0 0.6256206
+Nevada 11.0 8.32019
+Vermont 5.53 3.641148
+Indiana 12.0 8.625621
+U.S. 8.0 5.136012
+Alabama 8.0 4.625621
+Nebraska 10.0 7.32019
+U.S. 6.0 3.682503
+Arkansas 10.11 8.221148
+Kansas 13.0 10.32019
+"West Virginia" 10.0 5.646734
+Wisconsin 12.0 7.675329
+Missouri 8.0 5.498065
+Idaho 3.14 1.251148
+Ohio 6.33 5.01572
+"District of Columbia" 7.31 5.421147
+Wisconsin 8.0 5.32019
+Maine 7.0 3.625621
+Indiana 10.0 6.825518
+Iowa 9.0 5.625621
+Louisiana 5.0 2.32019
+Kentucky 8.0 5.32019
+Iowa 6.0 3.767132
+U.S. 8.0 3.772962
+U.S. 6.0 4.732128
+Arizona 8.0 5.32019
+Pennsylvania 5.53 4.21572
+Florida 6.0 2.512693
+"South Dakota" 2.15 0.2611475
+U.S. 5.0 2.779204
+"South Carolina" 6.0 3.32019
+Wyoming 5.66 3.771147
+Nevada 5.29 3.401147
+"New Mexico" 13.27 11.38115
+Colorado 11.0 8.32019
+U.S. 10.0 4.63171
+Washington 9.0 5.625621
+"West Virginia" 9.31 7.421148
+Illinois 8.0 4.625621
+Nebraska 6.66 4.771147
+Illinois 6.7 5.38572
+Mississippi 3.97 2.081147
+Florida 6.0 2.853087
+"New York" 5.19 3.87572
+"New Mexico" 20.0 16.62562
+"New Jersey" 4.0 0.6256206
+Massachusetts 6.0 2.625621
+Louisiana 8.11 6.221147
+"North Carolina" 8.0 5.32019
+Kansas 11.0 7.625621
+"New York" 4.0 1.32019
+Colorado 6.0 3.519274
+Utah 13.0 8.842601
+"North Dakota" 16.91 15.02115
+Oregon 9.0 5.625621
+Wisconsin 9.0 5.625621
+U.S. 9.0 5.344678
+Texas 7.46 6.14572
+Oklahoma 11.55 9.661148
+Michigan 8.0 5.32019
+California 5.41 4.09572
+Minnesota 8.0 4.625621
+Texas 7.0 4.32019
+Virginia 8.0 5.32019
+Pennsylvania 3.0 1.257135
+Ohio 9.0 6.32019
+Ohio 12.0 6.694705
+"New Hampshire" 5.0 2.921994
+Pennsylvania 9.0 3.694705
+Kentucky 5.4 3.511147
+U.S. 10.0 4.81418
+U.S. 7.0 4.107317
+Michigan 11.0 6.675329
+Alaska 11.0 8.288994
+"South Carolina" 5.4 3.511147
+Nevada 10.0 6.625621
+Pennsylvania 5.0 1.481105
+Utah 7.0 3.473577
+Pennsylvania 6.0 3.762213
+Pennsylvania 6.0 3.32019
+"New Hampshire" 14.0 10.2652
+Alaska 10.0 7.173285
+"New Mexico" 16.0 14.44387
+Florida 5.7 1.46539
+U.S. 12.0 7.22586
+Florida 5.71 4.39572
+Virginia 11.0 7.213745
+Montana 5.86 3.971148
+"North Carolina" 9.0 4.675329
+Arizona 10.0 5.675329
+Kansas 6.51 4.621148
+Georgia 5.0 2.450868
+Oregon 5.83 3.941147
+"North Carolina" 7.7 3.9205
+Connecticut 7.17 5.281147
+U.S. 8.5 6.737802
+"North Carolina" 7.0 3.625621
+U.S. 6.0 4.610985
+Idaho 13.0 9.44988
+California 7.0 4.32019
+Georgia 7.0 4.32019
+U.S. 6.0 3.357404
+Georgia 11.0 5.649829
+Iowa 9.15 7.261147
+U.S. 5.0 1.954424
+Arizona 10.0 6.625621
+Colorado 13.0 9.282323
+Alabama 3.64 1.751148
+Nevada 11.0 7.87428
+Tennessee 7.1 5.211147
+Virginia 15.0 10.42536
+Colorado 11.0 7.625621
+Arizona 7.0 3.977203
+Pennsylvania 7.0 6.091406
+"North Carolina" 6.0 5.091406
+Florida 3.0 2.091406
+Ohio 6.0 5.091406
+Florida 5.0 2.32019
+Massachusetts 6.21 4.321147
+Colorado 12.0 7.675329
+Michigan 8.0 4.625621
+Ohio 9.0 4.675329
+"New Hampshire" 12.0 8.417899
+"South Carolina" 7.0 3.625621
+Florida 8.0 4.37416
+Pennsylvania 6.9 3.116643
+Delaware 9.0 4.480228
+U.S. 6.49 4.601147
+Ohio 9.0 5.625621
+Georgia 6.96 5.071147
+"New York" 6.0 1.792983
+U.S. 10.0 5.911604
+Virginia 9.0 5.653359
+Ohio 9.8 6.016042
+Arizona 8.3 4.299511
+Ohio 6.0 4.959641
+Pennsylvania 6.0 4.959641
+"North Carolina" 6.0 4.959641
+Florida 4.0 2.959641
+Virginia 8.0 3.675329
+"New Hampshire" 11.46 9.195429
+Iowa 12.0 8.019461
+Virginia 9.0 5.625621
+U.S. 7.0 3.576194
+Delaware 5.07 2.805429
+Maryland 5.26 3.371148
+"North Dakota" 10.23 7.965428
+U.S. 10.0 6.688682
+"District of Columbia" 1.81 -0.4545714
+Texas 8.0 3.675329
+"District of Columbia" 3.0 -0.5032499
+Nevada 4.8 1.640712
+Texas 8.0 4.625621
+Kentucky 5.0 1.15572
+Alaska 16.0 12.49675
+U.S. 7.0 4.61113
+Washington 7.33 5.441147
+Wyoming 9.0 5.49675
+Colorado 16.0 12.01946
+U.S. 6.0 4.488824
+Michigan 6.0 4.7703
+U.S. 5.0 3.837977
+"West Virginia" 3.69 1.425429
+"New York" 5.0 1.625621
+Virginia 6.24 4.351147
+Pennsylvania 8.0 3.675329
+"South Dakota" 11.0 7.49675
+"North Dakota" 14.0 10.49675
+"Maine CD-2" 9.9 5.862056
+"West Virginia" 6.0 2.49675
+Florida 5.0 2.433299
+U.S. 8.0 5.689157
+Arizona 9.0 5.888355
+Pennsylvania 6.0 2.625621
+"South Dakota" 8.63 6.365428
+U.S. 6.4 4.828811
+Arizona 4.55 2.661148
+"Maine CD-1" 12.1 8.062057
+Nebraska 10.0 6.49675
+Vermont 6.75 4.485428
+U.S. 9.0 4.24918
+Alaska 4.87 2.605429
+U.S. 7.0 5.475875
+Michigan 7.62 5.731147
+Arizona 3.0 0.9369594
+Hawaii 1.49 -0.7745713
+Montana 8.0 4.49675
+Colorado 8.34 6.451148
+"North Carolina" 6.35 4.461147
+"Rhode Island" 8.0 4.49675
+Montana 13.84 11.57543
+Minnesota 8.59 6.701148
+Virginia 11.0 7.019461
+Wyoming 12.22 9.955429
+Delaware 9.0 5.49675
+Idaho 7.98 5.715429
+Indiana 6.2 4.311147
+U.S. 6.7 5.06664
+U.S. 6.9 4.781381
+"Rhode Island" 2.26 -0.0045713
+Alaska 19.0 12.05619
+"New Hampshire" 8.0 4.066517
+"New York" 9.0 3.789759
+Maine 9.22 6.955429
+Nebraska 6.04 3.775428
+Vermont 11.0 7.49675
+California 7.0 3.625621
+U.S. 6.0 4.737344
+Oklahoma 10.0 6.49675
+Georgia 7.0 3.625621
+Missouri 5.0 3.082764
+Tennessee 7.0 3.49675
+Arkansas 9.0 5.49675
+Arizona 5.0 3.183982
+Florida 5.0 1.625621
+Nevada 10.78 8.515429
+U.S. 6.0 4.335399
+Wyoming 15.0 8.056193
+Idaho 15.0 11.49675
+Michigan 5.0 3.38034
+Missouri 7.64 5.751147
+Pennsylvania 5.0 3.135417
+Louisiana 5.0 1.49675
+"South Dakota" 19.0 12.05619
+Hawaii 9.0 5.49675
+"New Hampshire" 10.0 6.49675
+Florida 7.0 2.675329
+U.S. 5.0 4.091406
+Ohio 6.0 3.789994
+Maryland 6.0 2.49675
+Mississippi 6.06 3.795429
+Kentucky 7.0 3.49675
+Arkansas 9.55 7.285429
+Nevada 4.0 2.183982
+"New Mexico" 14.3 12.03543
+Missouri 9.0 5.49675
+Maine 6.0 2.49675
+"New Hampshire" 14.35 11.77371
+Connecticut 7.0 3.49675
+U.S. 6.7 4.518094
+Mississippi 4.0 0.4967501
+Virginia 7.0 5.183982
+Wisconsin 8.15 6.261147
+Alabama 8.0 4.49675
+Kansas 8.0 5.278818
+Indiana 13.0 9.49675
+Nebraska 15.0 8.056193
+Delaware 5.11 2.533705
+Louisiana 6.52 4.255429
+Montana 14.0 7.056193
+"New Jersey" 3.71 1.821148
+"West Virginia" 12.0 5.056192
+Iowa 9.0 5.49675
+Oklahoma 6.91 4.645428
+Louisiana 9.0 2.056193
+"District of Columbia" 4.88 2.303705
+U.S. 7.0 5.645704
+Florida 3.8 1.838432
+Ohio 5.4 3.511147
+Maine 11.1 7.062057
+"North Dakota" 16.0 9.056193
+Washington 10.0 6.49675
+Indiana 13.0 6.056193
+"New Mexico" 21.0 17.49675
+Minnesota 15.0 8.056193
+U.S. 7.0 5.175067
+Oklahoma 13.0 6.056193
+Alabama 8.0 1.056193
+Kansas 6.61 4.345429
+"Rhode Island" 3.7 1.123705
+Kentucky 7.0 0.0561931
+U.S. 7.6 5.691575
+Georgia 7.0 4.442096
+U.S. 6.5 4.273732
+U.S. 7.5 5.659708
+Massachusetts 6.0 2.49675
+Oregon 9.0 5.49675
+Illinois 8.0 4.49675
+Florida 8.3 3.72858
+U.S. 5.0 2.367629
+"South Carolina" 5.41 3.145429
+"New Jersey" 4.0 0.4967501
+Kansas 11.0 7.49675
+Texas 7.82 5.931148
+Tennessee 6.51 4.245429
+U.S. 7.4 5.345983
+Hawaii 13.99 11.4137
+Vermont 5.0 2.972396
+"New York" 5.27 3.381147
+Georgia 9.0 4.675329
+Illinois 6.22 4.331147
+Pennsylvania 7.0 4.043924
+Florida 5.0 2.921994
+Wisconsin 10.0 6.49675
+Iowa 7.0 1.984857
+Michigan 7.0 5.237243
+Connecticut 12.0 5.056192
+Montana 4.07 1.493705
+Nevada 10.0 6.49675
+Kentucky 7.64 5.375429
+Minnesota 9.0 5.49675
+U.S. 7.9 5.917165
+California 5.62 3.731147
+Tennessee 10.0 3.056193
+"North Dakota" 7.37 4.793705
+U.S. 8.0 4.564934
+Utah 7.0 3.319366
+Florida 6.0 1.724645
+Florida 5.25 3.361147
+Idaho 19.0 12.05619
+Maine 15.0 8.056193
+U.S. 6.4 4.117227
+Iowa 8.0 5.937675
+Iowa 7.18 4.915429
+Missouri 14.0 7.056193
+U.S. 7.0 5.046197
+Arkansas 11.0 4.056192
+U.S. 5.0 2.386011
+Connecticut 4.65 2.385429
+Alabama 4.88 2.615429
+Iowa 6.0 3.427146
+Alaska 17.1 14.52371
+Massachusetts 5.1 2.835429
+"North Carolina" 7.0 3.49675
+"Rhode Island" 15.0 8.056193
+Utah 13.0 8.179127
+U.S. 9.0 5.430035
+Florida 9.0 4.439081
+Nebraska 4.57 1.993705
+U.S. 10.0 4.842181
+Oregon 6.62 4.355428
+Virginia 10.0 5.901182
+Colorado 13.0 8.901183
+Idaho 9.66 7.083704
+Georgia 10.8 6.915696
+Arizona 12.0 8.49675
+Oregon 6.0 3.638038
+Georgia 8.09 5.825428
+Delaware 12.0 5.056192
+Colorado 12.0 8.49675
+Pennsylvania 7.58 5.691147
+U.S. 7.0 4.007689
+Vermont 11.0 4.056192
+Maryland 7.85 5.585429
+Wisconsin 10.0 5.175613
+U.S. 6.5 4.179607
+U.S. 5.0 3.138225
+Washington 6.97 4.705429
+Michigan 9.0 5.49675
+Michigan 2.0 -0.062325
+"Rhode Island" 4.4 1.340876
+U.S. 7.01 4.745429
+"South Dakota" 6.99 4.413704
+"District of Columbia" 5.14 2.080876
+Ohio 8.0 4.49675
+Illinois 12.0 5.056192
+"West Virginia" 3.77 1.193704
+Virginia 10.0 4.984857
+Hawaii 7.0 0.0561931
+Massachusetts 11.0 4.056192
+"New Hampshire" 8.61 5.550875
+"South Carolina" 7.0 3.49675
+Arkansas 2.85 0.2737044
+Illinois 5.2 2.335123
+Illinois 4.3 1.290629
+Colorado 13.0 7.984857
+Oklahoma 6.24 3.663704
+Iowa 3.0 1.38034
+Minnesota 7.23 4.965429
+U.S. 7.0 4.914432
+Tennessee 7.0 2.95358
+Vermont 10.26 7.683705
+Maryland 9.0 2.056193
+Oregon 11.0 4.056192
+U.S. 5.9 5.407949
+"New Jersey" 8.0 1.056193
+California 11.0 4.123247
+Colorado 5.0 2.414057
+Virginia 9.0 5.49675
+U.S. 10.0 4.995968
+Mississippi 2.05 -0.5262955
+Missouri 7.76 5.495429
+Texas 8.0 4.49675
+U.S. 10.0 5.075231
+Mississippi 4.0 -2.943807
+Michigan 6.68 4.415429
+Virginia 8.59 6.325428
+"West Virginia" 6.88 3.820876
+Ohio 6.0 3.596386
+U.S. 7.0 5.03099
+"New Mexico" 16.1 13.52371
+U.S. 9.0 4.623145
+U.S. 6.0 3.917424
+Michigan 7.5 3.519886
+Indiana 7.76 5.495429
+U.S. 7.0 4.095018
+"North Carolina" 5.17 2.905429
+Arizona 7.81 5.545429
+"North Carolina" 10.0 6.806778
+Wyoming 14.56 11.98371
+Colorado 11.42 9.155429
+U.S. 6.0 4.269985
+Kansas 5.17 2.593705
+Montana 10.98 7.920875
+U.S. 7.0 3.364985
+Alaska 5.49 2.430876
+Connecticut 6.01 3.433705
+Nevada 5.0 2.433065
+California 3.0 0.1495089
+"New York" 5.0 1.49675
+Vermont 6.65 3.590876
+Nevada 8.71 6.133705
+Pennsylvania 6.0 2.49675
+Hawaii 5.27 2.210876
+Maine 2.51 -0.5491242
+Delaware 9.39 6.330876
+Louisiana 4.46 1.883705
+U.S. 6.0 3.005129
+Washington 16.0 9.056193
+"New Hampshire" 14.0 7.056193
+Tennessee 7.75 5.173705
+"South Dakota" 2.74 -0.3191242
+Wisconsin 6.54 4.275428
+Michigan 8.0 4.034883
+Vermont 10.0 5.859689
+Pennsylvania 6.87 4.605428
+U.S. 6.0 3.792768
+"North Dakota" 12.0 8.940876
+Virginia 8.0 4.524909
+U.S. 9.0 5.08056
+Georgia 7.0 3.49675
+U.S. 6.0 4.204287
+California 10.0 5.940788
+"South Carolina" 5.24 2.663704
+Iowa 7.56 4.983704
+Hawaii 11.85 8.491493
+Arizona 4.0 1.520554
+U.S. 11.0 6.67256
+Alabama 4.17 1.593705
+Florida 5.0 1.49675
+Oregon 7.77 5.193704
+"Rhode Island" 6.31 2.951492
+Idaho 8.17 5.110876
+Wyoming 9.7 6.640875
+California 8.0 4.49675
+Pennsylvania 5.0 2.038313
+"New Jersey" 3.81 1.545429
+U.S. 7.0 4.682114
+Ohio 7.24 4.975428
+"North Carolina" 6.0 3.433599
+U.S. 12.0 7.026626
+Nevada 12.0 5.056192
+Maryland 4.95 2.373704
+Nebraska 6.88 3.820876
+Massachusetts 6.19 3.613705
+U.S. 12.0 6.890074
+Georgia 4.0 1.480639
+Maine 4.64 2.063704
+U.S. 7.0 5.154737
+Michigan 8.0 5.336138
+Oklahoma 10.83 7.770875
+U.S. 5.0 3.41449
+Ohio 4.8 2.932618
+"North Dakota" 14.54 11.18149
+U.S. 8.0 4.610142
+Massachusetts 4.0 1.097145
+Michigan 3.0 0.4380803
+Florida 6.43 4.165429
+Mississippi 4.84 1.780876
+Wyoming 11.77 8.411493
+"New Mexico" 25.0 18.05619
+Connecticut 6.0 1.684334
+"New Mexico" 11.6 8.540876
+Delaware 12.39 9.031493
+Georgia 7.45 4.873704
+U.S. 6.6 4.246599
+"District of Columbia" 0.0 -3.358508
+U.S. 12.0 7.787807
+"South Dakota" 11.86 8.501493
+Alaska 9.92 6.561492
+Texas 7.83 5.565428
+U.S. 6.67 4.093705
+Illinois 7.66 5.395428
+U.S. 6.0 3.692134
+Washington 9.59 7.013705
+Kentucky 4.92 1.860876
+Kansas 8.8 5.740876
+Iowa 16.0 9.056193
+Oklahoma 7.0 4.627087
+U.S. 6.1 3.710502
+"South Carolina" 7.62 4.560875
+Iowa 16.0 10.21077
+"Maine CD-2" 10.5 6.028347
+"New York" 4.92 2.655429
+Minnesota 9.94 7.363704
+U.S. 7.0 4.022981
+Maine 17.14 13.78149
+Louisiana 5.78 2.720876
+Texas 2.6 0.0128345
+California 7.23 4.965429
+"New Hampshire" 12.73 9.069724
+U.S. 6.7 4.284742
+"West Virginia" 6.76 3.401492
+"New Hampshire" 10.0 7.035052
+Tennessee 6.66 3.600876
+Arkansas 3.96 0.9008759
+"North Carolina" 6.67 4.093705
+Kentucky 7.12 4.543705
+U.S. 9.0 4.671038
+Arizona 6.51 3.933705
+Vermont 0.0 -3.358508
+U.S. 10.0 4.75413
+"District of Columbia" 9.39 5.729724
+"Maine CD-1" 9.4 4.928346
+Colorado 10.02 7.443705
+Wisconsin 13.0 6.056193
+U.S. 7.6 5.131336
+Virginia 6.35 3.773704
+Michigan 6.55 3.973705
+U.S. 9.0 6.546615
+Missouri 9.23 6.653704
+Texas 11.0 4.056192
+Missouri 8.0 5.178032
+Connecticut 3.91 0.850876
+Indiana 6.95 4.373704
+U.S. 9.0 4.972505
+U.S. 7.3 4.791593
+"New York" 8.0 1.056193
+Maryland 6.86 3.800876
+Wisconsin 3.99 1.413705
+U.S. 6.0 3.600495
+Iowa 6.48 3.420876
+"New Jersey" 9.0 4.525368
+Montana 6.1 2.741492
+Missouri 7.0 4.636252
+Oregon 5.24 2.180876
+U.S. 6.0 2.712819
+U.S. 7.8 5.242427
+Wyoming 3.58 -0.0802763
+"North Dakota" 12.96 9.299725
+Pennsylvania 5.16 2.583704
+Iowa 6.0 2.592405
+Florida 5.9 2.176136
+U.S. 8.2 5.593088
+Georgia 7.39 4.330875
+Idaho 9.04 5.681492
+"Rhode Island" 8.84 5.179724
+Massachusetts 7.02 3.960876
+U.S. 7.0 4.510568
+Colorado 16.0 9.056193
+Illinois 7.0 4.042861
+U.S. 6.8 3.931492
+Ohio 15.0 9.210767
+Virginia 11.0 5.210767
+Michigan 14.0 8.210767
+"New Hampshire" 4.68 1.321492
+"North Carolina" 10.0 4.210767
+Pennsylvania 13.0 7.210767
+Florida 12.0 6.210767
+U.S. 7.0 4.82654
+Alabama 4.93 1.870876
+U.S. 7.4 4.744831
+"New Jersey" 5.03 2.453705
+Ohio 7.23 4.653704
+U.S. 9.0 6.382108
+U.S. 11.0 6.22391
+U.S. 8.0 3.837126
+Vermont 10.38 6.719724
+U.S. 7.0 4.430665
+"North Carolina" 10.0 3.056193
+Maine 10.0 5.528347
+"New Mexico" 17.4 14.04149
+Delaware 6.6 2.939723
+Nebraska 5.33 1.971492
+Arizona 13.0 6.056193
+U.S. 9.0 4.673896
+U.S. 6.7 4.011043
+U.S. 8.0 5.178061
+Kansas 17.0 10.05619
+U.S. 3.0 0.9546379
+U.S. 12.0 6.951376
+U.S. 6.0 2.198628
+Illinois 6.88 4.303705
+Hawaii 10.64 6.743975
+U.S. 6.2 3.494569
+U.S. 7.03 3.970876
+Nevada 12.95 9.890876
+Michigan 13.0 6.056193
+"South Dakota" 13.38 9.719725
+"District of Columbia" 6.32 2.423975
+U.S. 7.0 4.36928
+Mississippi 3.6 0.241492
+Washington 8.26 5.200876
+U.S. 6.0 3.027963
+U.S. 9.0 5.636351
+Wisconsin 3.0 1.40515
+Alaska 8.53 4.869723
+Georgia 6.0 3.479057
+Illinois 6.1 2.956484
+"New Jersey" 5.0 1.485307
+"North Carolina" 7.83 4.770875
+Kansas 7.0 4.037772
+Texas 7.9 5.323704
+U.S. 6.2 3.473164
+Virginia 7.23 4.170876
+Florida 6.01 3.433705
+Ohio 13.0 6.056193
+Idaho 5.0 2.102407
+Nevada 9.94 6.581491
+Ohio 5.0 3.38034
+"North Dakota" 8.91 5.013974
+Arkansas 4.38 1.021492
+California 5.65 3.073705
+U.S. 13.0 8.691205
+U.S. 6.5 3.734818
+Montana 13.28 9.619724
+Michigan 7.76 4.700876
+"New York" 5.53 2.953705
+Wyoming 14.78 10.88398
+"New Hampshire" 10.44 6.543974
+Kansas 9.46 6.101492
+U.S. 7.0 4.29961
+Minnesota 8.46 5.400876
+Colorado 9.21 6.150876
+"Rhode Island" 5.77 1.873975
+Arizona 6.48 3.420876
+Louisiana 4.85 1.491492
+Vermont 7.19 3.293975
+U.S. 7.5 4.698926
+"West Virginia" 10.5 6.839724
+Kentucky 6.86 3.501492
+Mississippi 4.33 0.6697237
+Maine 7.28 3.619724
+Connecticut 7.61 4.251492
+Missouri 8.14 5.080876
+Delaware 7.86 3.963974
+U.S. 7.0 4.958261
+"South Carolina" 10.0 3.056193
+U.S. 6.0 3.224776
+Maine 8.49 4.593974
+Oklahoma 14.24 10.88149
+U.S. 7.2 4.355667
+U.S. 8.0 6.21112
+Idaho 8.14 4.479724
+Tennessee 7.02 3.661492
+Pennsylvania 12.0 5.056192
+Arkansas 6.93 3.269723
+U.S. 8.0 5.060786
+"South Carolina" 5.09 1.731492
+Hawaii 2.79 -0.8702762
+Georgia 5.2 2.73842
+Pennsylvania 6.39 3.330876
+Georgia 12.0 5.056192
+Nevada 10.0 6.93989
+Nevada 15.06 11.39972
+"North Carolina" 6.0 3.05955
+"New Mexico" 17.9 14.23972
+Indiana 9.37 6.310875
+Iowa 10.58 7.221492
+"New Jersey" 4.98 1.920876
+Arizona 10.0 5.675838
+Michigan 12.0 7.675838
+Wisconsin 16.0 11.67584
+U.S. 7.8 4.909081
+U.S. 8.0 5.410831
+U.S. 7.0 4.159078
+Alabama 4.86 1.501492
+"South Dakota" 5.61 1.713975
+"Rhode Island" 7.0 2.872932
+U.S. 7.0 3.913052
+"North Dakota" 9.48 5.352931
+Wisconsin 8.4 5.340875
+Virginia 13.0 6.056193
+Florida 5.93 2.870876
+U.S. 7.2 4.269166
+U.S. 8.0 3.750163
+Ohio 6.43 3.370876
+Virginia 6.0 3.215672
+Alaska 9.4 5.272931
+Hawaii 7.91 3.782931
+Nebraska 6.77 3.109724
+U.S. 7.0 4.109528
+Oregon 6.08 2.721492
+U.S. 7.0 4.086709
+Massachusetts 6.94 3.581492
+U.S. 8.0 3.374438
+U.S. 6.0 3.347544
+Wyoming 9.73 5.602931
+Maryland 7.01 3.651492
+Maine 6.54 2.412932
+"West Virginia" 8.96 5.063974
+Alaska 16.0 10.66169
+Florida 10.0 3.056193
+U.S. 6.8 3.835481
+Delaware 7.68 3.552932
+Florida 2.0 -0.4386222
+U.S. 5.0 2.713307
+Louisiana 0.98 -2.680276
+Montana 8.95 5.053974
+Oklahoma 8.45 4.789723
+Alaska 8.44 4.543974
+"New Hampshire" 15.6 11.47293
+U.S. 7.0 3.850881
+"District of Columbia" 8.68 4.552932
+Illinois 6.8 3.740876
+U.S. 7.0 4.052665
+"Rhode Island" 12.98 8.825315
+U.S. 7.0 4.303182
+U.S. 6.7 3.704268
+Texas 7.0 4.642006
+Kentucky 7.07 3.409724
+"New Hampshire" 10.0 5.675838
+Idaho 17.29 13.39398
+"New York" 4.69 1.630876
+Colorado 4.0 2.40515
+California 6.95 3.890875
+Georgia 7.79 4.431492
+U.S. 9.0 6.101324
+U.S. 8.1 5.064372
+Texas 8.06 5.000876
+U.S. 8.0 3.717053
+Kansas 7.37 3.709723
+Connecticut 6.07 2.409724
+Washington 9.78 6.421492
+"North Carolina" 2.0 0.4051497
+U.S. 6.0 2.98578
+U.S. 4.0 1.505657
+"South Carolina" 7.28 3.619724
+California 12.0 5.056192
+Virginia 6.0 3.602624
+Vermont 12.97 8.842933
+U.S. 7.0 3.781331
+U.S. 7.8 4.441492
+Pennsylvania 4.0 1.917424
+U.S. 7.6 4.526315
+Minnesota 8.74 5.381492
+U.S. 9.0 5.681047
+Colorado 10.22 6.861492
+Tennessee 9.14 5.479724
+U.S. 7.0 3.764267
+Alabama 6.82 3.159724
+U.S. 8.0 3.81726
+Virginia 7.92 4.561492
+Arkansas 7.02 3.123975
+U.S. 8.2 5.09898
+Mississippi 5.25 1.353975
+Iowa 11.39 7.729724
+Arkansas 8.0 4.770077
+"New Mexico" 12.52 8.623976
+"North Carolina" 5.64 2.281492
+Missouri 9.23 5.871491
+Wyoming 9.5 5.345314
+Pennsylvania 13.0 8.675838
+Ohio 14.0 9.675838
+"North Carolina" 8.0 3.675838
+Nevada 9.0 4.675838
+Arizona 10.52 7.161492
+U.S. 8.3 5.178039
+Oklahoma 14.61 10.71397
+Nebraska 4.3 0.4039748
+Oregon 7.93 4.269723
+Alaska 14.66 10.50531
+Michigan 8.21 4.851492
+Massachusetts 8.11 4.449723
+U.S. 7.7 4.568999
+Indiana 10.73 7.371491
+"West Virginia" 5.48 1.352932
+U.S. 10.0 5.199393
+U.S. 6.0 3.178691
+U.S. 9.0 6.28314
+Nevada 8.0 4.987783
+Georgia 6.65 2.989724
+Maryland 8.3 4.639724
+Hawaii 4.8 0.6453143
+Wisconsin 6.85 3.491492
+Nevada 12.76 8.863976
+Idaho 9.14 5.012932
+U.S. 9.0 4.159239
+"District of Columbia" 9.98 5.825314
+U.S. 8.8 5.65565
+U.S. 10.0 5.067663
+"New Jersey" 7.41 4.051492
+Kansas 8.3 4.403975
+Pennsylvania 8.86 5.501492
+Louisiana 8.35 4.453975
+U.S. 8.4 5.247522
+"New Hampshire" 13.01 8.855315
+U.S. 6.7 3.554278
+U.S. 7.7 4.544696
+Maine 15.58 11.42531
+U.S. 9.0 6.733198
+Vermont 8.18 4.025314
+Missouri 5.0 2.508838
+U.S. 10.0 5.92042
+U.S. 5.7 2.550421
+Colorado 9.0 6.937675
+Ohio 8.0 4.373791
+Florida 3.0 1.40515
+U.S. 7.1 3.954543
+Montana 9.18 5.052932
+"South Dakota" 5.52 1.392932
+"North Dakota" 8.57 4.415314
+Kentucky 5.67 1.773975
+U.S. 9.0 5.533719
+Ohio 8.69 5.331491
+Connecticut 8.75 4.853974
+"South Dakota" 7.03 2.875314
+Arkansas 8.1 3.972932
+U.S. 7.9 4.239724
+"South Carolina" 7.79 3.893974
+Texas 7.62 4.261492
+U.S. 6.3 3.14982
+Delaware 9.61 5.455314
+"Rhode Island" 11.35 7.214443
+Minnesota 8.74 5.079723
+U.S. 5.0 2.668606
+Ohio 6.0 3.438061
+Illinois 7.0 3.801926
+"New York" 5.1 1.741492
+Virginia 7.64 3.979723
+Tennessee 6.15 2.253975
+Nebraska 9.21 5.082932
+Maryland 9.49 5.593974
+Nevada 8.0 5.224429
+Washington 10.83 7.169724
+Wyoming 11.65 7.514442
+"North Carolina" 8.51 4.849724
+Arizona 9.91 6.249723
+Colorado 9.36 5.699723
+Alabama 4.95 1.053975
+U.S. 6.3 3.154019
+Iowa 8.7 4.803974
+Michigan 7.0 3.566675
+Vermont 10.43 6.294443
+U.S. 8.0 3.301434
+Michigan 7.93 4.269723
+Oklahoma 10.37 6.242931
+Illinois 6.21 2.851492
+Florida 6.38 3.021492
+"New Mexico" 18.44 14.31293
+"New Mexico" 14.0 11.70414
+California 6.42 3.061492
+Florida 6.0 3.011472
+U.S. 7.0 3.722043
+Massachusetts 8.32 4.423974
+Missouri 10.02 6.359724
+U.S. 6.0 2.856623
+Alaska 13.84 9.704443
+U.S. 5.0 1.575816
+"New Hampshire" 8.74 4.604442
+Oregon 7.26 3.363975
+U.S. 6.0 2.643948
+Hawaii 15.04 10.90444
+U.S. 9.0 3.194533
+Indiana 9.42 5.759724
+U.S. 8.0 5.576331
+"West Virginia" 11.18 7.025314
+Nevada 9.47 5.342932
+Mississippi 5.61 1.482932
+Wisconsin 8.14 4.479724
+"New Jersey" 5.48 1.819724
+U.S. 6.6 4.479933
+Louisiana 5.91 1.782932
+U.S. 9.0 4.681402
+Kansas 12.2 8.072932
+Oklahoma 6.0 2.37225
+U.S. 6.0 2.501406
+Georgia 7.98 4.083974
+Florida 9.0 4.675838
+Maine 12.7 8.564443
+Washington 10.63 6.733974
+Pennsylvania 7.56 3.899724
+"District of Columbia" 8.12 3.984442
+"North Dakota" 15.45 11.31444
+Kentucky 8.5 4.372931
+Idaho 10.36 6.205314
+U.S. 6.5 3.359024
+Ohio 7.79 4.129724
+U.S. 6.0 2.430223
+U.S. 7.0 3.374146
+Delaware 9.96 5.824442
+Mississippi 7.23 3.075314
+U.S. 7.1 3.956186
+U.S. 8.0 4.826778
+Connecticut 10.42 6.292932
+"Rhode Island" 10.2 6.16201
+"West Virginia" 5.89 1.754443
+U.S. 8.39 4.493975
+Arkansas 4.77 0.6153141
+Texas 7.62 3.959723
+U.S. 6.5 3.35926
+Colorado 12.02 8.123976
+Florida 8.07 4.409723
+"North Dakota" 6.94 2.90201
+U.S. 11.0 5.866289
+"South Carolina" 8.14 4.012932
+"North Carolina" 7.64 3.743975
+"South Dakota" 13.39 9.254443
+Michigan 6.86 2.963975
+Montana 8.52 4.365314
+Arizona 10.58 6.683974
+Illinois 8.12 4.459723
+Maryland 7.1 2.972932
+Alaska 10.88 6.84201
+Oklahoma 12.77 8.615315
+Oregon 8.53 4.402931
+U.S. 6.9 3.769549
+Iowa 10.4 6.272931
+Tennessee 8.87 4.742931
+Missouri 8.64 4.743975
+U.S. 10.7 6.687414
+Indiana 11.13 7.233974
+Wyoming 14.71 10.67201
+"New York" 6.76 3.099724
+Maine 5.47 1.43201
+California 6.88 3.219724
+U.S. 7.0 3.365622
+"New Jersey" 6.34 2.443975
+Louisiana 7.08 2.925314
+U.S. 9.0 3.816175
+Virginia 8.57 4.673974
+U.S. 5.0 2.634113
+U.S. 8.0 4.302334
+U.S. 7.5 4.377333
+"South Dakota" 9.34 5.30201
+U.S. 8.0 2.179552
+U.S. 8.0 4.201468
+U.S. 5.0 2.705492
+U.S. 8.0 4.257972
+"New Mexico" 16.45 12.29532
+Massachusetts 9.47 5.342932
+Alabama 6.05 1.922932
+"New Hampshire" 9.86 5.82201
+U.S. 6.9 3.783431
+Wisconsin 7.73 3.833974
+U.S. 7.0 3.163847
+Nebraska 10.1 5.945314
+Hawaii 5.16 1.12201
+Vermont 11.43 7.39201
+Georgia 6.54 2.412932
+"North Carolina" 8.0 4.856488
+U.S. 9.0 5.386073
+U.S. 6.8 3.6902
+Minnesota 11.37 7.473974
+Nevada 10.78 6.625314
+"District of Columbia" 6.22 2.18201
+Pennsylvania 9.24 5.343974
+Mississippi 3.12 -1.015557
+Idaho 12.78 8.644443
+Arizona 6.0 3.335208
+U.S. 7.2 4.098007
+"South Carolina" 6.94 2.785314
+Arkansas 9.74 5.604442
+Minnesota 10.59 6.462932
+Pennsylvania 8.0 2.984857
+U.S. 7.0 3.130839
+Washington 9.75 5.622931
+Texas 8.76 4.863975
+Kentucky 5.88 1.725314
+Delaware 7.92 3.88201
+Connecticut 7.78 3.625314
+U.S. 7.1 4.018006
+U.S. 12.0 7.796205
+Florida 7.31 3.413975
+Illinois 8.23 4.333974
+"West Virginia" 7.44 3.40201
+Ohio 8.12 4.223974
+U.S. 7.8 4.745576
+Alabama 7.88 3.725314
+Maryland 6.87 2.715314
+U.S. 8.85 4.722932
+Colorado 13.01 8.882933
+U.S. 8.1 5.067117
+California 4.0 2.014922
+Kansas 10.51 6.355314
+Arizona 9.84 5.712932
+Oklahoma 11.97 7.834443
+Montana 10.43 6.294443
+"New York" 5.45 1.553975
+Michigan 11.5 7.427915
+"New Mexico" 19.84 15.70444
+U.S. 7.0 3.094743
+Indiana 9.81 5.682932
+Nevada 9.33 5.194442
+California 8.99 5.093974
+U.S. 8.0 2.202867
+Oregon 10.15 5.995314
+U.S. 8.0 4.990541
+U.S. 5.0 0.6442803
+Massachusetts 7.08 2.925314
+Tennessee 7.13 2.975314
+Missouri 8.54 4.412931
+U.S. 5.0 2.64516
+U.S. 8.1 5.115431
+"New Jersey" 6.52 2.392932
+"North Carolina" 8.48 4.352931
+Louisiana 3.31 -0.8255574
+Virginia 11.95 7.822932
+U.S. 7.6 4.65064
+Michigan 7.78 3.652932
+Michigan 9.0 5.613047
+U.S. 9.0 5.068983
+Kansas 9.46 5.324442
+U.S. 9.0 5.427457
+Idaho 15.11 11.07201
+Iowa 8.15 3.995314
+U.S. 8.0 3.975833
+Georgia 8.9 4.745314
+Nebraska 11.3 7.164443
+Wisconsin 8.31 4.182932
+U.S. 9.0 4.331763
+U.S. 8.0 4.015577
+U.S. 7.2 4.286565
+U.S. 11.0 6.269042
+U.S. 7.0 2.926668
+Connecticut 8.72 4.584443
+Mississippi 7.26 3.222011
+U.S. 7.0 2.877329
+Washington 10.23 6.075314
+U.S. 7.3 4.414438
+U.S. 7.7 4.853898
+Kentucky 7.66 3.524443
+Pennsylvania 10.74 6.612931
+"South Carolina" 9.06 4.924443
+Nevada 12.84 8.802011
+U.S. 8.0 3.829071
+"New York" 7.16 3.032932
+U.S. 7.7 4.899806
+U.S. 8.0 3.795284
+U.S. 8.0 3.757405
+U.S. 8.0 3.77881
+Ohio 9.51 5.382932
+Texas 9.18 5.052932
+U.S. 9.0 3.29265
+Oklahoma 12.88 8.84201
+Illinois 9.22 5.092932
+U.S. 8.7 5.938391
+U.S. 8.69 4.535314
+Montana 8.0 3.96201
+Alabama 5.5 1.364443
+Arkansas 9.77 5.73201
+Minnesota 9.46 5.305314
+U.S. 7.7 4.977418
+Tennessee 7.62 3.484443
+U.S. 7.0 2.593322
+U.S. 7.0 2.553407
+Massachusetts 7.53 3.394443
+Maryland 8.62 4.484442
+U.S. 7.0 2.719058
+U.S. 5.8 3.26541
+U.S. 7.4 4.721447
+"New Mexico" 20.47 16.43201
+U.S. 8.0 4.580091
+Florida 8.32 4.192931
+"North Carolina" 9.6 5.445314
+Louisiana 7.4 3.36201
+Virginia 10.23 6.075314
+"New Jersey" 7.69 3.535314
+U.S. 5.9 3.359801
+U.S. 7.0 2.639908
+U.S. 5.0 2.688338
+Georgia 8.54 4.404442
+Colorado 11.48 7.325314
+Nebraska 8.92 4.88201
+Oregon 8.79 4.654442
+U.S. 8.0 3.683167
+Florida 5.9 1.887414
+California 7.93 3.802931
+U.S. 6.2 3.658333
+U.S. 6.0 3.357866
+U.S. 5.7 3.154851
+U.S. 5.0 2.407629
+U.S. 5.3 2.751198
+Arizona 8.7 4.545314
+Missouri 8.19 4.035314
+Michigan 9.75 5.595314
+Indiana 8.61 4.455314
+Iowa 6.33 2.194443
+U.S. 6.0 3.393171
+U.S. 5.2 2.61044
+U.S. 8.0 3.519722
+Kentucky 7.65 3.61201
+Kansas 12.32 8.28201
+Pennsylvania 8.12 3.965314
+U.S. 5.2 2.62369
+U.S. 5.5 2.937015
+"South Carolina" 7.42 3.38201
+Connecticut 9.18 5.14201
+U.S. 6.6 4.057637
+Washington 9.69 5.554442
+"New York" 6.98 2.825314
+U.S. 10.0 4.519536
+Wisconsin 9.12 4.965314
+U.S. 9.0 3.563924
+Ohio 9.55 5.395314
+U.S. 4.0 1.72323
+U.S. 8.0 3.488509
+Minnesota 9.04 4.904442
+Texas 7.83 3.675314
+Alabama 5.69 1.65201
+U.S. 10.0 5.621748
+Florida 8.44 4.285314
+U.S. 8.74 4.604442
+Maryland 8.47 4.43201
+U.S. 6.3 3.752123
+Oregon 6.13 2.09201
+U.S. 6.0 2.887316
+"New Jersey" 7.53 3.394443
+Virginia 11.18 7.044443
+California 8.24 4.085314
+Tennessee 9.62 5.58201
+Iowa 10.55 6.51201
+"North Carolina" 7.87 3.734443
+Illinois 9.38 5.225314
+Massachusetts 10.02 5.98201
+Indiana 9.81 5.674443
+U.S. 4.0 1.190324
+U.S. 10.0 6.940876
+Arizona 11.12 6.984442
+Colorado 10.86 6.724442
+U.S. 7.0 2.33406
+Missouri 8.7 4.564442
+Georgia 8.66 4.62201
+U.S. 6.0 3.45072
+Michigan 7.94 3.804443
+U.S. 6.0 3.544765
+Pennsylvania 8.22 4.084443
+Washington 6.57 2.532011
+U.S. 8.0 5.689653
+U.S. 9.0 4.448612
+U.S. 11.0 5.735973
+Minnesota 9.02 4.98201
+Wisconsin 6.76 2.624443
+U.S. 10.0 4.229362
+Texas 8.69 4.554442
+"New York" 7.77 3.634443
+Virginia 12.4 8.36201
+U.S. 8.0 3.340864
+Michigan 8.32 4.28201
+U.S. 8.59 4.55201
+Ohio 7.48 3.344443
+U.S. 8.0 3.338519
+U.S. 7.6 5.052052
+U.S. 8.0 3.338259
+U.S. 10.0 4.783866
+California 9.69 5.554442
+"New Jersey" 6.17 2.13201
+Colorado 12.19 8.15201
+Florida 7.62 3.484443
+U.S. 7.0 2.334661
+Illinois 8.84 4.704443
+U.S. 9.0 4.410556
+Arizona 8.23 4.192009
+Indiana 10.97 6.93201
+U.S. 7.1 4.558086
+"North Carolina" 6.71 2.67201
+U.S. 12.0 5.052582
+U.S. 11.0 5.241806
+U.S. 6.2 3.668507
+Missouri 10.27 6.23201
+Wisconsin 10.0 5.369988
+U.S. 4.0 1.64005
+Pennsylvania 7.36 3.322011
+U.S. 9.0 4.338784
+U.S. 7.2 4.676457
+U.S. 10.0 5.328937
+U.S. 7.6 5.0785
+U.S. 11.0 4.232413
+U.S. 7.0 4.473776
+Wisconsin 7.63 3.59201
+"New York" 6.19 2.15201
+U.S. 7.4 4.891818
+Ohio 8.2 4.16201
+U.S. 8.0 3.340426
+Texas 7.77 3.73201
+U.S. 7.3 4.7982
+U.S. 7.1 4.606546
+Florida 7.23 3.19201
+California 8.79 4.75201
+U.S. 6.1 3.619635
+Illinois 9.83 5.79201
+U.S. 8.0 3.343265
+U.S. 5.0 2.525554
+U.S. 7.0 2.343501
+U.S. 4.3 1.828542
+U.S. 11.0 5.804033
+U.S. 4.3 1.839653
+U.S. 7.0 2.35379
+U.S. 8.1 4.405937
+U.S. 4.4 1.944412
+California 5.0 -0.6387689
+U.S. 4.5 2.053683
+U.S. 6.2 3.754528
+U.S. 5.7 3.255067
+U.S. 6.2 3.751566
+U.S. 6.0 1.638138
+U.S. 11.0 4.050951
+U.S. 6.0 3.547369
+U.S. 7.0 2.684047
+U.S. 12.0 6.851087
+U.S. 8.0 3.382247
+U.S. 6.3 3.841731
+U.S. 7.0 2.361574
+U.S. 9.0 6.083133
+U.S. 8.0 3.402247
+U.S. 5.8 3.336597
+"North Carolina" 8.0 3.99649
+U.S. 8.0 3.367671
+U.S. 11.0 5.846483
+U.S. 7.0 2.429817
+U.S. 8.0 3.374441
+U.S. 6.0 1.722631
+U.S. 5.2 2.730554
+U.S. 5.5 3.025784
+U.S. 11.0 5.8771
+U.S. 7.0 2.451358
+U.S. 7.0 2.598679
+U.S. 5.3 2.82095
+U.S. 8.0 3.474782
+U.S. 5.1 2.61186
+U.S. 9.0 4.499671
+U.S. 5.8 3.302777
+U.S. 6.3 3.798586
+U.S. 6.0 3.492449
+U.S. 8.0 3.534881
+U.S. 6.1 3.582029
+U.S. 6.0 1.570806
+U.S. 10.0 4.79423
+U.S. 5.8 3.276436
+U.S. 11.0 4.080363
+U.S. 9.4 5.263893
+U.S. 5.5 2.971347
+U.S. 5.6 3.068697
+U.S. 5.9 3.374596
+U.S. 5.0 2.479734
+U.S. 5.7 3.173303
+U.S. 6.3 3.764572
+U.S. 7.0 2.761658
+U.S. 6.3 3.756841
+U.S. 6.0 3.44557
+U.S. 6.0 1.805688
+U.S. 7.4 4.834549
+U.S. 6.0 1.842107
+U.S. 7.0 4.426437
+U.S. 11.0 4.212362
+U.S. 6.7 4.118843
+U.S. 6.8 4.210253
+U.S. 8.0 4.931019
+U.S. 10.4 6.272226
+U.S. 7.1 4.501569
+U.S. 8.0 4.887254
+U.S. 10.0 3.47435
+U.S. 10.0 4.744376
+U.S. 9.0 2.633948
+U.S. 6.5 3.891886
+U.S. 9.8 5.994699
+U.S. 10.0 3.649055
+U.S. 10.0 4.605199
+U.S. 8.2 5.583876
+U.S. 10.0 3.670708
+U.S. 11.0 4.736586
+U.S. 9.0 2.738663
+U.S. 9.0 2.676667
+U.S. 9.0 2.695518
+U.S. 9.0 2.615775
+U.S. 9.0 2.572802
+Florida 7.0 3.373791
+"North Carolina" 7.0 4.706789
+Wisconsin 8.0 3.850746
+Utah 14.51 11.45088
+Florida 7.0 2.779055
+Pennsylvania 9.0 4.779054
+Ohio 8.0 3.779055
+Utah 23.0 16.05619
+Wisconsin 9.0 4.524998
+Utah 8.4 7.907948
+Utah 6.33 5.01572
+Utah 13.0 10.4243
+"North Carolina" 3.0 0.417719
+Utah 16.75 13.39149
+"North Carolina" 7.0 1.984857
+Florida 7.0 1.984857
+Florida 9.0 3.610212
+Florida 7.0 2.858895
+Kansas 8.0 5.560062
+California 7.0 3.409773
+Pennsylvania 9.0 4.858894
+Ohio 9.0 3.984857
+Utah 16.0 13.26657
+Utah 16.0 13.04706
+Utah 15.32 11.19293
+"North Carolina" 4.0 1.620082
+U.S. 6.0 1.877412
+"North Carolina" 9.0 3.610212
+Florida 4.0 1.513923
+Utah 13.26 9.105315
+Pennsylvania 6.0 3.513923
+Ohio 7.0 2.858895
+Utah 10.89 9.001148
+Utah 11.45 8.873705
+Utah 10.92 8.655429
+Utah 8.38 4.719724
+Utah 12.93 8.794443
+Utah 13.75 9.71201
+Utah 9.31 5.413975
+Pennsylvania 7.0 3.373791
+Utah 10.0 6.31484
+U.S. 6.0 1.842107
+U.S. 3.0 3.364997
+Virginia 6.0 6.364997
+U.S. 6.18 5.659269
+Florida 2.0 1.798073
+U.S. 6.0 3.586243
+U.S. 7.0 6.159683
+U.S. 4.2 3.149499
+Pennsylvania 3.0 3.42456
+U.S. 6.3 6.419217
+U.S. 5.0 4.182951
+Florida 4.0 2.703054
+California 5.0 3.259861
+U.S. 7.0 5.776058
+"North Carolina" 8.0 6.487457
+Florida 5.0 3.487457
+U.S. 6.0 5.158158
+Florida 4.0 3.029633
+Pennsylvania 5.0 6.364024
+Pennsylvania 6.0 4.447204
+U.S. 8.0 6.248224
+U.S. 5.9 5.37927
+Colorado 7.0 8.364023
+U.S. 4.0 4.968608
+Arizona 4.0 5.364024
+U.S. 2.0 2.15184
+"North Carolina" 3.0 4.364024
+U.S. 5.0 5.254817
+U.S. 6.0 3.303277
+Missouri 4.0 4.348742
+"New Hampshire" 10.0 7.947066
+Pennsylvania 3.0 4.106138
+Ohio 3.0 4.106138
+"North Carolina" 2.0 3.106138
+Wisconsin 4.0 5.106138
+"North Carolina" 8.0 6.162663
+"New Mexico" 9.0 9.980607
+Arizona 5.0 4.226883
+Virginia 3.0 4.106138
+Iowa 4.0 2.972625
+Virginia 3.0 2.978154
+Minnesota 5.0 5.082613
+U.S. 7.0 5.373827
+Texas 5.0 5.684068
+U.S. 3.9 4.291473
+Florida 6.0 4.640591
+Florida 2.0 3.106138
+Maine 5.0 4.978154
+Georgia 7.0 4.436431
+Nevada 10.0 7.947066
+"New Hampshire" 6.0 6.045146
+Texas 2.96 3.240567
+Pennsylvania 4.0 4.136001
+California 7.0 4.436431
+Florida 1.0 1.15184
+Colorado 4.0 5.106138
+U.S. 5.0 5.08267
+Florida 5.0 2.436431
+Georgia 9.0 6.364978
+Florida 3.0 3.684068
+Georgia 3.0 2.600602
+U.S. 7.0 5.338139
+"North Carolina" 1.0 1.15184
+Virginia 4.0 2.972625
+Georgia 8.0 6.972625
+U.S. 3.0 1.680653
+Ohio 6.0 5.699664
+Vermont 5.0 4.732945
+Texas 8.0 5.436431
+Pennsylvania 6.0 3.436431
+"North Carolina" 4.0 4.204249
+"North Carolina" 5.0 3.972625
+Virginia 8.0 5.436431
+"South Carolina" 6.0 3.436431
+"New York" 5.0 2.436431
+Ohio 9.0 6.436431
+Nevada 4.0 5.106138
+Maine 5.0 4.374508
+Michigan 8.0 5.436431
+U.S. 5.0 2.901302
+Virginia 5.0 2.89251
+"North Carolina" 7.0 4.436431
+Missouri 3.0 2.715214
+Colorado 11.0 8.436432
+U.S. 5.0 3.90705
+Missouri 4.0 4.669784
+Arizona 8.0 5.436431
+"North Carolina" 4.0 3.699664
+Kansas 12.0 9.436432
+Illinois 5.6 4.411337
+U.S. 7.6 6.056035
+U.S. 5.0 3.935008
+Indiana 4.0 4.586293
+Florida 4.95 3.406035
+Wisconsin 7.0 4.436431
+Michigan 9.0 7.437483
+Florida 4.0 2.524159
+Utah 7.0 4.436431
+California 4.0 3.007958
+Nevada 6.0 5.327149
+Nevada 3.0 3.023175
+Minnesota 6.0 5.181908
+U.S. 6.0 4.297273
+"New Mexico" 17.0 14.43643
+Iowa 10.0 7.436431
+Illinois 2.0 1.978154
+"South Dakota" 6.0 5.82094
+"New Hampshire" 8.0 8.326749
+Texas 7.0 5.375399
+Montana 11.0 9.29562
+Illinois 8.0 5.436431
+Washington 1.0 1.411052
+Illinois 6.0 5.469717
+Utah 4.0 3.413439
+Nevada 12.0 9.436432
+Nevada 3.0 2.699664
+Pennsylvania 6.0 3.758276
+"North Carolina" 2.6 2.284171
+Kentucky 1.0 1.563388
+"New Hampshire" 6.0 5.304248
+Arizona 3.0 3.116801
+Pennsylvania 6.0 5.560099
+Idaho 6.0 5.580912
+Utah 4.0 3.483825
+U.S. 8.0 5.236291
+Massachusetts 4.0 4.8032
+"North Carolina" 6.0 5.077276
+Utah 7.0 6.456931
+Massachusetts 7.0 4.436431
+Florida 4.0 3.699664
+"New Hampshire" 7.0 6.912387
+"New York" 5.0 2.441866
+"North Carolina" 4.0 1.817588
+Maine 9.0 7.832562
+Louisiana 2.0 0.847163
+Minnesota 9.0 6.436431
+Ohio 4.0 1.817588
+Nevada 4.0 3.821003
+Washington 7.0 4.436431
+Ohio 9.0 5.939199
+Oregon 7.0 4.436431
+Maryland 6.0 3.436431
+"New Hampshire" 6.0 6.109482
+Michigan 3.0 2.560099
+"New Jersey" 4.0 1.436432
+Wisconsin 9.0 5.894466
+Alaska 11.0 10.20655
+Utah 5.0 3.320669
+Florida 3.0 3.109482
+"North Carolina" 5.0 5.109482
+Nevada 9.0 9.109482
+Ohio 4.0 4.109482
+Pennsylvania 5.0 5.109482
+Michigan 6.0 6.175574
+Arizona 4.0 3.77032
+Georgia 5.0 4.616365
+Oregon 6.0 4.790206
+Pennsylvania 8.0 5.670558
+Wisconsin 1.0 0.6292431
+Texas 4.0 2.458691
+"New Hampshire" 10.0 7.436431
+Indiana 10.0 7.436431
+Mississippi 6.0 3.436431
+Texas 3.0 1.790206
+Nevada 7.0 4.817588
+Missouri 10.0 7.436431
+Idaho 9.0 8.20655
+Colorado 10.0 7.967087
+"North Carolina" 4.0 3.627847
+Kansas 7.0 5.935009
+"North Carolina" 8.0 5.68469
+Wisconsin 9.0 8.832819
+"Maine CD-1" 4.2 4.178154
+"Maine CD-2" 6.3 6.278154
+Florida 6.0 3.68469
+Florida 4.0 1.967087
+Pennsylvania 6.0 3.967087
+Georgia 8.0 5.68469
+U.S. 8.0 5.175954
+Vermont 7.0 5.758524
+U.S. 6.0 4.736274
+"North Carolina" 5.0 3.701481
+Colorado 6.0 4.748384
+Connecticut 5.0 2.436431
+Tennessee 6.0 3.436431
+Ohio 6.0 3.967087
+Oklahoma 4.5 4.04845
+Virginia 9.0 6.68469
+Indiana 5.0 4.753922
+Missouri 5.0 3.563384
+"North Carolina" 6.0 3.220241
+Iowa 6.0 3.486321
+"New Hampshire" 4.4 4.673028
+Alabama 5.0 2.436431
+Arkansas 5.0 2.436431
+Louisiana 4.8 3.444928
+Pennsylvania 7.0 4.012131
+"South Dakota" 7.0 6.518785
+Massachusetts 9.0 6.695592
+Oklahoma 12.0 9.436432
+Alaska 7.0 6.961997
+Hawaii 7.0 4.436431
+Pennsylvania 6.0 2.546227
+Ohio 2.0 1.935149
+Delaware 6.0 3.436431
+Ohio 5.0 4.351621
+Wisconsin 4.0 3.351621
+Florida 2.7 2.204916
+Idaho 10.0 7.436431
+Wisconsin 6.0 5.078749
+Ohio 7.0 4.012131
+Michigan 7.0 6.591312
+U.S. 7.0 4.257544
+Vermont 10.0 7.436431
+Nevada 7.0 5.988911
+Ohio 9.5 6.602375
+Kentucky 8.0 5.436431
+U.S. 5.0 3.236206
+Louisiana 5.0 2.436431
+Maine 6.0 3.436431
+"Rhode Island" 7.0 4.436431
+Indiana 10.0 7.012131
+"Maine CD-2" 6.0 5.374508
+"South Dakota" 7.0 5.946169
+Nebraska 10.0 7.436431
+Arkansas 3.5 3.139709
+Montana 11.0 8.436432
+"Maine CD-1" 8.9 7.732562
+U.S. 6.0 4.285483
+Oregon 5.0 3.173425
+"Maine CD-1" 4.0 3.374508
+Ohio 5.0 3.871803
+"Nebraska CD-2" 8.0 6.37729
+Georgia 2.6 1.350234
+Louisiana 7.0 4.972578
+Alaska 7.0 6.147393
+Oregon 7.0 4.556349
+Iowa 10.0 7.012131
+Nevada 10.0 7.419034
+"New Hampshire" 11.0 8.408521
+Maryland 4.0 1.61339
+Wyoming 9.0 6.973026
+"North Carolina" 9.0 5.939199
+Arizona 6.5 4.559314
+Oregon 4.0 2.151199
+Georgia 4.3 3.221504
+"Maine CD-2" 8.4 7.232562
+"New Hampshire" 8.0 6.44192
+Vermont 4.0 3.028447
+Wisconsin 4.0 3.048846
+Michigan 10.3 7.391589
+Indiana 9.0 7.214922
+Louisiana 4.0 2.416135
+Florida 2.8 1.550234
+Virginia 3.0 2.191536
+Utah 9.0 7.207364
+Illinois 5.8 4.213805
+"District of Columbia" 3.0 0.4364316
+Illinois 4.7 2.407853
+Pennsylvania 4.0 2.177111
+Florida 5.0 2.882189
+"West Virginia" 6.0 3.436431
+Georgia 1.9 1.178993
+Ohio 6.0 3.83288
+California 6.51 5.989269
+Kentucky 5.7 3.265594
+Texas 7.74 7.219269
+"North Carolina" 5.2 4.583606
+Indiana 9.0 7.689724
+"New York" 5.21 4.689269
+Alaska 13.0 10.43643
+"South Dakota" 16.0 13.43643
+Florida 3.37 2.849269
+Illinois 7.16 6.639269
+U.S. 8.0 4.809037
+"New Mexico" 14.0 12.06496
+"New Hampshire" 9.0 6.803062
+Wisconsin 4.0 2.151199
+"New Hampshire" 10.0 8.563384
+California 4.0 2.3508
+Florida 5.0 4.341185
+Pennsylvania 6.0 4.351995
+"New Jersey" 5.82 5.29927
+"North Dakota" 12.0 9.436432
+Pennsylvania 4.27 3.749269
+Florida 7.0 4.451234
+Tennessee 7.0 4.552878
+Ohio 6.46 5.939269
+Tennessee 7.0 3.556312
+Nevada 4.0 3.078939
+Missouri 5.0 3.561995
+U.S. 10.0 5.98352
+Nevada 8.0 5.11432
+U.S. 6.0 3.497705
+Pennsylvania 4.0 2.563384
+Wisconsin 5.29 4.769269
+Indiana 6.23 5.70927
+U.S. 4.0 4.219661
+Virginia 7.0 5.351995
+Minnesota 7.26 6.739269
+U.S. 7.0 3.947544
+Wyoming 10.0 7.436431
+Indiana 11.0 7.896905
+Utah 14.0 10.44925
+Ohio 8.2 5.586449
+Arizona 8.3 6.002087
+Missouri 3.86 3.339269
+"North Carolina" 5.27 4.749269
+Virginia 7.0 5.573951
+Florida 5.0 1.486816
+Washington 6.59 6.069269
+U.S. 6.0 4.323924
+Colorado 12.0 10.35803
+Michigan 7.19 6.66927
+Virginia 5.73 5.20927
+Arizona 7.21 6.689269
+"Rhode Island" 5.0 2.487712
+Colorado 10.06 9.539269
+Alaska 10.0 8.658907
+U.S. 9.8 5.770264
+Texas 7.0 7.326749
+"New York" 7.0 2.836949
+U.S. 8.0 5.589259
+"New Jersey" 6.0 3.700187
+Georgia 5.31 4.789269
+Virginia 7.0 4.802256
+"New Hampshire" 5.0 3.931223
+Maryland 6.35 5.829269
+Missouri 5.0 3.573951
+Colorado 13.0 9.60253
+Colorado 6.0 4.351995
+Massachusetts 6.92 6.399269
+California 3.0 0.9458193
+Arizona 9.0 6.487712
+Pennsylvania 6.0 2.60253
+"North Carolina" 8.0 4.853415
+U.S. 4.0 4.086506
+"North Carolina" 5.0 3.131155
+Alabama 3.79 3.269269
+Iowa 4.54 4.019269
+Oregon 9.38 8.859269
+"New Mexico" 24.0 19.2778
+Ohio 5.0 3.09585
+Tennessee 6.3 5.779269
+Idaho 10.0 7.765735
+Illinois 6.0 3.557228
+Nevada 4.0 3.942621
+Oregon 8.0 4.923587
+Washington 10.0 6.974477
+U.S. 10.0 5.657505
+Washington 7.1 4.164673
+Nebraska 7.3 4.364673
+"South Carolina" 6.69 6.16927
+Pennsylvania 5.0 3.030094
+U.S. 7.0 4.867275
+Connecticut 6.19 5.66927
+Kentucky 5.87 5.349269
+Wisconsin 7.8 5.188923
+Colorado 5.0 4.942621
+Florida 2.0 1.942621
+Kansas 5.54 5.019269
+Ohio 6.0 2.630322
+Minnesota 4.0 2.271187
+Colorado 7.0 4.960928
+"North Carolina" 6.0 2.630322
+Colorado 10.0 7.049764
+"New Hampshire" 7.0 3.09191
+U.S. 5.0 3.468428
+U.S. 4.0 3.946941
+Virginia 8.0 5.024459
+Arizona 5.0 4.754819
+"New Hampshire" 11.0 7.347796
+U.S. 8.0 5.066782
+Arizona 5.0 3.109755
+Nevada 8.0 4.630322
+Virginia 3.0 2.942621
+Ohio 8.0 5.130595
+California 6.0 4.128718
+Delaware 7.0 4.447251
+Ohio 4.0 3.942621
+Montana 7.0 5.117361
+Louisiana 6.1 5.579269
+U.S. 8.0 4.293297
+Ohio 10.0 6.370197
+Wisconsin 5.0 4.942621
+Pennsylvania 5.0 4.942621
+"North Carolina" 3.0 2.942621
+Tennessee 5.0 2.731239
+Oklahoma 6.13 5.609269
+Nevada 6.6 5.139219
+Massachusetts 7.0 4.242951
+U.S. 11.0 7.757193
+Alaska 17.9 12.9741
+Mississippi 4.12 3.599269
+"New Mexico" 14.47 13.94927
+U.S. 4.0 3.818277
+Utah 8.8 5.638617
+Nebraska 3.98 3.459269
+Massachusetts 9.0 7.394507
+Michigan 10.0 6.697257
+U.S. 6.0 5.39711
+Ohio 6.0 3.533326
+Nevada 9.73 9.209269
+Arkansas 10.86 10.33927
+U.S. 8.0 6.547231
+Florida 2.0 0.6733271
+Florida 3.0 2.438844
+Ohio 6.0 5.438845
+Pennsylvania 5.0 4.438845
+"North Carolina" 6.0 5.438845
+U.S. 5.0 4.691091
+Florida 6.0 2.831199
+Montana 8.7 8.179269
+Maine 9.0 6.153512
+"North Carolina" 5.0 3.011841
+Maryland 6.0 2.961745
+Florida 5.0 2.097043
+Minnesota 6.0 3.508512
+"North Carolina" 9.0 6.479284
+Pennsylvania 5.0 2.097043
+Florida 6.0 2.125303
+"New Hampshire" 13.0 9.564135
+Pennsylvania 4.0 3.351621
+"North Carolina" 11.0 6.873102
+Ohio 6.0 3.097043
+Idaho 8.01 7.489269
+Kansas 9.0 6.283125
+Nevada 9.0 6.487712
+U.S. 5.0 4.549024
+Utah 5.0 3.366177
+Georgia 5.0 2.857404
+"North Carolina" 7.0 4.097043
+Pennsylvania 8.0 3.368428
+Florida 3.0 1.192232
+Georgia 10.0 5.302505
+U.S. 5.0 0.8599381
+Georgia 8.0 5.29597
+Iowa 9.0 5.630104
+"North Carolina" 7.0 5.351995
+"New Hampshire" 10.0 7.383026
+Pennsylvania 8.0 5.160413
+Ohio 7.0 5.011841
+Virginia 6.0 4.011841
+U.S. 6.0 4.351995
+Florida 4.0 1.487712
+U.S. 9.0 5.538976
+Utah 5.0 3.189658
+U.S. 6.6 6.592031
+U.S. 5.0 4.406551
+Florida 6.0 3.338285
+Nevada 5.0 4.174792
+Arizona 12.0 7.302505
+"New Hampshire" 6.0 3.252794
+U.S. 6.0 3.474303
+Connecticut 9.0 5.290822
+Pennsylvania 5.0 2.589782
+Florida 6.0 3.421228
+"New York" 8.0 3.713748
+Texas 9.9 6.330857
+U.S. 6.0 3.105899
+Iowa 8.0 5.178931
+Iowa 10.0 6.160337
+"West Virginia" 2.77 2.249269
+U.S. 9.0 5.826282
+"Maine CD-1" 7.9 5.600039
+"South Carolina" 3.4 0.510172
+Georgia 6.0 2.502746
+Arkansas 5.0 1.502746
+"Maine CD-2" 10.7 8.400039
+Georgia 9.0 5.498275
+Wisconsin 11.0 6.760117
+Michigan 8.0 4.271595
+Kansas 8.0 5.299943
+U.S. 6.6 6.449963
+Florida 9.0 4.681931
+U.S. 4.2 3.004164
+U.S. 8.0 4.791564
+Maine 9.0 6.700039
+"North Carolina" 6.0 2.477661
+"New Jersey" 5.0 1.290822
+"South Dakota" 8.32 7.799269
+Delaware 5.4 4.87927
+Kansas 8.0 5.209223
+"New Hampshire" 15.0 10.30251
+Colorado 10.0 6.498275
+Colorado 13.0 9.502746
+Iowa 10.0 6.498275
+Virginia 8.0 4.601637
+Michigan 9.0 5.247202
+Virginia 8.0 4.498275
+Pennsylvania 4.0 1.502554
+U.S. 5.6 4.271009
+Illinois 4.05 0.48255
+"South Carolina" 7.0 3.002254
+Hawaii 4.78 4.25927
+Wisconsin 11.0 7.820467
+Maine 2.68 2.159269
+"New Jersey" 6.0 1.971765
+Colorado 10.0 8.151198
+California 2.0 -1.155565
+"North Dakota" 8.0 5.400142
+Nevada 5.0 2.474895
+Washington 14.0 10.84444
+Vermont 5.48 4.95927
+Nevada 8.0 5.147114
+Illinois 6.4 3.220467
+"North Dakota" 5.97 5.449269
+U.S. 6.9 6.607491
+Nevada 8.0 3.302505
+Colorado 7.0 5.573951
+Colorado 12.0 8.957198
+Wyoming 3.51 2.989269
+Florida 3.0 0.3990651
+Vermont 13.0 9.290822
+Ohio 11.0 6.369838
+"North Carolina" 9.0 4.369838
+Pennsylvania 8.0 3.369838
+Nevada 7.0 2.369838
+Alaska 8.88 8.359269
+Virginia 11.0 7.617719
+"New Hampshire" 6.17 5.649269
+Pennsylvania 10.0 5.533543
+"New York" 8.2 4.447778
+U.S. 6.8 5.331444
+Ohio 8.0 4.125304
+Florida 1.0 -0.7632139
+Maine 12.0 8.942473
+Florida 5.3 3.285628
+Arizona 8.0 4.844435
+"Maine CD-2" 8.0 5.153512
+Texas 9.0 4.859652
+"West Virginia" 4.0 0.78934
+"District of Columbia" 4.0 0.9078615
+Alaska 16.0 12.90786
+"North Carolina" 10.0 6.114424
+"District of Columbia" 1.93 1.409269
+California 10.0 6.202565
+U.S. 6.8 6.385911
+Arizona 8.0 5.575381
+Illinois 3.9 1.182311
+"Maine CD-1" 9.0 6.153512
+Iowa 8.0 4.254417
+Arizona 5.0 3.618539
+U.S. 8.0 5.836121
+"New Hampshire" 8.0 7.836762
+Utah 12.0 7.775136
+"New Mexico" 16.0 13.08094
+Wyoming 9.0 5.907861
+Massachusetts 9.0 5.290822
+Wyoming 10.0 7.200282
+"South Carolina" 3.0 0.0193251
+Pennsylvania 5.0 4.836762
+Nevada 8.0 7.836762
+"North Carolina" 5.0 4.836762
+Ohio 4.0 3.836762
+Florida 2.0 1.836762
+U.S. 5.0 3.748681
+Florida 3.0 1.351996
+Arkansas 3.0 0.395596
+U.S. 9.0 4.906105
+"New Mexico" 12.0 11.6882
+Massachusetts 9.0 4.827538
+"Rhode Island" 4.07 3.549269
+Minnesota 6.0 2.116711
+U.S. 8.0 5.022889
+Nevada 5.0 1.844435
+"North Carolina" 5.0 1.859684
+U.S. 7.3 5.702779
+Michigan 4.5 4.045363
+Pennsylvania 14.0 9.113469
+U.S. 7.0 3.853918
+Oregon 11.0 6.485996
+Virginia 6.0 3.6489
+"South Dakota" 11.0 7.907861
+"Rhode Island" 8.0 4.907861
+Texas 4.23 1.964348
+Montana 9.0 5.907861
+Delaware 7.0 3.907861
+Louisiana 6.0 3.938938
+Mississippi 5.0 1.907861
+U.S. 5.0 2.246893
+U.S. 6.6 6.064229
+"New Hampshire" 11.0 7.907861
+Arizona 12.0 7.917472
+U.S. 8.0 3.509444
+Kentucky 7.4 3.439668
+"West Virginia" 6.0 2.907861
+Maryland 7.0 3.907861
+"North Dakota" 10.0 6.907861
+Oklahoma 6.0 3.491154
+Oklahoma 10.0 6.907861
+Hawaii 8.0 4.907861
+U.S. 4.7 1.94091
+Maryland 6.0 2.617279
+Vermont 9.0 5.907861
+"North Carolina" 6.0 3.959429
+Nebraska 9.0 5.907861
+Iowa 7.0 4.944061
+Arkansas 6.0 2.907861
+Alaska 9.0 6.576738
+Ohio 4.0 1.942558
+U.S. 7.5 5.775593
+Idaho 15.0 11.90786
+U.S. 5.7 5.050171
+Tennessee 6.0 2.907861
+Indiana 12.0 8.907862
+Louisiana 7.5 4.022496
+U.S. 5.0 4.09946
+"New Hampshire" 6.0 5.708097
+Connecticut 6.0 2.907861
+California 7.0 2.735748
+Louisiana 5.0 1.907861
+Florida 5.0 3.066072
+Missouri 4.0 2.998349
+Alabama 6.0 2.907861
+Missouri 10.0 6.907861
+Nevada 8.0 7.708097
+Iowa 9.0 5.907861
+Washington 9.0 5.907861
+"New Mexico" 19.0 15.90786
+Ohio 14.0 10.08329
+"New Jersey" 4.0 0.9078615
+Maine 7.0 3.907861
+Wisconsin 7.0 3.855916
+Kentucky 7.0 3.907861
+Illinois 8.0 4.907861
+U.S. 3.0 2.836762
+"Rhode Island" 8.0 4.290822
+U.S. 8.0 6.133526
+Michigan 10.0 5.814278
+Kansas 12.0 8.907862
+Ohio 7.0 5.066072
+Massachusetts 5.0 1.907861
+U.S. 5.4 4.651166
+Pennsylvania 6.0 2.855387
+Illinois 8.0 4.400771
+Idaho 6.67 5.336159
+U.S. 5.6 4.369368
+Pennsylvania 9.0 5.083292
+Nevada 11.0 7.907861
+Florida 8.0 4.083292
+Missouri 7.0 3.502746
+"North Carolina" 15.0 11.08329
+"North Carolina" 6.0 2.85783
+"West Virginia" 7.45 6.116158
+Minnesota 9.0 5.907861
+Oregon 8.0 4.907861
+Indiana 11.0 6.712595
+"South Dakota" 7.53 6.196159
+Wisconsin 8.0 4.907861
+"Maine CD-2" 10.4 7.62331
+Utah 7.0 3.810775
+Florida 8.0 4.048952
+"North Carolina" 4.0 1.715848
+Texas 6.0 3.529847
+U.S. 5.4 4.558393
+U.S. 5.0 5.109482
+"Maine CD-1" 7.3 4.52331
+Michigan 5.4 3.027215
+"New Hampshire" 7.0 6.580912
+Arizona 9.0 5.907861
+"South Carolina" 5.0 1.439706
+U.S. 8.4 6.391053
+"North Carolina" 7.0 5.271187
+Nevada 8.3 6.966159
+Nevada 9.0 8.580912
+Arkansas 6.66 5.326159
+Maine 12.0 8.290822
+Wyoming 9.51 8.176159
+"North Carolina" 4.0 1.918777
+Nebraska 7.41 6.076159
+Vermont 8.95 7.616158
+U.S. 4.0 1.808099
+U.S. 5.7 4.399623
+"South Carolina" 5.0 2.223088
+Maine 7.57 6.236159
+Oklahoma 8.99 7.656158
+Louisiana 6.36 5.026159
+"North Carolina" 7.0 3.907861
+Colorado 11.0 7.907861
+Alaska 10.35 9.016159
+"South Carolina" 6.0 2.907861
+"New Mexico" 11.78 10.44616
+"North Carolina" 7.0 3.861668
+U.S. 5.8 4.868555
+Montana 7.51 6.176159
+Mississippi 4.59 3.256159
+Virginia 8.0 4.896813
+Michigan 8.0 4.907861
+Ohio 8.0 4.542468
+"North Carolina" 9.0 4.917473
+U.S. 9.0 6.49086
+Michigan 6.5 2.745779
+Georgia 5.0 3.046511
+Arizona 5.0 3.136741
+U.S. 6.37 5.036159
+Oregon 10.0 5.155453
+"North Dakota" 6.22 4.886158
+U.S. 7.7 5.569473
+Kentucky 9.4 8.066158
+U.S. 13.0 9.313189
+U.S. 9.0 6.617544
+Connecticut 3.81 2.476159
+U.S. 5.0 3.954124
+U.S. 5.0 3.348454
+"Maine CD-2" 14.0 10.29082
+"Maine CD-1" 9.3 5.590822
+U.S. 4.0 3.708097
+Ohio 9.0 5.907861
+Texas 8.0 4.907861
+Ohio 10.0 6.873468
+"South Carolina" 7.0 3.884117
+Maine 8.8 6.02331
+Virginia 8.0 4.907861
+U.S. 6.0 4.986693
+Missouri 8.0 4.864666
+U.S. 5.9 4.541638
+U.S. 7.0 2.933794
+Oregon 6.31 4.976159
+Kansas 9.2 7.866158
+"New York" 4.0 0.9078615
+"South Carolina" 6.97 5.636158
+Tennessee 5.45 4.116158
+Florida 8.0 3.428634
+"District of Columbia" 7.4 6.066159
+U.S. 9.3 5.022579
+Virginia 12.0 7.687624
+Iowa 8.71 7.376159
+"Rhode Island" 7.94 6.606159
+U.S. 9.0 5.76199
+Alabama 3.12 1.786159
+U.S. 7.2 4.947792
+Hawaii 7.57 6.236159
+U.S. 11.0 6.40614
+U.S. 5.0 4.296371
+Pennsylvania 6.0 2.907861
+Georgia 10.1 6.678881
+Florida 2.0 1.296371
+"North Carolina" 6.0 5.296371
+Ohio 6.0 5.296371
+Pennsylvania 5.0 4.296371
+Delaware 5.64 4.306159
+U.S. 5.6 4.517375
+Georgia 5.7 3.449509
+U.S. 8.0 4.551058
+Massachusetts 5.97 4.636158
+U.S. 8.0 4.426227
+U.S. 7.3 4.933734
+U.S. 5.0 3.079453
+U.S. 5.8 4.378607
+"District of Columbia" 4.0 0.6233211
+Florida 3.9 1.100334
+Georgia 5.31 3.976159
+Mississippi 3.0 -0.416466
+"New Hampshire" 10.0 5.685199
+Iowa 10.0 5.685199
+Florida 6.0 2.539229
+Maryland 5.74 4.406158
+Michigan 3.0 2.27611
+"New Hampshire" 5.36 4.026159
+U.S. 5.7 4.544425
+California 7.0 3.907861
+Colorado 6.6 5.266159
+Maine 6.56 4.677061
+"West Virginia" 10.0 5.746379
+U.S. 7.7 5.234728
+Alaska 16.0 12.62332
+Florida 5.0 1.907861
+Wyoming 9.0 5.623321
+Alaska 9.09 7.207061
+Iowa 12.0 6.728753
+U.S. 8.0 5.290873
+Colorado 15.0 9.671217
+Virginia 12.0 6.671217
+U.S. 10.0 4.666089
+"North Carolina" 6.0 4.747274
+Ohio 6.0 4.747274
+Florida 4.0 2.747274
+Pennsylvania 6.0 4.747274
+Washington 6.55 5.216159
+U.S. 4.0 3.580912
+"New York" 6.0 3.104349
+"South Dakota" 11.0 7.623321
+Maine 10.0 7.104349
+Arizona 6.8 5.466159
+"New Hampshire" 4.48 2.597061
+Delaware 12.04 10.15706
+Indiana 10.0 6.915481
+Minnesota 8.21 6.876159
+Georgia 8.0 5.104349
+Montana 9.0 5.623321
+"North Dakota" 12.0 8.623322
+"New Mexico" 18.0 13.6852
+Michigan 6.06 4.726159
+Georgia 8.0 4.907861
+U.S. 6.0 4.82097
+U.S. 5.9 4.409964
+Nebraska 11.0 7.623321
+"West Virginia" 7.0 3.623321
+Nevada 9.0 4.685199
+U.S. 8.0 3.82562
+Virginia 7.69 6.356159
+U.S. 7.3 4.741956
+Mississippi 5.0 2.303277
+Florida 6.0 2.935928
+U.S. 6.0 3.712152
+"Rhode Island" 8.0 5.303277
+"Rhode Island" 7.0 3.623321
+Florida 2.0 0.151199
+"New Hampshire" 12.0 9.303276
+Vermont 9.0 6.303277
+Delaware 8.0 4.623321
+Indiana 7.47 6.136158
+Hawaii 4.87 2.987061
+Missouri 8.85 7.516159
+Wisconsin 6.39 5.056159
+Oklahoma 11.0 7.623321
+Hawaii 7.0 4.303277
+Delaware 6.0 3.303277
+Montana 11.0 8.303276
+Maryland 6.0 3.303277
+Arkansas 5.0 2.303277
+"New Hampshire" 11.0 6.673598
+U.S. 5.0 2.868084
+"New York" 6.0 1.804027
+Washington 8.0 5.303277
+Pennsylvania 5.0 1.548961
+"New Jersey" 4.0 1.303277
+"North Carolina" 5.85 4.516159
+Arkansas 7.0 3.623321
+U.S. 8.0 5.352117
+Oklahoma 11.0 8.303276
+Tennessee 6.0 2.623321
+"Rhode Island" 4.1 2.217061
+Idaho 11.0 8.303276
+Vermont 10.0 6.623321
+Maryland 6.0 2.623321
+Missouri 8.0 5.478554
+Alaska 11.0 8.303276
+Idaho 15.0 11.62332
+U.S. 10.0 6.944006
+"District of Columbia" 4.0 1.303277
+Connecticut 4.0 1.303277
+Pennsylvania 6.0 3.918777
+U.S. 12.0 7.219122
+"New Jersey" 4.76 3.426159
+Maine 7.0 4.303277
+"New Hampshire" 11.0 7.623321
+Massachusetts 8.0 5.303277
+Indiana 11.0 8.303276
+Wyoming 8.0 5.303277
+Illinois 8.0 5.303277
+Kentucky 8.0 4.623321
+Utah 13.0 8.840888
+Connecticut 7.0 3.623321
+Wisconsin 12.0 7.685199
+Louisiana 4.0 0.6233211
+Iowa 6.0 3.804957
+"West Virginia" 5.0 2.303277
+Virginia 11.0 7.24533
+Vermont 5.53 3.647061
+Alabama 6.0 3.303277
+Iowa 10.0 7.303277
+"North Carolina" 7.7 3.947249
+Alaska 10.0 7.218894
+Colorado 6.0 3.533326
+Hawaii 8.0 4.623321
+Arkansas 10.11 8.227061
+U.S. 6.0 3.43032
+"North Dakota" 11.0 8.303276
+Tennessee 5.0 2.303277
+"New Mexico" 18.0 15.30328
+Mississippi 4.0 0.6233211
+Missouri 9.0 5.623321
+Utah 7.0 4.279005
+Missouri 10.0 7.303277
+"New Hampshire" 14.0 10.29082
+Idaho 3.14 1.257061
+"South Dakota" 12.0 9.303276
+Oregon 7.0 4.303277
+Alabama 8.0 4.623321
+Indiana 12.0 8.623322
+"District of Columbia" 7.31 5.427061
+Minnesota 9.0 6.303277
+Arizona 7.0 4.12957
+Colorado 13.0 9.44341
+Idaho 13.0 9.456696
+Pennsylvania 3.0 1.271187
+Nebraska 10.0 7.303277
+Nevada 11.0 8.303276
+Ohio 6.33 4.996159
+Florida 5.7 1.422579
+Florida 8.0 4.741735
+Kansas 13.0 10.30328
+Iowa 9.0 5.623321
+Maine 7.0 3.623321
+"South Dakota" 2.15 0.2670614
+Wyoming 5.66 3.777061
+"New Mexico" 13.27 11.38706
+Pennsylvania 6.9 3.145779
+Nevada 5.29 3.407061
+Louisiana 5.0 2.303277
+"West Virginia" 9.31 7.427062
+Nebraska 6.66 4.777061
+"New Hampshire" 12.0 8.464876
+Wisconsin 8.0 5.303277
+Kentucky 8.0 5.303277
+Mississippi 3.97 2.087061
+Pennsylvania 5.53 4.196159
+"New Hampshire" 5.0 3.046511
+Alaska 11.0 8.429461
+U.S. 9.0 5.349173
+Washington 9.0 5.623321
+U.S. 10.0 6.066971
+U.S. 6.0 4.681405
+"South Carolina" 6.0 3.303277
+Illinois 8.0 4.623321
+Louisiana 8.11 6.227061
+Illinois 6.7 5.366158
+Arizona 8.0 5.303277
+"New York" 5.19 3.856159
+Ohio 9.8 6.046362
+Arizona 8.3 4.455221
+"New Mexico" 16.0 14.69714
+"New Mexico" 20.0 16.62332
+Michigan 5.0 3.395887
+"North Dakota" 16.91 15.02706
+"New Jersey" 4.0 0.6233211
+Colorado 11.0 8.303276
+Massachusetts 6.0 2.623321
+Nevada 11.0 7.964495
+Kansas 11.0 7.623321
+Oklahoma 11.55 9.667062
+Virginia 15.0 10.23596
+Oregon 9.0 5.623321
+Wisconsin 9.0 5.623321
+Texas 7.46 6.126159
+Ohio 12.0 6.728753
+"New York" 4.0 1.303277
+"North Carolina" 8.0 5.303277
+U.S. 7.0 4.120747
+Michigan 11.0 6.685199
+Pennsylvania 9.0 3.728753
+California 5.41 4.076159
+Minnesota 8.0 4.623321
+Kentucky 5.4 3.517061
+Nevada 4.8 1.72628
+U.S. 8.5 6.74724
+"South Carolina" 5.4 3.517061
+Texas 7.0 4.303277
+Michigan 8.0 5.303277
+"North Carolina" 9.0 4.685199
+Arizona 10.0 5.685199
+Virginia 9.0 5.732149
+Virginia 8.0 5.303277
+Ohio 9.0 6.303277
+Nevada 10.0 6.623321
+Utah 7.0 3.477692
+Montana 5.86 3.977061
+Kansas 6.51 4.627061
+U.S. 10.0 4.807831
+Oregon 5.83 3.947061
+Connecticut 7.17 5.287061
+Florida 5.71 4.376159
+Pennsylvania 6.0 3.303277
+Iowa 9.15 7.267061
+Colorado 16.0 12.15575
+Iowa 12.0 8.155749
+Alabama 3.64 1.757061
+U.S. 9.0 4.365351
+Colorado 12.0 7.685199
+U.S. 7.0 4.701386
+"North Carolina" 7.0 3.623321
+Tennessee 7.1 5.217061
+Florida 5.0 2.498431
+Ohio 9.0 4.685199
+U.S. 6.0 4.55274
+Arizona 10.0 6.623321
+Massachusetts 6.21 4.327061
+California 7.0 4.303277
+Georgia 7.0 4.303277
+Colorado 11.0 7.623321
+Florida 3.0 2.174792
+Ohio 6.0 5.174792
+Pennsylvania 7.0 6.174792
+"North Carolina" 6.0 5.174792
+U.S. 5.0 2.22472
+Michigan 8.0 4.623321
+Delaware 9.0 4.432921
+"Maine CD-2" 9.9 5.955143
+"South Carolina" 7.0 3.623321
+U.S. 6.49 4.607061
+Georgia 6.96 5.077061
+Florida 6.0 1.524375
+Georgia 5.0 2.431063
+Florida 5.0 2.303277
+Virginia 8.0 3.685199
+Georgia 11.0 5.560204
+"New Hampshire" 11.46 9.188036
+"Maine CD-1" 12.1 8.155145
+Arizona 9.0 5.915206
+U.S. 10.0 6.668269
+Ohio 9.0 5.623321
+Virginia 11.0 7.155749
+Delaware 5.07 2.798037
+"North Dakota" 10.23 7.958036
+"District of Columbia" 1.81 -0.4619636
+Texas 8.0 3.685199
+Alaska 19.0 12.12228
+Ohio 6.0 3.944061
+Iowa 7.0 1.974752
+Maryland 5.26 3.377061
+Florida 4.0 3.053111
+Pennsylvania 6.0 5.053111
+Ohio 6.0 5.053111
+"North Carolina" 6.0 5.053111
+Wyoming 15.0 8.122278
+U.S. 7.0 3.44666
+Virginia 9.0 5.623321
+"District of Columbia" 3.0 -0.4982587
+"South Dakota" 19.0 12.12228
+"West Virginia" 3.69 1.418036
+Washington 7.33 5.447061
+U.S. 5.0 2.339583
+U.S. 8.0 5.764375
+Alaska 16.0 12.50174
+Texas 8.0 4.623321
+Iowa 8.0 5.877357
+Wyoming 9.0 5.501741
+Pennsylvania 8.0 3.685199
+Michigan 6.0 4.677312
+U.S. 6.4 4.839361
+U.S. 5.0 3.939053
+Virginia 10.0 5.878494
+Colorado 13.0 8.878493
+Virginia 6.24 4.357061
+U.S. 6.0 4.425554
+"South Dakota" 8.63 6.358037
+U.S. 6.9 4.81433
+"New York" 5.0 1.623321
+"South Dakota" 11.0 7.501741
+Iowa 6.0 3.381608
+Nebraska 15.0 8.122278
+Missouri 5.0 3.164904
+"North Dakota" 14.0 10.50174
+Vermont 6.75 4.478036
+Alaska 4.87 2.598036
+Hawaii 1.49 -0.7819635
+Michigan 2.0 -0.1226425
+Vermont 5.0 2.999391
+"West Virginia" 6.0 2.501741
+Montana 14.0 7.122279
+"West Virginia" 12.0 5.122279
+Arizona 4.55 2.667061
+U.S. 6.7 5.075043
+Montana 13.84 11.56804
+U.S. 7.0 5.575574
+Wyoming 12.22 9.948036
+Louisiana 9.0 2.122279
+Virginia 10.0 4.974751
+Michigan 7.62 5.737061
+Idaho 7.98 5.708036
+Pennsylvania 6.0 2.623321
+Nebraska 10.0 6.501741
+Colorado 8.34 6.457061
+"North Carolina" 6.35 4.467061
+Minnesota 8.59 6.707061
+Colorado 13.0 7.974751
+Kentucky 5.0 1.153508
+Indiana 13.0 6.122279
+Montana 8.0 4.501741
+Oregon 6.0 3.569304
+"New York" 9.0 3.838285
+Arizona 3.0 0.9551114
+"North Dakota" 16.0 9.122278
+"Rhode Island" 2.26 -0.0119635
+"Rhode Island" 8.0 4.501741
+Delaware 9.0 5.501741
+Minnesota 15.0 8.122278
+Maine 9.22 6.948037
+Indiana 6.2 4.317061
+Oklahoma 13.0 6.122279
+Nebraska 6.04 3.768036
+U.S. 6.7 4.555236
+Alabama 8.0 1.122279
+Florida 8.3 3.744163
+Nevada 10.78 8.508036
+U.S. 10.0 4.984134
+Kentucky 7.0 0.1222794
+Maine 11.1 7.155144
+Illinois 5.2 2.313945
+Colorado 5.0 2.36906
+U.S. 6.0 4.840047
+Florida 7.0 2.685199
+Vermont 11.0 7.501741
+Missouri 7.64 5.757061
+Oklahoma 10.0 6.501741
+Tennessee 7.0 3.501741
+California 7.0 3.623321
+Mississippi 6.06 3.788036
+Arkansas 9.0 5.501741
+Georgia 7.0 3.623321
+Arkansas 9.55 7.278037
+"New Hampshire" 14.35 11.74803
+Idaho 15.0 11.50174
+U.S. 5.0 2.465475
+Arizona 5.0 3.230517
+Pennsylvania 5.0 3.059185
+"New Mexico" 14.3 12.02804
+Louisiana 5.0 1.501741
+Florida 5.0 1.623321
+U.S. 6.0 4.283487
+Hawaii 9.0 5.501741
+"New Hampshire" 10.0 6.501741
+Delaware 5.11 2.508029
+Connecticut 12.0 5.122279
+Maryland 6.0 2.501741
+Iowa 3.0 1.395887
+Kentucky 7.0 3.501741
+U.S. 5.0 4.174792
+Tennessee 10.0 3.122279
+Maine 15.0 8.122278
+Louisiana 6.52 4.248036
+Nevada 4.0 2.230517
+Missouri 14.0 7.122279
+"District of Columbia" 4.88 2.278029
+Missouri 9.0 5.501741
+Idaho 19.0 12.12228
+Wisconsin 8.15 6.267061
+Connecticut 7.0 3.501741
+Oklahoma 6.91 4.638036
+Maine 6.0 2.501741
+Mississippi 4.0 0.5017414
+U.S. 6.5 4.308193
+Florida 9.0 4.584135
+Florida 5.0 3.046511
+Alabama 8.0 4.501741
+Nevada 5.0 2.388467
+"New Hampshire" 8.0 4.048328
+Indiana 13.0 9.501741
+Virginia 7.0 5.230517
+"New Jersey" 3.71 1.827061
+U.S. 7.6 5.709738
+Arkansas 11.0 4.122279
+Kansas 8.0 5.317622
+U.S. 7.5 5.675494
+"Rhode Island" 3.7 1.098029
+Iowa 9.0 5.501741
+U.S. 7.4 5.374382
+U.S. 7.0 5.747274
+Ohio 5.4 3.517061
+Kansas 6.61 4.338037
+Wisconsin 10.0 5.318064
+"Rhode Island" 15.0 8.122278
+Utah 13.0 8.233776
+U.S. 7.9 5.940572
+Washington 10.0 6.501741
+"New Mexico" 21.0 17.50174
+Hawaii 13.99 11.38803
+U.S. 6.4 4.152455
+"South Carolina" 5.41 3.138036
+Georgia 10.8 7.059734
+California 10.0 5.925577
+Florida 3.8 1.7901
+U.S. 7.0 5.141014
+Tennessee 6.51 4.238037
+Georgia 7.0 4.479074
+Montana 4.07 1.468029
+Georgia 9.0 4.685199
+Vermont 10.0 5.890088
+Delaware 12.0 5.122279
+Texas 7.82 5.937061
+Michigan 7.0 5.12577
+Vermont 11.0 4.122279
+Massachusetts 6.0 2.501741
+"North Dakota" 7.37 4.768029
+Oregon 9.0 5.501741
+U.S. 8.0 4.536594
+Illinois 8.0 4.501741
+"New Jersey" 4.0 0.5017414
+"New York" 5.27 3.387061
+Kansas 11.0 7.501741
+Kentucky 7.64 5.368036
+Illinois 6.22 4.337061
+Illinois 12.0 5.122279
+U.S. 11.0 6.468635
+Connecticut 6.0 1.760054
+California 5.62 3.737061
+Hawaii 7.0 0.1222794
+Massachusetts 11.0 4.122279
+Wisconsin 10.0 6.501741
+Minnesota 9.0 5.501741
+Nevada 10.0 6.501741
+Pennsylvania 7.0 4.043866
+Florida 5.25 3.367061
+U.S. 5.0 3.150069
+Iowa 7.18 4.908036
+Utah 7.0 3.331841
+Alaska 17.1 14.49803
+Connecticut 4.65 2.378036
+Maryland 9.0 2.122279
+U.S. 6.5 4.208563
+Alabama 4.88 2.608037
+U.S. 9.0 5.401674
+Oregon 11.0 4.122279
+"New Jersey" 8.0 1.122279
+Nebraska 4.57 1.968029
+California 11.0 4.179641
+Massachusetts 5.1 2.828036
+Idaho 9.66 7.058029
+U.S. 7.0 5.019434
+Michigan 3.0 0.773573
+Massachusetts 4.0 1.075965
+Oregon 6.62 4.348036
+Mississippi 4.0 -2.877721
+"Rhode Island" 4.4 1.33305
+Georgia 8.09 5.818037
+"North Carolina" 10.0 6.884117
+"District of Columbia" 5.14 2.07305
+U.S. 7.0 4.240389
+"North Carolina" 7.0 3.501741
+"New Hampshire" 8.61 5.543049
+Maryland 7.85 5.578036
+Iowa 16.0 10.1969
+Washington 6.97 4.698036
+"South Dakota" 6.99 4.388029
+Pennsylvania 7.58 5.697061
+Texas 2.6 0.0515349
+"West Virginia" 3.77 1.168029
+Arizona 12.0 8.501741
+U.S. 6.0 2.762318
+Arkansas 2.85 0.2480292
+U.S. 7.01 4.738037
+U.S. 10.0 4.921535
+Colorado 12.0 8.501741
+Oklahoma 6.24 3.638029
+Ohio 4.8 2.878314
+Vermont 10.26 7.65803
+U.S. 7.0 3.98232
+Michigan 9.0 5.501741
+California 3.0 0.2427236
+Minnesota 7.23 4.958036
+Mississippi 2.05 -0.5519708
+Ohio 8.0 4.501741
+"South Carolina" 7.0 3.501741
+Washington 16.0 9.122278
+"New Hampshire" 14.0 7.122279
+"West Virginia" 6.88 3.81305
+Missouri 7.76 5.488037
+U.S. 7.0 4.897753
+Illinois 4.3 1.244582
+Michigan 6.68 4.408036
+Montana 10.98 7.91305
+"New Mexico" 16.1 13.49803
+U.S. 7.0 5.098845
+Virginia 9.0 5.501741
+Alaska 5.49 2.423049
+Nevada 12.0 5.122279
+Virginia 8.59 6.318037
+Ohio 15.0 9.196896
+"New Hampshire" 10.0 6.943854
+Virginia 8.0 4.606452
+Texas 8.0 4.501741
+Virginia 11.0 5.196895
+Michigan 14.0 8.196896
+Vermont 6.65 3.58305
+Wyoming 14.56 11.95803
+"North Carolina" 10.0 4.196895
+Pennsylvania 13.0 7.196896
+U.S. 7.0 4.731315
+Florida 12.0 6.196896
+Indiana 7.76 5.488037
+Kansas 5.17 2.568029
+U.S. 9.0 4.903633
+"New Jersey" 9.0 4.525338
+Tennessee 7.0 2.859526
+"North Carolina" 5.17 2.898036
+Arizona 7.81 5.538036
+Maine 2.51 -0.5569503
+Hawaii 5.27 2.20305
+Connecticut 6.01 3.40803
+U.S. 9.0 6.383671
+Colorado 11.42 9.148037
+Delaware 9.39 6.32305
+U.S. 6.0 4.358249
+Nevada 8.71 6.108029
+Missouri 7.0 4.568091
+Ohio 6.0 3.512319
+"South Dakota" 2.74 -0.3269503
+U.S. 10.0 5.05643
+Louisiana 4.46 1.858029
+U.S. 6.0 3.837239
+"North Dakota" 12.0 8.93305
+U.S. 9.0 5.067203
+Hawaii 11.85 8.477571
+U.S. 9.0 4.575781
+Tennessee 7.75 5.148029
+Iowa 6.0 2.573258
+U.S. 7.0 3.38006
+"Rhode Island" 6.31 2.937571
+"New York" 5.0 1.501741
+Michigan 7.5 3.231396
+Wisconsin 6.54 4.268036
+"New Mexico" 25.0 18.12228
+Idaho 8.17 5.10305
+U.S. 9.0 5.617857
+Pennsylvania 6.0 2.501741
+Wyoming 9.7 6.633049
+Pennsylvania 6.87 4.598036
+"South Carolina" 5.24 2.638029
+Iowa 7.56 4.958029
+U.S. 6.0 3.26978
+U.S. 6.8 3.816959
+U.S. 6.0 4.288504
+Alabama 4.17 1.568029
+Oregon 7.77 5.168029
+"New Jersey" 5.0 1.493778
+U.S. 7.0 4.173748
+U.S. 11.0 6.199018
+Georgia 6.0 3.470351
+Illinois 6.1 2.981049
+Nebraska 6.88 3.81305
+"Maine CD-2" 10.5 6.17462
+U.S. 6.0 3.783695
+Michigan 8.0 5.23434
+Wisconsin 3.0 1.454958
+Illinois 7.0 4.072171
+Georgia 7.0 3.501741
+Maryland 4.95 2.348029
+"North Dakota" 14.54 11.16757
+"New Jersey" 3.81 1.538036
+Iowa 16.0 9.122278
+Ohio 7.24 4.968036
+Michigan 8.0 3.893636
+Oklahoma 10.83 7.76305
+"Maine CD-1" 9.4 5.074619
+Massachusetts 6.19 3.588029
+Wyoming 11.77 8.397572
+Wisconsin 13.0 6.122279
+Florida 5.0 1.501741
+U.S. 6.0 2.180917
+California 8.0 4.501741
+U.S. 12.0 7.042305
+Delaware 12.39 9.017571
+Maine 4.64 2.038029
+U.S. 6.6 4.268902
+Mississippi 4.84 1.77305
+U.S. 8.0 5.132487
+"District of Columbia" 0.0 -3.372429
+U.S. 7.0 5.230519
+Missouri 8.0 5.310119
+"South Dakota" 11.86 8.487571
+"New Mexico" 11.6 8.533051
+Alaska 9.92 6.547571
+Arizona 4.0 1.523756
+U.S. 10.0 4.769368
+U.S. 6.1 3.729367
+U.S. 5.0 3.506257
+Pennsylvania 5.0 1.95483
+U.S. 12.0 6.874031
+U.S. 8.0 4.485379
+Texas 11.0 4.122279
+Georgia 7.45 4.848029
+U.S. 12.0 6.965545
+Florida 6.43 4.158036
+"New Hampshire" 12.73 9.064282
+"North Carolina" 6.0 3.418913
+Kentucky 4.92 1.85305
+U.S. 6.7 4.297373
+Kansas 8.8 5.73305
+Maine 17.14 13.76757
+"District of Columbia" 9.39 5.724283
+U.S. 6.67 4.068029
+U.S. 7.6 5.147833
+"South Carolina" 7.62 4.55305
+Virginia 6.0 3.204642
+"New York" 8.0 1.122279
+"West Virginia" 6.76 3.387571
+Washington 9.59 6.988029
+Ohio 5.0 3.395887
+Vermont 0.0 -3.372429
+Texas 7.83 5.558036
+Louisiana 5.78 2.71305
+Illinois 7.66 5.388036
+U.S. 13.0 8.654528
+Tennessee 6.66 3.59305
+Arkansas 3.96 0.8930498
+Minnesota 9.94 7.338029
+Michigan 12.0 7.51686
+Wisconsin 16.0 11.51686
+Arizona 10.0 5.51686
+U.S. 8.0 6.177258
+"North Carolina" 6.0 3.107963
+U.S. 6.0 3.68469
+U.S. 7.3 4.808249
+Idaho 5.0 1.967198
+"North Carolina" 6.67 4.068029
+"New York" 4.92 2.648036
+U.S. 9.0 6.629453
+Arizona 6.51 3.90803
+Kentucky 7.12 4.518029
+Colorado 10.02 7.41803
+Colorado 16.0 9.122278
+California 7.23 4.958036
+Georgia 4.0 1.491566
+Virginia 6.35 3.748029
+Connecticut 3.91 0.8430498
+Michigan 6.55 3.94803
+U.S. 7.8 5.26267
+Oklahoma 7.0 4.582769
+U.S. 12.0 7.758121
+Missouri 9.23 6.628029
+Wyoming 3.58 -0.0857176
+Montana 6.1 2.727571
+Kansas 7.0 4.103048
+U.S. 9.0 4.619792
+Maryland 6.86 3.79305
+U.S. 8.2 5.617929
+"North Dakota" 12.96 9.294283
+Iowa 6.48 3.41305
+Indiana 6.95 4.348029
+"North Carolina" 10.0 3.122279
+Maine 10.0 5.67462
+"Rhode Island" 8.84 5.174283
+Oregon 5.24 2.173049
+Florida 5.9 2.281265
+Wisconsin 3.99 1.388029
+Arizona 13.0 6.122279
+Idaho 9.04 5.667571
+U.S. 6.0 3.183026
+U.S. 7.4 4.775614
+Georgia 7.39 4.32305
+Michigan 13.0 6.122279
+Massachusetts 7.02 3.95305
+U.S. 6.0 3.591917
+Florida 2.0 -0.41843
+Kansas 17.0 10.12228
+Pennsylvania 5.16 2.558029
+"New Hampshire" 4.68 1.307571
+Vermont 10.38 6.714283
+Alaska 16.0 10.56023
+Delaware 6.6 2.934282
+U.S. 6.7 4.041798
+U.S. 8.0 3.834824
+Hawaii 10.64 6.75081
+Ohio 13.0 6.122279
+U.S. 6.2 3.518499
+Alabama 4.93 1.86305
+U.S. 5.0 2.745073
+Virginia 6.0 3.581935
+U.S. 9.0 4.655998
+Colorado 4.0 2.454958
+"New Mexico" 17.4 14.02757
+U.S. 7.0 4.895533
+"District of Columbia" 6.32 2.430809
+Nebraska 5.33 1.957571
+U.S. 7.0 4.502078
+Ohio 7.23 4.628029
+"New Jersey" 5.03 2.42803
+Texas 7.0 4.699306
+"North Carolina" 2.0 0.454958
+"New Hampshire" 10.0 5.51686
+U.S. 6.2 3.492875
+U.S. 8.0 3.542325
+"South Dakota" 13.38 9.714283
+Alaska 8.53 4.864282
+U.S. 9.0 6.384604
+"North Dakota" 8.91 5.020809
+U.S. 6.5 3.758574
+Mississippi 3.6 0.227571
+Nevada 12.95 9.883049
+U.S. 7.03 3.96305
+Wyoming 14.78 10.89081
+"New Hampshire" 10.44 6.550809
+U.S. 3.0 0.9037023
+U.S. 7.0 4.420217
+Illinois 6.88 4.278029
+"Rhode Island" 5.77 1.880809
+Nevada 9.94 6.567571
+Washington 8.26 5.19305
+U.S. 7.5 4.726758
+Montana 13.28 9.614283
+U.S. 8.0 3.865188
+Vermont 7.19 3.300809
+"North Carolina" 7.83 4.76305
+Pennsylvania 12.0 5.122279
+Pennsylvania 13.0 8.516861
+"North Carolina" 8.0 3.51686
+Ohio 14.0 9.516861
+Nevada 9.0 4.51686
+Virginia 7.23 4.16305
+Arkansas 4.38 1.007571
+"South Carolina" 10.0 3.122279
+Delaware 7.86 3.970809
+Kansas 9.46 6.087571
+Maine 7.28 3.614283
+U.S. 7.2 4.390527
+"West Virginia" 10.5 6.834282
+U.S. 9.0 5.570445
+Maine 8.49 4.600809
+Mississippi 4.33 0.6642824
+Texas 7.9 5.298029
+Michigan 7.76 4.69305
+U.S. 7.0 4.350899
+Florida 6.01 3.40803
+Louisiana 4.85 1.477571
+Colorado 9.21 6.14305
+Minnesota 8.46 5.39305
+Kentucky 6.86 3.487571
+Georgia 12.0 5.122279
+Arizona 6.48 3.41305
+Connecticut 7.61 4.237571
+California 5.65 3.048029
+"New York" 5.53 2.92803
+Arkansas 8.0 4.785055
+U.S. 10.0 5.219431
+Idaho 8.14 4.474283
+Virginia 13.0 6.122279
+Missouri 8.14 5.07305
+U.S. 7.8 4.952141
+Arkansas 6.93 3.264282
+U.S. 8.0 5.136714
+U.S. 6.0 3.174097
+Ohio 6.0 3.512115
+Nevada 15.06 11.39428
+Hawaii 2.79 -0.8757175
+Oklahoma 14.24 10.86757
+"Rhode Island" 7.0 2.9193
+U.S. 7.0 4.277949
+"North Dakota" 9.48 5.399299
+Tennessee 7.02 3.647571
+U.S. 7.0 5.028242
+"New Mexico" 17.9 14.23428
+"South Dakota" 5.61 1.720809
+"South Carolina" 5.09 1.717571
+U.S. 7.2 4.318639
+U.S. 9.0 4.038312
+U.S. 7.0 4.233841
+Nevada 8.0 5.215241
+Florida 10.0 3.122279
+Alaska 9.4 5.319299
+Hawaii 7.91 3.829299
+Maine 6.54 2.4593
+Pennsylvania 6.39 3.32305
+Iowa 10.58 7.207571
+Wyoming 9.73 5.649299
+U.S. 6.0 3.202892
+Indiana 9.37 6.30305
+Alabama 4.86 1.487571
+U.S. 8.0 5.503211
+U.S. 6.8 3.889494
+"New Jersey" 4.98 1.91305
+Delaware 7.68 3.599299
+Florida 3.0 1.454958
+U.S. 8.0 3.368428
+"West Virginia" 8.96 5.070809
+"New Hampshire" 15.6 11.5193
+U.S. 10.0 5.922401
+"Rhode Island" 12.98 8.87223
+Nebraska 6.77 3.104282
+U.S. 4.0 1.585052
+Wisconsin 8.4 5.333049
+"District of Columbia" 8.68 4.5993
+Montana 8.95 5.060809
+Florida 6.0 2.958877
+Florida 5.93 2.86305
+U.S. 6.7 3.762929
+Alaska 8.44 4.550809
+Illinois 7.0 3.60101
+Oregon 6.08 2.707571
+Ohio 6.43 3.36305
+U.S. 7.0 4.133147
+U.S. 7.0 3.872885
+Massachusetts 6.94 3.567571
+Louisiana 0.98 -2.685718
+"New Mexico" 14.0 11.66006
+Maryland 7.01 3.637571
+U.S. 6.0 3.444118
+Oklahoma 8.45 4.784282
+U.S. 8.1 5.131866
+Colorado 9.0 6.877357
+Idaho 17.29 13.40081
+U.S. 5.0 2.621104
+Nevada 10.0 6.929361
+Kentucky 7.07 3.404283
+U.S. 8.0 3.760256
+U.S. 7.6 4.601672
+California 12.0 5.122279
+Vermont 12.97 8.889299
+U.S. 7.0 4.075162
+Oklahoma 6.0 2.334853
+U.S. 7.0 4.397074
+Georgia 5.2 2.738337
+Illinois 6.8 3.73305
+Kansas 7.37 3.704282
+Connecticut 6.07 2.404283
+U.S. 7.0 3.808567
+U.S. 8.2 5.178604
+Georgia 7.79 4.417571
+"South Carolina" 7.28 3.614283
+"New York" 4.69 1.62305
+U.S. 7.0 3.847456
+U.S. 7.0 4.012131
+California 6.95 3.883049
+Wyoming 9.5 5.39223
+Washington 9.78 6.407571
+U.S. 7.8 4.427571
+Texas 8.06 4.99305
+U.S. 8.3 5.260632
+Arkansas 7.02 3.130809
+U.S. 9.0 4.695807
+Tennessee 9.14 5.474283
+Mississippi 5.25 1.360809
+Minnesota 8.74 5.367571
+Alabama 6.82 3.154283
+Colorado 10.22 6.847571
+Alaska 14.66 10.55223
+"New Mexico" 12.52 8.63081
+U.S. 7.7 4.653408
+Florida 9.0 4.51686
+Virginia 7.92 4.547571
+U.S. 7.0 3.740175
+U.S. 6.0 2.943488
+Iowa 11.39 7.724283
+Oklahoma 14.61 10.72081
+Nebraska 4.3 0.4108094
+Hawaii 4.8 0.6922299
+U.S. 8.8 5.742199
+"District of Columbia" 9.98 5.872229
+"North Carolina" 5.64 2.267571
+"West Virginia" 5.48 1.3993
+Missouri 9.23 5.857571
+U.S. 8.4 5.333112
+U.S. 6.7 3.635031
+Arizona 10.52 7.147572
+Idaho 9.14 5.0593
+U.S. 10.0 5.08956
+U.S. 7.7 4.629809
+Nevada 12.76 8.87081
+Oregon 7.93 4.264282
+Maine 15.58 11.47223
+U.S. 5.7 2.633561
+"New Hampshire" 13.01 8.90223
+Massachusetts 8.11 4.444282
+U.S. 7.1 4.03556
+Vermont 8.18 4.07223
+Michigan 8.21 4.837571
+Georgia 6.65 2.984282
+Indiana 10.73 7.357571
+Maryland 8.3 4.634283
+Kansas 8.3 4.41081
+U.S. 11.0 6.010142
+Louisiana 8.35 4.46081
+Pennsylvania 4.0 1.837239
+"North Dakota" 8.57 4.462229
+Wisconsin 6.85 3.477571
+U.S. 6.3 3.234145
+Montana 9.18 5.0993
+"South Dakota" 5.52 1.4393
+U.S. 9.0 5.651811
+"South Dakota" 7.03 2.92223
+Pennsylvania 8.86 5.487571
+"New Jersey" 7.41 4.037571
+Arizona 6.0 3.29113
+"Rhode Island" 11.35 7.261781
+U.S. 9.0 6.380624
+Delaware 9.61 5.502229
+U.S. 6.3 3.238201
+"North Carolina" 8.0 4.912405
+Kentucky 5.67 1.780809
+U.S. 10.7 6.611609
+Arkansas 8.1 4.0193
+Wyoming 11.65 7.56178
+U.S. 9.0 6.762794
+Connecticut 8.75 4.860809
+U.S. 6.0 2.940332
+Vermont 10.43 6.341781
+"South Carolina" 7.79 3.900809
+Nebraska 9.21 5.1293
+U.S. 7.9 4.234282
+Michigan 7.0 3.489076
+Nevada 8.0 4.973372
+Tennessee 6.15 2.260809
+Ohio 8.69 5.317571
+Maryland 9.49 5.600809
+Virginia 7.64 3.974282
+Minnesota 8.74 5.074282
+Oklahoma 10.37 6.289299
+Alaska 13.84 9.751781
+Alabama 4.95 1.060809
+Iowa 8.7 4.810809
+"New Mexico" 18.44 14.3593
+"North Carolina" 8.51 4.844283
+Texas 7.62 4.247571
+Arizona 9.91 6.244282
+Missouri 5.0 2.557101
+Colorado 9.36 5.694282
+Washington 10.83 7.164282
+"New Hampshire" 8.74 4.65178
+U.S. 9.0 3.242177
+Hawaii 15.04 10.95178
+"New York" 5.1 1.727571
+Michigan 7.93 4.264282
+"West Virginia" 11.18 7.07223
+Nevada 9.47 5.3893
+U.S. 5.0 2.75293
+Massachusetts 8.32 4.430809
+Missouri 10.02 6.354283
+Ohio 8.0 4.405921
+U.S. 12.0 7.83256
+Mississippi 5.61 1.5293
+Florida 6.38 3.007571
+Oregon 7.26 3.370809
+Illinois 6.21 2.837571
+U.S. 6.5 3.443232
+Maine 12.7 8.61178
+Louisiana 5.91 1.829299
+California 6.42 3.047571
+Michigan 11.5 7.203249
+Kansas 12.2 8.119299
+Indiana 9.42 5.754282
+California 4.0 2.044226
+"District of Columbia" 8.12 4.03178
+U.S. 8.0 3.290874
+"North Dakota" 15.45 11.36178
+Wisconsin 8.14 4.474283
+U.S. 7.1 4.041311
+Idaho 10.36 6.252229
+U.S. 7.0 3.680764
+U.S. 5.0 0.7137403
+"New Jersey" 5.48 1.814282
+U.S. 7.0 3.51869
+Kentucky 8.5 4.4193
+U.S. 5.0 1.543262
+Georgia 7.98 4.090809
+Delaware 9.96 5.87178
+U.S. 6.0 2.609018
+Washington 10.63 6.740809
+Mississippi 7.23 3.12223
+U.S. 6.5 3.44431
+Pennsylvania 7.56 3.894282
+"West Virginia" 5.89 1.80178
+Pennsylvania 8.0 2.974752
+U.S. 8.0 4.899084
+Connecticut 10.42 6.3393
+Ohio 7.79 4.124282
+Arkansas 4.77 0.6622297
+U.S. 6.0 2.474096
+U.S. 8.39 4.50081
+U.S. 6.9 3.853112
+"South Dakota" 13.39 9.301781
+Montana 8.52 4.41223
+U.S. 6.6 4.476044
+Colorado 12.02 8.13081
+"Rhode Island" 10.2 6.191756
+Oklahoma 12.77 8.66223
+"South Carolina" 8.14 4.0593
+"North Carolina" 7.64 3.750809
+U.S. 6.0 2.407905
+Michigan 6.86 2.970809
+Arizona 10.58 6.690809
+Maryland 7.1 3.0193
+U.S. 8.0 2.22697
+Florida 8.07 4.404282
+Oregon 8.53 4.449299
+Texas 7.62 3.954282
+U.S. 7.5 4.461274
+Iowa 10.4 6.319299
+U.S. 8.0 5.578146
+Tennessee 8.87 4.789299
+Louisiana 7.08 2.972229
+Missouri 8.64 4.75081
+"North Dakota" 6.94 2.931756
+Illinois 8.12 4.454282
+Indiana 11.13 7.240809
+U.S. 6.9 3.867483
+U.S. 9.0 5.529213
+Alaska 10.88 6.871757
+Virginia 8.57 4.680809
+"New Mexico" 16.45 12.34223
+"New Jersey" 6.34 2.450809
+Nevada 10.78 6.672229
+Nebraska 10.1 5.99223
+Maine 5.47 1.461756
+Massachusetts 9.47 5.3893
+U.S. 5.0 2.656013
+"New York" 6.76 3.094283
+Alabama 6.05 1.9693
+Wyoming 14.71 10.70176
+U.S. 6.8 3.773729
+California 6.88 3.214283
+Wisconsin 7.73 3.840809
+Georgia 6.54 2.4593
+Mississippi 3.12 -0.9682198
+"South Dakota" 9.34 5.331757
+Idaho 12.78 8.69178
+U.S. 7.2 4.180158
+"South Carolina" 6.94 2.83223
+U.S. 7.0 3.347853
+Arkansas 9.74 5.65178
+U.S. 9.0 3.83016
+U.S. 8.0 4.185979
+Pennsylvania 9.24 5.350809
+U.S. 8.0 4.28876
+"New Hampshire" 9.86 5.851756
+Minnesota 11.37 7.480809
+Hawaii 5.16 1.151757
+Vermont 11.43 7.421757
+U.S. 8.0 4.241717
+Kentucky 5.88 1.77223
+Connecticut 7.78 3.67223
+U.S. 7.0 3.142087
+Minnesota 10.59 6.5093
+Washington 9.75 5.6693
+U.S. 7.1 4.095125
+"District of Columbia" 6.22 2.211756
+Alabama 7.88 3.77223
+Texas 8.76 4.87081
+Florida 7.31 3.420809
+Maryland 6.87 2.762229
+U.S. 8.85 4.7693
+U.S. 7.8 4.815572
+Ohio 8.12 4.230809
+Illinois 8.23 4.340809
+Colorado 13.01 8.9293
+Nevada 9.33 5.24178
+Kansas 10.51 6.40223
+Oklahoma 11.97 7.881781
+Arizona 9.84 5.7593
+U.S. 5.0 2.624918
+U.S. 8.0 2.250043
+Montana 10.43 6.341781
+U.S. 7.0 3.102426
+Delaware 7.92 3.911757
+Florida 5.9 1.81161
+"New Mexico" 19.84 15.75178
+"West Virginia" 7.44 3.431756
+U.S. 8.1 5.133089
+Oregon 10.15 6.042229
+Indiana 9.81 5.7293
+U.S. 11.0 6.205397
+Massachusetts 7.08 2.972229
+Tennessee 7.13 3.02223
+Missouri 8.54 4.4593
+"New York" 5.45 1.560809
+"North Carolina" 8.48 4.399299
+Louisiana 3.31 -0.7782197
+Virginia 11.95 7.869299
+California 8.99 5.100809
+U.S. 10.0 5.629374
+Michigan 7.78 3.6993
+"New Jersey" 6.52 2.4393
+U.S. 8.0 5.051437
+U.S. 5.0 2.699968
+Kansas 9.46 5.37178
+U.S. 7.0 3.062891
+U.S. 9.0 5.569039
+U.S. 9.0 4.366636
+U.S. 8.1 5.169933
+Iowa 8.15 4.042229
+Georgia 8.9 4.792229
+U.S. 4.0 1.138938
+Nebraska 11.3 7.211781
+Wisconsin 8.31 4.2293
+Connecticut 8.72 4.631781
+U.S. 7.6 4.69526
+Washington 10.23 6.122229
+Kentucky 7.66 3.57178
+U.S. 9.0 5.030897
+Pennsylvania 10.74 6.659299
+Michigan 9.0 5.521406
+"South Carolina" 9.06 4.971781
+Idaho 15.11 11.10176
+U.S. 8.0 3.941773
+U.S. 7.0 2.896194
+U.S. 8.0 3.981357
+U.S. 11.0 5.482664
+Ohio 9.51 5.4293
+U.S. 7.2 4.320974
+Mississippi 7.26 3.251757
+U.S. 7.0 2.851453
+"New York" 7.16 3.079299
+U.S. 8.69 4.582229
+Nevada 12.84 8.831757
+Texas 9.18 5.0993
+U.S. 4.0 1.73803
+U.S. 8.0 3.726399
+Alabama 5.5 1.41178
+U.S. 8.0 3.809138
+Illinois 9.22 5.1393
+U.S. 8.0 3.775321
+Minnesota 9.46 5.35223
+Tennessee 7.62 3.53178
+Massachusetts 7.53 3.441781
+U.S. 8.0 3.752023
+Maryland 8.62 4.53178
+Wisconsin 10.0 5.543397
+U.S. 7.3 4.441908
+U.S. 9.0 3.321857
+"North Carolina" 9.6 5.49223
+Virginia 10.23 6.122229
+U.S. 6.0 3.639219
+Colorado 11.48 7.372229
+U.S. 7.0 2.552163
+U.S. 7.0 2.585665
+U.S. 7.7 4.869503
+Florida 8.32 4.239299
+"New Jersey" 7.69 3.58223
+Georgia 8.54 4.45178
+Oklahoma 12.88 8.871757
+U.S. 7.0 2.692098
+Arizona 8.7 4.592229
+Oregon 8.79 4.70178
+Missouri 8.19 4.082229
+Montana 8.0 3.991756
+Arkansas 9.77 5.761757
+Michigan 9.75 5.64223
+U.S. 7.0 2.624051
+U.S. 7.7 4.90039
+California 7.93 3.849299
+Indiana 8.61 4.502229
+U.S. 8.0 3.660282
+"New Mexico" 20.47 16.46176
+Iowa 6.33 2.24178
+Pennsylvania 8.12 4.012229
+Louisiana 7.4 3.391757
+U.S. 8.0 4.684141
+Nebraska 8.92 4.911757
+U.S. 8.0 5.729704
+U.S. 8.0 3.523018
+U.S. 8.7 5.927039
+Washington 9.69 5.60178
+U.S. 7.7 4.953939
+Wisconsin 9.12 5.012229
+Kentucky 7.65 3.641757
+Ohio 9.55 5.44223
+"New York" 6.98 2.87223
+Kansas 12.32 8.311756
+U.S. 5.8 3.186201
+U.S. 8.74 4.65178
+U.S. 7.4 4.683259
+Florida 8.44 4.332229
+"South Carolina" 7.42 3.411757
+Connecticut 9.18 5.171757
+Minnesota 9.04 4.95178
+U.S. 5.9 3.279756
+Texas 7.83 3.722229
+U.S. 6.2 3.58449
+U.S. 10.0 6.93305
+U.S. 8.0 3.496453
+Virginia 11.18 7.091781
+U.S. 5.3 2.671284
+U.S. 5.7 3.075202
+"North Carolina" 7.87 3.78178
+"New Jersey" 7.53 3.441781
+U.S. 10.0 4.513204
+U.S. 6.0 3.306116
+U.S. 6.6 3.987971
+California 8.24 4.132229
+U.S. 5.2 2.549253
+U.S. 5.5 2.859706
+U.S. 6.3 3.688136
+U.S. 5.0 2.33943
+Arizona 11.12 7.03178
+Illinois 9.38 5.27223
+Indiana 9.81 5.721781
+Colorado 10.86 6.77178
+U.S. 5.2 2.54048
+Alabama 5.69 1.681757
+U.S. 7.0 2.367668
+Maryland 8.47 4.461757
+U.S. 6.0 3.32833
+Oregon 6.13 2.121757
+Missouri 8.7 4.61178
+U.S. 6.0 3.390249
+Michigan 7.94 3.85178
+U.S. 4.0 1.701235
+Pennsylvania 8.22 4.131781
+Tennessee 9.62 5.611756
+Iowa 10.55 6.541757
+Massachusetts 10.02 6.011757
+U.S. 9.0 3.515808
+Wisconsin 6.76 2.671781
+U.S. 7.1 4.501188
+U.S. 7.6 4.994331
+U.S. 6.2 3.610305
+U.S. 9.0 4.465389
+Georgia 8.66 4.651756
+Washington 6.57 2.561757
+U.S. 7.2 4.617296
+U.S. 8.0 3.373856
+Texas 8.69 4.60178
+Ohio 7.48 3.39178
+U.S. 8.0 3.371725
+"New York" 7.77 3.68178
+U.S. 6.0 2.894998
+U.S. 7.6 5.019227
+U.S. 8.0 3.368555
+U.S. 7.0 4.419309
+Minnesota 9.02 5.011757
+U.S. 7.4 4.833427
+U.S. 10.0 4.23433
+Florida 7.62 3.53178
+U.S. 7.0 2.367085
+California 9.69 5.60178
+Virginia 12.4 8.391756
+Michigan 8.32 4.311756
+U.S. 8.59 4.581757
+Illinois 8.84 4.751781
+U.S. 7.3 4.740263
+U.S. 9.0 4.435196
+U.S. 7.1 4.548704
+Colorado 12.19 8.181756
+U.S. 12.0 5.120168
+"North Carolina" 8.0 4.112092
+U.S. 6.1 3.561251
+Arizona 8.23 4.221756
+"New Jersey" 6.17 2.161757
+"North Carolina" 6.71 2.701756
+Indiana 10.97 6.961757
+U.S. 5.0 2.46811
+U.S. 9.0 4.369084
+U.S. 11.0 5.629249
+Missouri 10.27 6.261757
+California 5.0 -0.6616164
+U.S. 4.3 1.773037
+U.S. 4.3 1.782419
+U.S. 10.0 5.363333
+U.S. 4.4 1.887288
+U.S. 11.0 5.707996
+U.S. 8.0 3.374835
+Pennsylvania 7.36 3.351757
+U.S. 4.5 1.99562
+U.S. 10.0 4.673259
+U.S. 6.2 3.699313
+U.S. 11.0 4.267463
+Wisconsin 7.63 3.621757
+U.S. 5.7 3.198123
+U.S. 6.2 3.699057
+Ohio 8.2 4.191756
+"New York" 6.19 2.181756
+U.S. 8.0 3.376756
+U.S. 6.0 3.498155
+U.S. 7.0 2.377834
+Texas 7.77 3.761756
+Florida 7.23 3.221756
+U.S. 6.3 3.796495
+U.S. 12.0 6.756879
+U.S. 9.0 6.084502
+U.S. 11.0 5.779756
+U.S. 5.8 3.295146
+U.S. 7.0 2.386636
+California 8.79 4.781756
+Illinois 9.83 5.821756
+U.S. 8.1 4.400466
+U.S. 5.2 2.693275
+U.S. 11.0 4.11617
+U.S. 5.5 2.992611
+U.S. 5.3 2.790987
+U.S. 11.0 5.787827
+U.S. 5.1 2.585682
+U.S. 7.0 2.394797
+U.S. 5.8 3.280388
+U.S. 6.0 3.475036
+U.S. 6.3 3.77838
+U.S. 8.0 3.413682
+U.S. 8.0 3.401007
+U.S. 6.1 3.569117
+U.S. 10.0 4.749275
+U.S. 8.0 3.428648
+U.S. 5.8 3.265805
+U.S. 6.0 1.603027
+U.S. 8.0 3.407252
+U.S. 5.5 2.962519
+U.S. 7.0 2.449095
+U.S. 5.6 3.060506
+U.S. 7.0 2.633914
+U.S. 5.9 3.363314
+U.S. 5.0 2.465522
+U.S. 5.7 3.160589
+U.S. 6.3 3.754107
+U.S. 7.0 2.466612
+U.S. 6.3 3.747605
+U.S. 6.0 3.438187
+U.S. 6.0 1.660563
+U.S. 7.4 4.829088
+U.S. 8.0 3.484961
+U.S. 7.0 4.422553
+U.S. 6.7 4.116282
+U.S. 7.0 2.575432
+U.S. 9.0 4.503457
+U.S. 11.0 4.145452
+U.S. 8.0 3.528783
+U.S. 9.4 5.312076
+U.S. 6.0 1.554498
+U.S. 6.8 4.209597
+U.S. 8.0 4.99165
+U.S. 7.1 4.502769
+U.S. 8.0 4.95176
+U.S. 11.0 4.247902
+U.S. 7.0 2.687463
+U.S. 6.0 1.716783
+U.S. 10.0 4.705051
+U.S. 6.0 1.73964
+U.S. 6.5 3.895218
+U.S. 10.4 6.319942
+U.S. 10.0 4.556765
+U.S. 10.0 3.431908
+U.S. 8.2 5.588323
+U.S. 9.0 2.537675
+U.S. 10.0 3.566104
+U.S. 9.8 5.959059
+U.S. 10.0 3.597279
+U.S. 11.0 4.660388
+U.S. 9.0 2.674464
+U.S. 9.0 2.643491
+U.S. 9.0 2.656349
+U.S. 9.0 2.594252
+U.S. 9.0 2.559403
+Kansas 8.0 5.551834
+Utah 8.4 7.879269
+Florida 7.0 2.838907
+Florida 4.0 1.509263
+Utah 10.92 8.648037
+Utah 16.75 13.37757
+Pennsylvania 9.0 4.872087
+U.S. 6.0 1.73964
+Utah 15.32 11.2393
+Utah 12.93 8.841781
+Florida 7.0 3.405921
+Utah 9.31 5.42081
+Wisconsin 9.0 4.584893
+Ohio 9.0 3.974751
+Utah 14.51 11.44305
+Utah 16.0 13.26684
+Ohio 8.0 3.838907
+"North Carolina" 3.0 0.3958244
+Wisconsin 8.0 3.852612
+Utah 13.0 10.4789
+Pennsylvania 9.0 4.838906
+Pennsylvania 7.0 3.405921
+Utah 8.38 4.714283
+Utah 10.0 6.228238
+Utah 23.0 16.12228
+"North Carolina" 9.0 3.671217
+Utah 11.45 8.848029
+Florida 7.0 2.872088
+Pennsylvania 6.0 3.509263
+U.S. 6.0 1.761854
+Utah 6.33 4.996159
+"North Carolina" 7.0 4.697149
+Utah 13.26 9.15223
+"North Carolina" 7.0 1.974752
+Utah 10.89 9.007062
+California 7.0 3.328916
+Florida 7.0 1.974752
+Utah 13.75 9.741756
+Florida 9.0 3.671217
+Utah 16.0 12.88978
+Ohio 7.0 2.872088
+"North Carolina" 4.0 1.596946

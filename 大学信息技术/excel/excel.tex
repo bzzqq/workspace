@@ -1,0 +1,52 @@
+\documentclass[cn,blue,12pt,normal]{elegantnote}
+\usepackage{graphicx}
+\pagestyle{plain}
+\usepackage{xcolor}
+\usepackage{framed} %段落加边框
+\usepackage{makecell} %表格内强制换行
+
+%自定义命令 颜色
+\newcommand*{\cred}{\textcolor{red}}
+\newcommand*{\cblue}{\textcolor{blue}}
+\newcommand*{\cgreen}{\textcolor{green}}
+\newcommand*{\ccyan}{\textcolor{cyan}}
+\newcommand*{\cmagenta}{\textcolor{magenta}}
+\newcommand*{\cyellow}{\textcolor{yellow}}
+\newcommand*{\cdarkblue}{\textcolor{DarkBlue}}
+\definecolor{epubblue}{RGB}{1,126,218}
+\newcommand*{\cepubblue}{\textcolor{epubblue}}
+
+\renewcommand*{\eitemi}{\cepubblue{$\bullet$}}
+\renewcommand*{\eitemii}{\cepubblue{$\diamond$}}
+
+\begin{document}
+\begin{sloppypar} %文字溢出自动换行
+
+
+\setmainfont{Times New Roman}
+
+\tableofcontents
+
+\newpage
+\section{数据输入}
+\input{sections/1.tex}
+\newpage
+\section{公式}
+\input{sections/2.tex}
+\newpage
+\section{if函数}
+\input{sections/3.tex}
+\newpage
+\section{LOOKUP函数}
+\input{sections/4.tex}
+\newpage
+\section{日期函数}
+\input{sections/5.tex}
+\newpage
+\section{筛选}
+\input{sections/6.tex}
+
+
+
+\end{sloppypar}
+\end{document}

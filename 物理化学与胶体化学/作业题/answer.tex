@@ -1,0 +1,41 @@
+%!TEX program = xelatex
+\documentclass[cn,blue,14pt,normal]{elegantnote}
+\title{ElegantNote：一个优美的 \LaTeX{} 笔记模板}
+
+\author{张斌}
+\institute{Elegant\LaTeX{} Program}
+\version{2.40}
+\date{\zhtoday}
+
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\begin{document}
+
+\input{contents/answer1.tex}
+
+\end{document}

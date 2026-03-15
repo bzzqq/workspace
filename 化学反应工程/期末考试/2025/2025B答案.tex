@@ -1,0 +1,171 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{a4paper,left=3.17cm,right=3.17cm,top=2cm,bottom=2cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{pifont} % 圆圈数字
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\usepackage{listings} % 代码
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+\setCJKmainfont{SimSun}[AutoFakeBold, AutoFakeSlant] 
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+
+%微分符号
+\makeatletter
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\makeatother
+
+%直立积分
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+%Python代码排版设置
+\lstset{
+    language=Python, % 设置语言
+ breaklines=true, % 自动换行
+ backgroundcolor=\color[rgb]{0.96,0.96,0.96},% 背景颜色
+ keywordstyle=\bfseries\color[RGB]{40,40,255}, % 设置关键字为粗体，颜色为 RoyalBlue
+ morekeywords={}, % 设置更多的关键字，用逗号分隔
+ basicstyle = \linespread{1} \ttfamily, % 设置行距，字体
+ emph={left,right,mid}, % 指定强调词，如果有多个，用逗号隔开
+    emphstyle=\bfseries\color{Rhodamine}, % 强调词样式设置
+    commentstyle=\color{black!50!white}, % 设置注释样式，斜体，浅灰色
+    stringstyle=\color{blue!90!black}, % 设置字符串样式
+    columns=flexible,
+    numbers=left, % 显示行号在左边
+    numbersep=2em, % 设置行号的具体位置
+    numberstyle=\footnotesize \color{gray}, % 设置行号格式
+    xleftmargin=0em, % 左边距
+    xrightmargin=0em, % 右边距
+    aboveskip=0.5em, % 上边距
+    % framexleftmargin=2em, 行号在框内
+    framesep=1em, % 设置边框与代码的距离
+    frame=shadowbox,rulesep=3pt,rulesepcolor=\color{red!20!green!20!blue!20},% 阴影边框
+    showstringspaces = false, % 不显示字符串中的空格
+    }
+
+\renewcommand*{\lstlistingname}{Code} % 重定义Listing标题
+
+
+
+\begin{document}
+\begin{spacing}{1.625}
+
+
+\centerline{{\Large \bf{河北农业大学}}}
+
+\centerline{\bf{\Large 20\underline{25}年春（\quad ）/秋（\ \surd \ ）学期}}
+
+\centerline{\Large \bf 参考答案及评分标准（B）卷}
+
+\centerline{\bf 开课学院：\underline{\ \ \quad 理工系 \quad \ \ } \quad 出\ \ 题\ \ 人：\underline{\quad \qquad \qquad 张斌\quad \qquad \qquad}}
+
+\centerline{\bf 课\ \ 程\ \ 号：\underline{\ \ H05981011\quad} \quad 课程名称：\underline{\quad \qquad 化学反应工程 \qquad \quad }}
+
+{{\noindent} \hspace{-2em} \rule[0pt]{16cm}{0.15em}}\\
+
+\vspace{-2em}
+
+{\bf 一、简答题（每题5分，共30分）}
+
+1. （满分5分）
+
+反应动力学与热力学特性；相态与传质要求；工程与经济因素；安全与环保。 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+2. （满分5分）
+
+反应速率；进料组成；转化率与选择性要求。 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+3. （满分5分）
+
+混合不均匀、温度控制不住、热量移不出去、压力变化等。 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+4. （满分5分）
+
+全混流反应器的特点是连续地将原料输入反应器，反应产物也连续地从反应器流出；属于定态操作，此时反应器内任何部位的物系参数，如浓度及温度等均不随时间而改变，但却随位置而变。 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+5. （满分5分）全混流反应器，活塞流反应器，理想间歇反应器。 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+6. （满分5分）内扩散 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+
+
+{\bf 二、问答题（每题10分，共30分）}
+
+1. （满分10分）
+
+外扩散发生在催化剂颗粒外部，即颗粒周围流体边界层中。内扩散发生在催化剂颗粒内部，即在催化剂的孔道网络中。\hfill $\cdots \cdots \cdots (5\text{分})$
+
+消除外扩散阻力的方法包括提高流体流速；消除外扩散阻力的方法包括减小催化剂颗粒尺寸，优化催化剂孔结构。 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+2. (10分)
+
+化学反应工程以工业反应过程为研究对象，聚焦反应器设计、反应技术开发及过程优化，建立在化工热力学、反应动力学与传递过程理论基础之上，应用于石油化工、生物化工、医药等领域。化学反应工程涉及物理化学、化工热力学、化工传递过程、优化与控制等，知识领域广泛、内容新颖，对于培养学生的反应工程基础、强化工程分析能力具有十分重要的作用。 \hfill $\cdots \cdots \cdots (10\text{分})$
+
+3. (10分)
+
+全混流反应器：在反应器内部和出口处的一条水平直线（浓度恒定）。
+
+平推流反应器：一条从入口到出口单调下降的曲线。
+
+不需要精确的数学曲线，趋势正确即可得分。 \hfill $\cdots \cdots \cdots (10\text{分})$
+
+
+{\bf 二、计算题（共40分）}
+
+1. (40分) 
+
+(1) 该反应为二级反应，$t = \frac{1}{kc_\mathrm{A0}}\frac{X_\mathrm{A}}{1 - X_\mathrm{A}}$
+
+解得$X_\mathrm{A} = 0.91$ $\hfill \cdots \cdots \cdots (10\text{分})$
+
+(2) $Q_0 = \frac{24000 \mathrm{L}}{24 \mathrm{h}} = 1000 \ \mathrm{L/h}$  $\hfill \cdots \cdots \cdots (5\text{分})$
+
+$V_\mathrm{r} = \frac{Q_0 c_\mathrm{A0} X_\mathrm{Af}}{-\mathscr{R}_\mathrm{A}} = \frac{Q_0 c_\mathrm{A0} X_\mathrm{Af}}{kc_\mathrm{A0}^2(1-X_\mathrm{Af})^2} = \frac{1000\times 3 \times 0.8}{0.8\times 3^2\times (1-0.8)^2} = 8.33 \mathrm{\ m^3}$ $\hfill \cdots \cdots \cdots (5\text{分})$
+
+(3) $t = \frac{1}{kc_\mathrm{A0}}\frac{X_\mathrm{A}}{1 - X_\mathrm{A}} = \frac{1}{0.8\times 3}\frac{0.8}{1 - 0.8} = 1.67 \ \mathrm{h}$ $\hfill \cdots \cdots \cdots (5\text{分})$
+
+$V_\mathrm{r} = Q_0\tau = 1000\times 1.67 = 1670 L = 1.67 \mathrm{\ m^3}$ $\hfill \cdots \cdots \cdots (5\text{分})$
+
+(4) $V_\mathrm{r} = Q_0(t+t_0) = 1000\times (1.67 + 0.5) = 2.17 \mathrm{\ m^3}$ $\hfill \cdots \cdots \cdots (10\text{分})$
+
+\end{spacing}
+\end{document}

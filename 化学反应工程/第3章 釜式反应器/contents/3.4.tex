@@ -1,0 +1,106 @@
+\section{连续釜式反应器的反应体积}
+
+
+\begin{frame}{连续釜式反应器的反应体积}
+    实际生产中的连续釜式反应器几乎都是在定态下操作，因之各股物流以及反应器的所有参数均不随时间而变，从而不存在时间自变量，以$Q_0c_{i0}=Qc_{i}-\mathcal{R}_iV_\mathrm{r}$作为设计方程。另一方面，这类反应器多用于在液相中进行的反应，反应过程中液体体积的变化不显著，完全可以认为是在等容下进行反应。假定物料进出口的流量相等，对设计计算的精确度带来的影响极其有限，这样可简化为
+    $$V_{\mathrm{r}}=\frac{Q_{0}\left(c_{i}-c_{i 0}\right)}{\mathcal{R}_i}$$
+    这就是连续釜式反应器反应体积的计算公式。只要原料的处理量及组成和反应速率方程已知，便可计算满足输出要求时所需的反应体积。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{连续釜式反应器的反应体积}
+
+    如果反应器中只进行一个反应，并以组分A为关键组分，则
+
+    \[
+        V_{\mathrm{r}}=\frac{Q_{0}(c_{\mathrm{A} 0}-c_{\mathrm{A}})}{-\mathscr{R}_{\mathrm{A}}}=\frac{Q_{0} c_{\mathrm{A} 0} X_{\mathrm{Af}}}{-\mathscr{R}_{\mathrm{A}}(X_{\mathrm{Af}})}
+    \]
+
+    \begin{itemize}
+        \item[\bullet]定态下操作的连续釜式反应器系在等温、等浓度下进行反应，因而也是在等反应速率下反应，即$\mathscr{R}_{\mathrm{A}}$在整个反应进程中均为常数，既不随空间而变，也不随时间而变。
+        \item[\bullet] 通过简单的代数运算便可确定釜式反应器的反应体积。
+        \item[\bullet] 等速操作是连续釜式反应器不同于其他反应器的一个显著特点。
+        \item[\bullet] $\mathscr{R}_{\mathrm{A}}$应按反应器内的反应物料组成计算，由于此组成与出口物料组成相同，也可以说是按出口物料组成计算。
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{空时}
+
+    间歇反应器的反应体积是通过反应时间及物料处理量来确定的。定态操作的连续釜式反应器则是由物料衡算式直接计算反应体积。为了对连续反应器的生产能力作比较，往往引用空间时间（简称空时）这一概念，其定义为
+    
+    \[\tau = \frac{V_\mathrm{r}}{Q_0} = \frac{\text{反应体积}}{\text{进料体积流量}}\]
+
+    \begin{itemize}
+        \item[\bullet] 空时具有时间的因次。
+        \item[\bullet] 空时越小，表示该反应器的处理物料量越大，空时大则相反。
+        \item[\bullet] 若在进出口物料组成相同的条件下比较两个连续反应器，空时小者，生产能力大，当然，两者的进料体积流量必须按相同的温度及压力计算。
+        \item[\bullet] 对于等容均相反应过程，空时也等于物料在反应器内的平均停留时间。
+    \end{itemize}
+
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{空速}
+
+    空时的倒数为空速，其意义是单位反应体积单位时间内所处理的物料量，因次为[时间]$^{-1}$。空速越大，反应器的生产能力越大。
+
+    为了便于比较，通常采用标准情况下的体积流量。
+    \begin{itemize}
+        \item[\bullet] 对于使用固体催化剂的反应，往往以催化剂的质量多少表示反应体积的大小，因此有质量空速与体积空速之分：前者为单位质量催化剂单位时间内处理的物料量；后者则基于单位体积催化剂计算，且一般是指催化剂的堆体积。
+
+        \item[\bullet] 有时反应进料为液体，经汽化后进行气相反应，当进料流量按液体体积计算时所得的空速，称为液空速。
+
+        \item[\bullet] 此外还有指某一特定反应组分计算的空速，如碳空速、烃空速等。
+    \end{itemize}
+    使用时必须注意，不要混淆。
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{example}
+        等温下进行某均相反应\ce{A -> B}，$r_\mathrm{A}=5.2c_\mathrm{A}$ (\si{mol.L^{-1}.h^{-1}})，每天生产B 20kmol，A的初始浓度为2mol/L，最终转化率为80\%。分别采用(1)连续釜式反应器；(2)间歇釜式反应器，辅助时间15min；计算所需反应体积，比较大小。
+    \end{example}\pause
+
+    (1) 
+    \[
+        Q_0 = \frac{20000}{24\times 0.8 \times 2} = 520.8 \mathrm{L}
+    \]
+
+    \[
+        V_{\mathrm{r}}=\frac{Q_{0} c_{\mathrm{A} 0} X_{\mathrm{A}}}{kc_{\mathrm{A0}}(1-X_{\mathrm{A}})}=  \frac{520.8 \times 0.8}{5.2 \times (1-0.8)}=401\mathrm{L}
+    \]
+
+    (2)
+    \[
+        V_{\mathrm{r}}=Q_{0}(t+t_0)=Q_{0}(\frac{1}{k}\ln \frac{1}{1-X_{\mathrm{A}}}+t_0)=520.8\times \left(\frac{1}{5.2}\ln \frac{1}{1-0.8}+0.25\right)=292\mathrm{L}
+    \]
+
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{example}
+        等温下进行某均相反应\ce{A -> B}，$r_\mathrm{A}=5.2c_\mathrm{A}$ (\si{mol.L^{-1}.h^{-1}})，每天生产B 20kmol，A的初始浓度为2mol/L。
+        
+        若采用连续釜式反应器，保持空时与上例间歇反应器的反应时间相同，最终转化率能否达到80\%？
+    \end{example}\pause
+
+    
+    \[
+        t =\frac{1}{k(1-X_{\mathrm{A}})} =0.31 \mathrm{h}
+    \]
+
+    \[
+        V_{\mathrm{r}} =\frac{Q_{0} X_{\mathrm{A}}}{k(1-X_{\mathrm{A}})}=Q_{0}\tau= 161 \mathrm{L}
+    \]
+
+    \[
+        X_{\mathrm{A}} =61.7\%
+    \]
+\end{frame}

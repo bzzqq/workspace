@@ -1,0 +1,150 @@
+\section{信息系统}
+
+\begin{frame}
+    \frametitle{信息系统}
+    信息系统是一个由计算机硬件、计算机软件、信息资源、网络和通讯技术、信息用户和操作规则组成的以处理信息流为目的的人机一体化系统。
+
+    主要有五个基本功能，即对信息的输入、存储、处理、输出和控制。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.95\linewidth]{jiaowu}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{信息系统的组成}
+    \begin{itemize}
+      \item 计算机硬件
+      \item 计算机软件
+      \item 数据
+      \item 网络和通信设备
+      \item 用户
+      \item 规章制度
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{常见的信息系统}
+    \begin{itemize}
+      \item 图书管理系统
+      \item 教学管理系统
+      \item 售票系统
+      \item 电子政务信息系统
+      \item 运输管理系统
+      \item 医院信息系统
+      \item $\cdots\cdots$
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{智慧农业系统}
+    智慧农业系统是以计算机系统为主的，涉及大数据、人工智能、物联网等多种信息技术和农业、营销、物流等领域知识的复杂信息系统。
+    \vspace{-3pt}
+    \begin{center}
+      \begin{tikzpicture}[align=center,font=\tiny]
+        \draw [fill=LightSkyBlue1] (0,0) circle (3)
+          node [above=2.1cm] {智能决策\\支持系统}
+          node [below=2.1cm] {机器视觉\\处理系统}
+          node [above right=1.8cm] {加工仓储\\系统}
+          node [right=1.9cm] {智能营销\\系统}
+          node [below right=1.8cm] {物流配送\\系统}
+          node [below left=1.8cm] {农产品\\溯源系统}
+          node [left=1.9cm] {农业诊断\\推理系统}
+          node [above left=1.8cm] {精准监测\\系统};
+        \fill [fill=LightSkyBlue2] (0,0) circle (2)
+          node [above right=0.9cm] {物联网}
+          node [right=1cm] {大数据}
+          node [below right=0.9cm] {人工\\智能}
+          node [above left=0.9cm] {云计算}
+          node [below left=1cm] {3S技术}
+          node [left=1cm] {区块链};
+        \fill [fill=LightSkyBlue3] (0,0) circle (0.8)
+          node {\large{信息}\\\large{系统}};
+        \draw [TealBlue] (1.5,0.5) -- ++ (30:2cm) node [right] {\large{信息技术}};
+        \draw [TealBlue] (1.2,2) -- ++ (30:1cm) -- ++ (1.17,0) node [right] {\large{领域知识}};
+      \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{智慧农业系统}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.78\linewidth]{智慧农业}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{智慧农业系统组成}
+    \begin{itemize}
+      \item 硬件平台
+      \item 软件系统
+      \item 农业数据
+      
+      农业自然资源与环境数据、农业生产数据、农业市场数据、农业管理数据
+      \item 用户
+      
+      从事农业管理的各级管理者、涉农人员、公众
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{智慧农业系统应用}
+    \begin{itemize}
+      \item 农业智能决策支持
+      \item 农业智能控制系统
+      \item 农产品溯源系统
+      \item 农业诊断推理系统
+      \item 农业视觉处理
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{案例：农业大数据进行农作物虫害预测分析}
+    近年来，随着Bt棉大范围种植，第四代棉铃虫对玉米叶片和果穗的伤害逐渐加重。
+
+    棉铃虫的发生具有非线性、不稳定、相关变量多等特点。将支持向量机回归用于棉铃虫发生量的建模和预测分析、为防控服务。
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{bug}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{案例：农业大数据在智慧棉花系统中的应用}
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{cotton}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{itemize}
+          \item 物联网设备组件安置于田间选定地点与棉株上；
+          \item 采集到的大田数据自动上传至中继站或云端数据库；
+          \item 针对不同田间环境，结合往年的农业气象数据与株型调整方案等农艺措施来调整棉花模型的参数；
+          \item 系统接收到信息后，平台自动调用模型数据库中相应的公式并调整参数进行模拟和运算；
+          \item 以图表、评估报告等形式输出模拟结果和决策建议。
+        \end{itemize}
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{案例：农业大数据支撑渤海粮仓增产增效}
+    背景：“渤海粮仓”科技示范工程，是2013年4月科技部在山东、河北、天津、辽宁4省市正式启动实施的重大科技支撑项目。主要针对三省一市环渤海低平原地区淡水资源匮乏、土壤贫瘠等问题进行有针对性的解决以达到粮食增产的目的，将其建成我国重要的“粮仓”。
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{bohai}
+    \end{figure}
+\end{frame}
+

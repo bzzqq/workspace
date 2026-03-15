@@ -1,0 +1,162 @@
+%!TEX program = xelatex
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+%微分符号
+\makeatletter
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\makeatother
+
+%直立积分
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\Large 河北农业大学2022——2023学年第1学期}}
+
+\centerline{\Large 参考答案及评分标准（B）卷}
+
+\centerline{开课学院：\underline{\quad 理工学院 \quad} \quad 出\ \ 题\ \ 人：\underline{ \qquad \qquad 张斌 \qquad \qquad}}
+
+\centerline{课\ \ 程\ \ 号：\underline{\quad H05981199 \ } \quad 课程名称：\underline{\quad 物理化学与胶体化学 \ \ }}
+
+\bigskip
+
+
+1. 简答题(15分)
+
+要求至少列出3种生活中的热力学现象，并说明其原理。一些例子如下：
+
+空调制冷原理；高海拔很难煮熟饭；内燃机；微波炉；霜升华成水蒸气等等。
+
+\bigskip
+
+\bigskip
+
+2. 简答题(15分)
+
+答题要点： 
+
+(1)熵判据；吉布斯自由能判据；亥姆霍兹自由能判据。     $\hfill \cdots \cdots \cdots $(9分)
+
+(2)用化学平衡判断反应进行的程度。   $\hfill \cdots \cdots \cdots $(6分)
+
+
+\bigskip
+
+\bigskip
+
+3. 简答题(10分)
+
+(1) C=S=2(\ch{CaCO3}和\ch{CO2})，P=2，又因\ch{CO2}压力一定，所以f'=C-P+1=1，这个自由度表示温度T可在一定范围内变化，而不出现CaO，即CaCO3不会分解。
+
+$\hfill \cdots \cdots \cdots $(5分)
+
+(2) 当\ch{CO2}压力确定不变，且\ch{CaCO3}(s)和CaO(s)共存时，C=S-R=3-1=2，P=3，则f '=C-P+1=0，即此时温度T也不能变化。也就是说，只有T、p都为某一定值不变时，\ch{CaCO3}(s)和CaO(s)才能共存。 $\hfill \cdots \cdots \cdots $(5分)
+
+\bigskip
+
+\bigskip
+
+4. 主观题(20分)
+
+\[
+        \begin{tikzcd}[ampersand replacement=\&, column sep=small]
+            \ce{H2O(g, 298K, 101.325kPa)} \ar[d, "\displaystyle{\Delta G_1}"']\ar[d, "\displaystyle{\text{定温可逆}}"] \ar[rrr, "\displaystyle{\Delta G}"] \& \& \&  \ce{H2O(l, 298K, 101.325kPa)} \\
+            \ce{H2O(g, 298K, 3.168kPa)} \ar[rrr, "\displaystyle{\text{定温可逆}}"']\ar[rrr, "\displaystyle{\Delta G_2}"] \& \& \& \ce{H2O(l, 298K, 3.168kPa)} \ar[u, "\displaystyle{\text{定温可逆}}"']\ar[u, "\displaystyle{\Delta G_3}"]
+              \end{tikzcd}
+    \]
+
+    
+        $\Delta G_1 = nRT\ln \frac{p_2}{p_1} = -8586 \mathrm{J} \hfill  \qquad \cdots \cdots \cdots \cdots (4\text{分})$
+
+        $\Delta G_2 = 0 \hfill \cdots \cdots \cdots \cdots (4\text{分})$
+
+        $\Delta G_3 = \int_{p_1}^{p_2}V\dif p = \int_{p_1}^{p_2}V_m \dif p = nV_m(p_2 - p_1) = 1.8 \mathrm{J}  \hfill \cdots \cdots \cdots \cdots (4\text{分})$
+
+        $\Delta G = \Delta G_1 + \Delta G_2 + \Delta G_3 = -8584J \hfill \cdots \cdots \cdots \cdots (4\text{分})$
+    
+    此过程$\Delta G < 0 $，所以是自发的。 $\hfill \cdots \cdots \cdots \cdots (4\text{分})$
+
+
+\bigskip
+
+\bigskip
+
+
+5. 主观题(20分)
+
+$\begin{array}{l}
+\ln \frac{P_{2}}{P_{1}}=\frac{\Delta H_{\mathrm{m}}}{R}\left(\frac{1}{T_{1}}-\frac{1}{T_{2}}\right) \\
+\ln \frac{31}{101.3}=\frac{41.05 \times 10^{3}}{8.314}\left(\frac{1}{373}-\frac{1}{T_{2}}\right) \\
+T_{2}=342.5 \mathrm{K} \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad \cdots \cdots \cdots \cdots (6\text{分})\\
+\ln \frac{k_{2}}{k_{1}}=\frac{-E_{a}}{R}\left(\frac{1}{T_{2}}-\frac{1}{T_{1}}\right) \\
+\ln \frac{k_{2}}{k_{1}}=\frac{-85 \times 10^{3}}{8.314}\left(\frac{1}{342.5}-\frac{1}{373}\right) \\
+\frac{k_{2}}{k_{1}}= 0.086  \quad \quad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \cdots \cdots \cdots \cdots (6\text{分})\\
+\text{一级反应}\quad \frac{k_{2}}{k_{1}}=\frac{t_{1}}{t_{2}} \\
+\frac{10}{t_{2}} = 0.086 \\
+t_{2}=116.28 min \\
+\text{在珠穆朗玛峰顶上的沸水中煮熟一个鸡蛋需要116.28 min} \qquad \cdots \cdots \cdots \cdots (8\text{分})
+\end{array}$
+
+\bigskip
+
+\bigskip
+
+6. 主观题(20分)
+
+评分标准：
+
+使A的浓度远高于B的浓度，测定B的反应级数；使B的浓度远高于A的浓度，测定A的反应级数； $\hspace{15em} \cdots \cdots \cdots \cdots (10\text{分})$
+
+测定A或B的反应级数可采用以下方法：
+
+积分法；初速率法$\hspace{18em} \cdots \cdots \cdots \cdots (10\text{分})$
+
+\end{spacing}
+\end{document}

@@ -1,0 +1,279 @@
+\section{问题与求解}
+
+\subsection{问题求解方法}
+
+\begin{frame}
+    \frametitle{问题及形式化描述}
+    在各个学科领域，从自然学科到社会科学，从科学研究到生产实践，都存在着各种各样的问题。人们的活动都是一个不断提出问题、发现问题和解决问题的过程。
+
+    \begin{blankblock}{}
+        所谓问题，就是不能用已有的知识经验直接加以处理并因此而感到疑难的情境。例如，用六根火柴搭出四个等边三角形，三角形的边长等于一根火柴的长度，如何搭放？
+    \end{blankblock}
+
+    问题一般具有3个基本成分：
+
+    （1）一组已知的关于问题条件的描述，也即问题的起始状态；
+
+    （2）关于构成问题结论的描述，也即问题要求的答案或目标状态；
+
+    （3）问题解决过程中所遇到的困难。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{问题抽象与数学模型}
+    抽象（abstraction）是用于问题表示的重要思维工具。一般意义上的抽象，就是指忽略研究对象的具体的或无关的特性，而抽取其一般的或相关的特性。
+
+\begin{example}{}
+    小学生经过学习都知道将应用题“原来有五个苹果，吃掉两个后还剩几个”抽象表示成“5 - 2”，这里显然只抽取了问题中的数量特性，完全忽略了苹果的颜色或吃法等不相关特性。
+\end{example}
+计算机科学中的抽象包括数据抽象和控制抽象，简言之就是将现实世界中的各种数量关系、空间关系、逻辑关系和处理过程等表示成计算机世界中的数据结构（数值、字符串、列表、堆栈、树等） 和控制结构（基本指令、顺序执行、分支、循环、模块等），或者说建立实际问题的计算模型。 
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        在土地确权时，需要标记每一农户的地界，并且需要标记地块的相邻关系。对于这个问题，即要考虑区域边界，还要考虑区域之间的相邻关系，经过抽象后，用带有字母的圆圈表示区域，并且在这个节点存储地块的地理位置，用连线表示区域之间的相邻关系，最后得到如图所示的图形。
+    \end{example}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.45\linewidth]{土地确权}
+    \end{figure}
+    \vspace{-2pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{数学模型及建模步骤}
+    数学模型就是对实际问题的数学抽象后用数学符号、数学式子、程序、框图等对实际问题本质属性的刻画，用以描述客观事物的特征、内在联系及发展和运动规律。
+    \begin{enumerate}
+      \item 模型准备
+      \item 模型假设
+      \item 模型建立
+      \item 模型求解
+      \item 模型分析
+      \item 模型检验
+      \item 模型应用
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{计算思维农业案例—农机调配问题}
+    \begin{example}
+        目前我国农机实行跨区作业服务模式，农户希望农田能及时颗粒归仓，机手希望在有限的时间内为尽可能多的农户服务，从而得到更多的收益。然而机手需要综合农田位置、面积、距离、天气、路况等多种因素，以作业收益最大为目标，来求解最佳的农机调配规划方案，以实现农机作业收益最大化问题。
+    \end{example}
+
+    \begin{minipage}{0.62\linewidth}
+        问题抽象：
+
+        如图所示，节点 O 为机主的农机资源所在的位置，节点F$_1$，F$_2$，F$_3$，F$_4$，F$_5$表示机主所选的各个农田作业点的位置。每个农田作业点的面积、作业价格、所在位置、适宜服务的时间范围以及图中任意两点间的距离已知。
+    \end{minipage}\hfill
+    \begin{minipage}{0.33\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{农机调配}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{计算思维农业案例—农机调配问题}
+    \begin{minipage}{0.48\linewidth}
+        问题建模：
+        \[
+            \text{MaxP}=\sum_{j=1}^np_jA_j-\sum_{j=0}^nT_{i,j}-\sum_{j=1}^n\text{w}_j
+        \]
+        其中$p_j$表示对于农田块$j$单位面积可得到的收入，$j =1,2,\cdots n$，$A_j$表示农田块$j$的待作业面积；$T_{i,j}$表示由地点$i$到$j$的运输成本；$w_j$表示农田块$j$的作业成本。
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{农机调配}
+        \end{figure}
+    \end{minipage}
+    
+\end{frame}
+
+
+\subsection{计算机问题求解方法-算法}
+
+\begin{frame}
+    \frametitle{人类处理一般问题的特点}
+    \begin{blankblock}{}
+        同学A和同学B约好周末从学校出发，去沧州动物园游玩。A主张从学校门口叫出租车，B则建议通过叫车软件网络约车。
+    \end{blankblock}
+    \begin{enumerate}
+      \item 可选择的步骤非常多
+      \item 列出的步骤一般并不严格
+      \item 有些步骤还可以前后交换次序，甚至同时进行。
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{控制机器人}
+    用计算机语言编制一个机器人行走的程序。
+
+其中机器人可以执行的指令只有如下几个：
+\begin{itemize}
+    \item 起立
+    \item 坐下
+    \item 向前走一步（必须在站立时执行）
+    \item 向右转90度（必须在站立时执行）
+    \item 举起手臂（向前抬到与身体成直角）
+    \item 放下手臂
+\end{itemize}
+
+机器人面向墙坐在椅子上，椅子距离墙三步长。要求编写出一个具体的程序（步骤），让机器人向前一直走到墙，然后再走回来坐到椅子上。
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{指令序列}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item 起立
+            \item 举起手臂
+            \item 向前走一步
+            \item 向前走一步
+            \item 向前走一步
+            \item 向右转90度
+            \item 向右转90度
+            \item 向前走一步
+            \item 向前走一步
+            \item 向前走一步
+            \item 向右转90度
+            \item 向右转90度
+            \item 放下手臂
+            \item 坐下
+        \end{enumerate}
+    \end{multicols}
+\end{frame}
+
+\begin{frame}
+    \frametitle{计算机解决问题的特点}
+    \begin{itemize}
+        \item 只有若干可执行（操作）的指令
+        \item 按需要将这些指令排列成一个序列（程序）
+        \item 严格按照序列（程序）流程一步一步的执行
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{利用计算机处理问题的顺序}
+    \begin{enumerate}
+        \item 分析问题
+        
+        只有对问题有一个清晰、准确的认定，才能够对问题求解。
+        \item 设计算法
+        
+        算法是求解问题方法及过程的形式化描述。
+        \item 编写程序
+        
+        使用计算机求解问题就要编写计算机程序，而程序都是根据算法来编写的。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{什么是算法？}
+    \begin{block}{交换酱油和醋两瓶调料}
+        有两瓶调料，分别标明的是“酱油”和“醋”。但由于工人疏忽，将瓶子灌装错了，现在要求将其交换回来。
+    \end{block}
+    设目前“酱油”瓶为1号瓶，它里面装的实际是醋；设目前“醋”瓶为2号瓶，它里面装的实际是酱油；设空瓶为3号瓶。
+
+    \begin{minipage}{0.48\linewidth}
+        算法描述：
+        \begin{enumerate}
+            \item 将1号瓶中的醋倒入3号瓶
+            \item 将2号瓶中的酱油倒入1号瓶
+            \item 将3号瓶中的醋倒入2号瓶
+          \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{blankblock}{}
+            通俗地讲，算法是步骤和描述
+        \end{blankblock}
+    \end{minipage}
+    
+\end{frame}
+
+\begin{frame}
+    \frametitle{算法}
+    算法(Algorithm)是指解题方案的准确而完整的描述，是一系列解决问题的清晰指令，算法代表着用系统的方法描述解决问题的策略机制。也就是说，能够对一定规范的输入，在有限时间内获得所要求的输出。
+    \bigskip
+
+    算法已经被广泛应用于计算机问题的求解。算法是求解问题方法及过程的形式化描述，是方法和步骤，是对具体问题求解的方法，是在计算机求解问题过程中的确定的、具体的、有限的步骤。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{算法}
+    算法表达了解决问题的核心步骤，反映的是程序的解题逻辑。算法其实并不是随着计算机的发明才出现的东西。
+
+    例如，早在两千多年前，古希腊数学 家欧几里德就发明了一种求两个自然数的最大公约数的过程，这个过程被认为是史上第一个算法：
+    \begin{block}{欧几里德算法：求自然数 a、b的最大公约数 }
+    第 1 步：令 r 为 a / b 所得余数
+    
+    第 2 步：若 r = 0，则算法结束，b 即为答案；否则置 a←b，b←r，转到第 1 步。
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{算法的应用}
+    利用计算机解决问题的关键就在于设计出合适的算法，当今计算机在各行各业中的成功 应用从根本上说都取决于高效算法的发现。
+    \begin{itemize}
+      \item  最成功的搜索引擎Google：网页相关性排名算法
+      \item 音频视频压缩算法节省存储空间
+      \item GPS导航仪利用高效的最短路径算法来规划最短路线
+      \item 最成功的短视频App抖音：推荐算法
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{算法的分类}
+    \begin{itemize}
+      \item {\cbf{数值运算算法}}
+      
+      主要用于解决数值求解问题。
+
+      例如求方程的根、求函数的定积分、求最大公约数等。
+      \item {\cbf{非数值运算算法}}
+      
+      主要用于解决需要用逻辑推理才能解决的问题。
+      
+      常见的是用于事务管理领域，例如图书检索、人事管理、行车调度管理、人机围棋大战、定制服务等。
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{算法的特征}
+    \framesubtitle{Characteristics of the algorithm}
+    \begin{itemize}
+      \item {\cbf{确定性}}
+        
+      算法的每个步骤必须有明确的含义，不会出现二义性。
+      
+      \item {\cbf{有穷性}}
+      
+      算法必须是由有限个步骤组成的过程，步骤的数量可能是几个，也可能是几百万个，但是必须有一个确定的结束条件。
+      \item {\cbf{可行性}}
+      
+      算法的每一步都必须是可行的。
+      
+      \item {\cbf{有零个或多个输入}}
+      
+      所谓零个输入是指算法本身定出了初始条件。
+      
+      \item {\cbf{有一个或多个输出}}
+      
+      算法总是要解决特定的问题，问题来源就是算法的输入，期望的结果就是算法的输出。没有输入的算法是没有意义的，没有输出的算法是没有用的。
+      
+    \end{itemize}
+
+\end{frame}

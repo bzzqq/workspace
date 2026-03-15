@@ -1,0 +1,39 @@
+\documentclass[x11names]{standalone}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{ulem} % 下划线
+\usetikzlibrary{graphs, positioning, quotes, shapes.geometric,calc,decorations.pathreplacing}
+\usetikzlibrary{tikzlings}
+\tikzset{>=stealth}
+% 定义基本形状
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=LightYellow1]
+\tikzstyle{io} = [trapezium, trapezium left angle=60, trapezium right angle=120, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{op} = [rectangle, minimum width=2cm, minimum height = 2em, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{decision} = [diamond, aspect = 3, text centered, draw=black,fill=LightYellow1]
+% 定义颜色
+\newcommand*{\red}{\textcolor{red}}
+
+\special{dvipdfmx:config z 0} %
+
+\usepackage[Symbol]{upgreek}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+\begin{tikzpicture}[scale=1.5]
+    \node (R) at (0,0) {R};
+    \node (S) at (2,0) {S};
+    \node (M) at (0,2) {M};
+    \node (N) at (2,2) {N};
+    \node (A) at (150:2) {A};
+    \draw [->] (A) -- (M) node [above,midway]{$k_1$};
+    \draw [->] (A) -- (R) node [below,midway]{$k_2$};
+    \draw [->] (M) -- (N) node [above,midway]{$k_3$};
+    \draw [->] (M) -- (R) node [right,midway]{$k_4$};
+    \draw [->] (R) -- (S) node [above,midway]{$k_5$};
+\end{tikzpicture}
+
+\end{document}

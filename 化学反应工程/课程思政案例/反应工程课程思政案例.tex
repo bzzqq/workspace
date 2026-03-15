@@ -1,0 +1,449 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme}
+
+%封面
+\title{反应工程}
+\subtitle{课程思政案例}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+	\begin{frame}{}
+        \begin{center}
+            {\Huge \cbf{目 \ 录}}
+        \end{center}
+		\tableofcontents
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+\section{催化剂技术的发展与催化剂}
+
+
+\begin{frame}
+    \frametitle{催化技术发展史}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.8\linewidth}}
+        夏商时期 & 酵素酿酒制醋 \\
+        中世纪 & 炼金术士用硝石催化剂从事硫磺制作硫酸 \\
+        十三世纪 & 硫酸能使乙醇产生乙醚 \\
+        十八世纪 & 铅室法制硫酸，人类最初认识到化工领域中的催化现象 \\
+        十九世纪初 & 提出了“催化”这一名词 \\
+        1835 年 & 瑞典化学家 J.J.Berzelius(贝采里乌斯)提出“催化作用” \\
+        1875年 & 最早工业化的催化剂，金属铂，用于接触法制硫酸 \\
+        1925年 & 泰勒提出活性中心理论，这一发现导致了负载型催化剂的发展 \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{铅室法制硫酸}
+    \[
+        \ch{2 NO + O2 -> 2 NO2}
+    \]
+    \[
+        \ch{4 NO2 + O2 + SO2 + 2 H2O -> 4 HOSO2ONO}
+    \]
+    \[
+        \ch{2 HOSO2ONO + H2O -> 2 H2SO4 + NO2 + NO}
+    \]
+    反应首先生成氮氧化物，氮氧化物氧化三氧化硫生成亚硝基磺酸，亚硝基磺酸水解生成硫酸同时释放出氮氧化物。在这个反应体系中氮氧化物就实际上起到了催化剂的作用。
+    \begin{blankblock}{}
+        在这个反应过程中，氮氧化物的各种形态都是很容易观测与分析的，甚至催化过程的中间产物都可以分离出来。不像我们现代研究的很多催化反应，要分离中间体非常费劲。所以当时化学家仍然把这个过程看成是一系列简单反应的组合。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{接触法制硫酸}
+    \begin{minipage}{0.58\linewidth}
+        \begin{enumerate}
+          \item 造气
+          \[
+              \ch{S + O2 -> SO2}
+          \]
+          \item 接触氧化
+          \[
+            \ch{2 SO2 + O2 -> 2 SO3}
+          \]
+          \item 三氧化硫的吸收
+          \[
+              \ch{H2SO4:SO3 + H2SO4 -> H2S2O7}
+          \]
+          \[
+            \ch{H2S2O7 + H2O -> 2 H2SO4}
+          \]
+        \end{enumerate}
+        \ch{SO3}直接和水接触会形成酸雾降低\ch{SO3}的吸收效率，因此工业上用98.3\%的硫酸作吸收。
+    \end{minipage}\hfill
+    \begin{minipage}{0.38\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{铂网}
+            \caption{使用铂网增加接触面积}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{接触法制硫酸装置}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.8\linewidth]{装置}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{催化剂工业发展史}
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            萌芽时期
+        
+        （20世纪以前）
+        \end{center}
+        
+        \begin{itemize}
+          \item 金属催化剂
+          \item 氧化物催化剂
+          \item 液态催化剂
+        \end{itemize}
+
+        \bigskip
+
+        \bigskip
+
+        \bigskip
+    \end{minipage}\hfill
+    \begin{minipage}{0.33\linewidth}
+        \begin{center}
+            大发展时期
+        
+        （20世纪30～60年代）
+        \end{center}
+        
+        \begin{itemize}
+          \item 有机金属催化剂
+          \item 选择性催化剂
+          \item 加氢精制催化剂
+          \item 分子筛催化剂
+          \item 大型合成氨催化剂
+        \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}{0.32\linewidth}
+        \begin{center}
+            更新换代时期
+        
+        （20世纪70～80年代）
+        \end{center}
+        
+        \begin{itemize}
+          \item 高效络合催化剂
+          \item 固体催化剂
+          \item 分子筛催化剂
+          \item 环境保护催化剂
+          \item 生物催化剂
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{我国重化学工业的开拓者---侯德榜}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.85\linewidth}}
+        1921 & 受永利制碱公司总经理范旭东邀聘，离美回国，承担起续建碱厂的技术重任。 \\
+        1926 & 解决了一系列技术难题，正常生产出优质纯碱。 \\
+        1937 & 建成兼产合成氨、硝酸、硫酸、硫酸铵的南京铔厂。南京铔厂连同永利碱厂一起，奠定了我国基本化学工业的基础，也培养出了一大批化工科技人才。 \\
+        1938 & 开展了新法制碱的研究 \\
+        1940 & 创造了“侯氏制碱法” \\
+        1957 & 为发展中国的小化肥工业，侯德榜倡议用碳化法制取碳酸氢铵。碳化法氮肥生产新流程获得成功，对我国农业生产做出不可磨灭的贡献。 \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中国催化剂之父---闵恩泽}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{minipage}{0.78\linewidth}
+        \begin{table}
+            \centering
+            \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+            \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.82\linewidth}}
+            1955 & 艰难回国，报效国家 \\
+            1959 & 在前苏联的援建下，兰州炼油厂建成投产 \\
+            1963 & 前苏联背信弃义，“断供”了小球硅铝催化剂 \\
+            1963 & 兰州炼油厂成立小球硅铝催化剂工厂，闵恩泽任副总指挥 \\
+            1968 & 闵恩泽研制成功，打破了国外技术封锁 \\
+            2007 & 闵恩泽被评为“感动中国”人物 \\
+            \end{tabular}
+        \end{table}
+    \end{minipage}\hfill
+    \begin{minipage}{0.2\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{闵恩泽}
+        \end{figure}
+    \end{minipage}
+    
+    \vspace{-12pt}
+    \begin{blankblock}{}
+        “在国家需要的时候，他站出来！燃烧自己，照亮能源产业。把创新当成快乐，让混沌变得清澈，他为中国制造了催化剂。点石成金，引领变化，永不失活，他就是中国科学的催化剂！”
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{单原子催化---张涛院士团队}
+    \begin{minipage}{0.68\linewidth}
+        2011年，张涛院士带领研究团队在国际上首次报道了单原子催化剂的制备与性能，并在此基础上提出了“单原子催化”的概念。单原子催化现已成为催化领域新的前沿与热点之一。
+    \end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{张涛}
+        \end{figure}
+    \end{minipage}
+    
+\end{frame}
+
+
+\section{反应动力学的发展}
+
+
+\begin{frame}
+    \frametitle{化学动力学发展历程}
+    \begin{enumerate}
+      \item 宏观反应动力学阶段
+      
+      宏观反应动力学始于19世纪后半叶到20世纪初，主要特点是改变宏观条件，如温度、压力、浓度等来研究对总反应速率的影响。
+      \item 基元反应动力学阶段
+      
+      基元反应动力学阶段始于20世纪初至20世纪50年代前后，其主要贡献是反应速率理论的提出、链反应的发现、快速化学反应的研究、同位素示踪法在化学动力学研究上的广泛应用以及新研究方法和新实验技术的形成，由此促使化学动力学的发展趋于成熟。
+      \item 分子反应动力学阶段
+      
+      20世纪中期，随着激光技术、分子束技术、微弱信号检测技术和计算机技术的突破，极大地推动了分子反应动力学的发展，使化学家有可能在电子、原子、分子和量子层次上研究化学反应所出现的各种动态，以探究化学反应和化学相互作用的微观机理和作用机制，揭示化学反应的基本规律，这就是分子反应动力学的核心所在。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学动力学研究的里程碑}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.7\linewidth}}
+        1903年Nobel化学奖 & 阿仑尼乌斯方程 \\
+        1980年Nobel化学奖 & 过渡态理论 \\
+        1986年Nobel化学奖 & 分子反应动力学研究的突破 \\
+        1992年Nobel化学奖 & 电子转移及RRKM理论的发展 \\
+        1996年Nobel化学奖 & 分子束中C60分子的发现 \\
+        1998年Nobel化学奖 & 量子化学理论的发展 \\
+        1999年Nobel化学奖 & 超快反应动力学的突破 \\
+        2007年Nobel化学奖 & 表面催化反应机理的发展 \\
+        2013年Nobel化学奖 & 大分子动力学理论的发展 \\
+        \end{tabular}
+    \end{table}
+    \vspace{-2pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中国分子反应动力学的奠基人---张存浩}
+    \begin{minipage}{0.73\linewidth}
+        \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+        \begin{table}
+            \centering
+            \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+            \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.65\linewidth}}
+            20世纪50年代 & 中国石油资源短缺，张存浩投入水煤气合成液体燃料的研究中，研制出新的催化剂和新工艺 \\
+            20世纪50年代 & 研发火箭推进剂，发展了固体复合推进剂的表面多层微火焰燃速理论 \\
+            20世纪70年代 & 大连化物所成立“化学激光研究室”，张存浩为室主任，带领团队研制出中国第一台氟化氢/氟化氘化学激光器 \\
+            20世纪80年代 & 开拓了中国化学激光新体系基础研究，开创了分子反应动力学研究领域 \\
+            \end{tabular}
+        \end{table}
+    \end{minipage}\hfill
+    \begin{minipage}{0.25\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{张存浩}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{张存浩：人才的作用是无论如何评估都不过分的}
+    张存浩“以发现和培养人才为己任，激励青年人青胜于蓝，秀出班行”，在引进和支持科技人才方面倾注了大量心血。20世纪90年代初，中国科研队伍人才老化、后继乏人等问题严重。张存浩为此十分忧心，他大声疾呼：“人才的作用是无论如何评估都不过分的。”
+
+    1991年，张存浩出任国家自然科学基金委员会主任。他认为：“科学基金资助青年，就是投资于中国科学的未来”。在他的倡导下，基金委于1992年设立了“优秀中青年人才专项基金”，开拓了国内人才计划资助的先河。
+
+    1994年初，张存浩两次致信时任国务院总理李鹏，建议由政府出资设立用于支持中青年科技人才的专项基金。这一建议很快得到了党和国家领导层的批复。同年3月，“国家杰出青年科学基金”正式设立，吸引了一批优秀的海归科学家、稳定了一批国内高层次青年科技人才，为建设创新型国家培养了一批科技领军人才。该项基金在培养青年人才、推动科技创新方面发挥了不可替代的作用。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{科学道德和学风建设的践行者和示范者}
+    张存浩是国内较早注意到科学道德和学风建设问题的科学家之一。
+
+    针对中国学界存在的科研不端行为、学术失范和浮躁学风等问题，张存浩指出：“必须依靠长期细致的、制度化的科学道德建设来逐步达到完善。”在他的努力下，基金委监督委员会于1998年设立。这是中国科研管理部门中第一个专门从事学风管理的机构，不仅保障了国家自然科学基金事业的健康发展，也赢得了科技界乃至整个社会的赞誉。
+
+    \begin{blankblock}{}
+        张存浩：“有人把世界上的科学家分为两种，一种是杰出的科学家，一种是伟大的科学家。杰出的科学家只凭借其国际承认的成果贡献；伟大的科学家首先是杰出的科学家，不仅如此，他还必须有伟大的人格、高尚的科学道德，包括爱祖国，爱人民，亲贤爱才，奖掖后学等，这些都是科技界宝贵的财富。”
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{2022 物质科学奖 获奖人---杨学明}
+    \begin{minipage}{0.68\linewidth}
+        杨学明开发了新一代高分辨率和高灵敏度的交叉分子束科学仪器，在基元化学反应动力学研究领域，尤其是化学反应共振态、化学反应中的几何相位效应以及量子干涉等方面的研究取得了重大突破。他发展了量子态分辨的后向散射谱学技术，通过高分辨的散射实验与精确理论研究相结合，揭示了多类化学反应共振现象，大力推动了在量子水平上化学反应过渡态的研究。此外，他还发展了高分辨的交叉分子束反应成像技术，首次在实验上发现了化学反应中的几何相位效应以及自旋-轨道共振分波之间的量子干涉现象。
+    \end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{杨学明}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+\section{先进人物事迹}
+
+\begin{frame}
+    \frametitle{科技报国70载，满腔热情终不悔---陈俊武}
+    \begin{minipage}{0.68\linewidth}
+        陈俊武，中国石化集团科技委顾问，中国科学院院士，炼油工程技术专家，催化裂化工程技术奠基人，煤化工技术专家。
+
+        先后指导设计了我国第一套年产60万吨流化催化裂化装置，第一套年产120万吨催化裂化装置，及时解决催化剂损耗大的技术难题，开创国内首次大型流态化工业测试技术。
+
+        在我国，70\%的汽油和30\%的柴油都是通过催化裂化技术加工而成。陈俊武正是这项关键技术的奠基人。
+    \end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{陈俊武}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{陈俊武在石油化工领域的奋斗旅程}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.85\linewidth}}
+        1948 & 陈俊武从北京大学化工系毕业。 \\
+        1949 & 来到条件十分艰苦的辽宁抚顺，成为了人造石油厂里的一名技术员。 \\
+        1960 & 大庆油田投入开发，我国石油工业由人造石油转向天然石油。 \\
+        1965 & 由中国自主开发、自行设计、自行施工安装的流化催化裂化装置一次投产成功，助力中国炼油技术跨越20年，接近当时的世界先进水平，基本结束了我国依靠进口汽油和柴油的被动局面，被称为中国炼油工业的第一朵“金花”。 \\
+        1982 & “同轴式催化裂化装置”顺利建成投产，一举赶超世界先进水平 \\
+        2010 & 甲醛制烯烃装置一次性投产成功，成为连接煤化工和石油化工的桥梁。 \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中国材料科学之父---师昌绪}
+    \begin{minipage}{0.68\linewidth}
+        \begin{blankblock}{}
+            1964年的一个深夜，时任航空研究院副总工程师荣科敲开了师昌绪的家门，提出希望金属所承担空心涡轮叶片的研发任务。在一无专家、二无资料的情况下，师昌绪毫不犹豫地接下了这一任务。他说：“我心中无底，但是我知道有答案。答案就是美国做成了，我们一定能做成！”在师昌绪带领下，课题组仅用了一年时间就攻克了造型、脱芯、合金质量控制等一系列难关。1966年12月，由我国自主研制的第一片铸造九孔空心涡轮叶片装机试车成功，为“战鹰”换上了新技术的“心脏”。
+        \end{blankblock}
+    \end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{师昌绪}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中国胶体科学的主要奠基人---傅鹰}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.85\linewidth}}
+        1919 & 进入燕京大学化学系学习，轰轰烈烈的“五四”运动和《新青年》杂志对他有很大的影响，从此发奋苦读，立志走科学救国的道路。 \\
+        1922 & 赴美国留学，6年后在密执安大学研究院获得科学博士学位。 \\
+        1929 & 应沈阳东北大学之邀，离美返国。 \\
+        1944 & 二次赴美，在密执安大学再度和原来的导师、著名胶体科学家巴特尔教授合作进行表面化学研究 \\
+        1950 & 归国，投身于社会主义建设之中。 \\
+        1955 & 在《化学通报》发表“高等学校的化学研究一个三部曲”，反映了他对发展祖国科学和教育事业的赤诚之心和系统看法。 \\
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中国稀土之父---徐光宪}
+    \begin{minipage}{0.68\linewidth}
+        \begin{blankblock}{}
+            中国已探明的稀土储量位列世界第一，却曾因缺乏技术支撑，长期受制于人。多年前，由于萃取技术不过关，中国不得不低价出口稀土精矿和混合稀土，再以几十倍甚至几百倍的价格购进深加工的稀土产品，徐光宪是 “ 稀土界袁隆平” ， 研发稀土回流串级萃取 ， 打破国际垄断 。他终结中国出口稀土 “ 贱卖命运”，推动稀土走向合理竞争 。
+        \end{blankblock}
+    \end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{徐光宪}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

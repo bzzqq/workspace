@@ -1,0 +1,123 @@
+\documentclass[x11names]{standalone}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{ulem} % 下划线
+\usetikzlibrary{graphs, positioning, quotes, shapes.geometric,calc,decorations.pathreplacing}
+\usetikzlibrary{tikzlings}
+\tikzset{>=stealth}
+% 定义基本形状
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=LightYellow1]
+\tikzstyle{io} = [trapezium, trapezium left angle=60, trapezium right angle=120, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{op} = [rectangle, minimum width=2cm, minimum height = 2em, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{decision} = [diamond, aspect = 3, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{ss} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=Azure1]
+\tikzstyle{ss1} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=Azure1]
+\tikzstyle{ss2} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=Seashell1]
+\tikzstyle{ss3} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=LightYellow1]
+\tikzstyle{ss4} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=LightCyan1]
+\tikzstyle{ss5} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=DarkSeaGreen1!50]
+\tikzstyle{ss6} = [diamond, aspect = 3, text centered, draw = black,fill=IndianRed1!60]
+% 定义颜色
+\newcommand*{\red}{\textcolor{red}}
+
+\special{dvipdfmx:config z 0} %
+
+\usepackage[Symbol]{upgreek}
+\everymath{\displaystyle}
+
+
+\begin{document}
+
+
+
+% \begin{tikzpicture}[node distance=1cm]
+%     \node (start) [startstop] {start};
+%     \node (pro1) [op, below of=start, left of=start, xshift=-1cm] {PROCESS 1};
+%     \node (pro2) [op, right of=pro1, xshift= 4cm] {PROCESS 2};
+%     \node (in1) [io, below of=pro1, right of=pro1, xshift=1cm] {IO};
+%     \node (pro3) [op, below of=in1] {PROCESS 3};
+%     \node (in2) [io, below of=pro3] {IO 2};
+%     \node (dec1) [decision, below of=in2] {DECISION};
+%     \node (end) [startstop, below of=dec1] {end};
+
+%     \draw [->](dec1) -- ($(dec1.east) + (1.5,0)$) node[anchor=north] {NO} |- (pro3);
+%     \graph[use existing nodes=true]{
+%     start  ->  pro1  ->  in1  ->  pro3  ->  in2  ->  dec1  ->["Yes"left]  end ;
+%     start  ->  pro2  ->  in1 ;
+%     };
+% \end{tikzpicture}
+
+\begin{tikzpicture}[scale=2]
+    \node (a1) [ss1] {物料衡算};
+    \node (a2) [ss1, below of=a1] {扩散传质};
+    \node (b1) [ss2, below of=a2] {能量衡算};
+    \node (b2) [ss2, below of=b1] {操作温度};
+    \node (c1) [ss3, below of=b2] {动量衡算};
+    \node (c2) [ss3, below of=c1] {流体力学};
+    \node (d1) [ss4, below of=c2] {反应速率};
+    \node (d2) [ss4, below of=d1] {复合反应};
+    \node (d3) [ss4, below of=d2] {多相催化};
+    \node (d4) [ss4, below of=d3] {动力学参数};
+    \node (e1) [ss5, below of=d4] {理想反应器};
+    \node (e2) [ss5, below of=e1] {非理想反应器};
+    \node (e3) [ss5, below of=e2] {流动模型};
+    \node (e4) [ss5, below of=e3] {操作方式};
+    \node (e5) [ss5, below of=e4] {串联并联};
+    \node (A1) [ss1, left of=a1, xshift=-2cm, yshift = -0.5cm] {质量传递};
+    \node (A2) [ss1, left of=b1, xshift=-2cm, yshift = -0.5cm] {热量传递};
+    \node (A3) [ss1, left of=c1, xshift=-2cm, yshift = -0.5cm] {动量传递};
+    \node (A4) [ss1, left of=d2, xshift=-2cm, yshift = -0.5cm] {化学反应};
+    \node (A5) [ss5, left of=e3, xshift=-4.4cm] {\bf{反应器设计与分析}};
+    \node (B1) [ss5, left of=c1, xshift=-5cm, yshift = 0.5cm] {\bf{三传一反}};
+    \graph[use existing nodes=true]{
+     B1  ->  A1;
+     B1  ->  A2;
+     B1  ->  A3;
+     B1  ->  A4;
+     A5  ->  e1;
+     A5  ->  e2;
+     A5  ->  e3;
+     A5  ->  e4;
+     A5  ->  e5;
+     A1  ->  a1;
+     A1  ->  a2;
+     A2  ->  b1;
+     A2  ->  b2;
+     A3  ->  c1;
+     A3  ->  c2;
+     A4  ->  d1;
+     A4  ->  d2;
+     A4  ->  d3;
+     A4  ->  d4;
+     };
+     \node (M1) [ss6, right of=b2, xshift=4cm] {知识目标};
+     \node (M2) [ss6, right of=d2, xshift=4cm] {能力目标};
+     \node (M3) [ss6, right of=e2, xshift=4cm] {素质目标};
+     \graph[use existing nodes=true]{
+     M1  ->  a1.east;
+     M1  ->  b1.east;
+     M1  ->  c1.east;
+     M1  ->  d1.east;
+     M1  ->  d2.east;
+     M1  ->  e1.east;
+     M2  ->  a2.east;
+     M2  ->  b2.east;
+     M2  ->  c2.east;
+     M2  ->  d3.east;
+     M2  ->  d4.east;
+     M2  ->  e2.east;
+     M2  ->  e3.east;
+     M2  ->  e4.east;
+     M2  ->  e5.east;
+     M3  ->  e3.east;
+     M3  ->  e2.east;
+     M3  ->  c2.east;
+     M3  ->  b2.east;
+     };
+\end{tikzpicture}
+
+
+\end{document}
+

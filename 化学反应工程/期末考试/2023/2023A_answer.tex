@@ -1,0 +1,215 @@
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{pifont} % 圆圈数字
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+
+%微分符号
+\makeatletter
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\makeatother
+
+%直立积分
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\Large 河北农业大学2023--2024学年第1学期}}
+
+\centerline{\Large 参考答案及评分标准（A）卷}
+
+\centerline{开课学院：\underline{\quad 理工学院 \quad} \quad 出\ \ 题\ \ 人：\underline{ \qquad \qquad 张斌 \qquad \qquad}}
+
+\centerline{课\ \ 程\ \ 号：\underline{\ \ H05981011\quad} \quad 课程名称：\underline{\quad \quad \ \ 化学反应工程 \quad \ \ \ }}
+
+\bigskip
+
+一、简答题（共40分）
+
+1. (8分) 
+
+由图可以看出，该反应在173K～900K的范围内都保持了较高的收率(>99.9\%)，从节能的角度考虑，在常温下(298K)反应较合适。从反应速率的角度考虑，温度越高反应速率越快，在保证安全的条件下，可取900K。
+
+答案要点1：从收率的角度考虑问题 \hfill $\cdots \cdots \cdots (2\text{分})$
+
+答案要点2：从能量的角度考虑问题 \hfill $\cdots \cdots \cdots (3\text{分})$
+
+答案要点3：从反应速率的角度考虑问题 \hfill $\cdots \cdots \cdots (3\text{分})$
+
+\bigskip
+
+2. (12分) 
+
+反应器设计的基本内容：
+
+\ding{172} 选择合适的反应器型式； \hfill $\cdots \cdots \cdots (2\text{分})$ 
+
+\ding{173} 确定最佳的操作条件；\hfill $\cdots \cdots \cdots (2\text{分})$
+
+\ding{174} 针对选定的反应器型式，根据所确定的条件，计算完成规定的生产任务所需的反应体积。\hfill $\cdots \cdots \cdots (2\text{分})$
+
+反应器设计基本方程：
+
+\ding{172} 物料衡算式
+
+关键组分的输入速率 = 关键组分的输出速率 + 关键组分的转化速率 + 关键组分的累积速率；\hfill $\cdots \cdots \cdots (2\text{分})$
+
+\ding{173} 能量衡算式
+
+单位时间内输入的热量 = 单位时间内输出的热量 + 单位时间的反应热 + 单位时间内累积的热量；\hfill $\cdots \cdots \cdots (2\text{分})$
+
+\ding{174} 动量衡算式
+
+输入的动量 = 输出的动量 + 消耗的动量 + 累积的动量。\hfill $\cdots \cdots \cdots (2\text{分})$
+
+\bigskip
+
+3. (9分) 
+
+非理想流动模型包括：
+
+\ding{172} 离析流模型，不存在模型参数；\hfill $\cdots \cdots \cdots (3\text{分})$
+
+\ding{173} 多釜串联模型，模型参数为串联釜个数$N$；\hfill $\cdots \cdots \cdots (3\text{分})$
+
+\ding{174} 轴向扩散模型，模型参数为贝克来数$Pe$。\hfill $\cdots \cdots \cdots (3\text{分})$
+
+\bigskip
+
+4. (11分) 
+
+\ding{172} 反应物由气相主体扩散到颗粒外表面；\hfill $\cdots \cdots \cdots (1\text{分})$
+
+\ding{173} 反应物由外表面向孔内扩散，到达可进行吸附/反应的活性中心；\hfill $\cdots \cdots \cdots (1\text{分})$
+
+\ding{174} 吸附；\hfill $\cdots \cdots \cdots (1\text{分})$
+
+\ding{175} 表面反应；\hfill $\cdots \cdots \cdots (1\text{分})$
+
+\ding{176} 脱附；\hfill $\cdots \cdots \cdots (1\text{分})$
+
+\ding{177} 产物由内表面扩散到外表面；\hfill $\cdots \cdots \cdots (1\text{分})$
+
+\ding{178} 产物由颗粒外表面扩散到气相主体。\hfill $\cdots \cdots \cdots (1\text{分})$
+
+其中，\ding{174}\ding{175}\ding{176}属于动力学控制步骤，\hfill $\cdots \cdots \cdots (2\text{分})$
+
+\ding{172}\ding{173}\ding{177}\ding{178}属于传递控制步骤。\hfill $\cdots \cdots \cdots (2\text{分})$
+
+\bigskip
+
+二、计算题（共60分）
+
+1. (20分) 
+
+(1) A的摩尔流量$F_\mathrm{A0} = F_\mathrm{P}/X_\mathrm{A} = 80/0.8 = 100 \ \mathrm{mol/h}$ 
+
+A的体积流量$Q_0 = F_\mathrm{A0}/c_\mathrm{A0} = 100/2 = 50 \ \mathrm{L/h}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+反应时间$t = \frac{1}{kc_\mathrm{A0}}\frac{X_\mathrm{A}}{1-X_\mathrm{A}} = \frac{1}{0.5\times 2}\frac{0.8}{1-0.8} = 4\ \mathrm{h}$ \hfill $\cdots \cdots \cdots (6\text{分})$
+
+反应体积$V_\mathrm{r} = Q_0(t+t_0) = 50\times (4+1) = 250\ \mathrm{L}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+(2) $V_\mathrm{r} = \frac{Q_0c_\mathrm{A0}X_\mathrm{Af}}{-\mathscr{R}_\mathrm{A}} = \frac{Q_0c_\mathrm{A0}X_\mathrm{Af}}{kc_\mathrm{A0}^2(1-X_\mathrm{Af})^2} = \frac{50\times 0.8}{0.5\times 2\times (1-0.8)^2} = 1000 \ \mathrm{L}$ \hfill $\cdots \cdots \cdots (4\text{分})$
+
+(3) 空时$\tau = t = 4\ \mathrm{h}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+反应体积$V_\mathrm{r} = Q_0\tau = 50\times 4 = 200 \ \mathrm{L}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+\bigskip
+
+2. (20分) 
+
+(1) $V_\mathrm{r} = \frac{Q_0c_\mathrm{A0}X_\mathrm{Af}}{-\mathscr{R}_\mathrm{A}} = \frac{Q_0X_\mathrm{Af}}{k(1-X_\mathrm{Af})} = \frac{1\times 0.8}{k\times (1-0.8)} = 2$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+解得$k = 2 \ \mathrm{h^{-1}}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+设第一反应器出口转化率为$X_1$，
+
+则$V_\mathrm{r} = \frac{2Q_0c_\mathrm{A0}X_1}{kc_\mathrm{A0}(1-X_1)} = \frac{2X_1}{2\times (1-X_1)} = 2$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+解得$X_1 = 2/3$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+所需反应器的体积：
+$V_\mathrm{r} = \frac{2Q_0(X_2-X_1)}{k(1-X_2)} = \frac{2(0.8-X_1)}{2\times (1-X_2)} = 2/3 \ \mathrm{m^3}$ \hfill $\cdots \cdots \cdots (4\text{分})$
+
+(2) 采用逐釜计算的方法，根据前面的计算，第一反应器出口转化率为2/3，设最终转化率为$X_\mathrm{Af}$
+
+$V_\mathrm{r} = \frac{2Q_0(X_\mathrm{Af}-X_1)}{k(1-X_1)} = \frac{2(X_\mathrm{Af}-2/3)}{2\times (1-2/3)} = 2 \ \mathrm{m^3}$ \hfill $\cdots \cdots \cdots (4\text{分})$
+
+解得$X_\mathrm{Af} = 8/9$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+\bigskip
+
+3. (20分) 
+
+气体分子的平均自由程$\lambda = 1.013/p = 1.013/101300 = 10^{-5} \ \mathrm{cm}$ \hfill  $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+$\frac{\lambda}{2r_\mathrm{a}} = \frac{10^{-5}}{2\times 4\times 10^{-7}} = 12.5 > 10$  \hfill  $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+因此，气体在催化剂颗粒内的扩散属于努森扩散。\hfill  $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+扩散系数
+
+$D_\mathrm{K} = 9700r_\mathrm{a}\sqrt{T/M} = 9700\times 4\times 10^{-7} \times \sqrt{773/58} = 0.014$ \hfill  $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+有效扩散系数
+
+$D_\mathrm{e} = V_\mathrm{g}\rho_p D_\mathrm{K}/\tau_\mathrm{m} = 0.35\times \rho_p \times 0.014/2.5 = 1.97\times 10^{-3}\rho_p$ \hfill  $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+$k_p = k_\mathrm{W}\rho_p = 0.92\rho_p$ \hfill  $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+梯尔模数$\phi = \frac{d}{6}\sqrt{\frac{k_\mathrm{W}}{D_\mathrm{e}}} = \frac{0.8}{6}\sqrt{\frac{0.92\rho_p}{1.97\times 10^{-3}\rho_p}} = 2.87$ \hfill $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+内扩散有效因子
+
+$\eta = \frac{1}{\phi}\left[\frac{1}{\tanh (3\phi)}-\frac{1}{3\phi}\right] = \frac{1}{2.87}\left[\frac{1}{\tanh (3\times 2.87)}-\frac{1}{3\times 2.87}\right] = 0.31$ \hfill $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+\end{spacing}
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[lang=cn,10pt]{elegantbook}
+\usepackage{graphicx}
+\pagestyle{plain}
+\usepackage{framed} %段落加边框
+\usepackage{listings} %代码排版
+%Python代码排版设置
+\lstset{
+    language=Python, % 设置语言
+ breaklines=true, % 自动换行
+ keywordstyle=\bfseries\color{RoyalBlue}, % 设置关键字为粗体，颜色为 RoyalBlue
+ morekeywords={}, % 设置更多的关键字，用逗号分隔
+ emph={left,right,mid}, % 指定强调词，如果有多个，用逗号隔开
+    emphstyle=\bfseries\color{Rhodamine}, % 强调词样式设置
+    commentstyle=\color{black!50!white}, % 设置注释样式，斜体，浅灰色
+    stringstyle=\color{PineGreen!90!black}, % 设置字符串样式
+    columns=flexible,
+    numbers=left, % 显示行号在左边
+    numbersep=2em, % 设置行号的具体位置
+    numberstyle=\footnotesize, % 缩小行号
+    frame=shadowbox,rulesepcolor=\color{red!20!green!20!blue!20} % 边框
+}
+
+%自定义命令 颜色
+\newcommand*{\cred}{\textcolor{red}}
+\newcommand*{\cblue}{\textcolor{blue}}
+\newcommand*{\cgreen}{\textcolor{green}}
+\newcommand*{\ccyan}{\textcolor{cyan}}
+\newcommand*{\cmagenta}{\textcolor{magenta}}
+\newcommand*{\cyellow}{\textcolor{yellow}}
+\newcommand*{\cdarkblue}{\textcolor{DarkBlue}}
+\definecolor{epubblue}{RGB}{1,126,218}
+\newcommand*{\cepubblue}{\textcolor{epubblue}}
+
+\renewcommand*{\eitemi}{\cepubblue{$\bullet$}}
+\renewcommand*{\eitemii}{\cepubblue{$\diamond$}}
+
+\begin{document}
+\begin{sloppypar} %文字溢出自动换行
+
+\section{第一章}
+\section{第二章}
+\section{第三章}
+\section{第四章}
+\input{sections/4.1.tex}
+\newpage
+\section{第五章}
+\input{sections/5.1.tex}
+\input{sections/5.2.tex}
+
+
+
+\end{sloppypar}
+\end{document}

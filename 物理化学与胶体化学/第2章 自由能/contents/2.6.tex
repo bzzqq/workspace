@@ -1,0 +1,63 @@
+\section{气体的化学势与标准态}
+
+
+\begin{frame}{单组分理想气体的化学势}
+    \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \filldraw[fill=maincolor!50] (0,0) rectangle (1,1) node[midway,black] {$T,p^{\ominus}$};
+            \draw[->] (1.25,0.5) -- (2.25,0.5);
+            \filldraw[fill=maincolor!30,shift={(2.5,-0.5)}] (0,0) rectangle (2,2) node[midway,black] {$T,p$};
+            \node at (0.5,1.3) {1};
+            \node at (3.5,1.8) {2};
+        \end{tikzpicture}
+    \end{center}
+    \vspace{-2pt}
+    1mol单组分理想气体，定温下发生变化，压力由$p^\ominus \rightarrow p$，$\mathrm{d} \mu=V_{\mathrm{m}} \mathrm{d} p$，$V_{\mathrm{m}}=RT/p$，则
+    $$\mathrm{d} \mu=RT\frac{\mathrm{d} p}{p}$$
+    定温下对上式积分
+    $$\int_{\mu_{1}}^{\mu_{2}} \mathrm{~d} \mu=\int_{p^{\ominus}}^{p} R T \frac{\mathrm{d} p}{p}$$
+    $$\mu_{2}=\mu_{1}+R T \ln \frac{p}{p^{\ominus}}$$
+    
+\end{frame}
+
+
+\begin{frame}{单组分理想气体的化学势}
+    对于纯物质，$\mu=G/n$，因$G$的绝对值无法测得，$\mu$的绝对值也无法知道。为衡量$\mu$的高低，把标准态$(T,p^\ominus)$下的理想气体的化学势作为标准，并写作$\mu^\ominus (T)$。$\mu^\ominus(T)$与温度$T$及气体种类有关。
+    \begin{center}
+        \begin{tikzpicture}[scale=1]
+            \filldraw[fill=maincolor!50] (0,0) rectangle (1,1) node[midway,black] {$T,p^{\ominus}$};
+            \draw[->] (1.25,0.5) -- (2.25,0.5);
+            \filldraw[fill=maincolor!30,shift={(2.5,-0.5)}] (0,0) rectangle (2,2) node[midway,black] {$T,p$};
+            \node at (0.5,1.3) {1};
+            \node at (3.5,1.8) {2};
+            \node at (0.5,-1.1) {$\mu^\ominus(T)$};
+            \node at (3.5,-1.1) {$\mu=\mu^\ominus(T) +R T \ln \frac{p}{p^{\ominus}}$};
+        \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{混合理想气体中某种气体的化学势}
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \filldraw[fill=maincolor!30] (0,0) rectangle (3,2) node[midway,black] {$A,B,C,\cdots$};
+        \end{tikzpicture}
+    \end{center}
+    混合理想气体中，每种气体的行为与该种气体单独占有相同体积的行为相同。故混合理想气体中某种气体的化学势应与这种气体在纯态时一样
+    \[
+        \mu_{\mathrm{B}}=\mu_{\mathrm{B}}^\ominus(T) +R T \ln \frac{p_{\mathrm{B}}}{p^{\ominus}}
+    \]
+\end{frame}
+
+
+\begin{frame}{实际气体的化学势}
+    对实际气体，因为$pV\neq nRT$，所以用$\mathrm{d} \mu=V_{\mathrm{m}} \mathrm{d} p$积分处理得不到上述化学势的简单形式。为使实际气体的化学势公式仍保持与理想气体化学势公式有一样的简单形式，路易斯提出用逸度$f$代替压力$p$，对实际气体校正，并定义
+    $$f=\gamma p$$
+    式中$p$为实际气体的压力，$f$为校正后的压力，成为逸度或有效压力；$\gamma$为逸度系数。所以纯组分实际气体的化学势公式可以写成
+    \vspace{-2pt}
+    $$\mu = \mu^\ominus (T) + RT\ln \frac{f}{p^\ominus}$$
+    混合实际气体中组分B的化学势公式，用组分B的有效分压$f_\mathrm{B}$代替$p_\mathrm{B}$
+    \vspace{-2pt}
+    $$\mu_\mathrm{B} = \mu_\mathrm{B}^\ominus (T) + RT\ln \frac{f_\mathrm{B}}{p^\ominus}$$    
+\end{frame}

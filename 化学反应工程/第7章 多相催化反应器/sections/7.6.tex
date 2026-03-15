@@ -1,0 +1,88 @@
+\section{参数敏感性}
+
+
+\begin{frame}
+    \frametitle{参数敏感性}
+
+    绝热式、换热式或自热式固定床反应器进行放热反应时，床层内部存在温度最高之点，即所谓热点。
+    \begin{itemize}
+        \item 绝热反应器的热点位于床层出口
+        \item 换热式和自热式的热点位置则与许多因素有关。
+        \item 热点温度$T_\mathrm{m}$的值应介于$T_0$和$T_0 + \lambda$之间。
+        \item 热点温度$T_\mathrm{m}$的具体数值与反应热效应以及床层的传热强度有关。
+        \item 进料温度提高1K，热点温度$T_\mathrm{m}$增加得很多，进料温度超过一定值时，床层操作会出现失控现象。
+    \end{itemize}
+    因此，了解操作变量、反应混合物的性质以及反应器的传热能力对热点温度的影响，是十分必要的。这就是参数敏感性问题。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{参数敏感性}
+
+    在热点处，$\dif T/ \dif Z = 0$，
+    \[
+        \eta_{0} \rho_{\mathrm{b}}(-\mathscr{R}_{\mathrm{A}})(-\Delta H_{\mathrm{r}})-\frac{4 U}{d_{\mathrm{t}}}(T_{\mathrm{m}}-T_{\mathrm{C}})=0
+    \]
+    \[
+        T_{\mathrm{m}}-T_{\mathrm{C}}=\frac{\eta_{\mathrm{0}} \rho_{\mathrm{b}}(-\mathscr{R}_{\mathrm{A}})(-\Delta H_{\mathrm{r}}) d_{\mathrm{t}}}{4 U}
+    \]
+    \begin{itemize}
+        \item 只要冷却介质温度$T_{\mathrm{C}}$选得较低，传热强度$U/d_{\mathrm{t}}$较大，热点温度就可保持在一规定值以下，不致产生飞温现象。
+        \item 但是，冷却介质的温度太低，将导致反应速率太慢使得催化剂用量增多，反应器体积变得很大。
+        \item 提高传热强度$U/d_{\mathrm{t}}$的可行办法之一是使$d_{\mathrm{t}}$变小，但是，$d_{\mathrm{t}}$小了压力降会增加，应综合考虑。
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{参数敏感性}
+
+    对于一级不可逆放热反应，$(-\mathscr{R}_{\mathrm{A}})=A \exp (-E / R T) c_{\mathrm{A}}$，代入前式，得热点处组分A的浓度
+    \[
+        c_{\mathrm{Am}}=\frac{4 U(T_{\mathrm{m}}-T_{\mathrm{C}})}{A \exp (-E / R T) \rho_{\mathrm{b}}(-\Delta H_{\mathrm{r}}) d_{\mathrm{t}}}
+    \]
+    这里假设$\eta_0 =1$。若冷却介质的温度$T_{\mathrm{C}}$恒定且等于进入床层的物料温度$T_0$，将上式对$T_{\mathrm{m}}$求导并令$\dif c_{\mathrm{Am}}/\dif T_{\mathrm{m}} =0$则有
+    \[
+        \frac{E}{R T_{\max }^2}(T_{\max } - T_{\mathrm{C}}) = 1
+    \]
+    $T_{\max }$为热点处A的浓度最大时的温度。式中的温度差实质上也是床层内外最大的温度差，如实际温差大于此值则可安全操作。
+    
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{参数敏感性}
+
+    将前式做适当改写，
+    \[
+        \frac{R T_{\max }}{E}=\frac{1}{2}\left(1-\sqrt{1-\frac{4 R T_{\mathrm{C}}}{E}}\right)
+    \]
+    根据上式可确定冷却介质的温度$T_{\mathrm{C}}$，只要实际值低于由此而得的$T_{\mathrm{C}}$值，就不会产生失控。
+
+    另一个经验判据为
+    \[
+        \frac{\lambda}{T_{\max }-T_{\mathrm{C}}} \leqslant 1+\sqrt{\frac{N_{\mathrm{c}}}{\mathrm{e}}}+\frac{N_{\mathrm{c}}}{\mathrm{e}}
+    \]
+    式中$N_{\mathrm{c}} = 4U/\rho C_{p \mathrm{t}} d_{\mathrm{t}} k_{\mathrm{c}}$，$k_{\mathrm{c}}$为按冷却介质温度计算的反应速率常数，$\rho$为反应气体的密度。利用此式可以确定反应器进料浓度。
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+
+    \begin{example}
+        在换热式固定床反应器中进行一级放热反应，
+        
+        反应速率常数$k=\num{7.4e8}\exp (-13600/T),(1/s)$，$U = \SI{100}{J/(m^2.s.K)}$，$\rho C_{p \mathrm{t}}=\SI{1300}{J/(m.K)}$及$-\Delta H_r = 1300 \si{kJ.mol}$。设$T_0=T_c=$635 K。
+
+        （1）若反应管径$d_\mathrm{t}=25$mm，则床层最高温度是多少？允许最大的进料浓度是多少？
+
+        （2）若进料浓度为\SI{0.001}{kmol/m^3}，则允许反应器直径做到多大？
+    \end{example}
+
+\end{frame}
+

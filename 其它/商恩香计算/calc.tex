@@ -1,0 +1,55 @@
+\documentclass[x11names,a4paper]{article}
+\usepackage{ctex}
+\usepackage{tikz}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{ulem} % 下划线
+\usetikzlibrary{graphs, positioning, quotes, shapes.geometric,calc,decorations.pathreplacing}
+
+\tikzset{>=stealth}
+% 定义基本形状
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width = 2cm, minimum height = 2em, text centered, draw = black,fill=LightYellow1]
+\tikzstyle{io} = [trapezium, trapezium left angle=60, trapezium right angle=120, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{op} = [rectangle, minimum width=2cm, minimum height = 2em, text centered, draw=black,fill=LightYellow1]
+\tikzstyle{decision} = [diamond, aspect = 3, text centered, draw=black,fill=LightYellow1]
+% 定义颜色
+\newcommand*{\red}{\textcolor{red}}
+
+\special{dvipdfmx:config z 0} %
+\begin{document}
+
+% $\int_0^8 (-0.0114x^2+0.3908x) = \frac{264}{25}$
+% $\frac{\int_0^8 (-0.0114x^2+0.3908x)+40 \times 2.398285}{48} = \frac{486257}{30000}$
+
+% $0.5\times 8\times 2.398285 = \frac{479657}{50000}$
+
+% $\int_0^8 (-0.0028x^2+0.0497x -0.0014)$
+
+\begin{align}
+    % \int_0^8 (-0.0028x^2+0.0497x -0.0014)\mathrm{d}x = \frac{413}{375} =1.101 \\
+    \int_0^4 (-0.0028x^2+0.0497x -0.0014)\mathrm{d}x = \frac{623}{1875} = 0.3323 \\
+    \int_0^4 (-0.0093x^2+0.0602x)\mathrm{d}x = \frac{177}{625} =0.283 \\
+    \int_0^4 (-0.00116x^2+0.0722x)\mathrm{d}x = \frac{5183}{9375} =0.553\\
+    % \int_0^8 (-0.0162x^2+0.4215x+0.0461)\mathrm{d}x = \frac{2773}{250} =11.092 \\
+    % \int_0^8 (-0.0000162x^2+0.0004215x+0.0000461)\mathrm{d}x = \frac{2773}{250000}
+    \int_0^4 (-0.0162x^2+0.4215x+0.0461)\mathrm{d}x = \frac{8027}{2500} = 3.2108 \\
+    \int_0^4 (-0.2213x^2+1.6648x)\mathrm{d}x = \frac{3224}{375} =8.597\\
+    \int_0^4 (-0.1152x^2+0.6951x)\mathrm{d}x = \frac{3879}{1250} =3.103 \\
+    c_1 = 0.3323/4 = 0.0831 \\
+    c_2 = 0.283/4 = 0.0708 \\
+    c_3 = 0.553/4 = 0.1382 \\
+    c_4 = 3.2108/4 = 0.8027 \\
+    c_5 = 8.597/4 = 2.1493 \\
+    c_6 = 3.103/4 = 0.7758 
+\end{align}
+
+\[
+        \begin{aligned}
+            \text{Lineweaver-Burk 方程式：} & \qquad \frac{1}{-\Delta C/\Delta t}=\frac{K_{\mathrm{m}}}{V_{\mathrm{max}}\cdot C_{\text{中}} }+\frac{1}{V_{\mathrm{max}}}\\
+            \text{Hanes-Woolf 方程式：} & \qquad \frac{C_{\text{中}}}{-\frac{\Delta C}{\Delta t}}=\frac{C_{\text{中}}}{V_{\mathrm{max}}}+\frac{K_{\mathrm{m}}}{V_{\mathrm{max}}}\\
+            \text{Eadie-Hofstee 方程式：} & \qquad -\frac{\Delta C}{\Delta t}=-\frac{\left(-\frac{\Delta C}{\Delta t}\right)}{C_\text{中}}{K_{\mathrm{m}} + V_{\mathrm{max}}}
+        \end{aligned}
+    \]
+
+
+\end{document}

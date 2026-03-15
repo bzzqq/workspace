@@ -1,0 +1,67 @@
+\ProvidesPackage{mypreamble}
+
+%このファイルはプリアンブル部分と思ってください。必要最低限のみ読み込みます。
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable,theorems,skins}
+%%%日本語書体の追加
+\usepackage[deluxe]{otf}
+\usepackage[unicode,noto-otc]{pxchfon}
+%%%ハイパーリンク
+\usepackage{hyperref}
+
+%%%reidai環境
+\newcounter{reidaibangou}
+\newtcolorbox{reidai}[1][]{enhanced,boxrule=0.5mm,
+    top=2pt,left=44pt,right=4pt,bottom=2pt,arc=0mm,
+    colframe=blue!30!gray,
+    boxrule=1pt,
+    underlay={
+    \node[inner sep=1pt,blue!50!black,fill=blue!10!white]at ([xshift=22pt,yshift=-9pt]interior.north west) {\stepcounter{reidaibangou}\bfseries\gtfamily 例題\thereidaibangou};},
+    segmentation code={%
+    \draw[dashed] (segmentation.west)--(segmentation.east);
+    \node[inner sep=1pt,blue!50!black,fill=blue!10!white] at ([xshift=22pt,yshift=-8pt]segmentation.south west) {\bfseries\gtfamily 解};},
+    before upper={\setlength{\parindent}{1zw}},
+    before lower={\setlength{\parindent}{1zw}},#1
+}
+
+%%%kousiki環境
+\definecolor{safecolor}{rgb}{0.2, 0.4, 0.8}
+\newtcolorbox{kousiki}[2][]{enhanced,left=22pt,right=22pt,
+    fonttitle=\gtfamily\bfseries\large,coltitle=white,
+    colbacktitle=blue!50!black,arc=1mm,
+    attach boxed title to top left={},
+    boxed title style={skin=enhancedfirst jigsaw,
+        arc=1mm,bottom=1pt,top=1pt,boxrule=0mm},
+    boxrule=0.5pt,colback=safecolor!5!,
+    colframe=safecolor,sharp corners=northwest,
+    drop fuzzy shadow,title=#2,
+    fontupper=\gtfamily,#1}%
+    
+%%%mytheo環境
+\definecolor{burgundy}{rgb}{0.5, 0.0, 0.13}
+\newtcbtheorem[number within=section]{mytheo}{定理}%
+{fonttitle=\gtfamily\sffamily\bfseries\upshape,
+colframe=burgundy,colback=burgundy!2!white,
+rightrule=0pt,leftrule=0pt,bottomrule=2pt,
+colbacktitle=burgundy,theorem style=standard,breakable,arc=0pt}{tha}
+
+%%%myprop環境
+\newtcbtheorem[use counter from=mytheo]{myprop}{命題}%
+{fonttitle=\gtfamily\sffamily\bfseries\upshape,
+colframe=burgundy,colback=burgundy!2!white,
+rightrule=0pt,leftrule=0pt,bottomrule=2pt,
+colbacktitle=burgundy,theorem style=standard,breakable,arc=0pt}{pro}
+
+%%%marker環境
+\newtcolorbox{marker}[1][]{enhanced,before skip=2mm,
+    after skip=3mm,fontupper=\gtfamily\sffamily,
+    boxrule=0.4pt,left=5mm,right=2mm,top=1mm,bottom=1mm,
+    colback=yellow!50,colframe=yellow!20!black,
+    sharp corners,rounded corners=southeast,
+    arc is angular,arc=3mm,underlay={%
+    \path[fill=tcbcolback!80!black] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[draw=tcbcolframe,shorten <=-0.05mm,shorten >=-0.05mm] ([yshift=3mm]interior.south east)--++(-0.4,-0.1)--++(0.1,-0.2);
+    \path[fill=yellow!50!black,draw=none] (interior.south west) rectangle node[white]{\Huge\bfseries !} ([xshift=4mm]interior.north west);
+    },
+    drop fuzzy shadow,#1
+}

@@ -1,0 +1,215 @@
+\documentclass[lang=cn,12pt,chinesefont=founder]{elegantbook}
+\usepackage{graphicx}
+\usepackage{unicode-math}
+\usepackage{framed} %段落加边框
+\usepackage{makecell} %表格内强制换行
+\usepackage{titletoc} % 章节目录
+\usepackage{tabularx}
+\usepackage{array}
+\setmathfont{XITS Math}
+
+
+\begin{document}
+\chapter{LG 15Z980黑苹果安装}
+
+\section{Bios设置}
+
+参考自17z990配置，部分选项没有 \link{https://github.com/lehrian/LG-Gram-17z990-Hackintosh}
+
+Main：
+    \begin{itemize}
+        \item Boot Features
+            \begin{itemize}
+            \item Quick Boot => Disabled
+            \end{itemize}
+    \end{itemize}
+
+Advanced：
+
+1. SW Guard Extensions (SGX) => Disabled
+
+2. Intel Advanced Menu
+            \begin{itemize}
+            \item CPU Configuration
+                \begin{itemize}
+                \item Software Guard Extensions (SGX) => Disabled
+                \end{itemize}
+            \item Power  Performance
+                \begin{itemize}
+                \item CPU - Power Management Control
+                \begin{itemize}
+                  \item CPU Lock Configuration
+                  \begin{itemize}
+                    \item CFG Lock => Disabled
+                    \item Overclocking Lock => Disabled
+                  \end{itemize}
+                \end{itemize}
+              \end{itemize}
+            \item System Agent (SA) Configuration
+                \begin{itemize}
+                \item Graphics Configuration
+                \begin{itemize}
+                  \item DVMT Pre-Allocated => 64M
+                \end{itemize}
+              \end{itemize}
+            \item PCH-IO Configuration
+                \begin{itemize}
+                \item Security Configuration
+                \begin{itemize}
+                  \item Force unlock on all GPIO pads => Enabled (Thanks 1OldSWguy)        
+                \end{itemize}
+              \end{itemize}
+            \item Platform Settings
+                \begin{itemize}
+                \item System Time and Alarm Source => Legacy RTC
+              \end{itemize}
+            \item Thunderbolt Configuration
+                \begin{itemize}
+                  \item Thunderbolt Boot Support => Pre-Boot ACL
+                  \item Security Level => No Security
+                \end{itemize}
+            \end{itemize}
+
+\section{启动U盘制作}
+
+\begin{enumerate}
+  \item 下载EFI \link{https://github.com/a31user/LG-15Z980-Monterey-EFI}
+  \item 下载系统镜像 \link{https://macoshome.com/macos}
+  \item 下载balenaEtcher \link{https://www.balena.io/etcher}
+  \item 制作macOS启动盘 \link{https://zhuanlan.zhihu.com/p/521391783}
+   \begin{itemize}
+     \item 插入要刻录为macOS启动盘的优盘，打开balenaEtcher。
+     \item 点击Flash from file，选择macOS的安装dmg文件，选择U盘，点击Flash
+     \item 等待写入并验证完成，如果弹出需要格式化，一定要点击取消，因为Windows无法识别macOS安装U盘。
+     \item 打开分区工具DiskGenius，给U盘的EFI分区分配盘符
+     \item 将下载的EFI文件夹复制到EFI分区中
+   \end{itemize}
+   \item 下载恢复镜像 \link{http://imacos.top/2022/12/01/macos-base-system-recovery-2/}
+   \item 打开分区工具 DiskGenius，给 U 盘的未使用空间新建分区，fat32格式
+   \item 将com.apple.recovery.boot文件夹复制到新建分区中（包含.contentDetails）
+\end{enumerate}
+
+
+\section{系统装好之后的工作}
+
+\subsection{EFI分区挂载}
+
+使用OpenCore configurator.app
+
+\begin{enumerate}
+  \item 打开OpenCore configurator，工具-挂载EFI。挂载U盘EFI分区
+  \item 把U盘里面的 EFI 文件夹复制到电脑桌面
+  \item 挂载系统盘EFI分区
+  \item 把桌面EFI 文件夹复制到系统盘EFI分区
+\end{enumerate}
+
+\subsection{开机跑代码怎么关掉}
+
+修改Config.plist
+
+Windows下用notepad3打开，搜索-v，删掉。
+
+不能用OpenCore configurator修改，版本不对应。
+
+\subsection{将5秒等待改短}
+
+修改Config.plist
+
+Windows下用notepad3打开，搜索<Key>Timeout<Key>，将5改成2。
+
+\subsection{关掉大版本更新 \link{https://sysin.org/blog/disable-macos-monterey-update/}}
+
+编辑 hosts 文件，添加如下内容
+
+手动编辑：打开终端，执行命令 sudo vi /etc/hosts，添加以下条目：
+
+\begin{lstlisting}
+    ## Mac Software Update (sysin)
+    127.0.0.1 swdist.apple.com
+    127.0.0.1 swscan.apple.com
+    127.0.0.1 swcdn.apple.com
+    127.0.0.1 gdmf.apple.com
+    127.0.0.1 mesu.apple.com
+    127.0.0.1 xp.apple.com
+\end{lstlisting}
+
+推荐使用 SwitchHosts（免费软件）修改hosts。注意：SwitchHosts 最后要空一行。
+
+例外：如果使用了系统代理或者虚拟专用网，将绕过本地 DNS 设置，仅仅设置 hosts 仍然会检测到更新。
+
+\begin{itemize}
+  \item 清除系统更新标记
+\end{itemize}
+
+如果已经检测到更新，可以使用如下方法临时去除更新通知标记。
+
+打开 “终端”，执行如下命令：
+
+\begin{lstlisting}
+    defaults write com.apple.systempreferences AttentionPrefBundleIDs 0
+    Killall Dock
+\end{lstlisting}
+
+\subsection{取消密码位数限制}
+
+\begin{enumerate}
+  \item 终端中输入\verb|pwpolicy -clearaccountpolicies|
+  \item 输入开机密码，然后回车。
+  \item 提示 Clearing global account policies 代表成功，否则请检查是否输入正确。
+  \item 打开系统偏好设置 > 用户与群组
+  \item 更改密码
+\end{enumerate}
+
+
+
+\begin{lstlisting}
+    pwpolicy -clearaccountpolicies
+\end{lstlisting}
+
+\section{疑难杂症}
+\subsection{不能从U盘启动}
+    关闭bios中的secure boot
+\subsection{从恢复模式安装}
+从此位置下载的EFI只能从恢复模式安装
+
+\begin{lstlisting}
+    https://github.com/a31user/LG-15Z980-Monterey-EFI
+\end{lstlisting}
+
+\subsection{制作的恢复模式U盘oc菜单没有引导项}
+
+\begin{lstlisting}
+    http://www.imacosx.cn/7467.html#toc_1
+\end{lstlisting}
+
+先制作完整启动U盘，然后新建分区，把恢复文件放进去
+
+\subsection{恢复模式没有wifi图标，不能联网}
+
+intel网卡驱动AirportItlwm分版本，下载对应系统版本的驱动
+
+\begin{lstlisting}
+    https://github.com/OpenIntelWireless/itlwm/releases
+\end{lstlisting}
+
+\section{安装情况}
+\begin{enumerate}
+  \item 全盘安装
+  
+    \begin{itemize}
+        \item Monterey 安装至12分钟重启
+    \end{itemize}
+  \item 恢复安装
+    \begin{itemize}
+        \item Catalina 正常安装完成，进系统安装安全更新后wifi不能用
+        \item Monterey 正常安装完成，wifi正常。无法系统更新至Ventura
+        \item Ventura 卡代码，无法到安装界面
+    \end{itemize}
+\end{enumerate}
+
+
+
+
+
+
+\end{document}

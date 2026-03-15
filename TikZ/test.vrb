@@ -1,0 +1,14 @@
+\frametitle{}
+    \begin{algorithm}[H]
+      \caption{Calculate $y = x/y$}
+    \begin{algorithmic}[1]
+      \Begin
+      \State \textbf{input} $x,y$;
+      \If {$y=0$}
+      \State \textbf{print} Error;
+      \Else
+      \State $z \gets x/y$
+      \State \textbf{return}($z$);
+      \End
+      \end{algorithmic}
+      \end{algorithm}

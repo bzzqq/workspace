@@ -1,0 +1,74 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+\usetheme{mytheme}
+
+
+\title{第二章}
+\subtitle{智慧农业系统}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+\begin{document}
+  
+\begin{frame}
+  \titlepage
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+\begin{frame}
+    \frametitle{智慧农业系统}
+    智慧农业系统是以计算机系统为主的，涉及大数据、人工智能、物联网等多种信息技术和农业、营销、物流等领域知识的复杂信息系统。
+    \vspace{-3pt}
+    \begin{center}
+      \begin{tikzpicture}[align=center,font=\tiny]
+        \draw [fill=LightSkyBlue1] (0,0) circle (3)
+          node [above=2.1cm] {智能决策\\支持系统}
+          node [below=2.1cm] {机器视觉\\处理系统}
+          node [above right=1.8cm] {加工仓储\\系统}
+          node [right=1.9cm] {智能营销\\系统}
+          node [below right=1.8cm] {物流配送\\系统}
+          node [below left=1.8cm] {农产品\\溯源系统}
+          node [left=1.9cm] {农业诊断\\推理系统}
+          node [above left=1.8cm] {精准监测\\系统};
+        \fill [fill=LightSkyBlue2] (0,0) circle (2)
+          node [above right=0.9cm] {物联网}
+          node [right=1cm] {大数据}
+          node [below right=0.9cm] {人工\\智能}
+          node [above left=0.9cm] {云计算}
+          node [below left=1cm] {3S技术}
+          node [left=1cm] {区块链};
+        \fill [fill=LightSkyBlue3] (0,0) circle (0.8)
+          node {\large{信息}\\\large{系统}};
+        \draw [TealBlue] (1.5,0.5) -- ++ (30:2cm) node [right] {\large{信息技术}};
+        \draw [TealBlue] (1.2,2) -- ++ (30:1cm) -- ++ (1.17,0) node [right] {\large{领域知识}};
+      \end{tikzpicture}
+    \end{center}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{智慧农业系统}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.78\linewidth]{智慧农业}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{}
+  \begin{center}
+      {\Huge \cbf{目 \ 录}}
+  \end{center}
+  \tableofcontents[subsectionstyle=hide/hide/show]
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\include{contents/computer}
+\include{contents/InformationSystem}
+\include{contents/agriculture}
+
+\end{document}

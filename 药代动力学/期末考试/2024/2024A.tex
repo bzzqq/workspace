@@ -1,0 +1,97 @@
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+\setCJKmainfont{SimSun}[AutoFakeBold, AutoFakeSlant] 
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+
+
+
+\begin{document}
+
+
+\begin{spacing}{1.625}
+
+\centerline{{\LARGE \bf{河北农业大学课程考试试卷}}}
+
+\centerline{\bf{\large 20\underline{24}年春（\quad）/秋（\ \surd \ ）学期}}
+
+{\bf{考试科目：\underline{生物制剂与药物代谢动力学} \hfill 姓名：\underline{ \qquad \qquad} \hfill 学号：\underline{ \qquad \qquad \qquad}}}
+
+{\bf{学院：\underline{\quad 理工系\quad } \hfill 专业班级：\underline{\qquad \qquad \qquad \qquad} \hfill 卷别：\cred{A} \hfill 考核方式：\cred{开卷}}}
+
+（注：考生务必将答案写在答题纸上，标清楚大小题号，写在本试卷上无效）
+
+\bigskip
+
+
+{\bf{一、综合题（共100分）}}
+
+\qquad 某制药公司新研发了一类抗菌药物，主要用于泌尿系统的感染，现在进行I期临床研究。某体重50 kg的健康志愿者单剂量给药0.5 g该药物后，测得各个不同时间的血药浓度数据及累积尿药量数据，实验数据如下表所示。
+
+\begin{table}[htpb]
+    \centering
+    \caption{健康志愿者给药后的实验数据}
+    \smallskip
+    \begin{tabular}{c|ccccccccccccccc}
+        \bottomrule
+        $t$(h) & 0.5 & 1 & 1.5 & 2 & 3 & 4 \\ \hline
+        $C$(mg/L) & 24.56 & 32.40 & 34.14 & 33.70 & 31.09 & 28.21 \\ \hline
+        $X_\mathrm{u}$(mg) & 4.34 & 13.12 & 23.19 & 33.40 & 52.88 & 70.66  \\ \toprule \bottomrule
+        $t$(h) & 6 & 9 & 12 & 18 & 24 \\ \hline
+        $C$(mg/L) & 23.11 & 17.12 & 12.68 & 6.96 & 3.82\\ \hline
+        $X_\mathrm{u}$(mg) & 101.35 & 137.29 & 163.91 & 198.24 & 217.08 \\ \toprule 
+    \end{tabular}
+\end{table}
+
+
+问题：
+
+1.（10分）该志愿者采用的给药方式是静脉注射还是血管外给药？说明原因。
+
+2.（40分）使用任意方法，计算该给药方式中涉及到的速率常数。
+
+3.（30分）简要概括你所使用的方法的各个步骤。
+
+4.（20分）已知该药物吸收分数$F=0.8$，求该药物的消除半衰期$t_{1/2}$，表观分布容积$V$，$AUC$及肾清除率$Cl_\mathrm{r}$。
+
+
+\end{spacing}
+\end{document}

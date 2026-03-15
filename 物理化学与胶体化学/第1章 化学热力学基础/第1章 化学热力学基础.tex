@@ -1,0 +1,672 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme}
+
+\title{第一章}
+\subtitle{化学热力学基础}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+
+
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+	\begin{frame}
+	\frametitle{}
+	\begin{figure}[htpb]
+		\centering
+		\setcounter{subfigure}{0}
+		\subfloat{\includegraphics[height=7cm]{物理化学}}\quad
+		\subfloat{\includegraphics[height=7cm]{微信}}\quad
+		\subfloat{\includegraphics[height=7cm]{qq}}
+	\end{figure}
+\end{frame}
+
+	\begin{frame}{}
+        \begin{center}
+            {\Huge \cbf{目 \ 录}}
+        \end{center}
+		\tableofcontents
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+\section{热力学基本概念}
+
+
+\begin{frame}
+    \frametitle{化学热力学(thermodynamics)}
+	\begin{minipage}{0.58\linewidth}
+		化学热力学研究物质系统在各种条件下的物理和化学变化中所伴随着的能量变化，从而对化学反应的方向和进行的程度作出准确的判断。
+	\begin{itemize}
+	  \item 一个化学反应能否发生？
+	  \item 反应向哪个方向进行？
+	  \item 能够进行到什么程度？
+	  \item 各种因素对反应有什么影响？
+	\end{itemize}
+	\end{minipage}\hfill
+	\begin{minipage}{0.35\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{thermo-doodle-2012}
+		\end{figure}
+	\end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{系统与环境 (System and Surroundings)}
+	  \highlight{系统}：所研究的对象，亦称体系
+
+	  \highlight{环境}：与系统有关的其余部分
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.3\linewidth]{System and Surroundings}
+	\end{figure}
+	系统与环境的划分完全是人为的，可以是实际的，也可以是想象的。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{三类系统}
+	根据系统与环境间有无能量和物质交换，将系统分为三类：
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=\linewidth]{三类系统}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{三类系统}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.95\linewidth]{system types}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{系统的性质}
+	\begin{minipage}{0.68\linewidth}
+		用来描述系统状态的各种宏观物理量，称为\highlight{系统的性质}。
+
+	与物质的量有关，具有加和性的称为\cbf{广度性质}。
+
+	与物质的量无关，不具有加和性的称为\cbf{强度性质}。
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.7\linewidth]{hcl}
+		\end{figure}
+	\end{minipage}
+	
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=\linewidth]{properties}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{状态与状态函数}
+	系统里一切性质的综合表现称为\highlight{系统的状态} (state)。
+
+	\cbf{状态函数} (state function) ：描述系统宏观性质的函数。
+
+	例：  p，V， T，n都可称为状态函数。
+
+	\begin{enumerate}
+	  \item 系统所处的状态一定，则状态函数一定。
+	\end{enumerate}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.7\linewidth]{2535}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{状态与状态函数}
+	\begin{enumerate}
+	  \item[2.] 状态函数变化值仅取决于系统的始态和终态，而与变化的途径无关。
+	\end{enumerate}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=\linewidth]{状态函数}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{状态与状态函数}
+	\begin{minipage}{0.68\linewidth}
+		\begin{enumerate}
+			\item[3.] 状态函数在数学上具有全微分的性质。
+		  \end{enumerate}
+		  例如气体 $p, V, T$ 之间可写成如下函数关系： $V = V (T , p)$，则有
+		  \[
+		  {\mathrm{d}}V=\left(\frac{\partial V}{\partial T}\right)_p{\mathrm{d}}T+\left(\frac{\partial V}{\partial p}\right)_T{\mathrm{d}}p
+		  \]
+		  由状态1变到状态2的体积改变量为
+		  \[
+			  \Delta V=\int_{V_1}^{V_2}{\mathrm{d}}V=V_2-V_1
+		  \]
+		  状态函数沿闭合回路的积分为零，即
+		  \[
+			  \oint {\mathrm{d}}V=0
+		  \]
+	\end{minipage}\hfill
+	\begin{minipage}{0.28\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{baloon}
+		\end{figure}
+	\end{minipage}
+	
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{过程与途径}
+	\begin{minipage}{0.58\linewidth}
+		系统的状态发生变化，从始态到终态，则称系统经历了一个热力学过程，简称过程。
+
+完成一个热力学过程，可以采取多种不同的具体方式来实现，实现过程的具体步骤称为途径。
+
+过程着眼于始态和终态；途径着眼于具体实施方式。
+	\end{minipage}\hfill
+	\begin{minipage}{0.38\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{过程与途径}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{过程与途径}
+	\begin{minipage}{0.58\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{过程与途径2}
+		\end{figure}
+	\end{minipage}\hfill
+	\begin{minipage}{0.38\linewidth}
+		常见热力学过程：
+		\begin{itemize}
+		  \item 等温过程
+		  \item 等压过程
+		  \item 等容过程
+		  \item 绝热过程
+		  \item 循环过程
+		\end{itemize}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{热与功}
+	热与功是系统与环境进行能量交换的两种不同形式。
+
+	系统与环境之间因温度差而传递的能量称为热，用符号 $Q$ 表示。
+	\begin{itemize}
+	  \item 系统吸热，$Q > 0$
+	  \item 系统放热， $Q < 0$
+	\end{itemize}
+	除热以外，系统与环境之间因压力差\footnote{体积功}或其他力\footnote{非体积功}引起的能量流动称为功，用符号 $W$ 表示。
+	\begin{itemize}
+	\item 环境对系统做功， $W > 0$
+	\item 系统对环境做功， $W < 0$
+	\end{itemize}
+
+	热与功不是状态函数，是过程量，其数值变化与变化途径有关。
+
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{热力学能(内能 $U$)}
+	热力学能是系统内部所有能量的总和，从微观的角度来看，是分子无规则运动能量总和的统计平均值，包括分子动能，分子间相互作用势能以及分子内部的能量(转动、振动、电子和核运动)，但不包括系统整体运动时的能量和它在重力场中的势能。
+
+	\begin{enumerate}
+	  \item 热力学能是状态函数，$U = f (T , p)$
+	  \item 热力学能的绝对量还不完全清楚，但不影响解决一般问题，我们常常关心的是其变化量$\Delta U $。
+	  \item 热力学能的增量$\Delta U $可以用实验测定。
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{热力学第一定律(能量守恒定律)}
+	能量既不会凭空产生也不会凭空消失，它只会从一个物体转移到另一个物体，或者从一种形式转化为另一种形式，而在转化或转移的过程中，能量总量保持不变。
+
+任何封闭系统在完成指定始、终态间的变化时，可经过无数不同途径。虽然各途径的$Q$、$W$值各不相同，但$Q+W$的值却一致，与途径无关，这说明系统有一性质(状态函数)，该性质的改变量可用$Q+W$度量。该性质为热力学能$U$。
+\[
+	\Delta U = Q + W
+\]
+热力学能的改变量等于系统和环境交换热量与做功的加和。
+	\[
+		\qquad \mathrm{d}U={\delta}Q+{\delta}W
+	\]
+	$U$是状态函数，用微分符号d表示其微变；
+	
+	$Q$和$W$不是状态函数，只能用变分符号$\delta$表示其微变。
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		某过程中，系统从环境吸收热量1000 J，系统对环境做功300 J。求此过程中系统热力学能的改变量。
+	\end{example}
+	\pause
+	\[
+		\begin{aligned}
+			\Delta U &= Q + W\\
+			&= 1000 \mathrm{\ J} - 300 \mathrm{\ J}\\
+			&= 700 \mathrm{\ J} 
+		\end{aligned}
+	\]
+\end{frame}
+
+
+\section{可逆过程与最大功}
+
+
+\begin{frame}
+	\frametitle{体积功}
+	在热力学过程中，系统在反抗外界压强发生体积变化时，有功产生，这种功称为体积功($W$)，单位为J。
+
+	由于液体和固体在变化过程中体积变化较小，因此体积功常对气体而言。
+
+	把除体积功之外的功统称为有用功，或非体积功($W'$)
+	\[
+		W_\text{总} = W + W'
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{体积功的计算}
+	\begin{minipage}{0.48\linewidth}
+		假设在恒外力$F$作用下，活塞移动距离d$l$。按照传统功的定义，环境对系统做的功
+		\[
+			\begin{aligned}
+				W& =F\cdot|\Delta l|  \\
+				&=\frac{F}{A}\cdot|\Delta l|\cdot A \\
+				&=p_\mathrm{e}\cdot|\Delta V| \\
+				&=-{p}_\mathrm{e}\Delta {V}
+				\end{aligned}
+		\]
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.9\linewidth]{体积功}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{体积功的计算}
+	\begin{minipage}{0.48\linewidth}
+		若系统反抗外压${p}_\mathrm{e}$体积改变了d$V$，则体积功为：
+\[
+	{\delta}W=-{p}_\mathrm{e}\mathrm{d}V
+\]
+\[
+	W=\int-p_\mathrm{e}\mathrm{d}V
+\]
+\begin{itemize}
+  \item 若$\mathrm{d}V > 0$，则$W < 0$，表示系统消耗能量对环境做功；
+  \item 若$\mathrm{d}V < 0$，则$W > 0$，表示环境消耗能量对系统做功。
+\end{itemize}
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.9\linewidth]{体积功}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{不同过程$W$的计算}
+	\begin{minipage}{0.55\linewidth}
+		考察n mol理想气体定温下由始态$(n, T, p_1, V_1)$经四种途径膨胀至终态$(n, T, p_2, V_2)$的体积功：
+	\begin{enumerate}
+	  \item 向真空膨胀
+	\end{enumerate}
+	\[
+		\begin{aligned}
+			p_\mathrm{e}&={0}\\
+			W_1&=-\int_{V_1}^{V_2}p_\mathrm{e}\mathrm{d}V&=0
+		\end{aligned}
+	\]
+	\end{minipage}\hfill
+	\begin{minipage}{0.43\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{w1}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{不同过程$W$的计算}
+	\begin{minipage}{0.48\linewidth}
+		\begin{enumerate}
+		  \item[2.] 一次等外压膨胀
+		\end{enumerate}
+		\[
+			\begin{aligned}
+				p_\mathrm{e}&=p_2\\
+				W_2&=-\int_{V_1}^{V_2}p_\mathrm{e}\mathrm{d}V=-p_\mathrm{e}(V_2-V_1)
+			\end{aligned}
+		\]
+		系统所做的功的绝对值如阴影面积所示。
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{w2}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{不同过程$W$的计算}
+	\begin{minipage}{0.48\linewidth}
+		\begin{enumerate}
+		  \item[3.] 二次等外压膨胀
+		\end{enumerate}
+		先恒定外压 $p_\mathrm{e} = p'$，使体积膨胀至$V'$
+
+		再恒定外压 $p_\mathrm{e} = p_2$ ，膨胀至$V_2 $
+		\[
+			\begin{aligned}
+				{{W}_{3}} &=-\int_{V_1}^{V^{\prime}}p^{\prime}\mathrm{d}V+(-\int_{V^{\prime}}^{V_2}p_2\mathrm{d}V) \\
+				&=-p^{\prime}(V^{\prime}-V_1)-p_2(V_2-V^{\prime}) 
+				\end{aligned}
+		\]
+		所作的功等于两次作功的加和，做功的绝对值如阴影面积所示。
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{w3}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{不同过程$W$的计算}
+	\begin{minipage}{0.48\linewidth}
+		\begin{enumerate}
+		  \item[4.] 可逆膨胀
+		\end{enumerate}
+		每次膨胀外压总是比内压小一个无穷小的量。$p_\mathrm{e}=p_\mathrm{i}-\mathrm{d}p$
+		\[
+			\begin{aligned}
+				\color{red}{W_4}& =-\int_{V_1}^{V_2}{p}_\mathrm{e}\mathrm{d}V  \\
+				&=-\int_{V_1}^{V_2}(p-\mathrm{d}p)\mathrm{d}V \\
+				&=-\int_{V_1}^{V_2}\frac{nRT}V\mathrm{d}V \\
+				&=\color{red}{-nRT\ln\frac{V_2}{V_1}}\\
+				&=\color{red}{-nRT\ln\frac{p_1}{p_2}}
+				\end{aligned}
+		\]
+	\end{minipage}\hfill
+	\begin{minipage}{0.48\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{w4}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{如果将过程逆转，$W$将如何变化？}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=\linewidth]{wr}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{可逆过程的特点}
+	当系统经历了一个过程，如果过程的每一步都可沿相反的方向进行，同时不引起外界的任何变化，那么这个过程就称为\highlight{可逆过程}。
+	\begin{enumerate}
+	  \item 可逆过程是系统在无限接近平衡态下的微小变化；
+	  \item 在可逆过程中，系统和环境都能恢复到原来状态；
+	  \item 可逆膨胀，系统对环境做功最大；
+	  \item 可逆压缩，环境对系统做功最小；
+	  \item 可逆过程是理想化的过程。
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{功与过程的关系}
+\begin{table}[]
+	\begin{tabular}{@{}ll@{}}
+	\toprule
+	\multicolumn{2}{c}{体积功${\delta}W=-{p}_\mathrm{e}\mathrm{d}V$} \\ \midrule
+	向真空膨胀  &   $W_1=0$       \\
+	等外压膨胀	&   $W_2=-p_\mathrm{e}\Delta V$       \\
+	二次膨胀    &  $W_{3}=-p^{\prime}\Delta V_{1}-p_{2}\Delta V_{2}$        \\
+	可逆膨胀    &   $W_4=-nRT\ln\frac{V_2}{V_1}=-nRT\ln\frac{p_1}{p_2}$       \\ \bottomrule
+	\end{tabular}
+	\end{table}
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		\SI{298}{K}时\SI{5}{mol}理想气体，从\SI{10}{dm^3}膨胀至\SI{30}{dm^3}，试计算下列过程的功：
+
+		(1) 向真空膨胀
+
+		(2) 在恒定\SI{10.1325}{kPa}的外压下膨胀
+
+		(3) 定温可逆膨胀
+	\end{example}
+	\vspace{-8pt}
+	\pause
+	\[
+		\begin{aligned}
+			 (1) W_1&=0\\
+			 (2) W_2&=-p_\mathrm{e}\Delta V=-10.1325\text{kPa}\times(30-10)\mathrm{~dm}^3=-202.6\mathrm{~J}\\
+			 (3) W_3&=-nRT\ln\frac{V_2}{V_1}\\
+					& =-5\mathrm{~mol}\times8.314\mathrm{~J}\cdot\mathrm{mol}^1\cdot\mathrm{K}^{-1}\times298\mathrm{~K}\times\ln(30\mathrm{~dm}^3/10\mathrm{~dm}^3)\\
+					& =-\text{13609.5 J}
+		\end{aligned}
+	\]
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		在$p = 100$ kPa, $T = 373$ K时，若1 mol水完全气化，吸热40.6 kJ ，以水为系统，计算1 mol水气化的$\Delta U$ 。（ 忽略水的体积）
+	\end{example}
+	\[
+		\begin{aligned}
+			Q&=40.6 \mathrm{\ kJ} \\
+			W&=-p\Delta V\\
+			&=-nRT \\
+			&=-1\times 8.314 \times 10^{-3}\times 373 \\
+			&=-3.1\mathrm{\ kJ} \\
+			{\Delta U}&={Q}+{W} \\
+			&={37.5}\mathrm{\ kJ}
+		\end{aligned}
+	\]
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{question}
+		1. 气体体积功的计算式$W=\int-p_\mathrm{e}\mathrm{d}V$中，为什么要用环境的压力$p_\mathrm{e}$？在什么情况下可用系统的压力？
+
+		2. 容器内有理想气体，$n = 2$ mol， $p = 10 p^{\ominus}$， $T = 300$ K。求：
+		
+		(1) 在空气中膨胀了\SI{1}{dm^3} ，做功多少？
+		
+		(2) 对抗1 $p^{\ominus}$定外压膨胀到容器内压力为1 $p^{\ominus}$，做功多少？
+		
+		(3)膨胀时外压总比气体的压力小$\mathrm{d}p$，问容器内气体压力降到$p^{\ominus}$时，气体做功多少？
+	\end{question}
+\end{frame}
+
+
+\section{热与过程}
+
+
+\begin{frame}
+	\frametitle{定容热 $Q_{V}$}
+	只做体积功的系统发生变化
+	\[
+		\Delta U=Q+W =Q-p\Delta V
+	\]
+	对于定容过程，$\Delta V=0$
+	\[
+		\Delta U=Q_{V}
+	\]
+	或
+	\[
+		\mathrm{d} U=\delta Q_{V}
+	\]
+	只做体积功的定容过程，系统吸收的热等于热力学能的变化。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{定压热$Q_{p}$}
+	只做体积功的系统定压下发生变化
+	\[
+		\Delta U=Q+W =Q-p_{\mathrm{e}}\Delta V
+	\]
+	\[
+		\text{定压热\quad }Q_{{p}}=\Delta U+p_{\mathrm{e}}\Delta V=(U_2-U_1)+p_{\mathrm{e}}(V_2-V_1)=(U_2+p_2V_2)-(U_1+p_1V_1)
+	\]
+	$U, p, V$ 都是状态函数， $U + pV$也一定是状态函数。
+
+	把这个新的状态函数定义为焓，用$H$表示。 $H \equiv  U + pV$
+	\[
+		\Delta H = \Delta U + \Delta (pV)
+	\]
+	\[
+		Q_{p}=H_{2}-H_{1}={\Delta H}
+	\]
+	\[
+		\delta Q_{{p}}=\mathrm{d}H
+	\]
+	只做体积功的系统在定压过程中吸收的热等于焓的变化。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{相变热}
+	定温定压下，一定量物质在相变过程中，系统吸收或放出的热称为相变热(焓)，用$\Delta H$表示。
+	\begin{itemize}
+	  \item 蒸发热(焓)  $\Delta_{\mathrm{vap}} H$
+	  \item 融化热(焓) $\Delta_{\mathrm{fus}} H$
+	  \item 升华热(焓) $\Delta_{\mathrm{sub}} H$
+	\end{itemize}
+	各种物质的相变热可由实验测得，也可从物理化学手册中查到。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{热容($C$)}
+	在无相变、无化学变化的条件下，使一定量的均相物质温度升高\SI{1}{K}所需的热称为热容。
+	\[
+		C= \frac{Q}{\Delta T}
+	\]
+	热容的单位为\si{J.K^{-1}} ，是系统的广度性质。
+
+	系统与环境交换热的多少应与物质种类、状态、物质的量和交换的方式有关。因此，系统的热容值受上述各因素的影响。
+
+	\SI{1}{mol}物质的热容称为摩尔热容，以$C_m$表示，单位为\si{J.mol^{-1}.K^{-1}}，是强度性质。
+
+	单位质量物质的热容称为比热容，用$c$表示，单位为\si{J.kg^{-1}.K^{-1}}，是强度性质。
+	\[
+		Q = cm\Delta T
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+\end{frame}
+
+
+
+
+
+
+
+
+\begin{frame}
+	\begin{itemize}
+		\item[1.1] 热力学第一定律 $\Delta U=Q+W$
+		\item[1.2] 体积功 $W=\int -p_\mathrm{e}\mathrm{d}V$
+		\item[1.3] 定容热 $Q_V=\Delta U$；定压热 $Q_p=\Delta H$；焓 $H\equiv U+pV$
+		\item[1.4] 理想气体$\Delta U$、$\Delta H$的计算：$\Delta U=nc_{V,\mathrm{m}}\Delta T$，$\Delta H=nc_{p,\mathrm{m}}\Delta T$ \\ 理想气体的$c_{p,\mathrm{m}}$与$c_{V,\mathrm{m}}$的关系：$c_{p,\mathrm{m}}=c_{V,\mathrm{m}}+R$ \\ 绝热可逆方程式
+		\item[1.5] 化学反应热的计算；反应热与温度的关系
+		\item[1.6] 热力学第二定律 $\mathrm{d}S\geq \frac{\delta Q_R}{T}$
+		\item[1.7] 熵 $\mathrm{d}S\equiv \frac{\delta Q_R}{T}$ \\ 熵判据 $\Delta S_{\text 孤}>0$，自发过程；$\Delta S_{\text 孤}=0$，可逆过程。
+		\item[1.8] 化学反应熵变的计算。
+	\end{itemize}	
+\end{frame}
+
+\begin{frame}
+	\begin{table}
+		\begin{center}
+			\caption{理想气体简单变化过程}
+			\begin{tabular}{|c|c|c|c|c|c|}
+				\hline
+				\multirow{2}{*}{} & \multicolumn{2}{c|}{定温} & \multicolumn{2}{c|}{变温} & \multirow{2}{*}{绝热可逆}\\
+				\cline{2-5}
+				\multirow{2}{*}{} & 定外压 & 可逆 & 定容可逆 & 定压可逆 & \multirow{2}{*}{}\\
+				\hline
+				$W$ & $-p\Delta V$ & \makecell[c]{$-nRT\ln V_2/V_1$ \\ $-nRT\ln p_1/p_2$} & 0 & $-p\Delta V$ & $-\Delta U$\\
+				\hline
+				$Q$ & \multicolumn{2}{c|}{$-W$} & $\Delta U$ & $\Delta H$ &0 \\
+				\hline
+				$\Delta U$ & \multicolumn{2}{c|}{0} & \multicolumn{3}{c|}{$nc_{V,\mathrm{m}}\Delta T$}\\
+				\hline
+				$\Delta H$ & \multicolumn{2}{c|}{0} & \multicolumn{3}{c|}{$nc_{p,\mathrm{m}}\Delta T$}\\
+				\hline
+				$\Delta S$ & \multicolumn{2}{c|}{\makecell[c]{$nR\ln V_2/V_1$ \\ $nR\ln p_1/p_2$}} & $nc_{V,\mathrm{m}}\ln T_2/T_1$ & $nc_{p,\mathrm{m}}\ln T_2/T_1$ & 0\\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+\end{frame}
+
+
+\end{document}

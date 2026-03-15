@@ -1,0 +1,401 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme}
+\usetikzlibrary{tikzmark}
+%\special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+%封面
+\title{药代动力学在临床中的应用}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+	\end{frame}
+
+
+
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+\end{frame}
+
+
+\section{给药方案设计}
+
+
+\begin{frame}
+    \frametitle{给药方案设计的基本考虑}
+    药物治疗的成功与否很大程度上取决于给药方案 。稳态血药浓度最好在治疗窗的中央线附近波动 ， 一个周期内的血药浓度变化首先应远离最小中毒浓度， 同时对于某些药物接近最小有效浓度的时间也不宜过长， 否则疗效将不明显或易产生耐药性。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.7\linewidth]{药物治疗窗}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{给药方案设计的基本步骤}
+    在确诊患者的病情并确定治疗药物后 ， 可按以下步骤制订给药方案 ：
+    \begin{enumerate}
+      \item 根据治疗目的和药物性质 ， 针对具体的患者选择最佳的给药途径和药物制剂 ；
+      \item 根据药物的治疗窗和药动学参数 ，确定给药间隔 、 给药剂量 （ 包括负荷剂量和维持剂量 ） ；
+      \item 按初步给药方案用药 ， 观察疗效 ， 同时监测血药浓度 ， 进行安全性 、 有效性评价和剂量调整 ， 直至获得临床最佳给药方案 。
+    \end{enumerate}
+    \begin{blankblock}{}
+        当血药浓度与临床疗效或药物副作用相关时 ， 对血药浓度进行监测即可 ， 如地高辛 、 庆大霉素 、 苯妥英钠等药物 ； 当血药浓度与临床效果不相关时 ， 可通过监测其药效学指标 ，如通过测定哮喘患者的第一秒用力呼气量评价沙丁胺醇的疗效 ， 癌症患者主要根据化疗的副作用以及患者对药物的耐受能力来进行剂量调整 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{给药方案设计的基本方法}
+    依据患者的具体药动学参数进行给药方案设计是最精确的方法 ， 但临床实践中要获得每个患者的参数非常困难 ， 因此多数情况下是应用患者易得的个体参数（ 如体重 、 年龄等 ） 和已知的群体平均药物动力学参数进行给药方案设计 ， 后期根据疗效观察及治疗药物监测等进行给药方案调整 。
+    
+    临床常见的给药方案设计一般有以下几种方法：
+    \begin{enumerate}
+      \item 根据半衰期设计给药方案
+      \item 根据平均稳态血药浓度设计给药方案
+      \item 根据治疗窗设计给药方案
+      \item 非线性动力学给药方案
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据半衰期设计给药方案}
+    通常 ， 根据药物生物半衰期的不同 ， 可将所用药物分为以下几类 ：
+    \begin{enumerate}
+      \item 超速处置类$t_{1/2}\leqslant 0.5 \mathrm{h}$
+            \begin{itemize}
+              \item 对于治疗指数低的药物 ， 只能选择滴注给药 ； 
+              \item 对于治疗指数高的药物 ， 可以降低给药频率 ， 延长给药间隔 ， 但为维持有效血药浓度 ， 通常需要更大的剂量 ， 血药浓度波动也较大 。
+            \end{itemize}
+      \item 快速/中速处置类$0.5 \mathrm{h} \leqslant t_{1/2}\leqslant 8 \mathrm{h}$
+      
+      对于这类药物 ， 主要考虑治疗窗和给药的方便性 。
+            \begin{itemize}
+                \item 对于治疗窗较宽的药物 ， 如青霉素、 布洛芬可采用适当加大给药剂量和延长给药间隔的方案 ；
+                \item 对于治疗窗较窄的药物 ， 宜采用静脉滴注或选择缓释 、 控释制剂给药 ， 以避免血药浓度的较大波动。
+            \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据半衰期设计给药方案}
+    \begin{enumerate}
+      \item[3.] 慢速处置类$8 \mathrm{h} \leqslant t_{1/2}\leqslant 24 \mathrm{h}$
+            \begin{itemize}
+              \item 对于该类药物 ， 最方便的给药方案为按半衰期$(\tau = t_{1/2})$给药；
+              \item 为迅速达到有效治疗浓度 ， 还可采用首剂量加倍的负荷剂量 。
+            \end{itemize}
+      \item[4.] 极慢速处置类$t_{1/2}\geqslant 24 \mathrm{h}$
+            \begin{itemize}
+              \item 对于该类药物 ， 为了提高患者对医嘱的依从性 ， 多采用每天给药一次的方案 。
+              \item 对于某些半衰期特别长的药物如甲氟喹 （$t_{1/2}$为 20 天 ） 、 阿仑膦酸钠 （$t_{1/2}$为数年 ） ， 可采用 1 周一次的方案 。
+            \end{itemize}
+    \end{enumerate}
+
+    \vspace{-3pt}
+    \begin{blankblock}{}
+        对于具有非线性药物动力学特性的药物 ， 随给药剂量增加 ， 药物半衰期$t_{1/2}$延长 ， 为保证临床用药的安全性和有效性 ， 需进行治疗药物监测 ， 采用个体化给药。
+        
+        此外 ，$t_{1/2}$可受多种因素（ 如个体差异 、 年龄 、 药物相互作用 、 生理及疾病因素等 ）影响 ， 如某药物的$t_{1/2}$存在较大个体差异 ， 可先测定患者个体的$t_{1/2}$， 再进行给药方案调整 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据平均稳态血药浓度设计给药方案}
+    \begin{minipage}{0.48\linewidth}
+        \vspace{-0.6em}
+        符合单室模型特征药物的平均稳态血药浓度为 ：
+        \[
+            \overline{C_\mathrm{ss}} = \frac{FX_0}{kV\tau} = \frac{FX_0}{\mathrm{Cl}\tau}
+        \]
+        整理，得
+        \[
+            X_0 = \frac{\overline{C_\mathrm{ss}}kV\tau}{F} = \frac{\mathrm{Cl} \tau}{F}
+        \]
+        \[
+            \tau = \frac{FX_0}{\overline{C_\mathrm{ss}}kV} = \frac{FX_0}{\overline{C_\mathrm{ss}}\mathrm{Cl}} 
+        \]
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        符合双室模型特征药物的平均稳态血药浓度为 ：
+        \[
+            \overline{C_\mathrm{ss}} = \frac{FX_0}{k_{10}V_\mathrm{C}\tau} = \frac{FX_0}{\beta V_\beta \tau}
+        \]
+        整理，得
+        \[
+            X_0 = \frac{\overline{C_\mathrm{ss}}k_{10}V_\mathrm{C}\tau}{F} = \frac{\beta V_\beta \tau}{F}
+        \]
+        \[
+            \tau = \frac{FX_0}{\overline{C_\mathrm{ss}}k_{10}V_\mathrm{C}} = \frac{FX_0}{\overline{C_\mathrm{ss}}\beta V_\beta} 
+        \]
+    \end{minipage}
+
+    由于肝 、 肾功能正常患者的清除率Cl为确定值 ， 根据$\overline{C_\mathrm{ss}}$设计给药方案 ， 主要就是调整给药剂量$X_0$和（或）给药间隔时间$\tau$。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据平均稳态血药浓度设计给药方案}
+    由公式可知，给药方案调整时，如果给药速率$\frac{FX_0}{\tau}$不变 ， 则平均稳态血药浓度$\overline{C_\mathrm{ss}}$不会变 ， 但稳态最大血药浓度$C_{\max}^\mathrm{ss}$和稳态最小血药浓度$C_{\min}^\mathrm{ss}$ 随$\tau$延长 ， 波动程度变大 ， 对治疗窗较窄的药物 （ 如氨茶碱等 ） 容易产生不利影响。 
+    \begin{enumerate}
+      \item 在设计$\tau$时 ， 一般可选 1 、 2 个半衰期 ； 
+      \item 对于治疗窗较窄的药物应小于 1个半衰期 ； 
+      \item 对于治疗窗非常窄的药物则必须采用小剂量多次给药或采用静脉滴注给药 。
+      \item 对于治疗窗窄而且半衰期又很短的药物 ， 由于长期静脉滴注和一日内多次给药方案的依从性较差 ， 可选用每日给药 1 、 2 次的缓释或控释制剂 。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        给一名体重80 kg的成年男性气喘患者服用茶碱，已知药物消除半衰期为5 h ， 表观分布容积为0.5 L/kg， 平均稳态血药浓度为10 mg/L ， 生物利用度为 100\%。
+        
+        (1)如果每 6 小时服药1 次 ， 茶碱的剂量应为多少 ？ 
+        
+        (2)若可用的茶碱是 225mg 胶囊 ， 试设计给药方案 。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据平均稳态血药浓度设计给药方案}
+    临床上在静脉滴注控制患者病情后，通常希望以口服途径继续治疗。口服治疗一般应在滴注停止时立即开始 ， 可以及时弥补滴注停止后血药浓度的下降。假设维持相似的药效，可用维持相同平均稳态血药浓度水平设计口服给药的方案。根据公式， 如果Cl不变 ， 只要维持$\frac{FX_0}{\tau}$不变 ， 则$\overline{C_\mathrm{ss}}$不变 。 因此 ， 可首先通过下式计算$\frac{FX_0}{\tau}$， 在确定$\tau$后再计算$X_0$。
+    \[
+        \frac{FX_0}{\tau} = \frac{\overline{C_\mathrm{ss}}\mathrm{Cl}}{F}
+    \]
+    \begin{example}
+        以 30 mg/h速率给某男性哮喘患者（60岁 ， 75kg ） 静脉滴注氨茶碱，已知茶碱的平均稳态血药浓度为 10 mg/L ， 总清除率为2.55 L/h ， 氨茶碱是茶碱的可溶性盐 ， 含有85\%的茶碱（S= 85），茶碱的口服生物利用度为 100\%。 已知药房有 0.1 g 规格茶碱缓释片（1次/12 h ） ， 请设计适用于该患者的口服给药方案 。
+    \end{example}
+    \vspace{-2pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{根据治疗窗设计给药方案}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.6\linewidth]{药物治疗窗}
+    \end{figure}
+
+    进行给药方案设计时，如果将 MEC 定为稳态最小血药浓度， MTC 定为稳态最大血药浓度 ， 则可计算多剂量给药时可供选择的最大给药间隔$\tau_{\max}$， 然后在$\tau_{\max}$范围内选择依从性良好的给药间隔时间$\tau$（如6、8、12、24小时）， 再确定维持剂量$X_0$， 如果希望给药后迅速达到有效血药浓度 ， 还可根据维持剂量进一步计算负荷剂量$X_0^*$。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多剂量静脉注射给药方案设计}
+    对于符合单室模型特征的药物 ， 多剂量静脉注射达稳态后：
+    \[
+        C_{\min}^\mathrm{ss} = C_{\max}^\mathrm{ss} \mathrm{e}^{-k\tau_{\max}}
+    \]
+    整理，得
+    \[
+        \tau_{\max} = 1.44t_{1/2}\ln \frac{C_{\max}^\mathrm{ss}}{C_{\min}^\mathrm{ss}}
+    \]
+    在一个最大给药间隔$\tau_{\max}$内，维持稳态血药浓度所需的最大维持剂量为：
+    \[
+        X_{0,\max} = (C_{\max}^\mathrm{ss} - C_{\min}^\mathrm{ss})V
+    \]
+    由于$\tau_{\max}$或对应的$X_{0,\max}$可能并不现实 ， 则可在$\tau \leqslant \tau_{\max}$内选择适宜的给药间隔 ， 如$\tau_{\max}$为15 h， 可选 12h （ 一天 2 次 ） 或 8h （ 一天 3 次 ） 为给药间隔以利于患者遵从医嘱 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多剂量静脉注射给药方案设计}
+    已知当药物剂量与给药间隔的比值恒定时 ， 其平均稳态血药浓度$\overline{C_\mathrm{ss}}$不变 ， 因此 ， 可用下式计算适宜给药间隔$\tau$所对应的维持剂量$X_0$：
+    \[
+        X_0 = \frac{X_{0,\max}}{\tau_{\max}}\tau
+    \]
+    如果需要较强的治疗强度， 也可选择维持$C_{\max}^\mathrm{ss}$， 则在确定$\tau$后采用下式计算维持剂量 ：
+    \[
+        X_0 = C_{\max}^\mathrm{ss}V(1-\mathrm{e}^{-k\tau})
+    \]
+    为使血药浓度迅速达到有效浓度 ， 可用下式计算负荷剂量$X_0^*$：
+    \[
+        X_0^* = \frac{X_0}{1-\mathrm{e}^{-k\tau}}
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某抗生素符合单室模型特征 ， 其消除半衰期为 9h ， 表观分布容积为 12.5L ， 长期治疗中希望患者的血药浓度维持在$25\sim 50$ mg/L。
+        
+        (1)每隔 6 小时静脉注射 250mg 是否合理 ？
+
+        (2)若希望维持平均稳态血药浓度 ， 试为患者设计合理的给药方案 。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多剂量血管外给药方案设计}
+    对于符合单室模型特征且吸收与消除均为一级动力学过程的药物 ， 多剂量血管外给药时：
+    \[
+        C_{\max}^{\mathrm{ss}}=\frac{FX_{0}}{V}\Big(\frac{\mathrm{e}^{-kt_{\max}}}{1-\mathrm{e}^{-k\tau}}\Big)
+    \]
+    \[
+        C_{\min}^{\mathrm{ss}} =\frac{FX_0}{V}\left(\frac{\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-k\tau}}\right)
+    \]
+    整理，得
+    \[
+        C_{\min}^{\mathrm{ss}} = C_{\max}^{\mathrm{ss}}\mathrm{e}^{-k(\tau - t_{\max})}
+    \]
+    \[
+        \tau_{\max} = t_{\max} + \frac{1}{k}\ln \frac{C_{\max}^{\mathrm{ss}}}{C_{\min}^{\mathrm{ss}}}
+    \]
+    求得$\tau_{\max}$后可参照前述静脉注射的方法进行给药方案设计。
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        已知符合单室模型特征某药物的吸收速率常数$k_\mathrm{a}$为\SI{1}{h^{-1}}，消除速率常数$k$为\SI{0.1}{h^{-1}}， 表观分布容积$V$为10 L，其稳态最小血药浓度为 2.0 mg/L（ 最佳治疗浓度为 3～4 mg/L） ，现有30 mg、40 mg 和 70 mg 三种规格的片剂 （ 生物利用度均为 0.8 ） ， 每日给药 3 次 ， 试为患者选择适宜的片剂 。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{静脉滴注给药方案设计}
+    \begin{minipage}{0.48\linewidth}
+    单室模型药物静脉滴注$C_{\mathrm{ss}}$为 ：
+    \[
+        C_{\mathrm{ss}} = \frac{k_0}{kV}
+    \]
+    整理，得
+    \[
+        k_0 = C_{\mathrm{ss}}kV
+    \]
+    二室模型药物静脉滴注$C_{\mathrm{ss}}$为 ：
+    \[
+        C_{\mathrm{ss}} = \frac{k_0}{k_{10}V_\mathrm{C}} = \frac{k_0}{\beta V_\beta}
+    \]
+    整理，得
+    \[
+        k_0 = C_{\mathrm{ss}}k_{10}V_\mathrm{C} = C_{\mathrm{ss}}\beta V_\beta
+    \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{example}
+            羧苄西林为单室模型药物 ， 已知$t_{1/2} = 1 \mathrm{h}$，$V = 9 \mathrm{L}$， 有效治疗浓度为150 mg/L ， 现静脉滴注 1 L 输液 ， 若希望维持该浓度10小时，应将多少药物溶解在 1 L 输液中？
+        \end{example}
+    \end{minipage}
+    
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{静脉滴注$+$静脉注射给药方案设计}
+    \begin{enumerate}
+      \item 静脉滴注与静脉注射同时给药 ， 其血药浓度与时间的关系式 ：
+      \[
+        C=\frac{X_{0}}{V}\mathrm{e}^{-kt}+\frac{k_{0}}{kV}(1-\mathrm{e}^{-kt})
+      \]
+      \item 先静脉注射后静脉滴注给药 ， 血药浓度与时间的关系式 ：
+      \[
+        C = \frac{X_0}{V}\mathrm{e}^{-k(t+t')} +\frac{k_0}{kV}(1-\mathrm{e}^{-kt'})
+      \]
+    \end{enumerate}
+    
+    $t$为静脉注射给药开始至静脉滴注给药开始之间的时间 ；$t'$为静脉滴注给药的时间 。
+
+    \begin{example}
+        某药物符合单室模型特征，表观分布容积为0.25 L/kg，$t_{1/2}=10$h ， 某患者体重80kg ，
+        
+        (1)要维持血药浓度为 8 mg/L ， 应以怎样的速率恒速静脉滴注 ？ 
+        
+        (2)试设计一种给药方案 ， 使静脉注射后血药浓度维持在8 mg/L水平 。
+    \end{example}
+\end{frame}
+
+
+
+
+\begin{frame}
+    \frametitle{间歇静脉滴注给药方案设计}
+    给药间隔时间$\tau$及滴注速率$k_0$可按下列公式进行计算 ：
+    \[
+        \begin{aligned}
+            \tau&=T+\frac1k\mathrm{ln}\frac{C_{\mathrm{max}}^{\mathrm{ss}}}{C_{\mathrm{min}}^{\mathrm{ss}}} \\
+            k_0&=C_{\max}^{\mathrm{ss}}kV\Big(\frac{1-\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-kT}}\Big)
+        \end{aligned}
+    \]
+    \begin{example}
+        已知某药物的生物半衰期$t_{1/2}=10$h， 表观分布容积为 0.5 L/kg ， 临床有效治疗浓度为 10～20 mL。 某患者体重 60kg ， 每次静脉滴注 2 小时 ， 要想使血药浓度维持在有效治疗浓度范围 ， 试求最佳给药间隔时间$\tau$与静脉滴注速率$k_0$。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{非线性药物动力学给药方案}
+    对于具有非线性药物动力学特征的药物，给药达稳态后，消除速率等于给药速率：
+    \[
+        R = \frac{V_{\mathrm{max}}'\cdot C_\mathrm{ss}}{K_{\mathrm{m}}+C_\mathrm{ss}}
+    \]
+    确定每个患者的$K_{\mathrm{m}}$和$V_{\mathrm{max}}'$是设计该类药物给药方案的关键 。
+
+    静脉滴注给药时 ， 给药速率等于滴注速率 ， 即 $R=k_0$
+
+    多剂量静脉注射给药时 ， 给药速率$R=\frac{X_0}{\tau}$
+
+    多剂量血管外给药时 ， 给药速率$R=\frac{FX_0}{\tau}$
+    \[
+        X_0=\frac{V_\mathrm{m}^{\prime}C_\mathrm{ss}\tau}{F(K_\mathrm{m}+C_\mathrm{ss})}
+    \]
+    \[
+        \tau=\frac{FX_{0}(K_{\mathrm{m}}+C_{\mathrm{ss}})}{V_{\mathrm{m}}^{\prime}C_{\mathrm{ss}}}
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某癫痫患者肝 、 肾功能正常 ， 给予苯妥英钠进行治疗 ， 当每日剂量为300 mg时 ， 稳态血药浓度为 8 mg/L ， 症状不能控制 ； 当每日剂量增大至 350 mg 时 ， 稳态血药浓度为 20 mg/L ， 出现中枢神经系统副作用 。
+        
+        (1)求该患者的$K_{\mathrm{m}}$和$V_{\mathrm{max}}'$。
+        
+        (2)欲使稳态血药浓度为15 mg/L ， 应给多大的剂量 ？
+    \end{example}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

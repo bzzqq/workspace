@@ -1,0 +1,451 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme2024}
+
+\title{化学反应工程}
+\subtitle{绪论}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+%-----------------------------------------------------------------
+\begin{document}
+
+
+\maketitle
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{center}
+        \cbf{\Large{张斌\quad \faWeixin \ 13166568898}}
+    \end{center}
+    \vspace{-1em}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat{\includegraphics[height=6.5cm]{反应工程}}\quad
+        \subfloat{\includegraphics[height=6.5cm]{微信}}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \frametitle{目录}
+    \tableofcontents
+\end{frame}
+
+\section{化学反应工程}
+
+
+
+\begin{frame}
+    \frametitle{为什么小锅菜比食堂大锅菜好吃？}
+    锅的大小影响饭菜的口味？这一现象背后隐藏着哪些科学原理？
+    
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.4\linewidth]{大锅菜}
+        \end{figure}
+        
+    \pause
+            \begin{itemize}
+                \item 小锅容易搅拌均匀，传质较好，传热也很好，因而味道比较好。
+                \item 大锅搅拌较为困难，很难做到均匀，在相同的条件下，传质、传热状况要比小锅差很多，很容易造成盐分布不均、热量分布不均。
+              \end{itemize}
+
+\end{frame}
+
+% 热量还可以使菜品中的碳水化合物、蛋白质和脂肪分子发生化学反应。
+
+% 烹调过程中，碳水化合物首先会被分解成糖分子。这些糖分子会被脱水，产生焦糖化反应。这种化学反应相当于是把菜品表面的糖分子烤焦了，这就是烤香饼干、面包等糕点内部的原理。
+
+% 水解反应，基本上大分子糖类、蛋白质、脂肪都会在烹饪过程中发生水解生成单糖、氨基酸、脂肪酸等物质，比如淀粉水解后能产生甜味，蛋白质水解后带来鲜味，脂肪酸可以进一步发生化学反应生成有风味的酯类物质。
+
+% 当菜品中的蛋白质受到高温热力作用时，也会发生一系列的化学反应。这些反应包括琼脂凝胶化、蛋白热变性、非酶催化等。这些化学反应将会改变菜品的形状、口感和质地。举例来说，肉类在高温下会因为烤熟而变得更加紧实，口感更佳。
+
+% 菜品中的脂肪分子也会发生化学反应。热量会引起脂肪分子的氧化，从而产生新的化合物。这种化学反应可以使菜品的口味更加丰富，但是如果烹调过长时间或较高温度，则脂肪分子的氧化会导致有害物质的产生，使菜品变得不再适合食用。
+
+
+\begin{frame}
+    \frametitle{三传一反 \link{https://www.chinaharlan.com/harlanhelp/report/reportDetails/13834}}
+        在Pt-Rh合金网催化剂上进行氨氧化反应(工业制硝酸的主要途径)：
+        
+        \ch{4 NH3 + 5 O2 -> 4 NO + 6 H2O}
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.5\linewidth]{氨氧化}
+    \end{figure}
+    \begin{blankblock}{}
+        1906年，德国科学家Ostward以Pt/Rh合金网作为催化剂，开发了氨气的接触氧化工艺，用于生产硝酸。在氧化炉中于800℃进行氨氧化反应，生成的NO在冷却时与O$_2$生NO$_2$，NO$_2$在吸收塔内用水吸收在过量空气中O$_2$的作用下转化为硝酸。
+    \end{blankblock}
+\end{frame}
+
+% 硝酸广泛应用于农业、医药、化工、炸药等多个领域，对社会经济发展有着重要的推动作用。
+
+% 1. 农业
+
+% 硝酸在农业领域中主要用于合成化肥，如硝酸铵、硝酸钾等。这些化肥能够为植物提供氮元素，促进植物生长。
+
+% 2. 医药
+
+% 硝酸在医药领域中主要用于制备药物，如硝酸甘油、硝酸银等。这些药物能够用于治疗心脏病、感染等疾病。
+
+% 3. 化工
+
+% 硝酸在化工领域中主要用于制备其他化学品，如硝基苯、硝酸纤维素等。这些化学品广泛应用于染料、涂料、塑料等行业。
+
+% 4. 炸药
+
+% 由于硝酸具有强氧化性，因此在炸药制备中也有广泛应用。硝酸能够与其他物质反应生成炸药，如硝化甘油、TNT等。
+
+
+
+\begin{frame}
+    \frametitle{学科定义}
+    化学反应工程是化学工程学科的一个分支，通常简称为反应工程。
+
+    反应工程是以工业反应过程为主要研究对象，以反应技术的开发、反应过程的优化和反应器设计为主要目的一门工程学科。它是在化工热力学、反应动力学、传递过程理论以及化工单元操作的基础上发展起来的。
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{化学反应工程的研究对象}
+  \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{化工过程}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应工程的研究内容}
+    \begin{enumerate}
+      \item 反应动力学（三传一反）
+            \begin{itemize}
+                \item 反应的机理和速率
+                \item 温度/浓度/压力对反应速率的影响
+            \end{itemize}
+      \item 反应器设计与分析
+            \begin{itemize}
+                \item 选择合适的反应器型式
+                \item 选择合适的反应器操作方式
+                \item 确定最佳的操作条件
+                \item 计算完成规定的生产任务所需的反应体积
+                \item 反应器优化
+                \item[$\ast$] 反应器放大
+            \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应工程的研究方法}
+    对工业反应过程的研究，主要采用数学模型方法。首先将工业反应器内进行的过程分解为化学反应过程和传递过程，然后分别研究化学反应规律和传递过程规律。经过合理简化，建立数学模型，通过方程的联立求解。
+    \begin{enumerate}
+      \item 动力学方程式
+      \item 物料衡算式
+      \item 能量衡算式
+      \item 动量衡算式
+      \item 参数计算式
+    \end{enumerate}
+\end{frame}
+\section{化学反应及化学反应器类型}
+
+
+\begin{frame}
+    \frametitle{化学反应的工程分类}
+    \begin{minipage}{0.44\linewidth}
+        \begin{enumerate}
+            \item 根据反应选择性分类
+              \begin{itemize}
+                \item 单一反应
+                \item 复合反应
+              \end{itemize}
+            \item 根据反应物系相态分类
+              \begin{itemize}
+                \item 均相反应
+                \item 多相反应
+              \end{itemize}
+            \item 按是否使用催化剂分类
+              \begin{itemize}
+                \item 催化反应
+                \item 非催化反应
+              \end{itemize}
+            \item 按反应热特性分类
+              \begin{itemize}
+                \item 吸热反应
+                \item 放热反应
+              \end{itemize}
+          \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.44\linewidth}
+        \begin{enumerate}
+            \item[5.] 根据反应机理分类
+              \begin{itemize}
+                \item 基元反应
+                \item 非基元反应
+              \end{itemize}
+            \item[6.] 根据反应可逆性分类
+              \begin{itemize}
+                \item 可逆反应
+                \item 不可逆反应
+              \end{itemize}
+            \item[7.] 根据动力学级数分类
+              \begin{itemize}
+                \item 零级反应
+                \item 一级反应
+                \item 二级反应
+                \item 三级反应
+                \item 分数级反应
+              \end{itemize}
+          \end{enumerate}
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应器类型}
+    \begin{minipage}{0.5\linewidth}
+      \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{工业反应器}
+    \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.4\linewidth}
+    %   \begin{blankblock}{}
+    %     管式反应器：
+    %       \begin{itemize}
+    %         \item 轻油裂解生产乙烯
+    %         \item 乙烯液相氧化制乙醛
+    %         \item 氮气氢气催化合成氨
+    %       \end{itemize}
+        
+    %   \end{blankblock}
+    %   \begin{blankblock}{}
+    %     釜式反应器：
+    %     \begin{itemize}
+    %       \item 许多氯化反应、酯化反应
+    %       \item 悬浮法生产聚氯乙烯
+    %       \item 酸解钛精矿制硫酸钛盐
+    %     \end{itemize}
+    %   \end{blankblock}
+    \begin{enumerate}
+      \item 管式反应器
+        \begin{itemize}
+          \item 长径比很大（>30）
+          \item 多数用于连续气相反应
+          \item 也能用于液相反应
+        \end{itemize}
+      \item 釜式反应器
+        \begin{itemize}
+          \item 长径比较小（<3）
+          \item 大多用于液相反应
+        \end{itemize}
+      \item 塔式反应器
+        \begin{itemize}
+          \item 长径比介于釜式管式之间
+          \item 填料塔/板式塔/鼓泡塔
+          \item 固定床/流化床/移动床
+        \end{itemize}
+    \end{enumerate}
+    \end{minipage}
+    
+\end{frame}
+
+% \ch{FeTiO3 + 2 H2SO4 == TiOSO4 + FeSO4 + 2H2O}
+% 钛精矿和硫酸一次加入反应罐，在空气搅拌下加水引发，约半个小时后，反应产物加水或稀酸溶解后放料，完成一个周期6-8h。
+
+
+\begin{frame}
+    \frametitle{常用工业反应器类型及实例}
+\begin{table}[]
+    \begin{tabular}{@{}c|c|c@{}}
+    \bottomrule
+    相态                  & 反应器类型     & 生产实例    \\ \hline
+    \multirow{2}{*}{~~~~~~均相~~~~~~} & 气相管式反应器   & NO氧化    \\
+                        & 液相釜式反应器   & 酯化反应    \\ \hline
+    \multirow{5}{*}{两相} & 气固相固定床反应器 & ~~~~~~合成氨、苯氧化~~~~~~ \\
+                        & ~~~~~~气固相流化床反应器~~~~~~ & 石油催化裂化  \\
+                        & 气固相移动床反应器 & 二甲苯异构   \\
+                        & 气液相鼓泡塔反应器 & 羟基合成甲醇  \\
+                        & 气液相填料塔反应器 & 苯的氯化    \\ \hline
+    \multirow{2}{*}{三相} & 气液固滴流床反应器 & 石油加氢脱硫  \\
+                        & 气液固淤浆床反应器 & 乙烯溶剂聚合  \\ \toprule
+    \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{催化裂化汽油选择性加氢脱硫（RSDS）技术 }
+
+    % 指在氢压和催化剂存在下，使油品中的硫、氧、氮等有害杂质转变为相应的硫化氢、水、氨而除去，并使烯烃和二烯烃加氢饱和、芳烃部分加氢饱和，以改善油品的质量。
+
+    \begin{itemize}
+      \item 处理原料：催化裂化汽油（硫含量：50～2000μg/g， 烯烃含量：5\%～40\%）
+      \item 目标产品：硫含量<10 μg/g 国五、国六清洁汽油
+    \end{itemize}
+
+    \hspace{-2em}
+    \begin{minipage}{0.55\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{RSDS}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.43\linewidth}
+        \begin{table}[]
+        \begin{tabular}{@{}ccc@{}}
+        \toprule
+        时间   & 标准  & \begin{tabular}[c]{@{}c@{}}硫含量\\      <(mg/kg)\end{tabular} \\ \midrule
+        2004 & 国二  & 500  \\
+        2009 & 国三  & 150   \\
+        2013 & 国四  & 50  \\
+        2017 & 国五  & 10   \\
+        2019 & 国六a & 10    \\
+        2021 & 国六b & 10   \\ \bottomrule
+        \end{tabular}
+        \end{table}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{釜式反应器的结构}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.9\linewidth]{釜式反应器的结构}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{管式反应器}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.9\linewidth]{管式反应器结构}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应器的操作方式}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat[间歇操作]{\includegraphics[height=3.8cm]{间歇操作}}\hfill
+        \subfloat[连续操作]{\includegraphics[height=3.8cm]{连续操作}}\hfill
+        \subfloat[半连续操作]{\includegraphics[height=3.8cm]{半连续操作}}
+    \end{figure}
+    \begin{enumerate}
+      \item 大规模生产过程多采用连续操作，容易实现机械化，自动化
+      \item 对于反应时间长或产品批量小的过程，分批间歇操作更合适
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{间歇操作/连续操作反应器的特点}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{定态}
+    \end{figure}
+    \vspace{-1em}
+    \begin{itemize}
+      \item 间歇反应过程是一个\bf{非定态过程}，反应器内物系的组成随时间而变。
+      \item 连续操作的反应器多属于\bf{定态操作}，反应器内物系内任何部位的物系参数，如浓度及温度等均不随时间而改变，但随位置变化。
+    \end{itemize}
+\end{frame}
+
+
+
+
+% 我国重化学工业的开拓者——侯德榜
+% “联合制碱法”，又称“侯式制碱法”，同时获得两种工农业需要的产品——纯碱(碳酸钠)和氯化铵。
+% 众所周知，三酸二碱是化学工业的基本原料，仅能生产纯碱显然是不行的。侯德榜开始设计一个可以同时生产氨、硫酸、硝酸和硫酸铵的硫酸铵厂。
+
+
+\section{工业反应器的放大}
+
+
+\begin{frame}
+    \frametitle{反应放大}
+        在实验室中用一个500 mL的烧瓶作为反应器对某吸热反应进行研究，物料通过反应器壁面与油浴进行换热以进行换热以满足反应的供热需求。现期望反应量增大1000倍，将反应器半径扩大到10倍，是否可行？
+    \pause
+    \[
+        \begin{aligned}
+            \text{反应体积扩大至：} \frac{\frac{4}{3}\pi R^3}{\frac{4}{3}\pi r^3} &= 1000 \ \text{倍} \\
+            \text{传热面积扩大至：} \frac{4 \pi R^2}{4 \pi r^2} &= 100 \ \text{倍}
+        \end{aligned}
+    \]
+    \pause
+    \begin{itemize}
+      \item 反应体积增大1000倍，但传热面积只能扩大100倍，使热量传递受到影响，从而可能影响反应进行的温度，反应就很难按预计的条件进行。
+      \item 另一种情况，若反应是放热反应，传热面积小而不能有效移走反应热，导致反应系统热量积累使反应物系温度越来越高、反应速率越来越快，不仅影响产品的质量，甚至可能产生热爆炸而导致严重的安全问题。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{从实验室到工业生产}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.45\linewidth]{放大}
+    \end{figure}
+
+    在20世纪初期和中期，化学工程学解决工程问题大都基于相似放大理论与实验归纳方法，在很多化工单元过程（流体传输、传热、干燥、蒸馏）中取得了很大的成功。
+
+    但是，相似放大法不能简单地应用于化学反应器的模拟和设计。实际反应器中，质量传递、动量传递、热量传递与化学反应（\highlight{三传一反}）并存，不能单纯依靠化学动力学的知识来解决反应器的放大等相关问题。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{工业反应器的放大}
+    \begin{enumerate}
+      \item 相似放大法
+        \begin{itemize}
+          \item 应用相似原理进行放大
+          \item 有一定局限性，只适用于物理过程放大，不适用于化学过程的放大。
+        \end{itemize}
+      \item 逐级经验放大法
+        \begin{itemize}
+          \item 小型反应器进行工艺试验→规模稍大模型试验→中间试验→工业规模
+          \item 不能深入研究过程的内在规律；
+          \item 试验步骤由人为规定，并非科学合理的研究程序；
+          \item 放大是根据试验结果外推，并不一定可靠。
+        \end{itemize}
+      \item 数学模型法
+        \begin{itemize}
+          \item 实验室研究化学反应特征→冷模试验研究传递过程特征→建立数学模型，预测工业反应器性能→中试检验模型的等效性→计算机试验进行检验和修正→工业反应器
+          \item 可实现高倍数放大；缩短开发周期；减少人力物力消耗。
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+% 冷模试验：冷态模型试验的简称,在没有化学反应的条件下,考察设备内物料的流动与混合，以探明反应器传热和传质等物理过程的规律。
+
+\begin{frame}
+    \frametitle{化学反应工程的历史及发展}
+    \vspace{-4pt}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.8\linewidth}}
+        1930以前 & 物理过程研究：质量、热量、动量传递方面的化工单元操作\\
+        1930s,萌芽 & 丹克莱尔 ： 扩散、流体流动与传递对化学反应收率的影响\\
+        1940s,奠基 & 化学反应工程的首批专著：霍根和华生 ： 《 化学过程原理 》；
+        法兰克-卡明涅斯基 ： 《 化学动力学中的扩散与传热 》 \\
+        1940s,推动 & 原子能工业的发展提出了高倍率放大反应器的问题 \\
+        1950s,促进 & 石油化工的大发展使反应规模不断扩大，促进了化学反应特性与传递特性的研究\\
+        1957,提出 & 第一次欧洲化学反应工程会议上正式提出 “化学反应工程学” 的概念 \\
+        1960s,加速 & 计算机的发展使数学模型方法在工程中的研究日益深入\\
+        1980s,分支 & 生化反应工程；聚合反应工程；电化学反应工程
+        \end{tabular}
+        \end{table}
+        \vspace{-4pt}
+\end{frame}
+
+
+
+\end{document}

@@ -1,0 +1,42 @@
+\section{手动输入公式}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    运算符类型 & 算符 & 说明 \\ \hline
+    数学运算符 & $+$、$-$、$*$、$/$、\^ \ \% & 加、减、乘、除、乘幂、百分比 \\ \hline
+    负号 & - & 负号 \\ \hline
+    引用运算符 & 冒号:、单个空格、逗号, & 引用公式范围、分隔作用 \\ \hline
+    文本运算符 & \& & 连接两个文本字符串 \\ \hline
+    比较运算符 & =、<>、<、<=、>、>= & \makecell{等于、不等于、小于、\\ 小于等于、大于、大于等于} \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \begin{enumerate}
+        \item 引用单元格计算
+        \item 直接计算
+    \end{enumerate}
+
+\section{使用公式函数}
+
+函数名(函数参数，函数参数，$\cdots$ ，函数参数) = 返回值
+
+聚合函数：
+\begin{itemize}
+    \item SUM 求和
+    \item AVERAGE 求平均值
+    \item COUNT (只对数字单元格计数) COUNTA(数字文本全计数)
+    \item MAX 求最大值
+    \item MIN 求最小值
+\end{itemize}
+
+\section{引用}
+
+\begin{itemize}
+    \item 相对引用：对于A列第一行的单元格，相对引用是A1。
+    \item 绝对引用：列号和行号前面都加了一个美元的符号\$A\$1。
+    \item 混合引用：在行号或者列号其中一个前面加了美元符号，A\$1 或 \$A1，表示只固定行或者列。
+\end{itemize}
+
+

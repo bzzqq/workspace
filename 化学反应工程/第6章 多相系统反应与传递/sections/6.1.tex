@@ -1,0 +1,168 @@
+\section{多相催化反应步骤}
+
+
+\begin{frame}
+    \frametitle{固体催化剂的宏观结构及性质}
+
+    绝大多数固体催化剂颗粒为多孔结构，即颗粒内部系由许许多多形状不规则互相连通的孔道所组成，形成一几何形状复杂的网络结构。正是由于这种网状结构的存在，使催化剂颗粒内部存在着巨大的表面，化学反应便是在这些表面上发生的。通常以\highlight{比表面}来衡量催化剂表面的大小，以\si{m^2/g}为单位。
+
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat[活性炭催化剂]{\includegraphics[height=3.7cm]{C}}\quad
+        \subfloat[氧化铝催化剂]{\includegraphics[height=3.7cm]{Al2O3}}
+    \end{figure}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{固体催化剂的宏观结构及性质}
+
+    \highlight{孔容}
+
+    多孔催化剂的比表面显然与孔道的大小有关，孔道越细，则比表面越大。然而催化剂颗粒内的孔道又是粗细不一的，通常用孔径分布来描述，孔径分布则是通过由实验测定的孔容分布计算得到。孔容是指单位质量催化剂颗粒所具有的孔体积，常以\si{cm^3/g}为单位。
+    \begin{itemize}
+        \item 可用压汞仪来测定不同大小的孔的体积
+        
+        可以测出较宽范围的孔径分布，测试孔径范围约为 \SI{3}{nm} $\sim 360 \mu$m
+        \item 四氯化碳法测定催化剂的孔容
+        
+        测得的孔体积包括所有孔的体积，或称总孔容，通常所说的孔容指的就是总孔容。
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{固体催化剂的宏观结构及性质}
+
+    \highlight{平均孔半径}
+
+    为了定量比较和计算上的方便，常用平均孔半径$\langle r_\mathrm{a} \rangle$来表示催化剂孔的大小。如果不同孔径$r_\mathrm{a}$的孔容分布已知，平均孔径$\langle r_\mathrm{a} \rangle$可由下式算出
+    \[
+        \langle r_\mathrm{a} \rangle = \frac{1}{V_\mathrm{g}} \int_0^{V_\mathrm{g}} r_\mathrm{a} \dif V
+    \]
+    式中$V$为半径为$r_\mathrm{a}$的孔的体积，按单位质量催化剂计算，$V_\mathrm{g}$为催化剂总孔容。缺乏孔容分布数据时，只要催化剂的比表面$S_\mathrm{g}$及总孔容已知，也可按下列办法估算平均孔径。
+    \[
+        \langle r_\mathrm{a} \rangle = 2V_\mathrm{g}/S_\mathrm{g}
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{固体催化剂的宏观结构及性质}
+
+    
+    \highlight{孔隙率}
+
+    除了用孔容来表示催化剂颗粒的孔体积外，还可用孔隙率（或简称孔率）$\varepsilon_\mathrm{p}$来表示。孔隙率等于孔隙体积与催化剂颗粒体积（固体体积与孔隙体积之和）之比，显然$\varepsilon_\mathrm{p} < 1$。孔率与孔容的差别在于前者按单位颗粒体积，而后者则是按单位质量催化剂计算的孔体积。两者的关系为
+    \[
+        \varepsilon_\mathrm{p} = V_\mathrm{g} \rho_\mathrm{p}
+    \]
+    式中$\rho_\mathrm{p}$为颗粒密度，或称表观密度。除了颗粒密度之外，还有所谓真密度$\rho_\mathrm{t}$和堆密度$\rho_\mathrm{b}$，它们的定义可分别表示如下
+    \[
+        \rho_\mathrm{p} = \frac{\text{固体的质量}}{\text{颗粒的体积}} \qquad \rho_\mathrm{t} = \frac{\text{固体的质量}}{\text{固体的体积}} \qquad \rho_\mathrm{b} = \frac{\text{固体的质量}}{\text{床层的体积}}
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{固体催化剂的宏观结构及性质}
+
+    \highlight{当量直径}
+
+    对于固体颗粒，尤其是形状不规则而又较细的颗粒，往往通过筛分来确定其粒度，例如40、60目的颗粒，意指这些颗粒能通过40目筛，而不能通过60目筛。同时以这两种筛的筛孔净宽的算术平均值来表示颗粒的线性尺寸。
+    
+    \bigskip
+
+    在实际设计计算中，往往以与颗粒相当的球体直径来表示颗粒的粒度，具体做法有三种。
+    
+    \begin{enumerate}
+        \item 以与颗粒体积相等的球体直径表示；$V = \frac{4}{3}\pi r_\mathrm{p}^3 \qquad d_{V} = \sqrt[3]{\frac{6V}{\pi}}$
+        \item 以与颗粒外表面积相等的球体直径表示；$S = 4\pi r_\mathrm{p}^2 \qquad d_S = \sqrt{\frac{S}{\pi}}$
+        \item 以与颗粒的比外表面积相等的球体直径表示。$\frac{S}{V_\mathrm{p}} = \frac{3}{r_\mathrm{p}} \qquad d_{SV} = \frac{6V}{S}$
+    \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{固体催化剂的宏观结构及性质}
+
+    \highlight{形状系数}
+
+    形状系数$\phi_\mathrm{a}$的意义为和颗粒体积相同的球体的外表面积$a_\mathrm{s}$与颗粒的外表面积$a_\mathrm{p}$之比，即
+    \[
+        \phi_\mathrm{a} = a_\mathrm{s} / a_\mathrm{p}
+    \]
+    由于体积相同的几何体中以球体的外表面积为最小，所以$a_\mathrm{s} < a_\mathrm{p}$，$\phi_\mathrm{a} < 1$。
+    
+    $\phi_\mathrm{a} = 1$表明颗粒为球形。
+    
+    $\phi_\mathrm{a}$表示颗粒外形与球形相接近的程度，又称圆球度。
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+
+    \begin{example}
+        已知一催化剂颗粒的质量为\SI{1.2}{g}，体积为\SI{1}{cm^3}，测得孔容为\SI{0.25}{cm^3/g}，比表面为 \SI{100}{m^2/g}，试求这粒催化剂的$\rho_\mathrm{p}$、$\varepsilon_\mathrm{p}$及$\langle r_\mathrm{a} \rangle$。
+    \end{example}
+    \pause
+    \[
+        \begin{aligned}
+            \rho_\mathrm{p} &= 1.2/1 = 1.2 \ \si{g/cm^{3}} \\
+            \varepsilon_\mathrm{p} &= 0.25\times 1.2 = 0.3 \\
+            \langle r_\mathrm{a} \rangle &= 2V_\mathrm{g}/S_\mathrm{g} = 2\times 0.25\times 10^{-4}/100  = 5\times 10^{-7} \ \mathrm{cm}
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{气固相催化反应过程步骤}
+
+    \begin{minipage}{0.46\linewidth}
+        \includegraphics[width=\linewidth]{figures/fig6.1.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.52\linewidth}
+        \begin{enumerate}
+            \item 反应物A由气相主体扩散到颗粒外表面；
+            \item 反应物A由外表面向孔内扩散，到达可进行吸附/反应的活性中心；
+            \item A的吸附
+            \item A在表面上反应生成B
+            \item 产物B自表面解吸
+            \item 产物B由内表面扩散到外表面；
+            \item B由颗粒外表面扩散到气相主体
+        \end{enumerate}
+    \end{minipage}
+    \bigskip
+
+    3、4、5总称为表面反应过程，其反应历程就决定了该催化反应的本征动力学。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{气固相催化反应过程步骤}
+
+    \begin{minipage}{0.46\linewidth}
+        \includegraphics[width=\linewidth]{figures/fig6.1.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.52\linewidth}
+        由于扩散的影响，流体主体、催化剂外表面及催化剂颗粒中心反应物的浓度$c_\mathrm{AG}$、$c_\mathrm{AS}$和$c_\mathrm{AC}$将是不一样的。$c_\mathrm{Ae}$为平衡浓度。
+        \begin{itemize}
+          \item $c_\mathrm{AG} > c_\mathrm{AS} > c_\mathrm{AC} > c_\mathrm{Ae}$
+        \end{itemize}
+        对于反应产物，浓度高低顺序相反
+        \begin{itemize}
+          \item $c_\mathrm{BG} < c_\mathrm{BS} < c_\mathrm{BC} < c_\mathrm{Be}$
+        \end{itemize}
+    \end{minipage}
+
+\end{frame}

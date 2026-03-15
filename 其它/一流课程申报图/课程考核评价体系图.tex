@@ -1,0 +1,69 @@
+%!TEX program = xelatex
+\documentclass[cn,blue,14pt,normal]{elegantnote}
+
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\begin{document}
+
+
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% Beamer presentation requires \usepackage{colortbl} instead of \usepackage[table,xcdraw]{xcolor}
+\begin{table}[]
+  \begin{tabular}{@{}ccccc@{}}
+  \rowcolor[HTML]{656565} 
+  \cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} } & \multicolumn{4}{c}{\cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} 考核评价方式及比例}}    \\
+  \rowcolor[HTML]{656565} 
+  \multirow{-2}{*}{\cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} 课程目标}} & \multicolumn{2}{c}{\cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} 平时考核(60\%)}} & \multicolumn{2}{c}{\cellcolor[HTML]{656565}{\color[HTML]{FFFFFF} 期末考核(40\%)}} \\
+  \rowcolor[HTML]{ECF4FF} 
+  \cellcolor[HTML]{ECF4FF}       & 课堂测试     & 5\%      & 基本概念   & \cellcolor[HTML]{ECF4FF}     \\
+  \rowcolor[HTML]{ECF4FF} 
+  \cellcolor[HTML]{ECF4FF}       & 参与回答       & 5\%     & 反应动力学  & \cellcolor[HTML]{ECF4FF}     \\
+  \rowcolor[HTML]{ECF4FF} 
+  \multirow{-3}{*}{\cellcolor[HTML]{ECF4FF}知识目标}  &  作业    & 10\%     & 理想模型   & \multirow{-3}{*}{\cellcolor[HTML]{ECF4FF}15\%} \\
+  \rowcolor[HTML]{FFFFC7} 
+  \cellcolor[HTML]{FFFFC7}       & 讨论分享     & 5\%      & 反应器设计  & \cellcolor[HTML]{FFFFC7}     \\
+  \rowcolor[HTML]{FFFFC7} 
+  \cellcolor[HTML]{FFFFC7}       & 项目汇报     & 5\%      & 反应器优化  & \cellcolor[HTML]{FFFFC7}     \\
+  \rowcolor[HTML]{FFFFC7} 
+  \multirow{-3}{*}{\cellcolor[HTML]{FFFFC7}能力目标}  & 期中测验     & 10\%      & 非理想模型  & \multirow{-3}{*}{\cellcolor[HTML]{FFFFC7}15\%} \\
+  \rowcolor[HTML]{FFCCC9} 
+  \cellcolor[HTML]{FFCCC9}       & 出勤       & 5\%      & 科学思维   & \cellcolor[HTML]{FFCCC9}     \\
+  \rowcolor[HTML]{FFCCC9} 
+  \cellcolor[HTML]{FFCCC9}       & 软件应用     & 5\%      & 安全设计   & \cellcolor[HTML]{FFCCC9}     \\
+  \rowcolor[HTML]{FFCCC9} 
+  \multirow{-3}{*}{\cellcolor[HTML]{FFCCC9}素质目标}  & 课程论文     & 10\%     & 创新意识   & \multirow{-3}{*}{\cellcolor[HTML]{FFCCC9}10\%}
+  \end{tabular}
+  \end{table}
+
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+\setCJKmainfont{SimSun}[AutoFakeBold, AutoFakeSlant] 
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+
+
+\begin{document}
+
+
+\begin{spacing}{1.625}
+
+\centerline{{\huge \bf{河北农业大学课程考试试卷}}}
+
+\centerline{\bf{\large 20\underline{25}年春（\quad ）/秋（\ \surd \ ）学期}}
+
+{\bf{考试科目：\underline{\quad 化学反应工程 \quad} \hfill 姓名：\underline{ \qquad \qquad} \hfill 学号：\underline{ \qquad \qquad \qquad \qquad}}}
+
+{\bf{学院：\underline{\quad 理工系\quad } \hfill 专业班级：\underline{\qquad \qquad \qquad \qquad} \hfill 卷别：\cred{A} \hfill 考核方式：\cred{开卷}}}
+
+（注：考生务必将答案写在答题纸上，标清楚大小题号，写在本试卷上无效）
+
+\bigskip
+
+
+{\bf{一、简答题，用一句话回答（每题5分，共30分）}}
+
+1. （5分）在工业上，我们常常希望把快速放热的反应管做得很细（列管式反应器），请说出这样做的主要原因。
+
+\bigskip
+
+2. （5分）在实验室内一个小烧杯中能顺利进行的反应，放大到工业规模的巨型反应釜中可能会失败。请试列举一个可能的原因。
+
+\bigskip
+
+3. （5分）对于气-固相催化反应，为什么固体催化剂常常被制成多孔结构？
+
+\bigskip
+
+4. （5分）对于一个连串反应 A → B → C，我们希望获得尽可能高目标产物B的收率。请提出一条你可以想到的工艺控制策略。
+
+\bigskip
+
+5. （5分）请说出影响化学反应速率的主要因素。
+
+\bigskip
+
+6. （5分）如果把一个大颗粒的催化剂磨成小颗粒，主要会改善内扩散过程还是外扩散过程？
+
+\bigskip
+
+{\bf{二、问答题（每题10分，共30分）}}
+
+1. （10分）简要比较理想间歇釜式反应器和全混流釜式反应器的主要特点，并各举一个你认为适合使用该反应器的工业反应例子。
+
+\bigskip
+
+2. （10分）对于可逆放热反应，为什么存在一个“最佳反应温度”？
+
+\bigskip
+
+3. （10分）请说出学习化学反应工程对你可能有什么帮助。
+
+\newpage
+{\bf{二、计算题(共40分)}}
+
+1. (40分)
+
+在等温下进行液相反应\ch{A + B -> C + D}，在该条件下的反应速率方程为
+\[
+    r_\mathrm{A} = 0.8c_\mathrm{A}^{1.5}c_\mathrm{B}^{0.5} \qquad [\si{mol.L^{-1}.h^{-1}}]
+\]
+原料为A和B的混合液，A和B的初始浓度均为3 mol/L。
+
+(1) 求反应4 h时A的转化率。
+
+(2) 每天处理\SI{24}{m^3}原料，要求最终转化率为80\%，反应在连续釜式反应器中进行，求反应体积。
+
+(3) 条件同上，反应在活塞流管式反应器中进行，求反应体积。
+
+(4) 条件同上，反应在间歇釜式反应器中进行，辅助时间为0.5 h，求反应体积。
+
+
+\end{spacing}
+\end{document}

@@ -1,0 +1,42 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+% \special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+\usetheme{mytheme2024}
+\usetikzlibrary{tikzmark}
+
+
+\title{大学信息技术}
+\subtitle{计算思维与算法}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+    
+\maketitle
+
+
+\begin{frame}{}
+  \begin{center}
+      {\Huge \cbf{目 \ 录}}
+  \end{center}
+  \tableofcontents[subsectionstyle=hide/hide/show]
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+
+
+
+\include{contents/Computational thinking}
+\include{contents/questions}
+\include{contents/algorithms}
+\include{contents/Sorting algorithms}
+\include{contents/Common algorithms}
+
+
+
+
+\end{document}

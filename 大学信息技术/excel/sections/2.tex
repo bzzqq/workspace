@@ -1,0 +1,141 @@
+\subsection{手动输入公式}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|}
+    \hline
+    运算符类型 & 算符 & 说明 \\ \hline
+    数学运算符 & $+$、$-$、$*$、$/$、\^ \ \% & 加、减、乘、除、乘幂、百分比 \\ \hline
+    负号 & - & 负号 \\ \hline
+    引用运算符 & 冒号:、单个空格、逗号, & 引用公式范围、分隔作用 \\ \hline
+    文本运算符 & \& & 连接两个文本字符串 \\ \hline
+    比较运算符 & =、<>、<、<=、>、>= & \makecell{等于、不等于、小于、\\ 小于等于、大于、大于等于} \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \begin{enumerate}
+        \item 引用单元格计算
+        \item 直接计算
+    \end{enumerate}
+
+\subsection{使用公式函数}
+
+函数名(函数参数，函数参数，$\cdots$ ，函数参数) = 返回值
+
+聚合函数：
+\begin{itemize}
+    \item SUM 求和
+    \item AVERAGE 求平均值
+    \item COUNT (只对数字单元格计数) COUNTA(数字文本全计数)
+    \item MAX 求最大值
+    \item MIN 求最小值
+\end{itemize}
+
+\subsection{引用}
+
+\begin{itemize}
+    \item 相对引用：对于A列第一行的单元格，相对引用是A1。
+    \item 绝对引用：列号和行号前面都加了一个美元的符号\$A\$1。
+    \item 混合引用：在行号或者列号其中一个前面加了美元符号，A\$1 或 \$A1，表示只固定行或者列。
+\end{itemize}
+
+\newpage
+\section{文本函数}
+
+\subsection{EXACT函数}
+
+EXACT函数比较两个文本字符串，如果它们完全相同，则返回 TRUE，否则返回 FALSE。 函数 EXACT 区分大小写，但忽略格式上的差异。 使用 EXACT 可以检验在文档中输入的文本。
+
+语法：EXACT(text1, text2)
+
+EXACT 函数语法具有下列参数：
+\begin{enumerate}
+  \item text1    必需。 第一个文本字符串。
+  \item text2    必需。 第二个文本字符串。
+\end{enumerate}
+
+\subsection{LEFT、LEFTB函数}
+
+LEFT 从文本字符串的第一个字符开始返回指定个数的字符。
+
+LEFTB 基于所指定的字节数返回文本字符串中的第一个或前几个字符。
+
+\begin{itemize}
+  \item Left函数把全角（如汉字）和半角字符（如数字与字母）都计作一个字符
+  \item LeftB函数把全角字符计作两个字节、半角字符计作一个字节
+\end{itemize}
+
+语法：
+
+\verb|LEFT(text, [num_chars])|
+
+\verb|LEFTB(text, [num_bytes])|
+
+
+\subsection{RIGHT、RIGHTB函数}
+
+RIGHT 根据所指定的字符数返回文本字符串中最后一个或多个字符。
+
+RIGHTB 根据所指定的字节数返回文本字符串中最后一个或多个字符。
+
+\subsection{MID、MIDB函数}
+
+MID 返回文本字符串中从指定位置开始的特定数目的字符，该数目由用户指定。
+
+MIDB 根据您指定的字节数，返回文本字符串中从指定位置开始的特定数目的字符。
+
+语法：
+
+\verb|MID(text, start_num, num_chars)|
+
+\verb|MIDB(text, start_num, num_bytes)|
+
+\subsection{LEN、LENB 函数}
+
+LEN 返回文本字符串中的字符个数。
+
+LENB 返回文本字符串中用于代表字符的字节数。
+
+语法：
+
+LEN(text)
+
+LENB(text)
+
+\subsection{TEXTJOIN 函数}
+
+TEXTJOIN 函数将多个区域和/或字符串的文本组合起来，并包括你在要组合的各文本值之间指定的分隔符。 如果分隔符是空的文本字符串，则此函数将有效连接这些区域。
+
+语法：
+\verb|TEXTJOIN(delimiter, ignore_empty, text1, [text2], …)|
+
+\begin{itemize}
+  \item delimiter：分隔符(必需)，文本字符串，或者为空，或用双引号引起来的一个或多个字符，或对有效文本字符串的引用。 如果提供一个数字，则将被视为文本。
+  \item \verb|ignore_empty| (必需)，如果为 TRUE，则忽略空白单元格。
+  \item \verb|text1|(必需)，要联接的文本项。 文本字符串或字符串数组，如单元格区域中。
+  \item \verb|[text2， ...]|(可选)，要联接的其他文本项。 文本项最多可以包含 252 个文本参数 text1。 每个参数可以是一个文本字符串或字符串数组，如单元格区域。
+\end{itemize}
+
+例如，\verb|=TEXTJOIN(" ",TRUE,"The","sun","will","come","up","tomorrow")| 将返回The sun will come up tomorrow
+
+\subsection{TEXTSPLIT 函数}
+
+使用列和行分隔符拆分文本字符串。
+
+TEXTSPLIT 函数的工作方式与文本转列向导相同，但采用公式形式。 它允许跨列拆分或按行向下拆分。 它是 TEXTJOIN 函数的反函数。 
+
+语法：
+
+\verb|=TEXTSPLIT(text,col_delimiter,[row_delimiter],[ignore_empty], |
+
+\verb|[match_mode], [pad_with])|
+
+TEXTSPLIT 函数语法具有下列参数：
+\begin{itemize}
+  \item text       要拆分的文本。 必需。
+  \item \verb|col_delimiter|       标记跨列溢出文本的点的文本。
+  \item \verb|row_delimiter|       标记向下溢出文本行的点的文本。 可选。
+  \item \verb|ignore_empty|       指定 TRUE 以忽略连续分隔符。 默认为 FALSE，将创建一个空单元格。 可选。
+  \item \verb|match_mode|    指定 1 以执行不区分大小写的匹配。 默认为 0，这会执行区分大小写的匹配。 可选。
+  \item \verb|pad_with|           用于填充结果的值。 默认值为 \verb|#N/A|。
+\end{itemize}

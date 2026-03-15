@@ -1,0 +1,162 @@
+\section{等温间歇釜式反应器的计算(单一反应)}
+
+
+\begin{frame}{等温间歇釜式反应器的计算}
+    \qquad 间歇反应器的特点是分批装料和卸料，因此其操作条件较为灵活，可适用于不同品种和不同规格的产品生产，特别适用于多品种而批量小的化学品生产。因此，在医药、试剂、助剂、添加剂等精细化工部门中得到广泛的应用，而其他过程工业中，那些生产规模小或者反应时间长的反应也常常采用间歇反应器。
+    \\\qquad 由于间歇反应器是分批操作，其操作时间系由两部分组成：
+    \begin{enumerate}
+      \item 反应时间，即装料完毕后算起至达到所要求的产品收率时所需时间；
+      \item 辅助时间，即装料、卸料及清洗等所需时间之和。
+    \end{enumerate}
+    设计间歇反应器的关键就在于确定每批所需时间，其中尤以反应时间的确定最为重要，而辅助时间主要根据经验来确定。
+\end{frame}
+
+
+\begin{frame}{反应时间的计算}      
+    设反应器中进行化学反应\ce{A + B -> R}，并以A为关键组分。若反应开始时关键组分的量为$n_\mathrm{A0}$，则
+    $$n_{\mathrm{A}}=n_{\mathrm{A} 0}(1-X_{\mathrm{A}})$$
+    $$-V_{\mathrm{r}} \mathscr{R}_{\mathrm{A}}-n_{\mathrm{A} 0} \frac{\mathrm{d} X_{\mathrm{A}}}{\mathrm{d} t}=0$$        
+    当$t=0$时，$X_\mathrm{A}=0$，积分上式即可求A的转化率到$X_\mathrm{Af}$时所需的反应时间
+    $$t=\int_{0}^{X_{\mathrm{Af}}} \frac{n_{\mathrm{A} 0} \mathrm{~d} X_{\mathrm{A}}}{V_{\mathrm{r}}(-\mathscr{R}_{\mathrm{A}})}$$
+    上式适用于任何间歇反应过程：多相还是均相，等温或非等温。
+\end{frame}
+
+
+\begin{frame}{反应时间的计算}      
+    对于等容过程，反应混合物体积$V_\mathrm{r}$可视为常数。若为均相反应，$n_{\mathrm{A0}}/V_\mathrm{r}=c_{\mathrm{A0}}$，
+    $$t=c_{\mathrm{A} 0} \int_{0}^{X_{\mathrm{Af}}} \frac{\mathrm{d} X_{\mathrm{A}}}{(-\mathscr{R}_{\mathrm{A}})}$$
+    对于单一反应，$(-\mathscr{R}_\mathrm{A}=r_\mathrm{A})$，所以只要反应的速率方程已知，代入上式便可计算关键组分A的转化率达到$X_\mathrm{Af}$时所需的时间。对于单一反应，间歇反应器反应时间的求定是直接积分反应速率方程的结果。反应时间的长短取决于反应组分的初始浓度（一级反应除外）和所要求达到的最终转化率。当然，这是指反应温度一定而言，反应温度不同，反应时间当然也不一样。
+\end{frame}
+
+
+\begin{frame}{反应时间的计算}      
+    \begin{table}        
+        \caption{简单级数反应特征}
+        \begin{tabular}{c l l l l}
+            \Xhline{1pt}
+            级数 & \makecell[c]{速率方程} & \makecell[c]{速率方程积分式}  & \makecell[c]{$t$和$c_\mathrm{A}$关系} & \makecell[c]{$t$和$X_\mathrm{A}$关系}\\
+            \hline
+            \rule{0pt}{16pt} 1 & $r=kc_\mathrm{A}$ & $\ln c_\mathrm{A}=-kt+\ln c_\mathrm{A0}$ & $t=\frac{1}{k}\ln\frac{c_\mathrm{A0}}{c_\mathrm{A}}$ & $t=\frac{1}{k}\ln \frac{1}{1-X_\mathrm{A}}$\\
+            \rule{0pt}{16pt} 2 & $r=kc_\mathrm{A}^2$ & $\frac{1}{c_\mathrm{A}}=kt + \frac{1}{c_\mathrm{A0}}$ & $t=\frac{1}{k}(\frac{1}{c_\mathrm{A}}-\frac{1}{c_\mathrm{A0}})$ & $t=\frac{1}{kc_\mathrm{A0}} \frac{X_\mathrm{A}}{1-X_\mathrm{A}}$\\
+            \rule{0pt}{16pt} 0 & $r=k$ & $c_\mathrm{A}=-kt+c_\mathrm{A0}$ & $t=\frac{1}{k}(c_\mathrm{A0}-c_\mathrm{A})$ & $t=\frac{1}{k}c_\mathrm{A0}X_\mathrm{A}$\\
+            \Xhline{1pt}
+        \end{tabular}
+\end{table}
+\begin{itemize}
+  \item 一级反应的反应时间$t$与初始浓度$c_\mathrm{A0}$无关
+  \item 二级反应的反应时间$t$与初始浓度$c_\mathrm{A0}$成反比
+  \item 零级反应的反应时间$t$与初始浓度$c_\mathrm{A0}$成正比
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        蔗糖在稀水溶液中水解生成葡葡糖和果糖。当水极大过量时，反应遵循一级反应动力学。反应温度为48℃时 ， 反应速率常数$k=0.0193$ \si{min^{-1}}。当蔗糖的浓度为\SI{0.1}{mol/L}和\SI{0.5}{mol/L}时，若蔗糖的浓度降到\SI{0.01}{mol/L}时，所需反应时间各为多少？
+    \end{example}
+    \pause
+    \[
+        \begin{aligned}
+            t_1&=\frac1{0.0193}\ln\frac{0.1}{0.01}=120\min \\
+            t_2&=\frac1{0.0193}\ln\frac{0.5}{0.01}=203\min 
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        设某反应的动力学方程为$r_\mathrm{A}=0.35c_\mathrm{A}^2$ \si{mol.L^{-1}.s^{-1}}， 当 A 的浓度分别为\SI{1}{mol/L}和\SI{5}{mol/L}时，若A 的残余浓度要求为\SI{0.01}{mol/L}，各需多长反应时间 ？
+    \end{example}
+    \pause
+    \[
+        \begin{aligned}
+            t_{1}&=\frac{1}{0.35}\times\left(\frac{1}{0.01}-\frac{1}{1}\right)=283\mathrm{s}\\
+            t_{2}&=\frac{1}{0.35}\times\left(\frac{5}{0.01}-\frac{1}{1}\right)=285\mathrm{s}
+        \end{aligned}
+    \]
+    计算表明，对于二级反应 ， 若要求残余浓度很低时 ， 尽管初始浓度相差甚大 ， 其所需反应时间相差甚小，表明反应的大部分时间花费在反应末期 。
+\end{frame}
+
+
+% \begin{frame}{反应时间的计算}      
+%     \qquad 由间歇反应器的设计方程可得一个极为重要的结论：反应物达到一定的转化率所需的反应时间，只取决于过程的反应速率，也就是说取决于动力学因素，而与反应器的大小无关。反应器的大小是由反应物料的处理量决定的。由此可见，上述计算反应时间公式，既适用于小型设备，又可用于大型设备。所以，由实验室数据设计生产规模的间歇反应器时，只要保证两者的反应条件相同，便可达到同样的反应效果。但应注意，要使两个规模不同的间歇反应器具有完全相同的反应条件并非易事，以等温间歇反应器为例，实验室用的小反应器要做到等温操作比较容易，而大型反应器就很难做到；又如实验室反应器通过搅拌可使反应物料混合均匀，浓度均一，而大型反应器要做到这一点就比较困难。因此，生产规模的间歇反应器其反应效果与实验室反应器相比，或多或少地总是会有些差异。
+% \end{frame}
+
+
+\begin{frame}{反应体积$V_\mathrm{r}$的计算}      
+    间歇反应器的反应体积$V_\mathrm{r}$取决于单位时间的反应物料处理量$Q_0$及每批生产所需的操作时间。操作时间由两部分组成：反应时间$t$和辅助时间$t_0$。
+    \begin{enumerate}
+      \item $Q_0$由生产任务计算得到；
+      \item $t$由化学动力学所确定；
+      \item $t_0$根据实际经验来决定。
+    \end{enumerate}
+    反应体积$V_\mathrm{r}$用下式计算：
+    \[
+        V_\mathrm{r}=Q_0(t+t_0)
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应器的体积$V$}
+    反应器的体积$V$要比反应体积$V_\mathrm{r}$大，以保证反应物料上面有一定空间，一般用下式计算：
+    \[
+        V=\frac{V_\mathrm{r}}{f}
+    \]
+    \begin{table}
+        \centering
+        \caption{设备装料系数$f$}
+        \begin{tabular}{cc}
+            \bottomrule
+            条件 & \qquad 装料系数$f$范围\qquad  \\ \hline
+            不带搅拌或搅拌缓慢的反应釜 & $0.8\sim 0.85$ \\ \hline
+            带搅拌的反应釜 & $0.7\sim 0.8$ \\ \hline
+            易起泡沫和在沸腾下操作的设备 & $0.4\sim 0.6$ \\ \toprule
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{example}
+        用间歇反应器进行乙酸和乙醇的酯化反应，每天生产乙酸乙酯12000kg，
+            $$\ce{CH3COOH + C2H5OH <=> CH3COOC2H5 + H2O}$$
+            $$(A)\qquad\qquad(B)\qquad\qquad\qquad(R)\qquad\qquad(S)$$
+        原料中反应组分的质量比为A:B:S=1:2:1.35，反应液的密度为1020kg/m$^3$，并假定在反应过程中不变。每批装料、卸料及清洗等辅助操作时间为1h。反应在100℃下等温操作，其反应速率方程如下
+        \vspace{-7pt}
+        $$r_{\mathrm{A}}=k_{1}(c_{\mathrm{A}} c_{\mathrm{B}}-c_{\mathrm{R}} c_{\mathrm{S}} / K)$$
+        100℃时，$k_1=\SI{4.76e{-4}}{L/(mol.min)}$，平衡常数$K$=2.92。试计算乙酸转化35％时所需的反应体积。根据反应物料的特性，若反应器填充系数取0.75，则反应器的实际体积是多少？
+    \end{example}
+\end{frame}
+
+
+\begin{frame}{最优反应时间}
+    间歇反应器，反应物浓度随反应时间增长而降低，反应产物的生成速率则随着反应物浓度的降低而降低。所以，随着时间的延长，产品产量增多，但按单位操作时间计算的产品产量不一定增加。
+    
+    对于反应\ce{A -> R}，若反应产物R的浓度为$c_\mathrm{R}$，则单位操作时间的产品产量为
+    $$F_{\mathrm{R}}=\frac{V_{\mathrm{r}} c_{\mathrm{R}}}{t+t_{0}}$$
+    对反应时间$t$求导
+    $$\frac{\mathrm{d} F_{\mathrm{R}}}{\mathrm{d} t}=\frac{V_{\mathrm{r}}\left[(t+t_{0}) \frac{\mathrm{d} c_{\mathrm{R}}}{\mathrm{d} t}-c_{\mathrm{R}}\right]}{\left(t+t_{0}\right)^{2}}$$
+    $$\text{令}\frac{\mathrm{d} F_{\mathrm{R}}}{\mathrm{d} t}=0 \qquad\text{得}\qquad \frac{\mathrm{d} c_{\mathrm{R}}}{\mathrm{d} t}=\frac{c_{\mathrm{R}}}{t+t_{0}}\qquad\text{或}\qquad \frac{\mathrm{d} X_{\mathrm{A}}}{\mathrm{d} t}=\frac{X_{\mathrm{A}}}{t+t_{0}}$$
+    即为单位时间产物产量最大必须满足的条件，由此可求出最优反应时间。
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{example}
+        在反应体积为12.38m$^3$的间歇釜式反应器进行乙酸乙酯生产，反应动力学和反应条件同上。试求单位操作时间乙酸乙酯最大产量是多少？此时乙酸的转化率是多少？
+    \end{example}
+\end{frame}
+
+\begin{frame}{最优反应时间}
+    \begin{itemize}
+        \item 以单位时间产品产量最大为目标函数 $$\frac{\mathrm{d} c_{\mathrm{R}}}{\mathrm{d} t}=\frac{c_{\mathrm{R}}}{t+t_{0}}$$
+        \item 以单位产品所消耗原料最少为目标函数\\\qquad 反应时间越长，原料单耗越少
+        \item 以生产费用最低为目标函数\\\qquad 总费用=反应操作费用+辅助操作费用+固定费用$A=a+a_0+a_\mathrm{f}$\\\qquad 单位质量产品的总费用为$$A_{\mathrm{T}}=\frac{a t+a_{0} t_{0}+a_{\mathrm{f}}}{V_{\mathrm{r}} c_{\mathrm{R}}}$$\qquad 为使$A_{\mathrm{T}}$最小，令$\frac{\mathrm{d} A_{\mathrm{T}}}{\mathrm{d} t}=0$，解之得最优反应时间。
+    \end{itemize}
+\end{frame}
+
+

@@ -1,0 +1,292 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme2024}
+
+\title{\ 《大学信息技术》}
+\subtitle{计算思维与算法}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+%-----------------------------------------------------------------
+\begin{document}
+
+\maketitle
+
+\begin{frame}
+    \frametitle{岛屿的周长}
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        图中每个小正方形的边长为1，蓝色是水，棕色是岛屿。
+
+        岛屿的周长是多少？
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{岛屿的周长}
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island4}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        给定一个 $m \times n$ 的二维网格地图，整个网格被水完全包围，但其中恰好有一个岛屿。
+
+        岛屿：一个或多个表示陆地的格子相连组成岛屿。（水平和垂直方向相连，对角线方向不相连）。岛屿中没有“湖”（“湖” 指水域在岛屿内部且不和岛屿周围的水相连）。
+
+        格子是边长为 1 的正方形。计算这个岛屿的周长。
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{问题抽象}
+        抽象（abstraction）是用于问题表示的重要思维工具。一般意义上的抽象，就是指忽略研究对象的具体的或无关的特性，而抽取其一般的或相关的特性。
+
+        计算机科学中的抽象包括数据抽象和控制抽象，简言之就是将现实世界中的各种数量关系、空间关系、逻辑关系和处理过程等表示成计算机世界中的数据结构（数值、字符串、列表、堆栈、树等）和控制结构。
+
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island}
+        \end{figure}
+    \end{minipage}\hfill \Huge{$\to$}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island2.}
+        \end{figure}
+    \end{minipage}\hfill \Huge{$\to$}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \huge{$$\begin{bmatrix}
+        0~ & 1~ & 0~ & 0 \\
+        1 & 1 & 1 & 0 \\
+        0 & 1 & 0 & 0 \\
+        1 & 1 & 0 & 0
+        \end{bmatrix}$$}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{问题求解}
+    \begin{minipage}{0.28\linewidth}
+        \huge{$$\begin{bmatrix}
+            0~ & 1~ & 0~ & 0 \\
+            1 & 1 & 1 & 0 \\
+            0 & 1 & 0 & 0 \\
+            1 & 1 & 0 & 0
+            \end{bmatrix}$$}
+    \end{minipage}\hfill
+    \begin{minipage}{0.68\linewidth}
+        \begin{enumerate}
+          \item 计算岛屿格子的数目$x$
+          \item 计算岛屿中相邻边的数目$y$
+            \begin{itemize}
+              \item 从每行第一个格子开始，到最后一个格子，一个一个开始进行如下判断：
+              \item 如果这个格子是岛屿格子，它右边也是岛屿格子，那么y增加1
+              \item 如果这个格子是岛屿格子，它下边也是岛屿格子，那么y增加1
+            \end{itemize}
+          \item 岛屿周长$z = 4x - 2y$
+        \end{enumerate}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{算法}
+    算法 (Algorithm) 是指解题方案的准确而完整的描述，是一系列解决问题的清晰指令，算法代表着用系统的方法描述解决问题的策略机制。也就是说，能够对一定规范的输入，在有限时间内获得所要求的输出。
+
+    算法表达了解决问题的核心步骤，反映的是程序的解题逻辑。利用计算机解决问题的关键就在于设计出合适的算法。当今计算机在各行各业中的成功 应用从根本上说都取决于高效算法的发现。
+    \begin{itemize}
+      \item  最成功的搜索引擎Google：网页相关性排名算法
+      \item 音频视频压缩算法节省存储空间
+      \item GPS导航仪利用高效的最短路径算法来规划最短路线
+      \item 最成功的短视频App抖音：推荐算法
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{算法的特征}
+    \framesubtitle{Characteristics of the algorithm}
+    \begin{itemize}
+      \item {\cbf{确定性}}
+        
+      算法的每个步骤必须有明确的含义，不会出现二义性。
+      
+      \item {\cbf{有穷性}}
+      
+      算法必须是由有限个步骤组成的过程，步骤的数量可能是几个，也可能是几百万个，但是必须有一个确定的结束条件。
+      \item {\cbf{可行性}}
+      
+      算法的每一步都必须是可行的。
+      
+      \item {\cbf{有零个或多个输入}}
+      
+      所谓零个输入是指算法本身定出了初始条件。
+      
+      \item {\cbf{有一个或多个输出}}
+      
+      算法总是要解决特定的问题，问题来源就是算法的输入，期望的结果就是算法的输出。没有输入的算法是没有意义的，没有输出的算法是没有用的。
+      
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{算法的表示方法}
+    一个问题可以设计不同的算法来求解，而同一个算法可以采用不同的形式来表述，常用的描述方法有以下几种：
+    \begin{itemize}
+      \item 自然语言
+      \item 传统流程图
+      \item 伪代码（类语言）
+      \item 高级程序语言
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{用自然语言描述}
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.68\linewidth}
+        \begin{enumerate}
+          \item 计算岛屿格子的数目$x$
+          \item 计算岛屿中相邻边的数目$y$
+            \begin{itemize}
+              \item 从每行第一个格子开始，到最后一个格子，一个一个开始进行如下判断：
+              \item 如果这个格子是岛屿格子，它右边也是岛屿格子，那么y增加1
+              \item 如果这个格子是岛屿格子，它下边也是岛屿格子，那么y增加1
+            \end{itemize}
+          \item 岛屿周长$z = 4x - 2y$
+        \end{enumerate}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{用流程图描述}
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.68\linewidth}
+        
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{用伪代码描述}
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.68\linewidth}
+        \begin{algorithm}[H]  
+            \caption{计算岛屿的周长}
+          \begin{algorithmic}[1]
+            \Begin
+            \State \textbf{input} $m,n$;
+            \If {$y=0$}
+            \State \textbf{print} “Error!”;
+            \Else
+            \State $z \gets x/y$
+            \State \textbf{return}($z$);
+            \End
+            \end{algorithmic}
+            \end{algorithm}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{用高级程序语言描述}
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.68\linewidth}
+        \begin{codeblock}{</> python代码}
+m, n = len(grid), len(grid[0])
+ans = 0
+for i in range(m):
+    for j in range(n):
+        if grid[i][j] == 1:
+            down = 2 if i < m - 1 and grid[i + 1][j] == 1 else 0
+            right = 2 if j < n - 1 and grid[i][j + 1] == 1 else 0
+            ans += 4 - down - right
+        \end{codeblock}
+    \end{minipage}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

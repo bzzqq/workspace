@@ -1,0 +1,586 @@
+\section{化学计量学}
+
+
+% \begin{frame}
+%     \frametitle{化学计量方程}
+%     化学反应方程式：描述反应物和产物的化学反应过程的定量关系式
+%     \[
+%         \ch{aA + bB -> cC + dD}
+%     \]
+
+%     化学计量方程：只表示反应物和产物在化学反应过程中量的变化关系。
+%     \[
+%         {\nu_\mathrm{A}\mathrm{A}}+{\nu_\mathrm{B}\mathrm{B}}\to{\nu_\mathrm{C}\mathrm{C}}+ {\nu_\mathrm{D}\mathrm{D}}
+%     \]
+% \end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应进行的程度}
+    \begin{question}
+      合成氨反应：
+      \begin{center}
+          \ch{N2 + 3 H2 -> 2 NH3}
+  
+      反应开始(mol)： \qquad 3  \quad   10 \qquad  \qquad 0 \qquad  \qquad \qquad  \qquad  \qquad  \qquad
+  
+      反应结束(mol)： \qquad  1  \quad ~  4  \qquad  \qquad 4 \qquad \qquad \qquad  \qquad  \qquad  \qquad  \qquad
+      \end{center}
+      
+      这个反应进行了多少？
+    \end{question}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应进度($\xi$)}
+    \[
+        {\nu_\mathrm{A}}{A}+{\nu_\mathrm{B}}{B}\to{\nu_\mathrm{R}}{R}
+    \]
+    \[
+        (n_{\mathrm{A}}-n_{\mathrm{A0}}):(n_{\mathrm{B}}-n_{\mathrm{B0}}):(n_{\mathrm{R}}-n_{\mathrm{R0}})=\nu_{\mathrm{A}}:\nu_{\mathrm{B}}:\nu_{\mathrm{R}}
+    \]
+    \[
+        \frac{n_{\mathrm{A}}-n_\mathrm{A0}}{\nu_{\mathrm{A}}}=\frac{n_{\mathrm{B}}-n_\mathrm{B0}}{\nu_{\mathrm{B}}}=\frac{n_{\mathrm{R}}-n_\mathrm{R0}}{\nu_{\mathrm{R}}}=\xi 
+    \]
+    任何反应组分的反应量与其化学计量系数的之比恒为定值。这里的$\xi$ 叫做反应进度，量纲为mol。可见，只用一个变量便可描述一个化学反应进行的程度。
+
+    推广到任何反应，表示为：
+    \[
+        \xi=\frac{n_\mathrm{i}-n_\mathrm{i0}}{\nu_\mathrm{i}}
+    \]
+    \begin{itemize}
+      \item $\xi$永远取正值
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{反应进度$\xi$的值与方程式的写法有关}
+    \begin{block}{反应进度$\xi$为多少？}
+        \begin{center}
+            \ch{N2 + 3 H2 -> 2 NH3}
+    
+        反应开始(mol)： \qquad 3  \quad   10 \qquad  \qquad 0 \qquad  \qquad \qquad  \qquad  \qquad  \qquad
+    
+        反应结束(mol)： \qquad  1  \quad ~  4  \qquad  \qquad 4 \qquad \qquad \qquad  \qquad  \qquad  \qquad  \qquad
+        \end{center}
+    \end{block}
+    \begin{block}{反应进度$\xi$为多少？}
+        \begin{center}
+            \ch{1/2 N2 + 3/2 H2 -> NH3}
+    
+        反应开始(mol)： \qquad 3  \qquad   10 \quad  \qquad 0 \qquad  \qquad \qquad  \qquad  \qquad  \qquad
+    
+        反应结束(mol)： \qquad  1  \qquad ~  4  \quad  \qquad 4 \qquad \qquad \qquad  \qquad  \qquad  \qquad  \qquad
+        \end{center}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转化率($X$)}
+    普遍使用转化率来表示一个化学反应进行的程度。
+
+    转化率是指某一反应物转化的百分率或分率，用$X$表示。
+    \[
+      X = \frac{\text{某一反应物的转化量}}{\text{该反应物的起始量}}
+    \]
+    \smallskip
+    \[
+        X = \frac{n_\mathrm{i0}-n_\mathrm{i}}{n_\mathrm{i0}}
+    \]
+    \begin{enumerate}
+      \item 转化率是针对反应物而言的
+      \item 根据不同反应物计算得到的转化率数值可能是不一样的
+      \item 工业反应过程的原料中，各反应组分之间往往不符合化学计量数的关系，此时通常选择不过量的反应物计算转化率，这样的组分称为关键组分。
+    \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        合成聚氯乙烯单体的合成反应如下：\ch{C2H2 + HCl -> CH2=CHCl}。由于乙炔价格高于氯化氢，通常使用的原料混合气中氯化氢是过量的，设其过量10\%。若反应器出口气体中氯乙烯含量摩尔分数为90\%，分别计算乙炔和氯化氢的转化率。
+    \end{example}
+    \pause
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.65\linewidth]{答案}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转化率起始状态的选择}
+    \begin{itemize}
+      \item 连续反应器：以反应器进口原料的状态作为起始状态；
+      \item 间歇反应器：以反应开始时的状态为起始状态；
+      \item 当数个反应器串联时，往往以进入第一个反应器的原料组成作为起始状态。
+    \end{itemize}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.8\linewidth]{串联}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{收率($Y$)}
+    \[
+        {\nu_\mathrm{A}}{A}+{\nu_\mathrm{B}}{B}\to{\nu_\mathrm{R}}{R}+{\nu_\mathrm{P}}{P}
+    \]
+
+    转化率系针对反应物而言，收率则是针对反应产物而言，其定义为
+    \[
+        Y_\mathrm{R}=\left|\frac{\nu_\mathrm{A}}{\nu_\mathrm{R}}\right|\frac{\text{反应产物的生成量}}{\text{关键组分的起始量}}
+    \]
+    \[
+        Y=\frac{\text{生成反应产物所消耗的关键组分量}}{\text{关键组分的起始量}}
+    \]
+    \begin{itemize}
+      \item 收率可表明目的产物的相对生成量
+      \item 对于单一反应，收率与按关键组分计算的转化率数值上相等，且无论按哪一个反应产物计算的收率数值上都相等。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{block}{例1.1}
+      合成聚氯乙烯单体的合成反应如下：\ch{C2H2 + HCl -> CH2=CHCl}
+
+      由于乙炔价格高于氯化氢，通常使用的原料混合气中氯化氢是过量的，设其过量10\%。若反应器出口气体中氯乙烯含量摩尔分数为90\%，计算聚氯乙烯单体的收率。
+    \end{block}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{复合反应的收率}
+    \begin{example}
+        在银催化剂上进行乙烯氧化反应：
+
+        \ch{C2H4 + 1/2 O2 -> CH2CH2O}
+
+        \ch{C2H4 + 3 O2 -> 2 CO2 + 2 H2O}
+        
+        进入的乙烯量为100mol，反应器出口环氧乙烷20mol，二氧化碳30mol。求乙烯的转化率，环氧乙烷的收率和\ch{CO2}的收率。
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{反应选择性($S$)}
+    一个反应变量只能描述一个反应的进行程度，若多个反应，则反应变量要相应增多。
+    \begin{center}
+      \ch{C2H4 + 1/2 O2 -> CH2CH2O}
+
+      \ch{C2H4 + 3 O2 -> 2 CO2 + 2 H2O}
+    \end{center}
+    如果只知道乙烯的转化率，它只说明两个反应的总结果，而不能说明有多少转化成环氧乙烷，又有多少转化成二氧化碳。所以需要再增加一个反应变量，才能对该反应系统作完整描述。
+    
+    评价复合反应时，除采用转化率和收率外，还可用反应\highlight{选择性}这一概念：
+    \[
+        S = \frac{\text{生成目的产物所消耗的关键组分量}}{\text{已转化的关键组分量}}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转化率、收率、选择性的关系}
+    \[
+      X = \frac{\text{某一反应物的转化量}}{\text{该反应物的起始量}}
+    \]
+    \[
+        Y=\frac{\text{生成反应产物所消耗的关键组分量}}{\text{关键组分的起始量}}
+    \]
+    \[
+        S = \frac{\text{生成目的产物所消耗的关键组分量}}{\text{已转化的关键组分量}}
+    \]
+    转化率、收率、选择性的关系：
+    \[
+        Y = SX
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+      乙烷脱氢生产乙烯时， 原料乙烷处理量为8000kg/h，产物中乙烷为4000kg/h， 获得产物乙烯为3200kg/h， 求乙烷转化率、 乙烯的选择性及收率。
+    \end{example}
+    \pause
+    \[
+        \begin{aligned}
+             X &= (8000-4000)/8000 \times 100\% = 50\%\\
+             S &= \frac{3200\times 30 \div 28}{4000} \times 100\% = 85.7\%\\
+             Y &= 50\% \times 85.7\% \times 100\% = 42.9\%
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+      在银催化剂上进行乙烯氧化反应以生产环氧乙烷，进入催化反应器的气体中包含C$_2$H$_4$ 15 mol, O$_2$ 7 mol。反应器出口气体中含C$_2$H$_4$ 13.1 mol，O$_2$ 4.8 mol。试计算乙烯的转化率、环氧乙烷收率和选择性。
+    \end{example}
+    \pause
+    共消耗乙烯1.9 mol，共消耗氧气2.2 mol。
+    \[
+        \begin{aligned}
+            X_\mathrm{A} &= (15-13.1)/15 = 0.1267 \\
+            0.5\times 1.9\times S &+ 3\times 1.9\times(1-S) = 2.2 \\
+            S &= 0.7368 \\
+            Y &= SX_\mathrm{A} = 0.0934
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{block}{例1.2}
+      在银催化剂上进行乙烯氧化反应以生产环氧乙烷，进入催化反应器的气体中各组分的摩尔分数分别为C$_2$H$_4$ 15\%, O$_2$ 7\%, CO$_2$ 10\%, Ar 12\%, 其余为N$_2$。反应器出口气体中含C$_2$H$_4$和O$_2$ 的摩尔分数分别为13.1\%，4.8\%。试计算乙烯的转化率、环氧乙烷收率和反应选择性。
+    \end{block}
+    \pause
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{答案2}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{循环反应系统的转化率}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=.8\linewidth]{循环}
+    \end{figure}
+    \highlight{单程转化率}：新鲜原料通过反应器一次所达到的转化率，以反应器进口物料为基准；
+    \[
+        \text{单程转化率} = \frac{\text{原料的转化量}}{\text{进入反应器的原料量}}
+    \]
+    \highlight{全程转化率}：以新鲜原料为基准计算的转化率，其值必定大于单程转化率。
+    \[
+        \text{全程转化率} = \frac{\text{原料的转化量}}{\text{新鲜原料量}}
+    \]
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+      用乙烷作原料裂解生产乙烯， 通入裂解炉的新鲜原料乙烷为5000 kg/h ， 裂解气分离后， 没有反应的乙烷2000kg/h又循环返回了裂解炉进行反应， 最终分析裂解气中含乙烷1500kg/h， 求乙烷的单程转化率和全程转化率。
+    \end{example}
+    \pause
+    单程转化率：
+    \[
+      \frac{5000-1500}{5000+2000} \times 100\% = 50\%
+    \]
+
+    全程转化率：
+    \[
+        \frac{5000-1500}{5000} \times 100\% = 70\%
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{循环反应系统的收率}
+    \highlight{单程收率}：原料通过反应器一次时反应产物的收率。
+    \[
+        \text{单程收率} = \frac{\text{生成目的产物消耗的原料量}}{\text{进入反应器的原料量}}
+    \]
+    \highlight{全程收率}：原料多次循环后达到的收率。
+    \[
+        \text{全程收率} = \frac{\text{生成目的产物消耗的原料量}}{\text{新鲜原料量}}
+    \]
+\end{frame}
+
+
+% \begin{frame}[t]
+%     \frametitle{}
+%     \begin{example}
+%         用乙烷作裂解原料生产乙烯 \ch{C2H6 -> C2H4 + H2}
+      
+%       在一定的生产条件下， 通入裂解炉的乙烷量为7000kg/h， 反应后， 尾气中含乙烷2450kg/h， 得到乙烯量为3332 kg/h， 求乙烯的单程收率和全程收率。
+%     \end{example}\pause
+%     生成目的产物消耗的原料量：
+%     \[
+%         3332\times 30 \div 28 = 3570 \mathrm{kg/h}
+%     \]
+%     单程收率：
+%     \[
+%         Y = \frac{3570}{7000} = 51\%
+%     \]
+%     全程收率：
+%     \[
+%         Y = \frac{3570}{7000-2450} = 78.5\%
+%     \]
+% \end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+      一家工厂通过将乙烷在裂解器中裂解生产乙烯，进入反应器每100 kg乙烷可生产42.4 kg乙烯，但出口处所得气体中会含有2 kg乙烷，其余未反应的乙烷通过循环流循环使用，乙烷的单程转化率为60\%。求乙烯的单程收率、全程收率、选择性和乙烷的总转化率。
+    \end{question}\pause
+    乙烷的消耗量：$100 \times 60\% = 60$ kg
+
+    乙烷的循环量：$100 - 60 - 2 = 38 $ kg
+
+    新鲜乙烷量：$100-38=62$ kg
+
+    单程收率：$y=\frac{42.4\div 28 \times 30}{100} = 45.43\%$
+
+    全程收率：$Y=\frac{42.4\div 28 \times 30}{62} = 73.27\%$
+
+    选择性：$S=\frac{42.4\div 28 \times 30}{60} = 75.71\%$
+
+    总转化率：$X = 60/62 = 96.77\%$
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        主反应： A + 2B → C (目标产物)
+
+副反应： A + B → D
+
+原料进料组成为：A = 20 mol, B = 50 mol。
+
+反应后，流出物中含有：A = 4 mol, B = 18 mol, C = 12 mol, D = 4 mol。
+        \tcblower
+        请计算：
+
+    1. 反应物A的转化率 ($X_\mathrm{A}$)。
+
+    2. 目标产物C的收率 ($Y_\mathrm{C}$)。
+
+    3. 目标产物C的选择性($S_\mathrm{C}$)。
+    \end{question}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        某化学反应为 2A → B + C。
+
+将10 mol的反应物A通入反应器，反应结束后，测得未反应的A为2 mol，生成的目标产物B为3.5 mol。
+        \tcblower
+        请计算：
+
+    1. 反应物A的转化率 ($X_\mathrm{A}$)。
+
+    2. 产物B的收率 ($Y_\mathrm{B}$)。
+
+    3. 产物B的选择性 ($S_\mathrm{B}$)。
+    \end{question}
+\end{frame}
+
+
+\section{化学反应速率}
+
+\begin{frame}
+    \frametitle{反应速率定义}
+    \highlight{反应速率}：单位时间、单位体积反应物系中某一反应组分的反应量。
+    \[
+        \nu_\mathrm{A} A+\nu_\mathrm{B} B \to \nu_\mathrm{R} R
+    \]
+    \[
+        r_\mathrm{A}=-\frac{1}{V}\frac{\mathrm{d}n_\mathrm{A}}{\mathrm{d}t},\quad r_\mathrm{B}=-\frac{1}{V}\frac{\mathrm{d}n_\mathrm{B}}{\mathrm{d}t},\quad r_\mathrm{R}=\frac{1}{V}\frac{\mathrm{d}n_\mathrm{R}}{\mathrm{d}t}
+    \]
+    反应物的量随反应时间增加而减少，$\mathrm{d}n_\mathrm{A}/\mathrm{d}t<0$，产物相反， $\mathrm{d}n_\mathrm{R}/\mathrm{d}t>0$。
+
+按反应物的量来计算反应速率时，需加上负号，使反应速率恒为正值。
+
+按不同组分计算的反应速率数值上是不相等的。 $r_\mathrm{A}\neq r_\mathrm{B}\neq r_\mathrm{R}$ ，除非$\nu_{\mathrm{A}}=\nu_{\mathrm{B}}=\nu_{\mathrm{R}}$
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{反应速率普遍定义式}
+    各组分转化量的比例符合化学计量关系：
+    \[
+        \mathrm{d}n_\mathrm{A}{:}\mathrm{~d}n_\mathrm{B}{:}\mathrm{~d}n_\mathrm{R}=\nu_\mathrm{A}{:}\nu_\mathrm{B}{:}\nu_\mathrm{R}
+    \]
+    因此，无论按哪一个反应组分计算的反应速率，其与相应的化学计量系数之比恒为定值:
+    \[
+        (-r_{\mathrm{A}}/\nu_{\mathrm{A}})=(-r_{\mathrm{B}}/\nu_{\mathrm{B}})=r_{\mathrm{R}}/\nu_{\mathrm{R}}
+    \]
+    于是，反应速率的定义式又可写成
+    \[
+        \color{maincolor}{\overline{r}=\frac1{\nu_\mathrm{i}V}\frac{\mathrm{d}n_\mathrm{i}}{\mathrm{d}t}}\quad\text{或}\quad\color{maincolor}{\overline{r}=\frac1V\frac{\mathrm{d}\xi}{\mathrm{d}t}}
+    \]
+    上式是反应速率的普遍定义式，不受选取反应组分的限制。
+    \[
+        r_\mathrm{i}=|\nu_\mathrm{i}|\bar{r}
+    \]
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某一化学反应计量式为\ch{A + 2 B -> 2 P}，若以反应物A表示的反应速率为$r_\mathrm{A} = $\SI{2}{mol.L.s^{-1}}，试写出反应物B和产物P表示的反应速率。
+    
+    \tcblower
+    \pause
+    \[
+        r_\mathrm{B} = \SI{4}{mol.L.s^{-1}}
+    \]
+    \[
+        r_\mathrm{P} = \SI{4}{mol.L.s^{-1}}
+    \]
+    \end{example}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某一化学反应计量式为\ch{A + 2 B -> 2 P}，若以反应物A表示的反应速率为$r_\mathrm{A} = 2c_\mathrm{A}^{0.5}c_\mathrm{B}$，试写出反应物B和产物P表示的反应速率式。
+    
+    \tcblower
+    \pause
+    \[
+        r_\mathrm{B} = 2r_\mathrm{A} = 4c_\mathrm{A}^{0.5}c_\mathrm{B}
+    \]
+    \[
+        r_\mathrm{P} = 2r_\mathrm{A} = 4c_\mathrm{A}^{0.5}c_\mathrm{B}
+    \]
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{恒容过程的反应速率}
+    对于恒容过程，反应体积$V$为常数，$c_\mathrm{A}=\frac{n_\mathrm{A}}{V}$，
+    \[
+        \begin{aligned}
+            r_\mathrm{A}&=-\frac1V\frac{\mathrm{d}n_\mathrm{A}}{\mathrm{d}t}\\
+            &=-\frac{1}{V}\frac{\mathrm{d}(c_\mathrm{A} V)}{\mathrm{d}t}\\
+            &=-\frac{V}{V}\frac{\mathrm{d}c_\mathrm{A}}{\mathrm{d}t}\\
+            &=-\frac{\mathrm{d}c_\mathrm{A}}{\mathrm{d}t}
+        \end{aligned}
+    \]
+    此时便变成了经典化学动力学常用的反应速率定义式：
+    \[
+        \color{maincolor}r_\mathrm{A}=-\frac{\mathrm{d}c_\mathrm{A}}{\mathrm{d}t}
+    \]
+    该式以浓度对时间的变化率来表示化学反应速率。
+\end{frame}
+
+
+% \begin{frame}
+%     \frametitle{流动反应器的反应速率}
+%     \begin{figure}[htpb]
+%         \centering
+%         \includegraphics[width=.6\linewidth]{flow_reactors}
+%     \end{figure}
+%     反应物连续地以摩尔流量$F_\mathrm{A0}$通入反应器
+
+%     定态反应器，反应器内任一点处物系参数不随时间变化。
+%     \[
+%         r_\mathrm{A}=-\frac{\mathrm{d}F_\mathrm{A}}{\mathrm{d}V_\mathrm{r}}
+%     \]
+% \end{frame}
+
+
+\begin{frame}
+    \frametitle{多相系统反应速率的表示}
+    对于多相反应，用相界面积$a$代替反应体积来定义反应速率\footnote{也用$r_\mathrm{S}$表示}：
+    \[
+        r_\mathrm{A}^{\prime}=-\frac1a\frac{\mathrm{d}n_\mathrm{A}}{\mathrm{d}t}\quad\quad\text{单位:mol}\cdot\mathrm{m}^{-2}\cdot\mathrm{s}^{-1}
+    \]
+    当反应有固相参与时，特别是采用固体催化剂的反应，往往基于固体的质W量来定义反应速率\footnote{也用$r_\mathrm{W}$表示}：
+    \[
+        r_\mathrm{A}^{\prime\prime}=-\frac1W\frac{\mathrm{d}n_\mathrm{A}}{\mathrm{d}t}\quad\quad\quad\text{单位:mol}\cdot\mathrm{kg}^{-1}\cdot\mathrm{s}^{-1}
+    \]
+    均相反应系统一般都是基于反应体积来表示其反应速率。
+
+    多相反应系统，特别是采用固体催化剂进行反应的系统，以催化剂的体积、催化剂内表面积、催化剂质量表示的反应速率形式都有。在实验室进行动力学研究时，第三种形式最多。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多相系统反应速率的换算}
+    
+
+    若固体催化剂的堆体积为$V_\mathrm{r}$ ，比表面积为$a_{\mathrm{V}}$ ，堆密度为$\rho_{\mathrm{b}}$，则： 
+    \[
+        r_{\mathrm{A}}=a_{\mathrm{V}}r_{\mathrm{A}}^{\prime}=\rho_{\mathrm{b}}r_{\mathrm{A}}^{\prime\prime}
+    \]
+    \begin{block}{证}
+        \begin{minipage}{0.48\linewidth}
+            \[
+                \begin{aligned}
+                    a_{\mathrm{V}}&= a/V_\mathrm{r}\\
+                    r_\mathrm{A}&=-\frac{\mathrm{d}F_\mathrm{A}}{\mathrm{d}V_\mathrm{r}}\\
+                    &=-\frac{\mathrm{d}F_\mathrm{A}}{\mathrm{d}(a/a_\mathrm{V})}\\
+                    &=a_\mathrm{V}r_{\mathrm{A}}^{\prime}
+                \end{aligned}
+            \]
+        \end{minipage}\hfill
+        \begin{minipage}{0.48\linewidth}
+            \[
+                \begin{aligned}
+                    \rho_{\mathrm{b}}&= W/V_\mathrm{r}\\
+                    r_\mathrm{A}&=-\frac{\mathrm{d}F_\mathrm{A}}{\mathrm{d}V_\mathrm{r}}\\
+                    &=-\frac{\mathrm{d}F_\mathrm{A}}{\mathrm{d}(W/\rho_{\mathrm{b}})}\\
+                    &=\rho_{\mathrm{b}}r_{\mathrm{A}}^{\prime\prime}
+                \end{aligned}
+            \]
+        \end{minipage}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{block}{习题2.3}
+        已知在 Fe-Mg 催化剂上水煤气变换反应的正反应动力学方程为
+\[
+    r=k_{\mathrm{w}}y_{CO}^{0.85}y_{{CO}_{2}}^{-0.4}\qquad\mathrm{kmol/(kg·h)}
+\]
+式中 ， $y_{CO}$和$y_{{CO}_{2}}$为一氧化碳及二氧化碳的瞬时摩尔分率 ， 0.1013 MPa 及 700 K 时反应速率常数 $k_{\mathrm{w}}=0.0535 \mathrm{kmol/(kg·h)}$。 若催化剂的比表面积为 30 m$^2$/g，堆密度为 1.13 g/cm$^3$ 。 试计算 ：
+
+(1)以反应体积为基准的速率常数$k_\mathrm{V}$ ；
+
+(2)以反应相界面积为基准的速率常数$k_s$ ；
+
+(3)以分压表示反应物系组成时的反应速率常数 $k_p$ ；
+
+(4)以摩尔浓度表示反应物系组成时的反应速率常数$k_c$。
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{速率常数$k$}
+    $k$的单位与反应速率的表示方式、速率方程的形式、反应物系组成的表示方式有关。
+
+    \begin{table}
+        \centering
+        \caption{不同反应速率形式下速率常数$k$的单位}
+        \begin{tabular}{cccc}
+            \bottomrule
+             & $r$(\si{mol.L^{-1}.s^{-1}}) & $r$(\si{mol.g^{-1}.s^{-1}}) \\ \hline
+            零级反应 & \si{mol.L^{-1}.s^{-1}} & \si{mol.g^{-1}.s^{-1}} \\
+            一级反应 & \si{s^{-1}} & \si{s^{-1}} \\ 
+            二级反应 & \si{L.mol^{-1}.s^{-1}} & \si{g.mol^{-1}.s^{-1}} \\ \toprule
+        \end{tabular}
+    \end{table}
+
+    对于气相反应 ， 常用分压$p_i$、 浓度$c_i$和摩尔分数$y_i$来表示反应物系的组成 ， 若相应的
+    反应速率常数分别为$k_\mathrm{p}$、$k_\mathrm{c}$和$k_\mathrm{y}$， 则它们之间存在下列关系：
+    \[
+        k_\mathrm{c}=(RT)^\alpha k_\mathrm{p}=(RT/p)^\alpha k_\mathrm{y}
+    \]
+    式中，$p$为总压，$\alpha$为总反应级数。
+\end{frame}

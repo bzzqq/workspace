@@ -1,0 +1,816 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme2024}
+\usetikzlibrary{tikzmark}
+
+% 取消pdf的压缩，加快编译速度，最终版取消这个命令即可
+\special{dvipdfmx:config z 0}
+
+\title{生物药剂学与药物动力学}
+\subtitle{3 药物的分布}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+\maketitle
+
+
+\begin{frame}
+    \frametitle{学习目标}
+    \begin{enumerate}
+      \item 掌握药物分布过程及其影响因素
+      \item 掌握表观分布容积的重要意义
+      \item 掌握药物与蛋白结合对药物体内分布和药效的意义
+      \item 了解药物向淋巴系统的转运过程
+      \item 了解药物在特殊屏障中的转运过程
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+\section{药物的分布及其影响因素}
+
+
+\subsection{概述}
+
+
+\begin{frame}
+	\frametitle{药物的分布}
+	\highlight{药物分布}是指药物从给药部位吸收进入血液循环后 ，从血液转运到体内各组织器官的过程。 
+    
+    \begin{itemize}
+      \item 分布通常很快完成，可迅速在血液和各组织之间达到动态平衡。
+      \item 大多数药物在体内的分布是不均匀的
+        \begin{itemize}
+          \item 药物与血浆蛋白的结合率
+          \item 药物的理化性质
+          \item 生理因素
+        \end{itemize}
+      \item 不同的药物具有不同的分布特性
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物的组织分布与药效}
+    药物进入血液后，一部分与血浆蛋白结合成为结合型药物，另一部分未结合的药物（游离型）才能向各组织器官分布。
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.6\linewidth]{组织分布}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物的体内分布与蓄积}
+    当长期连续用药时 ， 在机体的某些组织中的药物浓度逐渐升高 ， 这种现象称为\highlight{蓄积}。
+    
+    \begin{itemize}
+      \item 产生蓄积的原因主要是药物对该组织有特殊的亲和性
+      \item 药物从组织游离入血的速度比进入组织的速度慢
+      \item 该组织可能成为药物的储库 ， 也可能导致蓄积中毒
+      \item 若蓄积的部位为非药物的靶部位，就会产生药物的不良反应。
+      \item 临床上有时会有目的地利用药物的蓄积作用 ， 如通过多次给药使药物在体内逐渐达到有效浓度，再维持用药。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{表观分布容积}
+    表观分布容积 ($V$) ，是用来描述药物在体内分布的状况的重要参数。药物在体内分布是不均匀的，当药物在体内的分布达到动态平衡时，体内药量与血药浓度的比值就是表观分布容积。其单位为 L 或 L/kg。通常用下式表示 ：
+    \[
+        V=\frac{X}{C}
+    \]
+    式中$X$表示体内药量 ； $C$表示相应的血药浓度 。
+
+    \begin{itemize}
+      \item 表观分布容积不是药物在体内分布的真实体积，没有解剖学上的生理意义；
+      \item $V$值反映了药物在血浆和组织间动态分布特性，根据药物的分布容积可评估药物的分布特征；
+      \item 根据药物的分布容积可计算期望药物浓度所需的给药量。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{表观分布容积}
+    人 （以60kg体重为例） 的总体液为36L，由细胞内液 （ 25L ） 、 细胞外液 （ 8L ） 和血浆 （ 3L ） 三部分组成的 。
+
+    \begin{itemize}
+      \item $V\approx 3 \sim 5$ L 药物主要分布在血液
+      \item $V\approx 10 \sim 20$ L 药物主要分布在血液和细胞外液
+      \item $V\approx 40$ L 药物分布于全身体液
+      \item $V>100$ L 药物集中分布至某个组织器官或大范围组织内
+    \end{itemize}
+    \begin{blankblock}{}
+        甘露醇不能透过血管壁 ， 静注后分布于血浆 ， 其$V$为\SI{0.06}{L/kg}；安替比林均匀分布在全身体液 ， 其$V$等于\SI{36}{L} ； 氯喹在肝 、 肺和脾脏高浓度积聚 ， 其$V$达到\SI{115}{L/kg}。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{一些药物在正常人体内的稳态表观分布容积}
+    \begin{table}
+        \centering
+        \begin{tabular}{cc|cc|cc}
+            \bottomrule
+            药物 & $V$(\si{L/kg}) & 药物 & $V$(\si{L/kg}) & 药物 & $V$(\si{L/kg}) \\ \hline
+            甘露醇 & 0.06 & 利多卡因 & 0.72 & 丙米嗪 & 21  \\
+            头孢唑林 & 0.12 & 紫杉醇 & 2.4 & 氯喹 & 115 \\
+            丙戊酸 & 0.156 & 地西泮 & $1.4\sim 4.4$ & 米帕林 & 124 \\
+            氨苄西林 & 0.28 & 美沙酮 & 6.2  \\
+            奥美拉唑 & 0.34 & 地高辛 & $6\sim 10$  \\ \toprule
+        \end{tabular}
+    \end{table}
+    \begin{enumerate}
+      \item 水溶性药物或血浆蛋白结合率高的药物 ， 例如水杨酸 、 青霉素等有机酸类药物，主要存在于血液和细胞外液，不易进入细胞或脂肪组织，故它们的$V$值通常较小 ；
+      \item 脂溶性药物易被细胞或脂肪组织摄取，血浆浓度较低$V$值常超过体液总量 。
+    \end{enumerate}
+\end{frame}
+
+
+\subsection{影响药物体内分布的因素}
+
+
+\begin{frame}
+    \frametitle{影响药物体内分布的因素}
+    药物是否通过生物膜以及通过生物膜的量取决于药物和细胞膜的理化性质。 影响药物分布的生理学因素主要有：
+    \begin{enumerate}
+      \item 组织器官血流量
+      \item 血管的通透性
+      \item 药物与血浆蛋白的结合
+      \item 药物与组织细胞亲和力
+      \item 药物的理化性质
+      \item 药物相互作用
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{组织器官血流量的影响}
+    \begin{itemize}
+      \item 血流量大的组织和器官，药物的分布速度快，转运量多；
+      \item 血流量小的组织和器官，药物的分布速度慢，转运量小。
+    \end{itemize}
+
+    \begin{table}
+        \centering
+        \caption{人体各组织器官的血流量}
+        \vspace{-0.5em}
+        \begin{tabular}{cc|cc|cc}
+            \bottomrule
+           循环快的脏器 & 血流量\footnote{单位 mL/(100g组织·min)} & 循环中等程度的组织 & 血流量 & 循环慢的组织 & 血流量 \\ \hline
+           脑 & 55 & 肌肉 & 3 & 脂肪组织 & 1 \\ 
+           肝 & 165 & 皮肤 & 5 & 结缔组织 & 1 \\ 
+           肾 & 450 &  &  &  &  \\ 
+           心脏 & 70 &  &  &  &  \\ 
+           肾上腺 & 550 &  &  &  &  \\ 
+           甲状腺 & 400 &  &  &  &  \\ \toprule
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血管通透性的影响}
+    \begin{itemize}
+      \item 毛细血管通透性取决于管壁的类脂质屏障和管壁微孔 。
+      \item 不同脏器毛细血管的通透性存在显著差异。
+      \item 毛细血管通透性受到组织生理、病理状态的影响。
+    \end{itemize}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.6\linewidth]{透过性}
+        \caption{一些水溶性物质通过肌肉毛细血管的渗透性}
+    \end{figure}
+    \vspace{-4pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物与血浆蛋白结合率的影响}
+    药物进入血液后，通常与血浆中蛋白质结合 。药物与血浆蛋白结合后很难通过血管壁 ， 因此蛋白结合型药物通常没有药理活性 。 相反 ， 非结合的游离型药物易于透过细胞膜 ， 与药物的代谢 、 排泄以及药效密切相关 ，具有重要的临床意义 。
+
+    人血浆含有60多种蛋白质，其中主要有三种蛋白质与药物结合有关：
+    \begin{enumerate}
+    \item 白蛋白
+    \item $\alpha_1$-酸性糖蛋白(AGP)
+    \item 脂蛋白
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物与血浆蛋白结合率的影响}
+    \begin{itemize}
+      \item 血浆中药物蛋白结合的程度会影响药物的表观分布容积$V$。
+      \item 蛋白结合率较高的药物血浆药物浓度高，进入组织能力低 。 
+    \end{itemize}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.7\linewidth]{蛋白结合}
+        \caption{蛋白结合对药物表观分布容积的影响}
+    \end{figure}
+    \vspace{-7pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物与血浆蛋白结合率的影响}
+    药物与血浆蛋白结合是一种可逆过程 ， 有饱和现象 ， 血浆中游离型药物和结合型之间保持着动态平衡关系 。药物与血浆蛋白结合发挥着“药物储库”的作用。
+    \[
+        \text{游离药物} + \text{游离结合部位} \rightleftharpoons \text{药物蛋白复合物}
+    \]
+    \[
+        \ch{D_f + \text{游离结合部位} <=>[k1][k2] D_b}
+    \]
+    式中，$D_f$ 为游离药物浓度 ， $P$ 为血浆蛋白浓度 ， $D_b$ 为结合型药物浓度 ， $k_1$ 和 $k_2$ 分别表示结合常数和解离常数 。
+    
+    平衡时的亲和力常数$K$为：
+    \[
+        K=\frac{k_{1}}{k_{2}}=\frac{[D_b]}{[D_f](nP-[D_b])}
+    \]
+    式中，$P$为血浆蛋白浓度，$n$为每一分子蛋白质表面的结合位点数。
+
+    K值越大，药物与蛋白结合能力越强，对药物的贮存能力也越大。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物与血浆蛋白结合率的影响}
+    在实际工作中通常用血浆蛋白结合率$(\beta)$来反映药物与血浆蛋白的结合程度。
+    \[
+        \beta = \frac{[D_b]}{[D_b]+[D_f]} = \frac{[nP]}{[nP]+K^{-1}+[D_f]}
+    \]
+    式中，$K^{-1}=k_2/k_1$。
+
+    据式可知，在一定环境下，决定血浆蛋白结合的因素包括：
+    \begin{enumerate}
+      \item 游离药物浓度$D_f$
+      \item 血浆蛋白结合容量$nP$
+      \item 亲和力$K$
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血浆中游离型药物与血浆药物总浓度的关系}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.48\linewidth]{药物浓度}
+        \end{figure}
+    $K$值大的药物在低浓度时几乎都以结合型存在，当血浆中的药物浓度达到某值时，蛋白结合出现饱和现象，游离型急剧增加。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{蛋白结合与药效}
+    \begin{minipage}{0.65\linewidth}
+        \begin{itemize}
+          \item 蛋白结合率高的药物 ， 体内药物少时 ， 几乎全部存在于血浆中 。 当体内药物增加到某一程度时 ， 血浆中药物所占比例急剧下降 ， 大量药物转移至组织中 。
+          \item 因此 ， 当应用蛋白结合率高的药物时 ， 由于给药剂量增大使蛋白出现饱和或同时服用另一种蛋白结合能力更强的药物后 ， 由于竞争作用将其中一个蛋白结合能力较弱的药物置换下来 ， 这样都能够使游离型药物浓度增加 ， 从而引起药理作用显著增强或出现毒副作用 。
+        \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}{0.33\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{血浆体内药量关系}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{蛋白结合率的测定方法---平衡透析法}
+    \begin{minipage}{0.58\linewidth}
+        药物与血浆蛋白结合物属于生物大分子 ， 利用生物大分子不能透过生物膜的特性将结合性药物与游离型药物分离 。
+
+        平衡时，两室的游离药物浓度相等。测定两室药物浓度，就可以计算相应的血浆蛋白结合率。
+        \[
+            \text{血浆蛋白结合率}=(\frac{C_1-C_2}{C_1})\times100\%
+        \]
+        式中$C_1$和$C_2$分别为血浆室和缓冲液室中药物浓度。
+
+        缺点：实验过程很长，难以进行样品高通量分析。
+    \end{minipage}\hfill
+    \begin{minipage}{0.38\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{平衡透析法}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{example}
+        用平衡透析法测试加替沙星（gatifloxacin）在大鼠血浆中蛋白结合率。透析袋外药物起始浓度分别为\red{0.15、0.30、0.60 和 1.20 μg/ml}。每种浓度水平重复 4 次。透析袋外为 pH 7.40的 0.02 mol/L 磷酸缓冲液，内含 \red{0.15 mol/L 氯化钠}，袋内为 0.5 mL 大鼠肝素化血浆。置 4℃ 冰箱中放置 72 小时后，测定袋内外药物浓度。另取4 份，袋外起始浓度为0.60 μg/mL，袋内用 0.5 mL 缓冲液代替血浆，作为\red{空白对照}，以考察药物与半透膜有无结合。  
+
+        空白对照结果显示放置 72 小时后袋外浓度为0.59±0.03μg/mL，袋内浓度为0.61± 0.06μg/mL。袋内外浓度相近，提示药物与透析袋膜结合可忽略不计，透析达到平衡。可以用平衡透析法测定加替沙星的血浆蛋白结合率。 
+    \end{example}
+\end{frame}
+% 注意事项
+% 1 ） 药物与膜发生结合设立对照组证明 。
+% 2 ） 用平衡透析法可能存在 Donnan 效应 ， 采用高浓度的缓冲液或加中性盐溶液 ， 降低这种效应 。
+% 3 ） 当药物在水中不稳定 ， 或易被血浆中酶代谢时 ， 不易用此法 。
+% 4 ） 应防止蛋白质的破坏 。
+% 5 ） 三种以上浓度 ， 确定是否存在非线性结合
+
+
+\begin{frame}
+    \frametitle{蛋白结合率的测定方法---超滤法}
+    将含有药物的血浆蛋白液加入到由滤膜分隔的装置中。根据装置要求，离心或加压促使溶液通过滤膜，测定虑液中药物浓度即为游离药物浓度。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.6\linewidth]{超滤法}
+    \end{figure}
+
+    特点：设备简单，操作方便，能实现游离药物的快速分离。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物与组织亲和力的影响}
+    在体内与药物结合的物质 ， 除血浆蛋白外 ， 其他组织细胞内存在的蛋白 、 脂肪 、 DNA 、 酶以及黏多糖类等高分子物质 ， 亦能与药物发生非特异性结合 。 这种结合与药物和血浆蛋白结合的原理相同 。
+
+    \begin{itemize}
+      \item 在大多数情况下 ， 药物的组织结合起着药物的贮存作用。
+      \item 如过贮存部位也是药理作用的部位 ， 就可能延长作用时间 。
+      \item 但许多药物在体内大量分布和蓄积的组织 ， 往往不是药物发挥疗效的部位 。 
+      \item 一些药物与组织成分形成不可逆结合，向组织外转运的速度很慢 ， 在组织中的时间可以维持很长 ， 甚至长期蓄积，往往会导致不良反应。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物理化性质的影响}
+\begin{enumerate}
+  \item 药物的化学结构、立体构象
+  
+  化学结构会导致脂溶性、空间立体构型及亲和力的变化。主动转运中，转运体和受体具有特异性识别药物分子的能力，因此转运效率受化学结构、立体构象的影响 。
+  \item 酸碱性
+  
+  弱酸 、 弱碱性药物的跨膜转运能力受到细胞外液 pH 的影响。弱酸性药物在血浆pH下大部分解离，因而不易进入组织。
+  \item 分子量
+  
+  药物跨膜转运时 ， 分子量越小越易转运 ， 透过速度也快。
+  
+  \item 表面性质
+  
+  采用现代制剂技术制备的微粒给药系统 ， 由于改变了药物的表面性质也会明显地影响药物的体内分布 。 
+\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物相互作用的影响}
+    许多理化性质相似的药物，可能竞争相同的蛋白结合电位。
+    \begin{enumerate}
+      \item 竞争血浆蛋白
+      
+      \begin{itemize}
+        \item 药物与血浆蛋白的结合程度分高结合率（80\%以上）、中等结合率（50\%左右）及低结合率（20\%以下）。
+        \item 一般来讲，药物相互作用对蛋白结合率高的药物影响明显。
+      \end{itemize}
+      \item 竞争组织蛋白
+    \end{enumerate}
+\end{frame}
+
+\section{药物在淋巴系统的转运}
+
+\begin{frame}
+    \frametitle{药物在淋巴系统的转运}
+    体循环包括血液循环和淋巴循环。由于血流速度比淋巴液流速快$200\sim 500$倍，故药物在体内的分布主要由血液系统来完成，但淋巴系统中药物的转运也具有重大意义。
+    \begin{enumerate}
+      \item 有些药物必须依赖淋巴系统的输送
+      \item 有些疾病(免疫系统疾病、炎症和癌转移)需要将药物送至淋巴系统
+      \item 淋巴循环可使药物不通过肝脏从而避免首过效应
+    \end{enumerate}
+
+    消化道给药 、 组织间隙给药 、 黏膜给药 、 血管给药 、 腹腔给药都可转运药物进入淋巴系统 。
+    % \begin{itemize}
+    %   \item 进入血液的药物通过末梢组织中的淋巴液转运 ；
+    %   \item 进入组织间隙的药物从组织间液向该部位淋巴管转运 ； 
+    %   \item 口服或直肠给药时 ， 药物经过消化道的淋巴管进行吸收 。
+    % \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{淋巴系统和淋巴循环}
+    \begin{minipage}{0.45\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{血液循环}
+            \caption{血液循环和淋巴循环}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        淋巴是循环系统的重要辅助部分，可以把它看作血管系统的补充。
+
+        淋巴由广布全身的淋巴管网、淋巴器官（淋巴结、脾、胸腺等）、淋巴液和淋巴组织组成。
+
+        淋巴循环由毛细淋巴管单向流动入小淋巴管 ， 继而汇合成大淋巴管。全身淋巴管汇成两条总淋巴管 ， 左侧的胸导管进入左侧锁骨下静脉 ； 右侧的右淋巴导管进入右侧锁骨下静脉 。
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物从血液向淋巴液的转运}
+    \begin{enumerate}
+      \item 血液中的药物要进入淋巴系统必须通过毛细血管壁和毛细淋巴管壁两个屏障。由于毛细血管壁的微孔径明显小于淋巴管，故毛细血管壁的通透性是转运的限速因素。
+      \item 各组织中血管与淋巴管的分布密度、构造会造成向淋巴系统转运速度的差异。
+        \begin{itemize}
+            \item 肝 > 肠 > 颈部 > 皮肤 > 肌肉
+        \end{itemize}
+      \item 药物从血液向淋巴的转运几乎都是被动扩散过程，因此淋巴液中的药物浓度不会高于血药浓度。
+      \item 药物血浆蛋白结合率也会影响转运过程，毛细血管的血压、组织液的静压、血浆和组织液的胶体渗透压也有一定的影响。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物从组织液向淋巴液的转运}
+    当进行组织间隙给药如肌内、皮下注射或器官内、肿瘤内注射时，药物具有毛细血管和淋巴毛细管两种转运途径。这时药物的性质特别是分子量的大小以及管壁的通透性决定药物的转运途径。
+    \begin{itemize}
+      \item 分子量小于5000 Da的药物分子，两种途径都可进入，但由于血流量远比淋巴液流量大得多，故表观上几乎全由血液转运。
+      \item 分子量大于5000 Da的大分子药物难以进入血管，而经淋巴管转运的选择性倾向很强 ，随分子量增加，向淋巴系统的趋向性也在增加， 最后进入血液循环 。
+    \end{itemize}
+
+    有时由于治疗的需要，期望药物在淋巴液中有足够的浓度时，可以通过改造药物的分子大小达到这一目的。例如将药物分子修饰成各种高分子复合物，或者做成油包水(W/O)型乳剂、脂质体、微球等各种载药系统。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肌注 、 皮下注射的吸收途径与分子量}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.9\linewidth]{分子量与吸收途径}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物从消化管向淋巴液的转运}
+    口服或直肠给药时，药物通过消化道上皮细胞吸收后，同样存在毛细血管和淋巴管两条途径。药物的淋巴管转运原则上与从组织间隙给药的情况基本相同。
+
+    \begin{itemize}
+      \item 一般98\%以上的药物直接进入血液循环
+      \item 只有很少一部分药物（2\%以下）进入淋巴管转运
+      \item 大分子脂溶性药物、微粒以淋巴管转运为主
+    \end{itemize}
+\end{frame}
+
+
+\section{药物在特殊屏障中转运}
+
+
+\subsection{药物通过血脑屏障}
+
+
+\begin{frame}
+    \frametitle{血脑屏障现象的发现}
+    \begin{enumerate}
+      \item 1985年，Paul Ehrlich尝试用一种叫做苯胺的染色剂给器官染色，方便观察组织结构。不过，在进行后续研究的时候，Paul发现：通过血管注射染料的话，身体中的大多数器官都会被染色，唯独脑细胞会维持原样。无论怎么重复，结果都是如此。Paul认为，这是因为脑细胞没法吸收足够多的染料。
+      \item 多年之后，Paul的学生Edwin Goldman突发奇想：既然血管注射无法让脑部染色，那如果直接把染料注射到大脑里呢？Edwin把染料直接注射在了脊髓液里。尽管脑细胞被成功染色，但是身体的其他组织与器官还保持着原样。就像有一道看不见的屏障，挡在了大脑和躯体之间。
+      \item 科学家通过后续的实验发现，血脑屏障的功能，远比阻挡染料要强大的多。除了氧气、二氧化碳、葡萄糖之类的必需品，绝大多数物质都无法穿透这层屏障。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血脑屏障}
+    大脑由数十亿个神经细胞组成，这些脆弱的细胞需要在一个受保护的环境中才能正常工作。这个微妙的环境被400英里长的特殊血管系统保护着，这些血管能限制与大脑接触的物质，这就是血脑屏障。
+
+    大脑属于人体的中枢神经系统 ， 可分为血液 、 脑脊液以及脑组织三部分 。血脑屏障（blood brain barrier；BBB）指血-脑、血-脑脊液和脑脊液-脑三种屏障的总称。
+
+    血脑屏障对于保护脑组织免受毒素和病原体的侵害至关重要。但是对于脑疾病的治疗而言，血脑屏障反而变成了累赘：脑部肿瘤、帕金森、阿兹海默、精神分裂……很多机理上对上述疾病行之有效的药物，都被血脑屏障无情的拒之门外。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血脑屏障的结构和位置}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.6\linewidth]{血脑屏障的结构和位置}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血脑屏障的结构}
+    血脑屏障不仅是一个简单的机械屏障， 而且还是一个主动屏障。 
+    \begin{enumerate}
+      \item 由生理结构构成的被动物理屏障
+        \begin{itemize}
+          \item 由单层脑毛细血管内皮细胞形成连续性无膜孔的毛细血管壁
+          \item 细胞之间存在紧密连接 ， 几乎没有细胞间隙
+          \item 毛细血管基膜 （ 脑侧 ） 被星型胶质细胞包围 ， 形成了较厚的脂质屏障
+        \end{itemize}
+      \item 由外排转运体形成的主动屏障
+        \begin{itemize}
+            \item 外排药泵蛋白如 P-gp 、 MRP 、 BCRP 等可识别小分子脂溶性药物 ， 主动将其排出脑外
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物由血液向中枢神经系统转运}
+    通常只有极少数的小分子药物和必需的营养物质可以通过被动扩散 、 主动转运的方式透过血脑屏障进入脑内 。 少数脂溶性较高 、 分子量很小的强效镇痛剂 、 吩噻嗪类 、 三环抗抑郁剂 、 抗胆碱和抗组胺类药物以及高脂溶性的麻醉药硫喷妥钠等 ， 可以进入脑内。
+
+        
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{药物由血液向中枢神经系统转运}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.95\linewidth]{分子型}
+        \caption{几种分子型药物向脑脊液转运的速度与理化性质之间的关系}
+    \end{figure}
+    \vspace{-8pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物由血液向中枢神经系统转运}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.95\linewidth]{离子型}
+        \caption{几种离子型药物向脑脊液转运的速度与理化性质之间的关系}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物由血液向中枢神经系统转运}
+    \begin{enumerate}
+      \item 药物的非解离型易于透过细胞膜进入脑内，而离子型向中枢神经系统转运极其困难
+        \begin{itemize}
+          \item pH 7.4 的血浆中，弱酸性药物主要以解离型存在
+          \item 而弱碱性药物主要以非解离型存在，容易向脑脊液转运
+        \end{itemize}
+      \item 药物透入脑脊液的速度与其在 pH 7.4 时非解离型的油/水分配系数几乎成正比
+        \begin{itemize}
+            \item 分配系数高的容易透过血脑屏障
+            \item 分配系数低的透过性极差
+        \end{itemize}
+      \item 药物与血浆蛋白结合程度也能在一定程度上影响血液-脑脊液间的药物转运
+        \begin{itemize}
+            \item 与血浆蛋白质结合后就不容易透过血脑屏障
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{参与跨血脑屏障转运的三种典型转运体}
+    \begin{minipage}{0.4\linewidth}
+        \begin{enumerate}
+            \item 将药物或营养物质从血液向脑内转运
+            \begin{itemize}
+              \item 葡萄糖转运体家族(GLUTs)
+              \item 中性、酸性氨基酸转运体家族
+              \item 核苷转运体
+            \end{itemize}
+            \item 将脑内的外源性化合物从脑内向血液转运
+            \begin{itemize}
+              \item P-糖蛋白 、 多药耐药蛋白等
+            \end{itemize}            
+          \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.58\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{转运机制}
+        \end{figure}
+    \end{minipage}
+    
+    \begin{enumerate}
+      \item[3.] 从脑间质液向血液转运代谢产物 、 神经毒性物质的脑-血液外排载体蛋白系统
+      \begin{itemize}
+        \item 有机阳离子转运体家族(OCTs)
+        \item 有机阴离子转运体家族(OATs)
+      \end{itemize}
+    \end{enumerate}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物从血液进入脑内的几种可能的方式}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.8\linewidth]{脑转运机制}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{提高药物脑内分布的方法}
+    \begin{enumerate}
+      \item 对药物结构进行改造
+      \begin{itemize}
+        \item 引入亲脂性基团 ， 制成前药 ， 增加化合物的脂溶性
+      \end{itemize}
+      \item 药物直接给药
+      \begin{itemize}
+        \item 通过开颅手术将药物直接脑室内或大脑注射进入脑内
+      \end{itemize}
+      \item 暂时破坏血脑屏障
+      \begin{itemize}
+        \item 高渗甘露醇溶液 、 缓激肽类似物给药后 ， 使血脑屏障暂时打开 ， 增加药物入脑
+      \end{itemize}
+      \item 利用血脑屏障跨细胞途径
+      \begin{itemize}
+        \item 利用血脑屏障上的载体参与的转运机制
+      \end{itemize}
+      \item 通过鼻腔途径给药
+      \begin{itemize}
+        \item 鼻腔与脑组织之间存在的直接解剖学通道 ， 药物可以通过鼻腔嗅黏膜吸收绕过血脑屏障直接转运入嗅球或脑脊液
+      \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{传统医学对跨血脑屏障的启示}
+    \begin{minipage}{0.53\linewidth}
+            中医很早就发现了以冰片、麝香、苏合香和石菖蒲等为代表的一系列“开窍”类药物可入脑。明代医家李时珍《本草纲目》记载冰片具“通诸窍，散郁火”之功。现代药理分析确认，冰片的主要药理作用与中医理论中认定的开窍醒神功效相契合。冰片作为一种小分子脂溶性单萜类物质，是一种可跨越血脑屏障的物质。冰片入脑后可疏松脑微血管内皮细胞间的紧密连接，提高血脑屏障的通透性，促进药物透过血脑屏障，发挥其它药物入脑的“引药”功能。
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.97\linewidth]{冰片}
+        \end{figure}
+        \vspace{-2em}
+        \begin{figure}[htpb]
+            \centering
+            \setcounter{subfigure}{0}
+            \subfloat{\includegraphics[height=2.5cm]{冰片图片}}\quad
+            \subfloat{\includegraphics[height=2.5cm]{冰片结构}}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{阿尔兹海默病为什么那么难治？}
+    阿尔茨海默病及相关痴呆（Alzheimer's disease and related dementia，ADRD）是全球关注的热点，已成为影响人类健康的重大公共卫生事件。
+    \begin{blankblock}{}
+        9月21日是“世界阿尔茨海默病日”，也称为“世界老年性痴呆病宣传日”。在这一天，全世界60多个国家和地区都将组织一系列活动。中国有老年痴呆患者500万人之多，占世界总病例数的四分之一，而且每年平均有30万新发病例。
+    \end{blankblock}
+    \begin{itemize}
+      \item 致病机理至今尚不明确
+      \item 这种病是一种慢性病，任何临床试验都需要坚持好多年才能看到结果
+      \item 这种病目前没有合适的动物模型，所有临床试验最终都得在人类志愿者身上做，研究成本太高
+    \end{itemize}
+    % 另一个类似的案例就是艾滋疫苗。这种疫苗的市场需求肯定是旺盛的，艾滋病的发病机理也早已明确，HIV病毒的特征更是很早就研究得一清二楚了。事实上，针对某种病毒的疫苗市面上已经有很多了，疫苗研发领域的科研人员可谓驾轻就熟，但艾滋疫苗研究了这么多年依然难产，原因就在于艾滋病属于不治之症，科学家不敢直接拿健康志愿者做实验，一旦失败谁也负不起责任，大家只能想尽各种办法绕过这一限制，这就极大地增加了研发难度，导致研发费用暴涨。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中国阿尔茨海默病报告\link{https://www.qk.sjtu.edu.cn/jdcp/CN/10.16150/j.1671-2870.2024.03.001}}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat{\includegraphics[height=7cm]{ADRD1}}\quad
+        \subfloat{\includegraphics[height=7cm]{ADRD2}}
+    \end{figure}
+    \vspace{-5pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{正确认识阿尔茨海默病\link{https://tv.cctv.com/2023/09/20/VIDET178PjPVSiXoqK6ozrAe230920.shtml?spm=C53156045404.PKXC0xLPAnP9.EWco3xcg325S.5}}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.82\linewidth]{正确认识阿尔茨海默病}
+    \end{figure}
+\end{frame}
+
+
+\subsection{药物胎盘转运}
+
+
+\begin{frame}
+    \frametitle{胎儿的血液循环与胎盘构造}
+    胎盘位于母体血液循环与胎儿血液循环之间 ， 是一道天然屏障 。 它对母体与胎儿间的体内物质和药物交换 ， 起着十分重要的作用 。胎盘为母体用以养育胎儿的圆盘状器官 ， 也是胎儿的营养 、 呼吸及排泄器官 。
+
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.4\linewidth]{胎盘}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{胎盘的药物转运}
+    胎盘是母体血液循环和胎儿之间的一道天然屏障 ， 进入母体循环系统的药物必须穿过胎盘
+    和胎膜 ， 才能到达胎儿 。 胎盘的物质交换过程类似于血脑屏障 。 
+    \begin{itemize}
+      \item 大部分药物以被动转运通过胎盘屏障，少数药物靠主动转运和胞饮。
+      \item 非解离型 、 游离型药物脂溶性越大 ， 越易透过 。
+      \item 分子量 600 Da 以下的药物 ， 容易通过被动扩散转运透过胎盘 。 分子量 1000 Da 以上的水溶性药物 ， 难以透过 。
+      \item 转运体分别存在于合胞体滋养层的母体侧刷状边缘膜和胎儿侧基底膜上 ， 负责糖类 、 K$^+$、Na$^+$、氨基酸和嘧啶等营养 、 生理必需物质从母体侧转运进入胎儿内 。 
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{胎儿体内的药物分布}
+    药物进入脐静脉后， 由胎儿循环转运至胎儿体内各部分 。 胎儿与母体的药物分布是不同的 ，胎儿体内各部分的药物分布同样也有差异 。 这与药物的蛋白结合率 、 胎盘膜的透过性以及胎儿体内各组织屏障的成熟程度等均有关系 。 
+    \begin{blankblock}{}
+        将苯妥英钠连续注入母体达稳态后 ， 发现胎儿血中浓度仅为母体的一半左右 ， 这与胎儿血浆的总蛋白含量较母血低有关 。 苯妥英钠注射 1 小时后 ， 测得胎儿的脑 / 肝浓度比为 0.6 ， 而母体的比值仅为 0.4 ， 可见药物较易进入胎儿脑内 。 实        验证明 ， 许多药物易于透过胎儿以及幼小动物的血脑屏障 ， 而较难通过成年动物的血脑屏障 。        这是因为胎儿的脑组织 ， 不论在形态学或功能等方面 ， 和其他组织比均尚未成熟 。 血脑屏障也同样尚未成熟 ， 因此药物易于透入。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{惨痛的历史事件---“反应停”}
+    “反应停”祸及全世界40多个国家，导致8000余例新生儿海豹样畸形，给无数家庭带来永无止境、不可逆转的伤痛，成为药物治疗史上的最悲惨事件。
+
+    \begin{figure}[htpb]
+        \centering
+        \subfloat{\includegraphics[height=5.5cm]{畸形2}}\quad
+        \subfloat{\includegraphics[height=5.5cm]{畸形}}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{“反应停”事件时间线}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.85\linewidth}}
+        %5cm这个参数是指表的总的宽度，如果想做得大一点就把5cm调整放大一点。
+        %这个是表格的行距
+        1953 & 瑞士诺华制药的前身 Ciba 药厂为了开发新型抗菌药合成了沙利度胺，但结果显示其并无抗菌作用，却有镇定作用，Ciba并未再做进一步研发。\\
+        随后 & 德国的格兰泰公司（Grunenthal）接过此药，并开始着力研究沙利度胺的镇静催眠作用，并发现其能有效的抑制孕妇晨吐。\\
+        1957 & 格兰泰集团打着“无毒副作用”的旗号将“反应停”推向市场，“反应停”风靡一时，不计其数的孕妇使用该药物缓解妊娠反应。\\
+        1960s & 欧洲的医生们开始发现，本地区新生儿的畸形比率异常升高 \\
+        1961 & 澳大利亚产科医生威廉·麦克布里德在《柳叶刀》杂志上发表文章，指出“反应停”可致婴儿畸形，造成婴儿四肢短小，形如海豹。 \\
+        1961 & 全世界市场召回“反应停”及禁止上市，当时约有15000名婴儿已经受害。\\
+        \end{tabular}
+        \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{历史中的英雄}
+    “反应停”曾一度风靡全球，但美国却幸免于难，这位让美国免于这场悲剧的英雄就是前FDA药审员---弗朗西丝·凯思琳·奥尔德姆·凯尔西。
+    \vspace{-7 pt}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.85\linewidth}}
+        1960 & 弗朗西丝来到FDA任职 \\
+        一月后 & 弗朗西丝拿到了沙利度胺的申请书，她看到该药是用于治疗孕妇晨吐和恶心等妊娠反应，想到药物存在通过胎盘屏障的可能，而这份材料中没有做大规模的双盲临床试验，仅仅用动物试验的结果就确证了安全性，对孕期妇女使用后的毒副作用只字未提，因此她驳回了申请，要求提供详细的数据报告。\\
+        之后 & 梅里尔公司先后六次提交申请，并通过各方渠道给弗朗西丝施加压力。\\
+         & 弗朗西丝依然坚持原则，未使其通过上市。 \\
+         1962 & 肯尼迪总统于授予弗朗西丝总统勋章。 \\
+        \end{tabular}
+        \end{table}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{沙利度胺绝处逢生}
+    \newcommand{\foo}{\color{maincolor}\makebox[0pt]{\textbullet}\hskip-0.5pt\vrule width 1pt\hspace{\labelsep}}
+    \begin{table}
+        \centering
+        \renewcommand\arraystretch{1.4}\arrayrulecolor{maincolor}
+        \begin{tabular}{@{\,}r <{\hskip 2pt} !{\foo} >{\raggedright\arraybackslash}p{.85\linewidth}}
+        1963 & “反应停”永远退出了历史舞台，但科学界对沙利度胺的研究却从未停止。\\
+        1965 & 以色列医生意外发现沙利度胺可以有效减轻麻风结节性红斑的皮肤症状。\\
+        1991 & 美国洛克菲勒大学的科学家研究发现，发生过度免疫反应的麻风病患者的血液中tnf-$\alpha$（一种免疫调节因子）的含量很高，而沙利度胺能够降低机体合成tnf-$\alpha$。\\
+        1995 & 美国制药公司研究发现，沙利度胺具有抑制血管生成的作用，有望用于肿瘤治疗领域。\\
+        1998 & 沙利度胺被FDA批准用于治疗麻风结节性红斑 \\
+        2006 & 沙利度胺被批准用于治疗多发性骨髓瘤 \\
+        \end{tabular}
+        \end{table}
+\end{frame}
+% （有意思的事，美国作为当年唯一一个将沙利度胺拒之门外国家，时隔37年后，又成为第一个将沙利度胺重新推向市场的国家。不得不说国家药监部门如何在保证患者安全的前提下促进新药研发与上市，如何权衡药物风险与收益，如何履行其职能，FDA给我们上了漂亮的一课）
+
+\end{document}

@@ -1,0 +1,781 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme}
+\usetikzlibrary{tikzmark}
+\special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+%封面
+\title{多室模型}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+\begin{frame}
+    \frametitle{多室模型}
+    单室模型是将整个机体视为一个隔室 ， 假设药物进入体循环后 ， 能够在体内各个可分布的组织 、 器官及体液之间迅速达到动态分布平衡 ， 血药浓度的变化可以定量反映组织或体液中药物浓度的变化 。 但实际上 ， 由于体内各组织 、 器官的血流灌注速度不同 ， 药物与各组织 、 器官的亲和力不同 ， 使得药物在各组织 、 器官及体液中达到分布平衡所需要的时间也不同 。 因此 ， 对于由血浆向体内各部位分布速率差异比较显著的药物 ， 需用多室模型来描述其体内过程 。
+    
+    \begin{itemize}
+      \item 二室模型
+      \item 三室模型
+    \end{itemize}
+    
+\end{frame}
+
+
+\section{二室模型静脉注射给药}
+
+
+\begin{frame}
+    \frametitle{模型的建立}
+    符合二室模型的药物静脉注射给药后 ， 首先进入中央室 ， 并在中央室很快达到分布平衡 ， 同时发生与周边室之间的转运 （分布 ） 。
+
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \draw[->] (0,0) node[left]{$X_0$} --  (1,0);
+            \draw (1,-0.5) rectangle (2.5,0.5) node[midway, align=center] {中央室 \\ $X_\mathrm{c}, V_\mathrm{c}$};
+            \draw[->] (2.5,0.1) -- (3.5,0.1) node[above,midway]{$k_{12}$};
+            \draw[->] (3.5,-0.1) -- (2.5,-0.1) node[below,midway]{$k_{21}$};
+            \draw (3.5,-0.5) rectangle (5,0.5) node[midway, align=center] {周边室 \\ $X_\mathrm{p}, V_\mathrm{p}$};
+            \draw[->] (1.75,-0.5) -- (1.75,-1) node[right,midway]{$k_{10}$};
+        \end{tikzpicture}
+    \end{center}
+    中央室和周边室药物的转运速率可用下列微分方程组描述 ：
+    \[
+        \begin{aligned}
+            &\frac{\mathrm{d}X_{c}}{\mathrm{d}t} =k_{21}X_{p}-k_{{12}}X_{c}-k_{{10}}X_{c}  \\
+            &\frac{\mathrm{d}X_{p}}{\mathrm{d}t} =k_{{12}}X_{c}-k_{{21}}X_{p} 
+        \end{aligned}
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血药浓度与时间的关系}
+    解微分方程组得 ：
+    \[
+        \begin{aligned}
+            X_{c}& = \frac{X_{0}(\alpha - k_{21})}{\alpha - \beta}\cdot \mathrm{e}^{-\alpha t} + \frac{X_{0}(k_{21}- \beta)}{\alpha - \beta}\cdot \mathrm{e}^{-\beta t} \\
+            X_{p}& = \frac{k_{21}X_{0}}{\alpha - \beta}(\mathrm{e}^{-\beta t}-\mathrm{e}^{-\alpha t})
+        \end{aligned}
+    \]
+    其中，$\alpha$、$\beta$为混杂参数，分别代表分布相和消除相的特征，由模型参数构成
+    \[
+        \alpha=\frac{(k_{12}+k_{21}+k_{10})+\sqrt{(\begin{array}{c}k_{12}+k_{21}+k_{10}\end{array})^2-4k_{21}\cdot k_{10}}}{2}
+    \]
+    \[
+        \beta=\frac{(k_{12}+k_{21}+k_{10})-\sqrt{(\begin{array}{c}k_{12}+k_{21}+k_{10}\end{array})^2-4k_{21}\cdot k_{10}}}{2}
+    \]
+    $\alpha$、$\beta$与模型参数之间的关系为 ：$\alpha + \beta = k_{12}+k_{21}+k_{10}$ \qquad $\alpha  \beta = k_{21}\cdot k_{10}$
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血药浓度与时间的关系}
+    血药浓度为中央室内的药量与中央室表观分布容积的比值 ，根据$X=VC$得
+    \[
+        C = \frac{X_{0}(\alpha - k_{21})}{V_{c}(\alpha - \beta)}\cdot \mathrm{e}^{-\alpha t} + \frac{X_{0}(k_{21}- \beta)}{V_{c}(\alpha - \beta)}\cdot \mathrm{e}^{-\beta t}
+    \]
+    令$A=\frac{X_{0}(\alpha - k_{21})}{V_{c}(\alpha - \beta)}$，$B=\frac{X_{0}(k_{21}- \beta)}{V_{c}(\alpha - \beta)}$，上式可表示为
+    \[
+        C = A\cdot \mathrm{e}^{-\alpha t} + B\cdot \mathrm{e}^{-\beta t}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药浓度---时间曲线}
+    \begin{minipage}{0.48\linewidth}
+          \highlight{分布相}快速静脉注射给药后 ， 药物在中央室迅速达到分布平衡 ， 药物从中央室向周边室的分布速度大于周边室向中央室的分布速度 ， 同时还有中央室的消除 ， 因此中央室血药浓度下降较快 ， 而周边室组织药物浓度逐渐增大 ；
+
+          \highlight{消除相}随着分布的进行 ， 中央室与周边室的分布逐渐达到动态平衡 ， 周边室组织药物浓度达到最大值 ， 之后主要是药物从中央室消除 ， 中央室与周边室药物浓度平行下降。
+        
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{二室模型}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{残数法估算基本参数}
+    \begin{minipage}{0.48\linewidth}
+        一般来说 ， 分布相血药浓度的下降较消除相快得多， 即$\alpha \gg  \beta$。当$t$充分大时 （ 曲线末端 ） $A\cdot \mathrm{e}^{-\alpha t}$更快地趋向于零 ，曲线末端方程简化为 ：
+    \[
+        C' = B\cdot \mathrm{e}^{-\beta t}
+    \]
+    两边取对数，得
+    \[
+        \ln C' = -\beta t + \ln B
+    \]
+    根据末端直线斜率可求$\beta$，根据截距可求$B$。
+
+    消除相半衰期：
+    \[
+        t_{1/2\beta} = 0.693/\beta
+    \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{二室模型曲线}
+        \end{figure}
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{残数法估算基本参数}
+    \begin{minipage}{0.48\linewidth}
+        根据末端直线方程求出分布相各时间点的外推浓度$C'$，以实测浓度$C$减去$C'$得到残数浓度$C_\mathrm{r}$。
+    \[
+        C_\mathrm{r} = C - C' = A\cdot \mathrm{e}^{-\alpha t}
+    \]
+    两边取对数，得
+    \[
+        \ln C_\mathrm{r} = -\alpha t + \ln A
+    \]
+    根据残数线斜率可求$\alpha$，根据截距可求$A$。
+
+    吸收相半衰期：
+    \[
+        t_{1/2\alpha} = 0.693/\alpha
+    \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{二室模型曲线}
+        \end{figure}
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中央室表观分布容积$V_c$}
+    当时间$t=0$时，$C=C_0$
+    \[
+        C_0 = A + B
+    \]
+    零时间体内所有药物都在中央室，给药剂量为$X_0$，所以零时间的血药浓度$C_0$为
+    \[
+        C_0 = X_0/V_c
+    \]
+    则：
+    \[
+        V_c = \frac{X_0}{A + B}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{速率常数$k_{12}$、$k_{21}$、$k_{10}$}
+    根据$A=\frac{X_{0}(\alpha - k_{21})}{V_{c}(\alpha - \beta)}$，$B=\frac{X_{0}(k_{21}- \beta)}{V_{c}(\alpha - \beta)}$，将$V_c = \frac{X_0}{A + B}$代入，得
+    \[
+        k_{21} = \frac{A\beta + B\alpha}{A+B}
+    \]
+    根据$\alpha  \beta = k_{21}\cdot k_{10}$，得
+    \[
+        k_{10} = \frac{\alpha \beta (A+B)}{A\beta + B\alpha}
+    \]
+    根据$\alpha + \beta = k_{12}+k_{21}+k_{10}$，得
+    \[
+         k_{12} = \alpha + \beta -k_{21} - k_{10}
+    \]
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{血药浓度---时间曲线下面积$AUC$}
+    \[
+        C = A\cdot \mathrm{e}^{-\alpha t} + B\cdot \mathrm{e}^{-\beta t}
+    \]
+    根据$AUC$的定义，以血药浓度对时间进行定积分可得
+    \[
+        AUC = \frac{A}{\alpha} +\frac{B}{\beta}
+    \]
+    \begin{minipage}{0.48\linewidth}
+        \begin{codeblock}{Matlab计算}
+syms C(t) A B a b;
+C = A*exp(-a*t)+B*exp(-b*t);
+% 不定积分
+AUC = int(C,t)
+% 定积分
+AUC = int(C,t,0,inf)
+        \end{codeblock}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.9\linewidth]{AUC}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        给体重 70kg 的健康成年男性快速静脉注射某抗生素 100 mg ， 定时采集血样 ， 测得各时间的血药浓度如下 。试判断其房室模型，并求出有关动力学参数。
+        \begin{table}
+            \centering
+            \begin{tabular}{cccccccccccc}
+                \bottomrule
+                $t$/h & 0.25 & 0.5 & 1 & 1.5 & 2 & 4 & 6 & 8 & 12 & 16 \\ \hline
+                $C/(\mu$g/mL) & 42.9 & 32.2 & 20.5 & 14.3 & 11.2 & 6.51 & 4.26 & 2.78 & 1.22 & 0.50 \\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{example}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        给体重 70kg 的健康成年男性快速静脉注射某抗生素 100 mg ， 定时采集血样 ， 测得各时间的血药浓度如下 。试判断其房室模型，并求出有关动力学参数。
+        \begin{table}
+            \centering
+            \begin{tabular}{cccccccccccc}
+                \bottomrule
+                $t$/h & 0.25 & 0.5 & 1 & 1.5 & 2 & 4 & 6 & 8 & 12 & 16 \\ \hline
+                $C/(\mu$g/mL) & 40.4 & 27.5 & 15.3 & 10.7 & 8.61 & 5.19 & 3.34 & 2.15 & 0.89 & 0.37 \\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{question}
+\end{frame}
+
+
+\section{三室模型静脉注射给药}
+
+
+\begin{frame}
+    \frametitle{模型的建立}
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \draw[->] (1.75,1)  -- node[right]{$X_0$} (1.75,0.5);
+            \draw (1,-0.5) rectangle (2.5,0.5) node[midway, align=center] {中央室 \\ $X_\mathrm{c}, V_\mathrm{c}$};
+            \draw[->] (2.5,0.1) -- (3.5,0.1) node[above,midway]{$k_{13}$};
+            \draw[->] (3.5,-0.1) -- (2.5,-0.1) node[below,midway]{$k_{31}$};
+            \draw (3.5,-0.5) rectangle (5,0.5) node[midway, align=center] {深外室 \\ $X_\mathrm{p3}, V_\mathrm{p3}$};
+            \draw[->] (1.75,-0.5) -- (1.75,-1) node[right,midway]{$k_{10}$};
+            \draw (-1.5,-0.5) rectangle (0,0.5) node[midway, align=center] {浅外室 \\ $X_\mathrm{p2}, V_\mathrm{p2}$};
+            \draw[->] (1,0.1) -- (0,0.1) node[above,midway]{$k_{12}$};
+            \draw[->] (0,-0.1) -- (1,-0.1) node[below,midway]{$k_{21}$};
+        \end{tikzpicture}
+    \end{center}
+    中央室和两个周边室药物的转运速率可用下列微分方程组描述 ：
+    \[
+        \begin{aligned}
+            &\frac{\mathrm{d}X_{c}}{\mathrm{d}t} =k_{21}X_{p2}+k_{31}X_{p3}-k_{{12}}X_{c}-k_{{13}}X_{c}-k_{{10}}X_{c}  \\
+            &\frac{\mathrm{d}X_{p2}}{\mathrm{d}t} =k_{{12}}X_{c}-k_{{21}}X_{p2} \\
+            &\frac{\mathrm{d}X_{p3}}{\mathrm{d}t} =k_{{13}}X_{c}-k_{{31}}X_{p3} 
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血药浓度与时间的关系}
+    \[
+        C = A\cdot \mathrm{e}^{-\alpha t} + B\cdot \mathrm{e}^{-\beta t} + P\cdot \mathrm{e}^{-\pi t}
+    \]
+    当$t=0$时，$C_0 = A+B+P$，采用两次残数法可求得A、B、P以及$\alpha$、$\beta$、$\pi$。
+    \[
+        k_{21} = \alpha + \frac{A(\pi - \alpha)(k_{21} - \beta) + B(\pi - \beta)(k_{21} - \alpha)}{C_0(k_{21} - \beta)}
+    \]
+    解得
+    \[
+        k_{21} = \frac{\alpha + \beta + \frac{A(\pi - \alpha)+ B(\pi - \beta)}{C_0} \pm \sqrt{\left(\alpha + \beta + \frac{A(\pi - \alpha)+ B(\pi - \beta)}{C_0}\right)^2 - 4\alpha \beta - 4A\beta(\pi - \alpha) + \frac{B\alpha(\pi - \beta)}{C_0}}}{2}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{其它参数}
+    \[
+        k_{31}={\beta}+\frac{{B}({\pi}-{\beta})({\alpha}-{\beta})}{({P}+{A}+{B})({k}_{31}-{\beta})}
+    \]
+    \[
+        k_{10}=\frac{{\alpha}{\beta}{\pi}}{{k}_{21}{k}_{31}}
+    \]
+    \[
+        k_{12}=\frac{({\alpha}{\beta}+{\alpha}\pi+{\beta}\pi)-{k}_{21}({\alpha}+{\beta}+{\pi})-{k}_{10}{k}_{31}+{k}_{21}^{2}}{{k}_{31}-{k}_{21}}
+    \]
+    \[
+        k_{13}={\alpha}+{\beta}+{\pi}-({k}_{10}+{k}_{12}+{k}_{31}+{k}_{21})
+    \]
+\end{frame}
+
+
+\section{二室模型静脉滴注给药}
+
+
+\begin{frame}
+    \frametitle{模型建立}
+    二室模型静脉滴注给药时 ，一方面药物以恒定速度进入中央室 ； 另一方面 ， 同时发
+    生药物在中央室与周边室间转运及从中央室消除 。 
+
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \draw[->] (0,0) node[left]{$k_0$} --  (1,0);
+            \draw (1,-0.5) rectangle (2.5,0.5) node[midway, align=center] {中央室 \\ $X_\mathrm{c}, V_\mathrm{c}$};
+            \draw[->] (2.5,0.1) -- (3.5,0.1) node[above,midway]{$k_{12}$};
+            \draw[->] (3.5,-0.1) -- (2.5,-0.1) node[below,midway]{$k_{21}$};
+            \draw (3.5,-0.5) rectangle (5,0.5) node[midway, align=center] {周边室 \\ $X_\mathrm{p}, V_\mathrm{p}$};
+            \draw[->] (1.75,-0.5) -- (1.75,-1) node[right,midway]{$k_{10}$};
+        \end{tikzpicture}
+    \end{center}
+
+    各房室间药物的转运速率方程组为 ：
+    \[
+        \begin{aligned}
+            &\frac{\mathrm{d}X_{c}}{\mathrm{d}t} =k_0 + k_{21}X_{p}-k_{{12}}X_{c}-k_{{10}}X_{c}  \\
+            &\frac{\mathrm{d}X_{p}}{\mathrm{d}t} =k_{{12}}X_{c}-k_{{21}}X_{p} 
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{滴注期间血药浓度与时间的关系}
+    \[
+        \begin{aligned}
+            X_{c}& = \frac{k_{0}(\alpha - k_{21})}{\alpha(\alpha - \beta)}(1-\mathrm{e}^{-\alpha t}) + \frac{k_{0}(k_{21}- \beta)}{\beta(\alpha - \beta)} (1-\mathrm{e}^{-\beta t}) \\
+            C& = \frac{k_{0}(\alpha - k_{21})}{V_{c}\alpha(\alpha - \beta)}(1-\mathrm{e}^{-\alpha t}) + \frac{k_{0}(k_{21}- \beta)}{V_{c}\beta(\alpha - \beta)} (1-\mathrm{e}^{-\beta t})
+        \end{aligned}
+    \]
+    结合$\alpha  \beta = k_{21}\cdot k_{10}$，化简得
+    \[
+        C=\frac{k_{0}}{V_{c}k_{{10}}}\Big(1-\frac{k_{{10}}-\beta}{\alpha-\beta}\cdot \mathrm{e}^{-\alpha t}-\frac{\alpha-k_{{10}}}{\alpha-\beta} \cdot \mathrm{e}^{-\beta t}\Big)
+    \]
+    上式反映了滴注给药过程中血药浓度随滴注时间延长而升高的情况。 当滴注时间$t \to \infty$， 则$\mathrm{e}^{-\alpha t}$和$\mathrm{e}^{-\beta t}$均趋于零 ， 血药浓度趋近于稳态血药浓度 （$C_\mathrm{ss}$） ：
+    \[
+        C_\mathrm{ss} = \frac{k_0}{V_{c}k_{10}}
+    \]
+    可见，稳态血药浓度与静脉滴注速度成正比。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{总表观分布容积$V_\beta$}
+    设机体总表观分布容积为$V_\beta$ ， 消除仅发生在中央室 ， 总体清除率$V_\beta \cdot \beta$应与中央室清除率$V_{c}\cdot k_{10}$相等 ， 故有如下关系 ：
+    \[
+        V_\beta \cdot \beta = V_{c}\cdot k_{10}
+    \]
+    所以稳态血药浓度还可表示为
+    \[
+        C_\mathrm{ss} = \frac{k_0}{V_\beta \cdot \beta}
+    \]
+    \begin{itemize}
+      \item 当药物的总表观分布容积$V_\beta$、 混杂消除速率常数$\beta$已知后 ， 可根据临床所要求的血药浓度$C_\mathrm{ss}$， 计算所需要的静脉滴注速度$k_{0}$；
+      \item 若已知静脉滴注速度$k_{0}$、 稳态血药浓度$C_\mathrm{ss}$，并且从停止滴注后的血药浓度---时间曲线上求出$\beta$，则可求出药物的总表观分布容积$V_\beta$。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{滴注停止后的血药浓度---时间过程}
+    设停滴后所经历的时间为$t'$。当静脉滴注停止后 ， 药物的体内过程与静脉注射相同 ， 相当于在停滴时$(t=T,t'=0)$静脉注射一定剂量的药物 ， 停滴时的浓度即相当于静脉注射给药后的初浓度 ， 则停滴后血药浓度与时间的关系式为 ：
+    \[
+        C=\frac{k_{0}(\alpha-k_{21})(1-\mathrm{e}^{-\alpha T})}{V_{c}\alpha(\alpha-\beta)}\cdot\mathrm{e}^{-\alpha t^{\prime}}+\frac{k_{0}(k_{21}-\beta)(1-\mathrm{e}^{-\beta T})}{V_{c}\beta(\alpha-\beta)}\cdot\mathrm{e}^{-\beta t^{\prime}}
+    \]
+    令$R = \frac{k_{0}(\alpha-k_{21})(1-\mathrm{e}^{-\alpha T})}{V_{c}\alpha(\alpha-\beta)}$，$S = \frac{k_{0}(k_{21}-\beta)(1-\mathrm{e}^{-\beta T})}{V_{c}\beta(\alpha-\beta)}$，上式可表示为
+    \[
+        C=R\cdot\mathrm{e}^{-\alpha t^{\prime}}+S\cdot\mathrm{e}^{-\beta t^{\prime}}
+    \]
+    $R$和$S$与静脉注射二室模型中$A$和$B$的关系为：
+    \[
+        A = \frac{\alpha T}{1-\mathrm{e}^{-\alpha t}}\cdot R \qquad B = \frac{\beta T}{1-\mathrm{e}^{-\beta t}}\cdot S
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{动力学参数的确定}
+    \begin{minipage}{0.48\linewidth}
+        静脉滴注结束后 ， 在一定时间采血 ， 测定血药浓度 ， 以血药浓度的对数对时间作图 ， 根据残数法原理 ， 与二室模型静脉注射给药相似 ， 可求得基本参数及模型参数。
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{滴注}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\section{二室模型血管外给药}
+
+
+\begin{frame}
+    \frametitle{模型的建立}
+    与二室模型静脉注射给药动力学过程相比，增加了从吸收部位进入中央室的一级吸收速率过程。因此，血管外途径给药的二室模型图见图
+    \begin{center}
+        \begin{tikzpicture}[scale=1.5]
+            \draw[->] (0,0)  -- node[above]{$k_\mathrm{a}$} (1,0);
+            \draw (1,-0.5) rectangle (2.5,0.5) node[midway, align=center] {中央室 \\ $X_\mathrm{c}, V_\mathrm{c}$};
+            \draw[->] (2.5,0.1) -- (3.5,0.1) node[above,midway]{$k_{12}$};
+            \draw[->] (3.5,-0.1) -- (2.5,-0.1) node[below,midway]{$k_{21}$};
+            \draw (3.5,-0.5) rectangle (5,0.5) node[midway, align=center] {周边室 \\ $X_\mathrm{p}, V_\mathrm{p}$};
+            \draw[->] (1.75,-0.5) -- (1.75,-1) node[right,midway]{$k_{10}$};
+            \draw (-1,-0.5) rectangle (0,0.5) node[midway, align=center] {$X_\mathrm{a}$};
+            \draw[->] (-2,0) node[left]{$X_0$} -- node[above]{$F$} (-1,0);
+        \end{tikzpicture}
+    \end{center}
+    \[
+        \begin{aligned}
+            &\frac{\mathrm{d}X_{\mathrm{a}}}{\mathrm{d}t} = -k_{\mathrm{a}}X_{\mathrm{a}} \\
+            &\frac{\mathrm{d}X_{c}}{\mathrm{d}t} =k_{\mathrm{a}}X_{\mathrm{a}} + k_{21}X_{p}-k_{{12}}X_{c}-k_{{10}}X_{c}  \\
+            &\frac{\mathrm{d}X_{p}}{\mathrm{d}t} =k_{{12}}X_{c}-k_{{21}}X_{p} 
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血药浓度与时间的关系}
+    解微分方程组可得：
+    \[
+        X_{{C}}=\frac{k_{\mathrm{a}}FX_{0}(k_{21}-k_{\mathrm{a}})}{(\alpha-k_{\mathrm{a}})(\beta-k_{\mathrm{a}})}\cdot\mathrm{e}^{-k_{\mathrm{a}}t}+\frac{k_{\mathrm{a}}FX_{0}(k_{21}-\alpha)}{(k_{\mathrm{a}}-\alpha)(\beta-\alpha)}\cdot\mathrm{e}^{-\alpha t}+\frac{k_{\mathrm{a}}FX_{0}(k_{21}-\beta)}{(k_{\mathrm{a}}-\beta)(\alpha-\beta)}\cdot\mathrm{e}^{-\beta t}
+    \]
+    将$X_{{C}}=V_{{C}}\cdot C$代入，得
+    \[
+        C=\frac{k_{\mathrm{a}}FX_{0}(k_{21}-k_{\mathrm{a}})}{V_{\mathrm{C}}(\alpha-k_{\mathrm{a}})(\beta-k_{\mathrm{a}})}\cdot\mathrm{e}^{-k_{\mathrm{a}}t}+\frac{k_{\mathrm{a}}FX_{0}(k_{21}-\alpha)}{V_{\mathrm{C}}(k_{\mathrm{a}}-\alpha)(\beta-\alpha)}\cdot\mathrm{e}^{-\alpha t}+\frac{k_{\mathrm{a}}FX_{0}(k_{21}-\beta)}{V_{\mathrm{C}}(k_{\mathrm{a}}-\beta)(\alpha-\beta)}\cdot\mathrm{e}^{-\beta t}
+    \]
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{血药浓度曲线}
+    二室模型特征的药物经血管外途径给药后，血药浓度曲线如图所示
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.67\linewidth]{二室模型血药浓度曲线}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{基本参数的估算}
+    将血药浓度表达式简写成如下形式：
+    \[
+        C=N\cdot\mathrm{e}^{-k_{\mathrm{a}}t}+L\cdot\mathrm{e}^{-\alpha t}+M\cdot\mathrm{e}^{-\beta t}
+    \]
+    式中：
+    \[
+        {N}= \frac{k_\text{a}{ F X _ 0 }(k_{21}-k_\text{a })}{V_\text{c}{ ( \alpha - k _\text{a })}(\beta-k_\text{a })}
+    \]
+    \[
+        L= \frac{k_\text{a}FX_0(k_{21}-\alpha)}{V_\text{c}(k_\text{a}{ - \alpha })(\beta-\alpha)}
+    \]
+    \[
+        M =\frac{k_\text{a}{FX_0 }(k_{21}-{\beta})}{V_\text{c}{ ( k _ a - {\beta })}(\alpha-{\beta})} 
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{残数法求算基本参数}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.56\linewidth]{血管外}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{残数法求算$\beta$和$M$}
+    \begin{minipage}{0.48\linewidth}
+        对于血管外途径给药的剂型来说，通常吸收速度远大于消除速度，即$k_\mathrm{a} \gg \beta$，又因为$\alpha \gg \beta$， 因此当$t$充分大时，$\mathrm{e}^{-k_{\mathrm{a}}t}$和$\mathrm{e}^{-\alpha t}$均趋于零 ， 以 $C'$ 表示曲线末端血药浓度：
+    \[
+        C'=M\cdot\mathrm{e}^{-\beta t}
+    \]
+    取对数，得
+    \[
+        \ln C'=-\beta t + \ln M
+    \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{血管外}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{残数法求算$\alpha$和$L$}
+    \begin{minipage}{0.48\linewidth}
+        以曲线前相实测血药浓度数据$C$减去外推直线$\ln C'-t$上对应时间点的$C'$，得到第一残数浓度$C_\mathrm{r1}$， 残数浓度的方程：
+        \[
+            C_\mathrm{r1}=N\cdot \mathrm{e}^{-k_{\mathrm{a}}t}+L\cdot\mathrm{e}^{-\alpha t}
+        \]
+        通常，$k_\mathrm{a} \gg \alpha$， 当$t$较大时 ，$\mathrm{e}^{-k_{\mathrm{a}}t} \to 0$， 以$C_\mathrm{r1}^\prime $表示末端残数浓度：
+        \[
+            C_\mathrm{r1}'=L\cdot\mathrm{e}^{-\alpha t}
+        \]
+        取对数，得
+        \[
+            \ln C_\mathrm{r1}'=-\alpha t + \ln L
+        \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{血管外}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{残数法求算$k_\mathrm{a}$和$N$}
+    \begin{minipage}{0.48\linewidth}
+        以尾段直线方程$\ln C_\mathrm{r1}^\prime -t$外推曲线前相对应的浓度值$C_\mathrm{r1}^\prime$减去第一残数曲线前相浓度值$C_\mathrm{r1}$， 得到第二残数浓度$C_\mathrm{r2}$，第二残数线方程 ：
+        \[
+            C_\mathrm{r2}=-N\cdot \mathrm{e}^{-k_{\mathrm{a}}t}
+        \]
+        取对数，得
+        \[
+            \ln C_\mathrm{r2}=-k_{\mathrm{a}}t + \ln(-N)
+        \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{血管外}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        口服某药物500 mg，体内药物动力学特征符合二室模型，设$F=0.85$， 测得不同时间的血药浓度如表所示，试求该药的$k_\mathrm{a}$、$\alpha$、$\beta$、$N$、$L$、$M$等基本参数 。
+        \begin{table}
+            \centering
+            \begin{tabular}{cccccccccc}
+                \bottomrule
+                $t$/h & 0.25 & 0.5 & 1.0 & 2.5 & 3.5 & 5.0 & 7.5 & 10 \\ \hline
+                $C$/(mg/L) & 14.0 & 19.5 & 37.5 & 61.5 & 71.5 & 69.2 & 59.5 & 50.1 \\ \hline \hline
+                $t$/h & 15 & 20 & 25 & 30 & 40 & 50 & 60 \\ \hline
+                $C$/(mg/L) & 36.6 & 27.5 & 21.5 & 16.4 & 11.5 & 8.30 & 5.90 \\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{example}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{转运速率常数$k_{12}$、$k_{21}$、$k_{10}$}
+        $L= \frac{k_\text{a}FX_0(k_{21}-\alpha)}{V_\text{c}(k_\text{a}{ - \alpha })(\beta-\alpha)}$，
+        $M =\frac{k_\text{a}{FX_0 }(k_{21}-{\beta})}{V_\text{c}{ ( k _ a - {\beta })}(\alpha-{\beta})} $，两式联立，得
+        \[
+            k_{21}=\frac{{L\beta(k_\mathrm{a}-\alpha)}+{M\alpha(k_\mathrm{a}-{\beta})}}{{L(k_\mathrm{a}-\alpha)}+{M(k_\mathrm{a}-{\beta})}}
+        \]
+        根据$\alpha  \beta = k_{21}\cdot k_{10}$，得
+        \[
+            k_{10}=\frac{\alpha  \beta}{k_{21}}
+        \]
+        根据$\alpha + \beta = k_{12}+k_{21}+k_{10}$，得
+        \[
+            k_{12} = \alpha + \beta -k_{21} - k_{10}
+        \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{中央室表观分布容积$V_\mathrm{C}$}
+    根据$L= \frac{k_\text{a}FX_0(k_{21}-\alpha)}{V_\text{c}(k_\text{a}{ - \alpha })(\beta-\alpha)}$，因此
+    \[
+        V_\text{c}= \frac{k_\text{a}FX_0(k_{21}-\alpha)}{L(k_\text{a}{ - \alpha })(\beta-\alpha)}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{半衰期}
+    根据血管外途径给药二室模型的3个时相，相应有3个半衰期，即
+
+    吸收相半衰期：
+    \[
+        t_{1/2(\mathrm{a})} = \frac{\ln2}{k_\mathrm{a}}
+    \]
+    分布相半衰期：
+    \[
+        t_{1/2(\alpha)} = \frac{\ln2}{\alpha}
+    \]
+    消除相半衰期：
+    \[
+        t_{1/2(\beta)} = \frac{\ln2}{\beta}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{血药浓度---时间曲线下面积}
+    据$AUC$的定义，有：
+    \[
+        AUC=\int_0^\infty C\mathrm{d}t=\int_0^\infty\left(N\mathrm{e}^{-k_\mathrm{a} t}+L\mathrm{e}^{-\alpha t}+M\mathrm{e}^{-\beta t}\right)\mathrm{d}t
+    \]
+    所以
+    \[
+        AUC = \frac{L}{\alpha} + \frac{M}{\beta} + \frac{N}{k_\mathrm{a}}
+    \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{总表观分布容积，总体清除率}
+    总表观分布容积：
+    \[
+        V_\beta = \frac{FX_0}{\beta \cdot AUC}
+    \]
+    总体清除率：
+    \[
+        Cl = \beta \cdot V_\beta = \frac{FX_0}{AUC}
+    \]
+\end{frame}
+
+
+
+
+
+\section{房室模型的判别}
+
+
+\begin{frame}
+    \frametitle{单室模型}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat[单室模型静脉注射给药]{\includegraphics[height=6cm]{单室模型静脉注射}}\quad
+        \subfloat[单室模型血管外给药]{\includegraphics[height=6cm]{单室模型血管外给药}}
+    \end{figure}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{双室模型}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat[双室模型静脉注射给药]{\includegraphics[height=5.9cm]{双室模型静脉注射}}\quad
+        \subfloat[双室模型血管外给药]{\includegraphics[height=5.9cm]{双室模型血管外给药}} 
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{影响模型判别的因素}
+    隔室模型的确定主要取决于给药途径 、药物的吸收速率 、 采样点的安排及采样周期的长短 、 血药浓度测定分析方法的灵敏度等因素 。
+    \begin{itemize}
+      \item 静脉注射给药为二室模型的药物 ， 其口服给药可能表现为单室模型 ， 这是由于口服给药的吸收过程可能掩盖或抵消分布相 ， 如茶碱静脉注射给药为二室模型 ， 但口服给药则呈现单室模型特征 ；
+      \item 采样时间也有较大影响 ， 如果采样点的安排不适当 ， 可能错过分布期 ， 就会误认为是单室模型 ；
+      \item  如果分析方法的灵敏度不够或采样周期过短 ， 不能测定消除相末端血药浓度 ，也会影响隔室数的判断 。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{残差平方和}
+    作图法只能进行初步判断 ， 究竟属于哪种隔室 ，可采用一些判据作进一步判断。
+
+    残差平方和：
+    \[
+        RSS=\sum_{i=1}^{n}(C_{i}-\hat{C}_{i})^{2}
+    \]
+    式中 ，$C_{i}$是实测血药浓度值 ；$\hat{C}_{i}$是假定模型计算出来的血药浓度估算值 ， $RSS$值越小 ， 说明估算值与实测值的差别越小。如果按不同模型分别计算得到多个$RSS$，则应选择其中$RSS$最小的那个模型 。
+
+    在实际情况中 ， 当模型对于高浓度估算的精密度高于对低浓度估算的精密度时 ， $RSS$判据可以较好地判断模型的拟合情况。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{加权残差平方和}
+    有些情况下，模型对于高 、 低浓度估算的相对误差相近 （ 如均为 10\%） ， 则模型对高浓度数据 （ 如为 100 ） 估算的偏差较大 （ 为 10 ） ， 而对低浓度数据（ 如为 10 ）估算的偏差较小（ 为 1 ） ， 此时采用 RSS 作为判据 ， 高浓度数据对 RSS 的贡献大于低浓度数据 ， 因此模型拟合的结果会更接近高浓度数据点 ， 而偏离低浓度数据点 。 为了减少高低浓度数据所引起的偏离 ， 应对残差平方以浓度权重系数加以校正 ， 即用加权残差平方和
+    \[
+        RSS=\sum_{i=1}^{n}W_i(C_{i}-\hat{C}_{i})^{2}
+    \]
+    式中 ， $W_i$为权重系数 ， 当 $W_i= 1$ 时 ， $WRSS=RSS$。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{AIC 法}
+    有时采用上述残差平方和及拟合度仍不能进行很好的判断 ， 可用 AIC 法进行判断 。AIC 法是由 Akaike 等所定义的一种综合判据， 其公式为 ：
+    \[
+        AIC=N\cdot\ln{(WRSS)}+2P
+    \]
+    式中，N为实验数据的组数；WRSS为加权残差平方和 ； P 是所设模型参数的个数 ， 其值为模型隔室数的 2 倍 。
+
+    AIC 判据综合考虑了加权残差平方和 、 实验数据的组数及模型参数的个数等因素 。 AIC 值越小 ， 则认为模型拟合越好 ， 特别是当两种模型的残差平方和值很接近时 ， 用 AIC 判据能得到更合理的判断 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{F检验}
+    F检验法也可用于模型的判断 。
+    \[
+        F=\frac{WRSS_{1}-WRSS_{2}}{WRSS_{2}}\times\frac{\mathrm{d}f_{2}}{\mathrm{d}f_{1}-\mathrm{d}f_{2}},(\mathrm{d}f_{1}>\mathrm{d}f_{2})
+    \]
+    式中 ，$WRSS_{1}, WRSS_{2}$分别为由第一种和第二种模型得到的加权残差平方和 ； $\mathrm{d}f_{1}, \mathrm{d}f_{2}$分别为第一种和第二种模型的自由度 ， 即实验数据的组数 N 减去模型参数的个数 P。若试验测得 12 组数据点 ， 则单室模型 、 二室模型 、 三室模型的参数的数目分别为 2 、 4 、 6 ， 三种模型的自由度分别为 10 、 8 、 6 。
+
+    F 值的显著性可与 F 值表中的列自由度为 （ $\mathrm{d}f_{1}-\mathrm{d}f_{2}$） 、 行自山度为$\mathrm{d}f_{2}$的 $F$ 界值 （$\alpha = 0.05$ ） 比较进行判定 ， 若 $F>F_\text{界值}$ ， 则说明模型 2 优于模型 1 。
+
+    在实际工作中 ， 主要根据 AIC 值来判断隔室模型 ， 若用 AIC法判断有困难时 ， 可采用 F 检验 、 权重残差平方和等方法综合评价 。
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某男性志愿者 ， 体重 70kg ， 年龄 30 岁 ， 静脉注射给予某药物100 mg ， 测得血药浓度数据如下，试判断该药物静脉注射给药后药物动力学属于几室模型 ， 并求算有关药动学参数。
+        \begin{table}
+            \centering
+            \begin{tabular}{ccccccccc}
+                \bottomrule
+                $t/$(min) & 5 & 10 &  15 & 20 & 30 & 45  & 60 & 90 \\ \hline
+                $C/$(mg/L) & 1.625 & 1.384 & 1.280 & 1.105 & 0.973 & 0.806 & 0.740 & 0.582 \\ \hline \hline
+                $t/$(min) & 120 & 150 & 180  & 240 & 300 & 360 & 480 & 600 \\ \hline
+                $C/$(mg/L) & 0.530 & 0.458 & 0.416 & 0.342 & 0.321 & 0.246 & 0.176 & 0.125 \\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{example}
+\end{frame}
+
+
+\end{document}

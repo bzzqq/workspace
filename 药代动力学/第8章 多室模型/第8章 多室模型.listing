@@ -1,0 +1,6 @@
+syms C(t) A B a b;
+C = A*exp(-a*t)+B*exp(-b*t);
+% 不定积分
+AUC = int(C,t)
+% 定积分
+AUC = int(C,t,0,inf)

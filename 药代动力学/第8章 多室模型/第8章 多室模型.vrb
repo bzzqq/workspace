@@ -1,0 +1,24 @@
+\frametitle{血药浓度---时间曲线下面积$AUC$}
+    \[
+        C = A\cdot \mathrm{e}^{-\alpha t} + B\cdot \mathrm{e}^{-\beta t}
+    \]
+    根据$AUC$的定义，以血药浓度对时间进行定积分可得
+    \[
+        AUC = \frac{A}{\alpha} +\frac{B}{\beta}
+    \]
+    \begin{minipage}{0.48\linewidth}
+        \begin{codeblock}{Matlab计算}
+syms C(t) A B a b;
+C = A*exp(-a*t)+B*exp(-b*t);
+% 不定积分
+AUC = int(C,t)
+% 定积分
+AUC = int(C,t,0,inf)
+        \end{codeblock}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.9\linewidth]{AUC}
+        \end{figure}
+    \end{minipage}

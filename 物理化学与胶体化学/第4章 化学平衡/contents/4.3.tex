@@ -1,0 +1,133 @@
+\section{平衡常数的测定和计算}
+
+
+\begin{frame}
+    \frametitle{平衡常数的测定}
+
+    当一个化学反应达平衡时，各组分的浓度或分压不再随时间变化，可用测定浓度或分压的方法测定其平衡常数。
+    \begin{enumerate}
+        \item 物理方法：用体系中物质的物理性质间接测定浓度或分压，如通过测物质的吸光度、折射率、电导率、pH及压力和体积等。这种方法快速、简捷、不干扰化学平衡。
+        \item 化学方法：在不破坏平衡的条件下，用化学分析的方法测定各组分的浓度。测定前常须采用一些措施使反应停止。由于很多化学反应很难达到化学平衡，或测定平衡组分的浓度或分压较为困难，所以通过实验测定平衡常数的局限性很大，故化学方法应用较少。
+    \end{enumerate}
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+
+    \begin{example}
+        在\SI{903}{K}及\SI{101.3}{kPa}下，使\ch{SO2}和\ch{O2}各\SI{1}{mol}反应，平衡后使气体流出冷却，用碱液吸收\ch{SO3}和\ch{SO2}后，在\SI{273}{K}及\SI{101.3}{kPa}下测得$\ch{O2}$体积为\SI{13.78}{dm^3}，计算该氧化反应的平衡常数。
+    \end{example}
+    \pause
+    \[
+        \ch{SO2(g) + 1/2 O2(g) <=> SO3(g)}
+    \]
+    \[
+        n_{\mathrm{O}_{2}}=\frac{p V}{R T}=\frac{101.3 \mathrm{kPa} \times 13.78 \mathrm{dm}^{3}}{8.314 \mathrm{kPa} \cdot \mathrm{dm}^{3} \cdot \mathrm{mol}^{-1} \cdot \mathrm{K}^{-1} \times 273 \mathrm{~K}}=0.62 \mathrm{~mol}
+    \]
+    \[
+        n_{\mathrm{SO}_{2}}=1-2(1-0.62)= \SI{0.24}{mol} \quad n_{\mathrm{SO}_{3}}=2 \times (1-0.62) = \SI{0.76}{mol} \quad \sum_B = \SI{1.62}{mol}
+    \]
+    \[
+        K^{\ominus}=\frac{(p_{\mathrm{SO}_{3}} / p^{\ominus})}{(p_{\mathrm{SO}_{2}} / p^{\ominus})(p_{\mathrm{O}_{2}} / p^{\ominus})^{1 / 2}}=\frac{0.62 \times 2=0.76}{(0.24 / 1.62)(0.62 / 1.62)^{1 / 2}}=5.1
+    \]
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{平衡常数的计算}
+    \large $\Delta _\mathrm{r}G_\mathrm{m}^\ominus = -RT \ln K^\ominus$，只要由热力学数据计算出反应的$\Delta _\mathrm{r}G_\mathrm{m}^\ominus$，即可求得标准平衡常数$K^\ominus$。计算反应的$\Delta _\mathrm{r}G_\mathrm{m}^\ominus$的方法有
+    \[
+        \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}=\sum_{\mathrm{B}} \nu_{\mathrm{B}} \Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}
+    \]
+    \[
+        \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}=\sum_{\mathrm{B}} \nu_{\mathrm{B}} \Delta_{\mathrm{f}} H_{\mathrm{B}, \mathrm{m}}^{\ominus}-T \sum_{\mathrm{B}} \nu_{\mathrm{B}} S_{\mathrm{B}, \mathrm{m}}^{\ominus}
+    \]
+    用热力学数据$\Delta _\mathrm{r}G_\mathrm{m}^\ominus$很容易求得反应的标准平衡常数。
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+
+    \begin{example}
+        已知298K及$p^\ominus$下化学反应和各物质的$\Delta _\mathrm{f}G_\mathrm{m}^\ominus$，计算反应的标准平衡常数$K^\ominus$。
+        \[
+            \qquad \ch{CH4(g) + 2 H2O(g) = CO2(g) + 4 H2(g)}
+        \]
+        \[
+            \Delta _\mathrm{f}G_\mathrm{m}^\ominus/(\si{kJ.mol^{-1}}) \quad -381.30 \quad -228.60 \quad -394.38 \qquad \qquad \qquad \qquad \qquad \quad
+        \]
+    \end{example}
+    \pause
+    $\begin{aligned}
+            \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus} & =\sum_{\mathrm{B}} \nu_{\mathrm{B}} \Delta_{\mathrm{f}} G_{\mathrm{B}, \mathrm{m}}^{\ominus}\\
+            & =[4 \times 0-394.38-(-318.3)-2 \times(-228.6)] \mathrm{kJ} \cdot \mathrm{mol}^{-1}\\
+            & =381.1 \mathrm{~kJ} \cdot \mathrm{mol}^{-1}\\
+            K^{\ominus}& =\exp (\frac{-\Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}}{R T})=\exp (\frac{-381.1 \times 10^{3} \mathrm{~J} \cdot \mathrm{mol}^{-1}}{8.314 \mathrm{~J} \cdot \mathrm{mol}^{-1} \cdot \mathrm{K}^{-1} \times 298 \mathrm{~K}}) \\
+            & =1.3 \times 10^{-20}
+        \end{aligned}$
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{平衡常数的计算}
+
+    稀溶液中进行反应
+    \[
+        \Delta _\mathrm{r}G_\mathrm{m}^\ominus(c^\ominus) = -RT \ln K^\ominus
+    \]
+    由纯物质反应的$\Delta _\mathrm{r}G_\mathrm{m}^\ominus$换算成稀溶液中反应的$\Delta _\mathrm{r}G_\mathrm{m}^\ominus(c^\ominus)$的过程设计如下
+    \begin{center}
+        \begin{tikzpicture}[scale=1.45]
+            \node (A1) at (0,0) {$a$A(纯)};
+            \node (A2) at (0,1) {$a$A(饱和溶液，$c_\mathrm{A}$)};
+            \node (A3) at (0,2) {$a$A$(c^\ominus)$};
+            \node (D1) at (3,0) {$d$D(纯)};
+            \node (D2) at (3,1) {$d$D(饱和溶液，$c_\mathrm{D}$)};
+            \node (D3) at (3,2) {$d$D$(c_\mathrm{D}^\ominus)$};            
+            \draw [->] (A2) -- (A1) node [left,midway] {\scriptsize $\Delta G_\mathrm{A}^{'}=0$};
+            \draw [->] (A3) -- (A2) node [left,midway] {\scriptsize $\Delta G_\mathrm{A}=-RT\ln(c_\mathrm{A}/c^\ominus)^a$};
+            \draw [->] (D1) -- (D2) node [right,midway] {\scriptsize $\Delta G_\mathrm{D}^{'}=0$};
+            \draw [->] (D2) -- (D3) node [right,midway] {\scriptsize $\Delta G_\mathrm{D}=-RT\ln(c_\mathrm{D}/c^\ominus)^d$};
+            \draw [->] (A1) -- (D1) node [above,midway] {\scriptsize $\Delta _\mathrm{r}G_\mathrm{m}^\ominus$};
+            \draw [->] (A3) -- (D3) node [above,midway] {\scriptsize $\Delta _\mathrm{r}G_\mathrm{m}^\ominus(c^\ominus)$};
+            \end{tikzpicture}
+    \end{center}
+    \vspace{-3pt}
+    \[
+        \Delta _\mathrm{r}G_\mathrm{m}^\ominus(c^\ominus) = \Delta G_\mathrm{A}+\Delta G_\mathrm{A}^{'} +\Delta _\mathrm{r}G_\mathrm{m}^\ominus + \Delta G_\mathrm{D}^{'} +\Delta G_\mathrm{D} = \Delta _\mathrm{r}G_\mathrm{m}^\ominus + RT\ln \frac{(c_\mathrm{A}/c^\ominus)^a}{(c_\mathrm{D}/c^\ominus)^d}
+    \]
+    % 溶液中溶质的标准态不是纯态物质，而是c=1mol/L或mB=1mol/kg与亨利定律的理想状态。但是在手册上能查到的是纯物质的标准生成摩尔吉布斯自由能，所以需要换算。在B的饱和溶液中，未溶解的纯化合物与溶解了的化合物相平衡，所以该过程的ΔG=0。
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{}
+
+    \begin{example}
+        298K，$p^\ominus$下，在80\%乙醇水溶液中右旋葡萄糖的$\alpha$型$\beta$型之间的转换反应为
+        \[
+            \alpha \text{-右旋葡萄糖}\rightleftharpoons \beta \text{-右旋葡萄糖}
+        \]
+        已知$\alpha$-右旋葡萄糖饱和溶解度为\SI{20}{g.dm^{-3}}，$\Delta _\mathrm{f}G_\mathrm{m}^\ominus(\alpha)=$\SI{-902.9}{kJ.mol^{-1}}；$\beta$-右旋葡萄糖饱和溶解度为\SI{49}{g.dm^{-3}}，$\Delta _\mathrm{f}G_\mathrm{m}^\ominus(\beta)=$\SI{-901.2}{kJ.mol^{-1}}。
+
+        求该转型反应的平衡常数$K^\ominus$。
+    \end{example}
+    \vspace{-13pt}
+    \pause
+    \[
+        \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus} =\Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\beta)-\Delta_{\mathrm{f}} G_{\mathrm{m}}^{\ominus}(\alpha) =-901.2 \mathrm{~kJ} \cdot \mathrm{mol}^{-1}-902.9 \mathrm{~kJ} \cdot \mathrm{mol}^{-1}=1.7 \mathrm{~kJ} \cdot \mathrm{mol}^{-1}
+    \]
+    \[
+        \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}(c^{\ominus})= \Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}+R T \ln \frac{(c_{a} / c^{\ominus})}{(c_{\beta} / c^{\ominus})} = -5.2 \times 10^{2} \mathrm{~J} \cdot \mathrm{mol}^{-1}
+    \]
+    \[
+        \ln K^{\ominus}=-\frac{\Delta_{\mathrm{r}} G_{\mathrm{m}}^{\ominus}(c^{\ominus})}{R T}=\frac{5.2 \times 10^{2} \mathrm{~J} \cdot \mathrm{mol}^{-1}}{8.314 \mathrm{~J} \cdot \mathrm{mol}^{-1} \mathrm{~K}^{-1} \times 298 \mathrm{~K}}=0.21 \qquad K^{\ominus}=1.2
+    \]
+
+\end{frame}

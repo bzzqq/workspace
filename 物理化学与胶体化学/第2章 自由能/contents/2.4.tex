@@ -1,0 +1,119 @@
+\section{偏摩尔量}
+
+
+\begin{frame}
+    \frametitle{多组分系统与单组分系统的差别}
+    单组分系统的广度性质具有加和性 。
+
+    若 1 mol单组分 B 物质的体积为$V_\mathrm{B,m}^*$
+
+    则 2 mol 单组分 B 物质的体积为$2\times V_\mathrm{B,m}^*$
+
+    而 1 mol 单组分 B 物质和 1 mol 单组分 C 物质混合 ，得到的混合体积可能有两种情况 ：
+    \begin{enumerate}
+      \item[(1)] $V=1 \mathrm{mol}\times V_{\mathrm{B,m}}^{*}+1 \mathrm{mol}\times V_{\mathrm{C,m}}^{*}$
+      \item[(2)] $V\neq 1 \mathrm{mol}\times V_{\mathrm{B,m}}^{*}+1 \mathrm{mol}\times V_{\mathrm{C,m}}^{*}$
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}{偏摩尔体积}
+    \begin{table}
+        \centering
+        \begin{tabular}{>{\columncolor{Emerald!20}}l|>{\columncolor{Emerald!5}}c>{\columncolor{Emerald!5}}c>{\columncolor{Emerald!5}}c>{\columncolor{Emerald!5}}c>{\columncolor{Emerald!5}}c}
+            \bottomrule
+             乙醇质量分数(\%) & 10 & 30 & 50 & 70 & 90 \\ 
+             乙醇体积(mL) & 12.3 & 35.1 & 55.8 & 74.65 & 91.9 \\
+             水的体积(mL) & 87.7 & 64.9 & 44.2 & 30.4 & 8.1 \\
+             混合之前的体积(mL) & ~~100~~ & ~~100~~ & ~~100~~ & ~~100~~ & ~~100~~ \\
+             混合之后的体积(mL) & 98.85 & 96.8 & 96.37 & 97 & 98.53 \\
+             体积偏差(mL) & 1.15 & 3.2 & 3.63 & 3.0 & 1.47 \\ \toprule
+        \end{tabular}
+    \end{table}
+    纯物质的广度性质具有简单的加和性。多组分体系体积的改变与体系的组成有关。为与纯物质的摩尔体积相区别，将这种与体系浓度相对应的体积数值称为偏摩尔体积。对其他广度性质也有这种概念，如偏摩尔焓，偏摩尔吉布斯自由能等，统称偏摩尔量。
+\end{frame}
+
+
+\begin{frame}{偏摩尔量}
+     纯物质体系或组成恒定的多组分体系的状态只要两个独立的变量(一般选用$T$和$p$)就可以确定，如$Z=Z(T,p)$。
+
+     当多组分封闭体系内组成改变或有相变、化学变化时，仅规定温度和压力，并不能确定体系的状态，体系广度性质的改变d$Z$还与各组分物质的量有关。这是因为在某一组成的均相混合体系中，某热力学广度性质的量并不等于各物质在纯态时该广度性质之和。
+     $$Z = Z(T,p,n_1,n_2,n_3\cdots )$$
+     由此引出两个新的状态函数：偏摩尔量(partial molar quantity)与化学势(chemical potential)。
+\end{frame}
+
+
+\begin{frame}{偏摩尔量的定义}
+    组成可变的多组分均相体系，任一广度性质$Z$可写成温度、压力与各组分的量的函数
+    $$Z = Z(T,p,n_1,n_2,n_3\cdots )$$
+    当体系的状态发生微小变化时，状态函数$Z$的变化是全微分
+    $$\mathrm{d}Z=\left(\frac{\partial Z}{\partial T}\right)_{p,n}\mathrm{d}T + \left(\frac{\partial Z}{\partial p}\right)_{T,n}\mathrm{d}p + \left(\frac{\partial Z}{\partial n_1}\right)_{T,p,n_z}\mathrm{d}n_1 + \left(\frac{\partial Z}{\partial n_2}\right)_{T,p,n_z}\mathrm{d}n_2 + \cdots$$
+    式中，下标$n$表示体系中各组分的量都不变；$n_\mathrm{z}$表示除指定的某组分外，其余的各组分的物质的量均不变。当体系在定温定压下发生变化时，定义
+    $$Z_{\mathrm{B,m}}=\left(\frac{\partial Z}{\partial n_\mathrm{B}}\right)_{T,p,n_z}$$
+\end{frame}
+
+
+\begin{frame}{偏摩尔量的定义}
+    $$Z_{\mathrm{B,m}}=\left(\frac{\partial Z}{\partial n_\mathrm{B}}\right)_{T,p,n_z}$$
+    $$\mathrm{d}Z=\sum_B{Z_\mathrm{B,m}}\mathrm{d}n_\mathrm{B}$$
+    (1)式为物质B的偏摩尔量定义式，$Z_{\mathrm{B,m}}$称为组分B的偏摩尔量。
+    \\偏摩尔量的物理意义是，定温定压下，向浓度一定的无限大体系中加入1mol某组分B而引起体系中某一广度性质$Z$的改变量；或是在$T$、$p$及各组分物质的量都保持不变时，体系中某一广度性质$Z$随组分B的偏摩尔变化率。
+
+    \begin{itemize}
+      \item 只有在定温定压条件下，只有广度性质才有偏摩尔量。
+      \item 偏摩尔量是强度性质，它与$T$、$p$有关，也与体系中组分B的浓度有关。
+      \item 纯物质的偏摩尔量就是它的摩尔量 。
+    \end{itemize}
+    
+\end{frame}
+
+
+\begin{frame}{偏摩尔量的集合公式}
+    在定温定压下，按体系中各组分的量之比，缓慢加入各组分，因各组分的摩尔比不变化，对$\mathrm{d}Z=\sum_B{Z_\mathrm{B,m}}\mathrm{d}n_\mathrm{B}$积分
+    $$Z=\int_{0}^{n_{1}} Z_{1, \mathrm{~m}} \mathrm{~d} n_{1}+\int_{0}^{n_{2}} Z_{2, \mathrm{~m}} \mathrm{~d} n_{2}+\cdots=n_{1} Z_{1, \mathrm{~m}}+n_{2} Z_{2, \mathrm{~m}}+\cdots$$
+    即
+    $$Z=\sum_Bn_\mathrm{B}{Z_\mathrm{B,m}}$$
+    上式为偏摩尔量集合公式。公式表明，定温定压下，多组分体系中任一广度性质之值等于各组分的量与其偏摩尔量之积的加和。
+    \begin{blankblock}{}
+        例如，系统只有两个组分 ， 其物质的量和偏摩尔体积分别为$n_\mathrm{A}$，$V_\mathrm{A,m}$和$n_\mathrm{B}$，$V_\mathrm{B,m}$， 则系统的总体积为$V=n_\mathrm{A}V_\mathrm{A,m}+n_\mathrm{B}V_\mathrm{B,m}$
+    \end{blankblock}
+    \vspace{-3pt}
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{example}
+        由2.0 mol A 和1.5 mol B 组成的二组分溶液的体积为425 $\si{cm^3}$，已知 $V_\mathrm{B,m}=250\si{cm^3.mol}$，求$V_\mathrm{A,m}$
+    \end{example}
+    \pause
+    \[
+        \begin{aligned}
+            2V_\mathrm{A,m} + 1.5V_\mathrm{B,m}&=425 \\
+            2V_\mathrm{A,m} + 1.5\times 250&=425 \\
+            V_\mathrm{A,m}&=25 \, \si{cm^3.mol}
+        \end{aligned}
+    \]
+
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        某白酒厂在298.15K和101.325kPa下，酒窖中存有含乙醇质量分数0.96的酒\SI{20.0}{m^3}，今欲加水勾兑成含乙醇质量分数0.56的酒，试计算：
+
+        (1) 应加入水的质量是多少千克？体积是多少立方米？
+
+        (2) 加水后可得到的体积是多少立方米含乙醇质量分数0.56的酒？已知该条件下，纯水的密度为\SI{999.1}{kg.m^{-3}}。
+
+        \begin{table}
+            \centering
+            \begin{tabular}{cccc}
+                \bottomrule
+                $\omega$(乙醇) & $V_{\text{水}}$(\SI{e-6}{m^3.mol^{-1}}) & $V_{\text{醇}}$(\SI{e-6}{m^3.mol^{-1}})  \\ \hline
+                0.96 & 14.61 & 58.01 \\ \hline
+                0.56 & 17.11 & 56.58 \\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{example}
+\end{frame}

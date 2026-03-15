@@ -1,0 +1,118 @@
+\documentclass[lang=cn,11pt,chinesefont=founder]{elegantbook}
+\usepackage{graphicx}
+\usepackage{unicode-math}
+\usepackage{framed} %段落加边框
+\usepackage{listings} %代码排版
+\usepackage{makecell} %表格内强制换行
+\usepackage{titletoc} % 章节目录
+\setmathfont{XITS Math}
+% 取消pdf的压缩，最终版取消这个命令即可
+\special{dvipdfmx:config z 0}
+
+%Python代码排版设置
+\lstset{
+    language=Python, % 设置语言
+ breaklines=true, % 自动换行
+ backgroundcolor=\color[rgb]{0.96,0.96,0.96},% 背景颜色
+ keywordstyle=\bfseries\color{RoyalBlue}, % 设置关键字为粗体，颜色为 RoyalBlue
+ morekeywords={}, % 设置更多的关键字，用逗号分隔
+ emph={left,right,mid}, % 指定强调词，如果有多个，用逗号隔开
+    emphstyle=\bfseries\color{Rhodamine}, % 强调词样式设置
+    commentstyle=\color{black!50!white}, % 设置注释样式，斜体，浅灰色
+    stringstyle=\color{PineGreen!90!black}, % 设置字符串样式
+    columns=flexible,
+    numbers=left, % 显示行号在左边
+    numbersep=2em, % 设置行号的具体位置
+    numberstyle=\footnotesize, % 缩小行号
+    xleftmargin=6em, % 左边距
+    xrightmargin=4em, % 右边距
+    aboveskip=1em, % 上边距
+    % framexleftmargin=2em, 行号在框内
+    framesep=1em, % 设置边框与代码的距离
+    frame=shadowbox,rulesep=3pt,rulesepcolor=\color{red!20!green!20!blue!20} % 阴影边框
+    }
+
+\renewcommand*{\lstlistingname}{Code} % 重定义Listing标题
+
+% 取消pdf的压缩，最终版取消这个命令即可
+% \special{dvipdfmx:config z 0}
+
+%自定义命令 颜色
+\newcommand*{\cred}{\textcolor{red}}
+\newcommand*{\cblue}{\textcolor{blue}}
+\definecolor{mygreen}{RGB}{0,166,82}
+\newcommand*{\cgreen}{\textcolor{mygreen}}
+\newcommand*{\ccyan}{\textcolor{cyan}}
+\newcommand*{\cmagenta}{\textcolor{magenta}}
+\newcommand*{\cyellow}{\textcolor{yellow}}
+\newcommand*{\cdarkblue}{\textcolor{DarkBlue}}
+\definecolor{epubblue}{RGB}{1,126,218}
+\newcommand*{\cepubblue}{\textcolor{epubblue}}
+
+
+%封面
+\title{大学信息技术基础}
+\subtitle{学习笔记}
+
+\author{张斌}
+\institute{河北农业大学\quad 理工系}
+\date{\today}
+%\version{4.3}
+%\bioinfo{自定义}{信息}
+
+\extrainfo{内容收集于网络}
+
+\cover{cover.png}
+
+% 本文档命令
+\usepackage{array}
+\newcommand{\ccr}[1]{\makecell{{\color{#1}\rule{1cm}{1cm}}}}
+
+
+
+\begin{document}
+\maketitle
+\begin{sloppypar} %文字溢出自动换行
+\frontmatter
+\tableofcontents
+\mainmatter
+
+
+\chapter{Excel}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{sections/excel1.tex}
+\input{sections/excel2.tex}
+\input{sections/excel3.tex}
+\input{sections/excel4.tex}
+\input{sections/excel5.tex}
+\input{sections/excel6.tex}
+\input{sections/excel7.tex}
+\chapter{PowerPoint}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{sections/ppt1.tex}
+
+\chapter{智慧农业系统}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{sections/2.1.tex}
+\chapter{农业数字化技术}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{sections/3.1.tex}
+\chapter{数据传输技术}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{sections/4.1.tex}
+\newpage
+\chapter{计算思维与算法}
+\startcontents[chapters]
+\printcontents[chapters]{}{1}[2]{\contentsmargin{1em}}
+\input{sections/5.1.tex}
+\input{sections/5.2.tex}
+
+
+
+\end{sloppypar}
+\end{document}

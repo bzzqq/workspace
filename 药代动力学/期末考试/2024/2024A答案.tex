@@ -1,0 +1,250 @@
+\documentclass[12pt, a4paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{a4paper,left=3.17cm,right=3.17cm,top=2cm,bottom=2cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{pifont} % 圆圈数字
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\usepackage{listings} % 代码
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+\setCJKmainfont{SimSun}[AutoFakeBold, AutoFakeSlant] 
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+
+%微分符号
+\makeatletter
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\makeatother
+
+%直立积分
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+%Python代码排版设置
+\lstset{
+    language=Python, % 设置语言
+ breaklines=true, % 自动换行
+ backgroundcolor=\color[rgb]{0.96,0.96,0.96},% 背景颜色
+ keywordstyle=\bfseries\color[RGB]{40,40,255}, % 设置关键字为粗体，颜色为 RoyalBlue
+ morekeywords={}, % 设置更多的关键字，用逗号分隔
+ basicstyle = \linespread{1} \ttfamily, % 设置行距，字体
+ emph={left,right,mid}, % 指定强调词，如果有多个，用逗号隔开
+    emphstyle=\bfseries\color{Rhodamine}, % 强调词样式设置
+    commentstyle=\color{black!50!white}, % 设置注释样式，斜体，浅灰色
+    stringstyle=\color{blue!90!black}, % 设置字符串样式
+    columns=flexible,
+    numbers=left, % 显示行号在左边
+    numbersep=2em, % 设置行号的具体位置
+    numberstyle=\footnotesize \color{gray}, % 设置行号格式
+    xleftmargin=0em, % 左边距
+    xrightmargin=0em, % 右边距
+    aboveskip=0.5em, % 上边距
+    % framexleftmargin=2em, 行号在框内
+    framesep=1em, % 设置边框与代码的距离
+    frame=shadowbox,rulesep=3pt,rulesepcolor=\color{red!20!green!20!blue!20},% 阴影边框
+    showstringspaces = false, % 不显示字符串中的空格
+    }
+
+\renewcommand*{\lstlistingname}{Code} % 重定义Listing标题
+
+
+
+\begin{document}
+\begin{spacing}{1.625}
+
+
+\centerline{{\Large \bf{河北农业大学}}}
+
+\centerline{\bf{\Large 20\underline{24}年春（\quad ）/秋（\ \surd \ ）学期}}
+
+\centerline{\Large \bf 参考答案及评分标准（A）卷}
+
+\centerline{\bf 开课学院：\underline{\ \ \quad 理工系 \quad \ \ } \quad 出\ \ 题\ \ 人：\underline{\quad \qquad \qquad 张斌\quad \qquad \qquad}}
+
+\centerline{\bf 课\ \ 程\ \ 号：\underline{\ \ H05981047\quad} \quad 课程名称：\underline{生物制剂与药物代谢动力学}}
+
+{{\noindent} \hspace{-2em} \rule[0pt]{16cm}{0.15em}}\\
+
+\vspace{-2em}
+{\bf 一、综合题（共100分）}
+
+1. (10分) 
+
+由数据可以看出，血药浓度随时间变化先增大后减小，所以判断存在吸收过程，给药方式为血管外给药。\hfill $\cdots \cdots \cdots (10\text{分})$
+
+{\bf 评分标准：}写口服给药也可以。
+
+2. (40分) 
+
+取尾段两点，以浓度对数对时间t作直线，计算直线斜率，即为$k$：
+
+$k = 0.1$ h \hfill $\cdots \cdots \cdots (20\text{分})$
+
+采用残数法，取残数浓度的对数对时间t作直线，计算直线斜率，即为$k_\mathrm{a}$：
+
+$k_\mathrm{a} = 2$ h \hfill $\cdots \cdots \cdots (20\text{分})$
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{images/ka}
+\end{figure}
+
+计算机运算代码如下：
+
+\begin{lstlisting}
+    import numpy as np
+    import matplotlib.pyplot as plt
+    # 数据
+    t = np.array([0.5, 1, 1.5, 2, 3, 4, 6, 9, 12, 18, 24])
+    C = np.array([24.56, 32.40, 34.14, 33.70, 31.09, 28.21, 23.11, 17.12, 12.68, 6.96, 3.82])
+    # 计算k
+    p1 = np.polyfit(t[-3:], np.log(C[-3:]), 1)
+    Cr = np.exp(p1[0] * t[:3] + p1[1]) - C[:3]
+    print(f'k = {-p1[0]:.2f}')
+    # 计算ka
+    p2 = np.polyfit(t[:3], np.log(Cr), 1)
+    print(f'ka = {-p2[0]:.2f}')
+    # 绘图
+    plt.plot(t, np.log(C), "*", label="Data")
+    plt.plot(t, np.polyval(p1, t), label="尾段直线")
+    plt.plot(t[:4], np.polyval(p2, t[:4]), label="残数线")
+    plt.text(10, 3, f"y = {p1[0]:.2f}x + {p1[1]:.2f}", fontsize=12)
+    plt.text(2.5, 1, f"y = {p2[0]:.2f}x + {p2[1]:.2f}", fontsize=12)
+    plt.xlabel("t")
+    plt.ylabel("ln(c)")
+    plt.legend()
+    plt.show()
+    \end{lstlisting}
+
+{\bf 评分标准：}
+
+因考试无法使用计算机进行线性回归，所以允许答案存在一定误差。
+
+3. (30分)
+
+答案1：使用血药浓度数据计算，残数法
+
+(1) 对消除相的$\ln (C)$对$t$进行回归处理，得出尾段直线的回归方程，根据斜率求出$k$与消除半衰期。
+
+(2) 将吸收相各时间代入尾段直线的回归方程便能求出外推浓度
+
+(3) 外推浓度$-$实测浓度$=$残数浓度$C_\mathrm{r}$
+ 
+(4) 以残数浓度对数$\ln C_\mathrm{r}$对$t$作线性回归得残数线，从残数线的斜率求出$k_\mathrm{a}$
+
+
+答案2：使用血药浓度数据计算，W-N法
+
+(1) 选用尾段消除相的实测浓度-时间数据，以浓度对数对$t$作图，采用线性回归法求得尾段直线回归方程 ， 根据直线斜率求得消除速率常数$k$。
+
+(2) 根据实测浓度-时间数据，用梯形法分别求得从0到$t$时间点的$AUC_{0\to t_i}$以及$C{_t{_i}}+k\int_{0}^{t_i}C\mathrm{d}t=C_t{_i}+kAUC_{0\to t_i}$
+
+(3) 根据最后一点实测血药浓度$C_\mathrm{n}$与$k$值，求得$k\int_{0}^{\infty}C\mathrm{d}t=k\cdot AUC_{0\to t_n}+C_n$
+
+(4) 计算$t{_i}$时间点的药物吸收分数
+
+(5) 计算$t{_i}$时间点的待吸收分数，以其对数对$t$作图，求得直线回归方程，根据直线的斜率求得吸收速率常数$k_\mathrm{a}$
+
+答案3：使用尿药量数据计算
+
+(1) 以$\frac{\Delta X_{\mathrm{u}}}{\Delta t}$的对数对$t_\mathrm{c}$作图，从直线的斜率可求出消除速率常数$k$值。
+
+(2) 计算尿药排泄总量：$X_\mathrm{u}^\infty = (X_\mathrm{u})_0^t + \frac{(\Delta X_\mathrm{u}/\Delta t)_t}{k} $
+
+(3) 以$\ln{(X_\mathrm{u}^\infty - X_\mathrm{u})}$对$t$作图，由尾段直线的斜率可求出消除速率常数$k$。
+
+(4) 将吸收相时间点代入回归方程求得吸收相$X_\mathrm{u}^\infty - X_\mathrm{u}$的外推值，再减去吸收相$X_\mathrm{u}^\infty - X_\mathrm{u}$的实测值，得残数亏量值。
+
+(5) 以残数亏量值的对数$\ln (X_\mathrm{u}^\infty - X_\mathrm{u})_r$对$t$作线性回归得残数线，从残数线的斜率求出$k_\mathrm{a}$
+
+{\bf 评分标准：}可使用任意方法，合理即可。
+
+4. (20分)
+
+(1) 消除半衰期$t_{1/2}$
+
+$
+    t_{1/2} = \ln(2)/k = \frac{0.693}{0.1} = 6.93 \ \mathrm{h} 
+$
+$\hfill \cdots \cdots \cdots (5\text{分})$
+
+(2) 表观分布容积$V$
+
+因残数线截距为3.74，$\ln \frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)} = 3.74$，所以
+
+$
+    V = \frac{k_\mathrm{a}FX_0}{(k_\mathrm{a}-k)\exp{(3.74)}} = \frac{2\times 0.8\times 500}{(2-0.1)\times \mathrm{e}^{3.74}} = 10 \ \mathrm{L}
+$
+$\hfill \cdots \cdots \cdots (5\text{分})$
+
+(3) 血药浓度-时间曲线下面积$AUC$
+
+$
+    AUC = \frac{FX_0}{kV} = \frac{0.8\times 500}{0.1\times 10} = 400 \ \mathrm{mg/(h\cdot L)}
+$
+$\hfill \cdots \cdots \cdots (5\text{分})$
+
+
+(4) 肾清除率$Cl_\mathrm{r}$
+
+\begin{table}[htpb]
+    \centering
+    \small
+    \begin{tabular}{c|ccccccccccc}
+        \bottomrule
+        t & 0$\sim$1 & 0.5$\sim$1.5 & 1$\sim$2 & 1$\sim$3 & 2$\sim$4 & 2$\sim$6 & 3$\sim$9 & 6$\sim$12 & 6$\sim$18 & 12$\sim$24 \\ 
+        $C_\text{中}$ & 24.56 & 32.40 & 34.14 & 33.70 & 31.09 & 28.21 & 23.11 & 17.12 & 12.68 & 6.96 \\ 
+        $\Delta t$ & 1 & 1 & 1 & 2 & 2 & 4 & 6 & 6 & 12 & 12 \\ 
+        $\Delta X_\mathrm{u}$ & 13.12 & 18.85 & 20.28 & 39.76 & 37.26 & 67.95 & 84.41 & 62.56 & 96.89 & 53.17 \\
+        \hspace{-6pt}$\frac{\Delta X_\mathrm{u}/\Delta t}{C_\text{中}}$ & 0.53 & 0.58 & 0.59 & 0.59 & 0.59 & 0.60 & 0.61 & 0.61 & 0.64 & 0.64 \\ \toprule
+    \end{tabular}
+\end{table}
+
+$
+    Cl_\mathrm{r} = \frac{1}{N}\Sigma_{i=1}^{N} \frac{\Delta X_\mathrm{u}/\Delta t}{C_\text{中}} = 0.6 \ \mathrm{L/h}
+$
+$\hfill \cdots \cdots \cdots (5\text{分})$
+
+{\bf 评分标准：}
+
+答案允许存在一定误差。
+
+\end{spacing}
+\end{document}

@@ -1,0 +1,944 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme}
+\usetikzlibrary{tikzmark}
+% \special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+%封面
+\title{Matlab基础}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+    
+    \begin{frame}
+        \titlepage
+        \thispagestyle{empty}
+    \end{frame}
+
+
+
+
+
+\begin{frame}{}
+    \begin{center}
+        {\Huge \cbf{目 \ 录}}
+    \end{center}
+    \tableofcontents[subsectionstyle=hide/hide/show]
+    \thispagestyle{empty}
+\end{frame}
+
+
+\section{初识Matlab}
+
+
+% \begin{frame}
+%     \frametitle{工具箱}
+%     \begin{itemize}
+%       \item Curve Fitting Toolbox 曲线拟合工具箱
+%       \item Optimization Toolbox 优化工具箱
+%       \item Deep Learning Toolbox 深度学习工具箱
+%     \end{itemize}
+% \end{frame}
+
+
+\begin{frame}
+    \frametitle{Matlab简介}
+    MATLAB是美国MathWorks公司出品的商业数学软件。MATLAB是matrix \& laboratory两个词的组合，意为矩阵实验室，软件主要面对科学计算、可视化以及交互式程序设计的高科技计算环境。
+    \begin{enumerate}
+      \item 高效的数值计算及符号计算功能，能使用户从繁杂的数学运算分析中解脱出来；
+      \item 具有完备的图形处理功能，实现计算结果和编程的可视化；
+      \item 友好的用户界面及接近数学表达式的自然化语言，使学者易于学习和掌握；
+      \item 功能丰富的应用工具箱(如信号处理工具箱、通信工具箱等) ，为用户提供了大量方便实用的处理工具。
+        \begin{itemize}
+            \item Curve Fitting Toolbox 曲线拟合工具箱
+            \item Optimization Toolbox 优化工具箱
+            \item Deep Learning Toolbox 深度学习工具箱
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{程序界面}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.87\linewidth]{matlab界面}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{命令行}
+    \begin{minipage}{0.48\linewidth}
+        在命令行中输入语句，Matlab逐句解释执行并在命令行窗口中给出结果。
+
+        \begin{itemize}
+          \item 使用分号“;”则不输出结果
+          \item 使用clc命令清屏
+          \item 使用clear清除保存的所有变量
+          \item 使用上下键回调以前输入的语句行
+        \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{命令行}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{脚本文件}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.74\linewidth]{脚本}
+        \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{实时脚本}
+    从 R2016a 开始MATLAB 支持实时脚本
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.95\linewidth]{实时脚本}
+        \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{向代码添加注释}
+    \begin{itemize}
+      \item 要向 MATLAB 代码中添加注释，请使用百分比 (\%) 符号。
+      \item 在实时编辑器中，您可以在代码前后插入文本行来描述过程或代码。
+      \item 要注释掉多个代码行，请使用块注释运算符 \%\{ 和 \%\}。
+    \end{itemize}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{注释}
+    \end{figure}
+
+\end{frame}
+
+
+
+\section{运算}
+
+
+\begin{frame}[t]
+    \frametitle{一个简单的计算实例}
+        \begin{example}
+            欲配制 0.02 mol/L的NaOH标准溶液250 mL ，应称取NaOH多少克 ？
+        \end{example}
+        \pause
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.55\linewidth]{简单计算}
+        \end{figure}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{另一个计算案例}
+    \vspace{-1em}
+    \begin{example}
+        配置如下浓度和体积的NaOH溶液，各应称取NaOH多少克？
+        \begin{table}
+            \centering
+            \begin{tabular}{cccccc}
+                \bottomrule
+                c(mol/L) & 0.1 & 0.2 & 0.3 & 0.4 & 0.5 \\ \hline
+                V(mL) & 100 & 200 & 300 & 400 & 500 \\ \toprule
+            \end{tabular}
+        \end{table}
+        \vspace{-1em}
+    \end{example}
+    \vspace{-1em}
+    \pause
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.8\linewidth]{计算2}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Matlab的数据结构}
+    Matlab的最大特点是能够操作矩阵，每种类型的数据都是以矩阵的形式存在的。
+
+    考虑一个3行4列的矩阵：
+    \[
+        \begin{aligned}
+                 &1\quad 2\quad 3\quad 4 \\
+            a =\ &5\quad 6\quad 7\quad 8 \\
+                  &1\quad 2\quad 3\quad 4 
+        \end{aligned}
+    \]
+    Matlab中，用分号“;”来分开矩阵的各行，用空格或逗号“,”来分开矩阵的各列
+
+    因此3行4列的矩阵a在Matlab中表示为
+\begin{codeblock}{}
+a = [1 2 3 4; 5 6 7 8; 1 2 3 4]
+# 或
+a = [1,2,3,4; 5,6,7,8; 1,2,3,4]
+\end{codeblock}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{矩阵的加减运算}
+    若两个或多个矩阵的行列数相同，可进行加减运算。加减后得到一个新的矩阵，具体：每个元素和对应位置的元素加减。
+
+\begin{minipage}{0.2\linewidth}
+    ~~
+\end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \[
+            \begin{aligned}
+                     &1\quad 2\quad 3\quad 4 \\
+                a =\ &5\quad 6\quad 7\quad 8 \\
+                      &1\quad 2\quad 3\quad 4 
+            \end{aligned}
+        \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.28\linewidth}
+        \[
+            \begin{aligned}
+                     &4\quad 3\quad 2\quad 1 \\
+                b =\ &1\quad 1\quad 1\quad 1 \\
+                      &4\quad 3\quad 2\quad 1 
+            \end{aligned}
+        \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.2\linewidth}
+    ~~
+    \end{minipage}
+    
+\begin{codeblock}{}
+c = a + b
+\end{codeblock}    
+\vspace{-1em}
+\[
+            \begin{aligned}
+                     &5\quad 5\quad 5\quad 5 \\
+                c =\ &6\quad 7\quad 8\quad 9 \\
+                      &5\quad 5\quad 5\quad 5 
+            \end{aligned}
+        \]
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{矩阵乘法*和点乘.*}
+    \begin{minipage}{0.38\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{乘法}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.58\linewidth}
+        \begin{itemize}
+          \item 矩阵A×B，要求A的列数要等于B的行数
+          \item 点乘运算要求矩阵具有相同的维度
+          \item 点除./运算同点乘.*
+        \end{itemize}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{点积运算}
+    \vspace{-1em}
+    \begin{example}
+        欲配置如下浓度和体积的NaOH溶液，应称取NaOH共多少克？
+        \begin{table}
+            \centering
+            \begin{tabular}{cccccc}
+                \bottomrule
+                c(mol/L) & 0.1 & 0.2 & 0.3 & 0.4 & 0.5 \\ \hline
+                V(mL) & 100 & 200 & 300 & 400 & 500 \\ \toprule
+            \end{tabular}
+        \end{table}
+        \vspace{-1em}
+    \end{example}
+    \vspace{-1em}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.7\linewidth]{点积}
+    \end{figure}
+\end{frame}
+
+
+
+
+\begin{frame}[fragile]
+    \frametitle{使用冒号快速创建一维数组}
+    在Matlab中，通过冒号快速创建一维数组的代码如下：
+\begin{codeblock}{}
+X = 首项:公差:末项
+\end{codeblock}
+例如，等差数列1\ 3\ 5\ 7\ 9可用如下命令快速定义：
+\begin{codeblock}{}
+a = 1:2:9
+\end{codeblock}
+如果公差为1，则公差可以省略。如1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9可用如下命令快速定义：
+\begin{codeblock}{}
+a = 1:9
+\end{codeblock}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{使用linspace函数}
+    使用linspace生成线性间距向量：
+\begin{codeblock}{语法}    
+y = linspace(x1,x2)
+y = linspace(x1,x2,n)    
+\end{codeblock}   
+说明：
+
+y = linspace(x1,x2) 返回包含 x1 和 x2 之间的 100 个等间距点的行向量。
+
+y = linspace(x1,x2,n) 生成 n 个点。这些点的间距为 (x2-x1)/(n-1)。
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{转置}
+    交换矩阵的行和列
+\begin{codeblock}{}
+B = A'
+\end{codeblock}  
+
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=.95\linewidth]{转置}
+\end{figure}  
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{几种特殊矩阵的生成方法}
+    空矩阵：不包含任何元素的矩阵
+\begin{codeblock}{}
+a = [ ]
+\end{codeblock}
+零矩阵：所有元素都是整数0的矩阵
+\begin{codeblock}{}
+b = zeros(2,3) # 生成一个2行3列的零矩阵
+\end{codeblock}
+全1矩阵：所有元素都是1的矩阵
+\begin{codeblock}{}
+c = ones(2,3) # 生成一个2行3列的全1矩阵
+\end{codeblock}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{引用矩阵中的元素}
+    \vspace{-1em}
+    \[
+        \begin{aligned}
+                 &1\quad 2\quad 3\quad 4 \\
+            a =\ &5\quad 6\quad \red{7\quad 8} \\
+                  &1\quad 2\quad \red{3\quad 4} 
+        \end{aligned}
+    \]
+\begin{codeblock}{}
+b = a(2,3) # 将矩阵a中的第2行，第3列的元素赋值给b，b = 7
+c = a(2:3,3:4) # 将矩阵a中的第2到3行，第3到4列的元素块(红色部分)赋值给c
+\end{codeblock}
+对于一维数组$a = [0\ 1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9]$，更简洁的引用方式是
+\begin{codeblock}{}
+b = a(2) # 将a中的第2个元素赋值给b，b = 1
+c = a(2:5) # 将a中的第2到5个元素赋值给c，c = [1 2 3 4]
+d = a(2:end) # 将a中的第2各到最后一个元素赋值给d，d = [1 2 3 4 5 6 7 8 9]
+e = a(end-2:end) # 将a中的最后3个元素赋值给e，e = [7 8 9]
+\end{codeblock}
+\vspace{-2pt}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{矩阵元素的赋值}
+    \vspace{-1em}
+    \[
+        \begin{aligned}
+                 &1\quad 2\quad 3\quad 4 \\
+            a =\ &5\quad 6\quad 7\quad 8 \\
+                  &1\quad 2\quad 3\quad 4
+        \end{aligned}
+    \]
+\begin{codeblock}{}
+a(2,3) = 0 # 将矩阵a中的第2行，第3列的元素赋值为0
+a(2:3,3:4) = [1 2; 3 4] # 将矩阵a中的第2到3行，第3到4列的元素块赋值为[1 2; 3 4]
+\end{codeblock}
+对于一维数组$a = [0\ 1\ 2\ 3\ 4\ 5\ 6\ 7\ 8\ 9]$，更简洁的赋值方式是
+\begin{codeblock}{}
+a(2) = 0 # 将a中的第2个元素赋值为0
+a(2:5) = [9 8 7 6] # 将a中的第2到5个元素赋值为[9 8 7 6]
+a(2:end) = 0 # 将a中的第2各到最后一个元素赋值为0
+a(end-2:end) = 0 # 将a中的最后3个元素赋值为0
+\end{codeblock}
+\vspace{-2pt}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{矩阵的基本函数运算}
+    \begin{table}
+        \centering
+        \caption{Matlab常用的矩阵函数}
+        \begin{tabular}{c|c||c|c}
+            \bottomrule
+            函数名 & 说明 & 函数名 & 说明 \\ \hline
+            det & 求矩阵的行列式 & fliplr & 矩阵左右翻转 \\ \hline
+            inv & 求矩阵的逆 & flipud & 矩阵上下翻转 \\ \hline
+            eig & 求矩阵的特征值和特征向量 & resharp & 矩阵阶数重组 \\ \hline
+            rank & 求矩阵的秩 & rot90 & 矩阵逆时针旋转90° \\ \hline
+            trace & 求矩阵的迹 & diag & 提取或建立对角阵 \\ \hline
+            norm & 求矩阵的范数 & tril & 取矩阵的左下三角部分 \\ \hline
+            poly & 求矩阵特征方程的根 & triu & 取矩阵的右上三角部分 \\ \toprule
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{question}
+        298K的几瓶气体，压力及体积如下表所示。计算气体的总摩尔量。
+        \begin{table}
+            \centering
+            \begin{tabular}{cccccccccc}
+                \bottomrule
+                p(MPa) & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 & 0.35 & 0.4 & 0.45 & 0.5\\ \hline
+                V(L) & 100 & 200 & 300 & 400 & 500 & 600 & 700 & 800 & 900\\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{question}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{设置输出显示格式}
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{codeblock}{}
+format short
+\end{codeblock}
+\vspace{-6pt}
+\begin{table}[]
+    \begin{tabularx}{\textwidth} { 
+         l
+         >{\raggedright\arraybackslash}X 
+         l 
+         }
+    \toprule
+    \multicolumn{1}{c}{\textbf{Style}} & \multicolumn{1}{c}{\textbf{结果}}                                    & \multicolumn{1}{c}{\textbf{示例}} \\ \midrule
+    short                              & 短固定十进制小数点格式，小数点后包含 4   位数(默认)                                & 3.1416                          \\
+    long                               & 长固定十进制小数点格式            & 	3.141592653589793                   \\
+    shortE                             & 短科学记数法，小数点后包含 4 位数。                                                & 3.1416e+00                        \\
+    longE                              & 长科学记数法                 & 	3.141592653589793e+00                       \\
+    shortG                             & 短固定十进制小数点格式或科学记数法（取更紧凑的一个），总共 5   位。                               & 3.1416                          \\
+    longG                              & 长固定十进制小数点格式或科学记数法（取更紧凑的） & 3.14159265358979                     \\ \bottomrule
+    \end{tabularx}
+    \end{table}
+\end{frame}
+
+
+\section{绘图}
+
+\begin{frame}[fragile]
+    \frametitle{二维绘图函数plot()}
+    \begin{minipage}{0.48\linewidth}
+        绘制$y=\sin(x)$
+
+\begin{codeblock}{}
+x = 0:0.01:10;
+y = sin(x);
+plot(x,y)
+\end{codeblock}
+
+\end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{sinx}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+
+
+
+\begin{frame}[fragile]
+    \frametitle{线型、颜色}
+    \begin{minipage}{0.48\linewidth}
+
+            \begin{table}
+                \centering
+                \caption{线型}
+                \begin{tabular}{cccc}
+                    \bottomrule
+                    实线 & 划线 & 点线 & 点划线 \\ \hline
+                    \verb|-| & \verb|--| & \verb|:| & \verb|-.| \\ \toprule
+                \end{tabular}
+            \end{table}
+            \begin{table}
+                \centering
+                \caption{颜色}
+                \begin{tabular}{cccc}
+                    \bottomrule
+                    黑色 & 白色 & 红色 & 蓝色\\ \hline
+                    k & w & r & b\\ \hline
+                    绿色 & 黄色 & 灰色 & 品红色\\ \hline
+                    g & y & c & m\\ \toprule
+                \end{tabular}
+            \end{table}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{codeblock}{}
+plot(x,y,'--r')
+\end{codeblock}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{红色虚线}
+        \end{figure}
+    \end{minipage}
+
+    
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{标记}
+    \begin{minipage}{0.48\linewidth}
+        \begin{table}
+            \centering
+            \caption{标记}
+            \begin{tabular}{cccc}
+                \bottomrule
+                圆圈 & 加号 & 星号 & 点\\ \hline
+                o & $+$ & $*$ & .\\ \hline
+                水平线条 & 垂直线条 & 方形 & 菱形 \\ \hline
+                \verb|_| & | & s & d \\ \hline
+                上三角 & 下三角 & 左三角 & 右三角\\ \hline
+                \verb|^| & v & $<$ & $>$ \\ \hline
+                五角形 & 六角形 & 叉号 & \\ \hline
+                p & h & x & \\ \toprule
+            \end{tabular}
+        \end{table}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{codeblock}{}
+plot(x,y,'p')
+\end{codeblock}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{标记}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{设置坐标轴范围}
+    \begin{minipage}{0.48\linewidth}
+单独设置x轴或y轴的范围
+\begin{codeblock}{}
+xlim([0 2*pi])
+ylim([-1.5 1.5])
+\end{codeblock}
+同时设置x轴y轴范围
+\begin{codeblock}{}
+# x轴的范围0到2pi，y轴范围-1.5到1.5
+axis([0 2*pi -1.5 1.5]) 
+\end{codeblock}        
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{坐标轴范围}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{指定坐标轴刻度值}
+    \begin{minipage}{0.48\linewidth}
+\begin{codeblock}{}
+xticks(0:0.5*pi:2*pi)
+xticklabels({'0','0.5\pi','\pi','1.5\pi','2\pi'})
+\end{codeblock}        
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{坐标轴刻度}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{添加坐标轴标签}
+    \begin{minipage}{0.48\linewidth}
+        使用 xlabel 和 ylabel 函数向图中添加轴标签。
+\begin{codeblock}{}
+xlabel('0 < x < 2\pi') 
+ylabel('Values') 
+\end{codeblock}          
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{坐标轴标签}
+        \end{figure}
+    \end{minipage}
+  
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{为图添加标题}
+    \begin{minipage}{0.48\linewidth}
+        使用 title 函数向图中添加标题。
+        
+        要显示希腊符号 π，请使用 TeX 标记 \verb|\pi|。
+\begin{codeblock}{}
+title('Sine Between 0 and 2\pi')
+\end{codeblock}          
+            \end{minipage}\hfill
+            \begin{minipage}{0.48\linewidth}
+                \begin{figure}[htpb]
+                    \centering
+                    \includegraphics[width=\linewidth]{添加标题}
+                \end{figure}
+            \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{绘制两个线条}
+    \begin{minipage}{0.48\linewidth}
+\begin{codeblock}{}
+x = 0:0.2:10;
+y1 = sin(x);
+y2 = cos(x);
+plot(x,y1,x,y2)
+\end{codeblock}        
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{两个线条}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{添加图例}
+    \begin{minipage}{0.48\linewidth}
+        使用 legend 函数向图中添加标识每个数据集的图例。
+\begin{codeblock}{}
+legend('sin(x)','cos(x)')
+\end{codeblock}          
+            \end{minipage}\hfill
+            \begin{minipage}{0.48\linewidth}
+                \begin{figure}[htpb]
+                    \centering
+                    \includegraphics[width=\linewidth]{添加图例}
+                \end{figure}
+            \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{添加文字}
+    \begin{minipage}{0.48\linewidth}
+        使用 text 函数向数据点添加文本描述。
+\begin{codeblock}{}
+text(pi,0,'\leftarrow sin(\pi)')
+\end{codeblock}
+设置Color和FontSize属性来指定文本大小和颜色
+\begin{codeblock}{}
+text(pi,0,'\leftarrow sin(\pi)',Color='red',FontSize=10)
+\end{codeblock}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{添加文本}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{添加包含 LaTeX 标记的文字}
+    \begin{minipage}{0.48\linewidth}
+        将 Interpreter 属性设置为 “latex” 来添加包含 LaTeX 标记的文字。用美元符号 (\$) 将标记括起来。
+\begin{codeblock}{}
+text(0.9*pi,0.5,'$\leftarrow \sin(\pi)$',Interpreter='latex')
+\end{codeblock}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{TeX文本}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{一些TeX标记}
+    \begin{table}
+        \centering
+        \begin{tabular}{cc||cc||cc||cc}
+            \bottomrule
+            修饰符 & 描述 & 修饰符 & 描述 & 修饰符 & 描述 & 修饰符 & 描述  \\ \hline
+            $\backslash$times & $\times$ & $\backslash$sqrt\{\ \ \} & $\sqrt{\qquad}$ & $\backslash$sin & $\sin$  & $\backslash$alpha & $\alpha$ \\ 
+            $\backslash$div & $\div$ & $\backslash$int & $\int$ & $\backslash$cos &  $\cos$ & $\backslash$beta & $\beta$  \\
+            \^\ \ \{\ \ \} & 上标 & $\backslash$infty & $\infty$ & $\backslash$log & $\log$ & $\backslash$gamma & $\gamma$  \\ 
+            \_\ \{\ \ \} & 下标 & $\backslash$therefore & $\therefore$ & $\backslash$ln & $\ln$  & $\backslash$pi & $\pi$ \\ \toprule
+        \end{tabular}
+    \end{table}
+    \begin{minipage}{0.48\linewidth}
+        \[
+            e^{i\pi} + 1 = 0
+        \]
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+\begin{codeblock}{}
+e^{i\pi} + 1 = 0
+\end{codeblock}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{}
+    \vspace{-5pt}
+    \begin{question}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=.5\linewidth]{LOVE}
+\end{figure}
+    \end{question}
+\begin{codeblock}{}
+y = abs(x .^ (2/3)) + (0.99 * (3.3 - x .^ 2) .^ (1/2)) .* sin(9.9 * pi * x)
+\end{codeblock}
+\end{frame}
+
+
+\section{数据拟合}
+
+\begin{frame}[t]
+    \frametitle{}
+    \vspace{-1em}
+    \begin{block}{例：牙膏的销量}
+        \begin{table}[]
+            \begin{tabular}{@{}cccccc@{}}
+            \toprule
+            销售周期 & 公司销售价格 & 其它厂家平均价格 & 广告费用 & 价格差   & 销售量  \\ \midrule
+            1    & 3.85   & 3.8      & 5.5  & -0.05 & 7.38 \\
+            2    & 3.75   & 4        & 6.75 & 0.25  & 8.51 \\
+            3    & 3.7    & 4.3      & 7.25 & 0.6   & 9.52 \\
+            4    & 3.7    & 3.7      & 5.5  & 0     & 7.5  \\
+            5    & 3.6    & 3.85     & 7    & 0.25  & 9.33 \\
+            6    & 3.6    & 3.8      & 6.5  & 0.2   & 8.28 \\
+            7    & 3.6    & 3.75     & 6.75 & 0.15  & 8.75 \\
+            8    & 3.8    & 3.85     & 5.25 & 0.05  & 7.87 \\
+            $\vdots$     & $\vdots$    & $\vdots$     & $\vdots$ & $\vdots$ & $\vdots$  \\
+            30   & 3.7   & 4.25        & 6.8    & 0.55  & 9.26    \\ \bottomrule
+            \end{tabular}
+            \end{table}
+            \vspace{-1em}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{影响牙膏销量的因素}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat[]{\includegraphics[height=4cm]{销售价格}}\ 
+        \subfloat[]{\includegraphics[height=4cm]{价格差}}\ 
+        \subfloat[]{\includegraphics[height=4cm]{广告费用}}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{曲线拟合工具箱(Curve Fitting Toolbox)}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.75\linewidth]{拟合}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{polyfit多项式曲线拟合函数}
+\begin{codeblock}{语法}
+p = polyfit(x,y,n) # 返回次数为n的多项式p(x)的系数。p中的系数按降幂排列。
+\end{codeblock}
+\begin{codeblock}{牙膏销量和价格差的关系}
+x = [-0.05 0.25 0.6 0 0.25 0.2 0.15 0.05 -0.15 0.15 0.2 0.1 0.4 0.45 0.35 0.3 0.5 0.5 0.4 -0.05 -0.05 -0.1 0.2 0.1 0.5 0.6 -0.05 0 0.05 0.55]; # 价格差
+y = [7.38 8.51 9.52 7.5 9.33 8.28 8.75 7.87 7.1 8 7.89 8.15 9.1 8.86 8.9 8.87 9.26 9 8.75 7.95 7.65 7.27 8 8.5 8.75 9.21 8.27 7.67 7.93 9.26]; # 牙膏销量
+p = polyfit(x,y,1)
+\end{codeblock}
+$\mathrm{p} = 2.6652 \qquad 7.8141$
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{polyval多项式计算函数}
+\begin{codeblock}{语法}
+y = polyval(p,x) # 计算多项式 p 在 x 的每个点处的值。
+\end{codeblock}
+\begin{codeblock}{牙膏销量拟合值}
+x1 = -0.2:0.05:0.6;
+y1 = polyval(p,x1)
+\end{codeblock}
+\vspace{-1em}
+\begin{figure}[htpb]
+    \centering
+    \includegraphics[width=\linewidth]{拟合值}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{用plot函数绘制拟合曲线}
+\begin{minipage}{0.48\linewidth}
+\begin{codeblock}{}
+plot(x1,y1,x,y,'*')
+\end{codeblock}    
+\end{minipage}\hfill
+\begin{minipage}{0.48\linewidth}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{拟合价格差}
+    \end{figure}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{牙膏销量和广告费用的关系}
+\begin{minipage}{0.48\linewidth}
+\begin{codeblock}{}
+x = [5.5 6.75 7.25 5.5 7 6.5 6.75 5.25 5.25 6 6.5 6.25 7 6.9 6.8 6.8 7.1 7 6.8 6.5 6.25 6 6.5 7 6.8 6.8 6.5 5.75 5.8 6.8]; # 广告费用
+y = [7.38 8.51 9.52 7.5 9.33 8.28 8.75 7.87 7.1 8 7.89 8.15 9.1 8.86 8.9 8.87 9.26 9 8.75 7.95 7.65 7.27 8 8.5 8.75 9.21 8.27 7.67 7.93 9.26]; # 牙膏销量
+p = polyfit(x,y,2); # 拟合二次多项式
+x2 = 5.2:0.1:7.5;
+y2 = polyval(p,x2);
+plot(x2,y2,x,y,'*')
+\end{codeblock}    
+\end{minipage}\hfill
+\begin{minipage}{0.48\linewidth}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{拟合广告费用}
+    \end{figure}
+\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{question}
+        对下表中人口规模和人口统计年份的数据进行曲线拟合。
+\begin{table}[]
+    \begin{tabular}{@{}cc||cc||cc@{}}
+    \bottomrule
+    统计年份 & 人口规模 & 统计年份 & 人口规模  & 统计年份 & 人口规模  \\ \hline
+    1790 & 3.9  & 1860 & 31.4  & 1930 & 122.8 \\
+    1800 & 5.3  & 1870 & 38.6  & 1940 & 131.7 \\
+    1810 & 7.2  & 1880 & 50.2  & 1950 & 150.7 \\
+    1820 & 9.6  & 1890 & 62.9  & 1960 & 179   \\
+    1830 & 12.9 & 1900 & 76    & 1970 & 205   \\
+    1840 & 17.1 & 1910 & 92    & 1980 & 226.5 \\
+    1850 & 23.1 & 1920 & 105.7 & 1990 & 248.7 \\ \toprule
+    \end{tabular}
+    \end{table}
+    \end{question}
+\end{frame}
+
+
+\section{程序设计}
+
+
+\begin{frame}[fragile]
+    \frametitle{if, elseif, else条件语句}
+\begin{codeblock}{语法}
+if expression
+    statements
+elseif expression
+    statements
+else
+    statements
+end
+\end{codeblock}
+\begin{itemize}
+  \item elseif 和 else 模块是可选的。这些语句仅在 if...end 块中前面的表达式为 false 时才会执行。
+  \item if 块可以包含多个 elseif 块。
+  \item 可以嵌套任意数量的 if 语句。每个 if 语句需要一个 end 关键字。
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{for 循环}
+\begin{codeblock}{语法}
+for index = values
+    statements
+end
+\end{codeblock}
+\begin{itemize}
+  \item 要以编程方式退出循环，请使用 break 语句。
+  \item 要跳过循环中的其余指令，并开始下一次迭代，请使用 continue 语句。
+  \item 避免在循环语句内对 index 变量赋值。for 语句会覆盖循环中对 index 所做的任何更改。
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{在文件中创建函数}
+\begin{codeblock}{创建函数}
+# 名为 fact 的以下函数用于计算某个数 (n) 的阶乘并返回结果 (f)。
+function f = fact(n)
+    f = prod(1:n);
+end
+\end{codeblock}
+\begin{codeblock}{调用函数}
+x = 5;
+y = fact(5)
+\end{codeblock}
+\begin{itemize}
+  \item 此类型的函数必须在文件中而不是在命令行中定义。
+  \item 从 R2016b 开始，用于存储函数的另一个选项是将函数包含在脚本文件的末尾。
+\end{itemize}
+\end{frame}
+
+
+
+
+
+
+
+
+\end{document}

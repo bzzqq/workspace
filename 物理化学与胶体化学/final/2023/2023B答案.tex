@@ -1,0 +1,223 @@
+%!TEX program = xelatex
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+%修改公式间距
+\makeatletter
+\renewcommand\normalsize{%
+\abovedisplayskip 5\p@ \@plus2\p@ \@minus5\p@
+\abovedisplayshortskip \z@ \@plus3\p@
+\belowdisplayshortskip 5\p@ \@plus3\p@ \@minus3\p@
+\belowdisplayskip \abovedisplayskip
+\let\@listi\@listI}
+\makeatother
+
+%微分符号
+\makeatletter
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\makeatother
+
+%直立积分
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+% 更美观的大(小)于等于号
+\renewcommand\le\leqslant
+\renewcommand\ge\geqslant
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\Large 河北农业大学2023——2024学年第1学期}}
+
+\centerline{\Large 参考答案及评分标准（B）卷}
+
+\centerline{开课学院：\underline{\quad 理工学院 \quad} \quad 出\ \ 题\ \ 人：\underline{  \qquad 张斌，高建平 \qquad}}
+
+\centerline{课\ \ 程\ \ 号：\underline{\quad H05981199 \ } \quad 课程名称：\underline{\quad 物理化学与胶体化学 \ \ }}
+
+\bigskip
+
+一、思考题(共40分)
+
+1. (5分) 不正确。在指定温度标准状态下，元素的最稳定单质的标准摩尔生成焓为零。在标准状态下，液态氮不是最稳定单质，所以其标准摩尔生成焓不为零。
+
+2. (5分) 焓没有明确的物理意义。在恒压且不做非体积功的情况下，焓的增量等于恒压热，即$\Delta H=Q_p$。
+
+3. (5分) 有两种设计途径：一种是等压可逆过程变温到水的沸点，再恒温恒压可逆相变为气，再可逆降温至室温；另一条是先等温可逆变压至室温下水的饱和蒸气压，然后可逆相变为气，再等温可逆变压至标准大气压(答出任意一种即可)。
+
+4. (5分) 组分数$C=2$。此系统物种数为5，有3个独立化学平衡数，$C=S-R-R'=5-3-0=2$。
+
+5. (5分) 可逆电池内进行的化学反应必须可逆，即充电反应和放电反应互为逆反应；电池充放电时的能量转化必须可逆，即通过电池的电流无限小，无热功转化。
+
+6. (5分) 该电池是金属Na在NaOH水溶液中，金属钠会与水剧烈反应，不能直接用作电极。金属钠会与水立刻反应放出氢气，化学能不能转变为电能，故电池的设计是错误的。
+
+7. (5分) 首先，分别使A或B过量，使其浓度在反应过程中几乎没有变化，分别测定该反应对B或A的级数。然后通过实验测定一系列$c-t$数据，之后可用积分法或微分法确定反应级数。积分法：将$c-t$数据代入各积分方程，看符合哪一级反应。微分法：以$\ln r$对$\ln c_\mathrm{A}$作图，所得直线的斜率就是反应级数。
+
+8. (5分) 小液滴变小消失，大液滴会变大。液滴半径越小，饱和蒸气压越大。外界压力相同，小液滴对蒸气远不饱和，所以优先蒸发小液滴。大液滴蒸气压小，水蒸气对其先达到饱和，所以优先形成（增大）大液滴。
+
+\bigskip
+
+二、计算题(共60分)
+
+1. (20分)
+
+(1) 途径一：
+
+$V_{1}=nRT_{1}/p_{1}=(0.1\times8.314\times400/101325)\ \mathrm{dm}^{3}=32.8\ \mathrm{dm}^{3}$ \hfill $\cdots \cdots \cdots$ (2分)
+
+$W=W_{\text{恒温 }+}W_{\text{恒容}}= -nRT\ln{\frac{V_2}{V_1}}+0=-0.1\times8.314\times 400 \times \ln \frac{10}{32.8}= \text{395 J}$
+
+\rightline{$\cdots \cdots \cdots$ (2分)}
+
+$\Delta U = n C_{V,\mathrm{m}}(T_2 - T_1)= 0.1 \times 3/2 \times 8.314\times (610-400)= \text{261.9 J}$ \hfill $\cdots \cdots \cdots$ (2分)
+        
+$Q=\Delta U+W=656.9 \ \mathrm{J}$ \hfill $\cdots \cdots \cdots$ (2分)
+
+$\Delta H = n C_{p,\mathrm{m}}(T_2 - T_1)= 0.1 \times 5/2 \times 8.314\times (610-400)= \text{436.4 J} $ \hfill $\cdots \cdots \cdots$ (2分)
+
+
+(2) 途径二：
+
+$Q= Q_{\text{绝热}}+Q_{\text{恒压}}=0+nC_{p,m}(T_{2}-T_{1})=463.4\mathrm{J}$ \hfill $\cdots \cdots \cdots$ (2分)
+
+$\Delta U= \Delta U_{\text{绝热}}+\Delta U_{\text{ 恒压 }}=0+nC_{V,m}(T_{2}-T_{1})=261.9\mathrm{J} $ \hfill $\cdots \cdots \cdots$ (2分)
+
+$\Delta H= \Delta H_{\text{绝热}}+\Delta H_{\text{恒压}}=0+Q_{\text{绝热}}=463.4\mathrm{J}  $ \hfill $\cdots \cdots \cdots$ (2分)
+
+$W= \Delta U-Q=\text{174.5 J} $ \hfill $\cdots \cdots \cdots$ (2分)
+    
+
+若只知始态和终态也可以求出两途径的$\Delta U$和$\Delta H$， 因为 $U$ 和 $H$ 是状态函数 ， 其值只与体系的始终态有关 ， 与变化途径无关 。\hfill $\cdots \cdots \cdots$ (2分)
+
+\bigskip
+2. (15分)
+
+查附录，所需数据见下表：
+
+\begin{table}[htpb]
+    \centering
+    \begin{tabular}{cccc}
+        \bottomrule
+        物质 & $S_\mathrm{m}^\ominus$(298K)/\si{J.mol^{-1}.K^{-1}} & $C_{p,\mathrm{m}}$(298K)/\si{J.mol^{-1}.K^{-1}} \\ \hline
+        \ch{O2 (g)} & 205.138 & 29.355 \\
+        \ch{CO2 (g)} & 213.74 & 37.11 \\
+        \ch{H2O (l)} & 69.91 & 75.291 \\
+        \ch{C12H22O11 (s)} & 360.2 & 425.51 \\ \toprule
+    \end{tabular}
+\end{table}
+\vspace{-3em}
+\[
+    \ch{C12H22O11 (s) + 12 O2 (g) -> 11 H2O (l) + 12 CO2 (g)}
+\]
+当反应在298K进行时
+\[
+    \begin{aligned}
+        \Delta_\mathrm{r} S_\mathrm{m}^\ominus & = \sum_{\mathrm{B}}\nu_{\mathrm{B}}S_\mathrm{m,B}^\ominus \\
+        & = 11\times 69.91 + 12\times 213.74 - 360.2 - 12\times 205.138 \\
+        & = 512.034 \ \si{J.mol^{-1}.K^{-1}}
+    \end{aligned}
+\]
+
+\vspace{-2em}
+\rightline{$\cdots \cdots \cdots \cdots$ (8分)}
+
+当反应在37℃(310K)进行时：
+\[
+    \begin{aligned}
+    \Delta_\mathrm{r} S_\mathrm{m}^\ominus (310\mathrm{K}) & = \Delta_\mathrm{r} S_\mathrm{m}^\ominus(298\mathrm{K}) + \Delta c_{p,\mathrm{m}} \ln \frac{T_2}{T_1} \\
+    & = 512.034 + (11\times 75.291 + 12\times 37.11 - 425.51 - 12\times 29.355)\ln \frac{310}{298} \\
+    & = 531.61 \ \si{J.mol^{-1}.K^{-1}}
+    \end{aligned}
+\]
+
+\vspace{-2em}
+\rightline{$\cdots \cdots \cdots \cdots$ (7分)}
+
+\bigskip
+3. (10分)
+
+298K时，\SI{0.1}{mol/L}的KCl溶液电导率为1.288\si{S.m^{-1}}；$\Lambda_\mathrm{m}^\infty (\mathrm{H}^+) = $\SI{349.82e-4}{S.m^2.m^{-1}}；$\Lambda_\mathrm{m}^\infty (\mathrm{Ac}^-) = $\SI{40.9e-4}{S.m^2.m^{-1}}
+
+$l/A = \kappa R = 1.288 \times 23.78 = 30.63 \ \si{m^{-1}} $ \hfill $\cdots \cdots \cdots \cdots$ (2分)
+
+$\kappa_\mathrm{HAc} = \frac{l/A}{R_\mathrm{HAc}} = 30.63/3942 = 0.00777 \ \si{S.m^{-1}}$ \hfill $\cdots \cdots \cdots \cdots$ (2分)
+
+$\Lambda_\mathrm{m}= \kappa /c = 0.00777/0.002414 \times 10^{-3} = 3.219\times 10^{-3} \ \si{S.m^2.m^{-1}}$ \hfill $\cdots \cdots \cdots \cdots$ (2分)
+ 
+$\Lambda_\mathrm{m}^\infty = \Lambda_\mathrm{m}^\infty (\mathrm{H}^+) + \Lambda_\mathrm{m}^\infty (\mathrm{Ac}^-) = \SI{390.72e-4}{S.m^2.m^{-1}} $ \hfill $\cdots \cdots \cdots \cdots$ (2分)
+
+$\alpha  = \Lambda_\mathrm{m}/\Lambda_\mathrm{m}^\infty = 8.24\%$ \hfill $\cdots \cdots \cdots \cdots$ (2分)
+
+\bigskip
+4. (15分)
+
+解：由速率常数k的单位可知，此反应为一级反应
+
+\vspace{-2em}
+\rightline{$\cdots \cdots \cdots \cdots$ (3分)}
+\[
+    \begin{aligned}
+        &\ln \frac{1}{1-0.9}=k_2 \times 600 \\
+        &k_2 = 3.84 \times 10^{-3} \ \mathrm{s^{-1}}
+    \end{aligned}
+\]
+
+\vspace{-2em}
+\rightline{$\cdots \cdots \cdots \cdots$ (6分)}
+\[
+    \ln \frac{k_{2}}{k_{1}}=\frac{-E_{\mathrm{a}}}{R}(\frac{1}{T_{2}}-\frac{1}{T_{1}})
+\]
+将$T_1=650 \mathrm{K}$，$k_1=$\SI{2.14e-4}{s^{-1}}，$k_2 = 3.84 \times 10^{-3} \mathrm{s^{-1}}$，$E_\mathrm{a}=229.3$ \si{kJ.mol^{-1}}，代入上式得
+\[
+    T_2 = 697 \mathrm{K}
+\]
+
+\vspace{-2em}
+\rightline{$\cdots \cdots \cdots \cdots$ (6分)}
+
+\end{spacing}
+\end{document}

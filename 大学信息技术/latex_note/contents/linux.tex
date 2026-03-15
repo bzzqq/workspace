@@ -1,0 +1,182 @@
+\section{WSL}
+
+\subsection{安装WSL}
+
+管理员模式下打开 PowerShell 或 Windows 命令提示符，然后(需要翻墙)运行：
+
+\begin{lstlisting}
+  wsl --install
+\end{lstlisting}
+
+\subsection{安装Texlive}
+
+\begin{enumerate}
+  \item 下载安装镜像
+  
+  清华源 \link{https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/}
+  \item 挂载安装镜像
+  
+  \begin{lstlisting}
+    sudo mkdir /mnt/texlive
+    sudo mount /mnt/d/texlive2023.iso /mnt/texlive    
+  \end{lstlisting}
+  \item 启动安装程序
+  
+  \begin{lstlisting}
+    sudo /mnt/texlive/install-tl % 输入I并回车，开始执行安装。
+  \end{lstlisting}
+  \item 安装善后
+  
+  \begin{lstlisting}
+    sudo umount /mnt/texlive	% 将安装镜像弹出，注意不是unmount! 
+    sudo rm -r /mnt/texlive % 删除/mnt/texlive文件夹
+  \end{lstlisting}
+  \item 配置环境变量
+  
+  \begin{lstlisting}
+    sudo apt-get update % 更新apt
+    sudo apt install gedit % 安装gedit
+    sudo gedit ~/.bashrc
+    % 在.bashrc文件的末尾添加如下代码
+    export PATH=/usr/local/texlive/2023/bin/x86_64-linux:$PATH
+    export MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$PATH
+    export INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$PATH
+    source ~/.bashrc % 重新加载 .bashrc 文件
+    $
+  \end{lstlisting}
+  \item 重启设备
+  \item 查看是否安装成功
+  
+  \begin{lstlisting}
+    tex --version
+  \end{lstlisting}
+\end{enumerate}
+
+\subsection{安装windows字体}
+
+\begin{enumerate}
+  \item 将windows下进入C盘的 C:/windows/Fonts拷贝到D:/winfonts
+  \item 新建目录用于存储字体
+  
+  \begin{lstlisting}
+    sudo mkdir /usr/share/fonts/winfonts
+  \end{lstlisting}
+  \item 将windows系统下的字体拷贝到刚刚创建的winfonts目录下
+  
+  \begin{lstlisting}
+    sudo cp -r /mnt/d/winfonts/* /usr/share/fonts/winfonts
+  \end{lstlisting}
+  \item 修改字体文件的权限，使root用户以外的用户也可以使用
+  
+  \begin{lstlisting}
+    cd /usr/share/fonts/
+    sudo chmod -R 755 winfonts
+  \end{lstlisting}
+  \item 将texlive配置文件复制到系统
+  \begin{lstlisting}
+    sudo cp /usr/local/texlive/2023/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
+  \end{lstlisting}
+  \item 安装mkfontscale mkfontdir和fc-cache命令
+  
+  \begin{lstlisting}
+    % 使mkfontscale和mkfontdir命令正常运行
+    sudo apt-get install ttf-mscorefonts-installer
+    % 使fc-cache命令正常运行
+    sudo apt-get install fontconfig
+  \end{lstlisting}
+  \item 建立字体缓存
+  
+  \begin{lstlisting}
+    mkfontscale
+    mkfontdir
+    fc-cache -fv
+  \end{lstlisting}
+\end{enumerate}
+
+\subsection{VSCode配置}
+
+\begin{itemize}
+  \item hsnips文件
+  
+  \begin{lstlisting}
+    sudo mkdir -p ~/.config/Code/User/hsnips
+    sudo cp -r /mnt/c/Users/bz/AppData/Roaming/Code/User/hsnips/* ~/.config/Code/User/hsnips
+  \end{lstlisting}
+  \item 模版
+  
+  \begin{lstlisting}
+    sudo cp /usr/local/texlive/2023/texmf-var/fonts/conf/texlive-fontconfig.conf /etc/fonts/conf.d/09-texlive.conf
+    sudo mkdir -p ~/texmf/tex/latex
+    sudo cp -r /mnt/c/Users/bz/texmf/tex/latex* /home/bz/texmf/tex
+  \end{lstlisting}
+\end{itemize}
+
+\subsection{Gitee同步}
+
+\begin{enumerate}
+  \item 设置帐号
+  
+  \begin{lstlisting}
+    git config --global user.name "zhangbin"
+  \end{lstlisting}
+  \item 设置邮箱
+  
+  \begin{lstlisting}
+    git config --global user.email "12267558+vmz@user.noreply.gitee.com"
+  \end{lstlisting}
+  \item 生成密钥
+  
+  \begin{lstlisting}
+    ssh-keygen -t rsa -C "12267558+vmz@user.noreply.gitee.com"
+    % 三次回车即可生成 ssh key
+  \end{lstlisting}
+  \item 查看生成的公钥
+  
+\begin{lstlisting}
+    cat ~/.ssh/id_rsa.pub
+\end{lstlisting}
+  \item 复制至gitee
+  
+  打开gitee官网，设置->SSH公钥->添加 SSH公钥。
+
+  标题可以任意设置，生成的公钥\verb|id_rsa.pub|内容复制到gitee，就可以添加SSH公钥了。
+  \item 测试验证是否连接成功
+  
+  \begin{lstlisting}
+    ssh -T git@gitee.com
+    % 如出现以下欢迎信息, 说明连接成功, 进一步证明上面的配置正确. 否则, 请仔细检查上面的步骤.
+    Hi xxx! You've successfully authenticated, but GITEE.COM does not provide shell access.
+  \end{lstlisting}
+  \item 创建本地仓库
+  
+  \begin{lstlisting}
+    sudo mkdir ./workspace
+    cd workspace
+  \end{lstlisting}
+  \item 赋予目录账户权限
+  
+  \begin{lstlisting}
+    sudo chown -R bz /home/bz/workspace/
+  \end{lstlisting}
+  \item 把这个目录变成Git可以管理的仓库
+  
+  \begin{lstlisting}
+    git init
+  \end{lstlisting}
+  \item 把本地仓库与一个云端Gitee仓库关联（如果从已有云端仓库拉取直接进行下一步）
+  
+  \begin{lstlisting}
+    git remote add origin https://gitee.com/vmz/latex.git
+  \end{lstlisting}
+  \item 拉取
+  
+  \begin{lstlisting}
+    git pull https://gitee.com/vmz/latex.git master
+  \end{lstlisting}
+  \item VSCode每次同步都要输入用户名密码？
+  
+  在 VSCode 的终端输入 \verb|git config --global credential.helper store| 命令
+
+  在弹框中输入账号和密码，此时输入一次，以后再git push /pull 的时候就不用再输账号和密码了。
+\end{enumerate}
+

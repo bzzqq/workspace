@@ -1,0 +1,140 @@
+\section{化学势}
+
+
+\begin{frame}{化学势}
+    在各种偏摩尔量中，以偏摩尔吉布斯自由能最重要。在多组分体系中，物质B的偏摩尔吉布斯自由能称为化学势(chemical potential)，用符号$\mu_\mathrm{B}$表示。故物质B的化学势定义为
+    $$\mu_{\mathrm{B}}=G_{\mathrm{B}, \mathrm{m}}=\left(\frac{\partial G}{\partial n_{\mathrm{B}}}\right)_{T, p, n_{z}}$$
+    $\mu_\mathrm{B}$是体系的强度性质，单位是\si{J.mol^{-1}}。
+    \\多组分体系吉布斯自由能的变化，由$G=G(T,p,n)$全微分可得
+    $$\mathrm{d}G=\left(\frac{\partial G}{\partial T}\right)_{p,n}\mathrm{d}T + \left(\frac{\partial G}{\partial p}\right)_{T,n}\mathrm{d}p + \left(\frac{\partial G}{\partial n_1}\right)_{T,p,n_z}\mathrm{d}n_1 + \left(\frac{\partial G}{\partial n_2}\right)_{T,p,n_z}\mathrm{d}n_2 + \cdots$$
+
+\end{frame}
+
+
+\begin{frame}{化学势}
+    由热力学关系式$\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}p$分别对$T$、$p$偏微分，有$\left(\frac{\partial G}{\partial T}\right)_{p,n}=-S$，$\left(\frac{\partial G}{\partial p}\right)_{T,n}=V$，则
+    $$\maincolor{\mathrm{d}G=-S\mathrm{d}T+V\mathrm{d}p+\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}}}$$
+    $\begin{aligned}
+        \text{定温定压下} \qquad\qquad\qquad   \mathrm{d}G_{T,p}=\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}}
+    \end{aligned}$
+    \\偏摩尔吉布斯自由能集合公式为
+    $$G=\sum_Bn_\mathrm{B}{G_\mathrm{B,m}}=\sum_B n_\mathrm{B} \mu_\mathrm{B}$$
+    $\begin{aligned}
+        \text{对纯物质}\qquad\qquad\qquad\qquad\mu = \frac{G}{n} = G_\mathrm{m}
+    \end{aligned}$    
+\end{frame}
+
+
+\begin{frame}{广义的化学势}
+    根据热力学函数基本关系式，对多组分均相体系可写成
+    $$\begin{array}{c}
+        U=U(S,V,n_1,n_2,\cdots)\\
+        H=H(S,p,n_1,n_2,\cdots)\\
+        F=F(T,V,n_1,n_2,\cdots)\\
+        G=G(T,p,n_1,n_2,\cdots)
+    \end{array}$$
+    将这4个热力学函数全微分，得到广义的化学势：保持热力学函数的特征变量和除B以外其他组分不变 ， 某热力学函数随物质的量$n_{\mathrm{B}}$的变化率
+    $$\mu_{\mathrm{B}}=\left(\frac{\partial U}{\partial n_{\mathrm{B}}}\right)_{S, V, n_{z}}=\left(\frac{\partial H}{\partial n_{\mathrm{B}}}\right)_{S, p, n_{z}}=\left(\frac{\partial F}{\partial n_{\mathrm{B}}}\right)_{T, V, n_{z}}=\left(\frac{\partial G}{\partial n_{\mathrm{B}}}\right)_{T, p, n_{z}}$$
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{多组分系统的热力学基本公式}
+    \[
+        \begin{aligned}
+            \mathrm{d}G&=-S\mathrm{d}T+V\mathrm{d}p+\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}} \\
+            \mathrm{d}U&=T\mathrm{d}S-p\mathrm{d}V+\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}} \\
+            \mathrm{d}H&=T\mathrm{d}S+V\mathrm{d}p+\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}} \\
+            \mathrm{d}F&=-S\mathrm{d}T-p\mathrm{d}V+\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}} 
+        \end{aligned}
+    \]
+\end{frame}
+
+
+\begin{frame}{化学势与温度的关系}
+    在定压及各组分物质的量恒定条件下，将化学势对温度求偏微商得
+    \small  $$\left(\frac{\partial \mu_{\mathrm{B}}}{\partial T}\right)_{p, n}=\left[\frac{\partial}{\partial T}\left(\frac{\partial G}{\partial n_{\mathrm{B}}}\right)_{T, p, n_{z}}\right]_{p, n}=\left[\frac{\partial}{\partial n_{\mathrm{B}}}\left(\frac{\partial G}{\partial T}\right)_{p, n}\right]_{T, p, n_{z}}=-\left(\frac{\partial S}{\partial n_{\mathrm{B}}}\right)_{T, p, n_{z}}=-S_{\mathrm{B}, \mathrm{m}}$$
+    即
+    $$\left(\frac{\partial \mu_{\mathrm{B}}}{\partial T}\right)_{p, n}=-S_{\mathrm{B,m}}$$
+    或
+    $$\mathrm{d}\mu_\mathrm{B}=-S_{\mathrm{B,m}}\mathrm{d}T$$
+\end{frame}
+
+
+\begin{frame}{化学势与压力的关系}
+    在定温及各组分物质的量恒定条件下，将化学势对压力求偏微商得
+    \small  $$\left(\frac{\partial \mu_{\mathrm{B}}}{\partial p}\right)_{T, n}=\left[\frac{\partial}{\partial p}\left(\frac{\partial G}{\partial n_{\mathrm{B}}}\right)_{T, p, n_{z}}\right]_{T, n}=\left[\frac{\partial}{\partial n_{\mathrm{B}}}\left(\frac{\partial G}{\partial p}\right)_{T, n}\right]_{T, p, n_{z}}=\left(\frac{\partial V}{\partial n_{\mathrm{B}}}\right)_{T, p, n_{z}}=V_{\mathrm{B}, \mathrm{m}}$$    
+    \begin{columns}
+        \column{6.75cm}
+        $\begin{aligned}
+            \text{即}\qquad\qquad\left(\frac{\partial \mu_{\mathrm{B}}}{\partial p}\right)_{T, n}=V_{\mathrm{B,m}}           
+        \end{aligned}$ 
+        \\或$$\mathrm{d}\mu_\mathrm{B}=V_{\mathrm{B,m}}\mathrm{d}p$$
+        对纯物质体系，因$\mu =G/n=G_\mathrm{m}$，所以
+        $$\mathrm{d}\mu = \mathrm{d} G_\mathrm{m} = -S_\mathrm{m}\mathrm{d}T+V_\mathrm{m}\mathrm{d}p$$
+        \column{6.75cm}
+            定压时
+            $$\mathrm{d} \mu=-S_{\mathrm{m}} \mathrm{d} T \qquad\left(\frac{\partial \mu}{\partial T}\right)_{p}=-S_{\mathrm{m}}$$
+            定温时
+            $$\mathrm{d} \mu=V_{\mathrm{m}} \mathrm{d} p \qquad\left(\frac{\partial \mu}{\partial p}\right)_{T}=V_{\mathrm{m}}$$
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{化学势判据}
+    定温定压下，不做非体积功的多组分体系吉布斯自由能变量为
+    $$\mathrm{d}G=\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}}$$
+    根据吉布斯自由能判据，在恒定$T$、$p$及$W'=0$时有\\
+    $$\begin{tabular}{c l}
+        \multirow{2}{*}{$\sum_B\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}\le0$} & 自发过程 \\
+        \multirow{2}{*}{} & 平衡态 \\
+    \end{tabular}$$
+    \begin{blankblock}{}
+        在定温定压，不做非体积功的过程中，吉布斯自由能变化完全来自于系统内各组分之间的变化。具体来说，温度和压强恒定的封闭系统内部无化学变化或物理变化(组分分布、组分比例变化、相变等)，将导致所有的$\mathrm{d}n_{i}$都等于零，这样的过程实际上意味着什么也不会发生，系统处于平衡态。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}{化学势在相平衡中的应用}
+    设多组分体系有$\alpha$、$\beta$ 两相，在恒定$T$、$p$及$W'=0$条件下，有$\mathrm{d}n_\mathrm{B}$的B物质由$\alpha$相转移到$\beta$相中。因$\alpha$相中失去物质的量为$-\mathrm{d}n_\mathrm{B}$，$\beta$相中增加的物质的量为$\mathrm{d}n_\mathrm{B}$，因此
+    $$\mathrm{d} G_{\mathrm{B}}=\mu_{\mathrm{B}}^{\alpha}\left(-\mathrm{d} n_{\mathrm{B}}\right)+\mu_{\mathrm{B}}^{\beta} \mathrm{d} n_{\mathrm{B}}=(\mu_{\mathrm{B}}^{\beta}-\mu_{\mathrm{B}}^{\alpha}) \mathrm{d} n_{\mathrm{B}}$$
+    若物质由$\alpha$相向$\beta$相的迁移是自发进行的，$\mathrm{d}G<0$，则
+    $$(\mu_{\mathrm{B}}^{\beta}-\mu_{\mathrm{B}}^{\alpha}) \mathrm{d} n_{\mathrm{B}}<0$$
+    因为$\mathrm{d}n_\mathrm{B}>0$，所以
+    $$(\mu_{\mathrm{B}}^{\beta}-\mu_{\mathrm{B}}^{\alpha})<0 \quad \text{或} \quad \mu_{\mathrm{B}}^{\beta}<\mu_{\mathrm{B}}^{\alpha}$$
+\end{frame}
+
+
+\begin{frame}{化学势在相平衡中的应用}
+    若体系达到平衡，$\mathrm{d}G=0$，则
+    $$(\mu_{\mathrm{B}}^{\beta}-\mu_{\mathrm{B}}^{\alpha})=0 \quad \text{或} \quad \mu_{\mathrm{B}}^{\beta}=\mu_{\mathrm{B}}^{\alpha}$$
+    由以上分析可知，定温定压及$W'=0$条件下，物质总是由化学势高的相向化学势低的相自发转移，当物质在两相中的化学势相等时即达到平衡。
+    \\定温定压及$W'=0$条件下，若多组分体系在多相中达到平衡，设每一相$(\alpha,\beta,\gamma,\cdots)$中都含有各种组分，各种组分在每一相中的化学势必然相等。
+    $$\begin{array}{l}
+        \mu_{1}^{\alpha}=\mu_{1}^{\beta}=\mu_{1}^{\gamma}=\cdots\\
+        \mu_{2}^{\alpha}=\mu_{2}^{\beta}=\mu_{2}^{\gamma}=\cdots\\
+        \vdots \qquad \vdots \qquad \vdots\\
+        \mu_{\mathrm{B}}^{\alpha}=\mu_{\mathrm{B}}^{\beta}=\mu_{\mathrm{B}}^{\gamma}=\cdots
+        \end{array}$$
+\end{frame}
+
+
+\begin{frame}[t]{}
+    \begin{example}
+        \begin{enumerate}
+          \item 若A、B两种物质在$\alpha $、$\beta $两相中达到平衡，下列哪种关系式代表这种情况？
+          \begin{itemize}
+              \item[A.] $\mu_A^\alpha = \mu_B^\beta$
+              \item[B.] $\mu_A^\alpha = \mu_A^\beta$
+              \item[C.] $\mu_B^\alpha = \mu_B^\beta$
+            \end{itemize}
+        \item 若A在$\alpha $、$\beta $两相中达到平衡，而B正由$\beta $相向$\alpha $相中迁移，下列关系式是否正确？
+        \begin{itemize}
+            \item[A.] $\mu_A^\alpha = \mu_A^\beta$
+            \item[B.] $\mu_B^\alpha > \mu_B^\beta$
+            \item[C.] $\mu_B^\alpha < \mu_B^\beta$
+        \end{itemize}
+          
+        \end{enumerate}
+    \end{example}
+\end{frame}

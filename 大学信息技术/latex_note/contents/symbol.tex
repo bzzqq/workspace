@@ -1,0 +1,159 @@
+\section{字体属性}
+\subsection{Family}
+
+有成千上万种字体, 但是基本可以分为三个家族(family), 即
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{@{}ll@{}}
+    \toprule
+    \multicolumn{1}{c}{\textbf{family}} & \multicolumn{1}{c}{\textbf{TeX等价}} \\ \midrule
+    有衬线字体(serif)                        & \textbackslash{}rmfamily           \\
+    无衬线字体(sans-serif)                   & \textbackslash{}sffamily           \\
+    等宽字体(monospaced)~~~~~~           & \textbackslash{}ttfamily           \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Shape}
+
+每个字体都支持Shape属性和series属性(但是不是全支持, 例如xeCJK就是通过AutoFakeSlant与AutoFakeBold来分别解决确实属性的)。Shape一般有三种：
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{@{}ll@{}}
+    \toprule
+    \multicolumn{1}{c}{\textbf{Shape}} & \multicolumn{1}{c}{\textbf{TeX等价}} \\ \midrule
+    正体(upright)                       & \textbackslash{}upshape          \\
+    斜体(italic)                  & \textbackslash{}itshape           \\
+    倾斜体(slanted)          & \textbackslash{}slshape        \\
+    小型大写(Small Capitals)~~~~~~           & \textbackslash{}scshape      \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+其中\verb|\scshape|理论上对中文无效, 因为中文没有大小写！英文可以用\verb|\lowercase| 或 \verb|\uppercase| 将其转化为小写/大写。
+
+\subsection{Series}
+
+字体的Series属性其实是定义了字体的粗细程度, 它一般分为如下三种：
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{@{}ll@{}}
+    \toprule
+    \multicolumn{1}{c}{\textbf{Series}} & \multicolumn{1}{c}{\textbf{TeX等价}} \\ \midrule
+    粗体(bold)                        & \textbackslash{}bfseries          \\
+    正常(middle)~~~~~~                  & \textbackslash{}mdseries          \\
+    细体(light)         & \textbackslash{}lfseries          \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\section{字号}
+
+\subsection{字号命令}
+
+TeX里面设置字体大小的开关从小到大如下：
+
+\begin{multicols}{2}
+    \begin{itemize}
+      \item \verb|\tiny|
+      \item \verb|\scriptsize|
+      \item \verb|\footnotesize|
+      \item \verb|\small|
+      \item \verb|\normalsize|
+      \item \verb|\large|
+      \item \verb|\Large|
+      \item \verb|\Large|
+      \item \verb|\huge|
+      \item \verb|\Huge|
+    \end{itemize}
+\end{multicols}
+
+\subsection{中文字号}
+
+使用\verb|\zihao{}|调整字号大小时，西文字号会始终和中文字号保持一致。
+
+\begin{multicols}{4}
+    \begin{itemize}
+      \item[0] 初号
+      \item[-0] 小初
+      \item[1] 一号
+      \item[-1] 小一
+      \item[2] 二号
+      \item[-2] 小二
+      \item[3] 三号
+      \item[-3] 小三
+      \item[4] 四号
+      \item[-4] 小四
+      \item[5] 五号
+      \item[-5] 小五
+      \item[6] 六号
+      \item[-6] 小六
+      \item[7] 七号
+      \item[8] 八号
+    \end{itemize}
+\end{multicols}
+
+\section{特殊符号}
+\subsection{保留字符}
+
+LaTeX中的命令通常是由一个反斜杠加上命令名称，再加上花括号内的参数构成的。
+
+LaTeX中有许多字符都有特殊的意义，LaTeX中的保留字符有 \verb|#,$,%,&,_,{ }, \|，这些在正文中都不能直接呈现。
+
+反斜杠用\verb|\textbackslash|表示，其他的符号在前面加 \textbackslash \ 便可以表示了。
+
+\subsection{波浪线}
+
+波浪线\~{}也不能在LaTeX中直接输出，因为它的作用是禁止在该处断行，可以尝试：
+
+\begin{lstlisting}
+    a $\sim$ b
+    a \~ b
+    a \~{} b
+    a \textasciitilde b
+\end{lstlisting}
+
+    a $\sim$ b \qquad 
+    a \~ b \qquad 
+    a \~{} b \qquad 
+    a \textasciitilde b
+
+其中\verb|\sim|为数学公式中的命令故需要加\$\$不然会报错，命令\verb|\~|会自动读取后面的一个字符作为参数，故第二个例子在b上加波浪线，而\verb|\~{}|命令设置参数为空。
+
+\subsection{角度和摄氏度}
+
+角度符号或温度符号（摄氏度）需要借助数学模式。
+
+角度可以使用\verb|$^{\circ}$|，摄氏度可以使用\verb|$^{\circ}\mathrm{C}$|。
+
+还可以添加定义
+\begin{lstlisting}
+    \def\degree{${}^{\circ}$}
+\end{lstlisting}
+
+这样可以直接输入45\verb|\degree|即可。
+
+另外，使用\verb|\usepackage{gensymb}|可以直接使用\verb|\degree|。
+
+
+\subsection{输出命令}
+
+\verb|verbatim|环境可原样输出其中的文本，忽视TeX命令。
+
+\begin{lstlisting}
+    \begin{verbatim}
+    \usepackage{times}
+    \usepackage{latexsym}
+    \end{verbatim}
+\end{lstlisting}
+
+输出如下：
+\begin{framed}
+\begin{verbatim}
+    \usepackage{times}
+    \usepackage{latexsym}
+\end{verbatim}
+\end{framed}
+
+对简短的抄录，可使用\verb|\verb||文字|和\verb|\verb*||文字|。
+

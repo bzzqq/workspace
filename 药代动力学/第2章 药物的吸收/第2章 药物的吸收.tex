@@ -1,0 +1,67 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme2024}
+\usetikzlibrary{tikzmark}
+
+
+\title{生物药剂学与药物动力学}
+\subtitle{2 药物的吸收}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+\maketitle
+
+
+
+
+% 药片口服以后，先在胃部崩解，药片中的化合物就会被释放出来；之后就开始随着胃的蠕动进入到肠。肠是主要的吸收器官，肠壁表面积很大，药物主要在这里被吸收。过肠的时候，肠壁细胞对药物会有代谢，过肠以后经肝门静脉进入肝脏，肝脏是最重要的代谢解毒器官，专门负责清除外源性分子，主要通过肝细胞中的代谢酶对药物分子进行各种各样的修饰，使其失活并被排出。幸存的未被肝脏萃取或修饰的药物分子才最终抵达心脏，经血液输送到全身。这是药物的吸收过程。
+
+% 药物随血流遍布全身，会扩散进入几乎所有的器官和组织。这个过程称为分布。
+
+% 药物在不断循环过程中，但凡经过肝脏，都会有一部分被肝脏细胞中的代谢酶修饰。这个过程称为代谢。
+
+% 最终药物或者修饰过的药物经过胆汁排到肠中随粪便排出，或者经肾脏由尿排出，这是药物的排泄过程。
+
+\begin{frame}
+	\frametitle{ADME}
+    \hspace{-2em}
+	\begin{minipage}{0.28\linewidth}
+		药物的体内过程：
+		\begin{itemize}
+			\item Absorption ~吸收 
+			\item Distribution 分布 
+			\item Metabolism 代谢
+			\item Excretion ~~~排泄
+		  \end{itemize}
+	\end{minipage}\hfill
+	\begin{minipage}{0.68\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=.9\linewidth]{ADME}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+\input{contents/transmembrane.tex}
+
+\input{contents/2.3药物的吸收.tex}
+
+\input{contents/2.4研究药物在肠道吸收的方法.tex}
+
+\end{document}

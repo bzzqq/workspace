@@ -1,0 +1,49 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+% \special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+\usetheme{mytheme}
+\usetikzlibrary{tikzmark}
+
+% meta-data
+\title{第三章}
+\subtitle{农业数字化技术}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+% document body
+\begin{document}
+  
+\begin{frame}
+  \titlepage
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+\begin{frame}
+    \frametitle{数字化}
+    \highlight{数字技术} (Digital Technology) 是指借助一定的设备将各种信息，包括：图、文、声、像等，转化为电子计算机能识别的二进制数字，以及对数字信号进行运算、加工、存储、传送、利用的技术。
+  \bigskip
+
+  \highlight{数字化}是将模拟信号转变为数字信号的过程。是把模拟量转换为数字量的过程。
+
+\end{frame}
+
+\begin{frame}{}
+  \begin{center}
+      {\Huge \cbf{目 \ 录}}
+  \end{center}
+  \tableofcontents[subsectionstyle=hide/hide/show]
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+\include{contents/signal}
+\include{contents/sensor}
+\include{contents/digital technologies}
+\include{contents/IoT}
+
+
+
+
+\end{document}

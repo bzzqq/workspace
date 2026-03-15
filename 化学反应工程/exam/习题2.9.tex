@@ -1,0 +1,118 @@
+%!TEX program = xelatex
+\documentclass[cn,blue,14pt,normal]{elegantnote}
+
+\usepackage{chemformula} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+%微分符号
+\makeatletter
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\makeatother
+
+%直立积分
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+\begin{document}
+
+习题2.9：在一恒容反应器中进行下列液相反应 ：
+        \[
+            \ch{A + B -> R} \qquad r_\mathrm{R} = 1.6 c_\mathrm{A}
+        \]
+        \[
+            \ch{2 A -> D}  \qquad r_\mathrm{D} = 8.2 c_\mathrm{A}^2
+        \]
+        
+        式中$r_\mathrm{R}$、$r_\mathrm{D}$分别表示产物 R 及 D 的生成速率，其单位均为 \si{kmol.m^{-3}.h^{-1}}， 反应用的原料为 A 与 B 的混合物 ， 其中 A 的浓度为 \SI{2}{kmol.m^{-3}} ， 试计算 A 的转化率达 95\%时所需要的反应时间 。
+
+解：
+\[
+    - \mathcal{R}_\mathrm{A} = r_\mathrm{R} + 2 r_\mathrm{D} = 1.6 c_\mathrm{A} + 16.4 c_\mathrm{A}^2
+\]
+
+\[
+    -\frac{\dif c_\mathrm{A}}{\dif t} = 1.6 c_\mathrm{A} + 16.4 c_\mathrm{A}^2
+\]
+
+移项：
+\[
+    -\frac{1}{c_\mathrm{A} + 10.25 c_\mathrm{A}^2}\dif c_\mathrm{A} = 1.6 \dif t
+\]
+
+积分：
+\[
+    -\int_{c_\mathrm{A0}}^{c_\mathrm{A}}\frac{1}{c_\mathrm{A} + 10.25 c_\mathrm{A}^2}\dif c_\mathrm{A} = \int_{0}^{t}1.6 t
+\]
+
+\[
+    \int_{c_\mathrm{A}}^{c_\mathrm{A0}}\frac{1}{c_\mathrm{A} + 10.25 c_\mathrm{A}^2}\dif c_\mathrm{A} = \int_{0}^{t}1.6 t
+\]
+
+\[
+    \int_{0.1}^{2}\frac{1}{c_\mathrm{A} + 10.25 c_\mathrm{A}^2}\dif c_\mathrm{A} = 1.6 t
+\]
+
+\[
+    \int_{0.1}^{2}\frac{1}{c_\mathrm{A}(1 + 10.25 c_\mathrm{A})}\dif c_\mathrm{A} = 1.6 t
+\]
+
+\[
+    \int_{0.1}^{2}\left(\frac{1}{c_\mathrm{A}} - \frac{10.25}{1 + 10.25 c_\mathrm{A}}\right)\dif c_\mathrm{A} = 1.6 t
+\]
+
+\[
+    \int_{0.1}^{2}\left(\frac{1}{c_\mathrm{A}}\dif c_\mathrm{A} - \frac{10.25}{1 + 10.25 c_\mathrm{A}}\dif c_\mathrm{A}\right) = 1.6 t
+\]
+
+\[
+    \int_{0.1}^{2}\left[\ln c_\mathrm{A} - \frac{1}{1 + 10.25 c_\mathrm{A}}\dif (1 + 10.25 c_\mathrm{A})\right] = 1.6 t
+\]
+
+\[
+    \int_{0.1}^{2}\left(\ln c_\mathrm{A} - \ln (1 + 10.25 c_\mathrm{A})\right) = 1.6 t
+\]
+
+\[
+    [\ln(2) - \ln(1+10.25\times 2)] - [\ln(0.1) - \ln(1+10.25\times 0.1)] = 1.6t
+\]
+
+\[
+    t = 0.3958
+\]
+
+
+
+
+
+
+
+
+
+\end{document}

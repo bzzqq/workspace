@@ -1,0 +1,244 @@
+\documentclass[UTF8,unicode]{ctexrep}
+
+
+
+%%%%%%%%%% 定义长度 %%%%%%%%%%%
+\def\zbj{1.5cm}%定义左边距
+\def\ybj{1cm}%定义右边距
+\def\sbj{1cm}%定义上边距
+\def\xbj{1cm}%定义下边距
+\def\ljjy{0.45cm}%定义栏间距1
+\def\ljje{0.6cm}%定义栏间距2
+\def\khws{6}%定义考号位数
+\def\lk{(\textwidth-\ljjy-\ljje)/3}%定义栏宽
+\def\gzk{(\lk/2-0.4cm)/\khws}%定义考号格字宽
+\def\ttkc{0.36}%定义填涂框长
+\def\ttkg{0.192}%定义填涂框高
+
+%定义选择题填涂格
+\newcommand{\dxtt}[1]{\makebox[1.4em]{\raisebox{-2.5pt}{
+	\begin{tikzpicture}[BrickRed]
+		\draw (0,0)rectangle(\ttkc,\ttkg);
+		\draw(\ttkc/2,\ttkg/2-0.01)node{\zihao{-6}\textsf{#1}};
+	\end{tikzpicture}}}}
+\newcommand{\sxtt}{\raisebox{0pt}{\dxtt{A} \dxtt{B} \dxtt{C} \dxtt{D}}}
+
+
+%页面设置
+\usepackage{geometry}
+\geometry{a3paper,left=\zbj,right=\ybj,top=\sbj,bottom=\xbj,headsep=0.5cm,footskip=0.5cm,landscape}%twocolumn,landscape
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand\headrulewidth{0pt}
+
+
+
+%加载宏包
+\usepackage{amsmath,amssymb}
+\usepackage[dvipsnames,table]{xcolor}
+\usepackage{pgf,tikz,multicol,calc}
+\usepackage{varwidth}
+
+
+%定义大写罗马数字
+\newcounter{RomanNumber}
+\newcommand{\myRm}[1]{\makebox[1em]{\setcounter{RomanNumber}{#1}\Roman{RomanNumber}}}%罗马数字
+%定义填空题横线
+\newcommand{\tk}[1][2.5]{\,\underline{\mbox{\hspace{#1 cm}}}\,}
+
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+	\coordinate (A1) at ([shift={(\zbj,-\sbj)}]current page.north west);%第一栏左上角（版心左上角）
+	\coordinate (B1) at ([shift={({\zbj+\lk},-\sbj)}]current page.north west);%%第一栏右上角
+	\coordinate (C1) at ([shift={({\zbj+\lk},\xbj)}]current page.south west);%%第一栏右下角
+	\coordinate (D1) at ([shift={(\zbj,\xbj)}]current page.south west);%%第一栏右下角
+	\coordinate (A2) at ([shift={(\ljjy,0)}]B1);%第二栏左上角
+	\coordinate (B2) at ([shift={({\lk},0)}]A2);%第二栏右上角
+	\coordinate (C2) at ([shift={(0,-\textheight)}]B2);%第二栏右下角
+	\coordinate (D2) at ([shift={(\ljjy,0)}]C1);%第二栏左下角
+	\coordinate (A3) at ([shift={(\ljje,0)}]B2);%第三栏左上角
+	\path([shift={(-\ybj,-\sbj)}]current page.north east) coordinate (B3);%第三栏右上角
+	\path([shift={(-\ybj,\xbj)}]current page.south east) coordinate (C3);%第三栏右下角
+	\coordinate (D3) at ([shift={(\ljje,0)}]C2);%第三栏左下角
+	\path([shift={(0.2,-2.1)}]A1) coordinate (A0);%考号填写左上角
+	\path([shift={({\lk/2-0.4cm},-0.7)}]A0) coordinate (C0);%考号填写右下角
+	\coordinate (khT1) at ([shift={({0.5*\gzk-0.18cm},-0.95)}]A0);%考号第一个涂框格左上顶点
+	\coordinate (khTx) at ([shift={(0.18,-0.11)}]khT1);%考号第一个涂框格中心
+	\coordinate (XM) at ([shift={({\lk/2},-2)}]A1);%姓名填写区域左上角
+	\coordinate (xzt) at ([shift={(0,-7.1)}]A1);%选择题区域左上角
+	\coordinate (fxzt) at ([shift={(0,-10.3)}]A1);%非选择题区域左上角
+	\draw[line width=1.2pt]
+		(A2)rectangle(C2)
+		(A3)rectangle(C3);
+	\draw
+		([shift={({\lk/2},0)}]A1)node[below]{\zihao{-4}六盘水市实验一中2016\,--2017上学期高一期末考试}
+		([shift={({\lk/2},-0.55)}]A1)node[below]{\heiti\zihao{3}数\qquad 学\quad 答题卡};
+	\draw[BrickRed,line width=1pt]
+		([shift={(0,-1.4)}]A1)rectangle ++({\lk},-5.5)
+		([shift={({\lk/2},-1.4)}]A1)--++(0,-5.5);
+	\draw
+		([shift={({\lk/4},-1.4)}]A1)node[below]{考号（学号）填涂区};
+	\draw[BrickRed]
+		(A0) rectangle (C0);
+	\foreach \x in {1,2,...,\khws}
+		\draw[BrickRed]([shift={({(\x-1)*\gzk},0)}]A0)--++(0,-0.7);
+	\foreach \x in {1,2,...,\khws}
+	\foreach \y in {0,1,...,9}
+		\draw[BrickRed]([shift={({(\x-1)*\gzk},-\y*0.38)}]khT1)rectangle++(\ttkc,-\ttkg);
+	\foreach \x in {1,2,...,\khws}
+	\foreach \y in {0,1,...,9}
+		\draw[BrickRed]([shift={({(\x-1)*\gzk},-\y*0.38)}]khTx)node{\zihao{-6}\textsf{\y}};
+	\draw
+		(XM)node[right]{\heiti\zihao{-4}姓名\tk[4]}
+		([shift={(0,-0.8)}]XM)node[right]{\heiti\zihao{-4}班级\tk[4]}
+		([shift={(0,-1.6)}]XM)node[right]{\heiti\zihao{5}考场号}
+		([shift={(2.6,-1.6)}]XM)node[right]{\heiti\zihao{5}座位号};
+	\draw[BrickRed]([shift={(1.3,-1.8)}]XM)rectangle++(0.6,0.6)
+				([shift={(1.9,-1.8)}]XM)rectangle++(0.6,0.6)
+				([shift={(3.9,-1.8)}]XM)rectangle++(0.6,0.6)
+				([shift={(4.5,-1.8)}]XM)rectangle++(0.6,0.6);
+	\draw[BrickRed]
+		([shift={({\lk/4},-1.9)}]XM)node[below=2pt]{\heiti{注意事项}}
+		([shift={(0,-2.9)}]XM)node[right]{\zihao{6}
+			\begin{varwidth}[b]{\lk/2-0.2cm}
+				1.答题前，现将姓名、考号、考场号、座位号填写清楚；
+			\end{varwidth}
+		}
+		([shift={(0,-3.6)}]XM)node[right]{\zihao{6}2.考号和选择题答案请使用2B铅笔填涂；}
+		([shift={(0,-4.25)}]XM)node[right]{\zihao{6}
+			\begin{varwidth}[b]{\lk/2-0.2cm}
+				3.非选择题请使用黑色笔，在指定区域内答题超出对应区域的答案无效.
+			\end{varwidth}
+		};
+	\fill[BrickRed!30](xzt)rectangle++({\lk},-0.6);
+	\draw
+		[BrickRed](xzt)rectangle++({\lk},-3);
+	\draw([shift={({\lk/2},0)}]xzt)node[below]{\heiti\zihao{-4}第 \myRm1 卷\quad 选择题};
+	\foreach \x in {1,2,...,5}
+		\draw([shift={(1.7,{-1+(1-\x)*0.4})}]xzt)node{\x.\sxtt};
+	\foreach \x in {6,7,...,9}
+		\draw([shift={({1.7cm+0.33*\lk},{-1+(6-\x)*0.4})}]xzt)node{\x.\sxtt};
+	\foreach \x in {11,12}
+		\draw([shift={({1.7cm+0.66*\lk},{-1+(11-\x)*0.4})}]xzt)node{\x.\sxtt};
+	\draw([shift={({1.6cm+0.33*\lk},{-1-4*0.4})}]xzt)node{10.\sxtt};
+	
+	\fill[BrickRed!30](fxzt)rectangle++({\lk},-0.6);
+	\draw([shift={({\lk/2},0)}]fxzt)node[below]{\heiti\zihao{-4}第 \myRm2 卷\quad 非选择题};
+	\draw
+		[BrickRed](fxzt)--++({\lk},0);
+	\draw	[BrickRed,rounded corners=6pt]
+		(fxzt)--([shift={(0,-0.5)}]D1)--([shift={(0,-0.5)}]C1)--([shift={({\lk},0)}]fxzt)
+		([shift={(-0.2,0.2)}]A2)rectangle([shift={(0.2,-0.5)}]C2)
+		([shift={(-0.2,0.2)}]A3)rectangle([shift={(0.2,-0.5)}]C3);
+	\draw[line width=1.2pt]([shift={(0.2,-0.75)}]fxzt)rectangle([shift={(-0.20,0)}]C1);
+	\draw([shift={({\lk/2},-0.5)}]D1)node[above=-1pt,BrickRed]{\heiti\zihao{6}请在各题对应答题区域内作答，超出矩形边框限定区域的答案无效};
+	\draw([shift={({0.5*\lk},-0.5)}]D2)node[above=-1pt,BrickRed]{\heiti\zihao{6}请在各题对应答题区域内作答，超出矩形边框限定区域的答案无效};
+	\draw([shift={({0.5*\lk},-0.5)}]D3)node[above=-1pt,BrickRed]{\heiti\zihao{6}请在各题对应答题区域内作答，超出矩形边框限定区域的答案无效};
+	\draw([shift={(0.6,-1.2)}]fxzt)node[right]{{\heiti\zihao{-4}二、填空题}（共4个小题，每小题5分，共20分）};
+	\draw([shift={(0.4,-2.3)}]fxzt)node[right]{13.\textcolor{BrickRed}{\tk[4]}};
+	\draw([shift={({0.1cm+\lk/2},-2.3)}]fxzt)node[right]{14.\textcolor{BrickRed}{\tk[4]}};
+	\draw([shift={(0.4,-3.3)}]fxzt)node[right]{15.\textcolor{BrickRed}{\tk[4]}};
+	\draw([shift={({0.1cm+\lk/2},-3.3)}]fxzt)node[right]{16.\textcolor{BrickRed}{\tk[4]}};
+	\draw[line width=1.2pt]([shift={(0.2,-3.9)}]fxzt)--++({\lk-0.4cm},0);
+	\draw([shift={(0.6,-4.3)}]fxzt)node[right]{{\heiti\zihao{-4}三、解答题}（共6个小题，共70分）};
+	\draw([shift={(0.3,-4.9)}]fxzt)node[right]{{\heiti\zihao{-4}17.}（本小题满分10分）};
+	\draw([shift={(0.2,-5.5)}]fxzt)node[right]{解：（\myRm1）};
+	\draw([shift={({\lk-2.2cm},-6.5)}]fxzt)node{
+		\begin{tikzpicture}[scale=1]
+			\draw[red](0,0)rectangle(3.5,3.5);
+			\draw(1.75,1.75)node[red]{本题绘图区};
+		\end{tikzpicture}
+		};
+	\draw([shift={(0,-0.5)}]A2)node[right]{（\myRm2）};
+	\draw[line width=1.2pt]([shift={(0,-6)}]A2)--++({\lk},0);
+	\draw([shift={(0.3,-6.4)}]A2)node[right]{{\heiti\zihao{-4}18.}（本小题满分12分）};
+	\draw([shift={(0,-6.9)}]A2)node[right]{解：（\myRm1）};
+	\draw([shift={({\lk-2.1cm},-8)}]A2)node{
+		\begin{tikzpicture}[scale=1]
+			\draw[red](0,0)rectangle(3.5,3.5);
+			\draw(1.75,1.75)node[red]{本题绘图区};
+		\end{tikzpicture}
+		};
+	\draw[dashed]([shift={(0,-14.5)}]A2)--++({\lk},0);
+	\draw([shift={(0,-14.9)}]A2)node[right]{（\myRm2）};
+	
+	\draw([shift={(0.3,-0.4)}]A3)node[right]{{\heiti\zihao{-4}19.}（本小题满分12分）};
+	\draw([shift={(0,-1)}]A3)node[right]{解：（\myRm1）};
+	\draw([shift={({\lk-2.1cm},-2)}]A3)node{
+		\begin{tikzpicture}[scale=1]
+			\draw[red](0,0)rectangle(3.5,3.5);
+			\draw(1.75,1.75)node[red]{本题绘图区};
+		\end{tikzpicture}
+		};
+	\draw[dashed]([shift={(0,-0.5*\textheight)}]A3)--++({\lk},0);
+	\draw([shift={(0,{-0.5*\textheight-0.4cm})}]A3)node[right]{（\myRm2）};	
+			
+\end{tikzpicture}
+
+\newpage
+
+\begin{tikzpicture}[remember picture,overlay]
+	\coordinate (A1) at ([shift={(\zbj,-\sbj)}]current page.north west);%第一栏左上角（版心左上角）
+	\coordinate (B1) at ([shift={({\zbj+\lk},-\sbj)}]current page.north west);%%第一栏右上角
+	\coordinate (C1) at ([shift={({\zbj+\lk},\xbj)}]current page.south west);%%第一栏右下角
+	\coordinate (D1) at ([shift={(\zbj,\xbj)}]current page.south west);%%第一栏右下角
+	\coordinate (A2) at ([shift={(\ljjy,0)}]B1);%第二栏左上角
+	\coordinate (B2) at ([shift={({\lk},0)}]A2);%第二栏右上角
+	\coordinate (C2) at ([shift={(0,-\textheight)}]B2);%第二栏右下角
+	\coordinate (D2) at ([shift={(\ljjy,0)}]C1);%第二栏左下角
+	\coordinate (A3) at ([shift={(\ljje,0)}]B2);%第三栏左上角
+	\path([shift={(-\ybj,-\sbj)}]current page.north east) coordinate (B3);%第三栏右上角
+	\path([shift={(-\ybj,\xbj)}]current page.south east) coordinate (C3);%第三栏右下角
+	\coordinate (D3) at ([shift={(\ljje,0)}]C2);%第三栏左下角
+	\draw[line width=1.2pt]
+		(A1)rectangle([shift={(-0.2,0)}]C1)
+		(A2)rectangle(C2)
+		(A3)rectangle(C3);
+	\draw	[BrickRed,rounded corners=6pt]
+		([shift={(-0.2,0.2)}]A1)rectangle([shift={(0,-0.5)}]C1)
+		([shift={(-0.2,0.2)}]A2)rectangle([shift={(0.2,-0.5)}]C2)
+		([shift={(-0.2,0.2)}]A3)rectangle([shift={(0.2,-0.5)}]C3);
+	\draw([shift={({\lk/2},-0.5)}]D1)node[above=-1pt,BrickRed]{\heiti\zihao{6}请在各题对应答题区域内作答，超出矩形边框限定区域的答案无效};
+	\draw([shift={({0.5*\lk},-0.5)}]D2)node[above=-1pt,BrickRed]{\heiti\zihao{6}请在各题对应答题区域内作答，超出矩形边框限定区域的答案无效};
+	\draw([shift={({0.5*\lk},-0.5)}]D3)node[above=-1pt,BrickRed]{\heiti\zihao{6}请在各题对应答题区域内作答，超出矩形边框限定区域的答案无效};
+	
+
+	\draw([shift={(0.3,-0.5)}]A1)node[right]{{\heiti\zihao{-4}20.}（本小题满分12分）};
+	\draw([shift={(0,-1)}]A1)node[right]{解：（\myRm1）};
+	\draw([shift={({\lk-2.1cm},-2)}]A1)node{
+		\begin{tikzpicture}[scale=1]
+			\draw[red](0,0)rectangle(3.5,3.5);
+			\draw(1.75,1.75)node[red]{本题绘图区};
+		\end{tikzpicture}
+		};
+	\draw[dashed]([shift={(0,-0.5*\textheight)}]A1)--++({\lk-0.2cm},0);
+	\draw([shift={(0,{-0.5*\textheight-0.4cm})}]A1)node[right]{（\myRm2）};
+	
+	\draw([shift={(0.3,-0.5)}]A2)node[right]{{\heiti\zihao{-4}21.}（本小题满分10分）};
+	\draw([shift={(0,-1)}]A2)node[right]{解：（\myRm1）};
+	\draw([shift={({\lk-2.1cm},-2)}]A2)node{
+		\begin{tikzpicture}[scale=1]
+			\draw[red](0,0)rectangle(3.5,3.5);
+			\draw(1.75,1.75)node[red]{本题绘图区};
+		\end{tikzpicture}
+		};
+	\draw[dashed]([shift={(0,-0.5*\textheight)}]A2)--++({\lk},0);
+	\draw([shift={(0,{-0.5*\textheight-0.4cm})}]A2)node[right]{（\myRm2）};
+	
+	\draw([shift={(0.3,-0.4)}]A3)node[right]{{\heiti\zihao{-4}22.}（本小题满分12分）};
+	\draw([shift={(0,-1)}]A3)node[right]{解：（\myRm1）};
+	\draw([shift={({\lk-2.1cm},-2)}]A3)node{
+		\begin{tikzpicture}[scale=1]
+			\draw[red](0,0)rectangle(3.5,3.5);
+			\draw(1.75,1.75)node[red]{本题绘图区};
+		\end{tikzpicture}
+		};
+	\draw[dashed]([shift={(0,-0.5*\textheight)}]A3)--++({\lk},0);
+	\draw([shift={(0,{-0.5*\textheight-0.4cm})}]A3)node[right]{（\myRm2）};	
+			
+\end{tikzpicture}
+
+\end{document}

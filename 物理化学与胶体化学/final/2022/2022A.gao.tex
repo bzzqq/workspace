@@ -1,0 +1,108 @@
+%!TEX program = xelatex
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\huge 河北农业大学课程考试试卷}}
+
+\centerline{\large 2022-2023学年第\underline{\ 1\ }学期}
+
+考试科目：\underline{物理化学与胶体化学} \quad 姓名：\underline{ \qquad \qquad} \quad 学号：\underline{ \qquad \qquad \qquad}
+
+学院：\underline{理工学院} \quad 专业班级：\underline{\qquad \qquad \qquad \qquad} \quad 卷别：\cred{A} 考核方式：\cred{开卷}
+
+\bigskip
+
+
+1. 简答题(15分)
+
+有人认为空调可以从低温热源吸热放给高温热源，这违背了热力学第二定律。你认为他的观点对吗？分析原因。
+
+\bigskip
+
+\bigskip
+
+2. 简答题(15分)
+
+在常温下，对于NaCl水溶液，考虑电离和不考虑电离时，体系的独立组分数和物种数的区别。
+
+\bigskip
+
+\bigskip
+
+3. 主观题(20分)
+
+乙烷脱氢生产乙烯 \ch{C2H6 (g) -> C2H4 (g) + H2 (g)}
+
+(1) 判断该反应在常温常压下能否自发进行。
+
+(2) 判断该反应在500K下能否自发进行。相关热力学数据查课本附录。
+
+\bigskip
+
+\bigskip
+
+4. 主观题(25分)
+
+银器长期放置，光泽暗淡，表面会发黄、变黑，是由于银长期露置空气中，被氧化所致。此类情况在各种博物馆展出的古银器上尤为常见。
+
+\centerline{\ch{4 Ag + O2 -> 2 Ag2O}}
+
+将银的氧化反应设计成电池，(1) 正负极应分别选用什么电极？(2) 写出电池的表示式和电极反应。(3) 已知$\varphi_\mathrm{AgO/Ag}^\ominus = \SI{0.34}{V}$，计算该电池的标准电动势。
+
+\bigskip
+
+\bigskip
+
+5. 主观题(25分)
+
+试计算在珠穆朗玛峰顶上的沸水中煮熟一个鸡蛋需要多长时间。
+
+己知组成蛋的蛋白质的热变作用为一级反应，其活化能约为\SI{85}{kJ.mol^{-1}}，在$p^\ominus$下的沸水中煮熟一个鸡蛋需要\SI{10}{min}。水的摩尔蒸发热$\Delta H_\mathrm{m} = \SI{41.05}{kJ.mol^{-1}}$。珠穆朗玛峰顶大气压力$p=\SI{31}{kPa}$。
+
+
+
+\end{spacing}
+\end{document}

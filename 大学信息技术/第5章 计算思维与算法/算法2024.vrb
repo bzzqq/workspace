@@ -1,0 +1,19 @@
+\frametitle{用高级程序语言描述}
+    \begin{minipage}{0.28\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{island}
+        \end{figure}
+    \end{minipage}\hfill
+    \begin{minipage}{0.68\linewidth}
+        \begin{codeblock}{</> python代码}
+m, n = len(grid), len(grid[0])
+ans = 0
+for i in range(m):
+    for j in range(n):
+        if grid[i][j] == 1:
+            down = 2 if i < m - 1 and grid[i + 1][j] == 1 else 0
+            right = 2 if j < n - 1 and grid[i][j + 1] == 1 else 0
+            ans += 4 - down - right
+        \end{codeblock}
+    \end{minipage}

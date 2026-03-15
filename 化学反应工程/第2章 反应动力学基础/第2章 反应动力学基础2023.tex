@@ -1,0 +1,48 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+\usetheme{mytheme}
+\special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+\title{第二章}
+\subtitle{反应动力学基础}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+%-----------------------------------------------------------------
+\begin{document}
+
+\begin{frame}
+	\titlepage
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{本章研究内容}
+	\qquad \Large 反应动力学是研究化学反应速率以及各种因素对反应速率影响的学科。传统上属于物理化学的范围，但为了满足工程实践的需要，化学反应工程在其发展过程中，在这方面也进行了大量的研究工作。本章将在物理化学基础上，从反应工程学科的角度阐明某些常用的反应动力学概念和动力学问题的处理方法，包括\bf{均相反应动力学}及\bf{多相催化反应动力学}。
+\end{frame}
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\input{contents/2.1.tex}
+\input{contents/2.2.tex}
+\input{contents/2.3.tex}
+\input{contents/2.4.tex}
+\input{contents/2.5.tex}
+\input{contents/2.6.tex}
+\input{contents/2.7.tex}
+\input{contents/2.8.tex}
+
+
+
+
+\end{document}

@@ -1,0 +1,165 @@
+\section{对齐}
+\subsection{表格整体居中}
+
+为什么使用了\verb|\begin{center} - \end{center}|但表格还是没有整体居中？
+
+\begin{itemize}
+  \item 它只是居中了\verb|\begin{table} - \end{table}|；
+  \item 如果里面嵌套了\verb|\begin{tabular} - \end{tabular}|，那么表格还是不会居中。
+\end{itemize}
+
+要使得表格居中，则需要在\verb|\begin{table}|后面附加\verb|\centering|，才能使得表格整体居中。
+
+\begin{lstlisting}
+    \begin{center}
+        \begin{table}[h]
+            \centering
+            \begin{tabular}
+
+            \end{tabular}
+        \end{table}
+    \end{center}
+\end{lstlisting}
+
+\section{tabularx宏包}
+
+\subsection{表格内自动换行}
+
+使用tabularx宏包来帮助我们实现表格内自动换行与自动计算列宽。
+
+\begin{lstlisting}
+    \usepackage{tabularx}
+\end{lstlisting}
+
+语法说明：
+\begin{lstlisting}
+    \begin{tabularx}{widthi}[posi]{preamblei}
+    \end{tabularx}
+\end{lstlisting}
+
+例: \verb|\begin{tabularx}{10.5cm}{||X|X|X|\verb|}| \%表格总宽度为10.5cm，共3列，宽度均相同。每列宽度为10.5/3=3.5。是自动计算出来的。如将上表设置改为\verb|\begin{tabularx}{\linewidth}{||p{3cm}|X|X|\verb|}|，则表格的总宽度是行宽，第1列列宽为3cm，其他两列的列宽自动计算。
+
+tabularx定义了一个新的字母---大写的X。使用X指定的列，将会自动换行并向左对齐。那么，向右对齐呢？居中对齐呢？
+
+\begin{lstlisting}
+    \begin{tabularx}{0.8\textwidth} { 
+        | >{\raggedright\arraybackslash}X 
+        | >{\centering\arraybackslash}X 
+        | >{\raggedleft\arraybackslash}X 
+        | }
+        \hline
+        abc & edf & ghi\\
+        \hline
+        edf & abc & ghi\\
+        \hline
+      \end{tabularx}
+\end{lstlisting}
+
+\verb|\raggedright和\centering|分别对应了向左对齐（参差不齐的右边即左对齐）、居中对齐。但在 tabularx 中不能直接使用，他们会破坏换行符\verb|\\|。为此，tabularx 定义了 \verb|\arraybackslash| 来解决这个问题。使用方法就是直接加在后面，比如 \verb|>{\raggedright\arraybackslash}X| 就是进行左对齐，\verb|>和{}|不能少！
+
+每一个 tabularx 表格至少要有一个 X 列！虽然兼容 l,c,r 写法，但纯 l,c,r 组成的 tabularx 表格会出错的！
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{0.8\textwidth} { 
+        | >{\raggedright\arraybackslash}X 
+        | >{\centering\arraybackslash}X 
+        | >{\raggedleft\arraybackslash}X 
+        | }
+        \hline
+        abc & edf & ghi\\
+        \hline
+        edf & abc & ghi\\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{不同宽度的X列}
+
+通常，单个表中的所有 X 列都设置为相同的宽度，但是可以让 tabularx 将它们设置为不同的宽度。下面是文档中的例子。
+
+\begin{lstlisting}
+    {
+        >{\hsize=.5\hsize\linewidth=\hsize}X
+        >{\hsize=1.5\hsize\linewidth=\hsize}X
+    }
+\end{lstlisting}
+
+指定两列，第二列的宽度是第一列的三倍。但是，如果你想进行这种神奇地操作，则应遵循以下两条规则：
+
+\begin{itemize}
+  \item 确保所有 X 列的宽度之和保持不变。（在上面的示例中，新宽度加起来仍然是默认宽度的两倍，即等于两个标准宽度相同 X 列）
+  \item 不要使用跨越任何 X 列的 \verb|\multicolumn|
+\end{itemize}
+
+示例：三列宽度1:2:3
+
+\begin{table}[h]
+    \centering
+    \begin{tabularx}{0.8\textwidth} { 
+        | >{\raggedright\arraybackslash\hsize=.5\hsize\linewidth=\hsize}X 
+        | >{\centering\arraybackslash}X 
+        | >{\raggedleft\arraybackslash\hsize=1.5\hsize\linewidth=\hsize}X 
+        | }
+        \hline
+        abc & edf & ghi\\
+        \hline
+        edf & abc & ghi\\
+        \hline
+    \end{tabularx}
+\end{table}
+
+\subsection{让tabularx表格中的内容垂直居中}
+要让 tabularx 表格中的内容上下垂直居中 ，可以使用 \verb|m{width}| 形式的列类型 。该列类型会将内容垂直居中 ，并指定列宽为\verb|width|。具体实现方式如下 ：
+
+\begin{lstlisting}
+\newcolumntype{Y}{>{\centering\arraybackslash}m{0.3\textwidth}} %定义新的列类型Y，宽度为页面的 30%
+\newcolumntype{Z}{>{\raggedright\arraybackslash}X} %定义新的列类型Z，使用X列类型但是左对齐
+\end{lstlisting}
+
+\section{三线表}
+
+\subsection{三线表竖线断掉}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \toprule
+       H & e & l & l & o \\ \midrule
+       01001000 & 01100101 & 01101100  & 01101100 & 01101111 \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+解决方法：把\verb|\toprule|和\verb|\bottomrule|互换，中间用\verb|\hline|。
+
+\begin{lstlisting}
+    \begin{tabular}{|c|c|c|c|c|}
+        \bottomrule
+       H & e & l & l & o \\ \hline
+       01001000 & 01100101 & 01101100  & 01101100 & 01101111 \\ \toprule
+    \end{tabular}
+\end{lstlisting}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+        \bottomrule
+       H & e & l & l & o \\ \hline
+       01001000 & 01100101 & 01101100  & 01101100 & 01101111 \\ \toprule
+    \end{tabular}
+\end{table}
+
+\section{问题与解决方法}
+\subsection{解决表格过宽问题，自适应调整宽度}
+
+\begin{lstlisting}
+    \usepackage{graphicx} # 记得加宏包
+    \resizebox{\linewidth}{!}{  #此处！表示根据根据宽高比进行自适应缩放
+    \begin{tabular}...
+    ....
+    ....
+    \end{tabular}
+    } # 注意加的位置在\begin{tabular}和\end{tabular}前后
+\end{lstlisting}
+
+

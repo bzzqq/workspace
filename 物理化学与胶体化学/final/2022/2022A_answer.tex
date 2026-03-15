@@ -1,0 +1,168 @@
+%!TEX program = xelatex
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\Large 河北农业大学2022——2023学年第1学期}}
+
+\centerline{\Large 参考答案及评分标准（A）卷}
+
+\centerline{开课学院：\underline{\quad 理工学院 \quad} \quad 出\ \ 题\ \ 人：\underline{ \qquad \qquad 张斌 \qquad \qquad}}
+
+\centerline{课\ \ 程\ \ 号：\underline{\quad H05981199 \ } \quad 课程名称：\underline{\quad 物理化学与胶体化学 \ \ }}
+
+\bigskip
+
+
+1. 简答题(15分)
+
+空调制冷、撒盐化雪、海水不容易结冰、高山上很难将东西煮熟等。
+
+\bigskip
+
+\bigskip
+
+2. 简答题(15分)
+
+物理化学公式很多，不能死记硬背，需要理解公式是如何得来的，才能明白公式怎么运用，以及公式的适用条件。
+
+\bigskip
+
+\bigskip
+
+3. 简答题(10分)
+
+以\ch{NaCl}水溶液为例，若只考虑\ch{NaCl}和\ch{H2O}两种物质，则$S=2, R=0, R' = 0$，则$C = S - R - R' = 2$。若考虑\ch{NaCl}电离平衡\ch{Nacl <=> Na^+ + Cl^-}，则体系中$S=4, R=1, R' = 1$，则$C = S - R - R' = 2$。可见S不同而C相同。
+
+可举任意符合题目要求的例子。
+
+\bigskip
+
+\bigskip
+
+4. 主观题(20分)
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{@{}cccc@{}}
+    \toprule
+         & $\Delta_\mathrm{f} H_{\mathrm{m}}^{\ominus}/(\si{kJ.mol^{-1}})$      & $S_{\mathrm{m}}^{\ominus}/(\si{J.mol^{-1}.K^{-1}})$       & $C_{p,\mathrm{m}}/(\si{J.mol^{-1}.K^{-1}})$      \\ \midrule
+    \ce{C2H6 (g)} & -84.68 & 229.60  & 52.63  \\
+    \ce{C2H4 (g)} & 52.26  & 267.05  & 43.56  \\
+    \ce{H2 (g)}   & 0      & 130.684 & 28.824 \\ \bottomrule
+    \end{tabular}
+    \end{table}
+
+(1)
+
+\begin{small}
+$\begin{aligned}
+    \Delta_\mathrm{r} H_{\mathrm{m}}^{\ominus}&=(52.26 + 84.68) ~ \si{kJ.mol^{-1}} = 136.94 ~ \si{kJ.mol^{-1}}\\
+    \Delta_\mathrm{r} S_{\mathrm{m}}^{\ominus} & =(130.684+219.56-229.60) ~ \si{J.mol^{-1}.K^{-1}} = 120.644 ~ \si{J.mol^{-1}.K^{-1}} \\
+    \Delta_\mathrm{r} G_{\mathrm{m}}^{\ominus} & =\Delta_\mathrm{r} H_{\mathrm{m}}^{\ominus}-T \Delta_\mathrm{r} S_{\mathrm{m}}^{\ominus} \\
+    & = 136.94  ~ \si{kJ.mol^{-1}} - 298 \mathrm{~K} \times 120.644 \times 10^{-3} ~ \si{kJ.mol^{-1}.K^{-1}} \\
+    & =101 ~ \si{kJ.mol^{-1}} > 0
+\end{aligned}$
+\end{small}
+
+该反应在常温常压下不能自发进行。$\hfill \cdots \cdots \cdots \cdots (10\text{分})$
+
+(2) 
+\[
+    \xymatrix{
+    \ce{C2H6 (g)}, ~ \SI{500}{K}  \ar[d]^{\Delta S_1}_{\Delta H_1}    \ar[rr]^{\Delta H \qquad}_{\Delta S \qquad} &  & \ce{C2H4 (g) + H2 (g)}, ~ \SI{500}{K}\\
+    \ce{C2H6 (g)}, ~ \SI{298}{K}   \ar[rr]^{\Delta H_2 \qquad}_{\Delta S_2 \qquad} &  & \ce{C2H4 (g) + H2 (g)}, ~ \SI{500}{K} \ar[u]^{\Delta H_3}_{\Delta S_3}
+    }
+\]
+
+\begin{small}
+$\begin{aligned}
+\Delta H_1 & = nC_{p,\mathrm{m}}(T_2 - T_1) = 52.63 \times (298 - 500) \times 10^{-3} = \SI{10.63}{kJ.mol^{-1}}\\
+\Delta H_2 & = \SI{136.94}{kJ.mol^{-1}} \\
+\Delta H_3 & = nC_{p,\mathrm{m}}(T_2 - T_1) = (43.56 + 28.824) \times (500 - 298) \times 10^{-3} = \SI{14.62}{kJ.mol^{-1}}\\
+\Delta H & = \Delta H_1 +\Delta H_2 +\Delta H_3 = -10.63 + 136.94 + 14.62 = \SI{140.93}{kJ.mol^{-1}} \\
+\Delta S_1 & = nC_{p,\mathrm{m}}\ln\frac{T_2}{T_1} = 52.63 \times \ln \frac{298}{500} = \SI{-27.24}{J.mol^{-1}.K^{-1}} \\
+\Delta S_2 & = \SI{120.644}{J.mol^{-1}.K^{-1}} \\
+\Delta S_3 & = nC_{p,\mathrm{m}}\ln\frac{T_2}{T_1} = (43.56 + 28.824) \times \ln \frac{2500}{298} = \SI{37.46}{J.mol^{-1}.K^{-1}} \\
+\Delta S & = \Delta S_1 +\Delta S_2 +\Delta S_3 = -27.24 + 120.644 + 37.46 = \SI{130.864}{kJ.mol^{-1}.K^{-1}} \\
+\Delta G & = \Delta H - T\Delta S = 140.93 - 500 \times 130.864 \times 10^{-3} = \SI{75.498}{kJ.mol^{-1}} > 0 
+\end{aligned}$
+
+该反应在500K下不能自发进行。$\hfill \cdots \cdots \cdots \cdots (10\text{分})$
+\end{small}
+
+\bigskip
+
+\bigskip
+
+
+5. 主观题(20分)
+
+$\begin{array}{l}
+\ln \frac{P_{2}}{P_{1}}=\frac{\Delta H_{\mathrm{m}}}{R}\left(\frac{1}{T_{1}}-\frac{1}{T_{2}}\right) \\
+\ln \frac{31}{101.3}=\frac{41.05 \times 10^{3}}{8.314}\left(\frac{1}{373}-\frac{1}{T_{2}}\right) \\
+T_{2}=342.5 \mathrm{K} \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \quad \cdots \cdots \cdots \cdots (6\text{分})\\
+\ln \frac{k_{2}}{k_{1}}=\frac{-E_{a}}{R}\left(\frac{1}{T_{2}}-\frac{1}{T_{1}}\right) \\
+\ln \frac{k_{2}}{k_{1}}=\frac{-85 \times 10^{3}}{8.314}\left(\frac{1}{342.5}-\frac{1}{373}\right) \\
+\frac{k_{2}}{k_{1}}= 0.086  \quad \quad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \cdots \cdots \cdots \cdots (6\text{分})\\
+\text{一级反应}\quad \frac{k_{2}}{k_{1}}=\frac{t_{1}}{t_{2}} \\
+\frac{10}{t_{2}} = 0.086 \\
+t_{2}=116.28 min \\
+\text{在珠穆朗玛峰顶上的沸水中煮熟一个鸡蛋需要116.28 min} \qquad \cdots \cdots \cdots \cdots (8\text{分})
+\end{array}$
+
+\bigskip
+
+\bigskip
+
+6. 主观题(20分)
+
+评分标准：
+
+设计综合计算题，包含化学热力学知识点，10分；包含化学动力学的知识点，10分。
+
+
+\end{spacing}
+\end{document}

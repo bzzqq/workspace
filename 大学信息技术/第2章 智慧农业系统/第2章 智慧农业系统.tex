@@ -1,0 +1,51 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme2024}
+% \special{dvipdfmx:config z 0} %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
+
+\title{大学信息技术}
+\subtitle{计算机基础知识}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+    
+\maketitle
+
+\begin{frame}
+    \frametitle{}
+    \begin{center}
+        \cbf{\Large{张斌\quad 15920464144}}
+    \end{center}
+    \vspace{-1em}
+    \begin{figure}[htpb]
+        \centering
+        \setcounter{subfigure}{0}
+        \subfloat{\includegraphics[height=6.5cm]{微信}}\quad
+        \subfloat{\includegraphics[height=6.5cm]{智慧农业导论}}\quad
+        \subfloat{\includegraphics[height=6.5cm]{qq}}
+    \end{figure}
+\end{frame}
+
+
+
+
+
+\begin{frame}{}
+  \begin{center}
+      {\Huge \cbf{目 \ 录}}
+  \end{center}
+  \tableofcontents[subsectionstyle=hide/hide/show]
+  \thispagestyle{empty}
+  \addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\include{contents/computer}
+\include{contents/InformationSystem}
+
+\end{document}

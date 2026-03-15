@@ -1,0 +1,125 @@
+%!TEX program = xelatex
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\Large 河北农业大学2022——2023学年第1学期}}
+
+\centerline{\Large 参考答案及评分标准（A）卷}
+
+\centerline{开课学院：\underline{\quad 理工学院 \quad} \quad 出\ \ 题\ \ 人：\underline{ \qquad \qquad 张斌 \qquad \qquad}}
+
+\centerline{课\ \ 程\ \ 号：\underline{HBX250037-01} \quad 课程名称：\underline{\quad \quad \ \ 化学反应工程 \quad \ \ \ }}
+
+\bigskip
+
+
+1. 简答题(15分)
+
+
+要求能够将反应工程某一章节的主要内容知识点总结清楚。
+\bigskip
+\bigskip
+
+2. 简答题(15分)
+
+要求针对某一具体问题进行分析，将解决问题中遇到的困难，以及是如何解决困难的进行说明。
+
+\bigskip
+\bigskip
+
+3. 简答题(16分)
+
+可以从各种类型反应器的特点、操作方式、反应器计算等方面进行回答。
+
+\bigskip
+\bigskip
+
+4. 读图题(24分)
+
+(1) 可逆放热反应 $\hfill \qquad \cdots \cdots \cdots \cdots (4\text{分})$
+
+(2) M点或N点，视情况而定。$\hfill \qquad \cdots \cdots \cdots \cdots (4\text{分})$
+
+(3) MA等温操作、GD绝热操作、GK换热操作。$\hfill \qquad \cdots \cdots \cdots \cdots (6\text{分})$
+
+(4) 热点。$\hfill \qquad \cdots \cdots \cdots \cdots (4\text{分})$
+
+反应热效应、床层传热强度、进料温度、操作变量等。$\hfill \qquad \cdots \cdots \cdots \cdots (6\text{分})$
+
+\bigskip
+\bigskip
+
+5. 计算题(30分)
+
+设小釜体积为$V_{r1}$，大釜体积为$V_{r2}$
+
+（1）大釜在前，小釜在后：
+
+$\begin{cases}
+    \frac{V_{r2}}{Q_0} = \frac{c_{A0}X_{A1}}{kc_{A0}(1-X_{A1})} \\
+    \frac{V_{r1}}{Q_0} = \frac{c_{A0}(X_{A2} - X_{A1})}{kc_{A0}(1 - X_{A2})}
+\end{cases}$
+
+出口转化率$X_{A2} = \frac{kV_{r2} + \frac{kQ_0V_{r1}}{Q_0 + kV_{r1}}}{Q_0 + kV_{r2}}\hfill \qquad \cdots \cdots \cdots \cdots (10\text{分})$ 
+
+（2）小釜在前，大釜在后：
+
+$\begin{cases}
+    \frac{V_{r1}}{Q_0} = \frac{c_{A0}X'_{A1}}{kc_{A0}(1-X'_{A1})} \\
+    \frac{V_{r2}}{Q_0} = \frac{c_{A0}(X'_{A2} - X'_{A1})}{kc_{A0}(1 - X'_{A2})}
+\end{cases}$
+
+出口转化率$X'_{A2} = \frac{kV_{r1} + \frac{kQ_0V_{r2}}{Q_0 + kV_{r2}}}{Q_0 + kV_{r1}}\hfill \qquad \cdots \cdots \cdots \cdots (10\text{分})$
+
+$X_{A2} = X'_{A2} = \frac{kQ_0V_{r2} + kQ_0V_{r1} + k^2V_{r1}V_{r2}}{(Q_0 + kV_{r2})(Q_0 + kV_{r1})}$
+
+所以出口最终转化率相同。$\hfill \qquad \cdots \cdots \cdots \cdots (10\text{分})$
+
+代入特定数据计算扣10分。
+
+
+\end{spacing}
+\end{document}

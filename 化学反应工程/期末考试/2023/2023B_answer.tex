@@ -1,0 +1,192 @@
+\documentclass[12pt, b5paper]{article}
+\usepackage{ctex}
+
+\usepackage{geometry}
+\geometry{b5paper,left=2cm,right=1cm,top=2.5cm,bottom=2.5cm}
+\usepackage{chemformula} %化学公式宏包
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\newcommand*{\cred}{\textcolor{red}}
+
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\setlength{\parindent}{0pt} %无缩进
+\usepackage{setspace}
+\usepackage{fancyhdr} %设置页码
+\usepackage{lastpage} %获取总页数
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+\renewcommand\headrulewidth{0pt} %取消页眉中的装饰分割线
+\fancyhf{}
+\cfoot{\footnotesize 第 \thepage\ 页(共 \pageref{LastPage}页)}%当前页 of 总页数
+
+
+%微分符号
+\makeatletter
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}}
+\makeatother
+
+%直立积分
+\DeclareSymbolFont{EulerExtension}{U}{euex}{m}{n}
+\DeclareMathSymbol{\euintop}{\mathop} {EulerExtension}{"52}
+\DeclareMathSymbol{\euointop}{\mathop} {EulerExtension}{"48}
+\let\intop\euintop
+\let\ointop\euointop
+
+
+
+\begin{document}
+\begin{spacing}{1.625}
+
+\centerline{{\Large 河北农业大学2023--2024学年第1学期}}
+
+\centerline{\Large 参考答案及评分标准（B）卷}
+
+\centerline{开课学院：\underline{\quad 理工学院 \quad} \quad 出\ \ 题\ \ 人：\underline{ \qquad \qquad 张斌 \qquad \qquad}}
+
+\centerline{课\ \ 程\ \ 号：\underline{\ \ H05981011\quad} \quad 课程名称：\underline{\quad \quad \ \ 化学反应工程 \quad \ \ \ }}
+
+\bigskip
+
+一、简答题（共40分）
+
+1. (10分) 
+
+从生产强度最大的观点看 ， 应先低温后高温 。 原因是低温有利于 P 的生成 ， 反应前期采用低温可以生成更多的 P ， 后期由于反应物浓度下降而导致反应速率降低 ， 采用高温则可以抵偿而不致反应速率太慢 。 当然副产物 Q 的量相应也增加了 。 这是使单位时间单位反应体积目的产物 P 的产量最大所采用的对策 。
+
+\hfill $\cdots \cdots \cdots (5\text{分})$
+
+但从 P 的收率最大来考虑 ， 则应使整个反应过程在较低的温度下进行 ， 以减少 Q 的生成 。 这样必然使所需的反应体积增大 ， 生产强度下降 ，但总选择性提高 。这两种出发点到底哪一种可取 ， 视原料 、 目的产物及副产物的价格高低以及反应器的造价而定 ， 归根到底是取决于经济因素 。 \hfill $\cdots \cdots \cdots (5\text{分})$
+
+\bigskip
+\bigskip
+
+2. (10分) 
+
+活塞流反应器的停留时间分布函数$F(t) = 0, (t<\bar{t}); F(t) = 1, (t\geqslant   \bar{t})$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+全混流反应器的停留时间分布函数$F(t) = 1 - \mathrm{e}^{-t/\tau}$。\hfill $\cdots \cdots \cdots (2\text{分})$
+
+设活塞流反应器和全混流反应器进行的反应相同 ， 且平均停留时间相等 。 对于活塞流反应器 ， 所有流体粒子的停留时间相等 ， 且都等于平均停留时间。然而全混流反应器并非如此 ，停留时间小于平均停留时间的流体粒子占全部流体的分率为0.632 ， 这部分流体的转化率小于活塞流反应器是毫无疑义的 。其余36.8\%的反应物料 ， 其停留时间大于平均停留时间 ， 转化率可大于活塞流反应器 ， 但却抵偿不了由于停留时间短而损失的转化率 。 所以活塞流反应器的转化率要高于全混流反应器 。 \hfill $\cdots \cdots \cdots (6\text{分})$
+
+\bigskip
+\bigskip
+
+3. (10分) 
+
+因孔半径$r_\mathrm{a}$和分子运动平均自由程$\lambda$的相对大小的不同，孔扩散分为以下几种形式：
+
+当$\lambda/2r_\mathrm{a}\leqslant 10^{-2}$时，孔内扩散属于正常扩散，这时的孔内扩散与通常的气体扩散完全相同。 \hfill $\cdots \cdots \cdots (3\text{分})$
+
+当$\lambda/2r_\mathrm{a}\geqslant 10$时，孔内扩散为努森扩散，这时主要是气体分子与孔壁的碰撞，而分子之间的相互碰撞则影响甚微。\hfill $\cdots \cdots \cdots (3\text{分})$
+
+当$\leqslant 10^{-2} \lambda/2r_\mathrm{a}\leqslant 10$时，则两种扩散均起作用。\hfill $\cdots \cdots \cdots (4\text{分})$
+
+\bigskip
+\bigskip
+
+4. (10分) 
+\[
+	\phi^{2}=L^{2}\frac{k_{\mathrm{p}}}{D_{\mathrm{e}}}=\frac{aLk_{\mathrm{p}}c_{\mathrm{AS}}}{D_{\mathrm{e}}a(c_{\mathrm{AS}}-0)/L}=\frac{\text{表面反应速率}}{\text{内扩散速率}}
+\]
+由此可知梯尔模数表示表面反应速率与内扩散速率的相对大小。$\phi$值越大 ， 表明表面反应速率大而内扩散速率小 ， 说明内扩散阻力对反应过程的影响大 ， 反之则影响小 。\hfill $\cdots \cdots \cdots (5\text{分})$
+
+有效扩散系数$\eta$的意义为扩散有影响时的反应速率与扩散无影响时的反应速率之比。
+\[
+\eta_\mathrm{x}=\frac{\text{外扩散有影响时颗粒外表面处的反应速率}}{\text{外扩散无影响时颗粒外表面处的反应速率}}
+\]
+\[
+	\eta=\frac{\text{内扩散有影响时的反应速率}}{\text{内扩散无影响时的反应速率}} 
+\]
+\hfill $\cdots \cdots \cdots (5\text{分})$
+
+\newpage 
+二、计算题（共60分）
+
+1. (20分) 
+
+(1) A的摩尔流量$F_\mathrm{A0} = F_\mathrm{P}/X_\mathrm{A} = 270/0.9 = 300 \ \mathrm{mol/h}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+A的体积流量$Q_0 = F_\mathrm{A0}/c_\mathrm{A0} = 300/2 = 150 \ \mathrm{L/h}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+反应时间$t = \frac{1}{k}\ln{\frac{1}{1-X_\mathrm{A}}} = \frac{1}{1.5}\ln{\frac{1}{1-0.8}} = 1.535\ \mathrm{h}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+反应体积$V_\mathrm{r} = Q_0(t+t_0) = 150\times (1.535+0.5) = 305\ \mathrm{L}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+(2) $V_\mathrm{r} = \frac{Q_0c_\mathrm{A0}X_\mathrm{Af}}{-\mathscr{R}_\mathrm{A}} = \frac{Q_0c_\mathrm{A0}X_\mathrm{Af}}{kc_\mathrm{A0}(1-X_\mathrm{Af})} = \frac{150\times 0.9}{1.5\times (1-0.9)} = 900 \ \mathrm{L}$ \hfill $\cdots \cdots \cdots (4\text{分})$
+
+(3) 空时$\tau = t = 1.535\ \mathrm{h}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+反应体积$V_\mathrm{r} = Q_0\tau = 150\times 1.535 = 230 \ \mathrm{L}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+\bigskip
+\bigskip
+
+2. (20分) 
+
+由题意知$L_r = 1 \mathrm{m}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+$d_\mathrm{s}=6\frac{V_\mathrm{p}}{a_\mathrm{p}}=6\times\frac{0.785\times0.009^2\times0.007}{2\times0.785\times0.009^2+\pi\times0.009(0.007)}=8.217\times10^{-3}\mathrm{m}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+$\varepsilon=1-\rho_{\mathrm{b}}/\rho_{\mathrm{p}}=1-1400/2000=0.30$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+$\rho=\frac{18.96}{22.4\times(689/273)\times(0.1013/0.6865)}=2.348\mathrm{kg/m^{3}}$ \hfill $\cdots \cdots \cdots (2\text{分})$
+
+$u_{0}=\frac{G}{\rho}=\frac{0.9360}{2.348}=0.3986\mathrm{m/s}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+$Re=\frac{d_sG}{\mu\left(1-\varepsilon\right)}=\frac{8.217\times10^{-3}\times0.9360}{2.50\times10^{-5}\left(1-0.30\right)}=439.5$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+$f=\frac{150}{439.5}+1.75=2.091$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+$\Delta p=\frac{2.091\times2.348\times0.3986^2(1-0.3)}{8.217\times10^{-3}\times0.3^3}=2461\mathrm{kg/(s^2\cdot m^2)=2461Pa/m}$ \hfill $\cdots \cdots \cdots (3\text{分})$
+
+\bigskip
+\bigskip
+
+3. (20分) 
+
+气体分子的平均自由程$\lambda = 1.013/p = 1.013/101300 = 10^{-5} \ \mathrm{cm}$ \hfill  $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+$\frac{\lambda}{2r_\mathrm{a}} = \frac{10^{-5}}{2\times 4\times 10^{-7}} = 12.5 > 10$ \hfill  $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+因此，气体在催化剂颗粒内的扩散属于努森扩散。\hfill  $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+扩散系数
+
+$D_\mathrm{K} = 9700r_\mathrm{a}\sqrt{T/M} = 9700\times 4\times 10^{-7} \times \sqrt{773/58} = 0.014$ \hfill  $\cdots \cdots \cdots \cdots (2\text{分})$ 
+
+有效扩散系数
+
+$D_\mathrm{e} = V_\mathrm{g}\rho_p D_\mathrm{K}/\tau_\mathrm{m} = 0.35\times \rho_p \times 0.014/2.5 = 1.97\times 10^{-3}\rho_p$ \hfill  $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+$k_p = k_\mathrm{W}\rho_p = 0.92\rho_p$ \hfill  $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+梯尔模数$\phi = \frac{d}{2}\sqrt{\frac{k_\mathrm{W}}{D_\mathrm{e}}} = \frac{0.8}{2}\sqrt{\frac{0.92\rho_p}{1.97\times 10^{-3}\rho_p}} = 8.62$ \hfill $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+由于$\phi > 3$，内扩散有效因子
+
+$\eta = 1/\phi = 0.116$ \hfill $\cdots \cdots \cdots \cdots (3\text{分})$ 
+
+\end{spacing}
+\end{document}

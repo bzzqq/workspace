@@ -1,0 +1,76 @@
+\section{化学反应的方向及限度}
+
+
+\begin{frame}
+    \frametitle{化学反应的方向}
+
+    \large 定温定压、只做体积功的封闭体系中，某化学反应\ch{aA + dD = gG + hH}发生微小变化，由体系的吉布斯自由能变化$\mathrm{d}G=\sum_B{\mu_\mathrm{B}\mathrm{d}n_\mathrm{B}}$及$\mathrm{d}n_\mathrm{B}=\nu_\mathrm{B}\mathrm{d}\xi$得
+    \[
+        \mathrm{d}G=\sum_B{\nu_\mathrm{B}\mu_\mathrm{B}}\mathrm{d}\xi
+    \]
+    或
+    \[
+        \left(\frac{\partial G}{\partial \xi}\right)_{T,p}=\sum_B{\nu_\mathrm{B}\mu_\mathrm{B}}=\Delta _\mathrm{r}G_\mathrm{m}
+    \]
+    式中的$\Delta _\mathrm{r}G_\mathrm{m}$称为化学反应的吉布斯自由能改变量，单位\si{J.mol^{-1}}。
+
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应的方向}
+
+            化学反应的方向性是一个瞬时概念，是体系的吉布斯自由能随反应进度变化曲线在某一点切线的斜率。
+            \begin{itemize}
+                \item[\bullet] $\left(\frac{\partial G}{\partial \xi}\right)_{T,p}<0$，反应正向自发进行
+                \item[\bullet] $\left(\frac{\partial G}{\partial \xi}\right)_{T,p}=0$，反应达到平衡
+                \item[\bullet] $\left(\frac{\partial G}{\partial \xi}\right)_{T,p}>0$，反应逆向自发进行
+            \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{化学反应的限度}
+
+    化学反应的限度对应于体系的吉布斯自由能随反应进度变化的最小值。它的存在原因可以通过如下的理想气体反应来说明。    
+    \[
+        \begin{array}{rccc} 
+            & \mathrm{A}& \longrightarrow & \mathrm{B} \\
+            t=0 & 1 & & 0 \\
+            t=\xi & 1-\xi & & \xi
+            \end{array}
+    \]
+    当反应进度为$\xi$时，体系的吉布斯自由能为
+    \[
+        \begin{aligned}
+            G &=\sum_{\mathrm{B}} n_{\mathrm{B}} \mu_{\mathrm{B}}=(1-\xi) \mu_{\mathrm{A}}+\xi \mu_{\mathrm{B}} \\
+            &=(1-\xi)\left(\mu_{\mathrm{A}}^{\ominus}+R T \ln \frac{p_{\mathrm{A}}}{p^{\ominus}}\right)+\xi\left(\mu_{\mathrm{B}}^{\ominus}+R T \ln \frac{p_{\mathrm{B}}}{p^{\ominus}}\right)
+            \end{aligned}
+    \]
+  
+\end{frame}
+
+\begin{frame}
+    \frametitle{化学反应的限度}
+
+    将$p_\mathrm{A}=px_\mathrm{A}$，$p_\mathrm{B}=px_\mathrm{B}$代入，得
+    \[
+        G=\left\{(1-\xi) \mu_{\mathrm{A}}^{\ominus}+\xi \mu_{\mathrm{B}}^{\ominus}+R T \ln \frac{p}{p^{\ominus}}\right\}+R T\left[(1-\xi) \ln x_{\mathrm{A}}+\xi \ln x_{\mathrm{B}}\right]
+    \]
+    
+    \begin{columns}[c]
+        \column{9cm}
+            大括号中的数值相当于反应进度为$\xi$时，体系中各气体单独存在且各自的压力均为总压$p$时的吉布斯自由能之和，最后一项相当于混合吉布斯自由能。
+
+            若$p=p^\ominus$，则
+            \[
+                G=(1-\xi) \mu_{\mathrm{A}}^{\ominus}+\xi \mu_{\mathrm{B}}^{\ominus}+R T\left[(1-\xi) \ln x_{\mathrm{A}}+\xi \ln x_{\mathrm{B}}\right]
+            \]
+            若不考虑混合吉布斯自由能，则
+            \[
+            G=(1-\xi) \mu_{\mathrm{A}}^{\ominus}+\xi \mu_{\mathrm{B}}^{\ominus}
+            \]
+        \column{4.5cm}
+            \includegraphics[width=\linewidth]{figs/fig4.1.png}
+        \end{columns}
+\end{frame}

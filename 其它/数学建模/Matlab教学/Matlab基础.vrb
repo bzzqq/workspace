@@ -1,0 +1,15 @@
+\frametitle{在文件中创建函数}
+\begin{codeblock}{创建函数}
+# 名为 fact 的以下函数用于计算某个数 (n) 的阶乘并返回结果 (f)。
+function f = fact(n)
+    f = prod(1:n);
+end
+\end{codeblock}
+\begin{codeblock}{调用函数}
+x = 5;
+y = fact(5)
+\end{codeblock}
+\begin{itemize}
+  \item 此类型的函数必须在文件中而不是在命令行中定义。
+  \item 从 R2016b 开始，用于存储函数的另一个选项是将函数包含在脚本文件的末尾。
+\end{itemize}

@@ -1,0 +1,786 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme}
+\usetikzlibrary{tikzmark}
+
+
+%封面
+\title{第五章\ 药物的排谢}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+	
+	\begin{frame}
+		\titlepage
+		\thispagestyle{empty}
+		\addtocounter{framenumber}{-1}
+	\end{frame}
+
+
+\begin{frame}
+    \frametitle{学习目的}
+    \begin{enumerate}
+      \item 熟悉药物排泄的过程及特点
+      \item 掌握药物肾排泄的机制和影响肾排泄的主要因素
+      \item 掌握药物胆汁排泄的过程和影响药物胆汁排泄的因素
+      \item 熟悉肝肠循环概念及对药物作用的影响
+      \item 了解药物的其他排泄途径
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \frametitle{药物的排谢}
+    药物经机体吸收 、 分布及代谢等一系列过程 ， 最终会排出体外。 \highlight{药物排泄}是指体内药物或其代谢物排出体外的过程，它与生物转化统称为药物消除。
+    
+    肾排泄与胆汁排泄是最重要的排泄途径。某些药物也可从肠 、 肺 、 乳腺 、 唾液腺或汗腺排出 。
+    \begin{blankblock}{}
+        头孢菌素类 、 庆大霉素抗生素等药物主要通过肾脏排泄 。
+        
+        $\beta$-胆甾醇类药物 、 水飞蓟素 、 吲哚美辛等药物主要通过胆汁排泄 。
+        
+        气体性以及挥发性药物如吸入麻醉剂 、 乙醇可以随肺呼气排出体外 。
+        
+        地西泮 、 茶碱从乳汁中排泄的量较大 。
+        
+        盐类 （ 主要是氯化物 ） 、 水杨酸 、 尿素可以通过汗液分泌而排出体外 。
+    \end{blankblock}
+    
+\end{frame}
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+	\addtocounter{framenumber}{-1}
+\end{frame}
+
+
+\section{药物的肾排泄}
+
+
+\begin{frame}
+    \frametitle{肾单位}
+    \begin{minipage}{0.48\linewidth}
+        \begin{enumerate}
+          \item 肾脏是形成尿液的器官
+          \item 药物的肾排泄是许多药物的主要消除途径 。 水溶性药物 、 分子量小的药物 （ < 300 ） 以及肝生物转化慢的药物均由肾排泄消除 。 
+          \item 肾的基本解剖单位是肾单位 ，人的左右肾分别有 100 万 ～ 150 万个肾单位 。
+          \item 尿的生成有赖于肾小球的滤过作用以及肾小管的重吸收和分泌作用 。
+          \item 形成的尿液由膀胱排出体外 。
+        \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{肾单位}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{肾小球滤过和肾小管重吸收}
+  取某健康人肾动脉中的血浆 、 肾小囊中的液体和尿液进行分析比较 ， 得到如下数据 。 
+  \begin{table}
+      \centering
+      \begin{tabular}{cccc}
+          \bottomrule
+          \rowcolor{Emerald!20} 主要成分 & 血浆中(g/100mL) & 肾小囊中(g/100mL) & 尿液中(g/100mL) \\ \hline
+          \rowcolor{Emerald!5} 水 & 90 & 98 & 96 \\ 
+          \rowcolor{Emerald!5} 蛋白质 & 8 & 0.03 & 0 \\
+          \rowcolor{Emerald!5} 葡萄糖 & 0.1 & 0.1 & 0 \\
+          \rowcolor{Emerald!5} 无机盐 & 0.72 & 0.72 & 1.1 \\
+          \rowcolor{Emerald!5} 尿素 & 0.03 & 0.03 & 0.8 \\ \toprule
+      \end{tabular}
+  \end{table}
+  \begin{itemize}
+    \item 肾单位中的肾小球和紧贴着它的肾小囊内壁起过滤作用 。 
+    \item 当原尿流经肾小管时 ， 全部葡萄糖 、 大部分的水和部分无机盐等被肾小管重新吸收 。
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{肾小球滤过和肾小管重吸收}
+  \begin{minipage}{0.58\linewidth}
+    \begin{itemize}
+      \item 当血液流经肾小球时 ，除血细胞和大分子的蛋白质以外 ， 血浆中的一部分水 、 无机盐 、 葡萄糖和尿素等物质 ， 都可以经过肾球过滤到肾小囊中 。 肾小囊中的液体称为原尿 。人体每天形成的原尿大约有 180 升 。
+      \item 被肾小管重新吸收的物质进入包绕在肾小管外面的毛细血管中 ，送回到血液里 ， 而剩下的水和无机盐 、 尿素等就形成了尿液 。人体每天排出的尿量约 1.5 L。
+    \end{itemize}
+  \end{minipage}\hfill
+  \begin{minipage}{0.38\linewidth}
+    \begin{figure}[htpb]
+      \centering
+      \includegraphics[width=\linewidth]{尿}
+    \end{figure}
+  \end{minipage}
+\end{frame}
+
+
+
+\begin{frame}
+    \frametitle{药物的肾排泄模式}
+    \begin{minipage}{0.48\linewidth}
+        药物肾排泄$=$
+        
+        药物滤过$+$药物分泌$-$药物重吸收
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{肾排泄模式}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾小球的滤过}
+    肾小球毛细血管内皮极薄 ， 其上分布着许多直径 6 ～ 10 nm 的小孔 ， 通透性较高 ， 药物可以以膜孔扩散的方式滤过 。 滤过的蛋白质主要为白蛋白以及其他低分子量的蛋白如溶菌酶 （ 分子量 14 000 ） 、 $\beta_2$-微球蛋白 （分子量11800 ） 及胰岛素等 。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.8\linewidth]{肾小球滤过}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾小球滤过率}
+    单位时间内 （ 每分钟 ） 两肾生成的超滤液量称为\highlight{肾小球滤过率} (glomerular filtration rate ，GFR) 。 
+    \begin{itemize}
+      \item 肾小球滤过率受肾血流量 、 肾小球有效滤过压及肾小球滤过膜的面积和通透性等因素的影响 。 
+      \item 如果药物只经肾小球滤过 ， 并全部从尿中排出 ， 则药物排泄率与滤过率相等 。
+      \item 正常成年男子肾小球滤过率约为 125ml / min ， 妇女大约低 10\% 。
+    \end{itemize}
+    \begin{blankblock}{}
+        外源性物质菊粉仅由肾小球滤过而被完全清除 ， 既不存在肾小管重吸收也不存在肾小管主动分泌 ， 所以常用菊粉的清除率来表示肾小球滤过率 。 
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾小管重吸收}
+    \highlight{肾小管重吸收}是指肾小管上皮细胞将小管液中的水分和某些溶质 ， 部分或全部地转运到血液的过程 。
+    \begin{itemize}
+      \item 几乎全部重吸收 ： 葡萄糖
+      \item 大部分重吸收 ： 氯化钠 、 碳酸氢钠 、 游离氨基酸及维生素 c 等
+      \item 几乎不重吸收 ： 代谢废物 、 尿酸等
+      \item 完全不重吸收 ： 肌酐 %肌肉在人体内代谢的产物
+    \end{itemize}
+    \begin{blankblock}{}
+        正常人每天流过肾的血液为 1700 ～ 1800L ， 其中由肾小球滤过的血液为 170 ～ 180L。 但正常人的每日排尿量只有 1.5 L左右 ， 可见滤过的绝大部分液体(约 99\%) 被重吸收 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{}
+    \begin{block}{糖尿}
+        在生理条件下 ， 葡萄糖的重吸收几乎是完全彻底的 ， 几乎没有葡萄糖从尿液中排出 。 当血浆葡萄糖浓度增加时 ， 肾葡萄糖滤过率和重吸收率呈进行性线性增加 。 当血浆葡萄糖浓度< 11 mmol/L 时 ， 所有过滤的葡萄糖都将重吸收 ， 没有葡萄糖从尿液中排出 ， 每天只有不到 0.5g 葡萄糖从尿中排出 。 但当血浆葡萄糖浓度在 11.0 ～ 13.8 mmol/L 时 ， 上述关系不再是线性关系 ，多余的葡萄糖从尿中排除，出现糖尿。
+    \end{block}
+    \begin{block}{提高维生素C摄入}
+        维生素在肾小管的重吸收依赖于钠离子依赖型载体(Slc23a1)， 其重吸收具有饱和性 ， 当剂量过大时(>200mg/d)重吸收不完全 ， 尿液中会发现大量维生素C。所以单次过量服用并不能达到提高维生素C摄入量的目的，应改为小剂量多次服用 。
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{肾小管重吸收方式}
+  \begin{minipage}{0.28\linewidth}
+      \begin{enumerate}
+        \item 主动重吸收：身体必需的维生素 、 电解质 、 糖及氨基酸 。
+        \item 被动重吸收：大部分氯离子和尿素 ， 大多数外源性物质等
+      \end{enumerate}
+  \end{minipage}\hfill
+  \begin{minipage}{0.68\linewidth}
+      \begin{figure}[htpb]
+          \centering
+          \includegraphics[width=\linewidth]{肾小管重吸收}
+      \end{figure}
+  \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾小管主动分泌}
+    \highlight{肾小管分泌}是将药物转运至尿中排泄 ， 该过程是主动转运过程 。
+    \begin{itemize}
+      \item 保证机体内环境的相对恒定
+      \item 分泌时物质转运的方向与重吸收相反
+      \item 如果药物的清除率超过肾小球滤过率 ， 则提示该药有肾小管分泌现象存在 。
+      \item 许多有机弱酸性和弱碱性药物都可以通过这种机制转运到尿中，如对氨基马尿酸等有机弱酸 ， 胍和胆碱类有机弱碱等。
+      \item 青霉素 、 呋塞米和依他尼酸等药物由于血浆蛋白结合率高 ， 很少被肾小球滤过 ， 主要由近曲小管排入肾小管液 ， 因而不经过肝代谢也能很快被消除 。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾小管主动分泌特征}
+    \begin{enumerate}
+    \item 需要载体参与 ；
+    \item 需要能量 ， 可受 ATP 酶抑制剂二硝基酚抑制 ；
+    \item 由低浓度向高浓度逆浓度梯度转运；
+    \item 存在竞争抑制作用 ；
+    \item 有饱和现象 ， 当血药浓度逐渐升高时 ， 肾小管分泌量将达到特定值；
+    \item 血浆蛋白结合率一般不影响肾小管分泌速度。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾小管主动分泌机制}
+    从肾小管分泌的药物主要为有机酸和有机碱 ， 它们是通过两种不同的机制进行分泌的 。 属于同一分泌机制的物质间可能存在竞争性抑制 ， 但两种分泌机制之间不干扰 ， 也互不影响 。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{肾小管分泌}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{阴离子分泌机制}
+    有机酸的分泌主要是通过阴离子分泌机制进行 ， 故阴离子的分泌机制亦称为有机酸分泌机制 。 有机阴离子转运体(organic anion，OATs)可以表达在体内多种组织器官的细胞膜上 ， 尤以肝 、 肾 、 小肠等排泄器官为主 。
+    \begin{itemize}
+      \item  OATs 具有相似的底物专属性 ， 通过该机制分泌的物质有磺胺类 、 马尿酸类 、 酰胺类 、 噻嗪类 、 杂环羧酸类 、 烯醇类等 。
+      \item 一些亲脂性的有机阴离子药物如赭曲毒素 A甚至有机阳离子如西咪替丁等也经 OATs 转运 。
+    \end{itemize}
+    \vspace{-5pt}
+    \begin{block}{丙磺舒与青霉素合用}
+        丙磺舒与转运体的亲和力较大，所以大部分有机酸的肾小管分泌具有竞争性抑制作用 。 青霉素属有机酸 ， 它在肾小管有分泌作用 ， 但丙磺舒与其有竞争作用 ， 能阻断青霉素在肾小管的分泌 ， 因而青霉素体内有效浓度维持较久 ， 延长了其抗菌作用时间 。
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{阳离子分泌机制}
+    有机碱的分泌通过阳离子分泌机制进行 ， 故阳离子的分泌机制亦称为有机碱分泌机制 。 
+    
+    许多有机胺类化合物 ， 在生理条件下呈阳离子状态 ， 可通过近曲小管主动分泌 ， 使其在尿液中的排泄速度增加 。 如烟酰胺的代谢产物 N-甲基烟酰胺 、 吗啡的代谢产物二羟基吗啡 ， 排泄量都大于肾小球滤过量 。
+
+    肾脏有机阳离子转运体家族主要包括：
+    \begin{enumerate}
+      \item 有机阳离子转运体(OCTs)
+      \item 有机阳离子/肉毒碱转运体(OCTNs)
+      \item 多药及毒素外排转运体(MATE)
+      \item 多药耐药蛋白1(MDR1)
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾清除率$Cl_\mathrm{r}$}
+    各种不同的药物通过肾排泄而被清除的情况差别很大 。 为了解肾对各种药物消除的贡献 ，
+常用肾清除率（renal clearance，$Cl_\mathrm{r}$）定量地描述药物通过肾的排泄效率 。   
+    \begin{itemize}
+    \item 严格地说 ， 肾清除率应称为 “ 肾脏排泄血浆清除率 " ， 是指肾脏在单位时间内能将多少容量 （ 通常以 mL 为单位 ） 血浆中所含的某物质完全清除出去 ， 这个被完全清除了某物质的血浆容积 （mL）就称为该物质的血浆清除率 （ 常以 mL/min 表示 ） 。
+    \item 在实际工作中血浆和排泄这些词常被省略 ， 简称为肾清除率 。
+    \item 肾清除率能够反映肾脏对不同物质的清除能力 ， 肾对某药物清除能力强时 ， 就有较多血浆中的药物被清除掉 。
+    \item 符合线性药物动力学的药物的清除率具有加和性，$Cl_{\mathrm{T}}=Cl_{\mathrm{r}}+Cl_{\mathrm{nr}}$
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾清除率的计算}
+    当药物的尿排泄率与血浆药物浓度成正比例时 ， 其排泄率为 ：
+    \[
+        \text{肾排泄率}(\text{ 每分钟肾排泄率 })=\text{血浆浓度}(C)\times\text{肾清除率}(Cl_\mathrm{r})
+    \]
+    假定$U$为尿中某药物的浓度(mg/mL) ，$V$为每分钟的尿量(mL/min)， 则每分钟从尿中排出该药物的尿量为$UV$除以该药物在每毫升血浆中的浓度$C$(mg/mL)：
+    \[
+        Cl_\mathrm{r}=\frac{\text{排泄速度}}{\text{血药浓度}} = \frac{UV}{C}
+    \]
+    从生理机制来看 ， 肾清除率可以看作 ：
+    \[
+        Cl_\mathrm{r}=\frac{\text{滤过速度}+\text{分泌速度}-\text{重吸收速度}}{\text{血浆药物浓度}}
+    \]
+    
+\end{frame}
+
+
+\begin{frame}[t]
+    \frametitle{}
+    \begin{example}
+        青霉素在血浆中的浓度为2 $\mu$g/mL， 尿中青霉素浓度为 30 $\mu$g/mL， 每分钟排出的尿液为 2 mL ， 则青霉素的肾清除率为？
+    \end{example}
+    \[
+        Cl_\mathrm{r}=\frac{30 \mu \mathrm{g/mL} \times 2\mathrm{mL}}{2\mu \mathrm{g/mL}}= 30 \si{mL/min}
+    \]
+    \begin{blankblock}{}
+        肾清除率是一个抽象的概念 ，所谓每分钟被完全清除了的某物质的毫升数 ， 仅是一个推算的数值 。 实际上 ， 肾并不一定把 1 mL 血浆中的某药物完全清除掉 ， 可能仅仅清除其中的一部分 。但是 ， 肾清除该药物的量可用相当于多少毫升血浆中所含的该物质的量表示 ， 可见肾清除率所表示的血浆毫升数是一个相当量 。 
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{基于肾清除率推测排泄机制}
+    若一种药物只有肾小球滤过而没有肾小管分泌或重吸收 ， 则该药肾清除率等于肾小球的滤过率，即该药的肾清除率的正常值为 125 mL/min 。 实际工作中可以采用肾小球滤过率 GFR 为指标 ， 来推测其他各种物质通过肾的变化 。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=\linewidth]{肾排泄机制}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{研究药物肾排泄的方法}
+    \begin{enumerate}
+      \item 在体法
+        \begin{itemize}
+          \item 给药后 ， 不同时间收集尿量 ， 记录尿量 ， 测定尿浓度 ， 计算累积排泄量 ， 直至排泄完成 。 利用尿药总排泄量与给药剂量比为尿药排泄分数 ， 可同时计算尿药排泄速率 。
+        \end{itemize}
+      \item 离体肾灌流法(IPK)
+        \begin{itemize}
+          \item 取麻醉后的大鼠 ， 分离血管和输尿管 ， 全身肝素化和渗透利尿 ， 进行输尿管插管 、 腹主静脉插管和腹主动脉插管等操作 ， 进行灌流实验 。 按时收集尿液和灌流液 ， 实时监测灌流压力 ， 检测或测定尿量 、 药物量 、 尿蛋白含量 、 肾小球滤过率等参数 。% 离体肾脏灌流是将动物肾脏离体，在体外用含氧的灌流液代替血液，通常由肾动脉灌流入肾，从肾静脉流出，恒温恒速地灌注肾脏，使之在一定时间内维持其正常生理功能，常用离体大鼠肾脏灌流。
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\section{药物的胆汁排泄}
+
+
+\begin{frame}
+    \frametitle{胆汁排泄}
+    胆汁排泄是除肾之外排泄中最主要的途径 。 对于那些极性太强而不能在肠内重吸收的有机阴离子和阳离子来说 ， 胆汁排泄是其重要的消除机制 。
+    \begin{itemize}
+      \item 在肝细胞内的代谢产物经肝细胞的胆管侧膜排泄入胆汁 ， 最后经胆汁排入肠道 。
+      \item 机体中重要的物质如维生素 A 、 D 、 E 、 B$_{12}$ 、 性激素 、 甲状腺素及这些物质的代谢产物从胆汁中排泄非常显著 。
+      \item 药物包括其代谢产物都可以由胆汁排泄 ， 并往往是主动分泌过程 。
+      \item 多数药物的胆汁清除率很低 ， 但也有一些药物胆汁清除率较高 。
+      \item 高胆汁清除的药物往往具有以下特点 ： 能主动分泌 ； 药物是极性物质 ； 相对分子量超过300。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肾和肝胆的排泄能力存在相互代偿现象}
+    \begin{blankblock}{}
+        大鼠结扎肾动脉和静脉后 ， 头孢唑林经胆汁排泄增加4.5倍。
+        
+        而结扎胆管 ， 头孢唑林的肾排泄从 16\%增加到50\% 。
+        
+        经四氯化碳处理的大鼠 ， 胆汁中丙米嗪 (imipramine)的排泄降低 ， 而尿中排泄增加 。 
+    \end{blankblock}
+    对肾排泄与肝胆排泄间相互代偿现象的研究具有实际意义 ， 对于肾功能或肝功能不全的患者临床用药有一定的指导作用 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{胆汁清除率}
+    胆汁中未被重吸收的药物通过粪便排出体外 ， 其排泄率可用清除率来表示 ：
+    \[
+        \text{胆汁清除率}=\frac{\text{胆汁排泄速度}}{\text{血浆药物浓度}} = \frac {\text{胆汁流量}\times\text{胆汁药物浓度}}{\text{血浆药物浓度}}
+    \]
+    胆汁由肝细胞分泌产生 ， 经毛细胆管 、 小叶间胆管 、 左右胆管汇总入肝总管 ， 再经胆囊管流入胆囊中贮存和浓缩 。 当消化活动开始时 ， 胆汁从胆囊排出至十二指肠上部 。 成年人一昼夜分泌胆汁 800 ～ 1000 mL 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物胆汁排泄的机制}
+    \begin{enumerate}
+      \item 被动转运
+        \begin{itemize}
+          \item 通过细胞膜上的小孔扩散 ， 即膜孔滤过 ， 小分子药物通过此种方式转运 ；
+          \item 通过细胞膜类脂质部分扩散，油 / 水分配系数大和脂溶性高的药物通过此种方式转运 。
+        \end{itemize}
+      \item 主动分泌
+        \begin{itemize}
+          \item 胆汁中主动转运可导致许多药物或其代谢物在胆汁中的浓度显著高于血液浓度 。
+          \item 肝细胞至少存在 5 个转运系统 ， 分别转运有机酸、 有机碱 、 中性化合物 、 胆酸及胆汁酸盐和重金属。
+        \end{itemize}
+    \end{enumerate}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.95\linewidth]{胆转运体}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肝肠循环}
+    经胆汁或部分经胆汁排入肠道的药物 ， 在肠道中又重新被吸收 ， 经门静脉又返回肝脏的现象 ， 称为肝肠循环。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.8\linewidth]{吲哚美辛的肠肝循环}
+        \caption{吲哚美辛的肝肠循环}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肝肠循环的影响因素}
+    \begin{minipage}{0.28\linewidth}
+        \begin{enumerate}
+            \item 药物的性质
+            \item 肝内生物转化作用
+            \item 在胆小管内的重吸收
+            \item 肠道内吸收的程度
+            \item 肠壁上 P-gp 数量
+            \item 肠壁的代谢作用
+          \end{enumerate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.68\linewidth}
+        \begin{blankblock}{}
+            葡萄糖醛酸化是对乙酰氨基酚在肝内所进行的主要代谢反应 ， 对乙酰氨基酚-葡萄糖醛酸由胆汁排泄 ， 到达小肠后受肠道菌群作用随即进行水解 ， 释放出游离的对乙酰氨基酚被大量重吸收 ， 从而形成肝肠循环 。 对乙酰氨基酚-葡萄糖醛酸的胆汁排泄受多药耐药相关蛋白 3 （ MRP3 ） 的调节 ， 上调 MRP3 的表达可在一定程度上降低该药的肝肠循环作用 。
+        \end{blankblock}
+    \end{minipage}
+    
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物的双峰现象}
+    某些药物因肝肠循环可出现第二个血药浓度高峰 ， 被称为双峰现象。
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.4\linewidth]{双峰}
+    \end{figure}
+    对某些口服给药的药物来说 ， 肝肠循环是引起血药浓度-时间曲线双峰现象最主要的原因 。此外出现双峰现象的原因还有 ： 胃排空延迟 ； 药物在不同部位吸收速率不同 ； 制剂原因 ， 如同时含有速释成分和缓释成分等 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{肝肠循环的意义}
+    具有肝肠循环的药物 ， 药物血药浓度下降减慢 ， 药物作用时间延长 ， 生物利用度提高 。
+    \begin{enumerate}
+      \item 对药效及毒性的影响
+        \begin{itemize}
+          \item 使血药浓度维持时间延长 ， 可以提高药物的利用效率
+          \item 可能会造成药物在体内的蓄积 ， 引起药物中毒反应。
+        \end{itemize}
+      \item 对给药间隔及合并用药的影响
+        \begin{itemize}
+          \item 应适当延长给药间隔 ， 防止药物过量服用 。
+          \item 合并用药时也应考虑肝肠循环因素
+        \end{itemize}
+      \item 对前药设计的意义
+        \begin{itemize}
+          \item 将胆酸和药物连接制备胆酸-药物杂交分子或其衍生物的前药
+          \item 将抗肿瘤药与葡萄糖醛酸结合制备成药物-葡萄糖醛酸苷化的药物
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{研究药物胆汁排泄的方法}
+    \begin{enumerate}
+      \item 胆汁引流技术
+        \begin{itemize}
+          \item 动物通常选用大鼠。 大鼠用乙醚麻醉后 ， 做胆管插管手术 ， 等动物清醒后给药 ， 按一定的时间间隔收集胆汁至药物排泄完全 。 记录胆汁体积 ， 测定胆汁中药物浓度 。 计算累积排泄量和排泄分数。
+        \end{itemize}
+        \item 离体肝灌流法(IPL)
+        \begin{itemize}
+            \item 与离体肾灌流法类似
+        \end{itemize}
+      \item 三明治模型法
+        \begin{itemize}
+          \item 在体外原代肝细胞培养的基础上 ， 底层铺鼠尾胶使肝细胞贴壁 ， 上层铺 MatHgen 胶使其形成肝索样结构 ， 并逐渐形成胆小管网络 ， 可以模拟肝脏的功能 ， 是研究药物代谢和代谢酶诱导相互作用的主要体外工具之一 。
+          \item  由 “ 三明治 " 模型体外测得的体外的内在胆汁清除率和体内试验之间有较好的相关性 ， 可以用于预测药物体内的内在胆汁清除率 。
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+
+\section{药物的其他排泄途径}
+
+
+\begin{frame}
+    \frametitle{药物从乳汁排泄}
+    化学物质通过乳汁排泄可使婴儿的安全受到一定影响 ， 在新药开发过程中往往要求进行乳
+汁排泄试验 。 药物的乳汁转运主要受下列因素影响 ：
+    \begin{enumerate}
+      \item 药物的浓度梯度
+      \item 药物的脂溶性
+      \item 血浆与乳汁的 pH
+      \item 药物分子量大小
+    \end{enumerate}
+    \begin{blankblock}{}
+        磺胺可引起新生儿黄疸 ， 抗生素可引起婴儿重复感染 ， 四环素可引起婴儿牙斑 ， 尼古丁可引起婴儿惊厥 、 呕吐等 。 这些药物应禁用或慎用于哺乳期妇女 。 如果哺乳期需要服用一些比较安全的药物 ， 最好在婴儿哺乳后或下次哺乳前 3$\sim$4 小时用药 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物从唾液排泄}
+    唾液中药物浓度一般低于血药浓度 。药物主要通过被动扩散方式由血浆向唾液转运 。 转运速率与药物的脂溶性 、 p$K_\mathrm{a}$ 和蛋白结合率等因素有关 。 
+
+    游离的脂溶性药物以原形在唾液与血浆之间形成扩散平衡 ， 与蛋白结合的药物和非脂溶性药物不能进入唾液 ， 因此药物在唾液中的浓度近似于血浆中游离药物的浓度 ， 对于蛋白结合率高的药物 ， 则唾液浓度较血浆低得多 。
+    \begin{blankblock}{}
+        可以利用唾液中药物浓度与血浆药物浓度比值相对稳定的规律 ， 以唾液代替血浆样品 ， 研究药物动力学 。 已有研究表明 ， 水杨酸盐 、 苯妥英钠 、 奎尼丁 、 对乙酰氨基酚 、 甲苯磺丁脲 、 茶喊 、地西泮 、 苯巴比妥 、 锂等药物唾液浓度与血浓度有很好的相关性 。 因此这些药物的唾液浓度可以很好地反映血浆中的药物浓度 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物从肺排泄}
+    吸入麻醉剂 、 二甲亚砜以及某些代谢废气可随肺呼气排出 ， 该类物质的共同特点是分子量较小 、 沸点较低 。 其排泄量视肺活量及吸入量而异 。 影响药物肺排泄量的因素有：
+    \begin{enumerate}
+      \item 肺部的血流量
+      \item 呼吸的频率
+      \item 挥发性药物的溶解性
+    \end{enumerate}
+    药物在血液中的溶解度是决定药物经呼吸系统排泄速率的判断指标 。 比如水溶性较差的气体 NO 由肺排泄较快 。 相反 ， 在血液和组织中溶解性较好的药物排泄速度较慢 。
+    \begin{blankblock}{}
+         通过测定驾驶司机呼出气体中酒精的浓度可判断驾驶员是否酒后驾车，该排泄途径还具有法医学检测的意义。肾脏会通过尿液排除5\%的酒精。肺呼出5\%的酒精，肝脏会将剩余的酒精化学分解成醋酸。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物从汗腺和毛发排泄}
+    某些药物及机体正常代谢产物如磺胺类 、 盐类 （ 主要是氯化物 ） 、 苯甲酸 、 水杨酸 、 乳酸及氮的代谢物 、 尿素等可以随汗液向外界排泄 。药物由汗液排泄主要依赖于分子型的被动扩散。
+    
+    \bigskip
+    毛发中虽然只有微量的药物排泄 ， 但对于某些有毒物质的检测来说 ， 测定毛发中的药物排泄具有重要意义 。 如微量的汞和砷在毛发中是可以检测到的 。
+    \begin{blankblock}{}
+      \begin{center}
+        公安部关于印发《涉毒人员毛发样本检测规范》的通知
+
+      公禁毒〔2018〕938号
+      \end{center}      
+      第十条　发根端3厘米以内的头发样本检测结果为阳性的，表明被检测人员在毛发样本提取之日前6个月以内摄入过毒品。
+    \end{blankblock}
+\end{frame}
+% 由于尿液、唾液、血液等检材中的毒品代谢快，一般仅能检测1-5天内的吸毒，超过5天将无法检出。与尿液、血液相比，毛发检测是一种更有效、更精确的验毒方法，它最显著的优势就是延长了吸毒追溯期，延长3至6个月，同时对于拒不接受尿液检测、唾液检测的人员，毛发检测则方便的多。只要一小撮头发，便可让“瘾君子”无处遁形。
+
+
+\section{影响药物排泄的因素}
+
+
+\begin{frame}
+    \frametitle{血流量}
+     
+    \begin{itemize}
+      \item 当肾脏血流量增加 ， 经肾小球滤过和肾小管主动分泌两种机制排泄的药物量都将随之增加 。
+      \item 血流量对肾小球滤过率影响较大 ， 肾血流量增加时有效滤过压和滤过面积增加 ， 肾小球滤过率将随之增加 。
+      \item 肝提取率高的药物 ， 肝血流量增加 ， 药物经肝消除加快 ；
+      \item 肝提取率低的药物 ， 肝血流量对肝清除率影响不大 。 
+      \item 主要通过主动扩散被肝细胞摄取的药物 ， 其胆汁排泄主要是受药物向肝中的运输速度 ， 比如血流量所限制 。
+      \item 对于极性大的药物 ， 通过主动转运机制进入细胞的药物来说受肝血流量的影响不大 。
+    \end{itemize}
+     
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{胆汁流量}
+    当胆汁流量增加时 ， 肝细胞中药物扩散进入胆汁的量以及由胆囊排泄进入肠道内的药物量均增加 ， 因此主要经胆汁排泄途径排出的药物量增加 。 降低胆汁流量 ， 则会降低某些以胆汁排泄为主要排泄途径的药物的排泄量 。
+    \begin{itemize}
+      \item 进餐时肝脏产生的胆汁比平时要多
+      \item 进食之后 ，迷走神经兴奋 ， 使胆汁大量流入十二指肠 。
+      \item 高蛋白和高脂肪的食物能引起胆汁的大量分泌和排出 ， 而碳水化合物类食物的作用较小 。
+      \item 在蛋白质分解产物 、 脂肪等物质作用下 ， 小肠上部的黏膜可生成胆囊收缩素 ，引起胆囊的强烈收缩和括约肌的扩张，促进胆汁的排出 。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{尿量}
+    尿量增加时 ， 药物在尿液中的浓度下降 ， 重吸收减少 ； 尿量减少时 ， 药物浓度增大 ， 重吸收也增多 。 
+
+    \begin{minipage}{0.48\linewidth}
+        \begin{itemize}
+            \item 强迫利尿剂可促进某些药物的肾排泄 。
+            \item 控制尿液的pH促进药物排泄 。
+          \end{itemize}
+        \begin{blankblock}{}
+            苯巴比妥中毒 ， 可采用渗透性利尿药或甘露醇增加利尿的同时 ， 合并用碳酸氢钠或乳酸钠碱化尿液 。可使苯巴比妥中毒昏迷的时间缩短2/3左右 。
+        \end{blankblock}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=.8\linewidth]{苯巴比妥}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{尿液pH}
+    对于弱酸和弱碱来说 ， 尿 pH 是影响重吸收的另一因素 ， 尿液 pH 影响药物的解离度 ， 从而影响药物的重吸收 。 临床上可用调节尿液 pH 的方法影响药物的解离度 ， 从而影响药物的重吸收 。
+    \begin{itemize}
+      \item 通常尿液的 pH 接近 6.3 ， 但受饮食 、 病理学因素以及应用的药物影响 ， 可在一定范围内变化 。 在强行酸化或碱化尿液时 ， 尿的 pH 可分别达到 4.5和 8.5的极限 。
+      \item 药物的游离形式有利于它们穿透脂质细胞膜 ， 而离子化药物容易滞留在尿液中 ， 随后由肾脏清除 。
+      \item 弱酸性药物通过肾小管膜时分子型与离子型的比例可根据Henderson-Hasselbalch 公式计算
+      \[
+        \lg\frac{[\mathrm{A}^{-}]}{[\mathrm{H}\mathrm{A}]}=\mathrm{pH}-\mathrm{p}K_{\mathrm{a}}
+      \]
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{尿液pH对药物离子化作用的影响}
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=.7\linewidth]{尿液pH}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{尿液pH对肾清除率的影响}
+    \begin{minipage}{0.38\linewidth}
+        水杨酸在 pH 7.4 时 ， 解离度大于 99.9\%， 在 pH 5.0 时 ， 仍有 99\% 解离 ， 因此假定将肾小管中的尿液酸化至 pH 5.0 时 ， 水杨酸的离子化程度仍然很高 ， 但此时其重吸收的速度却大大增加 ， 排泄量减少 。
+    \end{minipage}\hfill
+    \begin{minipage}{0.58\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{水杨酸肾清除率}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{尿液pH对肾清除率的影响}
+    \begin{enumerate}
+      \item $\mathrm{p}K_{\mathrm{a}}$等于或小于2的中强酸，在通常尿 pH 环境下完全解离 ， 因此不被重吸收 ， 其肾清除率通常较高且对尿 pH 变化不敏感 。
+      \item $\mathrm{p}K_{\mathrm{a}}$大于8.0的弱酸，在正常尿 pH 范围内基本不解离 ， 其清除率始终较低 ， 对尿液 pH 变化不敏感 。
+      \item  只有$\mathrm{p}K_{\mathrm{a}}$介于 3 和7.5之间的非极性酸 ， 其肾清除率与尿的 pH 的变化密切相关 。
+      \item $\mathrm{p}K_{\mathrm{a}}$接近或大于12的强碱性药物，在尿的任何 pH 范围内均呈解离状态 ， 几乎不被重吸收 ， 其肾清除率也不受尿液 pH 的影响 。
+      \item $\mathrm{p}K_{\mathrm{a}}$等于或小于 6 的弱碱非极性药物，由于其解离部分具有足够的通透能力 ， 在尿的任何pH时均可被重吸收 。
+      \item $\mathrm{p}K_{\mathrm{a}}$介于 6 与 12 之间的非极性药物的重吸收变化较大 ， 可以从无重吸收到完全重吸收 ， 其肾清除率可随尿 pH 的变化而波动 。
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{尿液pH对血药浓度的影响}
+    \begin{minipage}{0.38\linewidth}
+        \begin{itemize}
+          \item 曲线吸收形状相似，达峰时间与达峰浓度几乎一致；
+          \item 偏酸组血浆中苯丙醇胺的浓度下降速度明显加快并且在体内的滞留时间缩短 ；
+          \item 偏碱组血药浓度下降速度减慢 ， 药物在血液中滞留的时间也延长 。
+        \end{itemize}
+    \end{minipage}\hfill
+    \begin{minipage}{0.58\linewidth}
+        \begin{figure}[htpb]
+            \centering
+            \includegraphics[width=\linewidth]{尿影响血药浓度}
+            \caption{尿pH对苯丙醇胺($\mathrm{p}K_{\mathrm{a}}=9.4$)血药浓度影响}
+        \end{figure}
+    \end{minipage}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物转运体}
+    \begin{itemize}
+      \item 肾脏转运体在肾脏处置药物过程中发挥重要作用 。 药物经肾脏的排泄过程包括肾小球滤过 、 肾小管分泌和重吸收三个过程 ， 而肾小管分泌和重吸收过程是由多种转运体介导的 。 
+      \item 目前已知有很多位于肝窦状隙和肝小管膜转运体家族成员在药物胆汁排泄中发挥着重要的作用 。
+      \item 由于药物的胆汁排泄绝大多数情况下是主动转运机制 ， 因此 ， 影响到主动转运过程的因素都会影响到药物的胆汁排泄 。 
+      \item 肝脏中的摄取和外排转运体在药物的肝脏清除中均发挥着十分重要的作用，它们与肝脏代谢酶相互配合加速药物的体内清除。
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{年龄 、 种族 、 性别等}
+    经肝肾消除的药物量也受年龄和性别的影响 ， 幼儿和老年人的肝肾功能均低于成年人 ， 所以药物消除能力也较低 。 研究发现成年男性肾脏清除能力比女性要高 10\% 。 其他的因素如遗传因素 （ 基因组成 ） 、 生理节律 、 种属差异等也会影响药物的排泄特征 。
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物理化性质}
+    \begin{enumerate}
+      \item 分子量
+        \begin{itemize}
+          \item 分子量 < 300 的药物主要经肾脏排泄
+          \item 分子量 300 ～ 500 的药物既经肾脏排泄也经胆汁排泄
+          \item 分子量 > 500 的药物主要经胆汁排泄
+          \item 药物分子量亦有上限阈值，分子量超过 5000 的大分子化合物胆汁排泄量极少 。
+        \end{itemize}
+      \item 水溶性/脂溶性
+        \begin{itemize}
+          \item 脂溶性大的非解离型药物重吸收程度大， 如脂溶性大的硫喷妥 ， 自尿中排泄量很小 。
+          \item 脂溶性很小的药物 ， 几乎不被重吸收 ， 能迅速自尿中排泄 。
+          \item 对于胆汁排泄来说 ， 一般极性大的药物易于从胆汁排泄 。
+        \end{itemize}
+      \item 药物的$\mathrm{p}K_{\mathrm{a}}$和解离状态
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物血浆蛋白结合率}
+    \begin{enumerate}
+      \item 药物和血浆蛋白结合后不能经肾小球滤过消除 ， 经肾小球滤过的原尿中主要含游离的原形药物和代谢物 ， 所以主要依靠肾小球滤过排泄的药物量减少
+      \item 经主动分泌机制排泄的药物量受其影响较小
+      \item 通过扩散过程进入肝细胞被代谢消除的药物与药物和血浆蛋白的结合率成反比 ， 如果涉及主动转运机制其消除不受结合影响 。
+    \end{enumerate}
+    \begin{blankblock}{}
+        胆囊造影剂碘酚酸与血浆白蛋白高度结合，半衰期长达 2年半。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物制剂因素}
+    \begin{enumerate}
+      \item 不同剂型和给药途径对药物排泄的影响
+        \begin{itemize}
+          \item 服用不同剂型的水杨酰胺1 g 后 ， 发现颗粒剂中药物的硫酸结合物排泄量最多 ，混悬剂次之 ， 溶液剂最少 。
+          \item 口服给药与静脉注射给药相比 ， 药物更大程度上被运入肝脏 ， 经胆汁排泄途径而排出体外。
+        \end{itemize}
+      \item 制剂中不同药用辅料或赋形剂对药物排泄的影响
+        \begin{itemize}
+          \item 二甲亚砜(DMSO)具有渗透性利尿作用 ， 可以使肾小球的滤过率增加 。 
+          \item 丙二醇作为注射剂的辅料使用时具有肾毒性 ， 可以改变药物的肾脏排泄 。
+          \item 非离子表面活性剂如Tween 80可以增加甲氨蝶呤在尿液和胆汁中的排泄量 。
+        \end{itemize}
+      \item 新型制剂对药物排泄的影响
+        \begin{itemize}
+          \item 一般认为粒径小于 6 nm 的纳米药物载体会被肾脏滤出清除 。
+          \item 纳米药物粒径在 60 nm 以上可以有效避免肾脏的清除。
+          \item 粒径在 200 nm 以下可以降低药物在肝脏和脾脏的摄取 。
+        \end{itemize}
+    \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{疾病因素}
+    \begin{enumerate}
+      \item 肾脏疾病
+        \begin{itemize}
+          \item 肾脏的急性病或外伤会使肾小球滤过受损或下降导致药物排泄量减少 ， 体内药物蓄积 。
+        \end{itemize}
+      \item 肝脏疾病
+        \begin{itemize}
+          \item 肝炎 、 胆汁淤积症 、 肝脏血管疾病等会造成胆汁排泄障碍 、 肝药酶功能降低 、 蛋白质结合能力降低 、 门脉血流量减少 ， 这些疾病都将降低肝脏清除药物的能力 。
+        \end{itemize}
+    \end{enumerate}
+    \begin{blankblock}{}
+        大部分的肝消除反应同时伴随着肝代谢的发生 ， 形成的代谢物的极性一般比母体药物要大 。 因此即使对于那些仅通过肝脏代谢而消除的药物来说 ， 其最终代谢物也是通过肾脏排泄最终排出体外 。 因此肾脏疾病也会影响一些经肝代谢消除的药物的排泄 。 在给患有肾脏疾病但是肝脏正常的患者用药时 ， 应选用主要通过胆汁排泄的药物 ， 避免使用排泄依赖于肾脏的药物 。
+    \end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{药物相互作用}
+    \begin{enumerate}
+      \item 竞争性结合转运体
+      \item 改变药物转运体的表达
+      \item 影响药物血浆蛋白结合
+      \item 影响血流量或胆汁流量
+      \item 影响尿液的pH或尿量
+      \item 影响肠道内菌群的活性
+    \end{enumerate}
+\end{frame}
+
+
+
+\end{document}

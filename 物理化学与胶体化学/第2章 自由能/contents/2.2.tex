@@ -1,0 +1,55 @@
+\section{吉布斯自由能与温度、压力的关系}
+
+
+\begin{frame}{1 热力学函数间的关系}
+    前面介绍的5个状态函数$U$、$H$、$S$、$G$及$F$之间的关系为
+    $$H=U+pV \qquad F=U-TS$$
+    $$G=U+pV-TS=H-TS=F+pV$$
+    \\其中$U$和$S$是最基本的热力学函数，是热力学第一、第二定律的直接结果，具有明确的物理意义。由$U$和$S$引出的三个辅助函数$H$、$G$和$F$实际是状态函数的组合，它们在一定条件下可以有着类似热力学能和熵的作用，在某些条件下的改变量用来度量热和功，如定温定压只做体积功时，$\Delta H = Q_p$；定温定压可逆过程$\Delta G = W'$；定温定容可逆过程$\Delta F = W'$。离开这些特定条件，它们就没有明确的物理意义，这三个关系也不成立。
+\end{frame}
+
+
+\begin{frame}{2 热力学基本关系式}
+    封闭体系只做体积功的可逆过程，$\mathrm{d}U=T\mathrm{d}S-p\mathrm{d}V$
+    \\分别微分$H=U+pV$，$G=U+pV-TS$及$F=U-TS$，并代入上式
+    $$\begin{aligned}
+        \mathrm{d}U&=T\mathrm{d}S-p\mathrm{d}V \\
+        \mathrm{d}H&=T\mathrm{d}S+V\mathrm{d}p \\
+        \mathrm{d}G&=-S\mathrm{d}T+V\mathrm{d}p \\
+        \mathrm{d}F&=-S\mathrm{d}T-p\mathrm{d}V
+    \end{aligned}$$
+    \\利用基本关系式的积分，可以求得一个封闭系统经历任意可逆过程后状态函数的变化。对不可逆过程也适用。  
+\end{frame}
+
+
+\begin{frame}{3 吉布斯自由能随温度的变化}
+    \begin{columns}[c]
+        \column{6.75cm}
+        定压下，由热力学基本关系式得~~~~~~~~~~~~$\left(\frac{\partial G}{\partial T}\right)_{p}=-S$~~~~~~
+        \\对于任意相变或化学变化
+        $\ce{A -> D} \qquad \Delta G = G_\mathrm{D} -G_\mathrm{A}$
+            \small $$\left(\frac{\partial \Delta G}{\partial T}\right)_{p}=\left(\frac{\partial G_{\mathrm{D}}}{\partial T}\right)_{p}-\left(\frac{\partial G_{\mathrm{A}}}{\partial T}\right)_{p}$$
+                $$\quad =-S_{\mathrm{D}}-(-S_{\mathrm{A}})$$
+                $$\text{即}\color{red}\left(\frac{\partial \Delta G}{\partial T}\right)_{p}=-\Delta S$$
+                由$G=H-TS$，在定温下得~~~~~~~~~~~$\color{red}\Delta G=\Delta H-T\Delta S$
+        \column{6.75cm}
+            $$\begin{aligned}                
+                -\Delta S=\frac{\Delta G-\Delta H}{T}\\
+                \color{red}\left(\frac{\partial \Delta G}{\partial T}\right)_{p}=\frac{\Delta G-\Delta H}{T}
+            \end{aligned} $$         
+            两端乘以1/T得 $\frac{\left(\frac{\partial \Delta G}{\partial T}\right)_{p}}{T}-\frac{\Delta G}{T^2}=-\frac{\Delta H}{T^2}$
+            $$\color{red}{[\frac{(\frac{\partial \Delta G}{\partial T})_{p}}{T}]_p=-\frac{\Delta H}{T^2}}$$
+            红色式都称吉布斯-亥姆霍兹式，对物理变化和化学变化都适用。
+    \end{columns}    
+\end{frame}
+
+
+\begin{frame}{4 吉布斯自由能随压力的变化}
+    根据$\mathrm{d}G =-S\mathrm{d}T+V\mathrm{d}p$，定温下得$\left(\frac{\partial G}{\partial T}\right)_{T}=V$
+    \\对理想气体，定温下积分上式得$\int_{G_{1}}^{G_{2}} \mathrm{~d} G=\int_{p_{1}}^{p_{2}} V \mathrm{~d} p=\int_{p_{1}}^{p_{2}} \frac{n R T}{p} \mathrm{~d} p$
+    $$\Delta G=G_{2}-G_{1}=n R T \ln \frac{p_{2}}{p_{1}}$$
+    \\若$p_{1}=p^{\ominus}$, $n=1 \mathrm{~mol}$，则
+    $$\Delta G_\mathrm{m}=G_\mathrm{m}-G_\mathrm{m}^{\ominus}=R T \ln \frac{p}{p^{\ominus}}$$
+    \\对固体或液体，它们的体积受压力影响很小，
+    $$\Delta G=\int_{p_{1}}^{p_{2}} V \mathrm{~d} p=V(p_{2}-p_{1})$$
+\end{frame}

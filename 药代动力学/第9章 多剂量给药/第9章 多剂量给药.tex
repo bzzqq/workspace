@@ -1,0 +1,911 @@
+\documentclass[dvipsnames, svgnames, x11names]{beamer}
+
+\usetheme{mytheme2024}
+\usetikzlibrary{tikzmark}
+
+
+\title{生物药剂学与药物动力学}
+\subtitle{多剂量给药}
+\author{张斌}
+\institute[理工系]{河北农业大学 理工系}
+\date{\the\year 年 \the\month 月}
+
+
+
+\begin{document}
+
+    
+\maketitle
+
+
+
+
+
+\begin{frame}{}
+	\begin{center}
+		{\Huge \cbf{目 \ 录}}
+	\end{center}
+	\tableofcontents[subsectionstyle=hide/hide/show]
+	\thispagestyle{empty}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{多剂量给药}
+	临床上 ， 有些疾病的治疗只需用药一次即可达到有效治疗目的 （ 如某些镇痛药 、 催眠药 、 止喘药及止吐药等 ） ， 即单剂量给药 。但不少疾病的治疗需频繁给药 ， 即多剂量给药 ， 如
+		\begin{itemize}
+		  \item 抗结核药一般应连续服用半年至一年或更长时间
+		  \item 心血管疾病则需长期多次用药方可达到有效的治疗目的
+		\end{itemize}
+	多剂量给药是指药物按一定的剂量 、 一定的间隔时间 ， 经多次给药后使血药浓度达到并保持在治疗窗内的给药方法 。
+		\begin{itemize}
+		  \item 如果给药间隔时间大于药物消除半衰期的 7 倍 ， 在下一次给药前体内药物已消除完全 ， 药物在体内的经时过程与单剂量给药相同 。
+		  \item 如果给药间隔时间较短 ， 下一次给药前体内的药物尚未消除完全 ， 体内药量在多次给药后会逐渐蓄积 ， 随着不断给药 ， 体内药量不断增加 ， 经过一定时间后体内药量不再增加 ， 达到稳态 。
+		\end{itemize}
+\end{frame}
+
+
+\section{单室模型多次静脉注射给药}
+
+
+\begin{frame}
+    \frametitle{血药浓度---时间曲线}
+	对于符合单室模型且按一级过程处置的药物 ， 连续多次静脉注射给药后 ， 其血药浓度 · 时间曲线如图所示 。
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.58\linewidth]{单室模型多次静脉注射给药}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{第一次给药}
+	当每次静脉注射给药剂量为$X_0$， 给药间隔时间为$\tau$时 。 第一次静脉注射给药后 ， 体内药量$X_1$与时间$t$的函数关系式为 ：
+	\[
+		X_1 = X_0 \mathrm{e}^{-kt}
+	\]
+	当$t=0$时，体内药量最大，为 ：
+	\[
+		(X_1)_{\mathrm{max}} = X_0
+	\]
+	当$t=\tau$时 ， 即在一个剂量间隔结束时，体内药量最小 ，为
+	\[
+		(X_1)_{\mathrm{min}} = X_0 \mathrm{e}^{-k\tau}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{第二、三次给药}
+	$t=\tau$时 ，为给予第二个剂量的时刻，则体内药量即为给予第二个剂量后的体内最大药量
+	\[
+		(X_2)_{\mathrm{max}} = (X_1)_{\mathrm{min}} + X_0 = X_0(1+\mathrm{e}^{-k\tau})
+	\]
+	第二次给药后体内最小药量为
+	\[
+		(X_2)_{\mathrm{min}} = (X_2)_{\mathrm{max}}\mathrm{e}^{-k\tau} = X_0(\mathrm{e}^{-k\tau}+\mathrm{e}^{-2k\tau})
+	\]
+	同理，第三次给药后体内最大药物量和最小药物量为
+	\[
+		(X_3)_{\mathrm{max}} = X_0(1+\mathrm{e}^{-k\tau}+\mathrm{e}^{-2k\tau})
+	\]
+	\[
+		(X_3)_{\mathrm{min}} = X_0(\mathrm{e}^{-k\tau}+\mathrm{e}^{-2k\tau}+\mathrm{e}^{-3k\tau})
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{第$n$次给药}
+	依此类推 ， 第$n$次给药后体内最大药物量和体内最小药物量为 ：
+	\[
+		(X_n)_{\mathrm{max}} = X_0(1+\mathrm{e}^{-k\tau}+\mathrm{e}^{-2k\tau}+\cdots + \mathrm{e}^{-(n-1)k\tau})
+	\]
+	\[
+		(X_n)_{\mathrm{min}} = X_0(\mathrm{e}^{-k\tau}+\mathrm{e}^{-2k\tau}+\mathrm{e}^{-3k\tau}+\cdots + \mathrm{e}^{-nk\tau})
+	\]
+	令$r=1+\mathrm{e}^{-k\tau}+\mathrm{e}^{-2k\tau}+\cdots + \mathrm{e}^{-(n-1)k\tau}$，那么$r\cdot \mathrm{e}^{-k\tau}=\mathrm{e}^{-k\tau}+\mathrm{e}^{-2k\tau}+\cdots + \mathrm{e}^{-nk\tau}$两式相减，得
+	\[
+		r = \frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}
+	\]
+	上式称为\highlight{多剂量函数}
+	\[
+		(X_n)_{\mathrm{max}} = X_0\cdot \frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}
+	\]
+	\[
+		(X_n)_{\mathrm{min}} = X_0\cdot \frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\cdot \mathrm{e}^{-k\tau}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{血药浓度与时间的关系}
+	第$n$次静脉注射给药后，体内药量$X_n$与时间$t(0\leqslant    t\leqslant \tau)$的关系式为 ：
+	\[
+		X_n = (X_n)_{\mathrm{max}}\mathrm{e}^{-kt} = X_0\cdot \frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\cdot \mathrm{e}^{-kt}
+	\]
+	第$n$次给药后血药浓度$C_n$与时间$t(0\leqslant  t\leqslant \tau)$的关系式为 ：
+	\[
+		C_n = \frac{X_0}{V}\cdot \frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\cdot \mathrm{e}^{-kt}
+	\]
+	可知，多剂量静脉注射给药时， 第$n$次给药的血药浓度$C_n$与时间$t$的关系式 ，可通过将单剂量给药后的血药浓度-时间的关系式 ，把含$t$为指数的各项乘以多剂量函数$\frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}$即可得到。
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		已知左西孟坦静脉注射符合单室模型特征 ， 一体重为 60 kg 的男性患者 ， 静脉注射左西孟坦治疗充血性心力衰竭 ， 每 6 小时静脉注射 3 mg ， 已知左西孟坦的消除半衰期为 1 小时 ，表观分布容积为 0.15 L/kg ， 请计算注射第 4 次后第 2 小时的血药浓度 。
+	\end{example}
+	\pause
+	\[
+		C = \frac{X_0}{V}\cdot \frac{1-\mathrm{e}^{-nk\tau}}{\mathrm{e}^{-k\tau}}\cdot \mathrm{e}^{-kt} = \frac{3}{0.15\times 60}\times \frac{1-\mathrm{e}^{-4\times\frac{0.693}{1}\times 6}}{1-\mathrm{e}^{-\frac{0.693}{1}\times 6}}\times \mathrm{e}^{-\frac{0.693}{1}\times 2} = 84.68 \ \mu \mathrm{g/mL}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态血药浓度}
+	随着给药次数$n$的增加，血药浓度不断增加，但增加的速度逐渐减慢， 当$n$充分大时 ， 达到稳态，血药浓度不再升高，而是在稳态水平上下波动，血药浓度随每次给药作周期性变化， 此时药物进入体内的速率等于从体内消除的速率 ， 此时的血药浓度称为稳态血药浓度 或称为坪浓度， 以$C_\mathrm{ss}$表示。
+
+	当$n\to \infty$时，$\mathrm{e}^{-nk\tau} \to 0$，
+	\[
+		C_\mathrm{ss} = \frac{X_0}{V(1-\mathrm{e}^{-k\tau})}\cdot \mathrm{e}^{-kt}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{达坪分数}
+	在临床实际工作中 ， 人们常常需要知道经过多少个给药周期才能接近稳态血药浓度 （ 坪浓度 ） 或经过一定时间后达到坪浓度的程度如何 。 因此 ， 引入达坪分数的概念 。
+
+	对于多剂量静脉注射给药 ， 达坪分数是指$n$次给药后 ， 血药浓度$C_n$相当于坪浓度$C_\mathrm{ss}$的分数 ， 以$f_\mathrm{ss(n)}$表示。
+	\[
+		f_\mathrm{ss(n)} = \frac{C_n}{C_\mathrm{ss}}
+	\]
+	将$C_n$、$C_\mathrm{ss}$代入，得
+	\[
+		f_\mathrm{ss(n)} = 1-\mathrm{e}^{-nk\tau}
+	\]
+	将$k=0.693/t_{1/2}$代入，得
+	\[
+		f_\mathrm{ss(n)} = 1-\mathrm{e}^{-0.693n\tau/t_{1/2}}
+	\]
+	可知 ， 在每一个给药周期内 ， 相对应时刻的达坪分数都相同 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{达坪分数}
+	\begin{table}
+        \centering
+		\caption{某单室模型药物($\tau=8\mathrm{h},t_{1/2}=10\mathrm{h}$)多剂量静脉注射后达坪分数}
+        \begin{tabular}{cc||cc}
+            \bottomrule
+            给药次数 & 达坪分数(\%)  & 给药次数 & 达坪分数(\%)  \\ \hline
+            1 & 42.56 & 5 & 93.75 \\ 
+            2 & 67.00 & 6 & 96.41 \\
+            3 & 81.04 & 7 & 97.94 \\
+            4 & 89.11 & 8 & 98.81 \\ \toprule
+        \end{tabular}
+    \end{table}
+
+	在实际工作中 ， 还可通过达坪分数计算所需要的半衰期 。
+	\[
+		n\tau = 1.443 t_{1/2}\ln (1-f_\mathrm{ss(n)})
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态最大/最小血药浓度}
+	在给药瞬间$(t=0)$，此时的血药浓度最大
+	\[
+		C^\mathrm{ss}_\mathrm{max} = \frac{X_0}{V(1-\mathrm{e}^{-k\tau})}
+	\]
+	经过一个给药周期$(t=\tau)$时的血药浓度最小
+	\[
+		C^\mathrm{ss}_\mathrm{min} = \frac{X_0}{V(1-\mathrm{e}^{-k\tau})}\cdot \mathrm{e}^{-k\tau}
+	\]
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		一男性患者 ， 体重为70 kg ， 静脉注射 0.2 mg 的地高辛治疗充血性心力衰竭 ， 每 8 小时给药一次 ， 其消除半衰期为 30 小时 ， 表观分布容积为 9 L/kg ， 求$C^\mathrm{ss}_\mathrm{max}$，$C^\mathrm{ss}_\mathrm{min}$，注射一天后的达坪分数。
+	\end{example}
+	\pause
+	\[
+		\begin{aligned}
+			& C^\mathrm{ss}_\mathrm{max} = \frac{X_0}{V(1-\mathrm{e}^{-k\tau})} = \frac{0.2}{9\times 70\times (1-\mathrm{e}^{-\frac{0.693}{30}\times 8})} = 1.88 \ \mu \mathrm{g/mL} \\
+			& C^\mathrm{ss}_\mathrm{min} = \frac{X_0}{V(1-\mathrm{e}^{-k\tau})}\cdot \mathrm{e}^{-k\tau} = \frac{0.2}{9\times 70\times (1-\mathrm{e}^{-\frac{0.693}{30}\times 8})}\times  \mathrm{e}^{-\frac{0.693}{30}\times 8}= 1.56 \ \mu \mathrm{g/mL} \\
+			& f_\mathrm{ss(3)} = 1-\mathrm{e}^{-nk\tau} = 1-\mathrm{e}^{-3\times \frac{0.693}{30}\times 8} = 42.6\%
+		\end{aligned}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{平均稳态血药浓度}
+	多剂量给药达稳态后 ， 稳态血药浓度$C^\mathrm{ss}$不是单一常数 ， 而是在每个给药时间间隔内随时间而变化 ， 是时间$t(0\leqslant    t\leqslant \tau)$的函数 ， 且在每个时间间隔内 ， 这种波动维持在一个恒定的水平范围 。 为了能特征性地反映多剂量给药后的血药浓度水平 ， 故提出了“平均稳态血药浓度”这个概念 。
+	
+	当血药浓度达到稳态后 ， 在一个剂量间隔时间内， 血药浓度---时间曲线下面积除以间隔时间所得的商称为平均稳态血药浓度， 用$\overline{C_\mathrm{ss}}$表示 。
+	\[
+		\overline{C_\mathrm{ss}} = \frac{\int_0^\tau C_\mathrm{ss}\dif t}{\tau}
+	\]
+	须注意 ， 平均稳态血药浓度并非稳态最大血药浓度与稳态最小血药浓度的算数平均值 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{平均稳态血药浓度}
+	具有单室模型特征的药物 ， 多剂量静脉注射给药达稳态后 ， 在一个给药周期内 ， 血药浓度---时间曲线下的面积为 ：
+	\[
+		\int_0^\tau C_\mathrm{ss}\dif t = \int_0^\tau \frac{X_0}{V(1-\mathrm{e}^{-k\tau})}\cdot \mathrm{e}^{-kt} \dif t = \frac{X_0}{Vk}
+	\]
+	而单剂量静脉注射给药的血药浓度---时间曲线下面积为 ：
+	\[
+		\int_0^\infty C_\mathrm \dif t = \int_0^\infty \frac{X_0}{V}\cdot \mathrm{e}^{-kt} \dif t = \frac{X_0}{Vk}
+	\]
+	因此，有
+	\[
+		\int_0^\tau C_\mathrm{ss}\dif t = \int_0^\infty C_\mathrm \dif t
+	\]
+	可见 ， 多剂量静脉注射给药达稳态后 ， 在一个给药周期内 ， 血药浓度---时间曲线下面积等于单剂量静脉注射给药 ， 时间从$0\to \infty$范围内的血药浓度---时间曲线下面积。
+\end{frame}
+
+
+
+\begin{frame}
+	\frametitle{平均稳态血药浓度}
+	平均稳态血药浓度既可用多剂量给药的数据，也可用单剂量给药的数据求算。
+	\[
+		\overline{C_\mathrm{ss}} = \frac{X_0}{Vk\tau} = \frac{X_0}{Cl\tau}
+	\]
+	亦可用半衰期表示：
+	\[
+		\overline{C_\mathrm{ss}} = \frac{1.44X_0t_{1/2}}{V\tau}
+	\]
+	平均稳态药量为：
+	\[
+		\overline{X_\mathrm{ss}} = \frac{1.44X_0t_{1/2}}{\tau}
+	\]
+	式中，$\frac{t_{1/2}}{\tau}$称为给药频数。从上述公式可知 ， 平均稳态血药浓度与给药剂量成正比 ， 与给药频数成正比 ， 给药频数是决定多剂量给药血药浓度的重要因素 。 临床上可以通过调整给药剂量及给药间隔时间来获得合适的平均稳态血药浓度 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{负荷剂量}
+	多剂量给药时 ， 一般希望稳态血药浓度为治疗有效浓度。若药物的消除半衰期较长 ， 则达到稳态血药浓度所需时间就长 ， 如磺胺嘧啶的半衰期为 17 小时 ， 达稳态血药浓度的 90\%需要 56 小时 。 在此期间 ， 由于血药浓度尚未达到有效浓度范围 ， 将影响药物治疗 。 为了缩短药物的起效时间 ， 通常第 1 次给一个较大的剂量 ，使血药浓度尽快达到有效治疗浓度 ， 之后再按给药周期给予维持剂量 ， 使血药浓度维持恒定。
+	\begin{itemize}
+	  \item 这个首次给予的较大剂量 ， 称为负荷剂量或冲击量 ， 亦称首剂量 ，常用$X_0^*$表示 。
+	  \item 维持剂量$(X_0)$则是在负荷剂量之后 ， 按给药周期给予的用来维持有效血药浓度水平的剂量。
+	\end{itemize}
+	 
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.85\linewidth]{负荷剂量多剂量静脉注射}
+		\caption{给予负荷剂量后对多剂量静脉注射血药浓度经时变化的影响}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{负荷剂量}
+	第 1 次静脉注射给予负荷剂量后， 经过一个给药周期时的血药浓度等于稳态最小血药浓度：
+	\[
+		C_1^* = C_\mathrm{min}^\mathrm{ss}
+	\]
+	将$C_1^* = \frac{X_0^*}{V}\cdot \mathrm{e}^{-k\tau}$及$C^\mathrm{ss}_\mathrm{min} = \frac{X_0}{V(1-\mathrm{e}^{-k\tau})}\cdot \mathrm{e}^{-k\tau}$代入，得
+	\[
+		X_0^* = \frac{1}{1-\mathrm{e}^{-k\tau}}\cdot X_0
+	\]
+	\[
+		X_0^* = R\cdot X_0
+	\]
+	当$\tau = t_{1/2}$时，有
+	\[
+		X_0^* = \frac{1}{1-\mathrm{e}^{-\frac{0.693}{t_{1/2}}t_{1/2}}}\cdot X_0 = 2X_0
+	\]
+	由此可知，当给药周期$\tau$等于该药物的$t_{1/2}$时，负荷剂量是维持剂量的2倍。
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		已知磺胺噻唑静脉注射呈现单室模型特征 ， 消除半衰期为 3 小时 ， 稳态最小血药浓度为 6.68 $\mu$g/mL， 表观分布容积为 7L ， 每 8 小时静脉注射给药 1 次 ， 请计算患者所需要的负荷剂量 。
+	\end{example}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{缺失剂量}
+	在多剂量给药时，因给药频繁，可能会造成给药的缺失。为了达到预期的治疗效果，需要对实际血药浓度进行计算。
+
+	由缺失剂量引起的浓度为：
+	\[
+		C_\mathrm{miss} = \frac{X_0}{V}\cdot \mathrm{e}^{-kt_\mathrm{miss}}
+	\]
+	$t_\mathrm{miss}$为缺失给药所经历的时间，比如缺失第3次剂量，那么$t_\mathrm{miss}$等于从第3次给药起到需要计算血药浓度时所经过的时间。
+	\[
+		C_\mathrm{actual} = C_n - C_\mathrm{miss} = \frac{X_0}{V}\left[\left(\frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\right)\mathrm{e}^{-kt} - \mathrm{e}^{-kt_\mathrm{miss}}\right]
+	\]
+	当$n\to \infty$时，$\mathrm{e}^{-nk\tau}\to 0$，则
+	\[
+		C_\mathrm{actual} = \frac{X_0}{V}\left(\frac{\mathrm{e}^{-kt}}{1-\mathrm{e}^{-k\tau}} - \mathrm{e}^{-kt_\mathrm{miss}}\right)
+	\]
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		头孢菌素($k=$\SI{0.2}{h^{-1}}，V=10L)静脉多次给药，每8小时注射150 mg，共6剂。如果缺失第3次剂量，那么注射第6次剂量2小时后的血药浓度是多少？如果缺失第4次剂量呢，注射第6次剂量2小时后的血药浓度是多少？如果缺失第5次剂量呢？
+	\end{example}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{提前或推迟给药}
+	一个药物剂量提前或推迟给药时，仍可根据叠加原理计算出最终的血药浓度。该剂量可视为缺失，将缺失剂量减去，然后再将提前或推迟的实际剂量加回来得到实际血药浓度。
+	\[
+		C = \frac{X_0}{V}\left(\frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\cdot \mathrm{e}^{-kt} - \mathrm{e}^{-kt_\mathrm{miss}} + \mathrm{e}^{-kt_\mathrm{actual}}\right)
+	\]
+	$t_\mathrm{miss}$为该次剂量不提前或推迟给药所经过的时间；
+	
+	$t_\mathrm{actual}$为该次剂量提前或推迟给药实际经过的时间。
+\end{frame}
+
+
+\section{单室模型间歇静脉滴注给药}
+
+
+\begin{frame}
+	\frametitle{单室模型间歇静脉滴注给药}
+	\begin{minipage}{0.38\linewidth}
+		间歇静脉滴注给药的目的是防止药物的短暂高浓度及伴随的副作用。与静脉注射给药相比，随着时间的推移缓慢注入药物耐受性更好。
+		\begin{itemize}
+		  \item 静脉滴注速度$k_0$
+		  \item 每次滴注固定时间 $T$
+		  \item 停止滴注时间$\tau - T$
+		  \item 给药间隔时间为$\tau$
+		\end{itemize}
+		体内药量不断蓄积 ， 血药浓度不断升高 ， 直到达稳。
+	\end{minipage}\hfill
+	\begin{minipage}{0.58\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{单室模型间歇静脉滴注给药}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{滴注和停止滴注过程的血药浓度}
+	第一次滴注过程中 ， 血药浓度-时间关系为
+	\[
+		C_1 = \frac{k_0}{kV}(1-\mathrm{e}^{-kt}) \qquad (0\leqslant t \leqslant T)
+	\]
+	静脉滴注停止时血药浓度最大：
+	\[
+		(C_1)_\mathrm{max} = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})
+	\]
+	滴注停止期间血药浓度与时间$t'(0\leqslant t'\leqslant \tau - T)$的关系式为 ：
+	\[
+		C_1' = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})\cdot \mathrm{e}^{-kt'}
+	\]
+	第二次滴注开始时，血药浓度：
+	\[
+		(C_1)_\mathrm{min} = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})\cdot \mathrm{e}^{-k(\tau - T)}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{第二次滴注}
+	滴注过程中的血药浓度：
+	\[
+		C_2 = (C_1)_\mathrm{min}\mathrm{e}^{-kt} + \frac{k_0}{kV}(1-\mathrm{e}^{-kt}) = \frac{k_0}{kV}(\mathrm{e}^{kT}-1)\cdot \mathrm{e}^{-k(\tau +t)} + \frac{k_0}{kV}(1-\mathrm{e}^{-kt})
+	\]
+	最大血药浓度：
+	\[
+		(C_2)_\mathrm{max} = (C_1)_\mathrm{min}\mathrm{e}^{-kT} + \frac{k_0}{kV}(1-\mathrm{e}^{-kT}) = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})(1+\mathrm{e}^{-k\tau})
+	\]
+	滴注停止期间的血药浓度：
+	\[
+		C_2' = (C_2)_\mathrm{max}\cdot \mathrm{e}^{-kt'} = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})(1+\mathrm{e}^{-k\tau})\mathrm{e}^{-kt'}
+	\]
+	最小血药浓度：
+	\[
+		(C_2)_\mathrm{min} = (C_2)_\mathrm{max}\cdot \mathrm{e}^{-k(\tau - T)} = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})(1+\mathrm{e}^{-k\tau})\mathrm{e}^{-k(\tau - T)}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{第$n$次滴注}
+	依此类推，第$n$次滴注，有：
+	\[
+		C_n = \frac{k_0}{kV}(\mathrm{e}^{kT}-1)(\mathrm{e}^{-(n-1)k\tau}+\mathrm{e}^{-(n-2)k\tau}+\cdots +\mathrm{e}^{-2k\tau}+\mathrm{e}^{-k\tau})\cdot \mathrm{e}^{-kt} + \frac{k_0}{kV}(1-\mathrm{e}^{-kt})
+	\]
+	可以证明，
+	\[
+		(\mathrm{e}^{-(n-1)k\tau}+\mathrm{e}^{-(n-2)k\tau}+\cdots +\mathrm{e}^{-2k\tau}+\mathrm{e}^{-k\tau}) = \left(\frac{1-\mathrm{e}^{-(n-1)k\tau}}{1-\mathrm{e}^{-k\tau}}\right)\mathrm{e}^{-k\tau}
+	\]
+	所以
+	\[
+		C_n = \frac{k_0}{kV}(\mathrm{e}^{kT}-1)\left(\frac{1-\mathrm{e}^{-(n-1)k\tau}}{1-\mathrm{e}^{-k\tau}}\right)\cdot \mathrm{e}^{-k(\tau + t)} + \frac{k_0}{kV}(1-\mathrm{e}^{-kt})
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{第$n$次滴注}
+	最大血药浓度：
+	\[
+		(C_n)_\mathrm{max} = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})\left(\frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\right)
+	\]
+	滴注停止期间的血药浓度：
+	\[
+		C_n' = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})\left(\frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\right)\mathrm{e}^{-kt'}
+	\]
+	最小血药浓度：
+	\[
+		\begin{aligned}
+			(C_n)_\mathrm{min} &= (C_n)_\mathrm{max}\cdot \mathrm{e}^{-k(\tau - T)} \\
+			&= \frac{k_0}{kV}(\mathrm{e}^{kT}-1)\left(\frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\right)\mathrm{e}^{-k\tau}
+		\end{aligned}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态时滴注和停止滴注过程的血药浓度}
+	\begin{minipage}{0.52\linewidth}
+		当给药次数充分大时$(n\to \infty)$， 达到稳态。
+
+		滴注过程中$(0\leqslant t \leqslant T)$，稳态血药浓度为 ：
+		\[
+			C_\mathrm{ss} = \frac{k_0}{kV}(\mathrm{e}^{kT}-1)\left(\frac{\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-k\tau}}\right)\mathrm{e}^{-kt} + \frac{k_0}{kV}(1-\mathrm{e}^{-kt})
+		\]
+		滴注停止期间$(0\leqslant t' \leqslant \tau - T)$稳态血药浓度为：
+		\[
+			C_\mathrm{ss}' = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})\left(\frac{1}{1-\mathrm{e}^{-k\tau}}\right)\mathrm{e}^{-kt'}
+		\]
+	\end{minipage}\hfill
+	\begin{minipage}{0.46\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{间歇静脉滴注达稳态后}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态最大血药浓度和稳态最小血药浓度}
+	稳态时， 当$t=T(t'=0)$时血药浓度最大
+	\[
+		C_\mathrm{max}^\mathrm{ss} = \frac{k_0}{kV}(1-\mathrm{e}^{-kT})\left(\frac{1}{1-\mathrm{e}^{-k\tau}}\right)
+	\]
+	当$t'=\tau - T$时血药浓度最小
+	\[
+		C_\mathrm{min}^\mathrm{ss} = \frac{k_0}{kV}(\mathrm{e}^{kT}-1)\left(\frac{\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-k\tau}}\right)
+	\]
+	由于$C_\mathrm{min}^\mathrm{ss} = C_\mathrm{max}^\mathrm{ss}\mathrm{e}^{-k(\tau -T)}$，可得
+	\[
+		\tau = T + \frac{1}{k}\ln \frac{C_\mathrm{max}^\mathrm{ss}}{C_\mathrm{min}^\mathrm{ss}}
+	\]
+	若$C_\mathrm{max}^\mathrm{ss}$和$C_\mathrm{min}^\mathrm{ss}$为治疗浓度范围的上、下限 ， 则当$T$与$k$恒定时，对于治疗浓度范围窄的药物，给药时间间隔的取值应小。
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		对 60kg 的铜绿假单胞菌感染患者静脉滴注环丙沙星 ， 每次 1 小时 ， 每 12 小时滴注一次 ， 单次给药剂量为 250 mg。已知消除半衰期 4 小时 ， 表观分布容积为 2.0 L/kg, 求$C_\mathrm{max}^\mathrm{ss}$和$C_\mathrm{min}^\mathrm{ss}$。
+	\end{example}
+\end{frame}
+
+
+\section{单室模型血管外给药}
+
+
+\begin{frame}
+	\frametitle{血药浓度与时间的关系}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.75\linewidth]{多剂量血管外给药}
+	\end{figure}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{血药浓度与时间的关系}
+	单室模型药物血管外给药后，体内药物浓度$C$与时间$t$的关系式 ：
+    \[
+        C=\frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}(\mathrm{e}^{-kt}-\mathrm{e}^{-k_\mathrm{a}t})
+    \]
+	多剂量血管外给药后的血药浓度公式 ， 等于单剂量给药后的血药浓度公式中每一个含$t$为指数的项乘以多剂量函数$r$， 该函数的速率常数与指数项的速率常数相同 ， 得 ：
+	\[
+		C_n =\frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}\left(\frac{1-\mathrm{e}^{-nk\tau}}{1-\mathrm{e}^{-k\tau}}\mathrm{e}^{-kt}-\frac{1-\mathrm{e}^{-nk_\mathrm{a}\tau}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\mathrm{e}^{-k_\mathrm{a}t}\right)
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态血药浓度}
+	以一定剂量 、 一定给药周期多次给药 ， 随着给药次数$n$增加 ， 体内药量不断蓄积 ， 当$n$充分大时 ， 血药浓度逐渐达到稳态 。 
+
+	当$n \to \infty$时达到稳态 ， 此时 ， 在一个剂量间隔时间内消除一个剂量的药物 ， 在一个剂量间隔时间内 ， 每一相应时间点上的血药浓度相同 ， 稳态药物浓度为 ：
+	\[
+		C_\mathrm{ss} =\frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}\left(\frac{\mathrm{e}^{-kt}}{1-\mathrm{e}^{-k\tau}}-\frac{\mathrm{e}^{-k_\mathrm{a}t}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\right)
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{达坪分数}
+	对于多剂量血管外给药 ， 以第$n$次给药的平均血药浓度与平均稳态血药浓度的比值计算达坪分数 。
+	\[
+		f_{\text{ss}(n)}=\frac{\frac1\tau\int_0^\tau C_n\mathrm{d}t}{\frac1\tau\int_0^\tau C_\text{ss}\mathrm{d}t}
+	\]
+	将$C_n$和$C_\mathrm{ss}$代入，得
+	\[
+		f_{\mathrm{ss}(n)}=1-\frac{k_{\mathrm{a}}\mathrm{e}^{-nk\tau}-k\mathrm{e}^{-nk_{\mathrm{a}}\tau}}{k_{\mathrm{a}}-k}
+	\]
+	由于$k_{\mathrm{a}}\gg k$， $t=\tau$时吸收基本结束 ， 故$\mathrm{e}^{-nk_{\mathrm{a}}\tau} \to 0$，上式可简化为 ：
+	\[
+		f_{\mathrm{ss}(n)}=1-\mathrm{e}^{-nk\tau}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态达峰时间}
+	稳态药物浓度对时间求一阶导数，令一阶导数等于零，则该函数取得极大值
+	\[
+		\frac{\mathrm{d}C_\mathrm{ss}}{\mathrm{d}t}=\frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}\Bigg(\frac{-k\mathrm{e}^{-kt_\mathrm{max}}}{1-\mathrm{e}^{-k\tau}}-\frac{-k_\mathrm{a}\mathrm{e}^{-k_\mathrm{a}t_\mathrm{max}}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\Bigg)=0
+	\]
+	则稳态达峰时间为 ：
+	\[
+		t_{\max}=\dfrac{1}{k_\mathrm{a}-k}\ln \left[\dfrac{k_\mathrm{a}(1-\mathrm{e}^{-k\tau})}{k(1-\mathrm{e}^{-k_\mathrm{a}\tau})}\right]
+	\]
+	与单剂量血管外给药达峰时间$(t_{\mathrm{max}})_\text{单剂量}=\frac{\ln k_{\mathrm{a}}-\mathrm{ln}k}{k_{\mathrm{a}}-k}$对比：
+	\[
+		(t_{\mathrm{max}})_\text{稳态}-(t_{\mathrm{max}})_\text{单剂量} = \dfrac{1}{k_\mathrm{a}-k}\ln \left[\dfrac{(1-\mathrm{e}^{-k\tau})}{(1-\mathrm{e}^{-k_\mathrm{a}\tau})}\right]
+	\]
+	由于 $k_\mathrm{a}>k$，则$(t_{\mathrm{max}})_\text{稳态}<(t_{\mathrm{max}})_\text{单剂量}$，所以 ， 多剂量血管外给药后的稳态达峰时间小于单剂量血管外给药的达峰时间 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态最大血药浓度}
+	将稳态达峰时间代回稳态药物浓度表达式，得
+	\[
+		C_{\max}^{\mathrm{ss}}=\frac{FX_{0}}{V}\Big(\frac{\mathrm{e}^{-kt_{\max}}}{1-\mathrm{e}^{-k\tau}}\Big)
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态最小血药浓度}
+	达稳态后， $t=\tau$时的血药浓度即为稳态最小血药浓度：
+	\[
+		C_{\min}^{\mathrm{ss}} =\frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}\left(\frac{\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-k\tau}}-\frac{\mathrm{e}^{-k_\mathrm{a}\tau}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\right)
+	\]
+	由于$k_{\mathrm{a}}\gg k$， $t=\tau$时吸收基本结束 ， 故$\mathrm{e}^{-k_{\mathrm{a}}\tau} \to 0$，上式可简化为 ：
+	\[
+		C_{\min}^{\mathrm{ss}} =\frac{FX_0}{V}\left(\frac{\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-k\tau}}\right)
+	\]
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		一体重为50 kg的女性患者 ， 口服给予氨茶碱 0.25 g 治疗无肌病性皮肌炎伴间质性肺炎 ， 每天服用 3 次 。 已知氨茶碱的消除半衰期为 10 h ， 生物利用度为 96\%， 表观分布容积为5 L/kg, 吸收速率常数为 \SI{0.736}{h^{-1}}， 分别求$t_{\mathrm{max}}$、$C_{\max}^{\mathrm{ss}}$、$C_{\min}^{\mathrm{ss}}$。
+	\end{example}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{平均稳态血药浓度}
+	\[
+		\begin{aligned}
+				\overline{C_\mathrm{ss}}& =\frac{\int_{0}^{\tau}C_{\mathrm{ss}}\mathrm{d}t}{\tau}=\frac{1}{\tau}\int_{0}^{\tau}\frac{k_\mathrm{a}FX_{0}}{V(k_{\mathrm{a}}-k)}\Big(\frac{\mathrm{e}^{-kt}}{1-\mathrm{e}^{-k\tau}}-\frac{\mathrm{e}^{-k_\mathrm{a}t}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\Big)\mathrm{d}t  \\
+				& =\frac{FX_{0}}{Vk\tau} \\
+				& = \frac{FX_{0}}{\mathrm{Cl} \tau} \\
+				& = \frac{1.44FX_{0}t_{1/2}}{V\tau}
+		\end{aligned}
+	\]
+	平均稳态药量为
+	\[
+		\overline{X_\mathrm{ss}} = \frac{FX_{0}}{k\tau} = \frac{1.44FX_{0}t_{1/2}}{\tau}
+	\]
+\end{frame}
+
+
+\begin{frame}[t]
+	\frametitle{}
+	\begin{example}
+		已知妥布霉素肌内注射呈现单室模型特征，给患者肌内注射 60 mg 妥布霉素后 ， 测得 AUC 为 14.0 ($\mu$g/mL)·h 。 若要使平均稳态血药浓度为 5 $\mu$g/mL， 按每 6 小时给药一次 ， 请计算所需剂量 。
+	\end{example}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{负荷剂量}
+	第1次血管外给予负荷剂量后， 经过一个给药周期时的血药浓度等于稳态最小血药浓度：
+	\[
+		C_1^* = C_\mathrm{min}^\mathrm{ss}
+	\]
+	\[
+		\frac{k_\mathrm{a}FX_0^*}{V(k_\mathrm{a}-k)}(\mathrm{e}^{-k\tau}-\mathrm{e}^{-k_\mathrm{a}\tau}) = \frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}\left(\frac{\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-k\tau}}-\frac{\mathrm{e}^{-k_\mathrm{a}\tau}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\right)
+	\]
+	解得一级吸收血管外给药的负荷剂量为：
+	\[
+		X_0^*=\dfrac{1}{(1-\mathrm{e}^{-k\tau})(1-\mathrm{e}^{-k_\mathrm{a}\tau})}\cdot X_0
+	\]
+	若$k_{\mathrm{a}}\gg k$，且$\tau$值较大时，$\mathrm{e}^{-k_{\mathrm{a}}\tau} \to 0$，上式可简化为 ：
+	\[
+		X_0^*=\dfrac{X_0}{1-\mathrm{e}^{-k\tau}}
+	\]
+	当$\tau = t_{1/2}$时，$X_0^* = 2X_0$。
+\end{frame}
+
+
+\section{二室模型静脉注射给药}
+
+
+\begin{frame}
+	\frametitle{血药浓度与时间的关系}
+	二室模型静脉注射给药， 第$n$次给药后的血药浓度（ 中央室浓度 ），等于单剂量给药后的血药浓度公式中每一个含$t$为指数的项乘以多剂量函数$r$：
+	\[
+		C_n=A\Big(\frac{1-\mathrm{e}^{-n\alpha\tau}}{1-\mathrm{e}^{-\alpha\tau}}\Big)\cdot\mathrm{e}^{-\alpha t}+B\Big(\frac{1-\mathrm{e}^{-n\beta\tau}}{1-\mathrm{e}^{-\beta\tau}}\Big)\cdot\mathrm{e}^{-\beta t}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态血药浓度}
+	当给药次数$n$充分大时 ，$\mathrm{e}^{-n\alpha\tau} \to 0$、$\mathrm{e}^{-n\beta \tau} \to 0$， 血药浓度达到稳态 ， 此时进入体内的药量等于从体内消除的药量 。 则稳态血药浓度为 ：
+	\[
+		C_\mathrm{ss}=A\Big(\frac{1}{1-\mathrm{e}^{-\alpha\tau}}\Big)\cdot\mathrm{e}^{-\alpha t}+B\Big(\frac{1}{1-\mathrm{e}^{-\beta\tau}}\Big)\cdot\mathrm{e}^{-\beta t}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{平均稳态血药浓度}
+	\[
+		\begin{aligned}
+			\overline{C_\mathrm{ss}}& =\frac{1}{\tau}\int_{0}^{\tau}C_{\mathrm{ss}}\mathrm{d}t=\frac{1}{\tau}\int_{0}^{\tau}\left(\frac{A\mathrm{e}^{-\alpha t}}{1-\mathrm{e}^{-\alpha\tau}}+\frac{B\mathrm{e}^{-\beta t}}{1-\mathrm{e}^{-\beta\tau}}\right)\mathrm{d}t  \\
+			&=\frac{X_{0}}{V_{\mathrm{C}}k_{{10}}\tau}=\frac{X_{{0}}}{V_{{\beta}}\beta\tau}
+		\end{aligned}
+	\]
+	单剂量静脉注射给药的血药浓度-时间曲线下面积为 ：
+	\[
+		\int_{0}^{\infty}C\mathrm{d}t=\int_{0}^{\infty}(A\cdot\mathrm{e}^{-\alpha t}+B\cdot\mathrm{e}^{-\beta t})\mathrm{d}t=\frac{X_{0}}{V_\mathrm{C}k_{10}}=\frac{X_{0}}{V_{\beta}\beta}
+	\]
+	因此，有
+	\[
+		\overline{C_\mathrm{ss}} = \frac{1}{\tau}\int_{0}^{\tau}C_{\mathrm{ss}}\mathrm{d}t = \frac{1}{\tau}\int_{0}^{\infty}C\mathrm{d}t
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{负荷剂量}
+	由于$\alpha \gg \beta$，静脉注射给药的负荷剂量求算公式为 ：
+	\[
+		X_0^*=\dfrac{X_0}{1-\mathrm{e}^{-\beta\tau}}
+	\]
+\end{frame}
+
+
+\section{二室模型血管外给药}
+
+
+\begin{frame}
+	\frametitle{血药浓度与时间的关系}
+	二室模型血管外给药， 第$n$次给药后的血药浓度（ 中央室浓度 ），等于单剂量给药后的血药浓度公式中每一个含$t$为指数的项乘以多剂量函数$r$：
+	\[
+		C_n=L\Big(\frac{1-\mathrm{e}^{-n\alpha\tau}}{1-\mathrm{e}^{-\alpha\tau}}\Big)\cdot\mathrm{e}^{-\alpha t}+M\Big(\frac{1-\mathrm{e}^{-n\beta\tau}}{1-\mathrm{e}^{-\beta\tau}}\Big)\cdot\mathrm{e}^{-\beta t}+N\Big(\frac{1-\mathrm{e}^{-nk_\mathrm{a}\tau}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\Big)\cdot\mathrm{e}^{-k_\mathrm{a} t}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{稳态血药浓度}
+	当给药次数$n$充分大时 ，$\mathrm{e}^{-n\alpha\tau} \to 0$、$\mathrm{e}^{-n\beta \tau} \to 0$、$\mathrm{e}^{-nk_\mathrm{a} \tau} \to 0$， 血药浓度达到稳态：
+	\[
+		C_\mathrm{ss}=L\Big(\frac{1}{1-\mathrm{e}^{-\alpha\tau}}\Big)\cdot\mathrm{e}^{-\alpha t}+M\Big(\frac{1}{1-\mathrm{e}^{-\beta\tau}}\Big)\cdot\mathrm{e}^{-\beta t}+N\Big(\frac{1}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\Big)\cdot\mathrm{e}^{-k_\mathrm{a} t}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{平均稳态血药浓度}
+	\[
+		\begin{aligned}
+			\overline{C_\mathrm{ss}}& =\frac{1}{\tau}\int_{0}^{\tau}C_{\mathrm{ss}}\mathrm{d}t=\frac{1}{\tau}\int_{0}^{\tau}\left(\frac{L\mathrm{e}^{-\alpha t}}{1-\mathrm{e}^{-\alpha\tau}}+\frac{M\mathrm{e}^{-\beta t}}{1-\mathrm{e}^{-\beta\tau}}+\frac{N\mathrm{e}^{-k_\mathrm{a} t}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\right)\mathrm{d}t  \\
+			&=\frac{FX_{0}}{V_{\mathrm{C}}k_{{10}}\tau}=\frac{FX_{{0}}}{V_{{\beta}}\beta\tau}
+		\end{aligned}
+	\]
+	单剂量血管外给药的血药浓度-时间曲线下面积为 ：
+	\[
+		\int_{0}^{\infty}C\mathrm{d}t=\int_{0}^{\infty}(L\cdot\mathrm{e}^{-\alpha t}+M\cdot\mathrm{e}^{-\beta t}+N\cdot\mathrm{e}^{-k_\mathrm{a} t})\mathrm{d}t=\frac{FX_{0}}{V_\mathrm{C}k_{10}}=\frac{FX_{0}}{V_{\beta}\beta}
+	\]
+	因此，有
+	\[
+		\overline{C_\mathrm{ss}} = \frac{1}{\tau}\int_{0}^{\tau}C_{\mathrm{ss}}\mathrm{d}t = \frac{1}{\tau}\int_{0}^{\infty}C\mathrm{d}t
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{负荷剂量}
+	由于$k_\mathrm{a} \gg \alpha \gg \beta$，静脉注射给药的负荷剂量求算公式为 ：
+	\[
+		X_0^*=\dfrac{X_0}{1-\mathrm{e}^{-\beta\tau}}
+	\]
+\end{frame}
+
+
+\section{叠加法预测血药浓度}
+
+
+\begin{frame}
+	\frametitle{叠加法预测血药浓度}
+	\begin{minipage}{0.42\linewidth}
+		在临床用药的实际过程中 ， 给药间隔经常是变化的 ， 在这种情况下 ， 叠加法估算血药浓度就具有实际应用意义 ， 即通过单剂量给药所得的血药浓度-时间曲线 ， 进而推测多剂量给药后的血药浓度-时间曲线 。
+	\end{minipage}\hfill
+	\begin{minipage}{0.55\linewidth}
+		\begin{figure}[htpb]
+			\centering
+			\includegraphics[width=\linewidth]{叠加法}
+		\end{figure}
+	\end{minipage}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{}
+	\begin{figure}[htpb]
+		\centering
+		\includegraphics[width=.65\linewidth]{叠加法表格}
+	\end{figure}
+\end{frame}
+
+
+\section{体内药量的蓄积与血药浓度的波动}
+
+
+\begin{frame}
+	\frametitle{体内药量的蓄积}
+	多剂量给药时 ， 由于下一次给药时前一次给予的药物尚未消除完全 ， 因此药物在体内不断蓄积 ， 最后达到稳态 。 不同的药物在体内的蓄积程度存在差异 ， 蓄积程度过大可能导致中毒 ， 因此有必要对其进行计算 。
+
+	通常蓄积程度用蓄积系数来表示 。 蓄积系数又称为蓄积因子或积累系数 ， 系指稳态血药浓度与第一次给药后的血药浓度的比值 ， 以 $R$ 表示 。 可用以下方法计算 。
+	\begin{enumerate}
+	  \item 以稳态最小血药浓度与第一次给药后的最小血药浓度的比值表示
+	  \item 以平均稳态血药浓度与第一次给药后的平均血药浓度的比值表示
+	  \item 以稳态最大血药浓度与第一次给药后的最大血药浓度的比值表示
+	  \item 以平均稳态药物量与给药剂量计算蓄积程度
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{以稳态最小血药浓度$C_{\min}^\mathrm{ss}$与$(C_{1})_{\min}$的比值表示}
+	对于单室模型多剂量静脉注射给药：
+	\[
+		R = \frac{C_{\min}^\mathrm{ss}}{(C_{1})_{\min}} = \frac{\frac{X_0}{V(1-\mathrm{e}^{-k\tau})}\cdot \mathrm{e}^{-k\tau}}{\frac{X_0}{V}\cdot \mathrm{e}^{-k\tau}} = \frac{1}{1-\mathrm{e}^{-k\tau}}
+	\]
+	对于单室模型多剂量血管外给药：
+	\[
+		R = \frac{\frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}\left(\frac{\mathrm{e}^{-k\tau}}{1-\mathrm{e}^{-k\tau}}-\frac{\mathrm{e}^{-k_\mathrm{a}\tau}}{1-\mathrm{e}^{-k_\mathrm{a}\tau}}\right)}{\frac{k_\mathrm{a}FX_0}{V(k_\mathrm{a}-k)}(\mathrm{e}^{-k\tau}-\mathrm{e}^{-k_\mathrm{a}\tau})} = \frac{1}{(1-\mathrm{e}^{-k\tau})(1-\mathrm{e}^{-k_\mathrm{a}\tau})}
+	\]
+	若$k_{\mathrm{a}}\gg k$，且$\tau$值较大时，$\mathrm{e}^{-k_{\mathrm{a}}\tau} \to 0$：
+	\[
+		R = \frac{1}{1-\mathrm{e}^{-k\tau}}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{以平均稳态血药浓度$\overline{C_\mathrm{ss}}$与$\overline{C_1}$的比值表示}
+	对于单室模型多剂量静脉注射给药：
+	\[
+		R = \frac{\overline{C_\mathrm{ss}}}{\overline{C_1}} = \frac{\frac{1}{\tau}\int_{0}^{\infty}C_\mathrm{ss}\mathrm{d}t}{\frac{1}{\tau}\int_{0}^{\infty}C_1\mathrm{d}t} = \frac{1}{1-\mathrm{e}^{-k\tau}}
+	\]
+	对于单室模型多剂量血管外给药：
+	\[
+		R=\frac{k_\mathrm{a}- k }{k_\mathrm{a}(1-\mathrm{e}^{-k\tau})-k(1-\mathrm{e}^{-k_\mathrm{a}\tau})}
+	\]
+	若$k_{\mathrm{a}}\gg k$，且$\tau$值较大时，$k_\mathrm{a}- k \approx k_\mathrm{a}$，$\mathrm{e}^{-k_{\mathrm{a}}\tau} \to 0$：
+	\[
+		R = \frac{1}{1-\mathrm{e}^{-k\tau}}
+	\]
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{以稳态最大血药浓度$C_{\max}^\mathrm{ss}$与$(C_{1})_{\max}$的比值表示}
+	对于单室模型多剂量静脉注射给药：
+	\[
+		R = \frac{C_{\max}^\mathrm{ss}}{(C_{1})_{\max}} = \frac{\frac{X_0}{V(1-\mathrm{e}^{-k\tau})}}{\frac{X_0}{V}} = \frac{1}{1-\mathrm{e}^{-k\tau}}
+	\]
+	对于单室模型多剂量血管外给药 ， 由于公式中含有稳态时的达峰时间$t_{\max}$及第一次给药时的达峰时间$(t_{\max})_1$函数 ， 不适合采用该法计算 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{以平均稳态药物量与给药剂量计算蓄积程度}
+	对于单室模型多剂量静脉注射给药：
+	\[
+		\frac{\overline{X_\mathrm{ss}}}{\overline{X_{0}}}=\frac{\overline{C_\mathrm{ss}}V}{X_{0}}=\frac{\frac{X_{0}}{Vk\tau}V}{X_{0}}=\frac{1}{k\tau}
+	\]
+	亦可表示为：
+	\[
+		\frac{\overline{X_\mathrm{ss}}}{\overline{X_{0}}} = 1.44\times \frac{t_{1/2}}{\tau}
+	\]
+	由此可知，$\tau$越小 ， 蓄积程度越大；$\tau$相同时 ， $t_{1/2}$较大的药物易产生蓄积 。
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{血药浓度的波动}
+	多剂量给药达稳态时 ， 稳态血药浓度仍在一定的范围内波动 。 对于一些有效血药浓度范围很窄的药物 ， 血药浓度波动很大 ， 则易引起中毒或达不到有效的治疗目的 。 因此 ， 了解血药浓度波动情况 ， 对设计合理的给药方案具有重要意义 。 表示血药浓度波动程度有以下方法：
+	\begin{enumerate}
+	  \item 波动百分数
+		\[
+			PF=\frac{C_{\max}^{\mathrm{ss}}-C_{\min}^{\mathrm{ss}}}{C_{\max}^{\mathrm{ss}}}\times100\%
+		\]
+	  \item 波动度
+		\[
+			DF=\frac{C_{\max}^{\mathrm{ss}}-C_{\min}^{\mathrm{ss}}}{\overline{C_{\mathrm{ss}}}}
+		\]
+	  \item 血药浓度变化率
+	  \[
+		  \frac{C_{\max}^{\mathrm{ss}}-C_{\min}^{\mathrm{ss}}}{C_{\min}^{\mathrm{ss}}}\times100\%
+	  \]
+	\end{enumerate}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{血药浓度的波动}
+	对于单室模型多剂量静脉注射达稳态时 ， 上述 3 种波动程度表达式分别为 ：
+	\[
+		\begin{aligned}
+			\mathrm{PF} &=(1-\mathrm{e}^{-k\tau})\times100\% \\
+			\mathrm{DF} &=k\tau \\
+			\text{血药浓度变化率}&=(\mathrm{e}^{k\tau}-1)\times100\%
+		\end{aligned}
+	\]
+	从以上 3 式可知 ， 波动程度是$k$或$t_{1/2}$及$\tau$的函数 ， 通常 ， 对于正常人而言药物的$t_{1/2}$是恒定的 ， 因此主要通过调节$\tau$来调节波动程度 。
+	\begin{blankblock}{}
+		磺胺噻唑多剂量静脉注射呈现单室模型特征 ，$V=7$L，$k= 0.231 $h$^{-1}$，$X_0= 0.25$g ， 多剂量静脉注射给药时 ， 当$\tau= 8$h 时 ， PF $= 84.24$\%， DF $= 1.85$ ， 血药浓度变化率为 534.71\%； 当$\tau= 6$h 时 ，PF $= 74.99$\%，DF $= 1.39$ ， 血药浓度变化率为 299.88\%。
+	\end{blankblock}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{血药浓度的波动}
+	对于血管外给药 ， 由于存在吸收过程 ，$C_{\max}^{\mathrm{ss}}$与$t_{\max}$和$k_\mathrm{a}$密切相关 。 波动程度还与$k_\mathrm{a}$有关 ， 随$k_\mathrm{a}$变小 （ 吸收变慢 ） ， 波动程度变小 。 减小体内药物浓度的波动程度是开发缓 、 控释制剂的重要目的之一 。 缓 、 控释制剂可使药物的释放速率变慢 ， 从而减慢药物的吸收速度 ，进而降低体内药物浓度的波动程度 。 因此 ， 波动程度是评价缓 、 控释制剂质量的一个重要指标 。
+	\begin{blankblock}{}
+		以洛伐他汀为例 ， 由文献可知洛伐他汀多剂量口服后符合单室模型特征 ，$X_0= 40$mg，$\tau= 24$h ，已知洛伐他汀普通片$k_\mathrm{a}= 0.82$h$^{-1}$， 洛伐他汀缓释片的$k_\mathrm{a}= 0.15$h$^{-1}$， 服用缓释片时， PF 从普通片的 98.62\%下降到 79.63\%，DF从 3.15下降到 1.54 ， 血药浓度变化率从7136.02\%下降到 390.90\%。
+	\end{blankblock}
+\end{frame}
+
+
+\end{document}

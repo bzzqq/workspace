@@ -1,0 +1,58 @@
+\documentclass[a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{ctex}
+\usepackage[version=4]{mhchem} %化学公式宏包
+\usepackage{siunitx} %数字，单位宏包
+\sisetup{
+	separate-uncertainty = true,
+	inter-unit-product = \ensuremath{{}\cdot{}}
+} %单位间加小圆点
+\usepackage{tikz} %Tikz绘图包
+\usetikzlibrary{cd}
+\usetikzlibrary{chains}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta} %画箭头
+\usetikzlibrary{commutative-diagrams} %交换图
+\usetikzlibrary{positioning,automata}
+\usepackage[all]{xy}
+\usepackage{booktabs} %三线表
+\usepackage{multirow} %合并单元格
+\usepackage{makecell} %表格内强制换行
+\usepackage{array}
+\usepackage{booktabs} %控制表格行高
+\usepackage{colortbl}  %彩色表格需要加载的宏包
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{fontspec} %字体
+\setmainfont{Times New Roman}
+\setmathfont{XITS Math}
+
+\title{ElegantNote：一个优美的 \LaTeX{} 笔记模板}
+\author{张斌}
+
+
+\begin{document}
+\section{第一、二章}
+1. 在298K及$p^\ominus$下，金刚石、石墨的有关数据如下表所示。试判断，在1000K及$p^\ominus$下，石墨能否转变为金刚石。
+\begin{table}[h]
+    \centering
+    \begin{tabular}{ccc}
+        \Xhline{1pt}
+        物质 & $\Delta_\mathrm{c}H_\mathrm{m}^\ominus ~/(\si{kJ.mol^{-1}})$ & $S_\mathrm{m} ~/(\si{J.mol^{-1}.K^{-1}})$ \\
+        \hline
+        金刚石 & -395.40 & 2.377 \\
+        石墨 & -393.51 & 5.740 \\
+        \Xhline{1pt} 
+    \end{tabular}
+\end{table}
+
+2. 在计算化学反应热效应时，为什么用标准摩尔生成焓来计算时是用反应产物的总生成焓减反应物总生成焓，而用标准摩尔燃烧焓来计算时是用反应物总燃烧焓减反应产物的总燃烧焓？
+\bigskip
+
+3. 在298K和标准大气压力下，向体积为10.0 m$^3$的乙醇中加水，调制含乙醇的质量分数为0.56的酒。试计算(1)应加入水的体积；(2)加水后的总体积。已知该条件下，乙醇的摩尔体积为$\SI{58.28e{-6}}{m^3.mol^{-1}}$；乙醇质量分数为0.56时，乙醇偏摩尔体积为$\SI{56.58e{-6}}{m^3.mol^{-1}}$，水偏摩尔体积为$\SI{17.11e{-6}}{m^3.mol^{-1}}$。
+\bigskip
+
+4.液体A与液体B能形成理想液态混合物，在343K时，1mol纯A与2mol纯B形成的理想溶液混合物的总蒸汽压为50.66kPa，若在液态混合物中再加入3mol纯A，则液态混合物的总蒸汽压为70.93kPa。求纯A与纯B的饱和蒸汽压。
+
+
+\end{document}

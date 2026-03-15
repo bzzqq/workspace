@@ -1,0 +1,132 @@
+\section{配置}
+
+\subsection{外部PDF阅读器的设置}
+
+在 VS Code 里，添加如下配置：
+
+\begin{lstlisting}
+  "latex-workshop.view.pdf.viewer":"external",
+  "latex-workshop.view.pdf.ref.viewer":"external",
+  "latex-workshop.view.pdf.external.viewer.command": "C:/Users/bz/AppData/Local/SumatraPDF/SumatraPDF.exe",
+  "latex-workshop.view.pdf.external.viewer.args": [
+      "%PDF%"
+  ],
+  "latex-workshop.view.pdf.external.synctex.command": "C:/Users/bz/AppData/Local/SumatraPDF/SumatraPDF.exe",
+  "latex-workshop.view.pdf.external.synctex.args": [
+    "-forward-search",
+    "%TEX%",
+    "%LINE%",
+    "%PDF%",
+],
+\end{lstlisting}
+
+\subsection{Sumatra Pdf 反向搜索}
+
+Sumatra高级设置里添加
+
+\begin{lstlisting}
+  InverseSearchCmdLine = "C:\Program Files\Microsoft VS Code\Code.exe" "C:\Program Files\Microsoft VS Code\resources\app\out\cli.js" --ms-enable-electron-run-as-node -r -g "%f:%l"
+  EnableTeXEnhancements = true
+\end{lstlisting}
+
+\section{文档类}
+
+\begin{itemize}
+  \item article，文章格式，常用于科技论文、报告、说明文档等。
+  \item proc，基于article文档类的一个简单的学术文档模版。
+  \item report，长篇报告，具有章节结构，用于综述、长篇论文、简单书籍等。
+  \item book，书籍，包含章节结构、前言、正文、后记等。
+  \item beamer，幻灯片
+  \item minimal，精简文档，只设定了纸张大小和基本字号。
+  \item standalone，得到大小合适的单页PDF，用于导出tikz绘图或公式。
+\end{itemize}
+
+\section{颜色}
+
+xcolor基本可用色彩：
+
+  \begin{tikzpicture}
+    \foreach \x [count=\i] in {black,darkgray,gray,lightgray}
+    \filldraw [fill=\x] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+    \foreach \x [count=\i] in {yellow,orange,brown,olive}
+    \filldraw [fill=\x,shift={(0,-1)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+    \foreach \x [count=\i] in {teal,green,lime,pink}
+    \filldraw [fill=\x,shift={(0,-2)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+    \foreach \x [count=\i] in {red,purple,magenta,violet}
+    \filldraw [fill=\x,shift={(0,-3)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+    \foreach \x [count=\i] in {blue,cyan,white}
+    \filldraw [fill=\x,shift={(0,-4)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \end{tikzpicture} 
+
+\bigskip
+
+扩充颜色表：\verb|\usepackage[dvipsnames]{xcolor}|
+\bigskip
+
+  \begin{tikzpicture}
+  \foreach \x [count=\i] in {GreenYellow,RubineRed,RoyalPurple,Emerald}
+  \filldraw [fill=\x] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Yellow,WildStrawberry,BlueViolet,JungleGreen}
+  \filldraw [fill=\x,shift={(0,-1)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Goldenrod,Salmon,Periwinkle,SeaGreen}
+  \filldraw [fill=\x,shift={(0,-2)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Dandelion,CarnationPink,CadetBlue,Green}
+  \filldraw [fill=\x,shift={(0,-3)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Apricot,Magenta,CornflowerBlue,ForestGreen}
+  \filldraw [fill=\x,shift={(0,-4)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Peach,VioletRed,MidnightBlue,PineGreen}
+  \filldraw [fill=\x,shift={(0,-5)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Melon,Rhodamine,NavyBlue,LimeGreen}
+  \filldraw [fill=\x,shift={(0,-6)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {YellowOrange,Mulberry,RoyalBlue,YellowGreen}
+  \filldraw [fill=\x,shift={(0,-7)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Orange,RedViolet,Blue,SpringGreen}
+  \filldraw [fill=\x,shift={(0,-8)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {BurntOrange,Fuchsia,Cerulean,OliveGreen}
+  \filldraw [fill=\x,shift={(0,-9)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Bittersweet,Lavender,Cyan,RawSienna}
+  \filldraw [fill=\x,shift={(0,-10)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {RedOrange,Thistle,ProcessBlue,Sepia}
+  \filldraw [fill=\x,shift={(0,-11)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Mahogany,Orchid,SkyBlue,Brown}
+  \filldraw [fill=\x,shift={(0,-12)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Maroon,DarkOrchid,Turquoise,Tan}
+  \filldraw [fill=\x,shift={(0,-13)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {BrickRed,Purple,TealBlue,Gray}
+  \filldraw [fill=\x,shift={(0,-14)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {Red,Plum,Aquamarine,Black}
+  \filldraw [fill=\x,shift={(0,-15)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+  \foreach \x [count=\i] in {OrangeRed,Violet,BlueGreen,White}
+  \filldraw [fill=\x,shift={(0,-16)}] ({4*\i},-0.2) rectangle ({4*\i+0.8},0.2) node at ({4*\i},0) [right] {\qquad \x};
+\end{tikzpicture}
+
+
+
+  扩充颜色表：\verb|\usepackage[x11names]{xcolor}|
+    
+\begin{center}
+\begin{lrbox}{\mysavebox}
+\begin{tikzpicture}
+  \foreach \x [count=\i] in {AntiqueWhite, Aquamarine, Azure, Bisque, Blue, Brown, Burlywood, CadetBlue, Chartreuse, Chocolate, Coral, Cornsilk, Cyan, DarkGoldenrod, DarkOliveGreen, DarkOrange, DarkSeaGreen, DarkSlateGray, DeepPink, DeepSkyBlue, DodgerBlue, Firebrick, Gold, Goldenrod, Green, Honeydew, HotPink, IndianRed, Ivory, Khaki, LavenderBlush, LemonChiffon, LightBlue, LightCyan, LightGoldenrod, LightPink, LightSalmon, LightSkyBlue, LightSteelBlue, LightYellow, Magenta, Maroon, MediumOrchid, MediumPurple, MistyRose, NavajoWhite, OliveDrab, Orange, OrangeRed, Orchid, PaleGreen, PaleTurquoise, PaleVioletRed, PeachPuff, Pink, Plum, Purple, Red, RosyBrown, RoyalBlue, Salmon, SeaGreen, Seashell, Sienna, SkyBlue, SlateBlue, SlateGray, Snow, SpringGreen, SteelBlue, Tan, Thistle, Tomato, Turquoise, VioletRed, Wheat, Yellow}
+  {
+    \foreach \j in {1, 2, 3, 4}
+    {
+  \filldraw [fill=\x\j,shift={(0,1-0.81*\i)}] ({4.3*\j},{-0.2}) rectangle ({4.3*\j+0.8},{0.2}) node at ({4.3*\j},0) [right] {\qquad \x\j};
+    }
+  }
+\end{tikzpicture}
+\end{lrbox}
+
+\ifdim\ht\mysavebox>\textheight
+    \setlength{\myrest}{\ht\mysavebox}%
+    \loop\ifdim\myrest>\textheight
+        \newpage\par\noindent
+        \clipbox{0 {\myrest-\textheight} 0 {\ht\mysavebox-\myrest}}{\usebox{\mysavebox}}%
+        \addtolength{\myrest}{-\textheight}%
+    \repeat
+    \newpage\par\noindent
+    \clipbox{0 0 0 {\ht\mysavebox-\myrest}}{\usebox{\mysavebox}}%
+\else
+    \usebox{\mysavebox}%
+\fi
+\end{center}
